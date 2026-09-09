@@ -1,0 +1,18 @@
+# harness memory-stack local state
+.zvec-grep/
+.mex/graph.db
+.mex/*.db-journal
+# editor/OS
+.DS_Store
+# generated assets never promoted without provenance
+_workspace/current/**/*.tmp
+
+# graphify code-graph local cache/render (graph.json + GRAPH_REPORT.md stay tracked)
+graphify-out/cache/
+graphify-out/graph.html
+
+# OMC session/agent local state (machine-local, not shared source of truth)
+.omc/
+
+# pdfTeX `mex` name-collision artifact (TeX Live), not a harness output
+texput.log

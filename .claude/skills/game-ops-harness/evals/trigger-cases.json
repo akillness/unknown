@@ -1,0 +1,31 @@
+{
+  "skill_name": "game-ops-harness",
+  "should_trigger": [
+    "게임 제작 사이클 시작하자, 다크판타지 로그라이크",
+    "시즌 2 컨텐츠 업데이트 준비해줘",
+    "라이브에서 대시 i-frame 익스플로잇 발견됐어, 핫픽스 사이클 돌려",
+    "밸런스 패치 준비, 텔레메트리에서 승률 편차 커짐",
+    "게이트 리뷰 G1~G8 돌려줘",
+    "이번 사이클 아카이빙하고 회고 작성해",
+    "연출팀이 보스 등장 씬 바꾸고 싶어하는데 시놉시스랑 논의 필요",
+    "Run a live-ops patch cycle for the economy inflation issue",
+    "Resume the current game production cycle from the task manifest",
+    "재화 설계랑 밸런스 충돌났어, 조정해줘"
+  ],
+  "should_not_trigger": [
+    "Fix the TypeScript build error in src/index.ts",
+    "Unity 빌드 로그에서 에러 원인 찾아줘",
+    "Write a README for this library",
+    "스팀 스토어 페이지 문구 다듬어줘",
+    "Profile the frame rate drop in the main menu",
+    "What's the weather like today?",
+    "Summarize this research paper on transformers",
+    "Set up a Postgres migration for the users table",
+    "게임 UI 버튼 색상만 바꿔줘",
+    "Add unit tests for the auth module"
+  ],
+  "evals": [
+    {"id": 1, "prompt": "시즌 2 준비 시작. 새 지역 + 신규 재화 + 보스 연출", "expected_output": "production-brief with cycle_type: season; worldview→synopsis→concept chain; economy sink for the new currency; presentation spec; G1–G8 table; archive + llm-wiki report", "assertions": ["_workspace/current/intake/production-brief.md contains cycle_type: season", "decision-log has at least one RFC touching presentation+synopsis", "retrospective lists memory_sync receipts"]},
+    {"id": 2, "prompt": "라이브 대시 익스플로잇 핫픽스", "expected_output": "hotfix cycle entering at P4 with exploit register pre-seeded; data-only change; G2/G6/G8 measured", "assertions": ["qa/exploit-register.md has a row with measured value vs band", "balance/patch-deltas.md lists old→new", "freshness-check.sh exits 0"]}
+  ]
+}
