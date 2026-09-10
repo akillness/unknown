@@ -13,6 +13,7 @@ namespace Tide.Sim
         public ValidationResult Validate(PuzzleState state,PuzzleCommand command)
         {
             if(state==null || command==null) throw new ArgumentNullException();
+            if(C1PatrolDefinition.Handles(command.CommandId))return data.Patrol==null?ValidationResult.InvalidData("C1_NOT_PACKAGED"):data.Patrol.Validate(state,command,IsComplete(state,"t0-b3"));
             var id=command.SubjectId;
             bool exists=id!=null && data.Records.TryGetValue(id,out _);
             var record=exists?data.Records[id]:null;
@@ -84,6 +85,7 @@ namespace Tide.Sim
         {
             var verdict=Validate(state,command);
             if(!verdict.IsValid) return new CommandResult(verdict,Array.Empty<PuzzleEvent>());
+            if(C1PatrolDefinition.Handles(command.CommandId))command=data.Patrol.Materialize(command);
             IEnumerable<string> kept=null;
             if(command.CommandId=="Read") kept=data.Records[state.LoadedRecordId].ClueIds;
             if(command.CommandId=="BeginOverlay") command=new PuzzleCommand(command.CommandId,command.SubjectId,
@@ -106,7 +108,8 @@ namespace Tide.Sim
             var values=new Dictionary<string,string>(state.Values,StringComparer.Ordinal);
             var counts=new Dictionary<string,int>(state.Counts,StringComparer.Ordinal);
             var c=evt.Command;
-            switch(c.CommandId)
+            if(C1PatrolDefinition.Handles(c.CommandId))C1PatrolDefinition.Reduce(c,facts,values);
+            else switch(c.CommandId)
             {
                 case "OpenTool": values["circuitMode"]="Tracing"; break;
                 case "CloseTool": values["circuitMode"]="Idle"; break;
@@ -172,6 +175,7 @@ namespace Tide.Sim
         {
             switch(r.Type)
             {
+                case "patrolAccessGranted": return s.Has("c1:gateAccess") && s.Has("c1:journal:"+r.Id) && s.Has("checkpoint:"+C1PatrolDefinition.CheckpointId);
                 case "recordLinesViewed": return r.Ids.All(id=>s.Has("line:"+r.RecordId+":"+id));
                 case "recordRowsViewed": return r.Ids.All(id=>s.Has("row:"+r.RecordId+":"+id));
                 case "slotLoaded": return s.Get("slot:"+r.Id)==r.RecordId;

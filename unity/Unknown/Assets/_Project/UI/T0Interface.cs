@@ -15,7 +15,7 @@ namespace Tide.UI
     }
     public sealed class GameScreen
     {
-        public string Title,Subtitle,Body,Status,Footer;
+        public string Title,Subtitle,Body,Status,Footer,CaseThread;
         public readonly List<ViewAction> Navigation=new List<ViewAction>();
         public readonly List<ViewAction> Actions=new List<ViewAction>();
         public readonly List<ViewAction> Toolbar=new List<ViewAction>();
@@ -70,7 +70,16 @@ namespace Tide.UI
             var leftFlow=Flow(navigationViewport,12);leftFlow.anchorMin=new Vector2(0,1);leftFlow.anchorMax=Vector2.one;leftFlow.pivot=new Vector2(.5f,1);leftFlow.offsetMin=leftFlow.offsetMax=Vector2.zero;leftFlow.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
             navigationScroll=left.gameObject.AddComponent<ScrollRect>();navigationScroll.viewport=navigationViewport;navigationScroll.content=leftFlow;navigationScroll.horizontal=false;navigationScroll.vertical=true;navigationScroll.scrollSensitivity=30;
             foreach(var a in model.Navigation) Button(leftFlow,a);
-            var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f),new Vector2(1,.865f),new Color(paper.r,paper.g,paper.b,.97f));
+            float contentTop=.865f;
+            if(!string.IsNullOrEmpty(model.CaseThread)) {
+                float height=.185f*scale;
+                var card=Panel("Case thread",root,new Vector2(.46f,.865f-height),new Vector2(1,.865f),ink);
+                card.GetComponent<Image>().raycastTarget=false;
+                Text("CaseThread",card,model.CaseThread,20,paper,new Vector2(.025f,.04f),new Vector2(.975f,.96f));
+                card.Find("CaseThread").GetComponent<Text>().raycastTarget=false;
+                contentTop=.85f-height;
+            }
+            var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
             var viewport=Rect("Viewport",contentPanel,new Vector2(.025f,.035f),new Vector2(.975f,.97f));
             viewport.gameObject.AddComponent<RectMask2D>();
             var content=Rect("Content",viewport,Vector2.zero,Vector2.one);

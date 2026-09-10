@@ -1,0 +1,10 @@
+/Users/jangyoung/orca/unknown/assets/generated/3d/scripts/build_c1_patrol_panel_r01.py:163: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Traceback (most recent call last):
+  File "/Users/jangyoung/orca/unknown/assets/generated/3d/scripts/build_c1_patrol_panel_r01.py", line 311, in <module>
+    members = [o for o in meshes if o.data.materials[0] == mat]
+                                    ^^^^^^
+ReferenceError: StructRNA of type Object has been removed
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

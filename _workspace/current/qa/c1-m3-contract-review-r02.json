@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "revision": "r02",
+  "measuredAt": "2026-09-10T16:30:09.660Z",
+  "executor": "Codex game-qa /root/c1_runtime_qa",
+  "method": "Node.js REPL independent comparison of authored strings, source triples, prerequisite, checkpoint, combination truth table, atomic effect list, bypass prohibition, key references, explicit initial state and imported byte identity. No Unity test execution.",
+  "inputs": [
+    {
+      "path": "_workspace/current/planning/campaign.json",
+      "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a"
+    },
+    {
+      "path": "_workspace/current/planning/c1-patrol-contract.json",
+      "sha256": "a06bcba4209c0caa044d8a37a9cc1b1d69b7dbd36d5ac32a8c7046705445731d"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/C1PatrolContract.json",
+      "sha256": "a06bcba4209c0caa044d8a37a9cc1b1d69b7dbd36d5ac32a8c7046705445731d"
+    }
+  ],
+  "checks": [
+    {
+      "id": "canonical-objective",
+      "passed": true,
+      "detail": "objective"
+    },
+    {
+      "id": "canonical-action",
+      "passed": true,
+      "detail": "action"
+    },
+    {
+      "id": "canonical-completion",
+      "passed": true,
+      "detail": "completion"
+    },
+    {
+      "id": "canonical-consequence",
+      "passed": true,
+      "detail": "consequence"
+    },
+    {
+      "id": "canonical-recovery",
+      "passed": true,
+      "detail": "recovery"
+    },
+    {
+      "id": "canonical-hints",
+      "passed": true,
+      "detail": "three authored hints"
+    },
+    {
+      "id": "canonical-prerequisites",
+      "passed": true,
+      "detail": "t0-b3"
+    },
+    {
+      "id": "canonical-checkpoint",
+      "passed": true,
+      "detail": "cp-c1-b1"
+    },
+    {
+      "id": "canonical-clues",
+      "passed": true,
+      "detail": "two source descriptions and triples exact"
+    },
+    {
+      "id": "root-origins",
+      "passed": true,
+      "detail": "direct authored originals"
+    },
+    {
+      "id": "unique-four-combinations",
+      "passed": true,
+      "detail": "all 2-bit combinations"
+    },
+    {
+      "id": "single-valid",
+      "passed": true,
+      "detail": "lighting false reader true"
+    },
+    {
+      "id": "five-distinct-effects",
+      "passed": true,
+      "detail": "5 atomic effects"
+    },
+    {
+      "id": "bypass-no-grants",
+      "passed": true,
+      "detail": "6 forbidden bypass effects"
+    },
+    {
+      "id": "localization-key-resolution",
+      "passed": true,
+      "detail": "15 referenced keys"
+    },
+    {
+      "id": "explicit-initial-state",
+      "passed": true,
+      "detail": "initial both enabled"
+    },
+    {
+      "id": "unity-import-identical",
+      "passed": true,
+      "detail": "byte-identical packet"
+    }
+  ],
+  "passed": 17,
+  "total": 17
+}

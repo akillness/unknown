@@ -170,6 +170,20 @@
       "bytes": 656663,
       "runtimeEligible": false,
       "claim": "[OBSERVED] isolated Blender asset render; not gameplay capture or runtime material/fit evidence. The source r03 has a separate T0-only Unity integration approval in assets/generated/3d/hub-view-drawer-r03/provenance.json; this README image remains runtimeEligible:false."
+    },
+    {
+      "id": "c1-patrol-panel-blender-r01",
+      "file": "c1-patrol-panel-blender-r01.png",
+      "category": "3d-asset-preview",
+      "tool": "Blender 5.1.2 CLI",
+      "source": "assets/generated/3d/c1-patrol-panel-r01/preview.png",
+      "recipe": "assets/generated/3d/scripts/build_c1_patrol_panel_r01.py",
+      "output_sha256": "b19540ede46f861baa778cfce38e896c4cb2e2b9ecd204aec40af5681165dcdc",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 1154499,
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] isolated original Blender patrol-panel asset render; not a gameplay capture. Runtime integration requires separate native visual approval."
     }
   ]
 }

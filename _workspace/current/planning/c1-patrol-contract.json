@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 1,
+  "contractId": "c1-patrol-contract",
+  "scope": {
+    "stageId": "C1",
+    "stageTitle": "두 개의 필적",
+    "beatId": "c1-b1",
+    "beatTitle": "순찰로의 두 분기",
+    "zoneId": "gate",
+    "checkpointId": "cp-c1-b1",
+    "proofRequired": false,
+    "fullChapter": false
+  },
+  "authority": {
+    "decisionId": "RFC-CX-004",
+    "decision": "director-acknowledged",
+    "authoredSource": "_workspace/current/planning/campaign.json",
+    "beatLocator": "stages[id=C1].beats[id=c1-b1]",
+    "references": [
+      "_workspace/current/synopsis/chapter-beats.md",
+      "_workspace/current/systems/system-specs/wiring-trace.md",
+      "_workspace/current/systems/interaction-rules.md",
+      "_workspace/current/systems/system-specs/save-undo.md"
+    ]
+  },
+  "entry": {
+    "requiredCompletedBeatIds": [
+      "t0-b3"
+    ],
+    "requiresT0Complete": true,
+    "blockedReasonKey": "c1.patrol.blocked.t0Incomplete"
+  },
+  "narrative": {
+    "objective": "제3수문 열람을 얻기 위해 야간 순찰로 배선을 정리하고 계장 문재화가 거는 출처 표기 조건을 확정한다.",
+    "action": "회로 지도에서 조명 분기를 접고 판독 분기를 살려 순찰로를 부분 점등한 뒤 수문으로 내려간다.",
+    "completion": "수문 열람 권한이 열리고 출처 표기 조건이 일지에 기록된다.",
+    "consequence": "제3수문 구역이 열리고 재화가 \"그 자료의 출처를 공식 기록에 남긴다\"는 조건을 오늘 자 일지에 직접 적는다.",
+    "recovery": "분기 접기는 무제한이며 잘못된 조합은 확정 전 미리보기에서 막히고 원인이 표시된다. 무료 우회관으로 즉시 복구된다.",
+    "hints": [
+      "수문 계통판의 압력이 왜 하한에 붙어 있는지부터 보라.",
+      "조명과 판독이 같은 배전을 쓰는지 회로 지도의 분기 색으로 확인하라.",
+      "조명 분기를 접고 판독 분기만 남긴 뒤 순찰로 스위치를 내려라."
+    ]
+  },
+  "observations": [
+    {
+      "id": "c1-b1-c1",
+      "sourceType": "log",
+      "originId": "watchlog-bureau",
+      "copiedFrom": null,
+      "rootOriginId": "watchlog-bureau",
+      "labelKey": "c1.patrol.clue.log",
+      "descriptionKey": "c1.patrol.clue.1.description",
+      "description": "오늘 자 당직일지에 \"수문 열람은 계장 동행 하에\"가 필체를 바꿔 두 번 겹쳐 쓰였다."
+    },
+    {
+      "id": "c1-b1-c2",
+      "sourceType": "plate",
+      "originId": "brine-log-gate3",
+      "copiedFrom": null,
+      "rootOriginId": "brine-log-gate3",
+      "labelKey": "c1.patrol.clue.plate",
+      "descriptionKey": "c1.patrol.clue.2.description",
+      "description": "수문 계통판의 야간 압력이 규정 하한 바로 위에서 진동한다."
+    }
+  ],
+  "branches": [
+    {
+      "id": "lighting",
+      "labelKey": "c1.patrol.branch.lighting",
+      "foldedMeansEnabled": false
+    },
+    {
+      "id": "reader",
+      "labelKey": "c1.patrol.branch.reader",
+      "foldedMeansEnabled": false
+    }
+  ],
+  "preview": {
+    "sharedSupply": true,
+    "sharedSupplyLabelKey": "c1.patrol.sharedSupply",
+    "requiredObservedClueIds": [
+      "c1-b1-c1",
+      "c1-b1-c2"
+    ],
+    "requiredObservedCount": 2,
+    "conditionAcknowledgementRequired": true,
+    "conditionAcknowledgementIsCandidateOnly": true,
+    "worldMutationAllowed": false,
+    "combinations": [
+      {
+        "lightingEnabled": false,
+        "readerEnabled": false,
+        "valid": false,
+        "reasonKey": "c1.patrol.invalid.readerOff"
+      },
+      {
+        "lightingEnabled": false,
+        "readerEnabled": true,
+        "valid": true,
+        "reasonKey": "c1.patrol.valid.readerOnly"
+      },
+      {
+        "lightingEnabled": true,
+        "readerEnabled": false,
+        "valid": false,
+        "reasonKey": "c1.patrol.invalid.readerOff"
+      },
+      {
+        "lightingEnabled": true,
+        "readerEnabled": true,
+        "valid": false,
+        "reasonKey": "c1.patrol.invalid.sharedSupply"
+      }
+    ],
+    "initialConfiguration": {
+      "lightingEnabled": true,
+      "readerEnabled": true
+    }
+  },
+  "journalCondition": {
+    "id": "c1-b1-source-attribution",
+    "actorDisplayName": "계장 문재화",
+    "journalOriginId": "watchlog-bureau",
+    "text": "그 자료의 출처를 공식 기록에 남긴다",
+    "labelKey": "c1.patrol.condition.label",
+    "textKey": "c1.patrol.condition.text",
+    "clueSourceRefs": [
+      {
+        "clueId": "c1-b1-c1",
+        "sourceType": "log",
+        "originId": "watchlog-bureau",
+        "rootOriginId": "watchlog-bureau",
+        "copiedFrom": null
+      },
+      {
+        "clueId": "c1-b1-c2",
+        "sourceType": "plate",
+        "originId": "brine-log-gate3",
+        "rootOriginId": "brine-log-gate3",
+        "copiedFrom": null
+      }
+    ],
+    "recordingBoundary": "accepted-current-save-receipt",
+    "inferenceForbidden": [
+      "identify-the-second-handwriting-author",
+      "infer-pressure-threshold",
+      "infer-systemId-or-stationId"
+    ]
+  },
+  "confirmation": {
+    "kind": "chapter-action",
+    "isCircuitToolCommit": false,
+    "defaultMode": "two-step",
+    "supportedModes": [
+      "two-step",
+      "hold",
+      "confirm-dialog"
+    ],
+    "previewRequired": true,
+    "saveSuccessRequired": true,
+    "atomic": true,
+    "idempotencyRequired": true,
+    "preCommitCheckpointRequired": true,
+    "readiness": {
+      "t0Complete": true,
+      "observedClueCount": 2,
+      "lightingEnabled": false,
+      "readerEnabled": true,
+      "conditionAcknowledged": true
+    },
+    "atomicEffects": [
+      "appliedBranchConfiguration",
+      "gateAccess",
+      "dutyJournalSourceAttributionCondition",
+      "completedBeat:c1-b1",
+      "checkpoint:cp-c1-b1"
+    ],
+    "failureEffects": {
+      "appliedWorldStateChanges": 0,
+      "gateAccessGrants": 0,
+      "conditionRecords": 0,
+      "completionGrants": 0,
+      "checkpointGrants": 0
+    },
+    "cancelKeepsPriorCommittedState": true,
+    "staleReceiptEffects": 0,
+    "duplicateReceiptEffects": 0,
+    "undoRedoUnit": "whole-chapter-confirmation"
+  },
+  "recovery": {
+    "folding": {
+      "attemptLimit": null,
+      "reversible": true,
+      "cost": 0,
+      "corrosion": 0,
+      "simulatedTimeAdvance": 0,
+      "doesNotMutateCommittedWorld": true
+    },
+    "freeBypass": {
+      "labelKey": "c1.patrol.bypass",
+      "attemptLimit": null,
+      "cost": 0,
+      "immediate": true,
+      "targetPreview": {
+        "lightingEnabled": false,
+        "readerEnabled": true
+      },
+      "grantsObservation": false,
+      "acknowledgesCondition": false,
+      "grantsGateAccess": false,
+      "recordsCondition": false,
+      "completesBeat": false,
+      "commitsWorld": false,
+      "preservesExistingObservations": true,
+      "preservesPriorCommittedState": true
+    }
+  },
+  "localization": {
+    "c1.patrol.title": "순찰로의 두 분기",
+    "c1.patrol.clue.log": "당직일지 · 두 필적",
+    "c1.patrol.clue.plate": "수문 계통판 · 야간 압력",
+    "c1.patrol.clue.1.description": "오늘 자 당직일지에 \"수문 열람은 계장 동행 하에\"가 필체를 바꿔 두 번 겹쳐 쓰였다.",
+    "c1.patrol.clue.2.description": "수문 계통판의 야간 압력이 규정 하한 바로 위에서 진동한다.",
+    "c1.patrol.branch.lighting": "조명 분기",
+    "c1.patrol.branch.reader": "판독 분기",
+    "c1.patrol.sharedSupply": "같은 배전",
+    "c1.patrol.enabled": "켜짐",
+    "c1.patrol.folded": "접힘",
+    "c1.patrol.blocked.t0Incomplete": "당직 인수를 먼저 마쳐야 한다.",
+    "c1.patrol.blocked.observations": "당직일지와 수문 계통판의 단서를 확인해야 한다.",
+    "c1.patrol.blocked.condition": "출처 표기 조건을 확인해야 한다.",
+    "c1.patrol.invalid.readerOff": "판독 분기가 접혀 있어 수문 자료를 열람할 수 없다.",
+    "c1.patrol.invalid.sharedSupply": "조명과 판독이 같은 배전을 쓰므로 조명 분기를 접어야 한다.",
+    "c1.patrol.valid.readerOnly": "조명 분기는 접히고 판독 분기는 남아 있다.",
+    "c1.patrol.condition.label": "출처 표기 조건",
+    "c1.patrol.condition.text": "그 자료의 출처를 공식 기록에 남긴다",
+    "c1.patrol.preview": "분기와 출처 조건 미리보기",
+    "c1.patrol.confirm": "열람과 출처 조건 확정",
+    "c1.patrol.bypass": "무료 우회관으로 복구",
+    "c1.patrol.gateAccess": "제3수문 열람 권한",
+    "c1.patrol.complete": "수문 열람 권한이 열리고 출처 표기 조건이 일지에 기록된다."
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "C1-P01",
+      "case": "T0 incomplete: cannot enter or confirm",
+      "expectedEntryGrants": 0,
+      "expectedCommitCount": 0
+    },
+    {
+      "id": "C1-P02",
+      "case": "Observe both authored clues; source triples and root origin are exact",
+      "expectedObservations": 2,
+      "expectedProvenanceMismatches": 0
+    },
+    {
+      "id": "C1-P03",
+      "case": "Enumerate all four branch combinations",
+      "combinationCount": 4,
+      "validCombinationCount": 1,
+      "invalidCombinationCount": 3,
+      "invalidCasesWithVisibleReason": 3
+    },
+    {
+      "id": "C1-P04",
+      "case": "Missing either clue or unacknowledged condition blocks confirmation even for the valid branch combination",
+      "expectedCommitCount": 0
+    },
+    {
+      "id": "C1-P05",
+      "case": "Preview and condition acknowledgement never mutate applied world or duty journal",
+      "expectedWorldMutations": 0,
+      "expectedJournalWrites": 0
+    },
+    {
+      "id": "C1-P06",
+      "case": "Explicit confirmation with a current successful save receipt applies every atomic effect together",
+      "expectedAppliedEffectCount": 5,
+      "expectedChapterCommitCount": 1
+    },
+    {
+      "id": "C1-P07",
+      "case": "Cancel, write failure, stale callback and duplicate callback cannot partially apply or reapply",
+      "partialApplications": 0,
+      "duplicateApplications": 0
+    },
+    {
+      "id": "C1-P08",
+      "case": "Fold each branch twice: prior preview restored with no costs or world mutation",
+      "roundTrips": 2,
+      "chargedCost": 0,
+      "simulatedTimeAdvance": 0,
+      "worldMutations": 0
+    },
+    {
+      "id": "C1-P09",
+      "case": "Free bypass from each invalid combination restores a valid preview without satisfying missing requirements or completing the beat",
+      "invalidStartCases": 3,
+      "validRecoveredPreviews": 3,
+      "grantedObservations": 0,
+      "conditionAcknowledgements": 0,
+      "gateGrants": 0,
+      "completions": 0
+    },
+    {
+      "id": "C1-P10",
+      "case": "Undo and redo treat applied branches, gate access, condition and completion as one transaction",
+      "partialStates": 0
+    },
+    {
+      "id": "C1-P11",
+      "case": "Save and reload preserve checkpoint cp-c1-b1, access, exact condition provenance and accepted configuration",
+      "roundTripMismatches": 0
+    },
+    {
+      "id": "C1-P12",
+      "case": "Every referenced localization key resolves; keyboard, pointer and pad expose equivalent actions; branch state has text in addition to color",
+      "missingKeys": 0,
+      "requiredInputPaths": 3,
+      "colorOnlyStates": 0
+    }
+  ],
+  "telemetryFields": [
+    "beat_id",
+    "clue_id",
+    "source_type",
+    "origin_id",
+    "root_origin_id",
+    "lighting_enabled",
+    "reader_enabled",
+    "preview_valid",
+    "block_reason_key",
+    "condition_acknowledged",
+    "commit_idempotency_key",
+    "save_receipt_status",
+    "gate_access",
+    "checkpoint_id",
+    "bypass_count"
+  ],
+  "nonClaims": {
+    "pressureThreshold": null,
+    "observedPlayMinutes": null,
+    "humanPlaytests": 0,
+    "newRewards": 0,
+    "newDialogueLines": 0,
+    "newStoryReveals": 0
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-09-10T16:37:21.333Z",
+  "executor": "Codex game-qa /root/c1_runtime_qa",
+  "method": "Independent source inspection plus parsing of systems-authored Unity NUnit XML results. QA did not launch Unity; test execution attribution remains systems.",
+  "unityLaunchedByQA": false,
+  "sourceInputs": [
+    {
+      "path": "unity/Unknown/Assets/_Project/Sim/C1PatrolDefinition.cs",
+      "sha256": "1f95e7d32bcbc5aaceef76e96b1f5ae84c6cfb228fca108ccb4a09182e9e374d"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Sim/T0Simulation.cs",
+      "sha256": "ab1277ecbfe6bbbe68f6cb1e9ad4a6b3e197fe41e2f976c67b4a867b1ce64d12"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1PatrolData.cs",
+      "sha256": "54cbdd275c8a76aa072206313254c71217f2b10548584653fe6e53bff73bd1da"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+      "sha256": "d5c019c3ed1547589f5b850e5688aadaaed227bcea7d834c50b387a96b26737d"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+      "sha256": "01b614937a96b5917e6d991909538359465f37f03b37347694c54bdccd4fbdc2"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Save/AtomicSaveStore.cs",
+      "sha256": "688f03752cf6d17be3f8b1e1c8cde03c48191836ce190c4b2032ba5022557684"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Save/JournalSave.cs",
+      "sha256": "7b5c77d33f3d230fdc7bce2b6fddf3c88226d7dc7c1fe96a1294a3a383b63d19"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/EditMode/C1PatrolTests.cs",
+      "sha256": "6268027800bf9829da3304f1f23273286864ba43bfde8bcb2a677043bf93963b"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/C1PlayModeTests.cs",
+      "sha256": "a5ada1e4ee4282296a3478285a0d6da06f516dd7eb4502461f1b452f008ab333"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/Fixtures/T0CompletedV1.json",
+      "sha256": "6625ef4e331d893ae142fbd1eabc63e683095194f19e00efe5aa7ff53e394a57"
+    }
+  ],
+  "inspectedReceipts": [
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m3/results/editmode-3.xml",
+      "sha256": "535337292ff79ee20b8aa0be49fed19b18b7cf07ca6e51921fb4d93e1055ba97",
+      "result": "Passed",
+      "total": 27,
+      "passed": 27,
+      "failed": 0,
+      "startedAt": "2026-09-10 16:35:59Z",
+      "endedAt": "2026-09-10 16:36:01Z",
+      "c1Cases": [
+        {
+          "name": "ConfirmationIsOneReplayableUndoableChapterTransaction",
+          "result": "Passed"
+        },
+        {
+          "name": "EitherMissingClueBlocksAnOtherwiseReadyConfirmation",
+          "result": "Passed"
+        },
+        {
+          "name": "EntryRequiresCompletedT0AndDoesNotCompleteC1",
+          "result": "Passed"
+        },
+        {
+          "name": "EveryInvalidConfigurationAndMissingRequirementRejectsWithoutWorldEffects",
+          "result": "Passed"
+        },
+        {
+          "name": "EveryInvalidPreviewRecoversFreelyAndDoubleFoldsRestoreEachBranch",
+          "result": "Passed"
+        },
+        {
+          "name": "FreeBypassOnlyRecoversPreviewAndPreservesAlreadyObservedClue",
+          "result": "Passed"
+        },
+        {
+          "name": "FutureSchemaRefusesBeforeBackupFallback",
+          "result": "Passed"
+        },
+        {
+          "name": "LegacyPhysicalPlayerSaveMigratesWithoutChangingCommandsOrIdentity",
+          "result": "Passed"
+        },
+        {
+          "name": "PacketRejectsMissingInitializationAndForbiddenBypassGrants",
+          "result": "Passed"
+        }
+      ]
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m3/results/playmode-1.xml",
+      "sha256": "a720746c6df9ce0ed1cca3036cb9ed5d86b6d4a617cd8d6d7b9ab774f37579ea",
+      "result": "Passed",
+      "total": 28,
+      "passed": 28,
+      "failed": 0,
+      "startedAt": "2026-09-10 16:34:39Z",
+      "endedAt": "2026-09-10 16:34:51Z",
+      "c1Cases": [
+        {
+          "name": "FailedSaveHasNoChapterEffectsAndRetryCommitsOnce",
+          "result": "Passed"
+        },
+        {
+          "name": "HoldModeRequiresFullGestureForChapterConfirmation",
+          "result": "Passed"
+        },
+        {
+          "name": "KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice",
+          "result": "Passed"
+        },
+        {
+          "name": "PendingUndoCancelsAllChapterEffectsAndSuppressesReceipt",
+          "result": "Passed"
+        },
+        {
+          "name": "PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary",
+          "result": "Passed"
+        }
+      ]
+    }
+  ],
+  "guardFinding": {
+    "id": "C1-QA-01",
+    "status": "closed",
+    "sourceGuard": "T0GameSession.SubmitImmediate rejects ConfirmPatrol with C1_REQUIRES_ATOMIC_COMMIT before mutation or cancellation.",
+    "executedRegression": "PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary",
+    "result": "Passed"
+  },
+  "candidateSaveFailure": {
+    "executedRegression": "FailedSaveHasNoChapterEffectsAndRetryCommitsOnce",
+    "result": "Passed",
+    "injection": "Second BeforeRename event; precommit checkpoint succeeds and candidate save fails.",
+    "assertions": [
+      "Before state equals current and persisted state",
+      "No successful receipts",
+      "No gate, journal, checkpoint or committed branch state",
+      "Successful retry completes with one receipt"
+    ]
+  },
+  "limits": [
+    "No physical pointer/keyboard/gamepad play or OS restart was performed by this QA agent.",
+    "PlayMode restart reconstructs GameSession/GameObject.",
+    "No performance, human play duration, immersion or audio measurements."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "asset_id": "c1-patrol-panel",
+  "canonical_name": "수문 계통판",
+  "revision": "r01",
+  "created_utc": "2026-09-10T16:24:10.236533+00:00",
+  "runtimeEligible": true,
+  "status": "approved-scoped-c1-b1-runtime",
+  "source_type": "original-procedural-blender",
+  "generator": "Blender CLI root operator; deterministic authored Python recipe",
+  "generator_version": "5.1.2",
+  "source_prompt": "Original compact weathered maritime gate system panel for C1 patrol: two visually distinct branch modules, lighting and readout, connected to a shared central supply. Blue-grey worn metal, irregular downward verdigris and salt rings, quiet archival-industrial silhouette. Lighting is a guarded round amber lens; readout is a rectangular pale-paper recess. Blank labels only; no lettering, numbers, threshold scales, logos, external reference media, digital LED displays or invented canon. Static prototype prop.",
+  "prompt_sha256": "2615e58a2642fda0b81e3727ef5aa7afdae19c115da1d41d7846d19fa6cbfa34",
+  "recipe_path": "assets/generated/3d/scripts/build_c1_patrol_panel_r01.py",
+  "recipe_sha256": "6d0ff9ebf6c9654b9178f6417f2c2965824126733fd9a3740942a18c6d1e741c",
+  "seed": 20260911,
+  "concept_ref": [
+    "_workspace/current/concept/style-guide.md",
+    "_workspace/current/planning/campaign.json#c1-b1-c2",
+    "_workspace/current/production/decision-log.md#rfc-cx-004",
+    "_workspace/current/modeling/specs/c1-patrol-panel.md"
+  ],
+  "external_reference_media": [],
+  "third_party_assets": [],
+  "fees": 0,
+  "concept_deviation": "RFC-CX-004: canonical C1/c1-b1 clue c1-b1-c2 plus style guide and director brief substitute for absent sheet only for this prototype",
+  "formats": {
+    "canonical": "GLB",
+    "unity_candidate": "FBX with sidecar textures; importer validation required",
+    "authoring": "blend"
+  },
+  "preview_kind": "Blender product render; not gameplay or Unity capture",
+  "runtime_review": {
+    "decision": "RFC-CX-004",
+    "reviewed": "2026-09-11",
+    "reviewer": "game-production-director",
+    "scope": "Exact static c1-b1 panel and native material adapter; no live meter, numeric pressure, animation, full G4/G5 or performance claim",
+    "captures": [
+      {
+        "path": "_workspace/current/systems/tech-verification/c1-m3/panel/panel-front.png",
+        "sha256": "e8b06dffd0c292fdd8416007cfd5d966d7fafbdb04c7aa03fabe4cb704a745de"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/c1-m3/panel/panel-alternate.png",
+        "sha256": "044f0e5181e83622226e06780e99fb9b6594742081588d130aa2c542a1b32bb4"
+      }
+    ],
+    "generation_provenance": "generation-receipt/provenance.json",
+    "generation_provenance_sha256": "0ba530e098fe8e238d3134e7abef4d839ed2518f712961b9a6cf986fb238c41d"
+  },
+  "g4_passed": false,
+  "g5_passed": false,
+  "outputs": [
+    {
+      "path": "SM_C1_Gate_System_Panel.blend",
+      "bytes": 137949,
+      "sha256": "c21a54b4ce5d0f0d132d02f03308cf39564242a3d32afd2a0f61c3c30af0aef2"
+    },
+    {
+      "path": "SM_C1_Gate_System_Panel.fbx",
+      "bytes": 76332,
+      "sha256": "91e95212ad8cd81758a2cd238b938fb32b8b783ab816fe414ca76e52d345b2cc"
+    },
+    {
+      "path": "SM_C1_Gate_System_Panel.glb",
+      "bytes": 2025732,
+      "sha256": "16160841f3cccbd90bf9de005946325a3a3ff439bc50b71e9029af926d04c355"
+    },
+    {
+      "path": "measurements.json",
+      "bytes": 3842,
+      "sha256": "375b137d9f0ea00839891d17659574c10e3c4544676ceb9d466db76d8125c8cc"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 1154499,
+      "sha256": "b19540ede46f861baa778cfce38e896c4cb2e2b9ecd204aec40af5681165dcdc"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 512,
+      "sha256": "2615e58a2642fda0b81e3727ef5aa7afdae19c115da1d41d7846d19fa6cbfa34"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Casting_BaseColor.png",
+      "bytes": 527866,
+      "sha256": "84e6292cd41d7dc3d51d30afe858c70bd578b47e89432ea988a52715cff43134"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Casting_Roughness.png",
+      "bytes": 283215,
+      "sha256": "4fca96613df0db56087eca482335051d5acd8b0541aa3acbdd9df9eb6ece0d31"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Patina_BaseColor.png",
+      "bytes": 521106,
+      "sha256": "4aa5ac6b95757d367afd9bd447f4734d7f36f5f23ae06c535dfc1f2f9a03f4e4"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Patina_Roughness.png",
+      "bytes": 283215,
+      "sha256": "4fca96613df0db56087eca482335051d5acd8b0541aa3acbdd9df9eb6ece0d31"
+    }
+  ]
+}

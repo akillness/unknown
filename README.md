@@ -121,6 +121,19 @@ Blender r03 서랍은 실제 Unity 임포트·재질·배치 검토를 거쳐 **
 
 현재 구현은 T0 범위입니다. **25분은 설계 목표**이며 측정된 플레이 시간이 아닙니다. 전체 9장 캠페인, G4/G5/G6, 상품 출시 준비가 완료됐다는 뜻도 아닙니다.
 
+## C1 M3 구현과 검증
+
+**[OBSERVED · 2026-09-11]** C1 「두 개의 필적」의 첫 구간 「순찰로의 두 분기」(c1-b1)를 구현했습니다. 완료한 T0 저장에서 이어서 진입하며, 당직일지와 수문 계통판의 두 단서를 관찰하고 조명·판독 분기를 조정합니다. 무료 우회는 미리보기만 바꾸고, 출처 귀속 조건과 수문 접근은 명시적 확정과 저장 성공 후 함께 반영됩니다.
+
+Blender 5.1.2에서 원본 계통판을 제작했습니다: 정적 메시 6개, 삼각형 2,092개, 1024² 맵 4장. 아래 이미지는 **Blender 미리보기**입니다. 이 정적 패널의 Unity 사용을 승인했으며, 실행 증거는 [M3 검증 보고서](_workspace/current/production/codex-c1-m3-status.md)에 기록합니다.
+
+
+검증: **EditMode 27/27 · PlayMode 28/28 PASS**. macOS 빌드와 실제 v1 저장 불러오기 → C1 확정 → 앱 종료·재실행 복원을 확인했습니다. 저장 v2로 이전하면서 기존 36개 명령과 원본 v1 백업을 보존합니다. 150% 글자 크기에서 스크롤과 완료 화면도 확인했습니다.
+
+![C1 수문 계통판 Blender 미리보기](docs/media/c1-patrol-panel-blender-r01.png)
+
+범위는 c1-b1까지입니다. C1 전체 네 구간, 설계상 50분 플레이타임, 재미·성능·G4/G5 완료를 입증하지 않습니다. 리소스 제작 이력은 [작업자 검토](_workspace/current/production/c1-panel-operator-review.md)와 [provenance](assets/generated/3d/c1-patrol-panel-r01/provenance.json)에 남깁니다.
+
 ## 개발용 준비와 정본 재생성
 
 기획·구현 작업은 `CLAUDE.md` → `.mex/ROUTER.md` → `_workspace/current/handoff/README.md` 순서로 계약을 확인합니다. `Prepare`는 프로젝트에 포함된 테이블을 읽고 부모 작업 트리의 `_workspace/current/planning/campaign.json` SHA를 검증한 뒤 씬을 준비합니다. 저작 문서에서 테이블을 생성하는 명령이 아니며, 이 경로에는 부모 캠페인 파일이 필요합니다.

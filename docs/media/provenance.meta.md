@@ -27,3 +27,7 @@ The README now documents the packaged Unity 6000.5.6f1 project, self-contained B
 The existing r03 preview bytes and output hash are unchanged. Its manifest claim now links the source asset's separate T0-only Unity integration approval; the README image itself remains an isolated Blender render with `runtimeEligible:false`. Higgsfield audio remains a generated candidate disabled pending auditory review. MuAPI has no authenticated local connection, so no MuAPI generation is claimed here.
 
 All 16 media SHA-256 values were freshly rechecked during this integration (16,813,170 bytes total); recorded byte counts also match. No media binary changed.
+
+## C1 panel preview (2026-09-11)
+
+Added the original Blender patrol-panel preview and its exact source/recipe/hash. This image is a publication preview, with runtimeEligible:false; it does not establish native gameplay or material fit.

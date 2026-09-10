@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-10T16:42:06.796Z",
+  "executor": "root director",
+  "scope": "C1 c1-b1 only",
+  "nativePlayer": {
+    "build": "unity/Unknown/Builds/C1-M3-mac/Unknown.app",
+    "executable": "Contents/MacOS/Unknown T0",
+    "buildBytes": 331066757,
+    "method": "CUA clicks and screenshots of native macOS standalone; process exit and relaunch",
+    "windowRequested": [
+      1280,
+      800
+    ],
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "observations": [
+      "Loaded actual completed prior v1 T0 save and entered C1 explicitly",
+      "Observed both canonical clues and their source labels",
+      "Both enabled initial routing disabled confirmation, including after attribution acknowledgement",
+      "Free bypass made preview valid without granting chapter completion",
+      "Preview and final confirmation displayed before accepted save",
+      "After confirm: gate access and journal attribution shown together with bounded demo endpoint",
+      "Quit exited 0; relaunch and Continue restored same C1 endpoint",
+      "Scrolled endpoint content readable at 150 percent without viewport overlap"
+    ],
+    "priorCommands": 36,
+    "persistedCommands": 42,
+    "priorCommandEntriesPreserved": true,
+    "v1BackupByteIdentical": true,
+    "schemaAfter": 2,
+    "confirmPatrolEvents": 1,
+    "confirmedBranch": {
+      "lighting": false,
+      "reader": true
+    },
+    "limitations": [
+      "Visual observations are assistant-operated smoke, not human fun/accessibility study",
+      "Physical gamepad and auditory review not performed",
+      "Performance and full G4/G5 not measured",
+      "C1 remaining three beats not implemented"
+    ]
+  },
+  "nativeTests": {
+    "editmode": {
+      "passed": 27,
+      "failed": 0,
+      "file": "results/editmode-3.xml"
+    },
+    "playmode": {
+      "passed": 28,
+      "failed": 0,
+      "file": "results/playmode-1.xml"
+    },
+    "execution": "systems Unity runner; root and QA independently inspected XML",
+    "requiredGuards": [
+      "PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary",
+      "FailedSaveHasNoChapterEffectsAndRetryCommitsOnce"
+    ]
+  },
+  "static": {
+    "unitySourceHashesVerified": 309,
+    "blenderOutputHashesVerified": 10,
+    "readmeMediaHashesVerified": 17,
+    "preproductionPassed": 514,
+    "preproductionRuntimeStatus": "NOT-MEASURED",
+    "frontmatterTopology": {
+      "findings": 0,
+      "markdownArtifacts": 486,
+      "stalenessMeasured": false
+    },
+    "authoredWhitespaceCheck": "PASS for staged C#, Markdown, JSON, Python, shader and text",
+    "generatedWhitespace": "Full diff check reports raw Unity logs/XML and generated Unity YAML whitespace; preserved as original evidence/assets"
+  },
+  "knowledge": {
+    "graphUpdate": "completed code extraction; docs not semantically re-extracted",
+    "mex": "skipped: mex-agent unavailable; TeX mex not invoked",
+    "zvec": "no index mutation"
+  },
+  "files": [
+    {
+      "path": "player-smoke/before-confirm-save.json",
+      "bytes": 10685,
+      "sha256": "59640996060c4fae8ef011fa4a4403f28bab48be862affacad99af19da76fe25"
+    },
+    {
+      "path": "player-smoke/confirmed-save.json",
+      "bytes": 10952,
+      "sha256": "7ae0d63f3bbd1ac911b9d4b274725a9ef2a117bd34713402f1038638a5676733"
+    },
+    {
+      "path": "player-smoke/first-player.log",
+      "bytes": 4075,
+      "sha256": "533eeecfbb68186e6b8fd82472abee1f0363d49844477dc5332f83916e28fbb7"
+    },
+    {
+      "path": "player-smoke/input-settings.json",
+      "bytes": 179,
+      "sha256": "01a391f92ba4ebbf4539c9e93780e1a9a4e05e0e075af53cae18b69c1072394e"
+    },
+    {
+      "path": "player-smoke/relaunch-player.log",
+      "bytes": 4078,
+      "sha256": "932494f30c8b766eaf4912ef0b44e489a517982f11dbf93736beeeef189fb342"
+    },
+    {
+      "path": "player-smoke/save.json",
+      "bytes": 10952,
+      "sha256": "7ae0d63f3bbd1ac911b9d4b274725a9ef2a117bd34713402f1038638a5676733"
+    },
+    {
+      "path": "player-smoke/save.json.v1.bak",
+      "bytes": 9490,
+      "sha256": "6625ef4e331d893ae142fbd1eabc63e683095194f19e00efe5aa7ff53e394a57"
+    },
+    {
+      "path": "player-smoke/settings.json",
+      "bytes": 179,
+      "sha256": "01a391f92ba4ebbf4539c9e93780e1a9a4e05e0e075af53cae18b69c1072394e"
+    },
+    {
+      "path": "player-smoke/v1-input-save.json",
+      "bytes": 9490,
+      "sha256": "6625ef4e331d893ae142fbd1eabc63e683095194f19e00efe5aa7ff53e394a57"
+    }
+  ]
+}
