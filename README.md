@@ -108,6 +108,8 @@ bash .claude/skills/game-ops-harness/scripts/freshness-check.sh --root "$PWD"
 
 ## 리소스 출처와 라이선스
 
+신규 리소스 생성에는 **MuAPI와 Higgsfield**를 사용합니다(2026-09-10 사용자 지정). 아래 목록은 기존 산출물의 실제 생성 출처입니다. 새 결과도 제공자·모델·입력·해시를 기록하고 별도 감사 후에만 런타임으로 승격합니다.
+
 - 2D: `god-tibo-imagen`(GTI, Codex 백엔드, 모델 `gpt-6-astra`) — 프롬프트는 `_workspace/current/concept/prompts/`, 출처는 각 폴더의 `provenance.json`.
 - 3D: Blender 5.1.2 (MCP) 프리미티브 그레이박스 — 스크립트 `assets/generated/3d/scripts/`.
 - 영상: Higgsfield `seedance_2_0_mini` — `assets/generated/video/provenance.json`.
