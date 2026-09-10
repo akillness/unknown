@@ -1,0 +1,161 @@
+{
+  "schema": "provenance/v1",
+  "assets": [
+    {
+      "id": "previz-hub-turntable",
+      "file": "previz-hub-turntable.gif",
+      "category": "previz-gif",
+      "tool": "ffmpeg (palettegen/paletteuse)",
+      "frames_glob": "assets/generated/3d/renders/turntable/frame_*.png",
+      "frame_count": 12,
+      "fps": 8.0,
+      "width": 640,
+      "bytes": 1048236,
+      "output_sha256": "7e058b5d05ddefded8868effeb67849bfafb8f987f88d2edd98a40cfa405d570",
+      "generated_at": "2026-09-09T17:56:07.815172+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] pre-visualization assembled from generated frames; NOT gameplay capture"
+    },
+    {
+      "id": "readme-hero",
+      "file": "readme-hero.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-hero.png",
+      "width": 1200,
+      "height": 479,
+      "output_sha256": "31ccdfafe7f8e3cf3430bb94dd78f888366accd0770e70bedf9eb62897d14e77",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "hub-greybox-render",
+      "file": "hub-greybox-render.jpg",
+      "derived_from": "assets/generated/3d/renders/hub-cam.png",
+      "width": 1200,
+      "height": 675,
+      "output_sha256": "e549c3a7435a2f5b84aa9e95bc2fbc0497e13f913df1b2f077ceaf2d29321539",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-circuit",
+      "file": "verb-circuit.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-circuit.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "6a02a0d428f1502bedb0d73e3a1b83f5289ad3dd00b7328363022f0849a80c9b",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-reader",
+      "file": "verb-reader.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-reader.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "7548e083310c610bd0aa4fd238916690759dee18d522918244f104ef010b3565",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-alignment",
+      "file": "verb-alignment.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-alignment.png",
+      "width": 1200,
+      "height": 514,
+      "output_sha256": "dca9789d917f2491552f9a4f1ce612e7e80ac919cd21f3f1a5fee0db07f2544c",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-routing",
+      "file": "verb-routing.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-routing.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "0ad06dd484076a6a52d6a5b13d2f25b4e4ba8ed99ed05b5f8fea4ef00f41a9ce",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-corrosion",
+      "file": "verb-corrosion.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-corrosion.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "d313088d9553edc4358f4a6a17a1b2604a48ffe3aec2563c070e235a46519e8a",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "verb-seal",
+      "file": "verb-seal.jpg",
+      "derived_from": "assets/generated/2d/readme/readme-verb-seal.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "c685b2c0d954ea9301d860fbc795eede1aeb71b9be276748e1c9b14a4ef0fb2b",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay",
+      "regenerated": "2026-09-10 C4-F11 (no handwriting)"
+    },
+    {
+      "id": "keyart-wide",
+      "file": "keyart-wide.jpg",
+      "derived_from": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "width": 1200,
+      "height": 675,
+      "output_sha256": "f1dd1d289ac42c71fa67979ca1f709bbfc305a5ba68a60bad1dc95ad8a5b468f",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "ui-workbench-frame",
+      "file": "ui-workbench-frame.jpg",
+      "derived_from": "assets/generated/2d/ui/ui-workbench-frame.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "f07511c4fc9cacf515200de6660d6a5860adcff8d4aa471b3bf9343af8cf3839",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "space-hub",
+      "file": "space-hub.jpg",
+      "derived_from": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "width": 1200,
+      "height": 800,
+      "output_sha256": "ad5fedfd82aaada8aeb4226883f9d526c8a07566f3cafd9ef5d4977f286f5864",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "char-seorin",
+      "file": "char-seorin.jpg",
+      "derived_from": "assets/generated/2d/concept/char-seorin-sheet.png",
+      "width": 1024,
+      "height": 1536,
+      "output_sha256": "88c76bd94fafaa5dfcdc561e70d60b20a04ad7aeeb5e7cfa05c15b01a89f5117",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] README media derived from generated concept/greybox; NOT gameplay"
+    },
+    {
+      "id": "previz-cutscene-video",
+      "file": "previz-cutscene-video.gif",
+      "derived_from": "assets/generated/video/previz-clip-01-circuit-to-water.mp4 + previz-clip-02-valve-trial.mp4",
+      "tool": "ffmpeg palettegen/paletteuse",
+      "bytes": 9185383,
+      "output_sha256": "884bb98ca0724a5edc3894819ae84e50656d0450823573c2bc407b1a42e9e330",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] pre-visualization GIF; NOT gameplay capture"
+    },
+    {
+      "id": "previz-cutscene-concept",
+      "file": "previz-cutscene-concept.gif",
+      "derived_from": "assets/generated/2d/previz/previz-f01..f09 (GTI chain)",
+      "tool": "ffmpeg palettegen/paletteuse",
+      "bytes": 3548951,
+      "output_sha256": "c04b339e934f43aace5a29784ef37b72e03d7b6fcd885b8714fb28534249c0fe",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] pre-visualization GIF; NOT gameplay capture"
+    }
+  ]
+}
