@@ -1,0 +1,168 @@
+{
+  "emitter": "systems/pipeline/emit-tables.mjs",
+  "emitterOwner": "game-systems-designer",
+  "emittedUtc": "2026-09-10T07:54:33.119Z",
+  "scope": "t0",
+  "scopeSource": "--scope",
+  "dryRun": false,
+  "source": {
+    "path": "planning/campaign.json",
+    "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
+    "bytes": 124007
+  },
+  "validator": {
+    "path": "planning/validate-campaign.mjs",
+    "owner": "game-planner",
+    "exitCode": 0,
+    "checks": 49,
+    "pass": 49,
+    "fail": 0,
+    "verdict": "PASS"
+  },
+  "aggregates": {
+    "stages": 9,
+    "beats": 33,
+    "clues": 73,
+    "sourceTypeDist": {
+      "log": 27,
+      "ledger": 22,
+      "plate": 24
+    },
+    "toolBeatCounts": {
+      "circuit": 10,
+      "reader": 11,
+      "alignment": 8,
+      "routing": 3,
+      "corrosion": 3,
+      "seal": 7
+    },
+    "zoneBeatCounts": {
+      "hub": 17,
+      "gate": 2,
+      "pump": 5,
+      "dock": 5,
+      "lowland": 4
+    },
+    "proofRequiredBeats": 17,
+    "totalMinutes": 480
+  },
+  "tables": [
+    {
+      "file": "beats.json",
+      "derivation": "subset+predicate",
+      "sha256": "9bf5634a0908ef8f6bbcecf2fdd6d19ecf01e76eff1820ce213eec35a4bd5a8f",
+      "bytes": 16532,
+      "rows": 3
+    },
+    {
+      "file": "hints.json",
+      "derivation": "projection",
+      "sha256": "8bbfc9318ee6decde387245482901959be04dfe28f74e0831d530ffbd9bb4839",
+      "bytes": 4032,
+      "rows": 9
+    },
+    {
+      "file": "tools.json",
+      "derivation": "schema-projection",
+      "sha256": "1cfa4654173b0de4143035a51b36aa487e8ec0d60c399a37344225ef9eb265d9",
+      "bytes": 10324,
+      "rows": 2
+    },
+    {
+      "file": "zones.json",
+      "derivation": "authoring-derivation",
+      "sha256": "3c3d043f6f4573ebafff1d4a5c6229d3ac632f3dadc3a425ef07e65214bd0f08",
+      "bytes": 15341,
+      "rows": 1
+    },
+    {
+      "file": "records.json",
+      "derivation": "markdown-parse+rule",
+      "sha256": "7703643983f733a49f173296530710bb719d5ec663fa6ba863a25c6c9d7989cd",
+      "bytes": 70687,
+      "rows": 5
+    }
+  ],
+  "importerContract": {
+    "mustVerify": [
+      "validator.verdict === \"PASS\"",
+      "sha256(beats.json) === receipt.tables[beats.json].sha256",
+      "sha256(hints.json) === receipt.tables[hints.json].sha256",
+      "sha256(tools.json) === receipt.tables[tools.json].sha256",
+      "sha256(zones.json) === receipt.tables[zones.json].sha256",
+      "sha256(records.json) === receipt.tables[records.json].sha256",
+      "receipt.source.sha256 === sha256(저작 원본) — 원본에 접근 가능할 때만"
+    ],
+    "mustReimplement": [
+      "R-1 로컬라이즈 미해결 키 0건 — **KO 필수 · EN 선택**(RFC-S6). 용어집 등재 여부만 fail-closed",
+      "R-2 고아 0건 (Unity 에셋 참조 그래프가 있어야 판정 가능)",
+      "R-3 독립쌍 중 파괴 불가 경로 ≥ 1 (런타임 규칙)",
+      "R-4 임의 도달 상태에서 엔딩 3종 도달 (런타임 상태공간 탐색)"
+    ],
+    "mustNotReimplement": "저작 시점 검사 전건(검증기 checks). C# 으로 다시 쓰면 두 구현이 갈라진다",
+    "ignoredFields": [
+      "emittedUtc"
+    ]
+  },
+  "notMeasured": [
+    "Unity 임포트 0회 · 빌드 0회 · 사람 플레이 표본 n=0",
+    "이 영수증은 데이터 정합만 증명한다. 어떤 게이트도 PASS 로 올리지 않는다"
+  ],
+  "authoringSources": {
+    "records": {
+      "path": "synopsis/t0-records.md",
+      "sha256": "f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f"
+    },
+    "toolsSchema": {
+      "path": "systems/data-schemas/tools.md",
+      "sha256": "f7ee4e1b854f8a8708c3879dc4489730fe18064484f49e8ec1cee45200fa6c2e"
+    },
+    "zonesSchema": {
+      "path": "systems/data-schemas/zones.md",
+      "sha256": "0c166c80b9b5f11ffa78ce6665036440137f0c3bed4e357114cf9b7692a77f60"
+    },
+    "styleGuide": {
+      "path": "concept/style-guide.md",
+      "sha256": "a70e3dc7929228c74913a0dd3d5ed94b729f0eed7031b28ce707cf0c9f810659"
+    },
+    "hubModel": {
+      "path": "modeling/specs/hub-watchroom.md",
+      "sha256": "d2e08e4e119fc624e447f29d5951add142c969a170c19fee6da9cf3b7ee37529"
+    },
+    "manifest": {
+      "path": "modeling/asset-manifest.md",
+      "sha256": "b32fe494d1c8af87494177e0387cf0417fab9447bf17d06c6a9c17210393b285"
+    },
+    "bible": {
+      "path": "worldview/worldview-bible.md",
+      "sha256": "87a9617ec9fe6ac1eeac46db4391d4fcf9080efd62c477ee9f1e3cff3db43826"
+    },
+    "wiring": {
+      "path": "systems/system-specs/wiring-trace.md",
+      "sha256": "60d6f2b15844c674ac0f5ddd173f1a6fe1b5c182669e554f2ffba93ba83df4be"
+    },
+    "plateReadout": {
+      "path": "systems/system-specs/plate-readout.md",
+      "sha256": "55f502a63cbf83c86d60b79633bc807954112f8f270706d095548bbcdaa7e6a1"
+    },
+    "interaction": {
+      "path": "systems/interaction-rules.md",
+      "sha256": "8e28c2bfe58448abce6401e8d982834750930fecaa93ed53bc44105183f4fdff"
+    },
+    "circuitOverlay": {
+      "path": "planning/t0-circuit-overlay.json",
+      "sha256": "2e3ea0a1aeadb913c46c794d27f38ae49a45849d56fa4ecb895043cf457be9df"
+    }
+  },
+  "crossChecks": {
+    "plateAnchors": "33/33 일치",
+    "ledgerAnchors": "28/28 일치",
+    "clueIdOriginMedium": "문서 ↔ campaign 전건 일치(불일치 시 exit 2)"
+  },
+  "toolInvariants": {
+    "T-I1": "toolId 중복 0 · 6종 등록(구현 2 + 스텁 4)",
+    "T-I3": "PASS",
+    "T-I4": "PASS",
+    "T-I7": "PASS"
+  }
+}

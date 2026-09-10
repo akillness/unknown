@@ -1,0 +1,26 @@
+{
+  "assetId": "SM_Hub_Workbench_Drawer",
+  "revision": "r01",
+  "provider": "Blender CLI",
+  "version": "5.1.2",
+  "recipe": "assets/generated/3d/scripts/build_hub_drawer.py",
+  "recipeSource": "_workspace/current/modeling/pipeline.md: T0 hub-view-drawer candidate",
+  "decision": "RFC-CX-003",
+  "classification": "existing hub workbench attachment; not new production identity",
+  "canonicalFormat": "glb",
+  "derivedUnityImportCandidate": "fbx",
+  "runtimeEligible": false,
+  "reviewStatus": "static blockout structure/palette ACK; final material FIX; Unity import pending",
+  "visualInspection": "Root and independent QA confirmed casing, front and handle in isolated preview. Concept confirmed canonical palette but found missing wear, downward corrosion traces and edge salt. r01 is preserved as blockout evidence; not runtime-promoted.",
+  "hashes": {
+    "SM_Hub_Workbench_Drawer.blend": "08ef9233b6bee270ee7da33d0a0bf8f6a65cb5987f08790eb43f9789a4da51c2",
+    "SM_Hub_Workbench_Drawer.glb": "88e6dd98d7c42cd0d6486c283fe06c8c2563f96974bcf64ffcf66eddd7cbb72c",
+    "SM_Hub_Workbench_Drawer.fbx": "79f6d05e91a601d89d7cf11a8cb7939990c7b2453c3d50724d16536921d14a5d",
+    "measurements.json": "3d67f54fe4f29d690fcec8d7663fc22974c8dd3c8a7df33fbfdc47a210aea7c3",
+    "preview.png": "f4993f7f4df677a61940859fbf57b3e0591459e0b9437630091ed5fa97db6308"
+  },
+  "reviews": [
+    "_workspace/current/qa/t0-m2-source-resource-review.md",
+    "_workspace/current/concept/t0-source-drawer-review.md"
+  ]
+}

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57045bdbd6dc941d5ae8414c4e5d9d32, type: 3}
+  m_Name: T0Catalog
+  m_EditorClassIdentifier: Tide.Data::Tide.Data.T0CatalogAsset
+  tables:
+  - {fileID: 4900000, guid: 239c4327c55954e8894786c925cc0244, type: 3}
+  - {fileID: 4900000, guid: 710417414a9a3474b8e461dda891d248, type: 3}
+  - {fileID: 4900000, guid: 534527834b2db4e348d7556d47059b61, type: 3}
+  - {fileID: 4900000, guid: 8cda1cca7a8da45a8ae8aee90fbdb557, type: 3}
+  - {fileID: 4900000, guid: fe39ac644931845b6896ac392f012392, type: 3}
+  receipt: {fileID: 4900000, guid: 2ed0e4112bc4643e69c5715653840d32, type: 3}
+  producerReceipt: "{\n  \"emitter\": \"systems/pipeline/emit-tables.mjs\",\n  \"emitterOwner\":
+    \"game-systems-designer\",\n  \"emittedUtc\": \"2026-09-10T07:54:33.119Z\",\n 
+    \"scope\": \"t0\",\n  \"scopeSource\": \"--scope\",\n  \"dryRun\": false,\n 
+    \"source\": {\n    \"path\": \"planning/campaign.json\",\n    \"sha256\": \"8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a\",\n   
+    \"bytes\": 124007\n  },\n  \"validator\": {\n    \"path\": \"planning/validate-campaign.mjs\",\n   
+    \"owner\": \"game-planner\",\n    \"exitCode\": 0,\n    \"checks\": 49,\n   
+    \"pass\": 49,\n    \"fail\": 0,\n    \"verdict\": \"PASS\"\n  },\n  \"aggregates\":
+    {\n    \"stages\": 9,\n    \"beats\": 33,\n    \"clues\": 73,\n    \"sourceTypeDist\":
+    {\n      \"log\": 27,\n      \"ledger\": 22,\n      \"plate\": 24\n    },\n   
+    \"toolBeatCounts\": {\n      \"circuit\": 10,\n      \"reader\": 11,\n      \"alignment\":
+    8,\n      \"routing\": 3,\n      \"corrosion\": 3,\n      \"seal\": 7\n    },\n   
+    \"zoneBeatCounts\": {\n      \"hub\": 17,\n      \"gate\": 2,\n      \"pump\":
+    5,\n      \"dock\": 5,\n      \"lowland\": 4\n    },\n    \"proofRequiredBeats\":
+    17,\n    \"totalMinutes\": 480\n  },\n  \"tables\": [\n    {\n      \"file\":
+    \"beats.json\",\n      \"derivation\": \"subset+predicate\",\n      \"sha256\":
+    \"9bf5634a0908ef8f6bbcecf2fdd6d19ecf01e76eff1820ce213eec35a4bd5a8f\",\n     
+    \"bytes\": 16532,\n      \"rows\": 3\n    },\n    {\n      \"file\": \"hints.json\",\n     
+    \"derivation\": \"projection\",\n      \"sha256\": \"8bbfc9318ee6decde387245482901959be04dfe28f74e0831d530ffbd9bb4839\",\n     
+    \"bytes\": 4032,\n      \"rows\": 9\n    },\n    {\n      \"file\": \"tools.json\",\n     
+    \"derivation\": \"schema-projection\",\n      \"sha256\": \"1cfa4654173b0de4143035a51b36aa487e8ec0d60c399a37344225ef9eb265d9\",\n     
+    \"bytes\": 10324,\n      \"rows\": 2\n    },\n    {\n      \"file\": \"zones.json\",\n     
+    \"derivation\": \"authoring-derivation\",\n      \"sha256\": \"3c3d043f6f4573ebafff1d4a5c6229d3ac632f3dadc3a425ef07e65214bd0f08\",\n     
+    \"bytes\": 15341,\n      \"rows\": 1\n    },\n    {\n      \"file\": \"records.json\",\n     
+    \"derivation\": \"markdown-parse+rule\",\n      \"sha256\": \"7703643983f733a49f173296530710bb719d5ec663fa6ba863a25c6c9d7989cd\",\n     
+    \"bytes\": 70687,\n      \"rows\": 5\n    }\n  ],\n  \"importerContract\": {\n   
+    \"mustVerify\": [\n      \"validator.verdict === \\\"PASS\\\"\",\n      \"sha256(beats.json)
+    === receipt.tables[beats.json].sha256\",\n      \"sha256(hints.json) === receipt.tables[hints.json].sha256\",\n     
+    \"sha256(tools.json) === receipt.tables[tools.json].sha256\",\n      \"sha256(zones.json)
+    === receipt.tables[zones.json].sha256\",\n      \"sha256(records.json) === receipt.tables[records.json].sha256\",\n     
+    \"receipt.source.sha256 === sha256(\uC800\uC791 \uC6D0\uBCF8) \u2014 \uC6D0\uBCF8\uC5D0
+    \uC811\uADFC \uAC00\uB2A5\uD560 \uB54C\uB9CC\"\n    ],\n    \"mustReimplement\":
+    [\n      \"R-1 \uB85C\uCEEC\uB77C\uC774\uC988 \uBBF8\uD574\uACB0 \uD0A4 0\uAC74
+    \u2014 **KO \uD544\uC218 \xB7 EN \uC120\uD0DD**(RFC-S6). \uC6A9\uC5B4\uC9D1 \uB4F1\uC7AC
+    \uC5EC\uBD80\uB9CC fail-closed\",\n      \"R-2 \uACE0\uC544 0\uAC74 (Unity \uC5D0\uC14B
+    \uCC38\uC870 \uADF8\uB798\uD504\uAC00 \uC788\uC5B4\uC57C \uD310\uC815 \uAC00\uB2A5)\",\n     
+    \"R-3 \uB3C5\uB9BD\uC30D \uC911 \uD30C\uAD34 \uBD88\uAC00 \uACBD\uB85C \u2265
+    1 (\uB7F0\uD0C0\uC784 \uADDC\uCE59)\",\n      \"R-4 \uC784\uC758 \uB3C4\uB2EC
+    \uC0C1\uD0DC\uC5D0\uC11C \uC5D4\uB529 3\uC885 \uB3C4\uB2EC (\uB7F0\uD0C0\uC784
+    \uC0C1\uD0DC\uACF5\uAC04 \uD0D0\uC0C9)\"\n    ],\n    \"mustNotReimplement\":
+    \"\uC800\uC791 \uC2DC\uC810 \uAC80\uC0AC \uC804\uAC74(\uAC80\uC99D\uAE30 checks).
+    C# \uC73C\uB85C \uB2E4\uC2DC \uC4F0\uBA74 \uB450 \uAD6C\uD604\uC774 \uAC08\uB77C\uC9C4\uB2E4\",\n   
+    \"ignoredFields\": [\n      \"emittedUtc\"\n    ]\n  },\n  \"notMeasured\": [\n   
+    \"Unity \uC784\uD3EC\uD2B8 0\uD68C \xB7 \uBE4C\uB4DC 0\uD68C \xB7 \uC0AC\uB78C
+    \uD50C\uB808\uC774 \uD45C\uBCF8 n=0\",\n    \"\uC774 \uC601\uC218\uC99D\uC740
+    \uB370\uC774\uD130 \uC815\uD569\uB9CC \uC99D\uBA85\uD55C\uB2E4. \uC5B4\uB5A4
+    \uAC8C\uC774\uD2B8\uB3C4 PASS \uB85C \uC62C\uB9AC\uC9C0 \uC54A\uB294\uB2E4\"\n 
+    ],\n  \"authoringSources\": {\n    \"records\": {\n      \"path\": \"synopsis/t0-records.md\",\n     
+    \"sha256\": \"f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f\"\n   
+    },\n    \"toolsSchema\": {\n      \"path\": \"systems/data-schemas/tools.md\",\n     
+    \"sha256\": \"f7ee4e1b854f8a8708c3879dc4489730fe18064484f49e8ec1cee45200fa6c2e\"\n   
+    },\n    \"zonesSchema\": {\n      \"path\": \"systems/data-schemas/zones.md\",\n     
+    \"sha256\": \"0c166c80b9b5f11ffa78ce6665036440137f0c3bed4e357114cf9b7692a77f60\"\n   
+    },\n    \"styleGuide\": {\n      \"path\": \"concept/style-guide.md\",\n     
+    \"sha256\": \"a70e3dc7929228c74913a0dd3d5ed94b729f0eed7031b28ce707cf0c9f810659\"\n   
+    },\n    \"hubModel\": {\n      \"path\": \"modeling/specs/hub-watchroom.md\",\n     
+    \"sha256\": \"d2e08e4e119fc624e447f29d5951add142c969a170c19fee6da9cf3b7ee37529\"\n   
+    },\n    \"manifest\": {\n      \"path\": \"modeling/asset-manifest.md\",\n     
+    \"sha256\": \"b32fe494d1c8af87494177e0387cf0417fab9447bf17d06c6a9c17210393b285\"\n   
+    },\n    \"bible\": {\n      \"path\": \"worldview/worldview-bible.md\",\n     
+    \"sha256\": \"87a9617ec9fe6ac1eeac46db4391d4fcf9080efd62c477ee9f1e3cff3db43826\"\n   
+    },\n    \"wiring\": {\n      \"path\": \"systems/system-specs/wiring-trace.md\",\n     
+    \"sha256\": \"60d6f2b15844c674ac0f5ddd173f1a6fe1b5c182669e554f2ffba93ba83df4be\"\n   
+    },\n    \"plateReadout\": {\n      \"path\": \"systems/system-specs/plate-readout.md\",\n     
+    \"sha256\": \"55f502a63cbf83c86d60b79633bc807954112f8f270706d095548bbcdaa7e6a1\"\n   
+    },\n    \"interaction\": {\n      \"path\": \"systems/interaction-rules.md\",\n     
+    \"sha256\": \"8e28c2bfe58448abce6401e8d982834750930fecaa93ed53bc44105183f4fdff\"\n   
+    },\n    \"circuitOverlay\": {\n      \"path\": \"planning/t0-circuit-overlay.json\",\n     
+    \"sha256\": \"2e3ea0a1aeadb913c46c794d27f38ae49a45849d56fa4ecb895043cf457be9df\"\n   
+    }\n  },\n  \"crossChecks\": {\n    \"plateAnchors\": \"33/33 \uC77C\uCE58\",\n   
+    \"ledgerAnchors\": \"28/28 \uC77C\uCE58\",\n    \"clueIdOriginMedium\": \"\uBB38\uC11C
+    \u2194 campaign \uC804\uAC74 \uC77C\uCE58(\uBD88\uC77C\uCE58 \uC2DC exit 2)\"\n 
+    },\n  \"toolInvariants\": {\n    \"T-I1\": \"toolId \uC911\uBCF5 0 \xB7 6\uC885
+    \uB4F1\uB85D(\uAD6C\uD604 2 + \uC2A4\uD141 4)\",\n    \"T-I3\": \"PASS\",\n   
+    \"T-I4\": \"PASS\",\n    \"T-I7\": \"PASS\"\n  }\n}\n"

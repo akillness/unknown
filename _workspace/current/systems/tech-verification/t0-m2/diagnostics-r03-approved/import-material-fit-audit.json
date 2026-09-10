@@ -1,0 +1,77 @@
+{
+  "revision": "r03",
+  "runtimeEligible": false,
+  "colorSpace": "Gamma",
+  "graphicsDevice": "Metal",
+  "textures": [
+    {
+      "file": "SM_Hub_Workbench_Drawer_Casing_BaseColor.png",
+      "width": 1024,
+      "height": 1024,
+      "sRGB": true
+    },
+    {
+      "file": "SM_Hub_Workbench_Drawer_Casing_Roughness.png",
+      "width": 1024,
+      "height": 1024,
+      "sRGB": false
+    },
+    {
+      "file": "SM_Hub_Workbench_Drawer_Tray_BaseColor.png",
+      "width": 1024,
+      "height": 1024,
+      "sRGB": true
+    },
+    {
+      "file": "SM_Hub_Workbench_Drawer_Tray_Roughness.png",
+      "width": 1024,
+      "height": 1024,
+      "sRGB": false
+    }
+  ],
+  "unityAdapterYawDeg": 180,
+  "materials": [
+    {
+      "renderer": "SM_Hub_Workbench_Drawer_Tray",
+      "center": [
+        -4.80825157E-09,
+        0.13,
+        -0.0549999736
+      ],
+      "size": [
+        1.02,
+        0.180000052,
+        0.68
+      ],
+      "baseMapBound": true,
+      "roughnessBound": true,
+      "metallic": 0.08,
+      "shaderSupported": true
+    },
+    {
+      "renderer": "SM_Hub_Workbench_Drawer_Casing",
+      "center": [
+        1.38555818E-15,
+        0.12999998,
+        2.32458088E-08
+      ],
+      "size": [
+        1.10000014,
+        0.26000005,
+        0.7000001
+      ],
+      "baseMapBound": true,
+      "roughnessBound": true,
+      "metallic": 0.08,
+      "shaderSupported": true
+    }
+  ],
+  "meshCount": 2,
+  "triangles": 156,
+  "fitAdaptation": "Diagnostic AABB subtraction from authored workbench; no runtime promotion",
+  "drawerPosition": [
+    0,
+    0.32,
+    1.1
+  ]
+}

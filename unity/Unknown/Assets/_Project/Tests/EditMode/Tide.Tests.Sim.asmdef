@@ -1,0 +1,37 @@
+{
+  "name": "Tide.Tests.Sim",
+  "references": [
+    "Tide.Sim",
+    "Tide.Data",
+    "Tide.EditorTools",
+    "Tide.Save",
+    "Tide.Input",
+    "Tide.UI",
+    "Unity.InputSystem",
+    "Tide.App"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "TIDE_TEST_FRAMEWORK"
+  ],
+  "versionDefines": [
+    {
+      "name": "com.unity.test-framework",
+      "expression": "1.0.0",
+      "define": "TIDE_TEST_FRAMEWORK"
+    }
+  ],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "asset_id": "SM_Hub_Workbench_Drawer",
+  "revision": "r02",
+  "status": "blender-measured",
+  "runtimeEligible": false,
+  "blender_version": "5.1.2",
+  "initial_scene": [
+    {
+      "name": "Camera",
+      "type": "CAMERA"
+    },
+    {
+      "name": "Cube",
+      "type": "MESH"
+    },
+    {
+      "name": "Light",
+      "type": "LIGHT"
+    }
+  ],
+  "tri_budget_target": 1500,
+  "texture_files": 4,
+  "objects": [
+    {
+      "name": "SM_Hub_Workbench_Drawer_Casing",
+      "vertices": 40,
+      "triangles": 60,
+      "polygons": 30,
+      "material_slots": 1,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bounds_local": [
+        [
+          -0.550000011920929,
+          -0.3499999940395355,
+          0.0
+        ],
+        [
+          -0.550000011920929,
+          -0.3499999940395355,
+          0.25999999046325684
+        ],
+        [
+          -0.550000011920929,
+          0.3499999940395355,
+          0.25999999046325684
+        ],
+        [
+          -0.550000011920929,
+          0.3499999940395355,
+          0.0
+        ],
+        [
+          0.550000011920929,
+          -0.3499999940395355,
+          0.0
+        ],
+        [
+          0.550000011920929,
+          -0.3499999940395355,
+          0.25999999046325684
+        ],
+        [
+          0.550000011920929,
+          0.3499999940395355,
+          0.25999999046325684
+        ],
+        [
+          0.550000011920929,
+          0.3499999940395355,
+          0.0
+        ]
+      ],
+      "uv_layers": [
+        "UV_Drawer_Surface"
+      ]
+    },
+    {
+      "name": "SM_Hub_Workbench_Drawer_Tray",
+      "vertices": 64,
+      "triangles": 96,
+      "polygons": 48,
+      "material_slots": 1,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bounds_local": [
+        [
+          -0.5099999904632568,
+          -0.39500001072883606,
+          0.03999999910593033
+        ],
+        [
+          -0.5099999904632568,
+          -0.39500001072883606,
+          0.2199999988079071
+        ],
+        [
+          -0.5099999904632568,
+          0.2849999964237213,
+          0.2199999988079071
+        ],
+        [
+          -0.5099999904632568,
+          0.2849999964237213,
+          0.03999999910593033
+        ],
+        [
+          0.5099999904632568,
+          -0.39500001072883606,
+          0.03999999910593033
+        ],
+        [
+          0.5099999904632568,
+          -0.39500001072883606,
+          0.2199999988079071
+        ],
+        [
+          0.5099999904632568,
+          0.2849999964237213,
+          0.2199999988079071
+        ],
+        [
+          0.5099999904632568,
+          0.2849999964237213,
+          0.03999999910593033
+        ]
+      ],
+      "uv_layers": [
+        "UV_Drawer_Surface"
+      ]
+    }
+  ],
+  "material_target": {
+    "frame_corrosion_max": 0.15,
+    "frame_salt_max": 0.12,
+    "frame_unworn_metal_max": 0.05,
+    "measured_frame_coverage": null
+  },
+  "texture_mask_receipts": [
+    {
+      "painted_texels": 806522,
+      "corrosion_texels": 27401,
+      "salt_texels": 4486,
+      "object": "SM_Hub_Workbench_Drawer_Casing",
+      "atlas_size": [
+        1024,
+        1024
+      ],
+      "pixels_per_metre": 424.4485009408001,
+      "corrosion_mask_fraction": 0.03397427472530198,
+      "salt_mask_fraction": 0.005562154535152172,
+      "scope": "Authored UV mask counts; NOT frame coverage or a visual pass"
+    },
+    {
+      "painted_texels": 574674,
+      "corrosion_texels": 20901,
+      "salt_texels": 4353,
+      "object": "SM_Hub_Workbench_Drawer_Tray",
+      "atlas_size": [
+        1024,
+        1024
+      ],
+      "pixels_per_metre": 501.4750720000001,
+      "corrosion_mask_fraction": 0.03637018553127512,
+      "salt_mask_fraction": 0.0075747293247998,
+      "scope": "Authored UV mask counts; NOT frame coverage or a visual pass"
+    }
+  ],
+  "runtime_texture_memory_bytes": null,
+  "texture_memory_rgba8_no_mips_upper_bound_bytes": 16777216,
+  "triangles": 156,
+  "texture_disk_bytes": 1755943
+}

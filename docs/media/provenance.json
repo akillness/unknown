@@ -8,7 +8,7 @@
       "tool": "ffmpeg (palettegen/paletteuse)",
       "frames_glob": "assets/generated/3d/renders/turntable/frame_*.png",
       "frame_count": 12,
-      "fps": 8.0,
+      "fps": 8,
       "width": 640,
       "bytes": 1048236,
       "output_sha256": "7e058b5d05ddefded8868effeb67849bfafb8f987f88d2edd98a40cfa405d570",
@@ -156,6 +156,20 @@
       "output_sha256": "c04b339e934f43aace5a29784ef37b72e03d7b6fcd885b8714fb28534249c0fe",
       "runtimeEligible": false,
       "claim": "[OBSERVED] pre-visualization GIF; NOT gameplay capture"
+    },
+    {
+      "id": "t0-drawer-blender-r03",
+      "file": "t0-drawer-blender-r03.png",
+      "category": "asset-preview",
+      "tool": "Blender 5.1.2 CLI",
+      "source": "assets/generated/3d/hub-view-drawer-r03/preview.png",
+      "recipe": "assets/generated/3d/scripts/build_hub_drawer_r03.py",
+      "output_sha256": "3ad6437aab240fdb3d28d4c06bacfef42b44bf291f7a3235e3df81c8b1f81b90",
+      "width": 960,
+      "height": 640,
+      "bytes": 656663,
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] isolated Blender asset render; not gameplay capture or runtime material/fit evidence. The source r03 has a separate T0-only Unity integration approval in assets/generated/3d/hub-view-drawer-r03/provenance.json; this README image remains runtimeEligible:false."
     }
   ]
 }

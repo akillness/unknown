@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4e704d31737456486a9c70704ed32c, type: 3}
+  m_Name: hub
+  m_EditorClassIdentifier: Tide.Data::Tide.Data.ZoneAsset
+  zoneId: hub
+  generatedJson: "{\n  \"schemaVersion\": 1,\n  \"scope\": \"t0\",\n  \"generatedFrom\":
+    [\n    \"concept/style-guide.md\",\n    \"modeling/specs/hub-watchroom.md\",\n   
+    \"modeling/asset-manifest.md\",\n    \"worldview/worldview-bible.md\",\n    \"planning/campaign.json\"\n 
+    ],\n  \"poseFrame\": {\n    \"name\": \"greybox-blender-zup-m\",\n    \"description\":
+    \"\uB2E8\uC704 m \xB7 Blender Z-up \xB7 \uC6D0\uC810 = \uBC29 \uC911\uC559 \uBC14\uB2E5\uBA74(hub-watchroom
+    \xA72). \uC88C\uD45C\uB294 \uC2E4\uC81C\uB85C \uB9CC\uB4E4\uC5B4\uC9C4 \uADF8\uB808\uC774\uBC15\uC2A4\uC758
+    \uAC12\uC774\uB2E4\",\n    \"unityConversion\": \"[INFERENCE] glTF Y-up \uACBD\uC720
+    \uC784\uD3EC\uD2B8 \uADDC\uCE59\uC5D0 \uB530\uB77C Unity \uC88C\uD45C\uB85C \uBCC0\uD658\uB41C\uB2E4.
+    \uBCC0\uD658\uC2DD\uC744 \uC774 \uD30C\uC77C\uC774 \uD655\uC815\uD558\uC9C0 \uC54A\uB294\uB2E4
+    \u2014 \uC784\uD3EC\uD130\uAC00 hub-greybox.glb \uC784\uD3EC\uD2B8 \uACB0\uACFC\uC640
+    \uB300\uC870\uD574 \uD655\uC778\uD55C\uB2E4(\uC778\uC218 T-Z1)\"\n  },\n  \"cameraConstants\":
+    {\n    \"fovDeg\": 54,\n    \"fovAxis\": \"horizontal\",\n    \"eyeHeightM\":
+    1.55,\n    \"pitchDeg\": -18,\n    \"rollDeg\": 0,\n    \"yawOptionsDeg\": [\n     
+    -30,\n      0,\n      30\n    ],\n    \"fillRatio\": 0.7,\n    \"_src\": \"concept/style-guide.md
+    \xA75\"\n  },\n  \"roomBounds\": {\n    \"xMin\": -2.88,\n    \"xMax\": 2.88,\n   
+    \"yMin\": -4,\n    \"yMax\": 3.88,\n    \"openFace\": \"-Y\",\n    \"_src\":
+    \"modeling/specs/hub-watchroom.md \xA72\"\n  },\n  \"resolutionMinutes\": 4,\n 
+    \"notMeasured\": [\n    \"viewNodes \uC2E4\uC81C \uAC1C\uC218\xB7\uD504\uB808\uC774\uBC0D\xB7loadCostMb
+    \uB294 n=0 (data-schemas/zones.md \xA76)\",\n    \"Unity \uC784\uD3EC\uD2B8 0\uD68C
+    \xB7 \uCE74\uBA54\uB77C \uC2E4\uCE21 0\uD68C\"\n  ],\n  \"rows\": [\n    {\n     
+    \"zoneId\": \"hub\",\n      \"displayNameKey\": \"zone.hub.name\",\n      \"sceneName\":
+    \"hub\",\n      \"addressableLabel\": null,\n      \"viewNodes\": [\n       
+    {\n          \"nodeId\": \"hub-view-desk\",\n          \"label\": \"\uC791\uC5C5\uB300
+    \uC804\uACBD\",\n          \"cameraPose\": {\n            \"pos\": {\n             
+    \"x\": 0,\n              \"y\": -2.164,\n              \"z\": 1.55\n           
+    },\n            \"rot\": {\n              \"pitchDeg\": -18,\n              \"yawDeg\":
+    0,\n              \"rollDeg\": 0\n            },\n            \"fovDeg\": 54,\n           
+    \"fovAxis\": \"horizontal\",\n            \"lookAt\": {\n              \"x\":
+    0,\n              \"y\": 1.2,\n              \"z\": 0.9\n            },\n           
+    \"standDistanceM\": 3.364,\n            \"distanceClampedToM\": null\n         
+    },\n          \"neighbors\": [\n            \"hub-view-circuitmap\",\n           
+    \"hub-view-drawer\"\n          ],\n          \"interactables\": [\n           
+    \"workbench-standing-slot\",\n            \"rec-handover-brief\",\n           
+    \"rec-transfer-list\"\n          ],\n          \"transitionType\": \"cut\",\n         
+    \"loadCostMb\": null,\n          \"assetStatus\": \"greybox\",\n          \"_src\":
+    {\n            \"cameraPose.pos.z\": \"concept/style-guide.md \xA75 \uC2DC\uC120
+    \uB192\uC774 1.55 m\",\n            \"cameraPose.rot\": \"concept/style-guide.md
+    \xA75 \uD53C\uCE58 -18\xB0 \xB7 \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n           
+    \"cameraPose.fovDeg\": \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01
+    \uC57D 54\xB0\",\n            \"cameraPose.lookAt\": \"modeling/specs/hub-watchroom.md
+    \xA72 \uC791\uC5C5\uB300 \uC911\uC2EC\xB7\uC0C1\uBA74 z\",\n            \"cameraPose.standDistanceM\":
+    \"\uD30C\uC0DD \uADDC\uCE59: D = max(w,h)/0.7 / (2\xB7tan(54\xB0/2)), \uBC29
+    \uACBD\uACC4(hub-watchroom \xA72) \uC548\uC73C\uB85C 0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n           
+    \"transitionType\": \"concept/style-guide.md \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740
+    \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158 \uCD95\uC18C \uC2DC \uC804\uBD80
+    cut\",\n            \"loadCostMb\": \"NOT-MEASURED (data-schemas/zones.md \xA76
+    \u2014 n=0)\"\n          }\n        },\n        {\n          \"nodeId\": \"hub-view-drawer\",\n         
+    \"label\": \"\uC0AC\uBB3C \uC11C\uB78D\",\n          \"cameraPose\": {\n           
+    \"pos\": {\n              \"x\": 0,\n              \"y\": -0.482,\n             
+    \"z\": 1.55\n            },\n            \"rot\": {\n              \"pitchDeg\":
+    -18,\n              \"yawDeg\": 0,\n              \"rollDeg\": 0\n           
+    },\n            \"fovDeg\": 54,\n            \"fovAxis\": \"horizontal\",\n           
+    \"lookAt\": {\n              \"x\": 0,\n              \"y\": 1.2,\n             
+    \"z\": 0.45\n            },\n            \"standDistanceM\": 1.682,\n           
+    \"distanceClampedToM\": null\n          },\n          \"neighbors\": [\n           
+    \"hub-view-desk\",\n            \"hub-view-reader\"\n          ],\n         
+    \"interactables\": [\n            \"drawer\",\n            \"plate-zero\"\n         
+    ],\n          \"transitionType\": \"cut\",\n          \"loadCostMb\": null,\n         
+    \"assetStatus\": \"not-modeled\",\n          \"_src\": {\n            \"cameraPose.pos.z\":
+    \"concept/style-guide.md \xA75 \uC2DC\uC120 \uB192\uC774 1.55 m\",\n           
+    \"cameraPose.rot\": \"concept/style-guide.md \xA75 \uD53C\uCE58 -18\xB0 \xB7
+    \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n            \"cameraPose.fovDeg\":
+    \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01 \uC57D 54\xB0\",\n           
+    \"cameraPose.lookAt\": \"planning/campaign.json t0-b1.subtasks \u300C\uC11C\uB78D\uC5D0\uC11C
+    \uD310 #0\uC744 \uAEBC\uB0B4\u300D \u2014 \uADF8\uB808\uC774\uBC15\uC2A4\uC5D0
+    \uC11C\uB78D \uC624\uBE0C\uC81D\uD2B8 0\uAC1C(modeling/specs/hub-watchroom.md
+    \xA72), \uC791\uC5C5\uB300 \uD558\uBD80\uB85C \uBC30\uCE58\uD55C [TARGET]\",\n           
+    \"cameraPose.standDistanceM\": \"\uD30C\uC0DD \uADDC\uCE59: D = max(w,h)/0.7
+    / (2\xB7tan(54\xB0/2)), \uBC29 \uACBD\uACC4(hub-watchroom \xA72) \uC548\uC73C\uB85C
+    0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n            \"transitionType\": \"concept/style-guide.md
+    \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740 \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158
+    \uCD95\uC18C \uC2DC \uC804\uBD80 cut\",\n            \"loadCostMb\": \"NOT-MEASURED
+    (data-schemas/zones.md \xA76 \u2014 n=0)\"\n          }\n        },\n       
+    {\n          \"nodeId\": \"hub-view-reader\",\n          \"label\": \"\uD310\uB3C5\uAE30\",\n         
+    \"cameraPose\": {\n            \"pos\": {\n              \"x\": -0.62,\n             
+    \"y\": 0.099,\n              \"z\": 1.55\n            },\n            \"rot\":
+    {\n              \"pitchDeg\": -18,\n              \"yawDeg\": 0,\n             
+    \"rollDeg\": 0\n            },\n            \"fovDeg\": 54,\n            \"fovAxis\":
+    \"horizontal\",\n            \"lookAt\": {\n              \"x\": -0.62,\n             
+    \"y\": 1.22,\n              \"z\": 1.07\n            },\n            \"standDistanceM\":
+    1.121,\n            \"distanceClampedToM\": null\n          },\n          \"neighbors\":
+    [\n            \"hub-view-drawer\",\n            \"hub-view-sealdesk\"\n         
+    ],\n          \"interactables\": [\n            \"tool-reader\",\n           
+    \"rec-plate-standard-hub\",\n            \"rec-tide-ledger-bureau\"\n         
+    ],\n          \"transitionType\": \"cut\",\n          \"loadCostMb\": null,\n         
+    \"assetStatus\": \"greybox\",\n          \"_src\": {\n            \"cameraPose.pos.z\":
+    \"concept/style-guide.md \xA75 \uC2DC\uC120 \uB192\uC774 1.55 m\",\n           
+    \"cameraPose.rot\": \"concept/style-guide.md \xA75 \uD53C\uCE58 -18\xB0 \xB7
+    \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n            \"cameraPose.fovDeg\":
+    \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01 \uC57D 54\xB0\",\n           
+    \"cameraPose.lookAt\": \"modeling/asset-manifest.md \xA72 SM_Tool_reader \uBC30\uCE58\",\n           
+    \"cameraPose.standDistanceM\": \"\uD30C\uC0DD \uADDC\uCE59: D = max(w,h)/0.7
+    / (2\xB7tan(54\xB0/2)), \uBC29 \uACBD\uACC4(hub-watchroom \xA72) \uC548\uC73C\uB85C
+    0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n            \"transitionType\": \"concept/style-guide.md
+    \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740 \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158
+    \uCD95\uC18C \uC2DC \uC804\uBD80 cut\",\n            \"loadCostMb\": \"NOT-MEASURED
+    (data-schemas/zones.md \xA76 \u2014 n=0)\"\n          }\n        },\n       
+    {\n          \"nodeId\": \"hub-view-sealdesk\",\n          \"label\": \"\uC11C\uBA85\uB300\xB7\uBD09\uC778\uB300\",\n         
+    \"cameraPose\": {\n            \"pos\": {\n              \"x\": 0.68,\n             
+    \"y\": 0.199,\n              \"z\": 1.55\n            },\n            \"rot\":
+    {\n              \"pitchDeg\": -18,\n              \"yawDeg\": 0,\n             
+    \"rollDeg\": 0\n            },\n            \"fovDeg\": 54,\n            \"fovAxis\":
+    \"horizontal\",\n            \"lookAt\": {\n              \"x\": 0.68,\n             
+    \"y\": 1.18,\n              \"z\": 1.01\n            },\n            \"standDistanceM\":
+    0.981,\n            \"distanceClampedToM\": null\n          },\n          \"neighbors\":
+    [\n            \"hub-view-reader\",\n            \"hub-view-plateshelf\"\n         
+    ],\n          \"interactables\": [\n            \"tool-seal\"\n          ],\n         
+    \"transitionType\": \"cut\",\n          \"loadCostMb\": null,\n          \"assetStatus\":
+    \"greybox\",\n          \"_src\": {\n            \"cameraPose.pos.z\": \"concept/style-guide.md
+    \xA75 \uC2DC\uC120 \uB192\uC774 1.55 m\",\n            \"cameraPose.rot\": \"concept/style-guide.md
+    \xA75 \uD53C\uCE58 -18\xB0 \xB7 \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n           
+    \"cameraPose.fovDeg\": \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01
+    \uC57D 54\xB0\",\n            \"cameraPose.lookAt\": \"modeling/asset-manifest.md
+    \xA72 SM_Tool_seal \uBC30\uCE58\",\n            \"cameraPose.standDistanceM\":
+    \"\uD30C\uC0DD \uADDC\uCE59: D = max(w,h)/0.7 / (2\xB7tan(54\xB0/2)), \uBC29
+    \uACBD\uACC4(hub-watchroom \xA72) \uC548\uC73C\uB85C 0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n           
+    \"transitionType\": \"concept/style-guide.md \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740
+    \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158 \uCD95\uC18C \uC2DC \uC804\uBD80
+    cut\",\n            \"loadCostMb\": \"NOT-MEASURED (data-schemas/zones.md \xA76
+    \u2014 n=0)\"\n          }\n        },\n        {\n          \"nodeId\": \"hub-view-plateshelf\",\n         
+    \"label\": \"\uC5FC\uD310 \uC120\uBC18\",\n          \"cameraPose\": {\n           
+    \"pos\": {\n              \"x\": 1.744,\n              \"y\": -0.646,\n             
+    \"z\": 1.55\n            },\n            \"rot\": {\n              \"pitchDeg\":
+    -18,\n              \"yawDeg\": 30,\n              \"rollDeg\": 0\n           
+    },\n            \"fovDeg\": 54,\n            \"fovAxis\": \"horizontal\",\n           
+    \"lookAt\": {\n              \"x\": 2.55,\n              \"y\": 0.75,\n             
+    \"z\": 0.575\n            },\n            \"standDistanceM\": 1.612,\n           
+    \"distanceClampedToM\": null\n          },\n          \"neighbors\": [\n           
+    \"hub-view-sealdesk\",\n            \"hub-view-circuitmap\"\n          ],\n         
+    \"interactables\": [\n            \"plate-shelf\"\n          ],\n          \"transitionType\":
+    \"cut\",\n          \"loadCostMb\": null,\n          \"assetStatus\": \"greybox\",\n         
+    \"_src\": {\n            \"cameraPose.pos.z\": \"concept/style-guide.md \xA75
+    \uC2DC\uC120 \uB192\uC774 1.55 m\",\n            \"cameraPose.rot\": \"concept/style-guide.md
+    \xA75 \uD53C\uCE58 -18\xB0 \xB7 \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n           
+    \"cameraPose.fovDeg\": \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01
+    \uC57D 54\xB0\",\n            \"cameraPose.lookAt\": \"modeling/specs/hub-watchroom.md
+    \xA72 \uC5FC\uD310 \uC120\uBC18 \uC911\uC2EC\",\n            \"cameraPose.standDistanceM\":
+    \"\uD30C\uC0DD \uADDC\uCE59: D = max(w,h)/0.7 / (2\xB7tan(54\xB0/2)), \uBC29
+    \uACBD\uACC4(hub-watchroom \xA72) \uC548\uC73C\uB85C 0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n           
+    \"transitionType\": \"concept/style-guide.md \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740
+    \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158 \uCD95\uC18C \uC2DC \uC804\uBD80
+    cut\",\n            \"loadCostMb\": \"NOT-MEASURED (data-schemas/zones.md \xA76
+    \u2014 n=0)\"\n          }\n        },\n        {\n          \"nodeId\": \"hub-view-circuitmap\",\n         
+    \"label\": \"\uBCBD \uD68C\uB85C \uC9C0\uB3C4\",\n          \"cameraPose\": {\n           
+    \"pos\": {\n              \"x\": 0,\n              \"y\": 0.986,\n             
+    \"z\": 1.55\n            },\n            \"rot\": {\n              \"pitchDeg\":
+    -18,\n              \"yawDeg\": 0,\n              \"rollDeg\": 0\n           
+    },\n            \"fovDeg\": 54,\n            \"fovAxis\": \"horizontal\",\n           
+    \"lookAt\": {\n              \"x\": 0,\n              \"y\": 3.79,\n             
+    \"z\": 1.05\n            },\n            \"standDistanceM\": 2.804,\n           
+    \"distanceClampedToM\": null\n          },\n          \"neighbors\": [\n           
+    \"hub-view-plateshelf\",\n            \"hub-view-desk\"\n          ],\n         
+    \"interactables\": [\n            \"tool-circuit\",\n            \"rec-watchlog-bureau\"\n         
+    ],\n          \"transitionType\": \"cut\",\n          \"loadCostMb\": null,\n         
+    \"assetStatus\": \"greybox\",\n          \"_src\": {\n            \"cameraPose.pos.z\":
+    \"concept/style-guide.md \xA75 \uC2DC\uC120 \uB192\uC774 1.55 m\",\n           
+    \"cameraPose.rot\": \"concept/style-guide.md \xA75 \uD53C\uCE58 -18\xB0 \xB7
+    \uB864 0\xB0 \xB7 \uC694 -30/0/30\xB0\",\n            \"cameraPose.fovDeg\":
+    \"concept/style-guide.md \xA75 \uC218\uD3C9 \uD654\uAC01 \uC57D 54\xB0\",\n           
+    \"cameraPose.lookAt\": \"modeling/asset-manifest.md \xA72 SM_Tool_circuit \uBC30\uCE58(\uBD81\uCABD
+    \uBCBD \uD328\uB110)\",\n            \"cameraPose.standDistanceM\": \"\uD30C\uC0DD
+    \uADDC\uCE59: D = max(w,h)/0.7 / (2\xB7tan(54\xB0/2)), \uBC29 \uACBD\uACC4(hub-watchroom
+    \xA72) \uC548\uC73C\uB85C 0.05 m \uB2E8\uC704 \uD074\uB7A8\uD504\",\n           
+    \"transitionType\": \"concept/style-guide.md \xA75 \u300C\uC7A5\uBA74 \uC804\uD658\uC740
+    \uB178\uB4DC \uCEF7\u300D \xB7 \uBAA8\uC158 \uCD95\uC18C \uC2DC \uC804\uBD80
+    cut\",\n            \"loadCostMb\": \"NOT-MEASURED (data-schemas/zones.md \xA76
+    \u2014 n=0)\"\n          }\n        }\n      ],\n      \"systemIds\": [\n       
+    \"hub\"\n      ],\n      \"sensorCoverage\": [\n        {\n          \"areaId\":
+    \"hub-indoor\",\n          \"covered\": true,\n          \"systemId\": \"hub\",\n         
+    \"hasLine\": true,\n          \"_src\": \"worldview/worldview-bible.md \xA72
+    \u300C\uD68C\uC120\uC774 \uAE54\uB9B0 3\uAC1C\uC18C(\uB2F9\uC9C1\uC2E4\xB7\uC81C3\uC218\uBB38\xB7\uBD80\uB450\uC0AC\uBB34\uC18C)\u300D
+    \u2014 \uB2F9\uC9C1\uC2E4\uC774 \uADF8 \uD558\uB098\"\n        },\n        {\n         
+    \"areaId\": \"hub-uncovered-1\",\n          \"covered\": false,\n          \"systemId\":
+    null,\n          \"hasLine\": false,\n          \"displayNameKey\": null,\n         
+    \"pendingRfc\": \"RFC-N9\",\n          \"_src\": \"planning/campaign.json t0-b2.subtasks[2]
+    \u300C\uC13C\uC11C\uAC00 \uB2FF\uC9C0 \uC54A\uB294 \uC625\uC678 \uAD6C\uD68D
+    \uC138 \uACF3\u300D(\uAD6C\uD68D 1/3). **\uC774\uB984\uC740 \uCE90\uB17C \uBBF8\uB4F1\uC7AC**
+    \u2014 synopsis/t0-records.md \xA75.6 \uC774 \uBA85\uBA85\uC744 \uAC70\uBD80\uD558\uACE0
+    RFC-N9 \uB85C \uC62C\uB838\uB2E4. \uC774 id \uB294 \uAE30\uC220 \uC2DD\uBCC4\uC790\uC774\uBA70
+    \uC6A9\uC5B4\uC9D1 \uBA85\uC0AC\uAC00 \uC544\uB2C8\uB2E4\"\n        },\n       
+    {\n          \"areaId\": \"hub-uncovered-2\",\n          \"covered\": false,\n         
+    \"systemId\": null,\n          \"hasLine\": false,\n          \"displayNameKey\":
+    null,\n          \"pendingRfc\": \"RFC-N9\",\n          \"_src\": \"planning/campaign.json
+    t0-b2.subtasks[2] \u300C\uC13C\uC11C\uAC00 \uB2FF\uC9C0 \uC54A\uB294 \uC625\uC678
+    \uAD6C\uD68D \uC138 \uACF3\u300D(\uAD6C\uD68D 2/3). **\uC774\uB984\uC740 \uCE90\uB17C
+    \uBBF8\uB4F1\uC7AC** \u2014 synopsis/t0-records.md \xA75.6 \uC774 \uBA85\uBA85\uC744
+    \uAC70\uBD80\uD558\uACE0 RFC-N9 \uB85C \uC62C\uB838\uB2E4. \uC774 id \uB294 \uAE30\uC220
+    \uC2DD\uBCC4\uC790\uC774\uBA70 \uC6A9\uC5B4\uC9D1 \uBA85\uC0AC\uAC00 \uC544\uB2C8\uB2E4\"\n       
+    },\n        {\n          \"areaId\": \"hub-uncovered-3\",\n          \"covered\":
+    false,\n          \"systemId\": null,\n          \"hasLine\": false,\n         
+    \"displayNameKey\": null,\n          \"pendingRfc\": \"RFC-N9\",\n          \"_src\":
+    \"planning/campaign.json t0-b2.subtasks[2] \u300C\uC13C\uC11C\uAC00 \uB2FF\uC9C0
+    \uC54A\uB294 \uC625\uC678 \uAD6C\uD68D \uC138 \uACF3\u300D(\uAD6C\uD68D 3/3).
+    **\uC774\uB984\uC740 \uCE90\uB17C \uBBF8\uB4F1\uC7AC** \u2014 synopsis/t0-records.md
+    \xA75.6 \uC774 \uBA85\uBA85\uC744 \uAC70\uBD80\uD558\uACE0 RFC-N9 \uB85C \uC62C\uB838\uB2E4.
+    \uC774 id \uB294 \uAE30\uC220 \uC2DD\uBCC4\uC790\uC774\uBA70 \uC6A9\uC5B4\uC9D1
+    \uBA85\uC0AC\uAC00 \uC544\uB2C8\uB2E4\"\n        }\n      ],\n      \"uncoveredAreaIds\":
+    [\n        \"hub-uncovered-1\",\n        \"hub-uncovered-2\",\n        \"hub-uncovered-3\"\n     
+    ],\n      \"drainEdges\": [],\n      \"valves\": [],\n      \"protectionAxis\":
+    null,\n      \"systemLimits\": null,\n      \"initialFloodState\": \"dry\",\n     
+    \"initialAccessState\": \"open\",\n      \"stageIds\": [\n        \"T0\",\n       
+    \"C1\",\n        \"C2\",\n        \"C4\",\n        \"C6\",\n        \"C7\",\n       
+    \"E0\"\n      ],\n      \"_src\": {\n        \"zoneId\": \"planning/campaign.json
+    T0.zoneIds = [\\\"hub\\\"]\",\n        \"displayNameKey\": \"worldview/glossary.md
+    \u300C\uB2F9\uC9C1\uC2E4 / Watch Room\u300D \u2014 \uBB38\uC790\uC5F4 \uC9C1\uC811
+    \uC800\uC7A5 \uAE08\uC9C0(zones.md \xA71)\",\n        \"sceneName\": \"handoff/codex-unity-brief.md
+    \xA7\u2462 Scenes/ \uD2B8\uB9AC (boot \xB7 ui-root \xB7 hub)\",\n        \"systemIds\":
+    \"\uACC4\uD1B5 id \uB294 \uAD6C\uC5ED \uD1A0\uD070\uC744 \uADF8\uB300\uB85C \uC4F4\uB2E4
+    \u2014 \uCE90\uB17C\uC740 \uACC4\uD1B5\uC5D0 \uACE0\uC720\uBA85\uC744 \uC8FC\uC9C0
+    \uC54A\uB294\uB2E4(worldview-bible \xA72 \uB294 \uCC44\uB110\uB9CC \uC5F4\uAC70).
+    \uC0C8 \uBA85\uC0AC 0\uAC74\uC774\uBA70 \uACE0\uC720\uBA85\uC774 \uD544\uC694\uD574\uC9C0\uBA74
+    worldview \uD310\uC815 \uB300\uC0C1\uC774\uB2E4\",\n        \"drainEdges\": \"\uBC954\uB294
+    T0 \uBC94\uC704 \uBC16(campaign \uC758 routing \uB3C4\uC785 \uBE44\uD2B8\uB294
+    c5-b2) \u2192 \uBE48 \uBC30\uC5F4\",\n        \"valves\": \"\uD5C8\uBE0C \uACC4\uD1B5
+    \uBC38\uBE0C \uAC1C\uD3D0 \uAC01\uC778 0\uAC74(synopsis/t0-records.md \xA75.4)
+    \u2192 \uBE48 \uBC30\uC5F4\",\n        \"protectionAxis\": \"data-schemas/zones.md
+    Z-I5 \u2014 lowland\xB7dock \uC5D0\uB9CC \uC874\uC7AC\",\n        \"systemLimits\":
+    \"RFC-P3-009 \u2014 \uD45C\uC2DC \uC804\uC6A9\uC774\uBA70 \uD604\uC7AC \uB370\uC774\uD130\uC5D0
+    \uAC12 \uC5C6\uC74C(null)\",\n        \"initialFloodState\": \"planning/campaign.json
+    T0 zoneRun \uC740 hub \uBFD0\uC774\uACE0 \uCE68\uC218 \uC11C\uC220 0\uAC74\",\n       
+    \"initialAccessState\": \"planning/campaign.json t0-b1 \uC774 \uB2F9\uC9C1\uC2E4
+    \uC778\uC218\uB85C \uC2DC\uC791\uD55C\uB2E4\",\n        \"stageIds\": \"planning/campaign.json
+    stages[].zoneIds \uD30C\uC0DD\"\n      }\n    }\n  ]\n}\n"

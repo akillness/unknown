@@ -1,0 +1,191 @@
+{
+  "name": "seal_confirm",
+  "schema_version": 1,
+  "status": "t0-runtime-approved",
+  "evidence_class": "TARGET",
+  "runtimeEligible": true,
+  "audit_status": "T0 procedural confirmation visual approved by director after native PlayMode receipt and code review; performance, readability and G4/G5 unmeasured; audio disabled",
+  "scope": [
+    "t0-b1",
+    "t0-b2",
+    "t0-b3"
+  ],
+  "presentation_intent": "A restrained ink mark communicates that the current confirmation was durably saved.",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.5.6f1",
+    "pipeline": "URP",
+    "space": "result-panel-local"
+  },
+  "trigger": {
+    "event": "tCommitReceipt",
+    "owner": "App/save adapter; never Sim",
+    "binding_status": "VERIFIED:T0 native PlayMode receipt hook and Update clock",
+    "contract_ack": {
+      "systems": "2026-09-10: tCommitReceipt(attemptId, commandId, contextGeneration, success); only the current successful save attempt emits once",
+      "presentation": "_workspace/current/presentation/t0-circuit-vfx-review.md: 300 ms stamp envelope and +150 ms impact marker ACK",
+      "runtime_verified": true,
+      "runtime_verification_scope": "Save-success/stale/failure event path, timed ink visibility, duplicate/reduced-motion suppression and UI context-exit cleanup"
+    },
+    "payload_contract": [
+      "attemptId",
+      "commandId",
+      "contextGeneration",
+      "success"
+    ],
+    "required_guards": [
+      "receipt.success == true",
+      "receipt matches the current pending attempt, command and context generation",
+      "receipt has not already emitted a confirmation",
+      "current result context is still active"
+    ],
+    "suppressed_events": [
+      "SavePending",
+      "tCommitFailed",
+      "stale receipt",
+      "duplicate receipt",
+      "save recovery on load",
+      "replay of historical commands"
+    ],
+    "on_context_exit": "Invalidate pending presentation token; cancel visual/audio playback and clear the layer without changing saved state.",
+    "on_pause": "Pause the shared presentation clock; do not accumulate or replay confirmation sounds.",
+    "deduplication": "Consume each accepted presentation token once; re-entering a panel does not replay it."
+  },
+  "duration_ms": 300,
+  "timing_source": "_workspace/current/animation/anim-list.md:44 and :68",
+  "phases": [
+    {
+      "id": "await_impact",
+      "start_ms": 0,
+      "end_ms": 150
+    },
+    {
+      "id": "ink_impact",
+      "start_ms": 150,
+      "end_ms": 300
+    }
+  ],
+  "markers": [
+    {
+      "id": "stamp_clip_start",
+      "at_ms": 0,
+      "event": "accepted current tCommitReceipt"
+    },
+    {
+      "id": "stamp_impact",
+      "at_ms": 150,
+      "event": "seal_confirm ink mark and optional SFX_stamp_down"
+    }
+  ],
+  "layers": [
+    {
+      "id": "confirmed_ink",
+      "type": "static-ui-ink-mark",
+      "active_phases": [
+        "ink_impact"
+      ],
+      "blend_mode": "alpha",
+      "attachment_space": "result-panel-local",
+      "depth_order": "behind result text; outside tool lines and interactive controls",
+      "max_particles": 0,
+      "max_emitters": 0,
+      "draw_calls": 1,
+      "palette_ref": "_workspace/current/concept/style-guide.md:30",
+      "color_hex": "#173238",
+      "geometry": "One clipped, preallocated UI ink mark. No bloom, flash, glow, shake or expanding particles.",
+      "visibility": "Hidden before stamp_impact; static from impact until envelope end. Persistent success text/checkmark belongs to UI, not this transient layer."
+    }
+  ],
+  "budgets": {
+    "max_particles": 0,
+    "max_draw_calls": 1,
+    "max_overdraw": 1,
+    "max_blur_radius": 0
+  },
+  "scene_limits": {
+    "max_concurrent_emitters": 8,
+    "max_transparent_particles": 500,
+    "seal_confirm_max_concurrent_instances": 1,
+    "save_pending_new_emitters": 0,
+    "save_pending_new_particles": 0,
+    "save_pending_vfx_draw_calls": 0,
+    "bloom": 0,
+    "screen_flash": 0,
+    "default_camera_shake": 0,
+    "source": "_workspace/current/vfx/vfx-budget.md sections 2-3",
+    "measured": false
+  },
+  "reduced_motion": {
+    "enabled": true,
+    "behavior": "At the same accepted successful receipt show only the static UI success label/checkmark; skip the stamp transform and transient ink layer. Keep identical receipt, stale-callback and deduplication guards. No flash or shake.",
+    "transient_vfx_draw_calls": 0,
+    "particles": 0,
+    "audio": "If enabled and audited, emit the same single confirmation cue at accepted receipt; never during SavePending. No deferred duplicate."
+  },
+  "low_quality": {
+    "behavior": "Use the same static label/checkmark fallback as reduced motion.",
+    "transient_vfx_draw_calls": 0
+  },
+  "sound_cue": {
+    "id": "SFX_stamp_down",
+    "normal_marker": "stamp_impact",
+    "asset": null,
+    "asset_status": "Original Higgsfield candidate remains disabled and separately unaudited; this visual approval does not authorize audio playback.",
+    "max_voices_per_accepted_receipt": 1,
+    "failure_voices": 0,
+    "missing_asset_behavior": "Remain silent; preserve the static visual confirmation.",
+    "runtimeEligible": false,
+    "enabled": false
+  },
+  "verification": {
+    "contract_validator": "game-vfx/scripts/validate_vfx_spec.py",
+    "runtime_capture": null,
+    "frame_time_ms": null,
+    "gpu_time_ms": null,
+    "measured_particles": null,
+    "measured_draw_calls": null,
+    "measured_overdraw": null,
+    "allocations_per_frame": null,
+    "g4_g5_pass": false,
+    "native_playmode": {
+      "result": "Passed",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "runner_exit_code": 0,
+      "receipt": "_workspace/current/systems/tech-verification/t0-m2/results/playmode-5.xml",
+      "log": "_workspace/current/systems/tech-verification/t0-m2/logs/playmode-5.log",
+      "clock_test": "Tide.Tests.T0PlayModeTests.ConfirmationInkUsesPresentationClockAndClearsOnContextExit",
+      "test_source": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:59-74",
+      "capture_step_ms": 25,
+      "capture_step_meaning": "Deterministic Unity Time.captureDeltaTime test input, not observed frame time or a performance measurement",
+      "verified_behaviors": [
+        "receipt-gated save success event",
+        "pending/stale receipt suppression",
+        "save failure emits no success and retry emits once",
+        "Update/Time.deltaTime follows +150ms ink marker and 300ms envelope",
+        "failed and duplicate presentations produce no new ink",
+        "reduced-motion presentation produces no transient ink",
+        "actual UI ScreenChanged clears active ink"
+      ],
+      "unverified_behaviors": [
+        "target-hardware frame/GPU time",
+        "draw-call/particle/overdraw capture",
+        "human readability and visual quality",
+        "audio playback",
+        "pause/resume lifecycle test",
+        "scene unload lifecycle test"
+      ]
+    }
+  },
+  "approval_scope": "Only the existing T0 procedural confirmation ink/checkmark and verified receipt/clock path. No audio, other effects, campaign release or performance gate promotion.",
+  "runtime_implementation": {
+    "component": "unity/Unknown/Assets/_Project/Presentation/T0CommitFeedback.cs",
+    "binding": "unity/Unknown/Assets/_Project/App/T0GameSession.cs:49-51",
+    "shape": "procedural two-stroke UI checkmark",
+    "placement": "ScreenSpaceOverlay canvas sortingOrder 30, normalized anchor (0.955, 0.15), 48 by 42 UI units",
+    "presentation_clock": "Update advances Time.deltaTime; no ink before 0.15s, ink from 0.15s until <0.3s, then Clear",
+    "readability_capture": null,
+    "audio_playback": false
+  }
+}

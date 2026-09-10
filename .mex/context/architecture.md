@@ -14,7 +14,7 @@ edges:
     condition: when a structural choice needs its rationale
   - target: context/conventions.md
     condition: when writing artifacts or code
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 ---
 
 # Architecture
@@ -29,7 +29,7 @@ last_updated: 2026-09-09
 ## Shared-truth files (owner writes, others cite)
 `animation/anim-list.md` (key-event ms) · `motion/feel-tuning.md` (hit-stop, reaction band) · `worldview/glossary.md` (all names) · `presentation/presentation-spec.md` (intent + timeline) · `balance/balance-sheet.md` + `economy/reward-bands.md` (mirrored to data by systems) · `qa/gate-measurements.md`.
 
-## Game architecture (to be filled by the first content-update/season cycle)
-- Engine: [TARGET] not chosen
+## Game architecture
+- Engine: [OBSERVED 2026-09-10] Unity 6000.5.6f1 at `unity/Unknown/`; T0 M2 implements the hub/circuit/reader runtime, input/UI and atomic save/recovery. See `_workspace/current/production/codex-t0-m2-status.md` and `systems/tech-verification/t0-m2-native.md` under `_workspace/current/` for current verification and resource approval boundaries.
 - Sim/render split: render reads snapshots, never writes sim state (invariant)
 - Data tables: tuning numbers only in data; code exposes knobs

@@ -1,0 +1,1028 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc33a8766756a43bb86d3688b8818513, type: 3}
+  m_Name: rec-transfer-list
+  m_EditorClassIdentifier: Tide.Data::Tide.Data.RecordAsset
+  recordId: rec-transfer-list
+  generatedJson: "{\n  \"schemaVersion\": 1,\n  \"scope\": \"t0\",\n  \"generatedFrom\":
+    [\n    \"planning/campaign.json\",\n    \"synopsis/t0-records.md\"\n  ],\n  \"sourceSha256\":
+    \"8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a\",\n  \"recordsDocSha256\":
+    \"f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f\",\n  \"fieldOwnership\":
+    {\n    \"content\": \"game-synopsis-writer (synopsis/t0-records.md \u2014 \uB9E4\uCCB4
+    \uB0B4\uC6A9)\",\n    \"shape\": \"game-systems-designer (systems/data-schemas/plates.md
+    \u2014 \uD544\uB4DC\xB7\uBD88\uBCC0\uC2DD)\",\n    \"idsAndMedium\": \"game-planner
+    (planning/campaign.json \u2014 clue id \xB7 originId \xB7 sourceType)\"\n  },\n 
+    \"crossChecks\": {\n    \"plateAnchors\": \"33/33 \uC77C\uCE58\",\n    \"ledgerAnchors\":
+    \"28/28 \uC77C\uCE58\",\n    \"clueIdOriginMedium\": \"\uBB38\uC11C \u2194 campaign
+    \uC804\uAC74 \uC77C\uCE58(\uBD88\uC77C\uCE58 \uC2DC exit 2)\"\n  },\n  \"notMeasured\":
+    [\n    \"\uD50C\uB808\uC774 0\uD68C \xB7 \uD310\uB3C5 \uD654\uBA74 0\uD68C \xB7
+    \uC774 \uAC12\uB4E4\uC774 \uC77D\uD788\uB294\uC9C0 n=0\"\n  ],\n  \"rows\": [\n   
+    {\n      \"recordId\": \"rec-handover-brief\",\n      \"medium\": \"log\",\n     
+    \"sourceType\": \"log\",\n      \"originId\": \"handover-brief\",\n      \"rootOriginId\":
+    \"handover-brief\",\n      \"clueIds\": [\n        \"t0-b1-c1\"\n      ],\n     
+    \"visibleAt\": [\n        \"t0-b1\"\n      ],\n      \"zoneId\": \"hub\",\n     
+    \"displayNameKo\": \"\uC778\uC218 \uAC01\uC11C\",\n      \"_src\": {\n       
+    \"recordId\": \"synopsis/t0-records.md \xA72 \uD45C 1 (\uD589 1:1)\",\n       
+    \"sourceType\": \"planning/campaign.json clues[].sourceType (\uBB38\uC11C\uC640
+    \uC77C\uCE58 \uAC80\uC0AC \uD1B5\uACFC)\",\n        \"originId\": \"planning/campaign.json
+    clues[].originId\",\n        \"rootOriginId\": \"copiedFrom \uCCB4\uC778 \uD30C\uC0DD
+    (interaction-rules.md \xA73 \u2014 \uC0AC\uBCF8\uC740 \uC6D0\uBCF8\uC758 \uB8E8\uD2B8\uB97C
+    \uBB3C\uB824\uBC1B\uB294\uB2E4, RFC-S5 \uC608\uC678 \uC5C6\uC74C)\",\n       
+    \"displayNameKo\": \"worldview/glossary.md \xA77 \uCE74\uD0C8\uB85C\uADF8 (t0-records
+    \xA72 \uD45C\uC758 KO \uBA85\uCE6D \uC5F4)\",\n        \"lines\": \"synopsis/t0-records.md
+    \xA73.1 (\uD615\uC2DD \uACE0\uC815 \uD45C)\"\n      },\n      \"lines\": [\n       
+    {\n          \"lineId\": \"hb-l1\",\n          \"kind\": \"clause\",\n         
+    \"text\": \"\uBCF8 \uAC01\uC11C\uB85C \uC870\uC218\uAE30\uB85D\uAD6D \uBCF8\uAD00
+    \uB2F9\uC9C1\uC2E4\uC758 \uACC4\uD1B5 \uC5F4\uB78C \uAD8C\uD55C\uACFC \uBCF4\uAD00
+    \uB9E4\uCCB4 \uC77C\uCCB4\uB97C \uC778\uC218\uD55C\uB2E4. \uC5F4\uB78C\uC740
+    \uD310\uB3C5\uAE30\uC640 \uBD09\uC778\uB300\uB97C \uAC70\uCE5C\uB2E4.\",\n         
+    \"flag\": null\n        },\n        {\n          \"lineId\": \"hb-l2\",\n         
+    \"kind\": \"clause\",\n          \"text\": \"\uC774\uAD00 \uBAA9\uB85D \uC778\uC1C4\uBCF8\uACFC
+    \uC0AC\uBB3C \uC11C\uB78D\uC758 \uC2E4\uBB3C\uC744 \uD55C \uC810\uC529 \uB300\uC870\uD55C\uB2E4.
+    \uBAA9\uB85D\uC5D0 \uC5C6\uB294 \uB9E4\uCCB4\uAC00 \uB098\uC624\uBA74 \uBBF8\uBD84\uB958\uB85C
+    \uC801\uC5B4 \uB0A8\uAE34\uB2E4.\",\n          \"flag\": null\n        },\n       
+    {\n          \"lineId\": \"hb-l3\",\n          \"kind\": \"clause\",\n         
+    \"text\": \"12\uB144 \uC804 \uB300\uC870\uC758 \uBC24 \uB2F9\uC9C1 \uC8FC\uC784\uC740
+    \uD55C\uB3C4\uC5F0\uC774\uB2E4. \uB2F9\uC2DC \uB2F9\uC9C1 \uAE30\uB85D\uC758
+    \uACB0\uC190 \uC5EC\uBD80\uB294 \uBCF8 \uAC01\uC11C\uC5D0\uC11C \uD310\uB2E8\uD558\uC9C0
+    \uC54A\uB294\uB2E4.\",\n          \"flag\": \"canon:RFC-P3-012\"\n        },\n       
+    {\n          \"lineId\": \"hb-l4\",\n          \"kind\": \"clause\",\n         
+    \"text\": \"\uBCF8 \uB2F9\uC9C1\uC758 \uC0B0\uCD9C\uBB3C\uC740 \uCCAD\uBB38\uC5D0
+    \uB0BC \uC81C\uCD9C \uBB38\uC11C 1\uAC74\uC73C\uB85C \uD55C\uB2E4. \uC774\uAD00
+    \uC2DC\uAC01\uAE4C\uC9C0 \uC811\uC218\uBD80\uC5D0 \uB118\uAE34\uB2E4.\",\n         
+    \"flag\": \"goal:C6-F1 \u2014 live t0-b1.objective \uAC00 \uC9C0\uBAA9\uD558\uB294
+    \\\"\uD55C \uC904\"\n        },\n        {\n          \"lineId\": \"hb-l5\",\n         
+    \"kind\": \"field\",\n          \"text\": \"\uC778\uACC4\uC790 \uC11C\uBA85:
+    ________\\\" (\uACF5\uB780)\",\n          \"flag\": \"omission \u2014 \uD3D0\uAD6D\uC73C\uB85C
+    \uC778\uACC4\uD560 \uB2F9\uC9C1\uC790\uAC00 \uC5C6\uB2E4\"\n        },\n       
+    {\n          \"lineId\": \"hb-l6\",\n          \"kind\": \"margin\",\n         
+    \"text\": \"\uD310\uB3C5\uAE30 \uC0C1\uD0DC \uC591\uD638\",\n          \"flag\":
+    \"omission \u2014 \uB0A0\uC9DC\uAC00 \uC801\uD600 \uC788\uC9C0 \uC54A\uB2E4.
+    \uC77C\uC9C0 \uACC4\uC5F4\uC758 \uB204\uB77D \uC608\uC2DC\uB85C\uB9CC \uC4F4\uB2E4\"\n       
+    }\n      ]\n    },\n    {\n      \"recordId\": \"rec-transfer-list\",\n     
+    \"medium\": \"ledger\",\n      \"sourceType\": \"ledger\",\n      \"originId\":
+    \"transfer-list\",\n      \"rootOriginId\": \"transfer-list\",\n      \"clueIds\":
+    [\n        \"t0-b1-c2\"\n      ],\n      \"visibleAt\": [\n        \"t0-b1\"\n     
+    ],\n      \"zoneId\": \"hub\",\n      \"displayNameKo\": \"\uC774\uAD00 \uBAA9\uB85D\",\n     
+    \"_src\": {\n        \"recordId\": \"synopsis/t0-records.md \xA72 \uD45C 1 (\uD589
+    1:1)\",\n        \"sourceType\": \"planning/campaign.json clues[].sourceType
+    (\uBB38\uC11C\uC640 \uC77C\uCE58 \uAC80\uC0AC \uD1B5\uACFC)\",\n        \"originId\":
+    \"planning/campaign.json clues[].originId\",\n        \"rootOriginId\": \"copiedFrom
+    \uCCB4\uC778 \uD30C\uC0DD (interaction-rules.md \xA73 \u2014 \uC0AC\uBCF8\uC740
+    \uC6D0\uBCF8\uC758 \uB8E8\uD2B8\uB97C \uBB3C\uB824\uBC1B\uB294\uB2E4, RFC-S5
+    \uC608\uC678 \uC5C6\uC74C)\",\n        \"displayNameKo\": \"worldview/glossary.md
+    \xA77 \uCE74\uD0C8\uB85C\uADF8 (t0-records \xA72 \uD45C\uC758 KO \uBA85\uCE6D
+    \uC5F4)\",\n        \"rows\": \"synopsis/t0-records.md \xA74.1 (\uD615\uC2DD
+    \uACE0\uC815 \uD45C)\"\n      },\n      \"rows\": [\n        {\n          \"rowId\":
+    \"tl-r1\",\n          \"no\": 1,\n          \"item\": \"\uACC4\uD1B5 \uD45C\uC900\uD310\uCCA0\",\n         
+    \"mediaKind\": \"plate\",\n          \"qty\": 3,\n          \"unit\": \"\uC810\",\n         
+    \"note\": \"\uB300\uC870\uC758 \uBC24 \uD45C\uC900\uD310\uC744 \uD3EC\uD568\uD55C\uB2E4\"\n       
+    },\n        {\n          \"rowId\": \"tl-r2\",\n          \"no\": 2,\n         
+    \"item\": \"\uB2F9\uC9C1\uC77C\uC9C0\uCCA0\",\n          \"mediaKind\": \"log\",\n         
+    \"qty\": 1,\n          \"unit\": \"\uCC45\",\n          \"note\": \"\uADFC\uBB34
+    \uADDC\uC815 \uD544\uC0AC\uBCF8\uC774 \uD569\uCCA0\uB3FC \uC788\uB2E4\"\n       
+    },\n        {\n          \"rowId\": \"tl-r3\",\n          \"no\": 3,\n         
+    \"item\": \"\uC870\uC704\uB300\uC7A5\",\n          \"mediaKind\": \"ledger\",\n         
+    \"qty\": 1,\n          \"unit\": \"\uCC45\",\n          \"note\": \"\uAE30\uB85D\uAD6D
+    \uD45C\uC900 \uAD00\uCE21\uC18C\"\n        },\n        {\n          \"rowId\":
+    \"tl-r4\",\n          \"no\": null,\n          \"item\": \"(\uAE30\uC785\uB780)\",\n         
+    \"mediaKind\": null,\n          \"qty\": null,\n          \"unit\": null,\n         
+    \"note\": \"\uACF5\uB780. t0-b1 \uC758 \uD589\uB3D9\uC73C\uB85C \\\"\uBBF8\uBD84\uB958
+    1\uC810\\\"\uC774 \uC801\uD788\uAC70\uB098 \uBE44\uC5B4 \uB0A8\uB294\uB2E4\"\n       
+    }\n      ]\n    },\n    {\n      \"recordId\": \"rec-plate-standard-hub\",\n     
+    \"medium\": \"plate\",\n      \"sourceType\": \"plate\",\n      \"originId\":
+    \"plate-standard-hub\",\n      \"rootOriginId\": \"plate-standard-hub\",\n     
+    \"clueIds\": [\n        \"t0-b2-c1\",\n        \"t0-b3-c1\"\n      ],\n     
+    \"visibleAt\": [\n        \"t0-b2\",\n        \"t0-b3\"\n      ],\n      \"zoneId\":
+    \"hub\",\n      \"displayNameKo\": \"\uB2F9\uC9C1\uC2E4 \uD45C\uC900\uD310\",\n     
+    \"_src\": {\n        \"recordId\": \"synopsis/t0-records.md \xA72 \uD45C 1 (\uD589
+    1:1)\",\n        \"sourceType\": \"planning/campaign.json clues[].sourceType
+    (\uBB38\uC11C\uC640 \uC77C\uCE58 \uAC80\uC0AC \uD1B5\uACFC)\",\n        \"originId\":
+    \"planning/campaign.json clues[].originId\",\n        \"rootOriginId\": \"copiedFrom
+    \uCCB4\uC778 \uD30C\uC0DD (interaction-rules.md \xA73 \u2014 \uC0AC\uBCF8\uC740
+    \uC6D0\uBCF8\uC758 \uB8E8\uD2B8\uB97C \uBB3C\uB824\uBC1B\uB294\uB2E4, RFC-S5
+    \uC608\uC678 \uC5C6\uC74C)\",\n        \"displayNameKo\": \"worldview/glossary.md
+    \xA77 \uCE74\uD0C8\uB85C\uADF8 (t0-records \xA72 \uD45C\uC758 KO \uBA85\uCE6D
+    \uC5F4)\",\n        \"samples\": \"synopsis/t0-records.md \xA75.2 \uADDC\uCE59\uC73C\uB85C
+    \uC0DD\uC131(\uC800\uC7A5\uB41C \uD45C\uAC00 \uC544\uB2C8\uB77C \uADDC\uCE59\uC774
+    \uC815\uBCF8) \xB7 \xA75.3 \uC575\uCEE4\uC640 \uC804\uAC74 \uB300\uC870\",\n       
+    \"engravings\": \"synopsis/t0-records.md \xA75.4\",\n        \"layers\": \"synopsis/t0-records.md
+    \xA75.5 (\uC758\uBBF8\uB294 \uC800\uC791\uB418\uC9C0 \uC54A\uB294\uB2E4 \u2014
+    \uC0C1\uD55C B02)\",\n        \"citationProvenance\": \"synopsis/t0-records.md
+    \xA712 (RFC-CX-001 / RFC-CX-003)\"\n      },\n      \"ringWindow\": {\n       
+    \"startMin\": -360,\n        \"endMin\": 356,\n        \"display\": \"H-6:00
+    ~ H+5:56\"\n      },\n      \"resolutionMin\": 4,\n      \"sampleCount\": 180,\n     
+    \"authoredRange\": {\n        \"startMin\": -360,\n        \"endMin\": 180,\n       
+    \"display\": \"H-6:00 ~ H+3:00\"\n      },\n      \"phaseFormat\": \"H\xB1h:mm,
+    4\uBD84 \uACA9\uC790 \uC704\",\n      \"channels\": [\n        {\n          \"channelId\":
+    \"valve\",\n          \"ko\": \"\uBC38\uBE0C \uAC1C\uD3D0\",\n          \"unit\":
+    \"\uAC01\uC778 \uC774\uBCA4\uD2B8(\uC774\uC0B0)\",\n          \"readableInT0\":
+    true,\n          \"note\": \"\uC774 \uD310(\uD5C8\uBE0C \uACC4\uD1B5)\uC5D0\uB294
+    \uADF8 \uBC24 0\uAC74 \u2014 \xA75.4\"\n        },\n        {\n          \"channelId\":
+    \"pressure\",\n          \"ko\": \"\uAD00 \uC555\uB825\",\n          \"unit\":
+    \"kPa\",\n          \"readableInT0\": true,\n          \"note\": \"t0-b2 \uAC00
+    \uC77D\uB294 \uCC44\uB110. \uD3C9\uD3C9 3\uAD6C\uAC04\uC774 \uC5EC\uAE30 \uC788\uB2E4\"\n       
+    },\n        {\n          \"channelId\": \"salinity\",\n          \"ko\": \"\uC5FC\uB3C4\",\n         
+    \"unit\": \"psu\",\n          \"readableInT0\": true,\n          \"note\": null\n       
+    },\n        {\n          \"channelId\": \"waterLevel\",\n          \"ko\": \"\uC218\uC704\",\n         
+    \"unit\": \"cm\",\n          \"readableInT0\": true,\n          \"note\": \"\uACC4\uD1B5(\uAC11\uBB38
+    \uB0B4\uCE21) \uC218\uC704\uC774\uBA70 \uC870\uC704\uC640 \uB2E4\uB978 \uCD95\uC774\uB2E4\"\n       
+    }\n      ],\n      \"rule\": {\n        \"tideBase\": 500,\n        \"tideAmp\":
+    460,\n        \"periodMin\": 744,\n        \"pressBase\": 120,\n        \"pressSlope\":
+    0.05,\n        \"pressPivot\": 500,\n        \"salBase\": 28,\n        \"salSlope\":
+    0.004,\n        \"salPivot\": 500,\n        \"waterSlope\": 0.6,\n        \"waterBase\":
+    120,\n        \"flatBands\": [\n          [\n            -260,\n            -232\n         
+    ],\n          [\n            -196,\n            -168\n          ],\n         
+    [\n            -156,\n            -128\n          ]\n        ],\n        \"missingBand\":
+    [\n          -60,\n          176\n        ],\n        \"flatRule\": \"FLAT \uAD6C\uAC04
+    [a,b] \uC548\uC5D0\uC11C\uB294 pressure(t) := pressure(a) \uB85C \uACE0\uC815\uD55C\uB2E4(\uB2E4\uB978
+    \uCC44\uB110\uC740 \uADF8\uB300\uB85C)\",\n        \"missingRule\": \"MISSING
+    \uAD6C\uAC04 \uC548\uC5D0\uC11C\uB294 4\uCC44\uB110 \uC804\uBD80 null \uC774\uACE0
+    state = \\\"missing\\\"\",\n        \"rounding\": {\n          \"tide\": 0,\n         
+    \"pressure\": 1,\n          \"salinity\": 1,\n          \"waterLevel\": 0,\n         
+    \"note\": \"\uD45C\uC2DC \uBC18\uC62C\uB9BC\uC740 raw \uAC12\uC5D0\uC11C \uD55C
+    \uBC88\uB9CC \uD55C\uB2E4\"\n        },\n        \"_src\": \"synopsis/t0-records.md
+    \xA75.2 \uCF54\uB4DC \uD39C\uC2A4 (\uACC4\uC218\xB7\uAD6C\uAC04\uC744 \uD30C\uC2F1
+    \xB7 \uC190\uC73C\uB85C \uC62E\uAE30\uC9C0 \uC54A\uC74C)\"\n      },\n      \"samples\":
+    [\n        {\n          \"t\": -360,\n          \"phase\": \"H-6:00\",\n         
+    \"tide\": 42,\n          \"pressure\": 97.1,\n          \"salinity\": 26.2,\n         
+    \"waterLevel\": 145,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -356,\n          \"phase\": \"H-5:56\",\n          \"tide\": 44,\n         
+    \"pressure\": 97.2,\n          \"salinity\": 26.2,\n          \"waterLevel\":
+    147,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -352,\n          \"phase\": \"H-5:52\",\n          \"tide\": 47,\n          \"pressure\":
+    97.3,\n          \"salinity\": 26.2,\n          \"waterLevel\": 148,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -348,\n         
+    \"phase\": \"H-5:48\",\n          \"tide\": 49,\n          \"pressure\": 97.5,\n         
+    \"salinity\": 26.2,\n          \"waterLevel\": 150,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": -344,\n          \"phase\": \"H-5:44\",\n         
+    \"tide\": 53,\n          \"pressure\": 97.6,\n          \"salinity\": 26.2,\n         
+    \"waterLevel\": 152,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -340,\n          \"phase\": \"H-5:40\",\n          \"tide\": 57,\n         
+    \"pressure\": 97.8,\n          \"salinity\": 26.2,\n          \"waterLevel\":
+    154,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -336,\n          \"phase\": \"H-5:36\",\n          \"tide\": 61,\n          \"pressure\":
+    98.1,\n          \"salinity\": 26.2,\n          \"waterLevel\": 157,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -332,\n         
+    \"phase\": \"H-5:32\",\n          \"tide\": 66,\n          \"pressure\": 98.3,\n         
+    \"salinity\": 26.3,\n          \"waterLevel\": 160,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": -328,\n          \"phase\": \"H-5:28\",\n         
+    \"tide\": 71,\n          \"pressure\": 98.6,\n          \"salinity\": 26.3,\n         
+    \"waterLevel\": 163,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -324,\n          \"phase\": \"H-5:24\",\n          \"tide\": 77,\n         
+    \"pressure\": 98.9,\n          \"salinity\": 26.3,\n          \"waterLevel\":
+    166,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -320,\n          \"phase\": \"H-5:20\",\n          \"tide\": 84,\n          \"pressure\":
+    99.2,\n          \"salinity\": 26.3,\n          \"waterLevel\": 170,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -316,\n         
+    \"phase\": \"H-5:16\",\n          \"tide\": 90,\n          \"pressure\": 99.5,\n         
+    \"salinity\": 26.4,\n          \"waterLevel\": 174,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": -312,\n          \"phase\": \"H-5:12\",\n         
+    \"tide\": 98,\n          \"pressure\": 99.9,\n          \"salinity\": 26.4,\n         
+    \"waterLevel\": 179,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -308,\n          \"phase\": \"H-5:08\",\n          \"tide\": 106,\n         
+    \"pressure\": 100.3,\n          \"salinity\": 26.4,\n          \"waterLevel\":
+    183,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -304,\n          \"phase\": \"H-5:04\",\n          \"tide\": 114,\n         
+    \"pressure\": 100.7,\n          \"salinity\": 26.5,\n          \"waterLevel\":
+    188,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -300,\n          \"phase\": \"H-5:00\",\n          \"tide\": 122,\n         
+    \"pressure\": 101.1,\n          \"salinity\": 26.5,\n          \"waterLevel\":
+    193,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -296,\n          \"phase\": \"H-4:56\",\n          \"tide\": 132,\n         
+    \"pressure\": 101.6,\n          \"salinity\": 26.5,\n          \"waterLevel\":
+    199,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -292,\n          \"phase\": \"H-4:52\",\n          \"tide\": 141,\n         
+    \"pressure\": 102.1,\n          \"salinity\": 26.6,\n          \"waterLevel\":
+    205,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -288,\n          \"phase\": \"H-4:48\",\n          \"tide\": 151,\n         
+    \"pressure\": 102.5,\n          \"salinity\": 26.6,\n          \"waterLevel\":
+    211,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -284,\n          \"phase\": \"H-4:44\",\n          \"tide\": 161,\n         
+    \"pressure\": 103.1,\n          \"salinity\": 26.6,\n          \"waterLevel\":
+    217,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -280,\n          \"phase\": \"H-4:40\",\n          \"tide\": 172,\n         
+    \"pressure\": 103.6,\n          \"salinity\": 26.7,\n          \"waterLevel\":
+    223,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -276,\n          \"phase\": \"H-4:36\",\n          \"tide\": 183,\n         
+    \"pressure\": 104.2,\n          \"salinity\": 26.7,\n          \"waterLevel\":
+    230,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -272,\n          \"phase\": \"H-4:32\",\n          \"tide\": 195,\n         
+    \"pressure\": 104.7,\n          \"salinity\": 26.8,\n          \"waterLevel\":
+    237,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -268,\n          \"phase\": \"H-4:28\",\n          \"tide\": 206,\n         
+    \"pressure\": 105.3,\n          \"salinity\": 26.8,\n          \"waterLevel\":
+    244,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -264,\n          \"phase\": \"H-4:24\",\n          \"tide\": 218,\n         
+    \"pressure\": 105.9,\n          \"salinity\": 26.9,\n          \"waterLevel\":
+    251,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -260,\n          \"phase\": \"H-4:20\",\n          \"tide\": 231,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 26.9,\n          \"waterLevel\":
+    259,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -256,\n          \"phase\": \"H-4:16\",\n          \"tide\": 244,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27,\n          \"waterLevel\":
+    266,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -252,\n          \"phase\": \"H-4:12\",\n          \"tide\": 257,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27,\n          \"waterLevel\":
+    274,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -248,\n          \"phase\": \"H-4:08\",\n          \"tide\": 270,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27.1,\n          \"waterLevel\":
+    282,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -244,\n          \"phase\": \"H-4:04\",\n          \"tide\": 284,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27.1,\n          \"waterLevel\":
+    290,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -240,\n          \"phase\": \"H-4:00\",\n          \"tide\": 297,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27.2,\n          \"waterLevel\":
+    298,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -236,\n          \"phase\": \"H-3:56\",\n          \"tide\": 311,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27.2,\n          \"waterLevel\":
+    307,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -232,\n          \"phase\": \"H-3:52\",\n          \"tide\": 326,\n         
+    \"pressure\": 106.5,\n          \"salinity\": 27.3,\n          \"waterLevel\":
+    315,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -228,\n          \"phase\": \"H-3:48\",\n          \"tide\": 340,\n         
+    \"pressure\": 112,\n          \"salinity\": 27.4,\n          \"waterLevel\":
+    324,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -224,\n          \"phase\": \"H-3:44\",\n          \"tide\": 355,\n         
+    \"pressure\": 112.7,\n          \"salinity\": 27.4,\n          \"waterLevel\":
+    333,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -220,\n          \"phase\": \"H-3:40\",\n          \"tide\": 370,\n         
+    \"pressure\": 113.5,\n          \"salinity\": 27.5,\n          \"waterLevel\":
+    342,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -216,\n          \"phase\": \"H-3:36\",\n          \"tide\": 385,\n         
+    \"pressure\": 114.2,\n          \"salinity\": 27.5,\n          \"waterLevel\":
+    351,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -212,\n          \"phase\": \"H-3:32\",\n          \"tide\": 400,\n         
+    \"pressure\": 115,\n          \"salinity\": 27.6,\n          \"waterLevel\":
+    360,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -208,\n          \"phase\": \"H-3:28\",\n          \"tide\": 415,\n         
+    \"pressure\": 115.8,\n          \"salinity\": 27.7,\n          \"waterLevel\":
+    369,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -204,\n          \"phase\": \"H-3:24\",\n          \"tide\": 430,\n         
+    \"pressure\": 116.5,\n          \"salinity\": 27.7,\n          \"waterLevel\":
+    378,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -200,\n          \"phase\": \"H-3:20\",\n          \"tide\": 446,\n         
+    \"pressure\": 117.3,\n          \"salinity\": 27.8,\n          \"waterLevel\":
+    387,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -196,\n          \"phase\": \"H-3:16\",\n          \"tide\": 461,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 27.8,\n          \"waterLevel\":
+    397,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -192,\n          \"phase\": \"H-3:12\",\n          \"tide\": 477,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 27.9,\n          \"waterLevel\":
+    406,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -188,\n          \"phase\": \"H-3:08\",\n          \"tide\": 492,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28,\n          \"waterLevel\":
+    415,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -184,\n          \"phase\": \"H-3:04\",\n          \"tide\": 508,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28,\n          \"waterLevel\":
+    425,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -180,\n          \"phase\": \"H-3:00\",\n          \"tide\": 523,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28.1,\n          \"waterLevel\":
+    434,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -176,\n          \"phase\": \"H-2:56\",\n          \"tide\": 539,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28.2,\n          \"waterLevel\":
+    443,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -172,\n          \"phase\": \"H-2:52\",\n          \"tide\": 554,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28.2,\n          \"waterLevel\":
+    453,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -168,\n          \"phase\": \"H-2:48\",\n          \"tide\": 570,\n         
+    \"pressure\": 118.1,\n          \"salinity\": 28.3,\n          \"waterLevel\":
+    462,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -164,\n          \"phase\": \"H-2:44\",\n          \"tide\": 585,\n         
+    \"pressure\": 124.2,\n          \"salinity\": 28.3,\n          \"waterLevel\":
+    471,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -160,\n          \"phase\": \"H-2:40\",\n          \"tide\": 600,\n         
+    \"pressure\": 125,\n          \"salinity\": 28.4,\n          \"waterLevel\":
+    480,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -156,\n          \"phase\": \"H-2:36\",\n          \"tide\": 615,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.5,\n          \"waterLevel\":
+    489,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -152,\n          \"phase\": \"H-2:32\",\n          \"tide\": 630,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.5,\n          \"waterLevel\":
+    498,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -148,\n          \"phase\": \"H-2:28\",\n          \"tide\": 645,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.6,\n          \"waterLevel\":
+    507,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -144,\n          \"phase\": \"H-2:24\",\n          \"tide\": 660,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.6,\n          \"waterLevel\":
+    516,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -140,\n          \"phase\": \"H-2:20\",\n          \"tide\": 674,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.7,\n          \"waterLevel\":
+    525,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -136,\n          \"phase\": \"H-2:16\",\n          \"tide\": 689,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.8,\n          \"waterLevel\":
+    533,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -132,\n          \"phase\": \"H-2:12\",\n          \"tide\": 703,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.8,\n          \"waterLevel\":
+    542,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -128,\n          \"phase\": \"H-2:08\",\n          \"tide\": 716,\n         
+    \"pressure\": 125.8,\n          \"salinity\": 28.9,\n          \"waterLevel\":
+    550,\n          \"state\": \"flat\"\n        },\n        {\n          \"t\":
+    -124,\n          \"phase\": \"H-2:04\",\n          \"tide\": 730,\n         
+    \"pressure\": 131.5,\n          \"salinity\": 28.9,\n          \"waterLevel\":
+    558,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -120,\n          \"phase\": \"H-2:00\",\n          \"tide\": 743,\n         
+    \"pressure\": 132.2,\n          \"salinity\": 29,\n          \"waterLevel\":
+    566,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -116,\n          \"phase\": \"H-1:56\",\n          \"tide\": 756,\n         
+    \"pressure\": 132.8,\n          \"salinity\": 29,\n          \"waterLevel\":
+    574,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -112,\n          \"phase\": \"H-1:52\",\n          \"tide\": 769,\n         
+    \"pressure\": 133.5,\n          \"salinity\": 29.1,\n          \"waterLevel\":
+    581,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -108,\n          \"phase\": \"H-1:48\",\n          \"tide\": 782,\n         
+    \"pressure\": 134.1,\n          \"salinity\": 29.1,\n          \"waterLevel\":
+    589,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -104,\n          \"phase\": \"H-1:44\",\n          \"tide\": 794,\n         
+    \"pressure\": 134.7,\n          \"salinity\": 29.2,\n          \"waterLevel\":
+    596,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -100,\n          \"phase\": \"H-1:40\",\n          \"tide\": 805,\n         
+    \"pressure\": 135.3,\n          \"salinity\": 29.2,\n          \"waterLevel\":
+    603,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -96,\n          \"phase\": \"H-1:36\",\n          \"tide\": 817,\n          \"pressure\":
+    135.8,\n          \"salinity\": 29.3,\n          \"waterLevel\": 610,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -92,\n         
+    \"phase\": \"H-1:32\",\n          \"tide\": 828,\n          \"pressure\": 136.4,\n         
+    \"salinity\": 29.3,\n          \"waterLevel\": 617,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": -88,\n          \"phase\": \"H-1:28\",\n         
+    \"tide\": 839,\n          \"pressure\": 136.9,\n          \"salinity\": 29.4,\n         
+    \"waterLevel\": 623,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -84,\n          \"phase\": \"H-1:24\",\n          \"tide\": 849,\n         
+    \"pressure\": 137.5,\n          \"salinity\": 29.4,\n          \"waterLevel\":
+    629,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -80,\n          \"phase\": \"H-1:20\",\n          \"tide\": 859,\n          \"pressure\":
+    137.9,\n          \"salinity\": 29.4,\n          \"waterLevel\": 635,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -76,\n         
+    \"phase\": \"H-1:16\",\n          \"tide\": 868,\n          \"pressure\": 138.4,\n         
+    \"salinity\": 29.5,\n          \"waterLevel\": 641,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": -72,\n          \"phase\": \"H-1:12\",\n         
+    \"tide\": 878,\n          \"pressure\": 138.9,\n          \"salinity\": 29.5,\n         
+    \"waterLevel\": 647,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": -68,\n          \"phase\": \"H-1:08\",\n          \"tide\": 886,\n         
+    \"pressure\": 139.3,\n          \"salinity\": 29.5,\n          \"waterLevel\":
+    652,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    -64,\n          \"phase\": \"H-1:04\",\n          \"tide\": 894,\n          \"pressure\":
+    139.7,\n          \"salinity\": 29.6,\n          \"waterLevel\": 657,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": -60,\n         
+    \"phase\": \"H-1:00\",\n          \"tide\": 902,\n          \"pressure\": null,\n         
+    \"salinity\": null,\n          \"waterLevel\": null,\n          \"state\": \"missing\"\n       
+    },\n        {\n          \"t\": -56,\n          \"phase\": \"H-0:56\",\n         
+    \"tide\": 910,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -52,\n          \"phase\": \"H-0:52\",\n          \"tide\":
+    916,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -48,\n          \"phase\": \"H-0:48\",\n          \"tide\":
+    923,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -44,\n          \"phase\": \"H-0:44\",\n          \"tide\":
+    929,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -40,\n          \"phase\": \"H-0:40\",\n          \"tide\":
+    934,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -36,\n          \"phase\": \"H-0:36\",\n          \"tide\":
+    939,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -32,\n          \"phase\": \"H-0:32\",\n          \"tide\":
+    943,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -28,\n          \"phase\": \"H-0:28\",\n          \"tide\":
+    947,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -24,\n          \"phase\": \"H-0:24\",\n          \"tide\":
+    951,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -20,\n          \"phase\": \"H-0:20\",\n          \"tide\":
+    953,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -16,\n          \"phase\": \"H-0:16\",\n          \"tide\":
+    956,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -12,\n          \"phase\": \"H-0:12\",\n          \"tide\":
+    958,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -8,\n          \"phase\": \"H-0:08\",\n          \"tide\":
+    959,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": -4,\n          \"phase\": \"H-0:04\",\n          \"tide\":
+    960,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 0,\n          \"phase\": \"H+0:00\",\n          \"tide\":
+    960,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 4,\n          \"phase\": \"H+0:04\",\n          \"tide\":
+    960,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 8,\n          \"phase\": \"H+0:08\",\n          \"tide\":
+    959,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 12,\n          \"phase\": \"H+0:12\",\n          \"tide\":
+    958,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 16,\n          \"phase\": \"H+0:16\",\n          \"tide\":
+    956,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 20,\n          \"phase\": \"H+0:20\",\n          \"tide\":
+    953,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 24,\n          \"phase\": \"H+0:24\",\n          \"tide\":
+    951,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 28,\n          \"phase\": \"H+0:28\",\n          \"tide\":
+    947,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 32,\n          \"phase\": \"H+0:32\",\n          \"tide\":
+    943,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 36,\n          \"phase\": \"H+0:36\",\n          \"tide\":
+    939,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 40,\n          \"phase\": \"H+0:40\",\n          \"tide\":
+    934,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 44,\n          \"phase\": \"H+0:44\",\n          \"tide\":
+    929,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 48,\n          \"phase\": \"H+0:48\",\n          \"tide\":
+    923,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 52,\n          \"phase\": \"H+0:52\",\n          \"tide\":
+    916,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 56,\n          \"phase\": \"H+0:56\",\n          \"tide\":
+    910,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 60,\n          \"phase\": \"H+1:00\",\n          \"tide\":
+    902,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 64,\n          \"phase\": \"H+1:04\",\n          \"tide\":
+    894,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 68,\n          \"phase\": \"H+1:08\",\n          \"tide\":
+    886,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 72,\n          \"phase\": \"H+1:12\",\n          \"tide\":
+    878,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 76,\n          \"phase\": \"H+1:16\",\n          \"tide\":
+    868,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 80,\n          \"phase\": \"H+1:20\",\n          \"tide\":
+    859,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 84,\n          \"phase\": \"H+1:24\",\n          \"tide\":
+    849,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 88,\n          \"phase\": \"H+1:28\",\n          \"tide\":
+    839,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 92,\n          \"phase\": \"H+1:32\",\n          \"tide\":
+    828,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 96,\n          \"phase\": \"H+1:36\",\n          \"tide\":
+    817,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 100,\n          \"phase\": \"H+1:40\",\n          \"tide\":
+    805,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 104,\n          \"phase\": \"H+1:44\",\n          \"tide\":
+    794,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 108,\n          \"phase\": \"H+1:48\",\n          \"tide\":
+    782,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 112,\n          \"phase\": \"H+1:52\",\n          \"tide\":
+    769,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 116,\n          \"phase\": \"H+1:56\",\n          \"tide\":
+    756,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 120,\n          \"phase\": \"H+2:00\",\n          \"tide\":
+    743,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 124,\n          \"phase\": \"H+2:04\",\n          \"tide\":
+    730,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 128,\n          \"phase\": \"H+2:08\",\n          \"tide\":
+    716,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 132,\n          \"phase\": \"H+2:12\",\n          \"tide\":
+    703,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 136,\n          \"phase\": \"H+2:16\",\n          \"tide\":
+    689,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 140,\n          \"phase\": \"H+2:20\",\n          \"tide\":
+    674,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 144,\n          \"phase\": \"H+2:24\",\n          \"tide\":
+    660,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 148,\n          \"phase\": \"H+2:28\",\n          \"tide\":
+    645,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 152,\n          \"phase\": \"H+2:32\",\n          \"tide\":
+    630,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 156,\n          \"phase\": \"H+2:36\",\n          \"tide\":
+    615,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 160,\n          \"phase\": \"H+2:40\",\n          \"tide\":
+    600,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 164,\n          \"phase\": \"H+2:44\",\n          \"tide\":
+    585,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 168,\n          \"phase\": \"H+2:48\",\n          \"tide\":
+    570,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 172,\n          \"phase\": \"H+2:52\",\n          \"tide\":
+    554,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 176,\n          \"phase\": \"H+2:56\",\n          \"tide\":
+    539,\n          \"pressure\": null,\n          \"salinity\": null,\n         
+    \"waterLevel\": null,\n          \"state\": \"missing\"\n        },\n       
+    {\n          \"t\": 180,\n          \"phase\": \"H+3:00\",\n          \"tide\":
+    523,\n          \"pressure\": 121.2,\n          \"salinity\": 28.1,\n         
+    \"waterLevel\": 434,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 184,\n          \"phase\": \"H+3:04\",\n          \"tide\": 508,\n         
+    \"pressure\": 120.4,\n          \"salinity\": 28,\n          \"waterLevel\":
+    425,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    188,\n          \"phase\": \"H+3:08\",\n          \"tide\": 492,\n          \"pressure\":
+    119.6,\n          \"salinity\": 28,\n          \"waterLevel\": 415,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 192,\n         
+    \"phase\": \"H+3:12\",\n          \"tide\": 477,\n          \"pressure\": 118.8,\n         
+    \"salinity\": 27.9,\n          \"waterLevel\": 406,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 196,\n          \"phase\": \"H+3:16\",\n         
+    \"tide\": 461,\n          \"pressure\": 118.1,\n          \"salinity\": 27.8,\n         
+    \"waterLevel\": 397,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 200,\n          \"phase\": \"H+3:20\",\n          \"tide\": 446,\n         
+    \"pressure\": 117.3,\n          \"salinity\": 27.8,\n          \"waterLevel\":
+    387,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    204,\n          \"phase\": \"H+3:24\",\n          \"tide\": 430,\n          \"pressure\":
+    116.5,\n          \"salinity\": 27.7,\n          \"waterLevel\": 378,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 208,\n         
+    \"phase\": \"H+3:28\",\n          \"tide\": 415,\n          \"pressure\": 115.8,\n         
+    \"salinity\": 27.7,\n          \"waterLevel\": 369,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 212,\n          \"phase\": \"H+3:32\",\n         
+    \"tide\": 400,\n          \"pressure\": 115,\n          \"salinity\": 27.6,\n         
+    \"waterLevel\": 360,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 216,\n          \"phase\": \"H+3:36\",\n          \"tide\": 385,\n         
+    \"pressure\": 114.2,\n          \"salinity\": 27.5,\n          \"waterLevel\":
+    351,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    220,\n          \"phase\": \"H+3:40\",\n          \"tide\": 370,\n          \"pressure\":
+    113.5,\n          \"salinity\": 27.5,\n          \"waterLevel\": 342,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 224,\n         
+    \"phase\": \"H+3:44\",\n          \"tide\": 355,\n          \"pressure\": 112.7,\n         
+    \"salinity\": 27.4,\n          \"waterLevel\": 333,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 228,\n          \"phase\": \"H+3:48\",\n         
+    \"tide\": 340,\n          \"pressure\": 112,\n          \"salinity\": 27.4,\n         
+    \"waterLevel\": 324,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 232,\n          \"phase\": \"H+3:52\",\n          \"tide\": 326,\n         
+    \"pressure\": 111.3,\n          \"salinity\": 27.3,\n          \"waterLevel\":
+    315,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    236,\n          \"phase\": \"H+3:56\",\n          \"tide\": 311,\n          \"pressure\":
+    110.6,\n          \"salinity\": 27.2,\n          \"waterLevel\": 307,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 240,\n         
+    \"phase\": \"H+4:00\",\n          \"tide\": 297,\n          \"pressure\": 109.9,\n         
+    \"salinity\": 27.2,\n          \"waterLevel\": 298,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 244,\n          \"phase\": \"H+4:04\",\n         
+    \"tide\": 284,\n          \"pressure\": 109.2,\n          \"salinity\": 27.1,\n         
+    \"waterLevel\": 290,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 248,\n          \"phase\": \"H+4:08\",\n          \"tide\": 270,\n         
+    \"pressure\": 108.5,\n          \"salinity\": 27.1,\n          \"waterLevel\":
+    282,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    252,\n          \"phase\": \"H+4:12\",\n          \"tide\": 257,\n          \"pressure\":
+    107.8,\n          \"salinity\": 27,\n          \"waterLevel\": 274,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 256,\n         
+    \"phase\": \"H+4:16\",\n          \"tide\": 244,\n          \"pressure\": 107.2,\n         
+    \"salinity\": 27,\n          \"waterLevel\": 266,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 260,\n          \"phase\": \"H+4:20\",\n         
+    \"tide\": 231,\n          \"pressure\": 106.5,\n          \"salinity\": 26.9,\n         
+    \"waterLevel\": 259,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 264,\n          \"phase\": \"H+4:24\",\n          \"tide\": 218,\n         
+    \"pressure\": 105.9,\n          \"salinity\": 26.9,\n          \"waterLevel\":
+    251,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    268,\n          \"phase\": \"H+4:28\",\n          \"tide\": 206,\n          \"pressure\":
+    105.3,\n          \"salinity\": 26.8,\n          \"waterLevel\": 244,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 272,\n         
+    \"phase\": \"H+4:32\",\n          \"tide\": 195,\n          \"pressure\": 104.7,\n         
+    \"salinity\": 26.8,\n          \"waterLevel\": 237,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 276,\n          \"phase\": \"H+4:36\",\n         
+    \"tide\": 183,\n          \"pressure\": 104.2,\n          \"salinity\": 26.7,\n         
+    \"waterLevel\": 230,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 280,\n          \"phase\": \"H+4:40\",\n          \"tide\": 172,\n         
+    \"pressure\": 103.6,\n          \"salinity\": 26.7,\n          \"waterLevel\":
+    223,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    284,\n          \"phase\": \"H+4:44\",\n          \"tide\": 161,\n          \"pressure\":
+    103.1,\n          \"salinity\": 26.6,\n          \"waterLevel\": 217,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 288,\n         
+    \"phase\": \"H+4:48\",\n          \"tide\": 151,\n          \"pressure\": 102.5,\n         
+    \"salinity\": 26.6,\n          \"waterLevel\": 211,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 292,\n          \"phase\": \"H+4:52\",\n         
+    \"tide\": 141,\n          \"pressure\": 102.1,\n          \"salinity\": 26.6,\n         
+    \"waterLevel\": 205,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 296,\n          \"phase\": \"H+4:56\",\n          \"tide\": 132,\n         
+    \"pressure\": 101.6,\n          \"salinity\": 26.5,\n          \"waterLevel\":
+    199,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    300,\n          \"phase\": \"H+5:00\",\n          \"tide\": 122,\n          \"pressure\":
+    101.1,\n          \"salinity\": 26.5,\n          \"waterLevel\": 193,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 304,\n         
+    \"phase\": \"H+5:04\",\n          \"tide\": 114,\n          \"pressure\": 100.7,\n         
+    \"salinity\": 26.5,\n          \"waterLevel\": 188,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 308,\n          \"phase\": \"H+5:08\",\n         
+    \"tide\": 106,\n          \"pressure\": 100.3,\n          \"salinity\": 26.4,\n         
+    \"waterLevel\": 183,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 312,\n          \"phase\": \"H+5:12\",\n          \"tide\": 98,\n         
+    \"pressure\": 99.9,\n          \"salinity\": 26.4,\n          \"waterLevel\":
+    179,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    316,\n          \"phase\": \"H+5:16\",\n          \"tide\": 90,\n          \"pressure\":
+    99.5,\n          \"salinity\": 26.4,\n          \"waterLevel\": 174,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 320,\n         
+    \"phase\": \"H+5:20\",\n          \"tide\": 84,\n          \"pressure\": 99.2,\n         
+    \"salinity\": 26.3,\n          \"waterLevel\": 170,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 324,\n          \"phase\": \"H+5:24\",\n         
+    \"tide\": 77,\n          \"pressure\": 98.9,\n          \"salinity\": 26.3,\n         
+    \"waterLevel\": 166,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 328,\n          \"phase\": \"H+5:28\",\n          \"tide\": 71,\n         
+    \"pressure\": 98.6,\n          \"salinity\": 26.3,\n          \"waterLevel\":
+    163,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    332,\n          \"phase\": \"H+5:32\",\n          \"tide\": 66,\n          \"pressure\":
+    98.3,\n          \"salinity\": 26.3,\n          \"waterLevel\": 160,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 336,\n         
+    \"phase\": \"H+5:36\",\n          \"tide\": 61,\n          \"pressure\": 98.1,\n         
+    \"salinity\": 26.2,\n          \"waterLevel\": 157,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 340,\n          \"phase\": \"H+5:40\",\n         
+    \"tide\": 57,\n          \"pressure\": 97.8,\n          \"salinity\": 26.2,\n         
+    \"waterLevel\": 154,\n          \"state\": \"normal\"\n        },\n        {\n         
+    \"t\": 344,\n          \"phase\": \"H+5:44\",\n          \"tide\": 53,\n         
+    \"pressure\": 97.6,\n          \"salinity\": 26.2,\n          \"waterLevel\":
+    152,\n          \"state\": \"normal\"\n        },\n        {\n          \"t\":
+    348,\n          \"phase\": \"H+5:48\",\n          \"tide\": 49,\n          \"pressure\":
+    97.5,\n          \"salinity\": 26.2,\n          \"waterLevel\": 150,\n         
+    \"state\": \"normal\"\n        },\n        {\n          \"t\": 352,\n         
+    \"phase\": \"H+5:52\",\n          \"tide\": 47,\n          \"pressure\": 97.3,\n         
+    \"salinity\": 26.2,\n          \"waterLevel\": 148,\n          \"state\": \"normal\"\n       
+    },\n        {\n          \"t\": 356,\n          \"phase\": \"H+5:56\",\n         
+    \"tide\": 44,\n          \"pressure\": 97.2,\n          \"salinity\": 26.2,\n         
+    \"waterLevel\": 147,\n          \"state\": \"normal\"\n        }\n      ],\n     
+    \"samplesDerivation\": \"rule\",\n      \"engravings\": [],\n      \"engravingsNote\":
+    \"\uADF8 \uBC24 \uD5C8\uBE0C \uACC4\uD1B5 \uBC38\uBE0C \uAC1C\uD3D0 \uAC01\uC778
+    0\uAC74 \u2014 \uBD80\uC7AC\uC758 \uAE30\uB85D\uC774\uBA70 \uBD80\uC7AC\uC758
+    \uC99D\uAC70\uAC00 \uC544\uB2C8\uB2E4(\uBC951)\",\n      \"layers\": [\n       
+    {\n          \"layerId\": \"pl-corrosion-1\",\n          \"range\": \"\uACB0\uC190
+    \uAD6C\uAC04 \uD45C\uBA74 \uC804\uC5ED(H-1:00~H+2:56)\",\n          \"observation\":
+    \"\uC587\uAC8C \uCE35\uC9C4 \uBB34\uB2AC\uAC00 \uACB0\uC190 \uAD6C\uAC04 \uD45C\uBA74\uC744
+    \uB36E\uB294\uB2E4. \uCE35\uC740 \uADE0\uC77C\uD558\uC9C0 \uC54A\uACE0 \uAC00\uC7A5\uC790\uB9AC\uAC00
+    \uBC88\uC838 \uC788\uB2E4\",\n          \"visibleAt\": [\n            \"t0-b3\"\n         
+    ],\n          \"meaning\": null\n        }\n      ],\n      \"systemId\": \"system-hub\",\n     
+    \"stationId\": \"station-bureau-standard\",\n      \"sourceAssignment\": {\n       
+    \"recordId\": \"rec-plate-standard-hub\",\n        \"systemId\": \"system-hub\",\n       
+    \"stationId\": \"station-bureau-standard\",\n        \"assignmentKind\": \"authored-comparison-reference\",\n       
+    \"evidence\": [\n          \"[OBSERVED] synopsis/t0-records.md \xA75.1 valve
+    \uD589\uC740 \uC774 \uD310\uC744 \uD5C8\uBE0C \uACC4\uD1B5\uC73C\uB85C \uBA85\uC2DC\uD55C\uB2E4.\",\n         
+    \"[TARGET] worldview/glossary.md \xA76-2\uB294 \uAE30\uC874 \uD5C8\uBE0C \uACC4\uD1B5\uC5D0
+    system-hub\uB77C\uB294 \uAE30\uC220 ID\uB97C \uC9C0\uC815\uD55C\uB2E4.\",\n         
+    \"[TARGET] production/decision-log.md RFC-CX-003\uC758 RFC-CX-001 director ruling\uC740
+    station-bureau-standard\uB97C \uC774 \uD310\uC758 \uC870\uC704 \uBE44\uAD50 \uAE30\uC900\uC73C\uB85C
+    \uC0C8\uB85C \uCC44\uD0DD\uD55C\uB2E4. \uC774\uB294 \uAD00\uCE21 \uC0DD\uC0B0\uC9C0
+    \uB610\uB294 \uC13C\uC11C \uADC0\uC18D\uC758 \uAE30\uC874 \uC0AC\uC2E4\uC774
+    \uC544\uB2C8\uB2E4.\",\n          \"[OBSERVED] systems/data-schemas/plates.md
+    \xA71\uC758 stationId\uB294 \uAE30\uC900 \uAD00\uCE21\uC18C\uC774\uC790 \uC870\uC704\uC815\uD569
+    \uC785\uB825\uC774\uB2E4.\"\n        ],\n        \"decisionRfc\": [\n         
+    \"RFC-CX-001\",\n          \"RFC-CX-003\"\n        ]\n      }\n    },\n    {\n     
+    \"recordId\": \"rec-watchlog-bureau\",\n      \"medium\": \"log\",\n      \"sourceType\":
+    \"log\",\n      \"originId\": \"watchlog-bureau\",\n      \"rootOriginId\": \"watchlog-bureau\",\n     
+    \"clueIds\": [\n        \"t0-b2-c2\"\n      ],\n      \"visibleAt\": [\n       
+    \"t0-b2\"\n      ],\n      \"zoneId\": \"hub\",\n      \"displayNameKo\": \"\uADFC\uBB34
+    \uADDC\uC815 \uD544\uC0AC\uBCF8\",\n      \"_src\": {\n        \"recordId\":
+    \"synopsis/t0-records.md \xA72 \uD45C 1 (\uD589 1:1)\",\n        \"sourceType\":
+    \"planning/campaign.json clues[].sourceType (\uBB38\uC11C\uC640 \uC77C\uCE58
+    \uAC80\uC0AC \uD1B5\uACFC)\",\n        \"originId\": \"planning/campaign.json
+    clues[].originId\",\n        \"rootOriginId\": \"copiedFrom \uCCB4\uC778 \uD30C\uC0DD
+    (interaction-rules.md \xA73 \u2014 \uC0AC\uBCF8\uC740 \uC6D0\uBCF8\uC758 \uB8E8\uD2B8\uB97C
+    \uBB3C\uB824\uBC1B\uB294\uB2E4, RFC-S5 \uC608\uC678 \uC5C6\uC74C)\",\n       
+    \"displayNameKo\": \"worldview/glossary.md \xA77 \uCE74\uD0C8\uB85C\uADF8 (t0-records
+    \xA72 \uD45C\uC758 KO \uBA85\uCE6D \uC5F4)\",\n        \"lines\": \"synopsis/t0-records.md
+    \xA76 (\uD615\uC2DD \uACE0\uC815 \uD45C)\"\n      },\n      \"lines\": [\n       
+    {\n          \"lineId\": \"wb-l1\",\n          \"kind\": \"clause\",\n         
+    \"text\": \"\uACC4\uD1B5\uC5D0 \uB0A8\uB294 \uAC83\uC740 \uBC38\uBE0C \uAC1C\uD3D0,
+    \uAD00 \uC555\uB825, \uC5FC\uB3C4, \uC218\uC704, \uBB38 \uAC1C\uD3D0, \uB2F9\uC9C1
+    \uD638\uCD9C, \uBD09\uC778 \uC644\uB8CC \uC811\uC810\uC5D0 \uD55C\uD55C\uB2E4.\",\n         
+    \"flag\": \"quote:bible \xA72\"\n        },\n        {\n          \"lineId\":
+    \"wb-l2\",\n          \"kind\": \"clause\",\n          \"text\": \"\uD68C\uC120\uC774
+    \uAE54\uB9B0 3\uAC1C\uC18C \u2014 \uB2F9\uC9C1\uC2E4\xB7\uC81C3\uC218\uBB38\xB7\uBD80\uB450\uC0AC\uBB34\uC18C
+    \u2014 \uC5D0 \uD55C\uD574 \uD1B5\uD654\uC758 \uAC1C\uC2DC \uC2DC\uAC01\uACFC
+    \uACC4\uD1B5\uB9CC \uB0A8\uAE34\uB2E4. \uD1B5\uD654 \uB0B4\uC6A9\uC740 \uB0A8\uAE30\uC9C0
+    \uC54A\uB294\uB2E4.\",\n          \"flag\": \"quote:bible \xA72\"\n        },\n       
+    {\n          \"lineId\": \"wb-l3\",\n          \"kind\": \"clause\",\n         
+    \"text\": \"\uC13C\uC11C \uBC16 \uC0AC\uAC74\uC740 \uAE30\uB85D\uB9CC\uC73C\uB85C
+    \uD655\uC815\uD560 \uC218 \uC5C6\uB2E4. \uADFC\uAC70 \uBD80\uC871 \uC0AC\uC720\uB97C
+    \uC801\uACE0 \uD310\uC815\uC744 \uBCF4\uB958\uD55C\uB2E4.\",\n          \"flag\":
+    \"quote:bible \xA73 \uBC951\"\n        },\n        {\n          \"lineId\": \"wb-l4\",\n         
+    \"kind\": \"margin\",\n          \"text\": \"\uC81C2\uC870\uB294 \uAC1C\uC18C
+    \uC218\uB9CC \uC62E\uACA8 \uC801\uC5C8\uB2E4. \uAC1C\uC18C\uBCC4 \uD68C\uC120
+    \uBC88\uD638\uB294 \uC6D0\uBCF8\uC5D0 \uC788\uB2E4.\",\n          \"flag\": \"omission
+    \u2014 \uD544\uC0AC\uBCF8\uC758 \uB204\uB77D \uC608\uC2DC\"\n        }\n     
+    ]\n    },\n    {\n      \"recordId\": \"rec-tide-ledger-bureau\",\n      \"medium\":
+    \"ledger\",\n      \"sourceType\": \"ledger\",\n      \"originId\": \"tide-ledger-bureau\",\n     
+    \"rootOriginId\": \"tide-ledger-bureau\",\n      \"clueIds\": [\n        \"t0-b3-c2\"\n     
+    ],\n      \"visibleAt\": [\n        \"t0-b3\"\n      ],\n      \"zoneId\": \"hub\",\n     
+    \"displayNameKo\": \"\uAE30\uB85D\uAD6D \uC870\uC704\uB300\uC7A5\",\n      \"_src\":
+    {\n        \"recordId\": \"synopsis/t0-records.md \xA72 \uD45C 1 (\uD589 1:1)\",\n       
+    \"sourceType\": \"planning/campaign.json clues[].sourceType (\uBB38\uC11C\uC640
+    \uC77C\uCE58 \uAC80\uC0AC \uD1B5\uACFC)\",\n        \"originId\": \"planning/campaign.json
+    clues[].originId\",\n        \"rootOriginId\": \"copiedFrom \uCCB4\uC778 \uD30C\uC0DD
+    (interaction-rules.md \xA73 \u2014 \uC0AC\uBCF8\uC740 \uC6D0\uBCF8\uC758 \uB8E8\uD2B8\uB97C
+    \uBB3C\uB824\uBC1B\uB294\uB2E4, RFC-S5 \uC608\uC678 \uC5C6\uC74C)\",\n       
+    \"displayNameKo\": \"worldview/glossary.md \xA77 \uCE74\uD0C8\uB85C\uADF8 (t0-records
+    \xA72 \uD45C\uC758 KO \uBA85\uCE6D \uC5F4)\",\n        \"samples\": \"synopsis/t0-records.md
+    \xA77.2 \uADDC\uCE59(\xA75.2 tide \uC640 \uAC19\uC740 \uD568\uC218) \xB7 \xA77.3
+    \uC575\uCEE4\uC640 \uC804\uAC74 \uB300\uC870\",\n        \"citationProvenance\":
+    \"synopsis/t0-records.md \xA712 (RFC-CX-001 / RFC-CX-003)\"\n      },\n     
+    \"columns\": [\n        {\n          \"columnId\": \"phase\",\n          \"ko\":
+    \"\uC2DC\uAC01(\uC870\uC704 \uC704\uC0C1)\",\n          \"unit\": \"H\xB1h:mm\",\n         
+    \"note\": \"4\uBD84 \uACA9\uC790\"\n        },\n        {\n          \"columnId\":
+    \"tideHeight\",\n          \"ko\": \"\uC870\uC704\uACE0\",\n          \"unit\":
+    \"cm\",\n          \"note\": \"\uAE30\uB85D\uAD6D \uD45C\uC900 \uAD00\uCE21\uC18C\"\n       
+    },\n        {\n          \"columnId\": \"scribe\",\n          \"ko\": \"\uAE30\uC785
+    \uD45C\uC2DC\",\n          \"unit\": \"\uD45C\uC2DC\",\n          \"note\": \"4\uBD84\uB9C8\uB2E4
+    \uAE30\uC785 \uC644\uB8CC \uD45C\uC2DC. \uADF8 \uBC24 \uACF5\uBC31 0\uCE78\"\n       
+    }\n      ],\n      \"entryRange\": {\n        \"startMin\": -360,\n        \"endMin\":
+    180,\n        \"stepMin\": 4,\n        \"cells\": 136,\n        \"blanks\": 0\n     
+    },\n      \"samples\": [\n        {\n          \"t\": -360,\n          \"phase\":
+    \"H-6:00\",\n          \"tideHeight\": 42,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -356,\n          \"phase\": \"H-5:56\",\n         
+    \"tideHeight\": 44,\n          \"scribe\": \"written\"\n        },\n        {\n         
+    \"t\": -352,\n          \"phase\": \"H-5:52\",\n          \"tideHeight\": 47,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -348,\n         
+    \"phase\": \"H-5:48\",\n          \"tideHeight\": 49,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -344,\n          \"phase\":
+    \"H-5:44\",\n          \"tideHeight\": 53,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -340,\n          \"phase\": \"H-5:40\",\n         
+    \"tideHeight\": 57,\n          \"scribe\": \"written\"\n        },\n        {\n         
+    \"t\": -336,\n          \"phase\": \"H-5:36\",\n          \"tideHeight\": 61,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -332,\n         
+    \"phase\": \"H-5:32\",\n          \"tideHeight\": 66,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -328,\n          \"phase\":
+    \"H-5:28\",\n          \"tideHeight\": 71,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -324,\n          \"phase\": \"H-5:24\",\n         
+    \"tideHeight\": 77,\n          \"scribe\": \"written\"\n        },\n        {\n         
+    \"t\": -320,\n          \"phase\": \"H-5:20\",\n          \"tideHeight\": 84,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -316,\n         
+    \"phase\": \"H-5:16\",\n          \"tideHeight\": 90,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -312,\n          \"phase\":
+    \"H-5:12\",\n          \"tideHeight\": 98,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -308,\n          \"phase\": \"H-5:08\",\n         
+    \"tideHeight\": 106,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -304,\n          \"phase\": \"H-5:04\",\n          \"tideHeight\":
+    114,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -300,\n          \"phase\": \"H-5:00\",\n          \"tideHeight\": 122,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -296,\n         
+    \"phase\": \"H-4:56\",\n          \"tideHeight\": 132,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -292,\n          \"phase\":
+    \"H-4:52\",\n          \"tideHeight\": 141,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -288,\n          \"phase\": \"H-4:48\",\n         
+    \"tideHeight\": 151,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -284,\n          \"phase\": \"H-4:44\",\n          \"tideHeight\":
+    161,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -280,\n          \"phase\": \"H-4:40\",\n          \"tideHeight\": 172,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -276,\n         
+    \"phase\": \"H-4:36\",\n          \"tideHeight\": 183,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -272,\n          \"phase\":
+    \"H-4:32\",\n          \"tideHeight\": 195,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -268,\n          \"phase\": \"H-4:28\",\n         
+    \"tideHeight\": 206,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -264,\n          \"phase\": \"H-4:24\",\n          \"tideHeight\":
+    218,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -260,\n          \"phase\": \"H-4:20\",\n          \"tideHeight\": 231,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -256,\n         
+    \"phase\": \"H-4:16\",\n          \"tideHeight\": 244,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -252,\n          \"phase\":
+    \"H-4:12\",\n          \"tideHeight\": 257,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -248,\n          \"phase\": \"H-4:08\",\n         
+    \"tideHeight\": 270,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -244,\n          \"phase\": \"H-4:04\",\n          \"tideHeight\":
+    284,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -240,\n          \"phase\": \"H-4:00\",\n          \"tideHeight\": 297,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -236,\n         
+    \"phase\": \"H-3:56\",\n          \"tideHeight\": 311,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -232,\n          \"phase\":
+    \"H-3:52\",\n          \"tideHeight\": 326,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -228,\n          \"phase\": \"H-3:48\",\n         
+    \"tideHeight\": 340,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -224,\n          \"phase\": \"H-3:44\",\n          \"tideHeight\":
+    355,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -220,\n          \"phase\": \"H-3:40\",\n          \"tideHeight\": 370,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -216,\n         
+    \"phase\": \"H-3:36\",\n          \"tideHeight\": 385,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -212,\n          \"phase\":
+    \"H-3:32\",\n          \"tideHeight\": 400,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -208,\n          \"phase\": \"H-3:28\",\n         
+    \"tideHeight\": 415,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -204,\n          \"phase\": \"H-3:24\",\n          \"tideHeight\":
+    430,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -200,\n          \"phase\": \"H-3:20\",\n          \"tideHeight\": 446,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -196,\n         
+    \"phase\": \"H-3:16\",\n          \"tideHeight\": 461,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -192,\n          \"phase\":
+    \"H-3:12\",\n          \"tideHeight\": 477,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -188,\n          \"phase\": \"H-3:08\",\n         
+    \"tideHeight\": 492,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -184,\n          \"phase\": \"H-3:04\",\n          \"tideHeight\":
+    508,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -180,\n          \"phase\": \"H-3:00\",\n          \"tideHeight\": 523,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -176,\n         
+    \"phase\": \"H-2:56\",\n          \"tideHeight\": 539,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -172,\n          \"phase\":
+    \"H-2:52\",\n          \"tideHeight\": 554,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -168,\n          \"phase\": \"H-2:48\",\n         
+    \"tideHeight\": 570,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -164,\n          \"phase\": \"H-2:44\",\n          \"tideHeight\":
+    585,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -160,\n          \"phase\": \"H-2:40\",\n          \"tideHeight\": 600,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -156,\n         
+    \"phase\": \"H-2:36\",\n          \"tideHeight\": 615,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -152,\n          \"phase\":
+    \"H-2:32\",\n          \"tideHeight\": 630,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -148,\n          \"phase\": \"H-2:28\",\n         
+    \"tideHeight\": 645,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -144,\n          \"phase\": \"H-2:24\",\n          \"tideHeight\":
+    660,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -140,\n          \"phase\": \"H-2:20\",\n          \"tideHeight\": 674,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -136,\n         
+    \"phase\": \"H-2:16\",\n          \"tideHeight\": 689,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -132,\n          \"phase\":
+    \"H-2:12\",\n          \"tideHeight\": 703,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -128,\n          \"phase\": \"H-2:08\",\n         
+    \"tideHeight\": 716,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -124,\n          \"phase\": \"H-2:04\",\n          \"tideHeight\":
+    730,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -120,\n          \"phase\": \"H-2:00\",\n          \"tideHeight\": 743,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -116,\n         
+    \"phase\": \"H-1:56\",\n          \"tideHeight\": 756,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -112,\n          \"phase\":
+    \"H-1:52\",\n          \"tideHeight\": 769,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -108,\n          \"phase\": \"H-1:48\",\n         
+    \"tideHeight\": 782,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -104,\n          \"phase\": \"H-1:44\",\n          \"tideHeight\":
+    794,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -100,\n          \"phase\": \"H-1:40\",\n          \"tideHeight\": 805,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -96,\n         
+    \"phase\": \"H-1:36\",\n          \"tideHeight\": 817,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -92,\n          \"phase\":
+    \"H-1:32\",\n          \"tideHeight\": 828,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -88,\n          \"phase\": \"H-1:28\",\n         
+    \"tideHeight\": 839,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -84,\n          \"phase\": \"H-1:24\",\n          \"tideHeight\":
+    849,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -80,\n          \"phase\": \"H-1:20\",\n          \"tideHeight\": 859,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -76,\n         
+    \"phase\": \"H-1:16\",\n          \"tideHeight\": 868,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -72,\n          \"phase\":
+    \"H-1:12\",\n          \"tideHeight\": 878,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -68,\n          \"phase\": \"H-1:08\",\n         
+    \"tideHeight\": 886,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -64,\n          \"phase\": \"H-1:04\",\n          \"tideHeight\":
+    894,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -60,\n          \"phase\": \"H-1:00\",\n          \"tideHeight\": 902,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -56,\n         
+    \"phase\": \"H-0:56\",\n          \"tideHeight\": 910,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -52,\n          \"phase\":
+    \"H-0:52\",\n          \"tideHeight\": 916,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -48,\n          \"phase\": \"H-0:48\",\n         
+    \"tideHeight\": 923,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -44,\n          \"phase\": \"H-0:44\",\n          \"tideHeight\":
+    929,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -40,\n          \"phase\": \"H-0:40\",\n          \"tideHeight\": 934,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -36,\n         
+    \"phase\": \"H-0:36\",\n          \"tideHeight\": 939,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -32,\n          \"phase\":
+    \"H-0:32\",\n          \"tideHeight\": 943,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -28,\n          \"phase\": \"H-0:28\",\n         
+    \"tideHeight\": 947,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -24,\n          \"phase\": \"H-0:24\",\n          \"tideHeight\":
+    951,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    -20,\n          \"phase\": \"H-0:20\",\n          \"tideHeight\": 953,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": -16,\n         
+    \"phase\": \"H-0:16\",\n          \"tideHeight\": 956,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": -12,\n          \"phase\":
+    \"H-0:12\",\n          \"tideHeight\": 958,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": -8,\n          \"phase\": \"H-0:08\",\n         
+    \"tideHeight\": 959,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": -4,\n          \"phase\": \"H-0:04\",\n          \"tideHeight\":
+    960,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    0,\n          \"phase\": \"H+0:00\",\n          \"tideHeight\": 960,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 4,\n         
+    \"phase\": \"H+0:04\",\n          \"tideHeight\": 960,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 8,\n          \"phase\":
+    \"H+0:08\",\n          \"tideHeight\": 959,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 12,\n          \"phase\": \"H+0:12\",\n         
+    \"tideHeight\": 958,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 16,\n          \"phase\": \"H+0:16\",\n          \"tideHeight\":
+    956,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    20,\n          \"phase\": \"H+0:20\",\n          \"tideHeight\": 953,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 24,\n         
+    \"phase\": \"H+0:24\",\n          \"tideHeight\": 951,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 28,\n          \"phase\":
+    \"H+0:28\",\n          \"tideHeight\": 947,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 32,\n          \"phase\": \"H+0:32\",\n         
+    \"tideHeight\": 943,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 36,\n          \"phase\": \"H+0:36\",\n          \"tideHeight\":
+    939,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    40,\n          \"phase\": \"H+0:40\",\n          \"tideHeight\": 934,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 44,\n         
+    \"phase\": \"H+0:44\",\n          \"tideHeight\": 929,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 48,\n          \"phase\":
+    \"H+0:48\",\n          \"tideHeight\": 923,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 52,\n          \"phase\": \"H+0:52\",\n         
+    \"tideHeight\": 916,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 56,\n          \"phase\": \"H+0:56\",\n          \"tideHeight\":
+    910,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    60,\n          \"phase\": \"H+1:00\",\n          \"tideHeight\": 902,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 64,\n         
+    \"phase\": \"H+1:04\",\n          \"tideHeight\": 894,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 68,\n          \"phase\":
+    \"H+1:08\",\n          \"tideHeight\": 886,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 72,\n          \"phase\": \"H+1:12\",\n         
+    \"tideHeight\": 878,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 76,\n          \"phase\": \"H+1:16\",\n          \"tideHeight\":
+    868,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    80,\n          \"phase\": \"H+1:20\",\n          \"tideHeight\": 859,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 84,\n         
+    \"phase\": \"H+1:24\",\n          \"tideHeight\": 849,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 88,\n          \"phase\":
+    \"H+1:28\",\n          \"tideHeight\": 839,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 92,\n          \"phase\": \"H+1:32\",\n         
+    \"tideHeight\": 828,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 96,\n          \"phase\": \"H+1:36\",\n          \"tideHeight\":
+    817,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    100,\n          \"phase\": \"H+1:40\",\n          \"tideHeight\": 805,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 104,\n         
+    \"phase\": \"H+1:44\",\n          \"tideHeight\": 794,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 108,\n          \"phase\":
+    \"H+1:48\",\n          \"tideHeight\": 782,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 112,\n          \"phase\": \"H+1:52\",\n         
+    \"tideHeight\": 769,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 116,\n          \"phase\": \"H+1:56\",\n          \"tideHeight\":
+    756,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    120,\n          \"phase\": \"H+2:00\",\n          \"tideHeight\": 743,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 124,\n         
+    \"phase\": \"H+2:04\",\n          \"tideHeight\": 730,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 128,\n          \"phase\":
+    \"H+2:08\",\n          \"tideHeight\": 716,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 132,\n          \"phase\": \"H+2:12\",\n         
+    \"tideHeight\": 703,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 136,\n          \"phase\": \"H+2:16\",\n          \"tideHeight\":
+    689,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    140,\n          \"phase\": \"H+2:20\",\n          \"tideHeight\": 674,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 144,\n         
+    \"phase\": \"H+2:24\",\n          \"tideHeight\": 660,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 148,\n          \"phase\":
+    \"H+2:28\",\n          \"tideHeight\": 645,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 152,\n          \"phase\": \"H+2:32\",\n         
+    \"tideHeight\": 630,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 156,\n          \"phase\": \"H+2:36\",\n          \"tideHeight\":
+    615,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    160,\n          \"phase\": \"H+2:40\",\n          \"tideHeight\": 600,\n         
+    \"scribe\": \"written\"\n        },\n        {\n          \"t\": 164,\n         
+    \"phase\": \"H+2:44\",\n          \"tideHeight\": 585,\n          \"scribe\":
+    \"written\"\n        },\n        {\n          \"t\": 168,\n          \"phase\":
+    \"H+2:48\",\n          \"tideHeight\": 570,\n          \"scribe\": \"written\"\n       
+    },\n        {\n          \"t\": 172,\n          \"phase\": \"H+2:52\",\n         
+    \"tideHeight\": 554,\n          \"scribe\": \"written\"\n        },\n       
+    {\n          \"t\": 176,\n          \"phase\": \"H+2:56\",\n          \"tideHeight\":
+    539,\n          \"scribe\": \"written\"\n        },\n        {\n          \"t\":
+    180,\n          \"phase\": \"H+3:00\",\n          \"tideHeight\": 523,\n         
+    \"scribe\": \"written\"\n        }\n      ],\n      \"samplesDerivation\": \"rule\",\n     
+    \"rule\": {\n        \"formula\": \"tideHeight(t) = round(tideBase + tideAmp*cos(2\u03C0*t/periodMin))\",\n       
+    \"sharedWith\": \"rec-plate-standard-hub\",\n        \"tideBase\": 500,\n       
+    \"tideAmp\": 460,\n        \"periodMin\": 744,\n        \"pressBase\": 120,\n       
+    \"pressSlope\": 0.05,\n        \"pressPivot\": 500,\n        \"salBase\": 28,\n       
+    \"salSlope\": 0.004,\n        \"salPivot\": 500,\n        \"waterSlope\": 0.6,\n       
+    \"waterBase\": 120\n      },\n      \"systemId\": null,\n      \"stationId\":
+    \"station-bureau-standard\",\n      \"sourceAssignment\": {\n        \"recordId\":
+    \"rec-tide-ledger-bureau\",\n        \"systemId\": null,\n        \"stationId\":
+    \"station-bureau-standard\",\n        \"assignmentKind\": \"existing-reference-technical-id\",\n       
+    \"evidence\": [\n          \"[OBSERVED] synopsis/t0-records.md \xA77 \uBA38\uB9AC\uB9D0\uACFC
+    \xA77.1 tideHeight \uD589\uC740 \uAE30\uB85D\uAD6D \uD45C\uC900 \uAD00\uCE21\uC18C\uB97C
+    \uC774 \uB300\uC7A5\uC758 \uAE30\uC900\uC73C\uB85C \uBA85\uC2DC\uD55C\uB2E4.\",\n         
+    \"[TARGET] worldview/glossary.md \xA76-2\uB294 \uADF8 \uAE30\uC874 \uAE30\uC900
+    \uAD00\uCE21\uC18C\uC5D0 station-bureau-standard\uB77C\uB294 \uAE30\uC220 ID\uB97C
+    \uC9C0\uC815\uD55C\uB2E4.\",\n          \"[OBSERVED] systems/data-schemas/plates.md
+    \xA71\uC758 systemId\uB294 string?\uC774\uBA70 sourceType == plate\uC77C \uB54C\uB9CC
+    \uD544\uC218\uB2E4.\",\n          \"[TARGET] production/decision-log.md RFC-CX-003\uC758
+    RFC-CX-001 director ruling\uC740 \uC774 \uC218\uCE58\uB300\uC7A5\uC5D0 systemId
+    null\uC744 \uC801\uC6A9\uD558\uC5EC \uC5FC\uD310 \uACC4\uD1B5 \uBE44\uD574\uB2F9\uC744
+    \uD45C\uD604\uD55C\uB2E4.\"\n        ],\n        \"decisionRfc\": [\n         
+    \"RFC-CX-001\",\n          \"RFC-CX-003\"\n        ]\n      }\n    }\n  ]\n}\n"

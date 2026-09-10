@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "scope": "t0",
+  "generatedFrom": "planning/campaign.json",
+  "sourceSha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
+  "derivation": "subset+predicate",
+  "stage": {
+    "id": "T0",
+    "title": "마지막 당직 인수",
+    "zoneIds": [
+      "hub"
+    ],
+    "storyPhase": "tutorial",
+    "minutes": 25
+  },
+  "commitCommandBeats": [
+    "t0-b3"
+  ],
+  "proofRequiredBeats": [
+    "t0-b3"
+  ],
+  "notMeasured": [
+    "이 술어가 실제 플레이에서 판정되는지 n=0 — Unity 실행 0회"
+  ],
+  "rows": [
+    {
+      "id": "t0-b1",
+      "title": "숨겨둔 판을 목록에 올릴 것인가",
+      "kind": "exploration",
+      "zoneId": "hub",
+      "minutes": 5,
+      "fastMinutes": 3,
+      "deliberateMinutes": 7,
+      "activityBudget": {
+        "exploration": 3,
+        "reasoning": 1,
+        "manipulation": 1,
+        "dialogue": 0,
+        "payoff": 0
+      },
+      "timeConfidence": "low",
+      "authorEstimateBasis": "읽을 것은 각서 3항과 목록 3줄뿐이고 손 동작은 서랍 열기·슬롯 적재·기입 결정 셋이라 5분으로 잡았으나, 첫 화면의 탐색 속도는 표본이 없어 신뢰도가 낮다.",
+      "subtasks": [
+        "당직실 작업대에서 인수 각서 3항을 읽고 12년 전 대조의 밤 당직 주임 이름(한도연)을 확인한다",
+        "이관 목록 인쇄본 3줄과 사물 서랍 실물을 하나씩 대조한다",
+        "서랍에서 판 #0을 꺼내 작업대 상시 슬롯에 올린다",
+        "이관 목록에 \"미분류 1점\"을 손으로 적을지 비워 둘지 정한다"
+      ],
+      "prerequisites": [],
+      "tools": [],
+      "toolTeaching": [],
+      "proofRequired": false,
+      "objective": "당직실을 인수하고, 자신이 구 서고에서 빼내 숨겨둔 판 #0을 오늘 밤 이관 목록에 올릴지 결정한다. 인수 각서가 오늘 밤의 산출물을 한 줄로 못박는다 — 이 당직이 끝나면 남는 것은 청문에 낼 제출 문서 1건이며, 그 문서에 무엇을 근거로 적을지가 오늘 밤 내내의 결정이다.",
+      "clues": [
+        {
+          "id": "t0-b1-c1",
+          "sourceType": "log",
+          "originId": "handover-brief",
+          "copiedFrom": null,
+          "description": "인수 각서에 12년 전 대조의 밤 당직 주임이 \"한도연\"으로 기재돼 있다. 서린의 어머니이며 이 기재는 공식 문서다. 같은 각서가 이 당직의 산출물을 청문 제출 문서 1건으로 못박는다."
+        },
+        {
+          "id": "t0-b1-c2",
+          "sourceType": "ledger",
+          "originId": "transfer-list",
+          "copiedFrom": null,
+          "description": "이관 목록 인쇄본은 세 줄뿐이고, 서린의 사물 서랍에 있는 판 #0은 어느 줄에도 없다."
+        }
+      ],
+      "inference": "이 판은 남이 두고 간 것이 아니라 내가 구 서고에서 빼내 숨긴 것이다. 목록에 올리면 오늘 밤 그대로 이관되고, 올리지 않으면 폐국과 함께 기록에서 사라진다. 무결성을 말해 온 사람이 판 하나를 목록 밖에 두고 있다.",
+      "action": "서랍에서 판 #0을 꺼내 작업대 슬롯에 올리고, 이관 목록에 \"미분류 1점\"을 적거나 비워 둔다.",
+      "consequence": "판 #0이 상시 슬롯에 고정되고 봉인대에 \"미봉인 1점\" 표시등이 켜진다. 목록 항목은 적었든 비웠든 e0-b2까지 열린 채 남는다.",
+      "completion": "열람 술어 — 인수 각서 3항과 이관 목록 3줄을 모두 열람하고, 판 #0이 작업대 상시 슬롯에 적재되며, 이관 목록의 처리 여부(기입 또는 공란)가 한 번 기록된다. 이 비트에서 발행되는 확정(인용 고정) 명령은 없다.",
+      "hints": [
+        "오늘 밤 이 방에서 무엇을 넘기고 무엇을 남기는지부터 확인하라. 작업대와 서랍이 그 결정의 자리다.",
+        "인쇄된 세 줄과 이 방에 실제로 있는 매체의 수를 세어 비교하라.",
+        "서랍의 판을 작업대 슬롯에 올리고 목록에 적을지 비울지 정하라."
+      ],
+      "recovery": "목록 기입은 오늘 밤 내내 무제한으로 바꿀 수 있고 슬롯 적재는 되돌려도 판이 사라지지 않는다.",
+      "checkpoint": "cp-t0-b1",
+      "completionPredicate": {
+        "kind": "viewing",
+        "emitsCommitCommand": false,
+        "requires": [
+          {
+            "type": "recordLinesViewed",
+            "recordId": "rec-handover-brief",
+            "lineIds": [
+              "hb-l1",
+              "hb-l2",
+              "hb-l3"
+            ],
+            "_src": "「인수 각서 3항 … 열람」 · records §3.1 clause 3행"
+          },
+          {
+            "type": "recordRowsViewed",
+            "recordId": "rec-transfer-list",
+            "rowIds": [
+              "tl-r1",
+              "tl-r2",
+              "tl-r3"
+            ],
+            "_src": "「이관 목록 3줄 … 열람」 · records §4.1 no 1~3"
+          },
+          {
+            "type": "slotLoaded",
+            "slotId": "workbench-standing-slot",
+            "recordId": "plate-zero",
+            "_src": "「판 #0 이 작업대 상시 슬롯에 적재」 · worldview/glossary.md 「상시 슬롯」"
+          },
+          {
+            "type": "decisionRecorded",
+            "decisionId": "transfer-list-entry",
+            "rowId": "tl-r4",
+            "values": [
+              "written",
+              "blank"
+            ],
+            "atLeastOnce": true,
+            "reversible": true,
+            "_src": "「처리 여부(기입 또는 공란)가 한 번 기록」 · records §4.1 tl-r4 공란"
+          }
+        ],
+        "_srcCompletion": "열람 술어 — 인수 각서 3항과 이관 목록 3줄을 모두 열람하고, 판 #0이 작업대 상시 슬롯에 적재되며, 이관 목록의 처리 여부(기입 또는 공란)가 한 번 기록된다. 이 비트에서 발행되는 확정(인용 고정) 명령은 없다."
+      }
+    },
+    {
+      "id": "t0-b2",
+      "title": "회로 지도: 배선된 것만 남는다",
+      "kind": "puzzle",
+      "zoneId": "hub",
+      "minutes": 10,
+      "fastMinutes": 7,
+      "deliberateMinutes": 14,
+      "activityBudget": {
+        "exploration": 2,
+        "reasoning": 4,
+        "manipulation": 4,
+        "dialogue": 0,
+        "payoff": 0
+      },
+      "timeConfidence": "medium",
+      "authorEstimateBasis": "조작 단위가 투명지 정렬 1회 + 구획 접기 3회로 셀 수 있고 회로 지도 외 다른 도구를 쓰지 않아 10분으로 잡았다.",
+      "subtasks": [
+        "당직실 벽 회로 지도에 염선 분기 투명지를 겹쳐 수문·부두·당직실 세 점에 정렬한다",
+        "표준 염판의 압력 곡선이 평평한 세 구간을 지도 좌표로 옮긴다",
+        "센서가 닿지 않는 옥외 구획 세 곳을 손으로 접어 회색 처리한다",
+        "접은 구획마다 근거 매체를 하나씩 붙인다"
+      ],
+      "prerequisites": [
+        "t0-b1"
+      ],
+      "tools": [
+        "circuit"
+      ],
+      "toolTeaching": [
+        {
+          "tool": "circuit",
+          "mode": "guided"
+        }
+      ],
+      "proofRequired": false,
+      "objective": "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다. 안내 표시가 각 단계에 붙는다.",
+      "clues": [
+        {
+          "id": "t0-b2-c1",
+          "sourceType": "plate",
+          "originId": "plate-standard-hub",
+          "copiedFrom": null,
+          "description": "당직실 표준판의 압력 곡선이 세 구간에서 평평하게 끊긴다."
+        },
+        {
+          "id": "t0-b2-c2",
+          "sourceType": "log",
+          "originId": "watchlog-bureau",
+          "copiedFrom": null,
+          "description": "근무 규정 필사본: 회선이 깔린 3개소에 한해 통화의 개시 시각과 계통만 남긴다."
+        }
+      ],
+      "inference": "곡선이 끊긴 곳은 사건이 없던 시간이 아니라 염선이 지나지 않는 자리다. 기록의 침묵은 부재의 증거가 아니다.",
+      "action": "회로 지도 위에 염선 분기 투명지를 겹쳐 맞추고, 센서가 닿지 않는 옥외 구획 세 곳을 접어 회색 처리한다. 각 단계에 안내가 붙는 유일한 회로 지도 훈련이다.",
+      "consequence": "벽 지도에 \"기록 밖\" 음영 3구획이 생기고, 이후 모든 판독 화면 위에 같은 음영이 따라붙는다.",
+      "completion": "표시 술어 — 회로 지도에 음영 3구획이 모두 지정되고 각 구획에 근거 매체가 하나씩 붙는다. circuit은 판독 전용이므로 확정(인용 고정) 명령을 발행하지 않는다.",
+      "hints": [
+        "지금 정할 것은 오늘 밤 판독이 닿는 범위다. 당직실 벽의 회로 지도에서 시작하라.",
+        "규정이 말하는 회선 3개소와 압력 곡선이 살아 있는 구간이 같은지 겹쳐 보라.",
+        "투명지 분기선을 수문·부두·당직실 세 점에 맞춘 뒤 나머지 옥외 구획을 접어라."
+      ],
+      "recovery": "투명지 정렬과 접기는 무제한 되돌림이며 잘못 접은 구획은 비용 없이 펴진다.",
+      "checkpoint": "cp-t0-b2",
+      "completionPredicate": {
+        "kind": "marking",
+        "emitsCommitCommand": false,
+        "requires": [
+          {
+            "type": "uncoveredAreasMarked",
+            "zoneId": "hub",
+            "areaIds": [
+              "hub-uncovered-1",
+              "hub-uncovered-2",
+              "hub-uncovered-3"
+            ],
+            "count": 3,
+            "_src": "「회로 지도에 음영 3구획이 모두 지정」 · zones.uncoveredAreaIds"
+          },
+          {
+            "type": "eachAreaHasEvidence",
+            "mediumsPerArea": 1,
+            "_src": "「각 구획에 근거 매체가 하나씩 붙는다」"
+          }
+        ],
+        "_srcCompletion": "표시 술어 — 회로 지도에 음영 3구획이 모두 지정되고 각 구획에 근거 매체가 하나씩 붙는다. circuit은 판독 전용이므로 확정(인용 고정) 명령을 발행하지 않는다."
+      }
+    },
+    {
+      "id": "t0-b3",
+      "title": "첫 판독과 4시간의 공백",
+      "kind": "puzzle",
+      "zoneId": "hub",
+      "minutes": 10,
+      "fastMinutes": 7,
+      "deliberateMinutes": 14,
+      "activityBudget": {
+        "exploration": 1,
+        "reasoning": 4,
+        "manipulation": 4,
+        "dialogue": 0,
+        "payoff": 1
+      },
+      "timeConfidence": "medium",
+      "authorEstimateBasis": "판독기 적재 1회, 집게 표시 2회, 대장 대조 1회로 조작이 닫히고 새 개념은 자동 사본 하나뿐이라 10분으로 잡았다.",
+      "subtasks": [
+        "당직실 판독기에 12년 전 대조의 밤 표준 염판 원본을 건다",
+        "첫 판독으로 검증 사본이 자동 보존되는 것을 확인한다",
+        "기록국 조위대장을 나란히 걸어 수치가 어디까지 이어지는지 읽는다",
+        "각인 붕괴의 시작과 끝에 집게를 물려 결손 구간을 고정한다"
+      ],
+      "prerequisites": [
+        "t0-b2"
+      ],
+      "tools": [
+        "reader",
+        "circuit"
+      ],
+      "toolTeaching": [
+        {
+          "tool": "reader",
+          "mode": "guided"
+        }
+      ],
+      "proofRequired": true,
+      "objective": "대조의 밤 표준판을 처음 판독해 검증 사본을 남기고 결손 구간의 시작과 끝을 확정한다.",
+      "clues": [
+        {
+          "id": "t0-b3-c1",
+          "sourceType": "plate",
+          "originId": "plate-standard-hub",
+          "copiedFrom": null,
+          "description": "표준판의 각인이 H-1:00부터 무너지고 표면에 얇게 층진 부식 무늬가 남아 있다."
+        },
+        {
+          "id": "t0-b3-c2",
+          "sourceType": "ledger",
+          "originId": "tide-ledger-bureau",
+          "copiedFrom": null,
+          "description": "같은 밤 조위대장의 수치는 H+3:00까지 4분 간격으로 끊김 없이 이어진다."
+        }
+      ],
+      "inference": "계통 전체가 죽었다면 조위대장 수치도 함께 끊겨야 한다. 수치가 살아 있는데 각인만 무너졌다면 멈춘 것의 범위가 다르다.",
+      "action": "원본을 판독기에 걸어 첫 판독으로 검증 사본을 자동 보존한 뒤 붕괴 구간의 앞뒤 끝에 집게를 물린다. 자동 사본 규칙이 화면 안내와 함께 시연된다.",
+      "consequence": "사건판에 결손 구간 H-1:00~H+3:00(정확히 4시간)이 고정되고 원본은 잠금 보관으로 옮겨진다. 이후 판독은 전부 사본으로 진행된다.",
+      "completion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 보관함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다.",
+      "hints": [
+        "지금 정할 것은 결손 구간의 시작과 끝이다. 당직실 판독기 앞에서, 하나의 자료만으로 닫으려 하지 말라.",
+        "조위대장의 마지막 수치 시각과 각인이 무너진 시각을 같은 자에 놓고 읽어라.",
+        "판독기에 원본을 걸고 붕괴 시작점과 대장이 끊기는 지점 두 곳에 집게를 물려라."
+      ],
+      "recovery": "원본은 첫 판독에서 자동 복제되며 이후 어떤 조작으로도 재판독 횟수가 줄지 않는다.",
+      "checkpoint": "cp-t0-b3",
+      "completionPredicate": {
+        "kind": "citationPinned",
+        "emitsCommitCommand": true,
+        "commitCommandId": "CiteToBoard",
+        "checkpointBefore": true,
+        "requires": [
+          {
+            "type": "citationPinned",
+            "clueId": "t0-b3-c1",
+            "sourceType": "plate",
+            "originId": "plate-standard-hub",
+            "rootOriginId": "plate-standard-hub",
+            "recordId": "rec-plate-standard-hub",
+            "_src": "planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)"
+          },
+          {
+            "type": "citationPinned",
+            "clueId": "t0-b3-c2",
+            "sourceType": "ledger",
+            "originId": "tide-ledger-bureau",
+            "rootOriginId": "tide-ledger-bureau",
+            "recordId": "rec-tide-ledger-bureau",
+            "_src": "planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)"
+          },
+          {
+            "type": "independentPair",
+            "rule": "sourceType 상이 AND rootOriginId 상이",
+            "validatorCheck": "C-07",
+            "_src": "interaction-rules.md §3 · RFC-S5(예외 없음)"
+          },
+          {
+            "type": "autoCopyCreated",
+            "count": 1,
+            "recordId": "rec-plate-standard-hub",
+            "_src": "「첫 판독의 검증 사본 1점이 보관함에 생성」 · plate-readout.md P-R1"
+          },
+          {
+            "type": "gapEndpointsFixed",
+            "recordId": "rec-plate-standard-hub",
+            "startPhase": "H-1:00",
+            "endPhase": "H+3:00",
+            "_src": "t0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING"
+          }
+        ],
+        "_srcCompletion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 보관함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다."
+      }
+    }
+  ]
+}

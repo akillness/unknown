@@ -2,7 +2,7 @@
 
 > **Working title — unapproved.** 국문 가제와 영문 코드네임은 상표·동명 게임 확인 전이며 폴더명·번들명·상점명에 쓰지 않습니다. 저장소·Unity 프로젝트 코드네임은 `Unknown`입니다.
 >
-> 이 저장소는 Steam 프리미엄 Unity 신작의 **사전제작(preproduction)** 저장소입니다. 아래 이미지·GIF는 전부 **컨셉·프리비주얼라이제이션**이며 **실제 게임플레이 캡처가 아닙니다.** 플레이·성능·판매 실측은 아직 **n = 0** 입니다.
+> 이 저장소는 Steam 프리미엄 Unity 신작의 **사전제작(preproduction)** 저장소입니다. 컨셉·프리비주얼라이제이션 이미지와 개발 빌드의 게임 내 UI 캡처를 구분해 표기합니다. 사람 플레이·성능·판매 실측은 아직 **n = 0** 입니다.
 
 ![README hero — 은포항 야경 컨셉 (프리비즈, 게임플레이 아님)](docs/media/readme-hero.jpg)
 
@@ -11,6 +11,12 @@
 폐국을 3주 앞둔 조수기록국의 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.
 
 **장르** 작업대·공간 추리 어드벤처 (2.5D 고정 시점, 싱글플레이) · **엔진** Unity 6000.5.6f1 · **플랫폼 목표** PC (Steam) · **언어** 한국어 / 영어 · **전투·유료 재화·멀티플레이 없음**
+
+## 개발 빌드 게임플레이 UI
+
+![T0 개발 빌드의 판독기 화면 — 시간창을 조정하고 근거를 가설판에 인용하는 게임 내 UI 캡처](docs/media/t0-gameplay-capture-20260910.jpg)
+
+**작업대·공간 추리 어드벤처**입니다. 허브의 사물 서랍·판독기·회로 조작을 오가며 자료를 선택하고, 시간창을 단계별로 조정해 근거를 가설에 인용합니다. 위 이미지는 Unity `Unknown T0` 개발 빌드에서 캡처한 게임 내 UI이며, 완성판 게임플레이나 사람 플레이 검증을 뜻하지 않습니다.
 
 ## 세 기둥
 
@@ -49,6 +55,8 @@
 
 ## 사전제작 상태 (2026-09-10, R7 종료 당시)
 
+다음 표는 R7 당시 기록입니다. 이후 T0 M2 실행·빌드와 자동 테스트 결과는 아래 「T0 M2 구현과 검증」에 별도로 기록합니다.
+
 | 항목 | 상태 |
 |---|---|
 | 사전제작 사이클 | C1 시장·범위, C2 인과·세계관, C3 캠페인·시간, C4 상호작용·Unity, C5 상품·생산 — **각 회차 독립 QA 검토 + 수정 완료** (`_workspace/current/qa/c{1..5}-review.md`), C6 통합 초안(5렌즈 판정단), C7 Codex 핸드오프(반박 3렌즈) — `qa/c6-review.md` |
@@ -66,7 +74,7 @@
 
 ## 저장소 구조
 
-기획 상세 문서와 Unity 프로젝트는 현재 로컬 작업 트리에서 준비 중입니다. 아래의 기획·구현 경로와 실행 명령은 해당 로컬 작업 트리를 기준으로 합니다. GitHub에 공개된 README와 소개 미디어만 내려받아서는 게임을 실행할 수 없습니다.
+`unity/Unknown/`에는 실행에 필요한 씬·코드·입력·생성 테이블·T0 리소스와 패키지 설정을 포함합니다. Unity 6000.5.6f1에서 프로젝트를 직접 열거나 아래 `BuildMac` 명령으로 빌드할 수 있습니다. 개발용 `Prepare`는 포함된 테이블을 읽고 부모 작업 트리의 `campaign.json` SHA를 검증합니다. 저작 원본부터 테이블을 다시 생성하는 작업은 별도의 `emit-tables.mjs`와 해당 저작 입력 파일이 모두 필요합니다.
 
 ```
 CLAUDE.md                      저장소 운영 규칙 (13역할 + PM 하네스, 게이트 G1~G8, 사이클 계약)
@@ -79,39 +87,61 @@ docs/media/                    README 용 이미지·GIF (파생본) + provenanc
 scripts/                       gen-2d.sh (GTI) · gen-video-higgsfield.sh · make-previz-gif.sh · refresh-2d-provenance.py
 ```
 
-## Unity에서 열기
+## Unity에서 실행·빌드
 
-1. Unity Hub → Add project → `unity/Unknown` (에디터 6000.5.6f1).
-2. 구현은 `_workspace/current/handoff/README.md` 의 읽는 순서를 따릅니다: `codex-unity-brief.md`(T0 = 허브 + `circuit`/`reader` 25분, asmdef 7분할, Input System, URP, T0 확정 = 판독 인용 고정) → `systems/data/t0/*.json` 임포트 → 인수 테스트 T-01~T-27 → `verification-plan.md`. 브리프에 없는 결정은 `handoff/rfc-inbox/`에 RFC로 제출합니다.
-3. 생성 리소스는 `assets/generated/`에서 `unity/Unknown/Assets/`로 **감사(decision-log) 후에만** 승격합니다.
-
-## 구현 시작점과 검증
-
-**로컬 T0 M1 구현 경과 (2026-09-10):** 불변 시뮬레이션 상태, 명령 재생, 회로 표시·근거, 판독 사본·인용 구간 고정, 생성 데이터 영수증/해시 검증을 구현했습니다. 실제 Unity 6000.5.6f1의 자체 Editor 계약 검사 **21건이 통과**했고, `Tide.Sim`에서 `UnityEngine` 참조가 컴파일 단계에서 거부되는 것도 확인했습니다.
-
-전체 T0는 아직 실행 가능한 게임으로 완성되지 않았습니다. 실제 데이터의 출처 ID 누락(`C7-F50`, `RFC-CX-001`)으로 마지막 인용 확정이 차단되며, 필수 패키지 설치는 디스크 공간 부족으로 실패했습니다. 화면·입력·저장/복구·전체 도구 상태기계는 후속 구현 범위입니다. 위 21건은 NUnit/PlayMode 테스트나 플레이어 빌드 결과가 아닙니다. 상세 원본은 로컬 `_workspace/current/systems/tech-verification/t0-m1-native.md`와 `_workspace/current/qa/t0-m1-review.md`에 있습니다.
-
-현재 개발 범위는 **T0 수직 슬라이스**입니다. `hub` 한 구역에서 `t0-b1` 탐색 → `t0-b2` 배선 추적(`circuit`) → `t0-b3` 판독·인용 고정(`reader`)으로 이어집니다. **25분은 설계 목표**이며 실제 플레이 시간은 아직 측정하지 않았습니다. 본편 생산 착수 조건은 `_workspace/current/production/premium-preproduction-contract.md`의 `production gate`를 따릅니다.
-
-작업 전 `CLAUDE.md` → `.mex/ROUTER.md` → `_workspace/current/handoff/README.md` 순서로 규칙을 확인합니다. 런타임 수치는 정본 데이터에서 읽고, `Tide.Sim`은 Unity 엔진을 참조하지 않으며, 화면은 시뮬레이션 스냅샷만 읽습니다. 생성 에셋의 `runtimeEligible:false` 상태는 별도 감사 전까지 유지합니다.
-
-저장소 루트에서 설계와 T0 데이터를 검증합니다(Node.js와 Bash 필요).
+1. Unity Hub에서 `unity/Unknown/`을 추가하고 **Unity 6000.5.6f1**로 엽니다.
+2. `Assets/_Project/Scenes/boot.unity`를 열고 Play를 누릅니다. 포함된 씬과 데이터로 허브·회로·판독·설정·저장 흐름을 실행합니다.
+3. macOS 플레이어는 저장소 루트에서 다음 명령으로 빌드합니다.
 
 ```bash
-bash .claude/skills/game-ops-harness/scripts/session-start.sh "T0 implementation"
-node _workspace/current/planning/validate-campaign.mjs
-node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/systems/data/t0
-bash .claude/skills/game-ops-harness/scripts/freshness-check.sh --root "$PWD"
+UNITY_EDITOR="/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity"
+"$UNITY_EDITOR" -batchmode -nographics -quit \
+  -projectPath "$PWD/unity/Unknown" \
+  -executeMethod Tide.EditorTools.T0ProjectBuilder.BuildMac \
+  -logFile /tmp/unknown-t0-build.log
 ```
 
-이 명령은 설계·데이터·문서 검증입니다. Unity 컴파일, EditMode/PlayMode 테스트, 사람 플레이 검증은 별도로 수행하며 실행 명령과 원본 결과를 `_workspace/current/systems/tech-verification/`에 남깁니다. 아직 실행하지 않은 검증은 통과로 표시하지 않습니다.
+산출물은 `unity/Unknown/Builds/T0-mac/Unknown.app`입니다. `BuildMac`은 포함된 씬·테이블을 사용하므로 먼저 `Prepare`를 실행할 필요가 없습니다. 자동 테스트는 Unity Test Runner의 EditMode·PlayMode에서 실행할 수 있습니다.
+
+## T0 M2 구현과 검증
+
+**[OBSERVED · 2026-09-10]** T0의 허브, 회로 오버레이·근거, 판독 구간·인용, 키보드/게임패드 입력, 설정과 저장·복구를 연결했습니다. 저장 성공 영수증 이후 확정 결과를 반영하며, undo/redo와 읽기 전용 복구 흐름을 포함합니다.
+
+| 검증 | 결과 |
+|---|---|
+| Unity NUnit EditMode | **18/18 통과**, 실패·건너뜀 0 |
+| Unity NUnit PlayMode | **15/15 통과**, 실패·건너뜀 0 |
+| 최종 macOS 플레이어 빌드 | `BuildMacFramingFix` 성공 · `Builds/T0-mac-framing/Unknown.app` · 314,105,987 bytes |
+| 네이티브 macOS 스모크 | 최초 빌드: 포인터로 T0 완료·앱 종료/재실행 복구 확인. 수정 빌드: 150% 설정·복구 상태·서랍 가림·판독 그래프 스크롤 회귀 통과 |
+| 사람 플레이 시간·물리 게임패드·기준 기기 성능 | 별도 검증 대기 |
+
+M1의 내부 계약 검사 21개는 EditMode wrapper 1건에 포함되며 테스트 수에 중복 합산하지 않습니다. [자동 검증 명령·원본 결과](_workspace/current/systems/tech-verification/t0-m2-native.md)와 [네이티브 플레이어 스모크](_workspace/current/systems/tech-verification/t0-m2-player-smoke.md)를 구분합니다. 실제 포인터로 처음부터 T0 완료까지 진행하고 프로세스 종료·재실행을 확인한 뒤, 수정 빌드에서는 복구된 상태와 두 시각 결함을 집중 재검증했습니다. 이 결과는 수정 빌드 전체 재플레이나 물리 게임패드 검증을 뜻하지 않습니다.
+
+Blender r03 서랍은 실제 Unity 임포트·재질·배치 검토를 거쳐 **T0 씬 한정**으로 연결했습니다. Higgsfield 도장 소리는 생성 후보이며 청취 검수 전이라 런타임 재생을 비활성 상태로 유지합니다. MuAPI의 공식 인터페이스는 확인했으나 인증된 로컬 연결이 없어 이번 리소스 생성에는 사용하지 못했습니다.
+
+현재 구현은 T0 범위입니다. **25분은 설계 목표**이며 측정된 플레이 시간이 아닙니다. 전체 9장 캠페인, G4/G5/G6, 상품 출시 준비가 완료됐다는 뜻도 아닙니다.
+
+## 개발용 준비와 정본 재생성
+
+기획·구현 작업은 `CLAUDE.md` → `.mex/ROUTER.md` → `_workspace/current/handoff/README.md` 순서로 계약을 확인합니다. `Prepare`는 프로젝트에 포함된 테이블을 읽고 부모 작업 트리의 `_workspace/current/planning/campaign.json` SHA를 검증한 뒤 씬을 준비합니다. 저작 문서에서 테이블을 생성하는 명령이 아니며, 이 경로에는 부모 캠페인 파일이 필요합니다.
+
+```bash
+node _workspace/current/planning/validate-campaign.mjs
+node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/systems/data/t0
+"$UNITY_EDITOR" -batchmode -nographics -quit \
+  -projectPath "$PWD/unity/Unknown" \
+  -executeMethod Tide.EditorTools.T0ProjectBuilder.Prepare \
+  -logFile /tmp/unknown-t0-prepare.log
+```
+
+정본부터 테이블을 재생성하는 도구는 `_workspace/current/systems/pipeline/emit-tables.mjs`이며, 캠페인·출처·회로 등 필요한 저작 입력 파일을 모두 준비해야 합니다. 이 전체 재생성, `Prepare`, 포함된 프로젝트의 직접 실행·`BuildMac`은 서로 다른 경로입니다. 새 리소스의 런타임 승격에는 출처 기록과 해당 범위의 감사가 필요합니다.
 
 ## 리소스 출처와 라이선스
 
-신규 리소스 생성에는 **MuAPI와 Higgsfield**를 사용합니다(2026-09-10 사용자 지정). 아래 목록은 기존 산출물의 실제 생성 출처입니다. 새 결과도 제공자·모델·입력·해시를 기록하고 별도 감사 후에만 런타임으로 승격합니다.
+신규 리소스 생성에는 **MuAPI·Higgsfield·Blender**를 사용합니다(2026-09-10 사용자 지정). 아래 목록은 기존 산출물의 실제 생성 출처입니다. 새 결과도 제공자·모델·입력·해시를 기록하고 별도 감사 후에만 런타임으로 승격합니다.
 
 - 2D: `god-tibo-imagen`(GTI, Codex 백엔드, 모델 `gpt-6-astra`) — 프롬프트는 `_workspace/current/concept/prompts/`, 출처는 각 폴더의 `provenance.json`.
-- 3D: Blender 5.1.2 (MCP) 프리미티브 그레이박스 — 스크립트 `assets/generated/3d/scripts/`.
+- 3D: Blender 5.1.2 — 기존 MCP 그레이박스와 신규 CLI 서랍의 출처를 구분합니다. 스크립트 `assets/generated/3d/scripts/`.
 - 영상: Higgsfield `seedance_2_0_mini` — `assets/generated/video/provenance.json`.
 - 생성물의 상업 이용 가능 여부는 **각 백엔드 약관 확인 전까지 UNVERIFIED** 입니다. 모든 항목이 `runtimeEligible:false`로 시작합니다.
 - 실존 재난·피해자·타 작품 설정을 차용하지 않았습니다. 수문·염선 기술은 창작이며 현실 안전 매뉴얼이 아닙니다.
@@ -119,3 +149,11 @@ bash .claude/skills/game-ops-harness/scripts/freshness-check.sh --root "$PWD"
 ---
 
 *Generated content is pre-visualization, not gameplay. Playtest n = 0. See `CLAUDE.md` for the studio contract and `_workspace/current/production/premium-preproduction-contract.md` for what this repository does and does not promise.*
+
+### 이번 T0 리소스 제작
+
+![Blender로 제작한 T0 서랍 재질 검토 프리뷰](docs/media/t0-drawer-blender-r03.png)
+
+Blender CLI로 서랍을 제작하고 프리뷰·Unity 임포트 검토를 거쳐 색공간·부식·염분 표현과 씬 배치를 확인했습니다. r03은 메시 2개·삼각형 156개·1024px 텍스처 4개이며 T0 씬 한정으로 연결했습니다. 원본과 이전 버전을 보존하고, [원본 provenance의 승인 범위](assets/generated/3d/hub-view-drawer-r03/provenance.json)를 구분합니다. 위 이미지는 독립 에셋 렌더로 게임플레이 화면이 아닙니다.
+
+Higgsfield Seed Audio로 원본 도장 효과음도 생성했습니다. 24kHz 스테레오 WAV, 3.5초이며 클리핑은 없습니다. 청취 검수 대기 후보로 보존하며 런타임 재생은 비활성 상태입니다. MuAPI는 공식 인터페이스를 확인했으며 현재 인증 연결은 미완입니다.

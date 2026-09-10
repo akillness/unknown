@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42db6672887c54e86b044a07f697d79a, type: 3}
+  m_Name: reader
+  m_EditorClassIdentifier: Tide.Data::Tide.Data.ToolAsset
+  toolId: reader
+  generatedJson: "{\n  \"schemaVersion\": 1,\n  \"scope\": \"t0\",\n  \"generatedFrom\":
+    [\n    \"systems/data-schemas/tools.md\",\n    \"systems/system-specs/wiring-trace.md\",\n   
+    \"systems/system-specs/plate-readout.md\",\n    \"planning/campaign.json\"\n 
+    ],\n  \"knobs\": {\n    \"commitHoldSeconds\": {\n      \"value\": \"0.4\",\n     
+    \"owner\": \"balance\"\n    },\n    \"readBudget\": {\n      \"value\": \"3\",\n     
+    \"owner\": \"balance\"\n    },\n    \"residualLimitMinutes\": {\n      \"value\":
+    \"4\",\n      \"owner\": \"balance\"\n    },\n    \"corrosionLimit\": {\n     
+    \"value\": \"9\",\n      \"owner\": \"economy\"\n    },\n    \"routeCorrosionCost[*]\":
+    {\n      \"value\": \"lowland 7 \xB7 dock 8 \xB7 dock-express 12\",\n      \"owner\":
+    \"economy\"\n    },\n    \"systemLimits[*]\": {\n      \"value\": \"null\",\n     
+    \"owner\": \"economy\"\n    },\n    \"idleHintOfferSeconds\": {\n      \"value\":
+    \"180\",\n      \"owner\": \"balance\"\n    },\n    \"hintCost\": {\n      \"value\":
+    \"0\",\n      \"owner\": \"economy\"\n    }\n  },\n  \"invariantsChecked\": {\n   
+    \"T-I1\": \"toolId \uC911\uBCF5 0 \xB7 6\uC885 \uB4F1\uB85D(\uAD6C\uD604 2 +
+    \uC2A4\uD141 4)\",\n    \"T-I3\": \"PASS\",\n    \"T-I4\": \"PASS\",\n    \"T-I7\":
+    \"PASS\"\n  },\n  \"notMeasured\": [\n    \"\uB3C4\uAD6C \uC804\uD658 \uC2DC\uAC04
+    \xB7 \uD328\uB110 \uC5F4\uAE30 \uC9C0\uC5F0 \xB7 \uC870\uC791\uAC10 n=0 (tools.md
+    \xA76)\"\n  ],\n  \"rows\": [\n    {\n      \"toolId\": \"circuit\",\n      \"lawId\":
+    1,\n      \"displayNameKey\": \"tool.circuit.name\",\n      \"panelPrefab\":
+    \"ToolPanel_Circuit\",\n      \"hasCommit\": false,\n      \"requiresPreview\":
+    false,\n      \"commitHoldSeconds\": 0.4,\n      \"introBeatId\": \"t0-b2\",\n     
+    \"unguidedBeatId\": \"c6-b2\",\n      \"undoable\": true,\n      \"consumesBudget\":
+    \"none\",\n      \"sandboxDisplaysOnly\": false,\n      \"practiceLayer\": {\n       
+    \"mode\": \"always-free\",\n        \"note\": \"\uC5F0\uC2B5\uCE35\uACFC \uD655\uC815\uCE35\uC774
+    \uAC08\uB9AC\uC9C0 \uC54A\uB294\uB2E4 \u2014 \uD310\uB3C5 \uC804\uC6A9 \uB3C4\uAD6C\uC774\uBA70
+    \uD655\uC815 \uBA85\uB839\uC774 \uC5C6\uB2E4\",\n        \"_src\": \"system-specs/wiring-trace.md
+    \uD655\uC815 \uC870\uAC74 \uC5C6\uC74C \xB7 interaction-rules.md \xA72.1\"\n     
+    },\n      \"commitCondition\": null,\n      \"commands\": [\n        {\n         
+    \"commandId\": \"TraceSystem\",\n          \"kind\": \"inspect\",\n         
+    \"validationRules\": [],\n          \"reasonCodes\": [],\n          \"checkpointBefore\":
+    false,\n          \"telemetryKeys\": [],\n          \"_src\": \"handoff \xA7\u2464-3(A)
+    \uC785\uB825\u2192\uC758\uB3C4 \uD45C \xB7 system-specs/wiring-trace.md \xA71\"\n       
+    },\n        {\n          \"commandId\": \"BeginOverlay\",\n          \"kind\":
+    \"edit\",\n          \"validationRules\": [],\n          \"reasonCodes\": [],\n         
+    \"checkpointBefore\": false,\n          \"telemetryKeys\": [],\n          \"_src\":
+    \"system-specs/wiring-trace.md \xA72 \uC0C1\uD0DC\uAE30\uACC4 Tracing\u2192Overlaying\"\n       
+    },\n        {\n          \"commandId\": \"SetOverlayOffset\",\n          \"kind\":
+    \"edit\",\n          \"validationRules\": [],\n          \"reasonCodes\": [],\n         
+    \"checkpointBefore\": false,\n          \"telemetryKeys\": [],\n          \"_src\":
+    \"\uB3D9\uC0C1 \xB7 \uD0A4\uBCF4\uB4DC \uD30C\uC0DD D-3(\uACA9\uC790 1\uCE78)\"\n       
+    },\n        {\n          \"commandId\": \"AnchorOverlay\",\n          \"kind\":
+    \"edit\",\n          \"validationRules\": [\n            \"W-F2\"\n         
+    ],\n          \"reasonCodes\": [\n            \"ANCHOR_INCOMPLETE\"\n         
+    ],\n          \"checkpointBefore\": false,\n          \"telemetryKeys\": [],\n         
+    \"_src\": \"system-specs/wiring-trace.md \xA74 W-F2\"\n        },\n        {\n         
+    \"commandId\": \"ToggleUncovered\",\n          \"kind\": \"edit\",\n         
+    \"validationRules\": [],\n          \"reasonCodes\": [],\n          \"checkpointBefore\":
+    false,\n          \"telemetryKeys\": [],\n          \"_src\": \"interaction-rules.md
+    \xA71-3.2 \u300Ccircuit = \uAD6C\uD68D \uC811\uAE30 \uD1A0\uAE00\u300D \xB7 W-R5
+    \uBB34\uC81C\uD55C \uD1A0\uAE00\"\n        },\n        {\n          \"commandId\":
+    \"QueryEvidenceValidity\",\n          \"kind\": \"inspect\",\n          \"validationRules\":
+    [],\n          \"reasonCodes\": [\n            \"OUT_OF_COVERAGE\",\n           
+    \"ZONE_LOCKED\"\n          ],\n          \"checkpointBefore\": false,\n         
+    \"telemetryKeys\": [],\n          \"_src\": \"interaction-rules.md \xA71-3.2
+    \uC870\uD68C \uD45C \u2014 `Q` / \uD328\uB4DC `RS`\"\n        },\n        {\n         
+    \"commandId\": \"Cancel\",\n          \"kind\": \"edit\",\n          \"validationRules\":
+    [],\n          \"reasonCodes\": [],\n          \"checkpointBefore\": false,\n         
+    \"telemetryKeys\": [],\n          \"_src\": \"system-specs/wiring-trace.md \xA72
+    Overlaying\u2192Tracing (\uC0C1\uD0DC \uC190\uC2E4 0)\"\n        }\n      ],\n     
+    \"_src\": {\n        \"lawId\": \"systems/data-schemas/tools.md \xA71 \uB3C4\uAD6C
+    \uD45C\",\n        \"introBeatId\": \"\uB3D9\uC0C1 (\uB3C4\uC785 \uBE44\uD2B8)\",\n       
+    \"unguidedBeatId\": \"\uB3D9\uC0C1 (\uBBF8\uC548\uB0B4 \uC7AC\uBB38\uC81C \uBE44\uD2B8
+    \u2014 T0 \uBC94\uC704 \uBC16\uC758 \uBE44\uD2B8\uB97C \uAC00\uB9AC\uD0A8\uB2E4)\",\n       
+    \"commitHoldSeconds\": \"systems/data-schemas/tools.md \xA74 \uB178\uBE0C (\uAE30\uBCF8
+    0.4, \uC18C\uC720 balance) \u2014 hold opt-in \uC5D0\uC11C\uB9CC \uC4F0\uC778\uB2E4\",\n       
+    \"undoable\": \"systems/data-schemas/tools.md \xA72 \u300C\uD56D\uC0C1 true\u300D\"\n     
+    }\n    },\n    {\n      \"toolId\": \"reader\",\n      \"lawId\": 2,\n      \"displayNameKey\":
+    \"tool.reader.name\",\n      \"panelPrefab\": \"ToolPanel_Reader\",\n      \"hasCommit\":
+    true,\n      \"requiresPreview\": true,\n      \"commitHoldSeconds\": 0.4,\n     
+    \"introBeatId\": \"t0-b3\",\n      \"unguidedBeatId\": \"c1-b2\",\n      \"undoable\":
+    true,\n      \"consumesBudget\": \"readBudget\",\n      \"sandboxDisplaysOnly\":
+    true,\n      \"practiceLayer\": {\n        \"mode\": \"two-layer\",\n       
+    \"practice\": \"\uC0AC\uBCF8 \uC7AC\uC0DD(Read)\uC740 \uBE44\uC6A9 0 \xB7 \uD69F\uC218
+    \uC81C\uD55C 0 \u2014 \uC5F0\uC2B5\uCE35\",\n        \"commit\": \"\uC778\uC6A9
+    \uACE0\uC815(CiteToBoard)\uC774 T0 \uC758 \uC720\uC77C\uD55C \uD655\uC815 \uBA85\uB839\uC774\uB2E4\",\n       
+    \"_src\": \"RFC-C7-001 (1) \xB7 planning/gdd.md \xA74 reader \uD655\uC815 \uCE35
+    \xB7 interaction-rules.md \xA71-3.3\"\n      },\n      \"commitCondition\": {\n       
+    \"commandId\": \"CiteToBoard\",\n        \"rule\": \"\uC778\uC6A9\uC5D0 sourceType
+    \xB7 \uACC4\uD1B5 \xB7 \uAD00\uCE21\uC18C \uCD9C\uCC98\uAC00 \uBAA8\uB450 \uCC44\uC6CC\uC84C\uC744
+    \uB54C\uB9CC \uACE0\uC815\uB41C\uB2E4\",\n        \"goesThrough\": [\n         
+    \"\uD504\uB9AC\uBDF0\",\n          \"\uD655\uC815 \uC785\uB825(two-step \uAE30\uBCF8)\",\n         
+    \"\uC0AC\uC804 \uCCB4\uD06C\uD3EC\uC778\uD2B8\",\n          \"\uC800\uC7A5\",\n         
+    \"\uB418\uB3CC\uB9BC\"\n        ],\n        \"_src\": \"planning/gdd.md \xA74
+    \uD45C reader \uD655\uC815 \uCE35 \xB7 RFC-C7-001 (1) \xB7 interaction-rules.md
+    \xA70-4 \xB7 \xA75\"\n      },\n      \"commands\": [\n        {\n          \"commandId\":
+    \"LoadRecord\",\n          \"kind\": \"inspect\",\n          \"validationRules\":
+    [],\n          \"reasonCodes\": [],\n          \"checkpointBefore\": false,\n         
+    \"telemetryKeys\": [],\n          \"_src\": \"system-specs/plate-readout.md \xA72
+    Empty\u2192Loaded\"\n        },\n        {\n          \"commandId\": \"SetWindow\",\n         
+    \"kind\": \"edit\",\n          \"validationRules\": [],\n          \"reasonCodes\":
+    [],\n          \"checkpointBefore\": false,\n          \"telemetryKeys\": [],\n         
+    \"_src\": \"\uB3D9\uC0C1 Loaded\u2192Loaded (\uC7AC\uC0DD \uC544\uB2D8 \xB7 \uCE74\uC6B4\uD130
+    0)\"\n        },\n        {\n          \"commandId\": \"SetZoom\",\n         
+    \"kind\": \"edit\",\n          \"validationRules\": [],\n          \"reasonCodes\":
+    [],\n          \"checkpointBefore\": false,\n          \"telemetryKeys\": [],\n         
+    \"_src\": \"handoff \xA7\u2464-3(B) \uBC30\uC728 \uD589 \xB7 \uD0A4\uBCF4\uB4DC
+    \uD30C\uC0DD D-3(1\uCE78)\"\n        },\n        {\n          \"commandId\":
+    \"Read\",\n          \"kind\": \"preview\",\n          \"validationRules\": [],\n         
+    \"reasonCodes\": [],\n          \"checkpointBefore\": false,\n          \"telemetryKeys\":
+    [],\n          \"_src\": \"interaction-rules.md \xA71-3.3 \u2014 \uC0AC\uBCF8
+    \uC7AC\uC0DD. \uBD80\uC791\uC6A9 0 \xB7 Space/X \uBC30\uC815\"\n        },\n       
+    {\n          \"commandId\": \"ReadOriginal\",\n          \"kind\": \"commit\",\n         
+    \"validationRules\": [\n            \"P-R9\"\n          ],\n          \"reasonCodes\":
+    [\n            \"ORIGINAL_DEGRADED\"\n          ],\n          \"checkpointBefore\":
+    true,\n          \"telemetryKeys\": [],\n          \"_src\": \"interaction-rules.md
+    \xA71-3.3 \u2014 Space \uAC00 \uC544\uB2C8\uB77C \uD655\uC815 \uD750\uB984\uC744
+    \uAC70\uCE5C\uB2E4. readCounts +1(\uC0C1\uD55C readBudget)\"\n        },\n       
+    {\n          \"commandId\": \"CiteToBoard\",\n          \"kind\": \"commit\",\n         
+    \"validationRules\": [\n            \"P-F2\",\n            \"P-F4\"\n         
+    ],\n          \"reasonCodes\": [\n            \"MEDIA_DUPLICATE\",\n           
+    \"INDETERMINATE\"\n          ],\n          \"checkpointBefore\": true,\n         
+    \"telemetryKeys\": [],\n          \"_src\": \"RFC-C7-001 (1) \u2014 T0 \uC758
+    \uD655\uC815(\uC778\uC6A9 \uACE0\uC815). interaction-rules.md \xA71-3.2 \u300C\uD328\uB110
+    \uC548 Y = reader \uC778\uC6A9 \uACE0\uC815\u300D\"\n        }\n      ],\n     
+    \"_src\": {\n        \"lawId\": \"systems/data-schemas/tools.md \xA71 \uB3C4\uAD6C
+    \uD45C\",\n        \"introBeatId\": \"\uB3D9\uC0C1 (\uB3C4\uC785 \uBE44\uD2B8)\",\n       
+    \"unguidedBeatId\": \"\uB3D9\uC0C1 (\uBBF8\uC548\uB0B4 \uC7AC\uBB38\uC81C \uBE44\uD2B8
+    \u2014 T0 \uBC94\uC704 \uBC16\uC758 \uBE44\uD2B8\uB97C \uAC00\uB9AC\uD0A8\uB2E4)\",\n       
+    \"commitHoldSeconds\": \"systems/data-schemas/tools.md \xA74 \uB178\uBE0C (\uAE30\uBCF8
+    0.4, \uC18C\uC720 balance) \u2014 hold opt-in \uC5D0\uC11C\uB9CC \uC4F0\uC778\uB2E4\",\n       
+    \"undoable\": \"systems/data-schemas/tools.md \xA72 \u300C\uD56D\uC0C1 true\u300D\"\n     
+    }\n    }\n  ],\n  \"stubs\": [\n    {\n      \"toolId\": \"alignment\",\n     
+    \"lawId\": 3,\n      \"stub\": true,\n      \"validateReturns\": \"NOT_IMPLEMENTED_IN_T0\",\n     
+    \"commitReturns\": \"events[0]\",\n      \"_src\": \"handoff/codex-unity-brief.md
+    \xA7\u2464-4 \u2014 \uB098\uBA38\uC9C0 4\uB3C4\uAD6C\uB294 \uC778\uD130\uD398\uC774\uC2A4
+    \uC2A4\uD141\uB9CC\"\n    },\n    {\n      \"toolId\": \"routing\",\n      \"lawId\":
+    4,\n      \"stub\": true,\n      \"validateReturns\": \"NOT_IMPLEMENTED_IN_T0\",\n     
+    \"commitReturns\": \"events[0]\",\n      \"_src\": \"handoff/codex-unity-brief.md
+    \xA7\u2464-4 \u2014 \uB098\uBA38\uC9C0 4\uB3C4\uAD6C\uB294 \uC778\uD130\uD398\uC774\uC2A4
+    \uC2A4\uD141\uB9CC\"\n    },\n    {\n      \"toolId\": \"corrosion\",\n     
+    \"lawId\": 5,\n      \"stub\": true,\n      \"validateReturns\": \"NOT_IMPLEMENTED_IN_T0\",\n     
+    \"commitReturns\": \"events[0]\",\n      \"_src\": \"handoff/codex-unity-brief.md
+    \xA7\u2464-4 \u2014 \uB098\uBA38\uC9C0 4\uB3C4\uAD6C\uB294 \uC778\uD130\uD398\uC774\uC2A4
+    \uC2A4\uD141\uB9CC\"\n    },\n    {\n      \"toolId\": \"seal\",\n      \"lawId\":
+    6,\n      \"stub\": true,\n      \"validateReturns\": \"NOT_IMPLEMENTED_IN_T0\",\n     
+    \"commitReturns\": \"events[0]\",\n      \"_src\": \"handoff/codex-unity-brief.md
+    \xA7\u2464-4 \u2014 \uB098\uBA38\uC9C0 4\uB3C4\uAD6C\uB294 \uC778\uD130\uD398\uC774\uC2A4
+    \uC2A4\uD141\uB9CC\"\n    }\n  ],\n  \"circuitOverlay\": {\n    \"gridStep\":
+    1,\n    \"fineGridStep\": null,\n    \"initialOffset\": {\n      \"x\": 0,\n     
+    \"y\": 0\n    },\n    \"anchors\": [\n      {\n        \"anchorId\": \"anchor-hub\",\n       
+    \"displayNameKo\": \"\uB2F9\uC9C1\uC2E4\",\n        \"target\": {\n         
+    \"x\": 0,\n          \"y\": 0\n        },\n        \"overlay\": {\n         
+    \"x\": 1,\n          \"y\": -1\n        }\n      },\n      {\n        \"anchorId\":
+    \"anchor-gate\",\n        \"displayNameKo\": \"\uC81C3\uC218\uBB38\",\n       
+    \"target\": {\n          \"x\": 3,\n          \"y\": 0\n        },\n        \"overlay\":
+    {\n          \"x\": 4,\n          \"y\": -1\n        }\n      },\n      {\n       
+    \"anchorId\": \"anchor-dock\",\n        \"displayNameKo\": \"\uBD80\uB450\uC0AC\uBB34\uC18C\",\n       
+    \"target\": {\n          \"x\": 1,\n          \"y\": 2\n        },\n        \"overlay\":
+    {\n          \"x\": 2,\n          \"y\": 1\n        }\n      }\n    ]\n  }\n}\n"

@@ -1,0 +1,52 @@
+{
+  "assetId": "SM_Hub_Workbench_Drawer",
+  "revision": "r03",
+  "provider": "Blender CLI",
+  "version": "5.1.2",
+  "recipe": "/Users/jangyoung/orca/unknown/assets/generated/3d/scripts/build_hub_drawer_r03.py",
+  "recipe_sha256": "a660870c0d036d4dcd7e95e289abd3ffcb810987e2bedf01036598d1277b3a08",
+  "recipeSource": "_workspace/current/modeling/pipeline.md section 16.5",
+  "decision": "RFC-CX-003; director r03 texture/material correction instruction",
+  "concept_ref": [
+    "_workspace/current/concept/t0-source-drawer-review.md",
+    "_workspace/current/concept/style-guide.md"
+  ],
+  "author": "game-modeler recipe; director executes and audits",
+  "license": "Original procedural geometry and textures; no third-party source media",
+  "runtimeEligible": true,
+  "promoted_by": "game-production-director; RFC-CX-003 r03 T0 runtime scene approval",
+  "classification": "Generated material-correction candidate; visual/import audit pending",
+  "canonical_export": "SM_Hub_Workbench_Drawer.glb",
+  "derived_import_candidate": "SM_Hub_Workbench_Drawer.fbx",
+  "hashes": {
+    "SM_Hub_Workbench_Drawer.blend": "2137b05d010582210a122205c4c7dfdc2c4c9ad765df40b46ead83af0ee9a95a",
+    "SM_Hub_Workbench_Drawer.fbx": "0ef9ad5c7bcf89b1d72d36857a3512cca581d2037d25cb635158f3c9668a873b",
+    "SM_Hub_Workbench_Drawer.glb": "b2d30b2f0f5bc1446a0dd25b6113978fee6f79c40f6505339acdb22ebe9eabf4",
+    "measurements.json": "5ea51bbbdde9a819f37b6eda212d966e7fa7fb43adb6b2637e820f42782890c2",
+    "preview.png": "3ad6437aab240fdb3d28d4c06bacfef42b44bf291f7a3235e3df81c8b1f81b90",
+    "textures/SM_Hub_Workbench_Drawer_Casing_BaseColor.png": "b6d255a5357ff9c18b3897058d3cf9e65a358c1389ead59cd3ede1bf1013fd2d",
+    "textures/SM_Hub_Workbench_Drawer_Casing_Roughness.png": "5102f80afeb1d2dab8788093dfd3c43c7c15afd641925a7f01a96c7921693bd6",
+    "textures/SM_Hub_Workbench_Drawer_Tray_BaseColor.png": "7d4f2648b9bf55438e0fa627b2c6d25a5b4e0a91bfe7563def7b685cb65d4f92",
+    "textures/SM_Hub_Workbench_Drawer_Tray_Roughness.png": "4cd035041733cc1e8fe466b50a6683a631d666753614aa092f841cd2ac705e56"
+  },
+  "conceptReview": {
+    "status": "T0 visual candidate ACK",
+    "report": "_workspace/current/concept/t0-source-drawer-review.md",
+    "scope": "prior four static visual corrections only; full frame-budget/runtime claims not made"
+  },
+  "runtimeApproval": {
+    "scope": "T0 scene only",
+    "directorDecision": "RFC-CX-003 r03 T0 runtime scene approval",
+    "audit": "unity/Unknown/Builds/t0-diagnostics/import-material-fit-audit.json",
+    "observedBackend": "Metal",
+    "observedColorSpace": "Gamma",
+    "adapterYawDegrees": 180,
+    "drawerPosition": [
+      0,
+      0.32,
+      1.1
+    ],
+    "fit": "reviewed workbench AABB front adaptation",
+    "limitations": "Standalone player appearance pending; no production frame-budget or G4/G5 claim"
+  }
+}

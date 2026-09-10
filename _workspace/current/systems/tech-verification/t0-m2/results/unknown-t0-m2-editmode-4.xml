@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="18" result="Failed(Child)" total="18" passed="8" failed="10" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:57Z" duration="1.9390373">
+  <test-suite type="TestSuite" id="1000" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="19" result="Failed" site="Child" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:57Z" duration="1.939037" total="18" passed="8" failed="10" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1022" name="Tide.Tests.Sim.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Sim.dll" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:57Z" duration="1.932973" total="18" passed="8" failed="10" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="56544" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1023" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:57Z" duration="1.932619" total="18" passed="8" failed="10" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1024" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:57Z" duration="1.932425" total="18" passed="8" failed="10" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="T0ContractTests" fullname="Tide.Tests.T0ContractTests" classname="Tide.Tests.T0ContractTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:56Z" duration="1.272773" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1002" name="GeneratedT0ContractChecksPass" fullname="Tide.Tests.T0ContractTests.GeneratedT0ContractChecksPass" methodname="GeneratedT0ContractChecksPass" classname="Tide.Tests.T0ContractTests" runstate="Runnable" seed="1261846522" result="Failed" start-time="2026-09-10 08:19:55Z" end-time="2026-09-10 08:19:56Z" duration="1.264256" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Synthetic_provenance_citation_captures_window_at_commit
+  Expected: null
+  But was:  "System.NullReferenceException: Object reference not set to an instance of an object
+  at Tide.Sim.T0Simulation.Commit (Tide.Sim.PuzzleState state, Tide.Sim.PuzzleCommand command) [0x00072] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Sim/T0Simulation.cs:89 
+  at Tide.Sim.T0Simulation.Replay (System.Collections.Generic.IEnumerable`1[T] commands, System.Boolean sandbox) [0x0001a] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Sim/T0Simulation.cs:161 
+  at Tide.EditorTools.T0Verification+<>c__DisplayClass4_0.<RunAll>b__16 () [0x00085] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Editor/T0Verification.cs:173 
+  at Tide.EditorTools.T0Verification+<>c__DisplayClass4_0.<RunAll>b__0 (System.String name, System.Action run) [0x0000f] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Editor/T0Verification.cs:35 "
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ContractTests.GeneratedT0ContractChecksPass () [0x00016] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0ContractTests.cs:12
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="T0M2Tests" fullname="Tide.Tests.T0M2Tests" classname="Tide.Tests.T0M2Tests" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:57Z" duration="0.658630" total="17" passed="8" failed="9" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1018" name="AfterRenameRetryIsIdempotent" fullname="Tide.Tests.T0M2Tests.AfterRenameRetryIsIdempotent" methodname="AfterRenameRetryIsIdempotent" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1649245948" result="Failed" label="Error" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.158303" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  Expected: False
+  But was:  True
+)
+  ----> NUnit.Framework.AssertionException :   Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.AfterRenameRetryIsIdempotent () [0x00001] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:35 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.IsFalse (System.Boolean condition) [0x00007] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0M2Tests.<AfterRenameRetryIsIdempotent>b__21_0 () [0x000eb] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:35 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1009" name="ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" fullname="Tide.Tests.T0M2Tests.ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" methodname="ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="437604753" result="Failed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.029261" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: null
+  But was:  <string.Empty>
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0M2Tests.ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned () [0x00021] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:28
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1019" name="CancellationBeforeRenameDoesNotPublish" fullname="Tide.Tests.T0M2Tests.CancellationBeforeRenameDoesNotPublish" methodname="CancellationBeforeRenameDoesNotPublish" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1134078627" result="Failed" label="Error" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.033298" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  Expected: <System.OperationCanceledException>
+  But was:  <System.Threading.Tasks.TaskCanceledException: A task was canceled.
+  at NUnit.Framework.Internal.ExceptionHelper.Rethrow (System.Exception exception) [0x0000d] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Internal.AsyncInvocationRegion+AsyncTaskInvocationRegion.WaitForPendingOperationsToComplete (System.Object invocationResult) [0x00038] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.AsyncTestDelegate code, System.String message, System.Object[] args) [0x00013] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+)
+  ----> NUnit.Framework.AssertionException :   Expected: <System.OperationCanceledException>
+  But was:  <System.Threading.Tasks.TaskCanceledException: A task was canceled.
+  at NUnit.Framework.Internal.ExceptionHelper.Rethrow (System.Exception exception) [0x0000d] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Internal.AsyncInvocationRegion+AsyncTaskInvocationRegion.WaitForPendingOperationsToComplete (System.Object invocationResult) [0x00038] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.AsyncTestDelegate code, System.String message, System.Object[] args) [0x00013] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+]]></message>
+                <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.CancellationBeforeRenameDoesNotPublish () [0x00001] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:36 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.AsyncTestDelegate code, System.String message, System.Object[] args) [0x00033] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync (System.Type expectedExceptionType, NUnit.Framework.AsyncTestDelegate code, System.String message, System.Object[] args) [0x00007] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync[TActual] (NUnit.Framework.AsyncTestDelegate code, System.String message, System.Object[] args) [0x00001] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.ThrowsAsync[TActual] (NUnit.Framework.AsyncTestDelegate code) [0x00001] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0M2Tests.<CancellationBeforeRenameDoesNotPublish>b__22_0 () [0x00071] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:36 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1013" name="CanonicalSaveRootAndChecksumAreOrderIndependent" fullname="Tide.Tests.T0M2Tests.CanonicalSaveRootAndChecksumAreOrderIndependent" methodname="CanonicalSaveRootAndChecksumAreOrderIndependent" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="449250829" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.017592" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="CircuitCancelCloseAndReopenPreserveUnrelatedState" fullname="Tide.Tests.T0M2Tests.CircuitCancelCloseAndReopenPreserveUnrelatedState" methodname="CircuitCancelCloseAndReopenPreserveUnrelatedState" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="430827549" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.006107" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="CircuitFsmRejectsBypassAndBadOffsets" fullname="Tide.Tests.T0M2Tests.CircuitFsmRejectsBypassAndBadOffsets" methodname="CircuitFsmRejectsBypassAndBadOffsets" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1133013769" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.005945" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" fullname="Tide.Tests.T0M2Tests.FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" methodname="FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="379102763" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.022139" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1017" name="InterruptedWritePreservesPreviousSave" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.099184" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1014" name="InterruptedWritePreservesPreviousSave(BeforeWrite)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(BeforeWrite)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="493639582" result="Failed" label="Error" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.024481" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.AggregateException : One or more errors occurred. (Object reference not set to an instance of an object)
+  ----> System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave (Tide.Save.SaveStage stage) [0x00015] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--NullReferenceException
+  at Tide.Tests.T0M2Tests+<>c__DisplayClass20_0.<InterruptedWritePreservesPreviousSave>b__0 () [0x00154] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 ]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1015" name="InterruptedWritePreservesPreviousSave(DuringWrite)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(DuringWrite)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="264863480" result="Failed" label="Error" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.030383" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.AggregateException : One or more errors occurred. (Object reference not set to an instance of an object)
+  ----> System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave (Tide.Save.SaveStage stage) [0x00015] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--NullReferenceException
+  at Tide.Tests.T0M2Tests+<>c__DisplayClass20_0.<InterruptedWritePreservesPreviousSave>b__0 () [0x00154] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 ]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1016" name="InterruptedWritePreservesPreviousSave(BeforeRename)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(BeforeRename)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="812733140" result="Failed" label="Error" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.042887" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.AggregateException : One or more errors occurred. (Object reference not set to an instance of an object)
+  ----> System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave (Tide.Save.SaveStage stage) [0x00015] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--NullReferenceException
+  at Tide.Tests.T0M2Tests+<>c__DisplayClass20_0.<InterruptedWritePreservesPreviousSave>b__0 () [0x00154] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:34 ]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+            <test-case id="1010" name="JournalUndoRedoBranchesAndAutoCopiesAreImmutable" fullname="Tide.Tests.T0M2Tests.JournalUndoRedoBranchesAndAutoCopiesAreImmutable" methodname="JournalUndoRedoBranchesAndAutoCopiesAreImmutable" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1598893124" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.040115" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="RedoFollowsSelectedBranchAcrossSharedAncestors" fullname="Tide.Tests.T0M2Tests.RedoFollowsSelectedBranchAcrossSharedAncestors" methodname="RedoFollowsSelectedBranchAcrossSharedAncestors" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="846144679" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.006300" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" fullname="Tide.Tests.T0M2Tests.Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" methodname="Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1621365342" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:56Z" duration="0.048709" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="SnapshotAndPayloadCorruptionReject" fullname="Tide.Tests.T0M2Tests.SnapshotAndPayloadCorruptionReject" methodname="SnapshotAndPayloadCorruptionReject" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1648859014" result="Passed" start-time="2026-09-10 08:19:56Z" end-time="2026-09-10 08:19:57Z" duration="0.110029" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" fullname="Tide.Tests.T0M2Tests.TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" methodname="TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1495761296" result="Failed" label="Error" start-time="2026-09-10 08:19:57Z" end-time="2026-09-10 08:19:57Z" duration="0.033101" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  String lengths are both 8. Strings differ at index 0.
+  Expected: "save.bak"
+  But was:  "recovery"
+  -----------^
+)
+  ----> NUnit.Framework.AssertionException :   String lengths are both 8. Strings differ at index 0.
+  Expected: "save.bak"
+  But was:  "recovery"
+  -----------^
+]]></message>
+                <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.TruncationRecoversBackupThenCheckpointWithoutDeletingBytes () [0x00001] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:37 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object actual) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0M2Tests.<TruncationRecoversBackupThenCheckpointWithoutDeletingBytes>b__23_0 () [0x0018a] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:37 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1005" name="UnknownVersionsRefuseEvenWithValidBackup" fullname="Tide.Tests.T0M2Tests.UnknownVersionsRefuseEvenWithValidBackup" methodname="UnknownVersionsRefuseEvenWithValidBackup" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1914498271" result="Failed" label="Error" start-time="2026-09-10 08:19:57Z" end-time="2026-09-10 08:19:57Z" duration="0.024988" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  String lengths are both 20. Strings differ at index 5.
+  Expected: "SAVE_VERSION_REFUSED"
+  But was:  "SAVE_CHECKSUM_FAILED"
+  ----------------^
+)
+  ----> NUnit.Framework.AssertionException :   String lengths are both 20. Strings differ at index 5.
+  Expected: "SAVE_VERSION_REFUSED"
+  But was:  "SAVE_CHECKSUM_FAILED"
+  ----------------^
+]]></message>
+                <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.UnknownVersionsRefuseEvenWithValidBackup () [0x00001] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:24 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object actual) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0M2Tests.<UnknownVersionsRefuseEvenWithValidBackup>b__11_0 () [0x0020b] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:24 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1021" name="VersionZeroMigratesWithBackupAndVersionTwoIsRefused" fullname="Tide.Tests.T0M2Tests.VersionZeroMigratesWithBackupAndVersionTwoIsRefused" methodname="VersionZeroMigratesWithBackupAndVersionTwoIsRefused" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1987022056" result="Failed" label="Error" start-time="2026-09-10 08:19:57Z" end-time="2026-09-10 08:19:57Z" duration="0.015472" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  Expected: True
+  But was:  False
+)
+  ----> NUnit.Framework.AssertionException :   Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at System.Threading.Tasks.Task.Wait (System.TimeSpan timeout) [0x00022] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+  at Tide.Tests.T0M2Tests.RunAsync (System.Func`1[TResult] body) [0x00008] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:16 
+  at Tide.Tests.T0M2Tests.VersionZeroMigratesWithBackupAndVersionTwoIsRefused () [0x00001] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:38 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <299d5c9ae27b4d27af003e5f456f4b13>:0 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.IsTrue (System.Boolean condition) [0x00007] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0M2Tests.<VersionZeroMigratesWithBackupAndVersionTwoIsRefused>b__24_0 () [0x00100] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/EditMode/T0M2Tests.cs:38 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -14,7 +14,7 @@ edges:
     condition: when setting up the dev environment or running the project for the first time
   - target: patterns/INDEX.md
     condition: when starting a task — check the pattern index for a matching pattern file
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 ---
 
 # Session Bootstrap
@@ -24,20 +24,25 @@ If you haven't already read `AGENTS.md`, read it now — it contains the project
 Then read this file fully before doing anything else in this session.
 
 ## Current Project State
-**Working:**
-- Harness scaffold: 14 agent definitions (the `.claude/agents/` directory (game-*.md)), skill `game-ops-harness` with references + scripts, root `CLAUDE.md` rule file
-- Workspace: `_workspace/current/` 13 lanes seeded (task-manifest, decision-log, changelog, brief, gate-measurements, glossary); `_workspace/archive/` empty
-- Memory stack: `.mex/` scaffold, `graphify-out/` code graph, `.zvec-grep/` index (91 files), vault `/Users/jangyoung/vaults/llm-wiki/wiki/projects/unknown/`
 
-**Not yet built:**
-- The game itself: no engine chosen, no source code, no data tables — first cycle must intake this
-- Populated lane artifacts (GDD, worldview bible, balance sheet, …) — all are `status: draft` stubs or absent
-- Telemetry contract, sim harness, capture tooling for G4/G6 measurements
+**Resource provider override (2026-09-10):** New resources use MuAPI and Higgsfield (user instruction; `CLAUDE.md` §10.2 / RFC-CX-002). Higgsfield CLI account access is verified. MuAPI's official interfaces are verified, but a local integration with a securely configured key is still needed. Historical GTI recipes/provenance remain accurate for existing assets.
+**Working:**
+- Harness scaffold: 14 agent definitions (`.claude/agents/game-*.md`), skill `game-ops-harness` with references + scripts, root `CLAUDE.md` rule file (§10.1 re-derived 2026-09-10)
+- Preproduction documents C1–C5 in `_workspace/current/` (canon: worldview/*, planning/campaign.json + validate-campaign.mjs, systems/{architecture-contract,system-specs,data-schemas}, balance, economy, product, presentation deck); C1–C2 and the session-P C3 versions archived under `_workspace/archive/20260909-preproduction-c{1,2,3,4,5-prep}/`
+- Unity 6000.5.6f1 project at `unity/Unknown/` has the T0 M2 hub/circuit/reader runtime, input/UI, atomic save/recovery and undo/redo. Start with `_workspace/current/production/codex-t0-m2-status.md` and `_workspace/current/systems/tech-verification/t0-m2-native.md`; final test/build/player receipts are separate evidence. Historical M1's 21 internal checks are contained in one EditMode testcase and must not be added to the NUnit count.
+- Asset pipeline: `scripts/gen-2d.sh` (GTI), `scripts/gen-video-higgsfield.sh`, `scripts/make-previz-gif.sh`, `scripts/refresh-2d-provenance.py`; outputs under `assets/generated/{2d,3d,video,previz}/` with provenance.json; README media in `docs/media/`
+- Memory stack: `.mex/` scaffold, `graphify-out/` code graph, `.zvec-grep/` index, vault `~/vaults/llm-wiki/wiki/projects/unknown/`
+
+**Not yet verified / pending:**
+- Full-campaign production, representative human playtests and baseline-hardware performance remain gated. The 25-minute T0 length is still a design target; native test and director smoke receipts do not promote G4/G5/G6.
+- Required package resolution is blocked by disk ENOSPC; native Editor contract checks are not NUnit/EditMode or PlayMode test-runner receipts. Actual source data still lacks citation provenance, so t0-b3 remains incomplete. Gates G2/G4/G5/G6/G7 stay NOT-MEASURED; playtests n=0.
+- Production telemetry and unattended capture automation remain outside the verified T0 slice. See `events/t0-m2-workflow.md` for current freshness/memory-sync outcomes and publication boundaries.
 
 **Known issues:**
-- `LLM_WIKI_VAULT` env in this shell points at another project (`unknown-castle`); the harness reads `GAME_OPS_VAULT` (default `/Users/jangyoung/vaults/llm-wiki`) instead
-- `mex graph` has no supported source yet; scope results will be empty until code lands
-
+- `mex` on PATH is TeX Live; only an identity-probed `mex-agent` may run (`scripts/mex-agent-bin.sh`); otherwise memory_sync receipts are `skipped`
+- `LLM_WIKI_VAULT` env points at another project; the harness reads `GAME_OPS_VAULT`
+- GTI backend accepts only `--model gpt-6-astra` for this Codex login and ignores `--size` on landscape/square requests (actual dims recorded in provenance)
+- Two sessions wrote the workspace concurrently on 2026-09-09; merged via RFC-P3-008..015 (see `_workspace/current/conflicts.md`)
 ## Routing Table
 
 Load the relevant file based on the current task. Always load `context/architecture.md` first if not already in context this session.
