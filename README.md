@@ -47,7 +47,7 @@
 
 세계관 바이블·연표·용어집: [`_workspace/current/worldview/`](_workspace/current/worldview/) · 캠페인 33비트(정본 JSON): `_workspace/current/planning/campaign.json`
 
-## 현재 상태 (2026-09-10, R7 종료)
+## 사전제작 상태 (2026-09-10, R7 종료 당시)
 
 | 항목 | 상태 |
 |---|---|
@@ -86,6 +86,10 @@ scripts/                       gen-2d.sh (GTI) · gen-video-higgsfield.sh · mak
 3. 생성 리소스는 `assets/generated/`에서 `unity/Unknown/Assets/`로 **감사(decision-log) 후에만** 승격합니다.
 
 ## 구현 시작점과 검증
+
+**로컬 T0 M1 구현 경과 (2026-09-10):** 불변 시뮬레이션 상태, 명령 재생, 회로 표시·근거, 판독 사본·인용 구간 고정, 생성 데이터 영수증/해시 검증을 구현했습니다. 실제 Unity 6000.5.6f1의 자체 Editor 계약 검사 **21건이 통과**했고, `Tide.Sim`에서 `UnityEngine` 참조가 컴파일 단계에서 거부되는 것도 확인했습니다.
+
+전체 T0는 아직 실행 가능한 게임으로 완성되지 않았습니다. 실제 데이터의 출처 ID 누락(`C7-F50`, `RFC-CX-001`)으로 마지막 인용 확정이 차단되며, 필수 패키지 설치는 디스크 공간 부족으로 실패했습니다. 화면·입력·저장/복구·전체 도구 상태기계는 후속 구현 범위입니다. 위 21건은 NUnit/PlayMode 테스트나 플레이어 빌드 결과가 아닙니다. 상세 원본은 로컬 `_workspace/current/systems/tech-verification/t0-m1-native.md`와 `_workspace/current/qa/t0-m1-review.md`에 있습니다.
 
 현재 개발 범위는 **T0 수직 슬라이스**입니다. `hub` 한 구역에서 `t0-b1` 탐색 → `t0-b2` 배선 추적(`circuit`) → `t0-b3` 판독·인용 고정(`reader`)으로 이어집니다. **25분은 설계 목표**이며 실제 플레이 시간은 아직 측정하지 않았습니다. 본편 생산 착수 조건은 `_workspace/current/production/premium-preproduction-contract.md`의 `production gate`를 따릅니다.
 
