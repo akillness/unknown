@@ -82,6 +82,25 @@ namespace Tide.Tests
             StringAssert.DoesNotContain("판독 분기만 남",text,"Default guidance must not prescribe the correct branch action");
             Assert.IsFalse(game.Interface.Focus("c1-confirm"),"Missing observations must still block confirmation");
         }
+        [UnityTest] public IEnumerator ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction()
+        {
+            Click("continue-c1");
+            foreach(var id in game.Definition.Patrol.Observations){Click("c1-open-"+id);Click("c1-observe-"+id);Click("c1-close-observation");}
+            yield return Wait(game.FlushSaves());
+            Assert.IsTrue(game.Definition.Patrol.Observations.All(id=>game.Journal.State.Has("c1:observed:"+id)));
+            Assert.IsTrue(C1PatrolDefinition.Enabled(game.Journal.State,"lighting")&&C1PatrolDefinition.Enabled(game.Journal.State,"reader"));
+            string Screen()=>string.Join("\n",host.GetComponentsInChildren<UnityEngine.UI.Text>().Select(t=>t.text));
+            var text=Screen();
+            StringAssert.DoesNotContain("조명 분기를 접",text,"Observed invalid routing must explain the contradiction without prescribing the action");
+            StringAssert.DoesNotContain("판독 분기만 남",text,"Observed invalid routing must explain the contradiction without prescribing the action");
+            StringAssert.Contains("같은 배전",text,"Observed invalid routing must name the shared-supply contradiction");
+            StringAssert.Contains("확정할 수 없다",text,"Observed invalid routing must explain why confirmation is blocked");
+            Assert.IsFalse(game.Interface.Focus("c1-confirm"),"Invalid routing stays blocked");
+            var head=game.Journal.HeadSeq;
+            Click("hints");Click("hint-next");Click("hint-next");Click("hint-next");Click("hint-reveal");
+            StringAssert.Contains("조명 분기를 접",Screen(),"Only the existing spoiler-gated hint layer may give the direct corrective action");
+            Assert.AreEqual(head,game.Journal.HeadSeq,"Hint browsing must not append commands");
+        }
         [UnityTest] public IEnumerator KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice()
         {
             Ready();yield return Wait(game.FlushSaves());Assert.IsTrue(game.Interface.Focus("c1-confirm"));

@@ -1,0 +1,100 @@
+{
+  "asset_id": "c1-patrol-panel",
+  "canonical_name": "\uc218\ubb38 \uacc4\ud1b5\ud310",
+  "revision": "r02",
+  "source_revision": "r01",
+  "runtimeEligible": false,
+  "status": "blender-measured-candidate",
+  "detail_graph": "_workspace/current/modeling/graphs/c1-patrol-panel-r02-detail-contract.dot",
+  "triangle_budget_target": 5000,
+  "triangles": 3664,
+  "mesh_count": 6,
+  "objects": [
+    {
+      "name": "SM_C1_Gate_System_Panel_Casting",
+      "vertices": 240,
+      "triangles": 440,
+      "uv_layers": 1
+    },
+    {
+      "name": "SM_C1_Gate_System_Panel_Recess",
+      "vertices": 176,
+      "triangles": 316,
+      "uv_layers": 1
+    },
+    {
+      "name": "SM_C1_Gate_System_Panel_Patina",
+      "vertices": 928,
+      "triangles": 1596,
+      "uv_layers": 1
+    },
+    {
+      "name": "SM_C1_Gate_System_Panel_Blank_Paper",
+      "vertices": 80,
+      "triangles": 144,
+      "uv_layers": 1
+    },
+    {
+      "name": "SM_C1_Gate_System_Panel_Salt_Porcelain",
+      "vertices": 584,
+      "triangles": 1076,
+      "uv_layers": 1
+    },
+    {
+      "name": "SM_C1_Gate_System_Panel_Lamp_Lens",
+      "vertices": 48,
+      "triangles": 92,
+      "uv_layers": 1
+    }
+  ],
+  "bounds_m": {
+    "min": [
+      -0.550000011920929,
+      -0.2540000081062317,
+      -2.9802322387695312e-08
+    ],
+    "max": [
+      0.550000011920929,
+      0.15699999034404755,
+      0.9199999570846558
+    ],
+    "size": [
+      1.100000023841858,
+      0.41099999845027924,
+      0.9199999868869781
+    ]
+  },
+  "texture_files": [
+    {
+      "path": "textures/MAT_C1_Panel_Casting_BaseColor.png",
+      "bytes": 527866,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "sRGB"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Casting_Roughness.png",
+      "bytes": 283215,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "linear"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Patina_BaseColor.png",
+      "bytes": 521106,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "sRGB"
+    },
+    {
+      "path": "textures/MAT_C1_Panel_Patina_Roughness.png",
+      "bytes": 283215,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "linear"
+    }
+  ],
+  "topology_scope": "Measured triangle/vertex/UV delivery metadata only; no claim about all self-intersections, normals, or production performance.",
+  "visual_scope": "Same preview camera/light composition as r01; preview is not Unity gameplay or a runtime approval.",
+  "created_utc": "2026-09-11T03:30:17.749797+00:00"
+}

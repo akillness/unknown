@@ -1,0 +1,45 @@
+digraph C1PatrolPanelR02 {
+  graph [rankdir=LR, bgcolor="#F4F4F2", pad="0.22", nodesep="0.35", ranksep="0.55", fontname="Arial"];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=11, color="#4A4A4A", fillcolor="#FFFFFF", fontcolor="#202020", margin="0.12,0.08"];
+  edge [color="#555555", penwidth=1.2, arrowsize=0.7, fontname="Arial", fontsize=9, fontcolor="#303030"];
+
+  promise [label="C1 수문 계통판\n플레이어 약속: 형태만으로\n두 분기와 공통 공급부를 읽는다", fillcolor="#E8E8E6", penwidth=1.7];
+  supply [label="공통 공급부\n원형 허브 + 고정 링\n+ 비대칭 정비 캡", fillcolor="#DCEBE6"];
+  light [label="조명 분기\n원형 보호망 렌즈\n+ detent/lock silhouette", fillcolor="#EEE6CF"];
+  reader [label="판독 분기\n직사각 종이 삽입부\n+ 깊은 bezel/retainer", fillcolor="#DDE6EC"];
+  chassis [label="외함 계층\n얇은 전면 도어 +\n후면 섀시 + 서비스 seam", fillcolor="#DCEBE6"];
+  pipes [label="연결 논리\n비대칭 conduit +\nclamp/collar/termination", fillcolor="#DCEBE6"];
+  material [label="재질 계층\n주물 / 어두운 recess /\n도자기 / 렌즈 / 종이", fillcolor="#E8E8E6"];
+  wear [label="사용 흔적\n물 고임부 → 녹청\n손 닿는 곳 → edge wear", fillcolor="#E8E8E6"];
+  interaction [label="상호작용 계층\nwarm accent은 조작부만\n색 + 실루엣 + 위치", fillcolor="#EEE6CF"];
+  constraints [label="불변 제약\n텍스트·숫자·상표·임계값 없음\n정적 프롭 · 5k tris 이하\nr01 보존 · r02 새 후보", fillcolor="#F1DFDF", penwidth=1.4];
+  proof [label="검증\nBlender triangle/AABB/UV\nGLB/FBX/hash + preview\nUnity 통합은 별도 승인", fillcolor="#E8E8E6"];
+  legend [shape=plain, label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="5">
+      <TR><TD BGCOLOR="#F1DFDF">분홍</TD><TD>불변 제약</TD></TR>
+      <TR><TD BGCOLOR="#DCEBE6">청록</TD><TD>구조·연결 논리</TD></TR>
+      <TR><TD BGCOLOR="#EEE6CF">황색</TD><TD>플레이어 상호작용·분기</TD></TR>
+      <TR><TD BGCOLOR="#E8E8E6">회색</TD><TD>약속·재질·검증</TD></TR>
+      <TR><TD>점선</TD><TD>제약/승인 의존</TD></TR>
+    </TABLE>
+  >];
+
+  promise -> supply [label="읽기 시작"];
+  supply -> light [label="왼쪽 분기"];
+  supply -> reader [label="오른쪽 분기"];
+  chassis -> supply [label="고정점"];
+  chassis -> pipes [label="부착 논리"];
+  pipes -> light;
+  pipes -> reader;
+  material -> chassis [label="값/roughness"];
+  material -> pipes;
+  wear -> chassis [label="원인 기반"];
+  wear -> pipes;
+  interaction -> light [label="주 조작부"];
+  interaction -> reader [label="판독 대상"];
+  constraints -> promise [style=dashed, label="경계"];
+  constraints -> proof [style=dashed];
+  light -> proof;
+  reader -> proof;
+  chassis -> proof;
+}

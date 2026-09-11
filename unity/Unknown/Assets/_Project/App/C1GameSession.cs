@@ -20,7 +20,7 @@ namespace Tide.App
         float hubCameraFov;
         public bool PatrolActive=>Journal.State.Has("c1:entered");
         public bool PatrolComplete=>Simulation.IsComplete(Journal.State,C1PatrolDefinition.BeatId);
-        string PatrolText(string key)=>(string)patrolPacket["localization"]?[key]??key;
+        string PatrolText(string key)=>strings?[key]!=null?L(key):(string)patrolPacket["localization"]?[key]??key;
         string BeatFor(PuzzleState state)=>C1SignatureDefinition.Has(state,"entered")?C1SignatureDefinition.BeatId:state.Has("c1:entered")?C1PatrolDefinition.BeatId:
             Definition.Beats.FirstOrDefault(b=>b.Id!=C1PatrolDefinition.BeatId && b.Id!=C1SignatureDefinition.BeatId && Simulation.IsAvailable(state,b.Id)&&!Simulation.IsComplete(state,b.Id))?.Id??"t0-b3";
         public void ContinueToPatrol()
