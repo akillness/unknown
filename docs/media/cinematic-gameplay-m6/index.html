@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>UNKNOWN · 기록의 안쪽으로</title>
+  <meta name="description" content="UNKNOWN의 인트로, 관찰과 시험, 기록 저장과 스테이지 해금을 담은 시네마틱 연출 영상과 플레이 방식 영상.">
+  <style>
+    :root{--ink:#081316;--panel:#0d2024;--paper:#eee9db;--muted:#adc1bf;--teal:#83b9b0;--ochre:#e4b46b;--line:#2d484b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--ink);color:var(--paper);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-underline-offset:.25em}a:hover{color:var(--ochre)}a:focus-visible,summary:focus-visible,video:focus-visible{outline:3px solid var(--ochre);outline-offset:5px}
+    .skip{position:absolute;left:20px;top:-80px;background:var(--ochre);color:var(--ink);padding:10px 18px;z-index:3}.skip:focus{top:16px}
+    .wrap{max-width:1320px;margin:auto;padding:0 52px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:30px;padding-bottom:26px;border-bottom:1px solid var(--line)}.brand{text-decoration:none;letter-spacing:.25em;font-size:14px;font-weight:750}.edition{color:var(--muted);font-size:12px;letter-spacing:.12em}.nav{display:flex;gap:25px;font-size:13px}.nav a{text-decoration:none}
+    .intro{display:grid;grid-template-columns:1.45fr 1fr;gap:80px;align-items:end;padding:62px 0 43px}.eyebrow{margin:0 0 20px;color:var(--ochre);font-size:12px;letter-spacing:.15em;font-weight:650}.intro h1{margin:0;font-family:"Iowan Old Style","AppleMyungjo","Nanum Myeongjo",serif;font-size:clamp(38px,4.6vw,66px);font-weight:500;line-height:1.22;letter-spacing:-.055em}.intro-copy{max-width:38ch;padding-bottom:5px}.intro-copy p{margin:0;color:var(--muted);font-size:15px;word-break:keep-all}.intro-copy .rule{display:block;width:38px;height:2px;background:var(--ochre);margin-bottom:20px}
+    .film{position:relative}.video-shell{position:relative;background:#03090b;border:1px solid var(--line);overflow:hidden}video{display:block;width:100%;aspect-ratio:16/9;background:#03090b;object-fit:contain}.film-caption{display:flex;justify-content:space-between;align-items:start;gap:28px;padding:19px 0 25px;border-bottom:1px solid var(--line)}.film-caption h2{font-size:23px;line-height:1.4;font-weight:550;letter-spacing:-.04em;margin:2px 0 7px}.film-caption p{margin:0;color:var(--muted);font-size:14px;max-width:67ch}.film-number{color:var(--ochre);font-size:11px;letter-spacing:.14em;font-weight:650}.duration{white-space:nowrap;border:1px solid var(--line);padding:4px 10px;margin-top:3px;color:var(--teal);font-size:12px;font-variant-numeric:tabular-nums}
+    .method{display:grid;grid-template-columns:300px minmax(0,1fr);gap:55px;padding-top:65px;padding-bottom:65px}.method-note h2{font-size:31px;letter-spacing:-.055em;font-weight:550;line-height:1.35;margin:0 0 24px}.method-note p{font-size:14px;color:var(--muted);word-break:keep-all}.steps{padding:0;margin:30px 0 0;list-style:none}.steps li{display:grid;grid-template-columns:24px 1fr;gap:12px;margin:0 0 20px}.step-index{font-size:11px;color:var(--ochre);padding-top:5px}.steps strong{display:block;color:var(--paper);font-size:14px;font-weight:550}.steps span:last-child{font-size:13px;color:var(--muted)}
+    .stage-section{border-top:1px solid var(--line);padding:38px 0 42px}.stage-heading{display:flex;justify-content:space-between;gap:30px;align-items:baseline}.stage-heading h2{font-size:21px;font-weight:550;letter-spacing:-.035em;margin:0}.stage-heading p{font-size:13px;color:var(--muted);margin:0}.stage-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:0;margin:30px 0 21px;list-style:none;border:1px solid var(--line)}.stage-map li{position:relative;padding:20px 22px;background:var(--panel);border-right:1px solid var(--line)}.stage-map li:last-child{border-right:0}.stage-map li+li:before{content:"→";position:absolute;left:-8px;top:37px;color:var(--ochre);font-size:15px;z-index:1}.chapter{font-size:10px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:7px}.stage-code{font-size:21px;font-weight:500;letter-spacing:-.035em;display:block}.stage-map .current-end{box-shadow:inset 0 -2px var(--ochre)}.stage-note{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.stage-note strong{color:var(--teal);font-weight:500}
+    .provenance{display:grid;grid-template-columns:180px minmax(0,1fr);gap:36px;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.provenance h2{margin:0;color:var(--ochre);font-size:12px;letter-spacing:.06em;font-weight:550}.provenance p{margin:0;max-width:88ch;word-break:keep-all}.source-details{margin-top:16px}.source-details summary{cursor:pointer;width:fit-content;color:var(--teal);font-size:12px}.source-links{display:flex;flex-wrap:wrap;gap:10px 25px;padding-top:12px}.source-links a{font-size:12px}.footer{border-top:1px solid var(--line);padding-top:21px;padding-bottom:35px;display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.09em;color:var(--muted)}
+    @media(min-width:1450px){.wrap{padding-left:32px;padding-right:32px}}
+    @media(max-width:980px){.wrap{padding:0 28px}.intro{gap:38px;grid-template-columns:1.2fr 1fr}.method{grid-template-columns:230px minmax(0,1fr);gap:30px}.stage-map li{padding:18px 16px}.stage-heading{display:block}.stage-heading p{margin-top:10px}}
+    @media(max-width:700px){.wrap{padding:0 20px}.masthead{padding-top:23px;padding-bottom:20px}.edition{display:none}.nav{gap:18px}.intro{display:block;padding:40px 0 29px}.intro h1{font-size:42px}.intro-copy{margin-top:25px;max-width:42ch}.intro-copy .rule{display:none}.film-caption{gap:14px;padding-top:15px}.film-caption h2{font-size:21px}.film-caption p{font-size:13px}.method{display:block;padding-top:44px;padding-bottom:40px}.method-note h2{font-size:29px;margin-bottom:16px}.method-note>p{max-width:48ch}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:23px 0 26px}.steps li{display:block;margin:0}.steps .step-index{display:block;margin-bottom:5px}.steps span:last-child{font-size:12px}.stage-section{padding-top:27px}.stage-map{grid-template-columns:1fr;margin-top:22px}.stage-map li{display:flex;align-items:center;gap:20px;padding:13px 18px;border-right:0;border-bottom:1px solid var(--line)}.stage-map li:last-child{border-bottom:0}.chapter{margin:0;min-width:90px}.stage-code{font-size:19px}.stage-map li+li:before{content:"↓";left:auto;right:22px;top:-15px}.provenance{grid-template-columns:1fr;gap:14px;padding-top:25px}.footer{flex-direction:column;gap:5px}.duration{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<div class="wrap">
+  <header class="masthead">
+    <a class="brand" href="#main" aria-label="UNKNOWN 영상 모음">UNKNOWN</a>
+    <span class="edition">M6 · FILM STUDY</span>
+    <nav class="nav" aria-label="영상 탐색"><a href="#cinematic">시네마틱</a><a href="#gameplay">플레이 방식</a></nav>
+  </header>
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">해안 기록실 · 연출 영상</p><h1 id="page-title">파도를 지나,<br>기록의 안쪽으로.</h1></div>
+      <div class="intro-copy"><span class="rule" aria-hidden="true"></span><p>조용한 당직실에서 첫 관찰이 시작됩니다. 시험하고, 판단을 기록하고, 다음 구간으로 나아가는 흐름을 두 편의 영상에 담았습니다.</p></div>
+    </section>
+    <section class="film" id="cinematic" aria-labelledby="cinematic-title">
+      <div class="video-shell"><video controls playsinline preload="metadata" poster="poster-cinematic.jpg" aria-label="시네마틱 연출 영상, 36초" aria-describedby="cinematic-desc film-disclosure"><source src="cinematic.mp4" type="video/mp4">브라우저에서 영상을 재생할 수 없습니다. <a href="cinematic.mp4">시네마틱 영상 열기</a></video></div>
+      <div class="film-caption"><div><span class="film-number">01 / CINEMATIC</span><h2 id="cinematic-title">당직실에서 다음 기록까지</h2><p id="cinematic-desc">공간의 도입, 관찰 대상에 머무는 시선, 기록 이후의 전환. 차가운 바다와 따뜻한 작업등 사이에서 몰입의 속도를 찾습니다.</p></div><span class="duration">00:36</span></div>
+    </section>
+    <section class="method" id="gameplay" aria-labelledby="gameplay-title">
+      <div class="method-note"><p class="eyebrow">플레이 방식 · 진행과 해금</p><h2 id="gameplay-title">보고, 시험하고.<br>기록한 뒤 나아가기.</h2><p>보이는 정보와 직접 고른 제어가 판단의 출발점입니다. 기록할 수 있는 상태와 실제 저장 완료를 구분합니다.</p><ol class="steps"><li><span class="step-index" aria-hidden="true">01</span><span><strong>관찰 · 시험</strong>단서를 살피고 선택한 조작을 시험합니다.</span></li><li><span class="step-index" aria-hidden="true">02</span><span><strong>기록 · 저장</strong>판단을 확인하고 저장 결과를 봅니다.</span></li><li><span class="step-index" aria-hidden="true">03</span><span><strong>해금 · 이동</strong>완료 판정 뒤 다음 이동을 직접 선택합니다.</span></li></ol></div>
+      <div class="film"><div class="video-shell"><video controls playsinline preload="metadata" poster="poster-gameplay.jpg" aria-label="게임플레이 방식과 스테이지 진행 영상, 54초" aria-describedby="gameplay-desc film-disclosure"><source src="gameplay-method.mp4" type="video/mp4">브라우저에서 영상을 재생할 수 없습니다. <a href="gameplay-method.mp4">플레이 방식 영상 열기</a></video></div><div class="film-caption"><div><span class="film-number">02 / HOW TO PLAY</span><h2>조작에서 스테이지 진행으로</h2><p id="gameplay-desc">생성 연출과 실제 게임 화면 발췌를 엮어, 관찰·시험·기록과 저장 후 이동의 차이를 보여줍니다.</p></div><span class="duration">00:54</span></div></div>
+    </section>
+    <section class="stage-section" aria-labelledby="stage-title">
+      <div class="stage-heading"><h2 id="stage-title">이번 영상이 따라가는 구간</h2><p>완료 판정과 저장을 확인한 뒤, 다음 이동을 직접 선택합니다.</p></div>
+      <ol class="stage-map" aria-label="T0-b1에서 C1-b2까지의 스테이지 순서"><li><span class="chapter">TUTORIAL / 01</span><span class="stage-code">T0-b1</span></li><li><span class="chapter">TUTORIAL / 02</span><span class="stage-code">T0-b2</span></li><li><span class="chapter">TUTORIAL / 03</span><span class="stage-code">T0-b3</span></li><li><span class="chapter">CHAPTER 1 / 01</span><span class="stage-code">C1-b1</span></li><li class="current-end"><span class="chapter">CHAPTER 1 / 02</span><span class="stage-code">C1-b2</span></li></ol>
+      <div class="stage-note"><span><strong>현재 구현 범위의 끝은 C1-b2입니다.</strong></span><span>C1-b3 이후는 향후 계획이며, 이번 해금 범위에 포함되지 않습니다.</span></div>
+    </section>
+    <aside class="provenance" aria-labelledby="provenance-title"><h2 id="provenance-title">영상의 출처와 범위</h2><div><p id="film-disclosure">두 편은 Higgsfield MCP 생성 프리비즈와 M5 Unity 실제 녹화 발췌를 컷 편집한 연출 영상입니다. 끊김 없는 실제 플레이 녹화가 아니며, 새 연출의 런타임 구현을 증명하지 않습니다. 생성 장면은 분위기와 시선의 흐름을 검토하기 위한 자료입니다.</p><details class="source-details"><summary>원본 생성 숏 보기</summary><div class="source-links"><a href="../../../assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/clip.mp4">01 당직실</a><a href="../../../assets/generated/previz/cinematic-gameplay-m6/m6-s2-observe/clip.mp4">02 관찰</a><a href="../../../assets/generated/previz/cinematic-gameplay-m6/m6-s3-trial-surface/clip.mp4">03 시험</a><a href="../../../assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/clip.mp4">04 기록</a></div></details></div></aside>
+  </main>
+  <footer class="footer"><span>UNKNOWN · COASTAL ARCHIVE</span><span>M6 / CINEMATIC &amp; PLAYFLOW</span></footer>
+</div>
+</body>
+</html>

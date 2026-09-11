@@ -1,0 +1,128 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m6-s4-record-context",
+  "provider": "Higgsfield AI",
+  "provider_route": {
+    "endpoint": "https://mcp.higgsfield.ai/mcp",
+    "protocol_version": "2025-03-26",
+    "tool": "generate_video",
+    "authentication": "Existing official Higgsfield CLI access token supplied privately as MCP Bearer authentication; CLI used only for token bootstrap, not video generation.",
+    "official_endpoint_source": "https://github.com/higgsfield-ai/cursor-plugin/blob/develop/mcp.json"
+  },
+  "cli_version_for_token_bootstrap": "1.1.23",
+  "model": "seedance_2_0_mini",
+  "job_id": "d59bd091-7ea3-4b1a-898b-00eea58d41da",
+  "submitted_at": "2026-09-11T08:05:35.757Z",
+  "provider_created_at": "2026-09-11T08:05:37.614Z",
+  "recorded_at": "2026-09-11T08:13:06.070Z",
+  "completion_status": "completed",
+  "prompt_file": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/prompt.txt",
+  "prompt_sha256": "309e286cfc44674112cb1fbdff7cde7bf498dcf6d587f788becf6654602b6443",
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/m6-record-keyframe-r01/image.png",
+      "mediaId": "0519fa78-60e9-4b4e-9e28-b7dec64701ff",
+      "sha256": "a9874dc1bfa0467120c4fa38a7e7b96e667dbe727928ec276818d3ea9a46afa3",
+      "sha256_verified": true
+    }
+  ],
+  "requested": {
+    "duration_seconds": 6,
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "bitrate_mode": "high",
+    "genre": "drama",
+    "generate_audio": true,
+    "count": 1,
+    "camera": "Two percent forward approach, final two seconds still."
+  },
+  "requested_duration_seconds": 6,
+  "actual_duration_seconds": 6.08,
+  "requested_resolution": "720p",
+  "actual_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "actual": {
+    "container_duration_seconds": 6.08,
+    "video_duration_seconds": 6.041667,
+    "video_codec": "h264",
+    "frame_rate": "24/1",
+    "frame_count": 145,
+    "audio_duration_seconds": 6.08,
+    "audio_codec": "aac",
+    "audio_sample_rate_hz": 32000,
+    "audio_channels": 2
+  },
+  "audio_streams": 1,
+  "audio_review": {
+    "audition_status": "pending",
+    "raw_generated_audio_preserved": true,
+    "included_in_final_films": false,
+    "decision": "Raw AAC is excluded from edited final films pending listening approval. Root authors a separate quiet synthetic wind/room bed; its provenance belongs to the edit receipt."
+  },
+  "output_file": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/clip.mp4",
+  "output_sha256": "d4d7e472211dcb6cb54dabe4e19f3e614e9fcbbbbb06e96f38034e2c0d51daa7",
+  "bytes": 9847896,
+  "source_url": null,
+  "source_url_note": "Account-scoped provider URLs remain in the original status.json; aggregate provenance uses local SHA256-bound output paths.",
+  "credits_quote": 15,
+  "credits_charged": null,
+  "billing_note": "Per-job itemized charge not established. Four-job quote totals 60; batch account balance decreased from 81.18 to 21.18, observed delta60.",
+  "claim": "Generated cinematic concept previz for intro and gameplay context, not engine gameplay, accepted saves, stage-unlock execution, or native motion/accessibility proof.",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "review": {
+    "status": "accepted_for_editorial_previz_only",
+    "method": "Independent visual inspection of the supplied six-frame contact sheet, plus request/status/ffprobe/hash checks.",
+    "intent": "Record-ready context separated from saved success",
+    "sampleObservation": "The reader and separate sheet retain their dark lower masks across all six sampled frames. No actual save acceptance, new writing, or stage unlock is proved. Camera visibly approaches.",
+    "requestedCamera": "Two percent forward approach, final two seconds still.",
+    "maskStatus": "preserved_in_six_sampled_frames",
+    "camera_conformance": "not_accepted_for_runtime_motion; batch camera travel exceeds the requested restrained-motion intent",
+    "measured_camera_travel_percent": null,
+    "full_frame_mask_audit": false,
+    "limits": [
+      "Sampled-frame preservation is not an exhaustive per-frame evidence-mask audit.",
+      "No user-input, save-command, unlock-trigger, runtime accessibility, performance, or human-playtest validation is established by generated footage.",
+      "No commercial-rights or runtime promotion is granted by this receipt."
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/request.json",
+      "sha256": "5be4ac36db093bc5d798047066f229f0859829c1c40a29860a8dbf1e334fff52",
+      "bytes": 1726
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/submission.json",
+      "sha256": "34b37a739ffbd4ad401fe6c4b09be0b36cb31ac219a9d5f6d42455664fe033f2",
+      "bytes": 140
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/status.json",
+      "sha256": "4a32ad79883248ed88bf683f44889df0d18cecab5d610e574c0b2ab1559d5162",
+      "bytes": 3860
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/ffprobe.json",
+      "sha256": "92fa5a85f68008dbecafda0ced47f2440d1c4b53c97f3980daea3ade451a6910",
+      "bytes": 3530
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/contact-sheet.jpg",
+      "sha256": "8a20e5e08ed5d7381b68bc3e3734bdfafd372a9091d28964e3e3e15a8cd93b19",
+      "bytes": 54643
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/prompt.txt",
+      "sha256": "309e286cfc44674112cb1fbdff7cde7bf498dcf6d587f788becf6654602b6443",
+      "bytes": 982
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/clip.mp4",
+      "sha256": "d4d7e472211dcb6cb54dabe4e19f3e614e9fcbbbbb06e96f38034e2c0d51daa7",
+      "bytes": 9847896
+    }
+  ]
+}

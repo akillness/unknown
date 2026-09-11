@@ -1,0 +1,653 @@
+{
+  "schema": "unknown.m6.editorial-review.v1",
+  "status": "final-editorial-sample-review-complete",
+  "scope": "Independent final file hash/ffprobe, caption contract and sampled-frame editorial review; technical decode/loudness corroborated by production validator; not human immersion, runtime acceptance or exhaustive frame review",
+  "source": {
+    "path": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+    "sha256": "f34fc96ef9c795d9bc1856f986859fd8dbc3f2684a2258e54e3c3c5989fc1f02",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "durationSeconds": 162.899999,
+    "bytes": 1816026,
+    "audioStreams": 0,
+    "receipt": "_workspace/current/systems/tech-verification/intro-gameplay-m5/native-video-receipt.json",
+    "acceptedOutcomeCorroboration": "_workspace/current/systems/tech-verification/intro-gameplay-m5/native-acceptance.json:finalOrdinaryBuild.checks.F02"
+  },
+  "inspectedSamples": [
+    {
+      "start": 0,
+      "end": 160,
+      "step": 10
+    },
+    {
+      "start": 0,
+      "end": 22,
+      "step": 2
+    },
+    {
+      "start": 18,
+      "end": 20.133333,
+      "stepFrames": 8,
+      "fps": 30
+    },
+    {
+      "start": 20,
+      "end": 34,
+      "step": 2
+    },
+    {
+      "start": 54,
+      "end": 65,
+      "step": 1
+    },
+    {
+      "start": 88,
+      "end": 99,
+      "step": 1
+    },
+    {
+      "start": 140,
+      "end": 162,
+      "step": 2
+    },
+    {
+      "start": 153,
+      "end": 158.5,
+      "step": 0.5
+    },
+    {
+      "singleFrame": 66
+    },
+    {
+      "singleFrame": 60
+    },
+    {
+      "singleFrame": 91
+    }
+  ],
+  "intervals": [
+    {
+      "id": "restored-patrol-to-signature",
+      "startSeconds": 10,
+      "endSeconds": 19,
+      "durationSeconds": 9,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "At10–18s restored completed patrol state and signature continuation; sample18.0s patrol and18.266667s signature. Not a newly captured patrol-save receipt.",
+      "caption": "저장된 순찰 기록에서 서명지 작업으로",
+      "label": "실제 화면 · 저장 상태 복원 후 이동 · 발췌",
+      "redactions": [],
+      "evidenceKind": "restored completed state and explicit continuation; no new save event"
+    },
+    {
+      "id": "observation",
+      "startSeconds": 23,
+      "endSeconds": 29,
+      "durationSeconds": 6,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Overview with observation0/2 and no humidity selected; annex document view visible by28s.",
+      "caption": "자료를 선택해 살펴보세요.",
+      "label": "실제 화면 · 관찰 예시",
+      "redactions": [],
+      "evidenceKind": "native observation navigation sample"
+    },
+    {
+      "id": "trial-action-redacted",
+      "startSeconds": 60,
+      "endSeconds": 66,
+      "durationSeconds": 6,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Trial-before at60–63s; edge-release result visible by64s. Exact selected humidity appears in summary, selected-value label and selected option; requires masking.",
+      "caption": "조건을 고르고 시험합니다.",
+      "label": "실제 화면 · 설정값 가림",
+      "redactions": [
+        {
+          "x": 600,
+          "y": 149,
+          "width": 650,
+          "height": 27,
+          "purpose": "hide selected humidity/status line"
+        },
+        {
+          "x": 612,
+          "y": 365,
+          "width": 619,
+          "height": 166,
+          "purpose": "hide selected-value label and all visible numeric choices in pretrial layout; may cover some controls after scroll"
+        }
+      ],
+      "evidenceKind": "trial-before/result sequence from same native take; redacted for solution concealment"
+    },
+    {
+      "id": "trial-result-alternative",
+      "startSeconds": 64,
+      "endSeconds": 70,
+      "durationSeconds": 6,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Already-completed trial result and trial direction, not a clip of the initial test click. Correct value remains in summary line.",
+      "caption": "시험 결과를 확인합니다.",
+      "label": "실제 화면 · 설정값 가림 · 결과 예시",
+      "redactions": [
+        {
+          "x": 600,
+          "y": 149,
+          "width": 650,
+          "height": 27,
+          "purpose": "hide selected correct humidity; other visible candidates alone do not establish answer"
+        }
+      ],
+      "evidenceKind": "native result only; exact retained frames need final review"
+    },
+    {
+      "id": "copies-mask",
+      "startSeconds": 88,
+      "endSeconds": 94,
+      "durationSeconds": 6,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Copy count1/2 at88–90s,2/2 by91s; lower opaque mask persists on second sheet; record direction visible.",
+      "caption": "사본을 보존하고, 가린 부분은 남깁니다.",
+      "label": "실제 화면 · 설정값 가림",
+      "redactions": [
+        {
+          "x": 600,
+          "y": 149,
+          "width": 650,
+          "height": 27,
+          "purpose": "hide earlier correct humidity still repeated in summary"
+        }
+      ],
+      "evidenceKind": "native copy-count change and persistent mask; not independent source proof"
+    },
+    {
+      "id": "saved-result",
+      "startSeconds": 156,
+      "endSeconds": 162.9,
+      "durationSeconds": 6.9,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Accepted saved-result screen, record saved state, two copies and lower mask. Final confirmation click occurs across original take boundary per M5 receipt, so this clip does not prove continuous click/pending/receipt timing.",
+      "caption": "저장된 대조 결과 · 미해결 부분은 유지됩니다.",
+      "label": "실제 화면 · 저장된 결과 · 발췌",
+      "redactions": [],
+      "evidenceKind": "saved outcome corroborated by M5 native final check F02"
+    },
+    {
+      "id": "saved-still",
+      "timeSeconds": 159,
+      "source": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "observed": "Saved-result still with lower mask and no correct humidity line.",
+      "caption": "현재 구현: T0부터 C1 서명지 작업까지",
+      "label": "실제 화면 · 저장된 결과 스틸",
+      "redactions": [],
+      "evidenceKind": "held source frame; hold must be logged, not new elapsed gameplay"
+    }
+  ],
+  "adaptation": {
+    "approvedBy": "root game-production-director",
+    "reason": "Existing native source begins from a resumed already-completed patrol state and contains no fresh T0b3/ConfirmPatrol save events; no new capture required. Preserve truth with explicit rule cards and restored-state examples.",
+    "originalTargetsPreserved": true,
+    "earlierUnlockPresentation": "manual rule explanation only, separate from native recorded events",
+    "ruleCards": [
+      {
+        "caption": "진행 규칙 · 자료 열람 → 범위 표시 → 첫 판독",
+        "note": "T0b1/b2 have no commit/seal command"
+      },
+      {
+        "caption": "진행 규칙 · T0 기록 저장 후 C1 이동 가능",
+        "note": "rule derived from code/campaign, not witnessed fresh save in supplied footage"
+      },
+      {
+        "caption": "진행 규칙 · 순찰 기록 저장 후 서명지 작업 가능",
+        "note": "native example shows previously saved patrol state and explicit continuation only"
+      }
+    ],
+    "cinematicSegments": [
+      {
+        "filmStartSeconds": 6,
+        "filmEndSeconds": 12,
+        "replacement": "manual rule cards on S1 backdrop; no live unlock claim"
+      },
+      {
+        "filmStartSeconds": 12,
+        "filmEndSeconds": 18,
+        "replacement": "native13–19s restored patrol continuation excerpt"
+      },
+      {
+        "filmStartSeconds": 30,
+        "filmEndSeconds": 36,
+        "replacement": "S4 with native156–162s saved-result inset or end hold; no live save effect"
+      }
+    ],
+    "methodSegments": [
+      {
+        "filmStartSeconds": 6,
+        "filmEndSeconds": 15,
+        "replacement": "three manual rule cards,3s each, clearly labelled 규칙 안내"
+      },
+      {
+        "filmStartSeconds": 15,
+        "filmEndSeconds": 24,
+        "replacement": "native10–19s restored patrol→signature"
+      },
+      {
+        "filmStartSeconds": 24,
+        "filmEndSeconds": 30,
+        "replacement": "native23–29s observation with S2 as backdrop or3sconcept+3snative"
+      },
+      {
+        "filmStartSeconds": 30,
+        "filmEndSeconds": 36,
+        "replacement": "native60–66s trial with two redactions, or64–70s result-only with summary redaction; wording follows chosen interval"
+      },
+      {
+        "filmStartSeconds": 36,
+        "filmEndSeconds": 42,
+        "replacement": "native88–94s copies/mask with summary redaction"
+      },
+      {
+        "filmStartSeconds": 42,
+        "filmEndSeconds": 51,
+        "replacement": "native156–162.9s saved outcome +2.1s explicit hold; no fabricated pending animation"
+      },
+      {
+        "filmStartSeconds": 51,
+        "filmEndSeconds": 54,
+        "replacement": "159s saved-result frame held with current-slice limit caption"
+      }
+    ],
+    "acceptanceOverrides": [
+      {
+        "id": "M6-P05",
+        "original": "both earlier unlock transitions have captured before/save-accepted/after",
+        "executionRequirement": "Earlier transitions are accurate manual rule explanation; native example clearly labelled restored state; no claim those acceptance events were captured."
+      },
+      {
+        "id": "M6-P15",
+        "executionRequirement": "Missing earlier receipt footage is handled by removing live-transition claims and using rule explanation; final saved outcome is grounded in M5 F02 and labelled excerpt."
+      }
+    ],
+    "generationReport": "root reports four official MCP shots completed; editorial reviewer has not yet inspected these files or final render",
+    "finalReview": "pending",
+    "scope": "Original source-selection recommendation retained as history; finalMovies.segments and finalArtifacts.editTimeline record the actual edit."
+  },
+  "limitations": [
+    "Final inspection is sample-based; not an every-frame generated-artifact, masking or spoiler audit.",
+    "M5 source is three chronological takes, not uninterrupted interaction evidence.",
+    "No fresh T0b3/ConfirmPatrol acceptance event appears in this source; rule cards are explanation, not newly observed saves.",
+    "No new native game test, human listening, human immersion score, runtime-performance measurement or rights clearance performed.",
+    "Original storyboard targets are retained; finalMovies.segments is the authoritative actual edit."
+  ],
+  "finalMovies": [
+    {
+      "path": "docs/media/cinematic-gameplay-m6/cinematic.mp4",
+      "sha256": "78970fbe5a1005e8a15cacd8d46019d47667709ec2982f3acc67144643cfefde",
+      "bytes": 7307088,
+      "durationSeconds": 36.0,
+      "frames": 1080,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioSampleRate": 48000,
+      "audioChannels": 2,
+      "audioDurationSeconds": 36.0,
+      "segments": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "source": "1",
+          "duration": 6,
+          "start": 0,
+          "kind": "concept",
+          "title": "마지막 당직",
+          "caption": "바다가 지운 흔적을, 기록으로 잇다.",
+          "eyebrow": "UNKNOWN  /  CINEMATIC STUDY"
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 12,
+          "source": "1",
+          "duration": 6,
+          "start": 0,
+          "kind": "rule",
+          "title": "기록이 다음 문을 엽니다",
+          "caption": "T0 기록 결합  →  C1 순찰",
+          "eyebrow": "01  /  진행 규칙"
+        },
+        {
+          "startSeconds": 12,
+          "endSeconds": 18,
+          "source": "native",
+          "duration": 6,
+          "start": 14,
+          "kind": "native",
+          "title": "서명지 작업으로",
+          "caption": "저장된 순찰 기록에서, 다음 작업을 선택합니다.",
+          "eyebrow": "02  /  저장 상태에서 이어하기"
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 24,
+          "source": "2",
+          "duration": 6,
+          "start": 0,
+          "kind": "concept",
+          "title": "관찰",
+          "caption": "같은 사건을 가리키는, 서로 다른 흔적.",
+          "eyebrow": "03  /  LOOK CLOSER"
+        },
+        {
+          "startSeconds": 24,
+          "endSeconds": 30,
+          "source": "3",
+          "duration": 6,
+          "start": 0,
+          "kind": "concept",
+          "title": "시험",
+          "caption": "조건을 바꾸고, 결과를 되돌려 확인합니다.",
+          "eyebrow": "04  /  TRY · REVERT"
+        },
+        {
+          "startSeconds": 30,
+          "endSeconds": 33,
+          "source": "4",
+          "duration": 3,
+          "start": 0,
+          "kind": "concept",
+          "title": "기록",
+          "caption": "기록은 남고, 미해결은 가려진 채 남습니다.",
+          "eyebrow": "05  /  LEAVE A TRACE"
+        },
+        {
+          "startSeconds": 33,
+          "endSeconds": 36,
+          "source": "native",
+          "duration": 3,
+          "start": 159,
+          "kind": "native",
+          "title": "기록 · 저장 완료",
+          "caption": "현재 구현 구간은 여기까지입니다.",
+          "eyebrow": "06  /  실제 저장 결과"
+        }
+      ],
+      "technicalValidation": {
+        "source": "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/validation.json",
+        "fullDecodeReportedByProductionValidator": true,
+        "integratedLUFS": -27.19,
+        "truePeakDBTP": -15.73
+      }
+    },
+    {
+      "path": "docs/media/cinematic-gameplay-m6/gameplay-method.mp4",
+      "sha256": "28ed4bed70ae61ec19ff2fd3ff8c36013eb7556357491dd07e895ef77c814cf5",
+      "bytes": 8662956,
+      "durationSeconds": 54.0,
+      "frames": 1620,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioSampleRate": 48000,
+      "audioChannels": 2,
+      "audioDurationSeconds": 54.0,
+      "segments": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "source": "1",
+          "duration": 6,
+          "start": 0,
+          "kind": "concept",
+          "title": "관찰 · 시험 · 기록",
+          "caption": "흔적을 읽고, 조건을 시험하고, 근거를 남깁니다.",
+          "eyebrow": "UNKNOWN  /  HOW TO PLAY"
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 15,
+          "source": "1",
+          "duration": 9,
+          "start": 0,
+          "kind": "map",
+          "title": "작업을 마치면, 다음 단계로",
+          "caption": "저장 확인 뒤 이동을 직접 선택합니다.",
+          "eyebrow": "01  /  단계별 진행 규칙"
+        },
+        {
+          "startSeconds": 15,
+          "endSeconds": 24,
+          "source": "native",
+          "duration": 9,
+          "start": 12,
+          "kind": "native",
+          "title": "저장된 순찰 기록 → 서명지 작업",
+          "caption": "완료된 기록을 복원한 실제 플레이 장면입니다.",
+          "eyebrow": "02  /  이어하기 · 명시적 이동"
+        },
+        {
+          "startSeconds": 24,
+          "endSeconds": 27,
+          "source": "2",
+          "duration": 3,
+          "start": 0,
+          "kind": "concept",
+          "title": "관찰",
+          "caption": "자료를 선택해 살펴보세요.",
+          "eyebrow": "03  /  OBSERVE"
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 30,
+          "source": "native",
+          "duration": 3,
+          "start": 27,
+          "kind": "native",
+          "title": "관찰",
+          "caption": "서로 다른 자료를 열어 출처를 확인합니다.",
+          "eyebrow": "03  /  실제 조작 발췌"
+        },
+        {
+          "startSeconds": 30,
+          "endSeconds": 33,
+          "source": "3",
+          "duration": 3,
+          "start": 0,
+          "kind": "concept",
+          "title": "시험",
+          "caption": "조건을 선택하고, 결과를 확인합니다.",
+          "eyebrow": "04  /  TEST"
+        },
+        {
+          "startSeconds": 33,
+          "endSeconds": 36,
+          "source": "native",
+          "duration": 3,
+          "start": 63,
+          "kind": "trial",
+          "title": "시험",
+          "caption": "시험 전과 후를 확인합니다. 설정값은 가렸습니다.",
+          "eyebrow": "04  /  실제 화면 · 설정값 가림"
+        },
+        {
+          "startSeconds": 36,
+          "endSeconds": 39,
+          "source": "4",
+          "duration": 3,
+          "start": 0,
+          "kind": "concept",
+          "title": "기록",
+          "caption": "사본을 남기고, 가려진 부분도 기록합니다.",
+          "eyebrow": "05  /  RECORD"
+        },
+        {
+          "startSeconds": 39,
+          "endSeconds": 42,
+          "source": "native",
+          "duration": 3,
+          "start": 89,
+          "kind": "copies",
+          "title": "사본 보존",
+          "caption": "원본의 가림을 유지하며 사본을 남깁니다.",
+          "eyebrow": "05  /  실제 조작 · 설정값 가림"
+        },
+        {
+          "startSeconds": 42,
+          "endSeconds": 47,
+          "source": "native",
+          "duration": 5,
+          "start": 143,
+          "kind": "ready",
+          "title": "확정 준비",
+          "caption": "아직 저장 전입니다. 결과와 근거를 검토합니다.",
+          "eyebrow": "06  /  준비 상태 · 저장 전"
+        },
+        {
+          "startSeconds": 47,
+          "endSeconds": 51,
+          "source": "native",
+          "duration": 4,
+          "start": 158,
+          "kind": "native",
+          "title": "기록 · 저장 완료",
+          "caption": "저장된 결과를 확인합니다. 가림은 유지됩니다.",
+          "eyebrow": "07  /  별도 발췌 · 저장 결과"
+        },
+        {
+          "startSeconds": 51,
+          "endSeconds": 54,
+          "source": "4",
+          "duration": 3,
+          "start": 0,
+          "kind": "concept",
+          "title": "미해결도, 기록의 일부",
+          "caption": "C1 서명지 작업까지 구현 · 이후 단계는 제작 예정",
+          "eyebrow": "CURRENT PLAYABLE SLICE"
+        }
+      ],
+      "technicalValidation": {
+        "source": "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/validation.json",
+        "fullDecodeReportedByProductionValidator": true,
+        "integratedLUFS": -27.13,
+        "truePeakDBTP": -14.87
+      }
+    }
+  ],
+  "finalArtifacts": {
+    "editTimeline": {
+      "path": "docs/media/cinematic-gameplay-m6/edit-timeline.json",
+      "sha256": "7d046b93f8999d4e1dbea374376610b0b604546d57f4d4535c7118d2327b7f09",
+      "bytes": 7012
+    },
+    "cinematicCaptions": {
+      "path": "docs/media/cinematic-gameplay-m6/cinematic.ass",
+      "sha256": "63a93745cbc526a9c1ab92a0ef39def8186b7ee8fa09e76d0d8b37c4818eeac5",
+      "bytes": 5055
+    },
+    "methodCaptions": {
+      "path": "docs/media/cinematic-gameplay-m6/gameplay-method.ass",
+      "sha256": "f24ad4410e1d8d698e5887ae7cb5714dd5a568ce3f3a51a59978d256cc785639",
+      "bytes": 8516
+    },
+    "productionValidation": "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/validation.json",
+    "productionReceipt": "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/mcp-production-receipt.json"
+  },
+  "finalInspectedSamples": {
+    "contactSheets": [
+      "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/cinematic-contact-sheet.jpg",
+      "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/gameplay-method-contact-sheet.jpg"
+    ],
+    "methodFullScaleFrameIndices": [
+      240,
+      750,
+      1000,
+      1200,
+      1380,
+      1409,
+      1410,
+      1416,
+      1590
+    ],
+    "fps": 30,
+    "boundaryEvidence": [
+      "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/boundary-1409.png",
+      "_workspace/current/systems/tech-verification/cinematic-gameplay-m6/boundary-1410.png"
+    ],
+    "temporaryInspectionFrames": "/tmp/m6-final-independent-{frame}.png are local inspection outputs, not durable deliverables; regenerate from final movie hash and frame index."
+  },
+  "resolvedFirstRenderFindings": [
+    {
+      "id": "M6-E01",
+      "issue": "At method frame1409 (46.966667s), saved-result image appeared under ready/not-yet-saved caption; two cached native segments were one frame short.",
+      "resolution": "Final video now has exactly1620 frames. Frame1409 remains preview/ready,1410 is the boundary fade to black,1416 is saved-result with correct caption. Production validator records exact-duration segment alignment.",
+      "status": "resolved-in-final-hash"
+    },
+    {
+      "id": "M6-E02",
+      "issue": "Primary body/caption/rule text was22–28px and3s body events began late.",
+      "resolution": "Explicit ASS overrides make primary captions/rule labels32px or larger. Three-second body events now span their full nominal segment without an independent subtitle fade. Fullscale samples fit; segment-level cut fades still reduce fully illuminated dwell. Auxiliary metadata remains16–18px.",
+      "status": "resolved-for-primary-font-and-nominal-event-span"
+    },
+    {
+      "id": "M6-E03",
+      "issue": "Contact sheet contained unused black grid cells.",
+      "resolution": "Final sheets have exact rows with no unused black tiles.",
+      "status": "resolved"
+    }
+  ],
+  "finalChecks": [
+    {
+      "id": "file-identity-duration",
+      "result": "pass",
+      "evidence": "Independent hashes match validation.json; cinematic36s/1080frames and method54s/1620frames,1280x720/30fps; audio matches film duration."
+    },
+    {
+      "id": "save-boundary-semantics",
+      "result": "pass-sampled-boundary",
+      "evidence": "Ready scene and saved-result excerpt separated at47.0s; no observed premature saved-result caption/image mismatch in reviewed boundary frames."
+    },
+    {
+      "id": "source-labels-and-stage-claims",
+      "result": "pass-sampled",
+      "evidence": "Manual stage rules, restored native continuation and generated previz are labelled. Current implementation ends at C1 signature; no C1b3 playable unlock shown."
+    },
+    {
+      "id": "mask-and-public-values",
+      "result": "pass-sampled",
+      "evidence": "Trial selected values and repeated summary values are covered in fullscale samples; existing lower-paper mask remains in trial/copy/saved samples. No every-frame guarantee."
+    },
+    {
+      "id": "caption-font-fit",
+      "result": "pass-sampled",
+      "evidence": "Primary text >=32px using ASS overrides; sampled Korean glyphs intact, <=2 lines, no off-frame body text. Auxiliary source labels16px and eyebrows18px are metadata."
+    },
+    {
+      "id": "caption-dwell-and-contrast",
+      "result": "partial",
+      "evidence": "Three-second body ASS events span3s nominally; global cut fades shorten fully illuminated dwell. Numerical4.5:1 contrast has not been measured."
+    },
+    {
+      "id": "audio",
+      "result": "technical-only-listening-pending",
+      "evidence": "Production validator reports cinematic-27.19LUFS/-15.73dBTP and method-27.13LUFS/-14.87dBTP. Local deterministic filtered noise is used; generated audio excluded. No subjective listening performed."
+    },
+    {
+      "id": "muted-understanding",
+      "result": "pass-sampled-semantics",
+      "evidence": "Actions, status and scope are conveyed visually and in captions without an audio-only instruction; no human comprehension test or separate reduced-motion edit reviewed."
+    }
+  ],
+  "verdict": {
+    "result": "PASS_SCOPED_EDITORIAL_SAMPLE",
+    "universalAcceptancePass": false,
+    "remaining": [
+      "Audio listening and human immersion not performed.",
+      "Numerical contrast and continuous fully readable3s dwell not certified.",
+      "No separate reduced-motion film reviewed.",
+      "No exhaustive all-frame generated-artifact or spoiler audit.",
+      "Original fresh T0b3/ConfirmPatrol footage goal replaced by explicitly labelled rules and restored-state examples."
+    ],
+    "runtimeEligible": false,
+    "commercialReleaseEligible": false
+  }
+}

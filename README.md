@@ -6,6 +6,17 @@
 
 ![README hero — 은포항 야경 컨셉 (프리비즈, 게임플레이 아님)](docs/media/readme-hero.jpg)
 
+## 인트로와 플레이 방식 영상 · M6
+
+[![36초 시네마틱 인트로 — 생성 프리비즈와 실제 플레이 발췌 편집](docs/media/cinematic-gameplay-m6/poster-cinematic.jpg)](docs/media/cinematic-gameplay-m6/cinematic.mp4)
+
+[36초 시네마틱](docs/media/cinematic-gameplay-m6/cinematic.mp4) · [54초 플레이 방식](docs/media/cinematic-gameplay-m6/gameplay-method.mp4) · [두 편 함께 보기](docs/media/cinematic-gameplay-m6/index.html)
+
+Higgsfield **MCP**로 만든 4개 샷에 M5 Unity 실제 녹화, 한국어 안내와 조용한 환경음을 편집했습니다. 당직실 인트로부터 관찰·시험·사본 보존·기록 저장까지 보여주며, T0 → C1 순찰 → 서명지 작업의 해금 조건을 설명합니다. 앞선 해금은 규칙 설명이고 실제 녹화의 순찰 전환은 저장 상태 복원입니다. 연속 플레이 녹화나 새 런타임 구현의 증거가 아닙니다. 현재 플레이 범위는 **C1-b2까지**이며 이후 단계는 제작 예정입니다.
+
+[제작·출처 기록](assets/generated/previz/cinematic-gameplay-m6/provenance.json) · [편집 검수](_workspace/current/systems/tech-verification/cinematic-gameplay-m6/editorial-review.md)
+
+
 ## 한 줄 소개
 
 폐국을 3주 앞둔 조수기록국의 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.

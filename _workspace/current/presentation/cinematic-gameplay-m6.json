@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 1,
+  "id": "cinematic-gameplay-m6",
+  "status": "current-authored-production-contract",
+  "generationStatus": "completed-final-media-produced-see-production-receipt",
+  "nativeChangeScope": "none; film production only",
+  "sources": [
+    "planning/campaign.json",
+    "systems/data/t0/beats.json",
+    "planning/c1-patrol-contract.json",
+    "planning/c1-signature-contract.json",
+    "presentation/intro-gameplay-m5.json",
+    "presentation/intro-gameplay-m5-video-review.md",
+    "production/intro-gameplay-m5-status.md",
+    "qa/intro-gameplay-m5-rights-review.md",
+    "unity/Unknown/Assets/_Project/Sim/T0Simulation.cs",
+    "unity/Unknown/Assets/_Project/Sim/C1PatrolDefinition.cs",
+    "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs"
+  ],
+  "providerRoute": {
+    "requested": "official Higgsfield MCP",
+    "directorReportedEndpoint": "https://mcp.higgsfield.ai/mcp",
+    "actualToolModelJob": "Official Higgsfield MCP generate_video / seedance_2_0_mini; four completed jobs in systems/tech-verification/cinematic-gameplay-m6/mcp-production-receipt.json",
+    "imageProviderIfExtraKeyframesNeeded": "god-tibo-imagen",
+    "generationQuoteStatus": "Receipt records15credits per job,60total and60 observed balance delta; production-owned provider audit, not independent billing verification.",
+    "shotCount": 4,
+    "requestedSecondsPerShot": 6,
+    "rawRequestedSeconds": 24,
+    "clipsReusedAcrossFilms": true
+  },
+  "implementedUnlockChain": [
+    {
+      "beat": "t0-b1",
+      "implemented": true,
+      "prerequisites": [],
+      "requirements": "handover hb-l1/l2/l3 viewed; transfer tl-r1/r2/r3 viewed; plate-zero loaded in workbench-standing-slot; transfer-list-entry recorded once as written or blank",
+      "commitCommand": null,
+      "publicationRule": "availability is predicate-driven; no invented confirm/seal; use a verified persisted capture if described as saved",
+      "publicCaption": "자료를 읽고 목록 처리를 기록합니다.",
+      "next": "t0-b2"
+    },
+    {
+      "beat": "t0-b2",
+      "implemented": true,
+      "prerequisites": [
+        "t0-b1"
+      ],
+      "requirements": "hub-uncovered-1/2/3 all marked and one evidence medium attached per area",
+      "commitCommand": null,
+      "publicationRule": "read-only circuit marking; no fake citation-confirm button or seal",
+      "publicCaption": "기록 범위와 근거를 표시합니다.",
+      "next": "t0-b3"
+    },
+    {
+      "beat": "t0-b3",
+      "implemented": true,
+      "prerequisites": [
+        "t0-b2"
+      ],
+      "requirements": "plate and ledger citations pinned; different sourceType AND rootOriginId; standard-plate verification copy; fixed gap endpoints",
+      "commitCommand": "CiteToBoard",
+      "publicationRule": "accepted Store.WriteAsync then Journal=candidate; t0-b3 IsComplete enables explicit EnterPatrol; not auto-enter",
+      "publicCaption": "기록 저장 완료 → C1 이동",
+      "next": "c1-b1"
+    },
+    {
+      "beat": "c1-b1",
+      "implemented": true,
+      "prerequisites": [
+        "t0-b3"
+      ],
+      "requirements": "two authored observations; valid current routing configuration; source attribution condition acknowledged; non-stale preview; exact solution omitted from public captions",
+      "commitCommand": "ConfirmPatrol",
+      "publicationRule": "accepted atomic save publishes gateAccess + journal condition + cp-c1-b1; then explicit EnterSignature",
+      "publicCaption": "순찰 기록 저장 완료 → 서명지 작업",
+      "next": "c1-b2"
+    },
+    {
+      "beat": "c1-b2",
+      "implemented": true,
+      "prerequisites": [
+        "c1-b1"
+      ],
+      "requirements": "both observations; separated; both copies; obscured region marked; explicit comparison; proof selected; matching confirm subject and region",
+      "commitCommand": "ConfirmSignature",
+      "publicationRule": "accepted atomic save publishes committed/copiesFiled/regionFiled/bandFiled/proofFiled/cp-c1-b2; no playable later-beat handoff",
+      "publicCaption": "서명지 대조 기록 저장 완료",
+      "next": null
+    }
+  ],
+  "plannedOnly": [
+    "c1-b3",
+    "c1-b4",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "E0"
+  ],
+  "shots": [
+    {
+      "id": "m6-s1-duty-room",
+      "role": "cinematic-intro",
+      "canon": "pre-t0-b1",
+      "intent": "조용한 당직실이 아직 시작하지 않은 일의 책임을 느끼게 한다.",
+      "durationMs": 6000,
+      "reference": "assets/generated/2d/concept/intro-m5-r03/image.png",
+      "camera": {
+        "lensEquivalentMm": 35,
+        "rollDegrees": 0,
+        "previzMove": "single restrained push-in; target apparent frame scale change <=3%; no cut",
+        "nativeMove": "none; existing fixed-camera unchanged"
+      },
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 1500,
+          "event": "빈 당직실과 검은 창밖을 읽을 여유"
+        },
+        {
+          "startMs": 1500,
+          "endMs": 4500,
+          "event": "아주 느린 접근으로 닫힌 무지 장부·수화기·빈 트레이에 주의"
+        },
+        {
+          "startMs": 4500,
+          "endMs": 6000,
+          "event": "움직임을 멈추고 다음 실제 화면을 위한 정적 여백"
+        }
+      ],
+      "audioCue": "coastal-room-tone; no narration necessary",
+      "vfxRef": "rain_window atmosphere reference only; no simulated water-level change",
+      "animRef": "static-props",
+      "motionRef": "previz-only-push-in",
+      "immersionTarget": 3,
+      "prompt": "Create a six-second cinematic concept shot, not game footage, using the supplied clean duty-room reference. Before any investigation, the room is empty. Preserve the blank navy closed ledger, unlettered telephone dial, empty paper tray, low window, desk and lamp exactly; do not add a sheet to the tray. A single very restrained forward camera approach, no more than roughly three percent apparent scale increase, starts after the opening hold and settles before the end. Keep the right third as calm dark space. Tiny coastal rain outside is atmospheric only; no water-level event or factual discovery. Original restrained coastal archive materials: matte weathered blue-grey metal, downward corrosion, fine salt at joints, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, blank paper #E7E3D8, a steady ochre #E2AF62 accent under eight percent. Large legible silhouettes. No text, letters, numerals, handwriting, signatures, logos, watermark, subtitles, UI, HUD, diagrams, readable values, named people, faces, human hands, success stamp, magical effect, glowing clue, new document, reveal, time-gap diagram, solved puzzle, autonomous switch movement, door unlocking, drawer opening, paper cleaning or separation. Never erase, lighten or move an opaque lower-paper mask. No camera shake, whip pan, Dutch angle, rack focus, flashing lamp, neon, weapon or new machinery."
+    },
+    {
+      "id": "m6-s2-observe",
+      "role": "cinematic-observation",
+      "canon": "c1-b2-after-explicit-entry",
+      "intent": "재료를 먼저 살피는 행위가 질문을 만든다는 감각.",
+      "durationMs": 6000,
+      "reference": "assets/generated/2d/concept/c1-playflow-m5-r01/image.png",
+      "camera": {
+        "lensEquivalentMm": 50,
+        "rollDegrees": 0,
+        "previzMove": "restrained lateral move <=3% frame width; stable prop geometry",
+        "nativeMove": "none"
+      },
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 2000,
+          "event": "연결된 낮은 판독기와 붙은 두 장을 함께 제시"
+        },
+        {
+          "startMs": 2000,
+          "endMs": 4500,
+          "event": "빛과 재질로 관찰 영역만 읽게 함; 가림은 그대로"
+        },
+        {
+          "startMs": 4500,
+          "endMs": 6000,
+          "event": "고정 홀드로 실제 관찰 UI를 읽을 여백"
+        }
+      ],
+      "audioCue": "room-tone plus one quiet paper-touch foley only on actual input insert",
+      "vfxRef": "none; opaque mask invariant",
+      "animRef": "static-overlapped-papers",
+      "motionRef": "previz-only-lateral-drift-target",
+      "immersionTarget": 4,
+      "prompt": "Create a six-second cinematic concept of careful observation using the approved reader reference. Keep the circular reader, physically connected arm and magnifier, shallow support and two offset blank rectangular sheets stationary. The sheets stay stuck together throughout. Preserve the opaque dark lower-quarter masking shape with the same extent and opacity in every frame. Make one restrained lateral camera move no more than three percent of the frame width and settle for the last one and a half seconds; do not reveal an unseen side or alter machinery. Use only stable material light, not a revelation effect. Keep empty dark space on the right for later manually rendered captions. Remove no stains and invent no readable evidence. Original restrained coastal archive materials: matte weathered blue-grey metal, downward corrosion, fine salt at joints, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, blank paper #E7E3D8, a steady ochre #E2AF62 accent under eight percent. Large legible silhouettes. No text, letters, numerals, handwriting, signatures, logos, watermark, subtitles, UI, HUD, diagrams, readable values, named people, faces, human hands, success stamp, magical effect, glowing clue, new document, reveal, time-gap diagram, solved puzzle, autonomous switch movement, door unlocking, drawer opening, paper cleaning or separation. Never erase, lighten or move an opaque lower-paper mask. No camera shake, whip pan, Dutch angle, rack focus, flashing lamp, neon, weapon or new machinery."
+    },
+    {
+      "id": "m6-s3-trial-surface",
+      "role": "gameplay-operation-context",
+      "canon": "c1-b2-test-context-only",
+      "intent": "판단 전에 조건을 시험하고 돌아올 수 있다는 절제된 손맛.",
+      "durationMs": 6000,
+      "reference": "assets/generated/2d/ui/m5-direction-surface-r01/reference-frame.png",
+      "camera": {
+        "lensEquivalentMm": 65,
+        "rollDegrees": 0,
+        "previzMove": "locked macro frame; focus stays on control and material",
+        "nativeMove": "none"
+      },
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 2000,
+          "event": "눈금 없는 조절부와 청흑 금속 면"
+        },
+        {
+          "startMs": 2000,
+          "endMs": 4000,
+          "event": "실제 UI 입력을 별도 합성할 저대비 여백 유지"
+        },
+        {
+          "startMs": 4000,
+          "endMs": 6000,
+          "event": "제어는 원위치·상태는 그대로; 가역 시험을 설명할 홀드"
+        }
+      ],
+      "audioCue": "one soft relay/knob foley only when paired with visible actual input",
+      "vfxRef": "none; no result implied by light",
+      "animRef": "stationary-control",
+      "motionRef": "locked-frame",
+      "immersionTarget": 3,
+      "prompt": "Create a six-second locked macro cinematic reference of the approved reader control and dark worn metal. Use the supplied closeup as material and geometry context, but frame away from all paper and document surfaces. Show a physically attached, completely unmarked mechanical control and quiet low-contrast blue-black metal. The control does not turn, a hand never appears, no setting is selected, and no light changes to announce success. Camera and focus remain locked for the entire six seconds. Preserve a broad quiet right-side surface for a separate real game UI insert in the edit. This is a tactile trial-control backdrop, not a performed action. Original restrained coastal archive materials: matte weathered blue-grey metal, downward corrosion, fine salt at joints, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, blank paper #E7E3D8, a steady ochre #E2AF62 accent under eight percent. Large legible silhouettes. No text, letters, numerals, handwriting, signatures, logos, watermark, subtitles, UI, HUD, diagrams, readable values, named people, faces, human hands, success stamp, magical effect, glowing clue, new document, reveal, time-gap diagram, solved puzzle, autonomous switch movement, door unlocking, drawer opening, paper cleaning or separation. Never erase, lighten or move an opaque lower-paper mask. No camera shake, whip pan, Dutch angle, rack focus, flashing lamp, neon, weapon or new machinery."
+    },
+    {
+      "id": "m6-s4-record-context",
+      "role": "recording-and-unlock-context",
+      "canon": "c1-b2-context-without-outcome",
+      "intent": "작업의 결과는 화려한 보상이 아니라 남겨지는 기록이라는 무게.",
+      "durationMs": 6000,
+      "reference": "assets/generated/2d/concept/c1-playflow-m5-r01/image.png",
+      "camera": {
+        "lensEquivalentMm": 50,
+        "rollDegrees": 0,
+        "previzMove": "gentle approach to empty record holder <=3% scale; all props stationary",
+        "nativeMove": "none"
+      },
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 2000,
+          "event": "빈 사각 기록 카드와 어두운 주변, 종이 미해결 부분은 가림"
+        },
+        {
+          "startMs": 2000,
+          "endMs": 4000,
+          "event": "빈 기록 공간으로 느리게 주의를 모음; 생성 글자 없음"
+        },
+        {
+          "startMs": 4000,
+          "endMs": 6000,
+          "event": "정적 홀드; 상태 문구는 편집에서 검증된 UI로만 추가"
+        }
+      ],
+      "audioCue": "quiet paper settle; restrained tonal swell allowed only over accepted-receipt edit",
+      "vfxRef": "none; no seal_confirm or unlock effect in generated layer",
+      "animRef": "blank-record-holder-static",
+      "motionRef": "previz-only-push-in",
+      "immersionTarget": 4,
+      "prompt": "Create a six-second cinematic recording-context shot using the same archival reader materials and approved workbench reference. Focus composition on the separate EMPTY unlettered rectangular note card in its metal holder and a calm dark desk area. The card stays blank and stationary for the entire shot. If the reader papers are in frame, keep them overlapped and preserve the same completely opaque lower mask with no cleaning. A very gentle camera approach, under three percent apparent scale change, settles for the final two seconds. No new card, duplicate, stamp, handwriting, door action or completion event occurs. This is visual context for a real saved-receipt overlay that will be added separately, not a visual proof of saving or unlocking. Original restrained coastal archive materials: matte weathered blue-grey metal, downward corrosion, fine salt at joints, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, blank paper #E7E3D8, a steady ochre #E2AF62 accent under eight percent. Large legible silhouettes. No text, letters, numerals, handwriting, signatures, logos, watermark, subtitles, UI, HUD, diagrams, readable values, named people, faces, human hands, success stamp, magical effect, glowing clue, new document, reveal, time-gap diagram, solved puzzle, autonomous switch movement, door unlocking, drawer opening, paper cleaning or separation. Never erase, lighten or move an opaque lower-paper mask. No camera shake, whip pan, Dutch angle, rack focus, flashing lamp, neon, weapon or new machinery."
+    }
+  ],
+  "films": [
+    {
+      "id": "m6-cinematic-gameplay",
+      "targetDurationMs": 36000,
+      "adjustableToActualMedia": true,
+      "label": "시네마틱 연출 프리비즈 · 실제 게임 화면 포함 · 편집 구성",
+      "generatedCameraMotion": "allowed in generated shots only",
+      "segments": [
+        {
+          "startMs": 0,
+          "endMs": 6000,
+          "sourceType": "generated",
+          "source": "m6-s1-duty-room",
+          "intent": "처음의 조용한 책임",
+          "caption": "마지막 당직이 시작됩니다."
+        },
+        {
+          "startMs": 6000,
+          "endMs": 12000,
+          "sourceType": "native-existing-or-fresh-capture",
+          "source": "t0-b3-accepted-save-to-EnterPatrol",
+          "intent": "인용을 저장한 뒤 다음 작업이 가능함",
+          "caption": "저장된 기록에서 다음 작업으로."
+        },
+        {
+          "startMs": 12000,
+          "endMs": 18000,
+          "sourceType": "native-existing-or-fresh-capture",
+          "source": "c1-b1-accepted-ConfirmPatrol-to-EnterSignature",
+          "intent": "출처 조건과 권한이 함께 남음",
+          "caption": "순찰 기록 저장 후, 서명지 작업으로."
+        },
+        {
+          "startMs": 18000,
+          "endMs": 24000,
+          "sourceType": "generated",
+          "source": "m6-s2-observe",
+          "intent": "불확실한 표면을 먼저 관찰",
+          "caption": "관찰"
+        },
+        {
+          "startMs": 24000,
+          "endMs": 30000,
+          "sourceType": "generated",
+          "source": "m6-s3-trial-surface",
+          "intent": "가역 시험의 차분한 긴장",
+          "caption": "시험"
+        },
+        {
+          "startMs": 30000,
+          "endMs": 36000,
+          "sourceType": "generated-plus-verified-native-overlay",
+          "source": "m6-s4-record-context",
+          "intent": "미해결 부분을 남기면서 기록함",
+          "caption": "기록은 남고, 미해결은 가려진 채 남습니다."
+        }
+      ]
+    },
+    {
+      "id": "m6-gameplay-method",
+      "targetDurationMs": 54000,
+      "adjustableToActualMedia": true,
+      "label": "플레이 방법 안내 · 실제 화면과 연출 프리비즈의 편집 구성",
+      "generatedCameraMotion": "native UI frame stays fixed/readable; hold or crop generated backdrop as needed",
+      "segments": [
+        {
+          "startMs": 0,
+          "endMs": 6000,
+          "sourceType": "generated-plus-manual-type",
+          "source": "m6-s1-duty-room",
+          "intent": "세 동사를 먼저 소개",
+          "caption": "관찰 · 시험 · 기록"
+        },
+        {
+          "startMs": 6000,
+          "endMs": 15000,
+          "sourceType": "native-existing-or-fresh-capture",
+          "source": "t0-b3-accepted-save-to-EnterPatrol",
+          "intent": "완료·저장·명시적 이동의 순서",
+          "caption": "기록 저장 완료 → C1 이동"
+        },
+        {
+          "startMs": 15000,
+          "endMs": 24000,
+          "sourceType": "native-existing-or-fresh-capture",
+          "source": "c1-b1-observation-preview-accepted-save-to-EnterSignature",
+          "intent": "관찰과 출처 조건을 저장한 뒤 다음 작업이 가능함",
+          "caption": "관찰과 출처 조건 확인 → 저장 → 서명지 작업"
+        },
+        {
+          "startMs": 24000,
+          "endMs": 30000,
+          "sourceType": "generated-plus-native-ui",
+          "source": "m6-s2-observe",
+          "intent": "현재 선택 자료만 관찰",
+          "caption": "자료를 선택해 살펴보세요."
+        },
+        {
+          "startMs": 30000,
+          "endMs": 36000,
+          "sourceType": "generated-plus-native-ui",
+          "source": "m6-s3-trial-surface",
+          "intent": "조건 선택과 시험은 직접 입력; 정답 미노출",
+          "caption": "조건을 시험하고 되돌릴 수 있습니다."
+        },
+        {
+          "startMs": 36000,
+          "endMs": 42000,
+          "sourceType": "generated-plus-native-ui",
+          "source": "m6-s4-record-context",
+          "intent": "사본·가림·대조를 기록 후보로 구분",
+          "caption": "사본과 미해결 부분을 남기고 대조합니다."
+        },
+        {
+          "startMs": 42000,
+          "endMs": 51000,
+          "sourceType": "native-existing-or-fresh-capture",
+          "source": "c1-b2-confirm-pending-accepted",
+          "intent": "후보/저장대기/수락을 분리; 마스크 유지",
+          "caption": "저장 확인 중 / 저장 완료"
+        },
+        {
+          "startMs": 51000,
+          "endMs": 54000,
+          "sourceType": "manual-type-on-verified-final-native-still",
+          "source": "c1-b2-current-slice-end",
+          "intent": "현재 구현 범위의 종료를 정직하게 표시",
+          "caption": "현재 구현: T0부터 C1 서명지 작업까지"
+        }
+      ]
+    }
+  ],
+  "audioPlan": {
+    "status": "target; no M6 audio generated/listened yet",
+    "layers": [
+      "coastal room tone",
+      "paper/relay foley anchored to actual input",
+      "restrained tonal swell only after accepted save"
+    ],
+    "voiceover": "none by default; captions carry all meaning",
+    "provider": "Higgsfield MCP audio generation only if connected schema supports it; otherwise reuse only listening-approved original assets or publish silent",
+    "existingUnreviewedAudio": "remain disabled",
+    "mixTargets": {
+      "integratedLufs": -20,
+      "truePeakDbtp": -1,
+      "roomToneRelativeToFoleyDb": -8,
+      "swellMaxDurationMs": 1200,
+      "swellFadeOutMs": 500
+    },
+    "defaultSilentRawVideo": true,
+    "requiresListeningReview": true,
+    "movieAudioDoesNotPromoteRuntimeAudio": true
+  },
+  "acceptance": [
+    {
+      "id": "M6-P01",
+      "requirement": "Exactly four requested six-second generator shots; actual provider/MCP tool, model, job, request/actual dimensions and duration, prompt/reference hashes, quote and known charges recorded. Quote acceptance precedes generation; unknown cost stays unknown.",
+      "status": "production-receipt-recorded",
+      "evidence": "Four completed official MCP jobs, actual sizes/durations, quoted60credits and balance delta recorded in production receipt; receipt audited by producer.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P02",
+      "requirement": "Cinematic final 30–40s and method final 45–60s after measuring edit; targets36/54s may adapt to real footage without inventing missing actions.",
+      "status": "pass-measured",
+      "evidence": "Independent ffprobe:36s/1080frames and54s/1620frames; final hashes match production validator.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P03",
+      "requirement": "No generated text, values, signature/name, new evidence or solution. Public captions exclude correct humidity/routing values and later revealed identities.",
+      "status": "pass-sampled",
+      "evidence": "Final sampled native trial/copy/ready/saved frames conceal selected values; generated/native frames and captions inspected, not every frame.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P04",
+      "requirement": "A standalone intro excerpt respects pre-t0-b1. Four-hour gap is never established before a t0-b3 native reveal; no C1 prop in the fresh intro.",
+      "status": "pass-sampled-intro-context",
+      "evidence": "Final intro samples do not state four-hour gap or show a signature reveal; no separate pre-t0-b1 runtime intro gate was tested.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P05",
+      "requirement": "Both real unlock transitions have linked before/save-accepted/after snapshots and explicit player continuation. No unlock claim during pending/failure/stale receipt.",
+      "status": "adapted-original-evidence-not-met",
+      "evidence": "Source lacks fresh T0b3/ConfirmPatrol acceptance. Earlier unlocks shown as manual rules; native restored-state continuation and separate saved outcome only.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P06",
+      "requirement": "T0b1/b2 show no fabricated commit/seal; c1-b2 shows no playable c1-b3 unlock. Planned chapters appear only in a separately labelled optional roadmap, not these final films.",
+      "status": "pass-sampled",
+      "evidence": "Rules contain no fabricated T0b1/b2 commit; final scope ends at C1 signature and later stages remain planned.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P07",
+      "requirement": "Opaque lower mask survives all final C1 frames and actual native final state. Reject or occlude a bad generated paper shot; never use cleaning/light as success. Two copies do not become independent origins.",
+      "status": "pass-sampled-not-exhaustive",
+      "evidence": "Original lower-paper mask persists in inspected trial/copy/saved frames; no all-frame certification.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P08",
+      "requirement": "Cinematic camera motion appears only in labelled previz. Native capture retains fixed framing and readable focus/input; no native camera/system changes.",
+      "status": "pass-sampled",
+      "evidence": "Generated camera motion explicitly labelled previz; native footage keeps fixed source framing in the composition; no M6 runtime changes.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P09",
+      "requirement": "All claims are native UI or manual typography anchored to verified evidence; typography is rendered outside provider output, with no missing Korean glyphs or text deformation.",
+      "status": "pass-sampled",
+      "evidence": "Manual ASS typography and final Korean glyphs verified at samples; state claims reference native UI or labelled rules.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P10",
+      "requirement": "At1280x720 public caption >=32px target, <=2 lines, minimum3s readable dwell, contrast>=4.5:1 after native composite measurement. Do not claim values measured before inspection.",
+      "status": "partial-measured-font-only",
+      "evidence": "Primary32px or larger and frame fit verified;3s nominal body events include global cut fades. Continuous3s fully readable dwell and numerical4.5:1 contrast unmeasured.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P11",
+      "requirement": "Generated/native segments and editorial time cuts clearly labelled; completed walkthrough time and immersion not inferred from montage duration.",
+      "status": "pass-sampled",
+      "evidence": "Generated/native/restored-state/source cuts labelled; montage length not asserted as playthrough time or immersion.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P12",
+      "requirement": "Audio provenance/listening review recorded; no critical audio-only clue; relay/foley follows visible actual action; success swell only on accepted-save insert. Silent version provided if audio unavailable.",
+      "status": "partial-technical-listening-pending",
+      "evidence": "Local deterministic filtered noise used; generated audio excluded. Final loudness/peak recorded; subjective listening not performed; initial-20LUFS target adapted to-27LUFS.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P13",
+      "requirement": "Method film remains understandable muted. Captions/readability not disrupted by moving backdrop; reduced-motion edit is available with held frames/cuts.",
+      "status": "partial-muted-semantics",
+      "evidence": "Muted sampled frames convey method; no human comprehension review or separate reduced-motion film inspected.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P14",
+      "requirement": "No clip or sound is automatically runtime-promoted. Internal prototype rights limits inherited; commercial release clearance and human G4 immersion remain separate and unmeasured.",
+      "status": "pass-declared-boundary",
+      "evidence": "Timeline and receipts keep runtimeEligible:false and commercialReleaseEligible:false; humanG4/runtime performance not measured.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    },
+    {
+      "id": "M6-P15",
+      "requirement": "Final storyboard maps observed actual clip times to adopted/rejected choices and generated-resource/native references. Missing native receipt footage blocks only the corresponding unlock claim, not other editing work.",
+      "status": "pass-final-edit-map",
+      "evidence": "Final edit-timeline.json and independent editorial finalMovies.segments map exact actual source intervals. Original proposed intervals retained as history.",
+      "reviewRef": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json"
+    }
+  ],
+  "evidenceLimits": {
+    "allM6GenerationAndFinalRender": "Produced; final export hash/metadata and sampled editorial review complete. Individual acceptance limitations remain.",
+    "priorM5NativeEvidence": "existing independently recorded baseline, not M6 pass",
+    "humanImmersionMeasured": false,
+    "runtimePerformanceMeasuredByFilm": false,
+    "commercialReleaseClearance": false
+  },
+  "executionAdaptation": {
+    "approvedBy": "root game-production-director",
+    "reason": "Existing native source begins from a resumed already-completed patrol state and contains no fresh T0b3/ConfirmPatrol save events; no new capture required. Preserve truth with explicit rule cards and restored-state examples.",
+    "originalTargetsPreserved": true,
+    "earlierUnlockPresentation": "manual rule explanation only, separate from native recorded events",
+    "ruleCards": [
+      {
+        "caption": "진행 규칙 · 자료 열람 → 범위 표시 → 첫 판독",
+        "note": "T0b1/b2 have no commit/seal command"
+      },
+      {
+        "caption": "진행 규칙 · T0 기록 저장 후 C1 이동 가능",
+        "note": "rule derived from code/campaign, not witnessed fresh save in supplied footage"
+      },
+      {
+        "caption": "진행 규칙 · 순찰 기록 저장 후 서명지 작업 가능",
+        "note": "native example shows previously saved patrol state and explicit continuation only"
+      }
+    ],
+    "cinematicSegments": [
+      {
+        "filmStartSeconds": 6,
+        "filmEndSeconds": 12,
+        "replacement": "manual rule cards on S1 backdrop; no live unlock claim"
+      },
+      {
+        "filmStartSeconds": 12,
+        "filmEndSeconds": 18,
+        "replacement": "native13–19s restored patrol continuation excerpt"
+      },
+      {
+        "filmStartSeconds": 30,
+        "filmEndSeconds": 36,
+        "replacement": "S4 with native156–162s saved-result inset or end hold; no live save effect"
+      }
+    ],
+    "methodSegments": [
+      {
+        "filmStartSeconds": 6,
+        "filmEndSeconds": 15,
+        "replacement": "three manual rule cards,3s each, clearly labelled 규칙 안내"
+      },
+      {
+        "filmStartSeconds": 15,
+        "filmEndSeconds": 24,
+        "replacement": "native10–19s restored patrol→signature"
+      },
+      {
+        "filmStartSeconds": 24,
+        "filmEndSeconds": 30,
+        "replacement": "native23–29s observation with S2 as backdrop or3sconcept+3snative"
+      },
+      {
+        "filmStartSeconds": 30,
+        "filmEndSeconds": 36,
+        "replacement": "native60–66s trial with two redactions, or64–70s result-only with summary redaction; wording follows chosen interval"
+      },
+      {
+        "filmStartSeconds": 36,
+        "filmEndSeconds": 42,
+        "replacement": "native88–94s copies/mask with summary redaction"
+      },
+      {
+        "filmStartSeconds": 42,
+        "filmEndSeconds": 51,
+        "replacement": "native156–162.9s saved outcome +2.1s explicit hold; no fabricated pending animation"
+      },
+      {
+        "filmStartSeconds": 51,
+        "filmEndSeconds": 54,
+        "replacement": "159s saved-result frame held with current-slice limit caption"
+      }
+    ],
+    "acceptanceOverrides": [
+      {
+        "id": "M6-P05",
+        "original": "both earlier unlock transitions have captured before/save-accepted/after",
+        "executionRequirement": "Earlier transitions are accurate manual rule explanation; native example clearly labelled restored state; no claim those acceptance events were captured."
+      },
+      {
+        "id": "M6-P15",
+        "executionRequirement": "Missing earlier receipt footage is handled by removing live-transition claims and using rule explanation; final saved outcome is grounded in M5 F02 and labelled excerpt."
+      }
+    ],
+    "generationReport": "root reports four official MCP shots completed; editorial reviewer has not yet inspected these files or final render",
+    "finalReview": "pending"
+  },
+  "finalDelivery": {
+    "cinematic": "docs/media/cinematic-gameplay-m6/cinematic.mp4",
+    "method": "docs/media/cinematic-gameplay-m6/gameplay-method.mp4",
+    "actualTimeline": "docs/media/cinematic-gameplay-m6/edit-timeline.json",
+    "review": "systems/tech-verification/cinematic-gameplay-m6/editorial-review.json",
+    "allAcceptancePassed": false,
+    "runtimeChange": false
+  }
+}

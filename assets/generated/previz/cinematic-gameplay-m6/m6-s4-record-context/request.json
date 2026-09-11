@@ -1,0 +1,29 @@
+{
+  "endpoint": "https://mcp.higgsfield.ai/mcp",
+  "tool": "generate_video",
+  "params": {
+    "model": "seedance_2_0_mini",
+    "count": 1,
+    "aspect_ratio": "16:9",
+    "duration": 6,
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "genre": "drama",
+    "generate_audio": true,
+    "use_unlim": false,
+    "get_cost": false,
+    "prompt": "Six-second cinematic reference of this exact quiet archive workstation with the two blank sheets already present. Both sheets have solid opaque lower-quarter ink-blue bands. Preserve their complete shape, place and opacity on every frame; no contents are revealed. Preserve the same reader, lamp, coastline, empty quiet right-side space and restrained material palette. A very gentle two-percent forward approach, then stillness for the last two seconds. There is no action: no hands, no control motion, no new props, no stamp, no signature, no writing, no door or drawer opening, no glowing clue, no success or unlock graphic. This is a recording context to be edited beside a real accepted-save screen; it itself proves nothing. Sound design: only low coastal wind and distant surf, soft wooden-room resonance and restrained analog electrical hum; no spoken language, no voices, no music, no rhythmic alarm or success chime. The ambience does not convey a clue or an interaction.",
+    "medias": [
+      {
+        "value": "0519fa78-60e9-4b4e-9e28-b7dec64701ff",
+        "role": "start_image"
+      }
+    ]
+  },
+  "reference": {
+    "path": "assets/generated/2d/concept/m6-record-keyframe-r01/image.png",
+    "mediaId": "0519fa78-60e9-4b4e-9e28-b7dec64701ff",
+    "sha256": "a9874dc1bfa0467120c4fa38a7e7b96e667dbe727928ec276818d3ea9a46afa3"
+  },
+  "quotedCredits": 15
+}

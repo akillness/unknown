@@ -1,0 +1,134 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m6-s1-duty-room",
+  "provider": "Higgsfield AI",
+  "provider_route": {
+    "endpoint": "https://mcp.higgsfield.ai/mcp",
+    "transport": "MCP Streamable HTTP",
+    "protocol_version": "2025-03-26",
+    "server": {
+      "name": "Higgsfield AI",
+      "version": "1.0.0",
+      "description": "Higgsfield creative platform for image, video, and audio generation, marketing asset workflows, and Virality Predictor video analysis for attention, engagement, and audience response."
+    },
+    "tool": "generate_video",
+    "authentication": "Existing official Higgsfield CLI access token supplied privately as MCP Bearer authentication; CLI used only for token bootstrap, not video generation.",
+    "official_endpoint_source": "https://github.com/higgsfield-ai/cursor-plugin/blob/develop/mcp.json"
+  },
+  "cli_version_for_token_bootstrap": "1.1.23",
+  "model": "seedance_2_0_mini",
+  "job_id": "1d3c158a-5b45-4f87-a468-0aa48dce0e9f",
+  "submitted_at": "2026-09-11T08:02:07.703Z",
+  "provider_created_at": "2026-09-11T08:02:09.166Z",
+  "recorded_at": "2026-09-11T08:13:06.070Z",
+  "completion_status": "completed",
+  "prompt_file": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/prompt.txt",
+  "prompt_sha256": "02c3e9cdad58dc0a3ef41e229d1db93e4b76add7f533fab827782e70d443c18e",
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r03/image.png",
+      "mediaId": "f14a2c66-eaca-4a98-bf3d-2995a0b7cb98",
+      "sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2",
+      "sha256_verified": true
+    }
+  ],
+  "requested": {
+    "duration_seconds": 6,
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "bitrate_mode": "high",
+    "genre": "noir",
+    "generate_audio": true,
+    "count": 1,
+    "camera": "Roughly three percent maximum apparent scale increase, then settled ending."
+  },
+  "requested_duration_seconds": 6,
+  "actual_duration_seconds": 6.08,
+  "requested_resolution": "720p",
+  "actual_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "actual": {
+    "container_duration_seconds": 6.08,
+    "video_duration_seconds": 6.041667,
+    "video_codec": "h264",
+    "frame_rate": "24/1",
+    "frame_count": 145,
+    "audio_duration_seconds": 6.08,
+    "audio_codec": "aac",
+    "audio_sample_rate_hz": 32000,
+    "audio_channels": 2
+  },
+  "audio_streams": 1,
+  "audio_review": {
+    "audition_status": "pending",
+    "raw_generated_audio_preserved": true,
+    "included_in_final_films": false,
+    "decision": "Raw AAC is excluded from edited final films pending listening approval. Root authors a separate quiet synthetic wind/room bed; its provenance belongs to the edit receipt."
+  },
+  "output_file": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/clip.mp4",
+  "output_sha256": "e956e6802451c6098744921276af83a379155ac47c8f2197a37a70aa38918319",
+  "bytes": 11453498,
+  "source_url": null,
+  "source_url_note": "Account-scoped provider URLs remain in the original status.json; aggregate provenance uses local SHA256-bound output paths.",
+  "credits_quote": 15,
+  "credits_charged": null,
+  "billing_note": "Per-job itemized charge not established. Four-job quote totals 60; batch account balance decreased from 81.18 to 21.18, observed delta60.",
+  "claim": "Generated cinematic concept previz for intro and gameplay context, not engine gameplay, accepted saves, stage-unlock execution, or native motion/accessibility proof.",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "review": {
+    "status": "accepted_for_editorial_previz_only",
+    "method": "Independent visual inspection of the supplied six-frame contact sheet, plus request/status/ffprobe/hash checks.",
+    "intent": "Fresh-game duty-room intro context",
+    "sampleObservation": "Blank navy ledger and room silhouette remain recognisable across the six sampled frames; camera visibly approaches and changes framing.",
+    "requestedCamera": "Roughly three percent maximum apparent scale increase, then settled ending.",
+    "maskStatus": "not_applicable",
+    "camera_conformance": "not_accepted_for_runtime_motion; batch camera travel exceeds the requested restrained-motion intent",
+    "measured_camera_travel_percent": null,
+    "full_frame_mask_audit": false,
+    "limits": [
+      "Sampled-frame preservation is not an exhaustive per-frame evidence-mask audit.",
+      "No user-input, save-command, unlock-trigger, runtime accessibility, performance, or human-playtest validation is established by generated footage.",
+      "No commercial-rights or runtime promotion is granted by this receipt."
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/request.json",
+      "sha256": "07ee5bbb526bfd081c083ee629e44325a1f3872a2f686388288663428641d94e",
+      "bytes": 2409
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/submission.json",
+      "sha256": "9f049fca98a6859389be816042d9e08050647055f5ef715ec924341d726439aa",
+      "bytes": 417
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/status.json",
+      "sha256": "95dcccc5a72b8102bd09091329da220645801e88edd3cfa8f791b7119690deff",
+      "bytes": 5171
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/ffprobe.json",
+      "sha256": "b725fc6456f6fd5ee17e907b77994225c667601fa6bb98505d027fbffda714e9",
+      "bytes": 3526
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/contact-sheet.jpg",
+      "sha256": "c3620135a0d20b2e6f7bda5f209fa3cb722e530173d5ebdc9863251f5c1d42a6",
+      "bytes": 52466
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/prompt.txt",
+      "sha256": "02c3e9cdad58dc0a3ef41e229d1db93e4b76add7f533fab827782e70d443c18e",
+      "bytes": 1638
+    },
+    {
+      "path": "assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/clip.mp4",
+      "sha256": "e956e6802451c6098744921276af83a379155ac47c8f2197a37a70aa38918319",
+      "bytes": 11453498
+    }
+  ]
+}

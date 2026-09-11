@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Cinematic and gameplay-method previz edit; not continuous gameplay evidence",
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "films": {
+    "cinematic": [
+      {
+        "startSeconds": 0,
+        "endSeconds": 6,
+        "source": "1",
+        "duration": 6,
+        "start": 0,
+        "kind": "concept",
+        "title": "마지막 당직",
+        "caption": "바다가 지운 흔적을, 기록으로 잇다.",
+        "eyebrow": "UNKNOWN  /  CINEMATIC STUDY"
+      },
+      {
+        "startSeconds": 6,
+        "endSeconds": 12,
+        "source": "1",
+        "duration": 6,
+        "start": 0,
+        "kind": "rule",
+        "title": "기록이 다음 문을 엽니다",
+        "caption": "T0 기록 결합  →  C1 순찰",
+        "eyebrow": "01  /  진행 규칙"
+      },
+      {
+        "startSeconds": 12,
+        "endSeconds": 18,
+        "source": "native",
+        "duration": 6,
+        "start": 14,
+        "kind": "native",
+        "title": "서명지 작업으로",
+        "caption": "저장된 순찰 기록에서, 다음 작업을 선택합니다.",
+        "eyebrow": "02  /  저장 상태에서 이어하기"
+      },
+      {
+        "startSeconds": 18,
+        "endSeconds": 24,
+        "source": "2",
+        "duration": 6,
+        "start": 0,
+        "kind": "concept",
+        "title": "관찰",
+        "caption": "같은 사건을 가리키는, 서로 다른 흔적.",
+        "eyebrow": "03  /  LOOK CLOSER"
+      },
+      {
+        "startSeconds": 24,
+        "endSeconds": 30,
+        "source": "3",
+        "duration": 6,
+        "start": 0,
+        "kind": "concept",
+        "title": "시험",
+        "caption": "조건을 바꾸고, 결과를 되돌려 확인합니다.",
+        "eyebrow": "04  /  TRY · REVERT"
+      },
+      {
+        "startSeconds": 30,
+        "endSeconds": 33,
+        "source": "4",
+        "duration": 3,
+        "start": 0,
+        "kind": "concept",
+        "title": "기록",
+        "caption": "기록은 남고, 미해결은 가려진 채 남습니다.",
+        "eyebrow": "05  /  LEAVE A TRACE"
+      },
+      {
+        "startSeconds": 33,
+        "endSeconds": 36,
+        "source": "native",
+        "duration": 3,
+        "start": 159,
+        "kind": "native",
+        "title": "기록 · 저장 완료",
+        "caption": "현재 구현 구간은 여기까지입니다.",
+        "eyebrow": "06  /  실제 저장 결과"
+      }
+    ],
+    "gameplay-method": [
+      {
+        "startSeconds": 0,
+        "endSeconds": 6,
+        "source": "1",
+        "duration": 6,
+        "start": 0,
+        "kind": "concept",
+        "title": "관찰 · 시험 · 기록",
+        "caption": "흔적을 읽고, 조건을 시험하고, 근거를 남깁니다.",
+        "eyebrow": "UNKNOWN  /  HOW TO PLAY"
+      },
+      {
+        "startSeconds": 6,
+        "endSeconds": 15,
+        "source": "1",
+        "duration": 9,
+        "start": 0,
+        "kind": "map",
+        "title": "작업을 마치면, 다음 단계로",
+        "caption": "저장 확인 뒤 이동을 직접 선택합니다.",
+        "eyebrow": "01  /  단계별 진행 규칙"
+      },
+      {
+        "startSeconds": 15,
+        "endSeconds": 24,
+        "source": "native",
+        "duration": 9,
+        "start": 12,
+        "kind": "native",
+        "title": "저장된 순찰 기록 → 서명지 작업",
+        "caption": "완료된 기록을 복원한 실제 플레이 장면입니다.",
+        "eyebrow": "02  /  이어하기 · 명시적 이동"
+      },
+      {
+        "startSeconds": 24,
+        "endSeconds": 27,
+        "source": "2",
+        "duration": 3,
+        "start": 0,
+        "kind": "concept",
+        "title": "관찰",
+        "caption": "자료를 선택해 살펴보세요.",
+        "eyebrow": "03  /  OBSERVE"
+      },
+      {
+        "startSeconds": 27,
+        "endSeconds": 30,
+        "source": "native",
+        "duration": 3,
+        "start": 27,
+        "kind": "native",
+        "title": "관찰",
+        "caption": "서로 다른 자료를 열어 출처를 확인합니다.",
+        "eyebrow": "03  /  실제 조작 발췌"
+      },
+      {
+        "startSeconds": 30,
+        "endSeconds": 33,
+        "source": "3",
+        "duration": 3,
+        "start": 0,
+        "kind": "concept",
+        "title": "시험",
+        "caption": "조건을 선택하고, 결과를 확인합니다.",
+        "eyebrow": "04  /  TEST"
+      },
+      {
+        "startSeconds": 33,
+        "endSeconds": 36,
+        "source": "native",
+        "duration": 3,
+        "start": 63,
+        "kind": "trial",
+        "title": "시험",
+        "caption": "시험 전과 후를 확인합니다. 설정값은 가렸습니다.",
+        "eyebrow": "04  /  실제 화면 · 설정값 가림"
+      },
+      {
+        "startSeconds": 36,
+        "endSeconds": 39,
+        "source": "4",
+        "duration": 3,
+        "start": 0,
+        "kind": "concept",
+        "title": "기록",
+        "caption": "사본을 남기고, 가려진 부분도 기록합니다.",
+        "eyebrow": "05  /  RECORD"
+      },
+      {
+        "startSeconds": 39,
+        "endSeconds": 42,
+        "source": "native",
+        "duration": 3,
+        "start": 89,
+        "kind": "copies",
+        "title": "사본 보존",
+        "caption": "원본의 가림을 유지하며 사본을 남깁니다.",
+        "eyebrow": "05  /  실제 조작 · 설정값 가림"
+      },
+      {
+        "startSeconds": 42,
+        "endSeconds": 47,
+        "source": "native",
+        "duration": 5,
+        "start": 143,
+        "kind": "ready",
+        "title": "확정 준비",
+        "caption": "아직 저장 전입니다. 결과와 근거를 검토합니다.",
+        "eyebrow": "06  /  준비 상태 · 저장 전"
+      },
+      {
+        "startSeconds": 47,
+        "endSeconds": 51,
+        "source": "native",
+        "duration": 4,
+        "start": 158,
+        "kind": "native",
+        "title": "기록 · 저장 완료",
+        "caption": "저장된 결과를 확인합니다. 가림은 유지됩니다.",
+        "eyebrow": "07  /  별도 발췌 · 저장 결과"
+      },
+      {
+        "startSeconds": 51,
+        "endSeconds": 54,
+        "source": "4",
+        "duration": 3,
+        "start": 0,
+        "kind": "concept",
+        "title": "미해결도, 기록의 일부",
+        "caption": "C1 서명지 작업까지 구현 · 이후 단계는 제작 예정",
+        "eyebrow": "CURRENT PLAYABLE SLICE"
+      }
+    ]
+  },
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "soundtrack": {
+    "source": "locally-authored deterministic filtered pink noise",
+    "rawGeneratedAudioUsed": false,
+    "targetLUFS": -27,
+    "reason": "Generated audio has not received a listening approval"
+  },
+  "evidenceLimits": [
+    "Earlier unlocks are manual rule explanations.",
+    "Native source is an existing three-take montage.",
+    "No M6 Unity changes.",
+    "Generated camera motion is previz only."
+  ]
+}

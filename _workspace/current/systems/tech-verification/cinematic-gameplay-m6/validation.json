@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "scope": "M6 file/media checks, not gameplay tests or human immersion review",
+  "films": {
+    "cinematic": {
+      "sha256": "78970fbe5a1005e8a15cacd8d46019d47667709ec2982f3acc67144643cfefde",
+      "bytes": 7307088,
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1280,
+            "height": 720,
+            "coded_width": 1280,
+            "coded_height": 720,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 31,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 552960,
+            "duration": "36.000000",
+            "bit_rate": "1452997",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1080",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc61.19.101 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1728000,
+            "duration": "36.000000",
+            "bit_rate": "161584",
+            "nb_frames": "1689",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/Users/jangyoung/orca/unknown/docs/media/cinematic-gameplay-m6/cinematic.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "36.000000",
+          "size": "7307088",
+          "bit_rate": "1623797",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf61.7.100"
+          }
+        }
+      },
+      "loudness": {
+        "input_i": "-27.19",
+        "input_tp": "-15.73",
+        "input_lra": "0.30",
+        "input_thresh": "-37.28",
+        "output_i": "-26.89",
+        "output_tp": "-14.78",
+        "output_lra": "0.50",
+        "output_thresh": "-36.95",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      },
+      "boundaries": [
+        {
+          "segment": 0,
+          "firstFrame": 0,
+          "frames": 180,
+          "source": "1",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 1,
+          "firstFrame": 180,
+          "frames": 180,
+          "source": "1",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 2,
+          "firstFrame": 360,
+          "frames": 180,
+          "source": "native",
+          "sourceStartSeconds": 14
+        },
+        {
+          "segment": 3,
+          "firstFrame": 540,
+          "frames": 180,
+          "source": "2",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 4,
+          "firstFrame": 720,
+          "frames": 180,
+          "source": "3",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 5,
+          "firstFrame": 900,
+          "frames": 90,
+          "source": "4",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 6,
+          "firstFrame": 990,
+          "frames": 90,
+          "source": "native",
+          "sourceStartSeconds": 159
+        }
+      ],
+      "fullDecode": "passed",
+      "rawGeneratedAudioUsed": false
+    },
+    "gameplay-method": {
+      "sha256": "28ed4bed70ae61ec19ff2fd3ff8c36013eb7556357491dd07e895ef77c814cf5",
+      "bytes": 8662956,
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1280,
+            "height": 720,
+            "coded_width": 1280,
+            "coded_height": 720,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 31,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 829440,
+            "duration": "54.000000",
+            "bit_rate": "1112481",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1620",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc61.19.101 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 2592000,
+            "duration": "54.000000",
+            "bit_rate": "161843",
+            "nb_frames": "2533",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/Users/jangyoung/orca/unknown/docs/media/cinematic-gameplay-m6/gameplay-method.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "54.000000",
+          "size": "8662956",
+          "bit_rate": "1283400",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf61.7.100"
+          }
+        }
+      },
+      "loudness": {
+        "input_i": "-27.13",
+        "input_tp": "-14.87",
+        "input_lra": "0.30",
+        "input_thresh": "-37.19",
+        "output_i": "-26.91",
+        "output_tp": "-14.78",
+        "output_lra": "0.50",
+        "output_thresh": "-36.95",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.09"
+      },
+      "boundaries": [
+        {
+          "segment": 0,
+          "firstFrame": 0,
+          "frames": 180,
+          "source": "1",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 1,
+          "firstFrame": 180,
+          "frames": 270,
+          "source": "1",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 2,
+          "firstFrame": 450,
+          "frames": 270,
+          "source": "native",
+          "sourceStartSeconds": 12
+        },
+        {
+          "segment": 3,
+          "firstFrame": 720,
+          "frames": 90,
+          "source": "2",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 4,
+          "firstFrame": 810,
+          "frames": 90,
+          "source": "native",
+          "sourceStartSeconds": 27
+        },
+        {
+          "segment": 5,
+          "firstFrame": 900,
+          "frames": 90,
+          "source": "3",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 6,
+          "firstFrame": 990,
+          "frames": 90,
+          "source": "native",
+          "sourceStartSeconds": 63
+        },
+        {
+          "segment": 7,
+          "firstFrame": 1080,
+          "frames": 90,
+          "source": "4",
+          "sourceStartSeconds": 0
+        },
+        {
+          "segment": 8,
+          "firstFrame": 1170,
+          "frames": 90,
+          "source": "native",
+          "sourceStartSeconds": 89
+        },
+        {
+          "segment": 9,
+          "firstFrame": 1260,
+          "frames": 150,
+          "source": "native",
+          "sourceStartSeconds": 143
+        },
+        {
+          "segment": 10,
+          "firstFrame": 1410,
+          "frames": 120,
+          "source": "native",
+          "sourceStartSeconds": 158
+        },
+        {
+          "segment": 11,
+          "firstFrame": 1530,
+          "frames": 90,
+          "source": "4",
+          "sourceStartSeconds": 0
+        }
+      ],
+      "fullDecode": "passed",
+      "rawGeneratedAudioUsed": false
+    }
+  },
+  "linkChecks": [
+    {
+      "link": "poster-cinematic.jpg",
+      "exists": true
+    },
+    {
+      "link": "cinematic.mp4",
+      "exists": true
+    },
+    {
+      "link": "cinematic.mp4",
+      "exists": true
+    },
+    {
+      "link": "poster-gameplay.jpg",
+      "exists": true
+    },
+    {
+      "link": "gameplay-method.mp4",
+      "exists": true
+    },
+    {
+      "link": "gameplay-method.mp4",
+      "exists": true
+    },
+    {
+      "link": "../../../assets/generated/previz/cinematic-gameplay-m6/m6-s1-duty-room/clip.mp4",
+      "exists": true
+    },
+    {
+      "link": "../../../assets/generated/previz/cinematic-gameplay-m6/m6-s2-observe/clip.mp4",
+      "exists": true
+    },
+    {
+      "link": "../../../assets/generated/previz/cinematic-gameplay-m6/m6-s3-trial-surface/clip.mp4",
+      "exists": true
+    },
+    {
+      "link": "../../../assets/generated/previz/cinematic-gameplay-m6/m6-s4-record-context/clip.mp4",
+      "exists": true
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

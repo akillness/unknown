@@ -42,3 +42,10 @@ owner: game-production-director
 
 ### 미해결 (등록부 기준, R7 종료)
 - S1 0 · S2: C4 1 · C5 1(C5-F2 대장 — 재생성 완료, QA 확인 대기) · C6 2 · C7 1(R7b 처리 중) · S3/S4 다수(표기·영수증 재현성). 런타임 게이트 전부 NOT-MEASURED.
+
+
+## 2026-09-11 · M6 cinematic video delivery
+
+- Four real Higgsfield MCP clips plus two GTI keyframes; original requests, hashes and60credit observed delta preserved (RFC-CX-008).
+- 36second intro/progression film and54second gameplay-method film, Korean captions, stage-rule cards, spoiler masks, authored quiet ambience and separately labeled M5 native inserts.
+- Exactframe boundary correction and readable primary captions; full media decode and gallery link checks pass. No M6 Unity changes or new playable chapter claims.

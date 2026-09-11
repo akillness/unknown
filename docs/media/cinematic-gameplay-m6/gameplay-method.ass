@@ -1,0 +1,74 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,NanumBarunGothic,28,&H00ECE9DC,&H00ECE9DC,&H00100D08,&H00100D08,0,0,0,0,100,100,0,0,1,1.2,0,7,0,0,0,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:06.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(180,180)\fsp2}UNKNOWN  /  HOW TO PLAY
+Dialogue: 0,0:00:00.00,0:00:06.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(180,180)\an9}생성 시네마틱 · 연출 프리비즈
+Dialogue: 0,0:00:00.15,0:00:06.00,Base,,0,0,0,,{\pos(76,480)\fs70\c&HDCE9EC&\fad(180,180)}관찰 · 시험 · 기록
+Dialogue: 0,0:00:00.00,0:00:06.00,Base,,0,0,0,,{\pos(80,580)\fs32\c&HD6DCD3&\fad(180,180)}흔적을 읽고, 조건을 시험하고, 근거를 남깁니다.
+Dialogue: 0,0:00:00.00,0:00:06.00,Base,,0,0,0,,{\pos(80,660)\fs16\c&HC2C7A8&\fad(180,180)\fsp1}01 / 12   ━   OBSERVE · TEST · RECORD
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(180,180)\fsp2}01  /  단계별 진행 규칙
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(180,180)\an9}진행 규칙 설명 · 생성 배경
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(76,122)\fs42\c&HDCE9EC&\fad(180,180)}작업을 마치면, 다음 단계로
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(80,212)\fs32\c&H62AFE2&\fad(180,180)}01   T0 · 인계
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(411,214)\fs32\c&HDDE0D7&\fad(180,180)}인계 자료와 빈칸 판단
+Dialogue: 0,0:00:06.25,0:00:15.00,Base,,0,0,0,,{\pos(80,282)\fs32\c&H62AFE2&\fad(180,180)}02   T0 · 증거 정리
+Dialogue: 0,0:00:06.25,0:00:15.00,Base,,0,0,0,,{\pos(411,284)\fs32\c&HDDE0D7&\fad(180,180)}세 구역의 자료를 연결
+Dialogue: 0,0:00:06.50,0:00:15.00,Base,,0,0,0,,{\pos(80,352)\fs32\c&H62AFE2&\fad(180,180)}03   T0 · 기록 결합
+Dialogue: 0,0:00:06.50,0:00:15.00,Base,,0,0,0,,{\pos(411,354)\fs32\c&HDDE0D7&\fad(180,180)}기록 저장 후 순찰 이동
+Dialogue: 0,0:00:06.75,0:00:15.00,Base,,0,0,0,,{\pos(80,422)\fs32\c&H62AFE2&\fad(180,180)}04   C1 · 순찰
+Dialogue: 0,0:00:06.75,0:00:15.00,Base,,0,0,0,,{\pos(411,424)\fs32\c&HDDE0D7&\fad(180,180)}순찰 기록 저장 후 서명지 작업
+Dialogue: 0,0:00:07.00,0:00:15.00,Base,,0,0,0,,{\pos(80,492)\fs32\c&H62AFE2&\fad(180,180)}05   C1 · 서명지
+Dialogue: 0,0:00:07.00,0:00:15.00,Base,,0,0,0,,{\pos(411,494)\fs32\c&HDDE0D7&\fad(180,180)}근거 확인과 저장으로 현재 구간 완료
+Dialogue: 0,0:00:06.00,0:00:15.00,Base,,0,0,0,,{\pos(78,624)\fs32\c&HC2C7A8&\fad(180,180)}저장 확인 뒤 이동을 직접 선택합니다.
+Dialogue: 0,0:00:15.00,0:00:24.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(180,180)\fsp2}02  /  이어하기 · 명시적 이동
+Dialogue: 0,0:00:15.00,0:00:24.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(180,180)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:15.00,0:00:24.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(180,180)}저장된 순찰 기록 → 서명지 작업
+Dialogue: 0,0:00:15.00,0:00:24.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(180,180)}완료된 기록을 복원한 실제 플레이 장면입니다.
+Dialogue: 0,0:00:24.00,0:00:27.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}03  /  OBSERVE
+Dialogue: 0,0:00:24.00,0:00:27.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}생성 시네마틱 · 연출 프리비즈
+Dialogue: 0,0:00:24.15,0:00:27.00,Base,,0,0,0,,{\pos(76,480)\fs58\c&HDCE9EC&\fad(0,0)}관찰
+Dialogue: 0,0:00:24.00,0:00:27.00,Base,,0,0,0,,{\pos(80,580)\fs32\c&HD6DCD3&\fad(0,0)}자료를 선택해 살펴보세요.
+Dialogue: 0,0:00:24.00,0:00:27.00,Base,,0,0,0,,{\pos(80,660)\fs16\c&HC2C7A8&\fad(0,0)\fsp1}04 / 12   ━   OBSERVE · TEST · RECORD
+Dialogue: 0,0:00:27.00,0:00:30.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}03  /  실제 조작 발췌
+Dialogue: 0,0:00:27.00,0:00:30.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:27.00,0:00:30.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(0,0)}관찰
+Dialogue: 0,0:00:27.00,0:00:30.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(0,0)}서로 다른 자료를 열어 출처를 확인합니다.
+Dialogue: 0,0:00:30.00,0:00:33.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}04  /  TEST
+Dialogue: 0,0:00:30.00,0:00:33.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}생성 시네마틱 · 연출 프리비즈
+Dialogue: 0,0:00:30.15,0:00:33.00,Base,,0,0,0,,{\pos(76,480)\fs58\c&HDCE9EC&\fad(0,0)}시험
+Dialogue: 0,0:00:30.00,0:00:33.00,Base,,0,0,0,,{\pos(80,580)\fs32\c&HD6DCD3&\fad(0,0)}조건을 선택하고, 결과를 확인합니다.
+Dialogue: 0,0:00:30.00,0:00:33.00,Base,,0,0,0,,{\pos(80,660)\fs16\c&HC2C7A8&\fad(0,0)\fsp1}06 / 12   ━   OBSERVE · TEST · RECORD
+Dialogue: 0,0:00:33.00,0:00:36.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}04  /  실제 화면 · 설정값 가림
+Dialogue: 0,0:00:33.00,0:00:36.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:33.00,0:00:36.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(0,0)}시험
+Dialogue: 0,0:00:33.00,0:00:36.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(0,0)}시험 전과 후를 확인합니다. 설정값은 가렸습니다.
+Dialogue: 0,0:00:36.00,0:00:39.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}05  /  RECORD
+Dialogue: 0,0:00:36.00,0:00:39.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}생성 시네마틱 · 연출 프리비즈
+Dialogue: 0,0:00:36.15,0:00:39.00,Base,,0,0,0,,{\pos(76,480)\fs58\c&HDCE9EC&\fad(0,0)}기록
+Dialogue: 0,0:00:36.00,0:00:39.00,Base,,0,0,0,,{\pos(80,580)\fs32\c&HD6DCD3&\fad(0,0)}사본을 남기고, 가려진 부분도 기록합니다.
+Dialogue: 0,0:00:36.00,0:00:39.00,Base,,0,0,0,,{\pos(80,660)\fs16\c&HC2C7A8&\fad(0,0)\fsp1}08 / 12   ━   OBSERVE · TEST · RECORD
+Dialogue: 0,0:00:39.00,0:00:42.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}05  /  실제 조작 · 설정값 가림
+Dialogue: 0,0:00:39.00,0:00:42.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:39.00,0:00:42.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(0,0)}사본 보존
+Dialogue: 0,0:00:39.00,0:00:42.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(0,0)}원본의 가림을 유지하며 사본을 남깁니다.
+Dialogue: 0,0:00:42.00,0:00:47.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(180,180)\fsp2}06  /  준비 상태 · 저장 전
+Dialogue: 0,0:00:42.00,0:00:47.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(180,180)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:42.00,0:00:47.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(180,180)}확정 준비
+Dialogue: 0,0:00:42.00,0:00:47.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(180,180)}아직 저장 전입니다. 결과와 근거를 검토합니다.
+Dialogue: 0,0:00:47.00,0:00:51.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(180,180)\fsp2}07  /  별도 발췌 · 저장 결과
+Dialogue: 0,0:00:47.00,0:00:51.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(180,180)\an9}실제 플레이 녹화 · 발췌 편집
+Dialogue: 0,0:00:47.00,0:00:51.00,Base,,0,0,0,,{\pos(48,628)\fs32\c&H62AFE2&\fad(180,180)}기록 · 저장 완료
+Dialogue: 0,0:00:47.00,0:00:51.00,Base,,0,0,0,,{\pos(48,671)\fs32\c&HDCE9EC&\fad(180,180)}저장된 결과를 확인합니다. 가림은 유지됩니다.
+Dialogue: 0,0:00:51.00,0:00:54.00,Base,,0,0,0,,{\pos(48,26)\fs18\c&H62AFE2&\fad(0,0)\fsp2}CURRENT PLAYABLE SLICE
+Dialogue: 0,0:00:51.00,0:00:54.00,Base,,0,0,0,,{\pos(1228,27)\fs16\c&HC2C7A8&\fad(0,0)\an9}생성 시네마틱 · 연출 프리비즈
+Dialogue: 0,0:00:51.15,0:00:54.00,Base,,0,0,0,,{\pos(76,480)\fs58\c&HDCE9EC&\fad(0,0)}미해결도, 기록의 일부
+Dialogue: 0,0:00:51.00,0:00:54.00,Base,,0,0,0,,{\pos(80,580)\fs32\c&HD6DCD3&\fad(0,0)}C1 서명지 작업까지 구현 · 이후 단계는 제작 예정
+Dialogue: 0,0:00:51.00,0:00:54.00,Base,,0,0,0,,{\pos(80,660)\fs16\c&HC2C7A8&\fad(0,0)\fsp1}12 / 12   ━   OBSERVE · TEST · RECORD

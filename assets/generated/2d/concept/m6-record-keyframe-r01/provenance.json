@@ -1,0 +1,61 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m6-record-keyframe-r01",
+  "generated_at": "2026-09-11T08:03:06.590Z",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_0f42f83f4e77044e016aa3b57cfb6c87d0bb984a0054fbbd7e",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "78be09b137e8a441c56303e040e75ae949bf7f53e4fdbaeaefc5c2e377b88e31",
+  "requested_size": "2048x1152",
+  "actual_size": "1672x941",
+  "output_file": "image.png",
+  "output_sha256": "a9874dc1bfa0467120c4fa38a7e7b96e667dbe727928ec276818d3ea9a46afa3",
+  "bytes": 1768978,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r03/image.png",
+      "sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2"
+    },
+    {
+      "path": "assets/generated/3d/c1-signature-reader-r02/preview.png",
+      "sha256": "ee608b27a67df6e0334283d29e3b0baf851a6b719dec21ecb9c28a11911eeb34"
+    },
+    {
+      "path": "docs/media/c1-signature-reader-native-r02.png",
+      "sha256": "e22f401da9e2a3751448056d23ad66eb31ec83959dc520be16435634da769c45"
+    }
+  ],
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "rights_scope": "Existing GTI route review referenced for limitations only; no new runtime or commercial promotion. Provider route is unsupported/private; ownership is not exclusive copyright or commercial clearance.",
+  "review": {
+    "status": "creator-visual-pass-for-cinematic-reference-only",
+    "reviewed_at": "2026-09-11T08:04:11.301Z",
+    "purpose": "M6 two-record comparison context keyframe for Higgsfield cinematic design",
+    "verified": [
+      "Canonical coastal-room ink-blue/patina and ochre light continuity",
+      "Recognizable approved Blender reader silhouette with left circular stage and right rectangular paper bed",
+      "Exactly two separated blank papers, one on reader bed and one on desk",
+      "Both paper visibility and all required opaque lower-quarter masks retained",
+      "No lettering, signatures, stamp, saved-success or unlock claim",
+      "No invented bowls, tools, magic or machinery"
+    ],
+    "limitations": [
+      "Requested 2048x1152, returned 1672x941; output not upscaled",
+      "Generated scene composition, material wear and proportions are interpretive, not exact Unity mesh or screenshot proof",
+      "Wide camera and smaller reader serve film design only; do not change the native static-camera contract",
+      "Masks are visual art references; native evidence and save logic remain authoritative",
+      "No gameplay/runtime/human-playtest/performance evidence; video motion still needs a separate review"
+    ]
+  },
+  "runtimePromotion": {
+    "status": "not-requested",
+    "decision": null,
+    "scope": "design-reference only; not imported into Unity"
+  }
+}

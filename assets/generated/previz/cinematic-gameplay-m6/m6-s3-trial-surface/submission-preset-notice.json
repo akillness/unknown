@@ -1,0 +1,28 @@
+{
+  "submittedAt": "2026-09-11T08:02:09.383Z",
+  "jobId": null,
+  "status": "preset_recommendation",
+  "server": {
+    "name": "Higgsfield AI",
+    "version": "1.0.0",
+    "description": "Higgsfield creative platform for image, video, and audio generation, marketing asset workflows, and Virality Predictor video analysis for attention, engagement, and audience response."
+  },
+  "notice": {
+    "type": "preset_recommendation",
+    "message": "This prompt looks like the Higgsfield preset \"IN THE DARK\". Ask the user whether to use that preset or generate literally.",
+    "data": {
+      "preset": {
+        "id": "24bae836-2c4a-48e0-89b6-49fcc0b21612",
+        "name": "IN THE DARK",
+        "preview_url": "https://cdn.higgsfield.ai/job_set_chain_preset/b39158f2-75c2-4077-b102-54fd6b257008.mp4"
+      },
+      "use_preset_with": {
+        "model": "higgsfield_preset",
+        "preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+      },
+      "retry_literal_with": {
+        "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+      }
+    }
+  }
+}

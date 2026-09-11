@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://mcp.higgsfield.ai/mcp",
+  "transport": "MCP Streamable HTTP",
+  "tool": "generate_video",
+  "params": {
+    "model": "seedance_2_0_mini",
+    "count": 1,
+    "aspect_ratio": "16:9",
+    "duration": 6,
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "genre": "noir",
+    "generate_audio": true,
+    "use_unlim": false,
+    "get_cost": false,
+    "prompt": "Create a six-second cinematic tactile macro study of the exact mechanical archival reader in the reference. Preserve its circular lens ring and adjacent rectangular flat tray, patinated blue-grey metal, rails and knurled cylindrical adjustment parts; add no new machinery. Move framing close to the existing metal surface and keep camera completely steady, no rotation or actuation of any part, no hands, no papers. Dark noir work-lamp lighting with a narrow soft ochre edge light and broad cool fill makes material relief legible. Quiet dark negative space for separately rendered typography. It is a cinematic design shot, not a gameplay record. No text, letters, signatures, symbols, display screens, progress lights, holograms, magical glow, spontaneous mechanism action or success cue. Sound design: only low coastal wind and distant surf, soft wooden-room resonance and restrained analog electrical hum; no spoken language, no voices, no music, no rhythmic alarm or success chime. The ambience does not convey a clue or an interaction.",
+    "medias": [
+      {
+        "value": "d6a701c8-205f-4c8e-9a7a-1f68ef44933d",
+        "role": "start_image"
+      }
+    ]
+  },
+  "reference": {
+    "path": "assets/generated/3d/c1-signature-reader-r02/preview.png",
+    "mediaId": "d6a701c8-205f-4c8e-9a7a-1f68ef44933d",
+    "sha256": "ee608b27a67df6e0334283d29e3b0baf851a6b719dec21ecb9c28a11911eeb34"
+  },
+  "quotedCredits": 15
+}

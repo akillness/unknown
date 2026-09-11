@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "cinematic-gameplay-m6-final-edit",
+  "createdAt": "2026-09-11T08:26:08.523Z",
+  "type": "edited cinematic previz with labeled native gameplay excerpts",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "producer": "local ffmpeg edit; source video generated via official Higgsfield MCP",
+  "artSourceProvenance": "../../../assets/generated/previz/cinematic-gameplay-m6/provenance.json",
+  "nativeSource": {
+    "path": "../intro-gameplay-m5/native-gameplay.mp4",
+    "sha256": "f34fc96ef9c795d9bc1856f986859fd8dbc3f2684a2258e54e3c3c5989fc1f02",
+    "scope": "M5 three-take native recording; restored patrol state and signature work, not fresh T0/C1 unlock evidence"
+  },
+  "films": {
+    "cinematic": {
+      "file": "cinematic.mp4",
+      "sha256": "78970fbe5a1005e8a15cacd8d46019d47667709ec2982f3acc67144643cfefde",
+      "bytes": 7307088,
+      "durationSeconds": 36,
+      "frames": 1080,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "audio": {
+        "codec": "AAC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "integratedLUFS": -27.19,
+        "truePeakDBTP": -15.73
+      }
+    },
+    "gameplay-method": {
+      "file": "gameplay-method.mp4",
+      "sha256": "28ed4bed70ae61ec19ff2fd3ff8c36013eb7556357491dd07e895ef77c814cf5",
+      "bytes": 8662956,
+      "durationSeconds": 54,
+      "frames": 1620,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "audio": {
+        "codec": "AAC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "integratedLUFS": -27.13,
+        "truePeakDBTP": -14.87
+      }
+    }
+  },
+  "soundtrack": {
+    "source": "locally authored deterministic filtered pink noise",
+    "rawGeneratedAACUsed": false,
+    "semanticEvents": "no voices, melody, alarm, success or save-confirmation sound events authored",
+    "humanAudition": false
+  },
+  "edit": {
+    "timeline": "edit-timeline.json",
+    "captions": [
+      "cinematic.ass",
+      "gameplay-method.ass"
+    ],
+    "primaryCaptionMinimumPixels": 32,
+    "auxiliarySourceLabelsPixels": [
+      16,
+      18
+    ],
+    "nativeInputValueRedactions": true,
+    "immutableSourceMedia": true
+  },
+  "verification": {
+    "technical": "../../../_workspace/current/systems/tech-verification/cinematic-gameplay-m6/validation.json",
+    "editorial": "../../../_workspace/current/systems/tech-verification/cinematic-gameplay-m6/editorial-review.json",
+    "status": "scoped technical and sampled editorial checks passed; all initial acceptance targets not passed"
+  },
+  "limits": [
+    "Not uninterrupted gameplay footage",
+    "No M6 runtime changes",
+    "C1-b3 and later are planned only",
+    "No human immersion or comprehension measurement",
+    "No human listening approval",
+    "Generated clips exceed initial small-motion targets"
+  ]
+}

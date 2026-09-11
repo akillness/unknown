@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://mcp.higgsfield.ai/mcp",
+  "tool": "generate_video",
+  "params": {
+    "model": "seedance_2_0_mini",
+    "count": 1,
+    "aspect_ratio": "16:9",
+    "duration": 6,
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "genre": "drama",
+    "generate_audio": true,
+    "use_unlim": false,
+    "get_cost": false,
+    "prompt": "Six-second cinematic concept shot of the exact archive reader and the single sheet shown in the supplied reference. Preserve every prop and its placement. The paper lower quarter is fully opaque ink blue and remains exactly opaque, fixed in place, and unchanged through the entire clip. Nothing is uncovered or read. Gentle camera slide of at most two percent, with the last two seconds settled. Quiet ocean movement outside and soft stable work-lamp illumination. This is an atmospheric observation context, not recorded gameplay. No hands, no turning mechanism, no separation, no extra paper, no stamps, no writing, no symbols, no UI, no moving or thinning the paper mask. Sound design: only low coastal wind and distant surf, soft wooden-room resonance and restrained analog electrical hum; no spoken language, no voices, no music, no rhythmic alarm or success chime. The ambience does not convey a clue or an interaction.",
+    "medias": [
+      {
+        "value": "ec75ccdc-c299-4a33-b9a0-09eafd2e9772",
+        "role": "start_image"
+      }
+    ],
+    "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612"
+  },
+  "reference": {
+    "path": "assets/generated/2d/concept/m6-reader-keyframe-r01/image.png",
+    "mediaId": "ec75ccdc-c299-4a33-b9a0-09eafd2e9772",
+    "sha256": "3ef5bddbd24c8e008aeaffd7f3a39c510dbbafc8c04dc27f2b7654d9ff8333da"
+  },
+  "quotedCredits": 15
+}

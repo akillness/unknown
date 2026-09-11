@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://mcp.higgsfield.ai/mcp",
+  "transport": "MCP Streamable HTTP",
+  "tool": "generate_video",
+  "params": {
+    "model": "seedance_2_0_mini",
+    "count": 1,
+    "aspect_ratio": "16:9",
+    "duration": 6,
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "genre": "noir",
+    "generate_audio": true,
+    "use_unlim": false,
+    "get_cost": false,
+    "prompt": "Create a six-second cinematic concept shot, not game footage, using the supplied clean duty-room reference. Before any investigation, the room is empty. Preserve the blank navy closed ledger, unlettered telephone dial, empty paper tray, low window, desk and lamp exactly; do not add a sheet to the tray. A single very restrained forward camera approach, no more than roughly three percent apparent scale increase, starts after the opening hold and settles before the end. Keep the right third as calm dark space. Tiny coastal rain outside is atmospheric only; no water-level event or factual discovery. Original restrained coastal archive materials: matte weathered blue-grey metal, downward corrosion, fine salt at joints, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, blank paper #E7E3D8, a steady ochre #E2AF62 accent under eight percent. Large legible silhouettes. No text, letters, numerals, handwriting, signatures, logos, watermark, subtitles, UI, HUD, diagrams, readable values, named people, faces, human hands, success stamp, magical effect, glowing clue, new document, reveal, time-gap diagram, solved puzzle, autonomous switch movement, door unlocking, drawer opening, paper cleaning or separation. Never erase, lighten or move an opaque lower-paper mask. No camera shake, whip pan, Dutch angle, rack focus, flashing lamp, neon, weapon or new machinery. Sound design: only low coastal wind and distant surf, soft wooden-room resonance and restrained analog electrical hum; no spoken language, no voices, no music, no rhythmic alarm or success chime. The ambience does not convey a clue or an interaction.",
+    "medias": [
+      {
+        "value": "f14a2c66-eaca-4a98-bf3d-2995a0b7cb98",
+        "role": "start_image"
+      }
+    ]
+  },
+  "reference": {
+    "path": "assets/generated/2d/concept/intro-m5-r03/image.png",
+    "mediaId": "f14a2c66-eaca-4a98-bf3d-2995a0b7cb98",
+    "sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2"
+  },
+  "quotedCredits": 15
+}

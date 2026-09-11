@@ -1,0 +1,39 @@
+{
+  "schema": "gti-execution/v1",
+  "asset_id": "m6-record-keyframe-r01",
+  "started_at": "2026-09-11T08:02:04.070Z",
+  "completed_at": "2026-09-11T08:03:06.590Z",
+  "exit_code": 0,
+  "signal": null,
+  "provider": "private-codex",
+  "requested_orchestration_model": "gpt-6-astra",
+  "actual_image_model": null,
+  "actual_image_model_status": "not reported by provider",
+  "cli_version": "0.3.0",
+  "requested_size": "2048x1152",
+  "response_id": "resp_0f42f83f4e77044e016aa3b57cfb6c87d0bb984a0054fbbd7e",
+  "session_id": "[REDACTED]",
+  "http_status": 200,
+  "dry_run_exit_code": 0,
+  "command_summary": "GTI CLI via RTK proxy; prompt.txt; three canonical --image references; --model gpt-6-astra; --size 2048x1152",
+  "output": "image.png",
+  "stdout": "stdout-redacted.json",
+  "stderr": "stderr-redacted.log",
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r03/image.png",
+      "sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2"
+    },
+    {
+      "path": "assets/generated/3d/c1-signature-reader-r02/preview.png",
+      "sha256": "ee608b27a67df6e0334283d29e3b0baf851a6b719dec21ecb9c28a11911eeb34"
+    },
+    {
+      "path": "docs/media/c1-signature-reader-native-r02.png",
+      "sha256": "e22f401da9e2a3751448056d23ad66eb31ec83959dc520be16435634da769c45"
+    }
+  ],
+  "credits_actual": null,
+  "credits_status": "not reported; no cost or quota claim",
+  "privacy": "Authorization, account, session and installation fields redacted; embedded image payloads omitted"
+}
