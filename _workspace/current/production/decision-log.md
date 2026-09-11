@@ -115,3 +115,12 @@ Successful resource:6 meshes, 2,092 triangles, four 1024-square maps totaling 1,
 ### RFC-CX-005 final delivery verification
 
 [OBSERVED] Isolated HEAD+65 approved Unity source passed EditMode36/36, PlayMode39/39 and serialized boot1/1. Concurrent external patrol fallback/string/test edits remain in the workspace and are excluded through two isolated index blobs and HEAD T0Strings. Final copied app is348,163,868 bytes (316 files; bundle fingerprint af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738). Ordinary-runtime restart restored c1-b2 completion, two copied papers, unresolved lower mask and correct resumed status with unchanged save bytes. Scope-approved implementation/resources may be committed and pushed per the user’s standing request. Human playtime/fun/accessibility, physical pad, auditory approval, performance and full G4/G5 remain unmeasured.
+
+## RFC-CX-006 — Image generation uses god-tibo-imagen (2026-09-11)
+
+- Authority: explicit user instruction to generate images with the god-tibo-imagen skill; this supersedes the earlier MuAPI/Higgsfield selection for new images only.
+- Blender 3D and Higgsfield video workflows continue. Preserve every existing asset's actual provenance and runtime approval. No automatic replacement of approved art.
+- [OBSERVED] GTI 0.3.0 and valid local Codex login verified without exposing credentials; dry-run and generation succeeded using requested model `gpt-6-astra`. No image-model identity or quota charge was returned.
+- [OBSERVED] Original blank-paper candidate: `assets/generated/2d/texture/c1-signature-paper-gti-r01/`. Requested 1024×1024; actual 1254×1254, 2,017,998 bytes. SHA256 `5dd394fe188e287f1a81f73e8d5761d1807c6b9d5f711f15d93c0ef8b1c80cae`. Source and revised prompts, sanitized dry-run, execution and output receipts retained.
+- [OBSERVED] Independent visual review passed the blank-substrate criteria. Size differs from request. Keep `runtimeEligible:false`; native readability/import and rights review remain unmeasured. This RFC authorizes the provider and candidate generation, not runtime promotion.
+- Handoff: `production/image-provider-gti-20260911.md`.

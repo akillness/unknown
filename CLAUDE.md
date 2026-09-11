@@ -109,3 +109,10 @@ PASS / FIX(≤2) / REDO. 열린 S1 결함, 측정 누락, 숫자 자리의 `[TAR
 - 밸런스/재화 숫자는 데이터 테이블에만 산다; 코드는 노브를 노출할 뿐 튜닝을 하드코딩하지 않는다.
 - 출시된 서사·설정은 캐논이다; 레트콘은 `season` 사이클 + 연속성 노트로만.
 - 생성/구매 에셋은 `provenance.json`과 `runtimeEligible:false`로 시작하며, 승격은 decision-log 감사로만.
+
+## 이미지 생성 제공자 (2026-09-11 사용자 지시)
+
+- 신규 이미지 생성은 `god-tibo-imagen` 스킬과 `gti`를 사용한다. 이 최신 지시는 이전 MuAPI/Higgsfield 이미지 제공자 지정을 대체한다(RFC-CX-006).
+- Blender 3D 제작과 Higgsfield 영상 경로는 유지한다. 이미 생성·승격된 리소스와 실제 출처 기록은 보존한다.
+- 로컬 인증은 값을 출력하지 않고 확인하며 `--dry-run` 후 생성한다. 요청/실제 크기·요청 모델과 실제 모델의 확인 범위·프롬프트·해시·확인된 비용을 기록한다. 신규 결과는 `runtimeEligible:false`로 시작한다.
+- 현행 절차와 검증 범위: `_workspace/current/production/image-provider-gti-20260911.md`.

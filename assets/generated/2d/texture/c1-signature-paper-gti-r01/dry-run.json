@@ -1,0 +1,50 @@
+{
+  "mode": "dry-run",
+  "warnings": [],
+  "request": {
+    "url": "https://chatgpt.com/backend-api/codex/responses",
+    "headers": {
+      "Authorization": "[REDACTED]",
+      "ChatGPT-Account-ID": "[REDACTED]",
+      "Content-Type": "application/json",
+      "Accept": "text/event-stream",
+      "originator": "codex_cli_rs",
+      "session_id": "[REDACTED]"
+    },
+    "body": {
+      "model": "gpt-6-astra",
+      "instructions": "",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Create one original 1024 x 1024 square material texture for a quiet maritime records mystery: blank aged records paper, warm off-white #E7E3D8, extremely subtle compressed fibres and faint cool-grey #8A8E88 damp mottling near the outer edges. Flat orthographic surface filling the image edge to edge. Keep the central 84% visually quiet and low contrast for separately rendered dark Korean UI text. Matte diffuse illumination; restrained painterly realism. No paper outline, tabletop, perspective, cast shadow or frame. No text, letters, numbers, handwriting, signatures, ink, stamps, symbols, logos, watermark, glyph-like stains, grids, holes, salt deposits, adhesive edges or dark lower obstruction. This is a reusable blank substrate, never a document or clue."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "image_generation",
+          "output_format": "png",
+          "size": "1024x1024"
+        }
+      ],
+      "tool_choice": "auto",
+      "parallel_tool_calls": false,
+      "reasoning": null,
+      "store": false,
+      "stream": true,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "client_metadata": {
+        "x-codex-installation-id": "[REDACTED_INSTALLATION_ID]"
+      }
+    }
+  },
+  "publicationSanitization": "Authentication, account and session header values redacted."
+}

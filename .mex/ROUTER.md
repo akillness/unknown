@@ -14,7 +14,7 @@ edges:
     condition: when setting up the dev environment or running the project for the first time
   - target: patterns/INDEX.md
     condition: when starting a task — check the pattern index for a matching pattern file
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
 # Session Bootstrap
@@ -25,7 +25,7 @@ Then read this file fully before doing anything else in this session.
 
 ## Current Project State
 
-**Resource provider override (2026-09-10):** New resources use MuAPI and Higgsfield (user instruction; `CLAUDE.md` §10.2 / RFC-CX-002). Higgsfield CLI account access is verified. MuAPI's official interfaces are verified, but a local integration with a securely configured key is still needed. Historical GTI recipes/provenance remain accurate for existing assets.
+**Resource provider override (2026-09-11):** New image generation uses god-tibo-imagen (GTI) per the latest user instruction, the image-provider directive in `CLAUDE.md` and RFC-CX-006. Blender 3D and Higgsfield video workflows continue. Preserve historical provider provenance and approved runtime assets. GTI 0.3.0 and valid local Codex authentication verified without exposing credentials.
 **Working:**
 - Harness scaffold: 14 agent definitions (`.claude/agents/game-*.md`), skill `game-ops-harness` with references + scripts, root `CLAUDE.md` rule file (§10.1 re-derived 2026-09-10)
 - Preproduction documents C1–C5 in `_workspace/current/` (canon: worldview/*, planning/campaign.json + validate-campaign.mjs, systems/{architecture-contract,system-specs,data-schemas}, balance, economy, product, presentation deck); C1–C2 and the session-P C3 versions archived under `_workspace/archive/20260909-preproduction-c{1,2,3,4,5-prep}/`

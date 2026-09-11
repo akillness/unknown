@@ -1,0 +1,41 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "c1-signature-paper-gti-r01",
+  "generated_at": "2026-09-11T04:46:25.554224+00:00",
+  "provider": "god-tibo-imagen (private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model not returned",
+  "actual_image_model": null,
+  "job_id": "resp_0bfb7ebf2670f2f6016aa3878155d887d08a4d614c1f638ce6",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "885ebc50c96062fd30d1ce552fa34ad3c33db874b5354659431650173dabef62",
+  "reference_inputs": [],
+  "requested_size": "1024x1024",
+  "actual_size": "1254x1254",
+  "output_file": "paper.png",
+  "output_sha256": "5dd394fe188e287f1a81f73e8d5761d1807c6b9d5f711f15d93c0ef8b1c80cae",
+  "bytes": 2017998,
+  "source_url": null,
+  "tool_source": "https://github.com/NomaDamas/god-tibo-imagen",
+  "credits_estimate": null,
+  "credits_actual": null,
+  "cost_note": "Backend did not expose a credit or quota charge; not measured, not zero.",
+  "runtimeEligible": false,
+  "license_status": "UNVERIFIED for runtime promotion",
+  "decision": "RFC-CX-006 authorizes provider selection; no runtime promotion",
+  "purpose": "Blank substrate candidate only; game text, evidence, salt and unresolved lower mask remain separate.",
+  "review": {
+    "visual": "PASS candidate; independently inspected at full resolution",
+    "size": "DEVIATION: requested 1024x1024, returned 1254x1254",
+    "native_readability": "NOT-MEASURED",
+    "approved_runtime_asset_unchanged": true
+  },
+  "receipts": [
+    "dry-run.json",
+    "dry-run.stderr.log",
+    "execution.json",
+    "generation.stdout.log",
+    "generation.stderr.log"
+  ]
+}
