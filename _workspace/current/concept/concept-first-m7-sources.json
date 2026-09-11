@@ -439,6 +439,36 @@
         "provenance": "assets/generated/2d/concept/m7-optical-workbench-r01/provenance.json",
         "review": "creator visual pass; root I2V reference review pending"
       }
+    },
+    {
+      "id": "m8-review-card-r01",
+      "authorizedAt": "2026-09-11T10:15:00Z",
+      "authorizedBy": "game-production-director under RFC-CX-011 S-H (user M9 completeness instruction)",
+      "provider": "GTI",
+      "model": "gpt-6-astra",
+      "referenceInputs": [
+        {
+          "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+          "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+          "provenancePath": "assets/generated/2d/concept/provenance.json",
+          "role": "colour-atmosphere reference only"
+        }
+      ],
+      "promptFile": "assets/generated/2d/texture/m8-review-card-r01/prompt.txt",
+      "promptSha256": "fd942d793d5f66428b0c828d2c1e6cb1700a86579b6df0b8029c2802539a8079",
+      "requestedSize": "1024x1024",
+      "scope": "one blank rag-paper review-card texture (M7-MAT-rag-paper direction, M8 card backing); no text or marks baked; no post-edit; native inspection before any runtime approval",
+      "dryRunExitCode": 0,
+      "result": {
+        "completedAt": "2026-09-11T10:16:47Z",
+        "exitCode": 0,
+        "output": "assets/generated/2d/texture/m8-review-card-r01/image.png",
+        "outputSha256": "65fc439b6e9de394b9e68519ced237ebfe7d53ee973fb2ca700858abd24d9367",
+        "actualSize": "1536x1024",
+        "postProcessing": "none",
+        "provenance": "assets/generated/2d/texture/m8-review-card-r01/provenance.json",
+        "review": "creator visual pass (blank surface, no text); native readability inspection pending"
+      }
     }
   ]
 }

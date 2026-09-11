@@ -25,7 +25,11 @@ namespace Tide.App {
             if(!openingEligible||openingFinished||!DirectionEnabled){StartGame();return;}
             openingReplay=false;BeginOpening();
         }
-        void BeginOpening(){OpeningActive=true;openingElapsed=0;openingCaption=0;overlay=null;Render();}
+        void BeginOpening(){
+            OpeningActive=true;openingElapsed=0;openingCaption=0;
+            if(ReducedMotion){FinishOpening();return;}
+            overlay=null;Render();
+        }
         void ReplayOpening(){if(!DirectionEnabled||SavePending)return;openingReplay=true;openingReturnOverlay=overlay;BeginOpening();}
         void FinishOpening(){
             OpeningActive=false;
@@ -46,8 +50,8 @@ namespace Tide.App {
             screen.OpeningHeading=ReducedMotion?directionProfile.firstTitle:openingCaption==0?directionProfile.firstTitle:directionProfile.secondTitle;
             screen.Body=ReducedMotion?directionProfile.firstCaption+"\n\n"+directionProfile.secondTitle+"\n"+directionProfile.secondCaption:
                 openingCaption==0?directionProfile.firstCaption:directionProfile.secondCaption;
-            screen.Body+="\n\n관찰 · 시험 · 기록\n자료를 살피고, 조건을 시험하고, 근거를 기록하세요.";
-            screen.Actions.Add(A("intro-skip",openingReplay?"돌아가기":ReducedMotion?"작업 시작":"건너뛰고 시작",FinishOpening));
+            screen.Body+="\n\n"+L("openingMotto")+"\n"+L("openingMottoDetail");
+            screen.Actions.Add(A("intro-skip",openingReplay?L("openingReturn"):ReducedMotion?L("openingBeginWork"):L("openingSkip"),FinishOpening));
             screen.Actions.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));
             screen.Footer=ControlFooter();screen.Status=null;screen.CaseThread=null;
         }

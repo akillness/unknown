@@ -106,6 +106,14 @@ namespace Tide.Tests
         IEnumerator Restart() { yield return Wait(game.FlushSaves()); UnityEngine.Object.Destroy(host); yield return null; Create(); yield return null; game.StartGame(); yield return null; }
         void Click(string id) { Assert.IsTrue(game.Interface.Activate(id), id); }
         void OpenNotes() { game.OpenOverlay("evidence"); Click("open-review-notes"); }
+        // S-F: review-note-back now plays the authored close fade before restoring the previous overlay.
+        IEnumerator CloseNotes()
+        {
+            Click("review-note-back");
+            var clock = System.Diagnostics.Stopwatch.StartNew();
+            while (game.Surface == "reviewNotes" && clock.Elapsed.TotalSeconds < WaitSeconds) yield return null;
+            Assert.AreNotEqual("reviewNotes", game.Surface, "Note close transition did not finish.");
+        }
         void ObserveBrief() { Trace("observe brief begin"); Assert.IsTrue(game.SubmitImmediate(new PuzzleCommand("ViewLine", "rec-handover-brief", "hb-l1")).IsValid); Trace("observe brief submitted"); }
         void ObserveTransfer() { Assert.IsTrue(game.SubmitImmediate(new PuzzleCommand("ViewRow", "rec-transfer-list", "tl-r1")).IsValid); }
         string VisibleText() => string.Join("\n", host.GetComponentsInChildren<Text>().Select(text => text.text));
@@ -118,7 +126,7 @@ namespace Tide.Tests
             Assert.IsFalse(game.Interface.Activate("review-note-save"));
             var save = Track(game.SaveReviewNoteAsync()); yield return Wait(save); Assert.IsFalse(save.Result);
             StringAssert.Contains("자료를 하나 확인한 뒤", VisibleText());
-            Click("review-note-back"); Click("open-review-notes");
+            yield return CloseNotes(); Click("open-review-notes");
             Assert.AreEqual("아직 세션 안에만 있는 초안", game.Interface.ReviewEditor.text);
             Assert.IsFalse(File.Exists(Path.Combine(directory, "save.json")));
             Assert.IsEmpty(Directory.GetFiles(directory, "review-notes-*.json"));
@@ -297,11 +305,95 @@ namespace Tide.Tests
             var scroll = host.GetComponentsInChildren<ScrollRect>().Single(item => item.viewport.name == "Viewport");
             var corners = new Vector3[4]; var viewport = new Vector3[4]; ((RectTransform)button.transform).GetWorldCorners(corners); scroll.viewport.GetWorldCorners(viewport);
             Assert.GreaterOrEqual(corners[0].y, viewport[0].y - 1); Assert.LessOrEqual(corners[2].y, viewport[2].y + 1);
-            Click("review-note-back"); game.Back(); Click("continue-c1-signature");
+            yield return CloseNotes(); game.Back(); Click("continue-c1-signature");
             game.OpenOverlay("evidence"); Click("open-review-notes"); Assert.AreEqual("reviewNotes", game.Surface);
             Assert.IsFalse(game.ObservedReviewSources().Any(source => source.Id.StartsWith("signature:")));
             var id = game.Definition.Signature.LeftClue; Assert.IsTrue(game.SubmitImmediate(new PuzzleCommand("ObserveSignature", id)).IsValid);
             Assert.AreEqual(1, game.ObservedReviewSources().Count(source => source.Id.StartsWith("signature:")));
+        }
+
+        // QA D-M9-01: C1 stage screens render ahead of DocumentScreen, so `원문 열기` must not be offered there —
+        // otherwise `document` is left set and the next Esc silently reopens the notes.
+        [UnityTest] public IEnumerator C1StagesNeverOfferSourceOriginalOpen()
+        {
+            yield return Wait(game.FlushSaves()); UnityEngine.Object.Destroy(host); yield return null;
+            File.Copy(Path.Combine(Application.dataPath, "_Project/Tests/Fixtures/C1PatrolCompletedV2.json"), Path.Combine(directory, "save.json"));
+            Create(); yield return null; game.StartGame(); yield return null;
+            Assert.IsTrue(game.PatrolActive || game.SignatureActive, "Fixture must start inside a C1 stage.");
+            game.OpenOverlay("evidence"); Click("open-review-notes"); Assert.AreEqual("reviewNotes", game.Surface);
+            Assert.IsTrue(game.ObservedReviewSources().Any(source => source.Id.StartsWith("record:")), "T0 record sources remain listed in C1.");
+            Assert.IsFalse(game.Interface.ActionIds.Any(id => id.StartsWith("review-open-")), "No source-original action may be offered in a C1 stage.");
+            game.Back(); // D-M9-02: Esc routes through the same close fade as the button
+            var clock = System.Diagnostics.Stopwatch.StartNew();
+            while (game.Surface == "reviewNotes" && clock.Elapsed.TotalSeconds < WaitSeconds) yield return null;
+            Assert.AreEqual("evidence", game.Surface, "Esc must restore the overlay the notes were opened from (D-M9-02 / QA G-2).");
+            game.Back(); yield return null; yield return null;
+            Assert.AreNotEqual("reviewNotes", game.Surface, "A second Esc must not silently reopen the notes (no pending document return).");
+        }
+
+        // QA D-M9-13: with a tool panel open, the tool screen renders ahead of DocumentScreen and keeps receiving Adjust/Query
+        // input under the document, so `원문 열기` must not be offered while a tool is open; the shell path keeps it.
+        [UnityTest] public IEnumerator OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes()
+        {
+            ObserveBrief(); yield return Wait(game.FlushSaves());
+            game.OpenTool("reader"); Assert.AreEqual("reader", game.Surface);
+            OpenNotes(); Assert.AreEqual("reviewNotes", game.Surface);
+            Assert.IsTrue(game.ObservedReviewSources().Any(source => source.Id.StartsWith("record:")));
+            Assert.IsFalse(game.Interface.ActionIds.Any(id => id.StartsWith("review-open-")), "No source-original action may be offered while a tool panel is open.");
+            yield return CloseNotes(); Assert.AreEqual("evidence", game.Surface); game.Back(); yield return null;
+            Assert.AreEqual("reader", game.Surface, "Closing the notes over a tool must return to that tool.");
+            game.Back(); yield return null; Assert.AreEqual("shell", game.Surface);
+            OpenNotes();
+            Assert.IsTrue(game.Interface.ActionIds.Contains("review-open-record:rec-handover-brief"), "From the shell the source original stays available.");
+        }
+
+        [UnityTest] public IEnumerator QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges()
+        {
+            ObserveBrief(); ObserveTransfer(); yield return Wait(game.FlushSaves()); OpenNotes();
+            Assert.IsNull(game.ReviewShownQuestion);
+            StringAssert.DoesNotContain("인가요", VisibleText(), "No review question may render before the explicit button press.");
+            Click("review-source-record:rec-handover-brief");
+            Assert.IsNull(game.ReviewShownQuestion, "Link toggles must not compute a question.");
+            Click("review-note-question"); yield return null;
+            var shown = game.ReviewShownQuestion; Assert.IsNotNull(shown);
+            StringAssert.Contains(shown, VisibleText());
+            StringAssert.Contains("검토 질문", VisibleText());
+            Click("review-source-record:rec-transfer-list");
+            Assert.AreEqual(shown, game.ReviewShownQuestion, "Changing links must not recompute the pinned question.");
+            StringAssert.Contains("이전 질문", VisibleText());
+            Click("review-note-question"); yield return null;
+            Assert.AreNotEqual(shown, game.ReviewShownQuestion, "An explicit press recomputes for the new structure.");
+            StringAssert.DoesNotContain("이전 질문", VisibleText());
+        }
+
+        [UnityTest] public IEnumerator OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource()
+        {
+            ObserveBrief(); yield return Wait(game.FlushSaves()); OpenNotes();
+            Click("review-open-record:rec-handover-brief");
+            Assert.AreNotEqual("reviewNotes", game.Surface);
+            Assert.IsTrue(game.Interface.ActionIds.Contains("close-document"), "The source original must open as a document view.");
+            Click("close-document");
+            var clock = System.Diagnostics.Stopwatch.StartNew();
+            while (game.Surface != "reviewNotes" && clock.Elapsed.TotalSeconds < WaitSeconds) yield return null;
+            Assert.AreEqual("reviewNotes", game.Surface, "Closing the original must resume the review notes overlay.");
+            Assert.AreEqual("review-source-record:rec-handover-brief", game.Interface.CurrentFocusId, "Focus must return to the source that was opened.");
+        }
+
+        [UnityTest] public IEnumerator ReducedMotionCompletesNoteTransitionsImmediately()
+        {
+            OpenNotes();
+            Assert.IsTrue(game.ReviewPanelTransitionActive, "Default motion must animate the note panel open.");
+            var clock = System.Diagnostics.Stopwatch.StartNew();
+            while (game.ReviewPanelTransitionActive && clock.Elapsed.TotalSeconds < WaitSeconds) yield return null;
+            Assert.IsFalse(game.ReviewPanelTransitionActive, "Open transition must complete on the unscaled clock.");
+            game.OpenOverlay("settings"); Click("reduced-motion"); game.Back();
+            OpenNotes();
+            Assert.IsFalse(game.ReviewPanelTransitionActive, "Reduced motion must open the panel instantly.");
+            Assert.AreEqual(1f, game.Interface.ReviewPanelGroup.alpha);
+            Click("review-note-question");
+            Assert.IsNotNull(game.ReviewShownQuestion);
+            Click("review-note-back");
+            Assert.AreEqual("evidence", game.Surface, "Reduced motion must close and restore the previous overlay in the same frame.");
         }
     }
 }

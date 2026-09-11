@@ -468,3 +468,10 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [DECISION] **게이트 영향**: G1(세계관 일관성) 문서 수준 — 용어집 미수록 노출 고유명사 16→0, 톤 미정합 기술어 15→0(표시 필드 기준), 캐논 변경 0. G7 문서 수준 — 증거 해금 위상·도달성·공개 순서가 기계 검사(EG 18)로 고정. **런타임 게이트는 여전히 NOT-MEASURED**(빌드 0·플레이 n=0). campaign.json이 바뀌는 모든 미래 회차의 완료 조건 = 49 + `--t0` 5 + EG 18 동시 PASS.
 - [CARRIED] 이월(비차단): 저작 주석 필드(action/consequence/inference) 교체 전 어휘 22건 잔존(감사 범위 밖, 화면 비노출) · `c1-b3` title/completion/clue의 「훈련」 3건(제목은 타 레인 인용 위험으로 단독 개명 보류) · timeline §7 B13 "공통 피크" 이형 · `c6-b3.consequence` R3 정렬 · Unity Data/Tables 재복사. 전부 다음 worldview/planner/systems 편집 회차 안건.
 - 머지: main 직접 커밋(사용자 지시). 스테이징은 RFC-CX-012 범위 파일만 명시 pathspec — M5/M9 병행 세션 산출물(unity/·assets/·m5-direction/·concept/·handoff/·changelog·.mex/·qa/completeness-m9-review.md·tech-verification/completeness-m9/·graphify-out/)은 스테이징하지 않는다. decision-log.md·task-manifest.md는 공유 append-only 파일이라 병행 세션의 M9 append가 함께 실린다(되돌리지 않음, §8).
+
+### RFC-CX-011 종료 판정 — 2026-09-11
+
+- [OBSERVED] QA R3: D-M9-13(S2) CLOSED(코드 게이트·회귀 테스트·영수증 3중 일치), D-M9-12 CLOSED, G-2 CLOSED. **S2 재개방 없음.** 잔여 D-M9-11(S3, planner·campaign.json 병행 편집 중 — M9 코드 범위 밖), D-M9-14(S4, impl 보고 문구 → 즉시 정정). R3 집계 `S1 0 · S2 0 · S3 1`.
+- [DECISION] **M9 hop 완료 판정: 범위 내 PASS(문서·자동화 검증 수준).** 근거: RFC-CX-011 S-A~S-H 전부 구현·배선, 독립 QA 3회(R1→FIX1→R2→FIX2→R3), 최종 EditMode 53/53 · PlayMode 70/70 · 직렬화 부트 1/1 · macOS 빌드 Succeeded 354230868B · 트랜스크립트 실행 영수증. FIX 회차 2/2 사용.
+- [BOUNDARY] 이 판정은 G4(연출/몰입)·G7(코어루프 수용)의 **런타임 PASS가 아니다** — 사람 플레이 n=0, 창 수준 가독성 캡처 미완, 실기 IME/컨트롤러 미검. GTI 카드 `m8-review-card-r01`은 `runtimeApproved:false` 후보 유지(승격은 네이티브 창 검수 후 별도 감사). 커밋/푸시는 사용자 수행.
+- [CARRIED → 다음 인테이크] manifest M9 절 이월 목록(hintOfferCooldownSeconds 분리 · EN textKey · alignment 동사 · ReadOriginal 마모 undo 판정 · t0-b1/t0-b2 objective 재작성(planner) · 프리뷰 영향구역/근거2종 · 100ms 선택 윤곽 · 티칭 헤더 hint-system 등재 · 도구 열림 중 원문 열기 확장안 · D-M9-10 전용 테스트(QA G-1)).

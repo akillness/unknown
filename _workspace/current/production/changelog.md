@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -63,3 +63,13 @@ owner: game-production-director
 - Protect drafts, unknown/future saves, source visibility and editing shortcuts; native clipboard/Tab regression fixed without transforming stored notes.
 - EditMode46/46, M8 PlayMode10/10, broad64/65, boot1/1, macOS build and actual note-save smoke. The one broad failure is baseline M5 reduced-motion behavior, independently reproduced without M8. Exact source/attempt history: systems/tech-verification/ai-native-m8/verification.md.
 - No new AI service or assets. Original-concept/M7/GTI resource direction remains in force; physical IME/controller and human outcome checks remain separate.
+
+## 2026-09-11 · M9 completeness hop (RFC-CX-011)
+
+- Three parallel READ-ONLY lane audits (core loop / tutorial+balance / resources+presentation) drove a bounded scope: every slice implements an existing canonical contract, zero new balance numbers.
+- Core loop + balance: per-beat hint levels persist under the unchanged `hintLevelUsed` field and survive reopen/reload; reveal warning is `warnsBeforeReveal`-driven; default confirmation is `two-step` (interaction-rules §1-1); T0 preview overlay renders `Simulation.Preview` change sentences + undo notice; `snapshotInterval` knob is live; idle hint offer pauses while a document is open.
+- Tutorial: case-thread objective follows `beats.json` per beat behind a data-driven disclosure guard (director ruling B keeps AssertNoDisclosure); circuit/reader panels show `toolTeaching`-driven level-1 hint + remaining-predicate count; opening motto/buttons moved to `T0Strings` (en added).
+- Review notes (M8 targets closed): explicit `검토 질문 보기` (recomputed only on press; stale label on structure change), record-source `원문 열기` with return + focus restore, independent-media question branch. Presentation layer: `M8ReviewVfx.json`-authored 180/140/120 ms CanvasGroup transitions, reduced-motion 0 ms, previous-overlay restore, `M8ReviewNotesProfile` runtimeApproved gate with safe null fallback.
+- Resources: GTI rag-paper review-card `m8-review-card-r01` (1536x1024, allowlist reference only, no baked text) imported via hash-checked `Tools/M8/Import review card` as `runtimeApproved:false`; `T0ProjectBuilder.WireBeats` wires beats without a scene-rebuilding Prepare.
+- Native: EditMode 53/53, PlayMode 68/68, serialized boot 1/1, macOS build Succeeded 354233020 B, player launch alive; prior M5 reduced-motion failure now passes on the preserved fix. Window-level readability capture failed (desktop-only capture discarded) — card promotion, physical IME/controller and human playtests remain open. Independent QA: `qa/completeness-m9-review.md`.
+- QA FIX cycles: R1 found S2 D-M9-01 (C1 `원문 열기` left `document` set; Esc reopened notes) → stage gate + regression; R2 closed all six fixes and found adjacent S2 D-M9-13 (same path with a tool panel open leaks input to the hidden tool) → `tool==null` gate + regression. Rulings: `select_ms` dropped (180/140/120 ms remain), teaching header ≠ hint use, zone/evidence-pair preview sentences deferred. Post-fix EditMode 53/53, PlayMode 69/69→70/70, boot 1/1, build Succeeded; transcript-backed launch receipt replaced a stale-pid smoke.

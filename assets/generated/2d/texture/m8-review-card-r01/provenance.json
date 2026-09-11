@@ -1,0 +1,46 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m8-review-card-r01",
+  "generated_at": "2026-09-11T10:16:47Z",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_05cfbd5f1973c8be016aa3d4e3dff087d097745db03f9dedf9",
+  "session_id": "25b28c7f-5ae3-461c-a8a1-d19834408d79",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "fd942d793d5f66428b0c828d2c1e6cb1700a86579b6df0b8029c2802539a8079",
+  "requested_size": "1024x1024",
+  "actual_size": "1536x1024",
+  "output_file": "image.png",
+  "output_sha256": "65fc439b6e9de394b9e68519ced237ebfe7d53ee973fb2ca700858abd24d9367",
+  "bytes": 3390980,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "provenancePath": "assets/generated/2d/concept/provenance.json",
+      "role": "colour-atmosphere reference only (concept-first-m7-sources.json allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (RFC-CX-009, RFC-CX-011 S-H)",
+  "direction_contract": {
+    "material": "M7-MAT-rag-paper (handoff/concept-first-m7-resources.json)",
+    "usage": "M8 review-note card backing candidate (presentation/ai-native-m8-direction.md 'GTI 미래 자원 연결' 검토 카드 바탕)",
+    "constraints": "blank writable content; no text, evidence marks, stamps, numbers or symbols baked into the image"
+  },
+  "dry_run": "passed before generation; auth presence checked without printing values",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "credits_note": "backend quota/credit cost not exposed by this receipt; must not be recorded as zero",
+  "postProcessing": "none; provider original retained without cropping, resizing or pixel edits",
+  "size_deviation_note": "requested 1024x1024, provider returned 1536x1024; recorded as-is, no local resample",
+  "review": {
+    "status": "creator-visual-pass-pending-native-inspection",
+    "reviewed_at": "2026-09-11T10:18:00Z",
+    "observed": "single aged grey-white rag paper sheet, layered fibres, weathered edges, one folded corner top-right, blank writable centre, cool grey-green cast; no text, letters, stamps, marks or objects observed",
+    "next": "Unity Candidates import (runtimeApproved=false) via Tools/M8 builder, native readability inspection, then scoped runtime decision in production/decision-log.md"
+  },
+  "decision_rfc": "RFC-CX-011"
+}

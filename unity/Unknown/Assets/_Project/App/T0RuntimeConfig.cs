@@ -4,6 +4,6 @@ namespace Tide.App {
  [CreateAssetMenu(menuName="T0/Runtime config")]
  public sealed class T0RuntimeConfig:ScriptableObject {
   public T0CatalogAsset catalog;
-  public TextAsset records,zones,tools,hints,bindings,strings,savePolicy;
+  public TextAsset records,zones,tools,hints,beats,bindings,strings,savePolicy;
  }
 }

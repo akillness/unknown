@@ -24,7 +24,7 @@ namespace Tide.EditorTools {
    AssetDatabase.Refresh();T0AssetImporter.Import();
    var config=AssetDatabase.LoadAssetAtPath<T0RuntimeConfig>(Root+"Resources/T0Runtime.asset");if(config==null){config=ScriptableObject.CreateInstance<T0RuntimeConfig>();AssetDatabase.CreateAsset(config,Root+"Resources/T0Runtime.asset");}
    config.catalog=AssetDatabase.LoadAssetAtPath<T0CatalogAsset>(T0AssetImporter.CatalogPath);
-   config.records=Text("Data/Tables/records.json");config.zones=Text("Data/Tables/zones.json");config.tools=Text("Data/Tables/tools.json");config.hints=Text("Data/Tables/hints.json");config.bindings=Text("Resources/WatchBindings.json");config.strings=Text("Resources/T0Strings.json");config.savePolicy=Text("Resources/SavePolicy.json");EditorUtility.SetDirty(config);
+   config.records=Text("Data/Tables/records.json");config.zones=Text("Data/Tables/zones.json");config.tools=Text("Data/Tables/tools.json");config.hints=Text("Data/Tables/hints.json");config.beats=Text("Data/Tables/beats.json");config.bindings=Text("Resources/WatchBindings.json");config.strings=Text("Resources/T0Strings.json");config.savePolicy=Text("Resources/SavePolicy.json");EditorUtility.SetDirty(config);
    var repo=Path.GetFullPath(Path.Combine(Application.dataPath,"../../.."));
    CopyCandidate(repo,"assets/generated/3d/hub-greybox.fbx","hub-greybox.fbx");
    var drawerDir=Path.Combine(repo,"assets/generated/3d/hub-view-drawer-r01");var drawer=Directory.Exists(drawerDir)?Directory.GetFiles(drawerDir,"*.fbx").FirstOrDefault():null;
@@ -54,6 +54,15 @@ namespace Tide.EditorTools {
    EditorSceneManager.SaveScene(hub,Root+"Scenes/hub.unity");
    EditorBuildSettings.scenes=new[]{"boot","ui-root","hub"}.Select(n=>new EditorBuildSettingsScene(Root+"Scenes/"+n+".unity",true)).ToArray();
    AssetDatabase.SaveAssets();Debug.Log("T0_M2_PREPARED: Both input, URP, boot/ui-root/hub, external data");
+  }
+  // M9 (RFC-CX-011 S-D): wire only the beats table onto the existing runtime config — full Prepare would rebuild scenes owned by later milestone builders.
+  public static void WireBeats(){
+   var config=AssetDatabase.LoadAssetAtPath<T0RuntimeConfig>(Root+"Resources/T0Runtime.asset");
+   if(config==null)throw new InvalidOperationException("T0Runtime.asset missing — run Prepare first");
+   config.beats=Text("Data/Tables/beats.json");
+   if(config.beats==null)throw new InvalidOperationException("Data/Tables/beats.json missing");
+   EditorUtility.SetDirty(config);AssetDatabase.SaveAssets();
+   Debug.Log("T0_M9_BEATS_WIRED "+config.beats.name);
   }
   static TextAsset Text(string path)=>AssetDatabase.LoadAssetAtPath<TextAsset>(Root+path);
   static void CopyCandidate(string repo,string source,string target){var file=Path.Combine(repo,source);if(File.Exists(file))File.Copy(file,Root+"Art/Candidates/"+target,true);}

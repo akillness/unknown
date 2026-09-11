@@ -7,8 +7,9 @@ namespace Tide.UI
 {
     public sealed class ReviewNotesView
     {
-        public string Text, Placeholder, Help;
+        public string Text, Placeholder, Help, Question, QuestionLabel;
         public Action<string> Changed;
+        public Texture2D CardTexture;
     }
 
     public sealed partial class T0Interface
@@ -19,12 +20,22 @@ namespace Tide.UI
         public Func<bool> ReviewCompositionActive;
         public bool TextEntryActive => reviewEditing;
         public InputField ReviewEditor => reviewEditor;
+        public CanvasGroup ReviewPanelGroup { get; private set; }
+        public CanvasGroup ReviewQuestionGroup { get; private set; }
 
         void RenderReviewNotes(Transform parent, ReviewNotesView model)
         {
             if (model == null) return;
             FlowText(parent, model.Help, 16, ink);
             var box = Panel("review-note-editor", parent, Vector2.zero, Vector2.one, Color.white);
+            ReviewPanelGroup = box.gameObject.AddComponent<CanvasGroup>();
+            if (model.CardTexture != null)
+            {
+                var card = Rect("Card paper", box, Vector2.zero, Vector2.one);
+                var image = card.gameObject.AddComponent<RawImage>();
+                image.texture = model.CardTexture;
+                image.raycastTarget = false;
+            }
             var height = box.gameObject.AddComponent<LayoutElement>();
             height.minHeight = height.preferredHeight = 190 * scale;
             Text("Draft", box, "", 20, ink, new Vector2(.025f, .045f), new Vector2(.975f, .955f));
@@ -49,6 +60,16 @@ namespace Tide.UI
             selection.Selected = () => SetReviewEditing(true);
             selection.Deselected = () => SetReviewEditing(false);
             // The explicit edit button enters typing. Rebuilding the screen never activates the field.
+            if (!string.IsNullOrEmpty(model.Question))
+            {
+                var question = Panel("review-note-question-panel", parent, Vector2.zero, Vector2.one, new Color(.96f, .95f, .89f));
+                question.gameObject.AddComponent<LayoutElement>().minHeight = 120 * scale;
+                ReviewQuestionGroup = question.gameObject.AddComponent<CanvasGroup>();
+                Text("QuestionLabel", question, model.QuestionLabel, 15, new Color(.38f, .18f, .07f), new Vector2(.025f, .74f), new Vector2(.975f, .97f));
+                Text("Question", question, model.Question, 19, ink, new Vector2(.025f, .05f), new Vector2(.975f, .72f));
+                question.Find("QuestionLabel").GetComponent<Text>().raycastTarget = false;
+                question.Find("Question").GetComponent<Text>().raycastTarget = false;
+            }
         }
 
         void SetReviewEditing(bool active)
@@ -78,6 +99,8 @@ namespace Tide.UI
             if (reviewEditor != null) reviewEditor.DeactivateInputField();
             SetReviewEditing(false);
             reviewEditor = null;
+            ReviewPanelGroup = null;
+            ReviewQuestionGroup = null;
         }
     }
 

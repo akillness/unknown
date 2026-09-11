@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="15" result="Failed(Child)" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.3090373">
+  <test-suite type="TestSuite" id="1070" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.309037" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1064" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.290473" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29318" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1065" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.287039" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1066" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.286567" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1020" name="M5DirectionPlayModeTests" fullname="Tide.Tests.M5DirectionPlayModeTests" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:17Z" duration="16.284397" total="15" passed="14" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1034" name="FirstObservationStillAllowsRiskTrialAndMaskPersists" fullname="Tide.Tests.M5DirectionPlayModeTests.FirstObservationStillAllowsRiskTrialAndMaskPersists" methodname="FirstObservationStillAllowsRiskTrialAndMaskPersists" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="2076396970" result="Passed" start-time="2026-09-11 07:46:01Z" end-time="2026-09-11 07:46:02Z" duration="1.239094" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="FocusLossAndPauseStopIntroClock" fullname="Tide.Tests.M5DirectionPlayModeTests.FocusLossAndPauseStopIntroClock" methodname="FocusLossAndPauseStopIntroClock" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1651642609" result="Passed" start-time="2026-09-11 07:46:02Z" end-time="2026-09-11 07:46:03Z" duration="0.465215" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="FreshIntroUsesObservedCutAndTimeoutWithoutWrites" fullname="Tide.Tests.M5DirectionPlayModeTests.FreshIntroUsesObservedCutAndTimeoutWithoutWrites" methodname="FreshIntroUsesObservedCutAndTimeoutWithoutWrites" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1671600225" result="Passed" start-time="2026-09-11 07:46:03Z" end-time="2026-09-11 07:46:09Z" duration="6.068762" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" fullname="Tide.Tests.M5DirectionPlayModeTests.HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" methodname="HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="2128944764" result="Passed" start-time="2026-09-11 07:46:09Z" end-time="2026-09-11 07:46:15Z" duration="6.072458" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="HeldSkipCannotActivateGameplayUntilFreshPress" fullname="Tide.Tests.M5DirectionPlayModeTests.HeldSkipCannotActivateGameplayUntilFreshPress" methodname="HeldSkipCannotActivateGameplayUntilFreshPress" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1951110320" result="Passed" start-time="2026-09-11 07:46:15Z" end-time="2026-09-11 07:46:15Z" duration="0.059193" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" fullname="Tide.Tests.M5DirectionPlayModeTests.LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" methodname="LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="367524172" result="Passed" start-time="2026-09-11 07:46:15Z" end-time="2026-09-11 07:46:15Z" duration="0.214281" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="MissingImageKeepsReadableInkFallbackAndSkip" fullname="Tide.Tests.M5DirectionPlayModeTests.MissingImageKeepsReadableInkFallbackAndSkip" methodname="MissingImageKeepsReadableInkFallbackAndSkip" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="371566393" result="Passed" start-time="2026-09-11 07:46:15Z" end-time="2026-09-11 07:46:15Z" duration="0.036687" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="PointerSettingsFromReduced150IntroOpensAndReturns" fullname="Tide.Tests.M5DirectionPlayModeTests.PointerSettingsFromReduced150IntroOpensAndReturns" methodname="PointerSettingsFromReduced150IntroOpensAndReturns" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1058806957" result="Failed" start-time="2026-09-11 07:46:15Z" end-time="2026-09-11 07:46:16Z" duration="0.270108" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.M5DirectionPlayModeTests+<PointerSettingsFromReduced150IntroOpensAndReturns>d__22.MoveNext () [0x000b5] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/M5DirectionPlayModeTests.cs:63
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1035" name="RecordStatusCannotAcceptPendingFailedOrCancelledSave" fullname="Tide.Tests.M5DirectionPlayModeTests.RecordStatusCannotAcceptPendingFailedOrCancelledSave" methodname="RecordStatusCannotAcceptPendingFailedOrCancelledSave" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1382838431" result="Passed" start-time="2026-09-11 07:46:16Z" end-time="2026-09-11 07:46:16Z" duration="0.790712" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: M5 expected save failure
+]]></output>
+            </test-case>
+            <test-case id="1021" name="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" fullname="Tide.Tests.M5DirectionPlayModeTests.ReducedMotionStartsFreshGameImmediatelyWithoutWrites" methodname="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="240584137" result="Passed" start-time="2026-09-11 07:46:16Z" end-time="2026-09-11 07:46:16Z" duration="0.056582" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="ReplayFromToolKeepsKeyboardNavigationAndReturnContext" fullname="Tide.Tests.M5DirectionPlayModeTests.ReplayFromToolKeepsKeyboardNavigationAndReturnContext" methodname="ReplayFromToolKeepsKeyboardNavigationAndReturnContext" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="784518635" result="Passed" start-time="2026-09-11 07:46:16Z" end-time="2026-09-11 07:46:16Z" duration="0.072353" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="SelectedCategoryChangesWithoutRerenderOrJournalWrite" fullname="Tide.Tests.M5DirectionPlayModeTests.SelectedCategoryChangesWithoutRerenderOrJournalWrite" methodname="SelectedCategoryChangesWithoutRerenderOrJournalWrite" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="678524918" result="Passed" start-time="2026-09-11 07:46:16Z" end-time="2026-09-11 07:46:17Z" duration="0.084996" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" fullname="Tide.Tests.M5DirectionPlayModeTests.SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" methodname="SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="2046873045" result="Passed" start-time="2026-09-11 07:46:17Z" end-time="2026-09-11 07:46:17Z" duration="0.173430" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" fullname="Tide.Tests.M5DirectionPlayModeTests.SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" methodname="SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1128595802" result="Passed" start-time="2026-09-11 07:46:17Z" end-time="2026-09-11 07:46:17Z" duration="0.594585" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M5_150_LAYOUT screen=640x480 caption=410.8944 viewport=523.2525
+]]></output>
+            </test-case>
+            <test-case id="1024" name="SkipFirstFrameAndEscapeConsumeInput" fullname="Tide.Tests.M5DirectionPlayModeTests.SkipFirstFrameAndEscapeConsumeInput" methodname="SkipFirstFrameAndEscapeConsumeInput" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="2061728576" result="Passed" start-time="2026-09-11 07:46:17Z" end-time="2026-09-11 07:46:17Z" duration="0.067345" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

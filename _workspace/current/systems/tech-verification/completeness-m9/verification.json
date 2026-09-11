@@ -1,0 +1,190 @@
+{
+ "schemaVersion": 1,
+ "id": "completeness-m9",
+ "recordedAt": "2026-09-11T14:56:43.985363+00:00",
+ "unity": "6000.5.6f1",
+ "baseCommit": "6a1a7616b84f00e5c8efb5c67a92be1826cc97ab",
+ "scope": "RFC-CX-011 M9: hint persistence, two-step default, runtime preview diff, guided teaching, M8 targets, review-note presentation, beats wiring, GTI card candidate",
+ "commands": {
+  "editmode": "-batchmode -nographics -runTests -testPlatform EditMode -assemblyNames Tide.Tests.Sim",
+  "playmode": "-batchmode -nographics -runTests -testPlatform PlayMode -assemblyNames Tide.Tests.Play",
+  "boot": "PlayMode filter T0BootSceneTests.SerializedBoot… with --t0-save-dir /tmp/unknown-c1-m4-boot-*",
+  "wire": "-executeMethod Tide.EditorTools.T0ProjectBuilder.WireBeats",
+  "import": "-executeMethod Tide.EditorTools.M8ReviewNotesProjectBuilder.ImportReviewCard"
+ },
+ "nativeRuns": [
+  {
+   "file": "editmode.xml",
+   "sha256": "bc7221c2625f9d44ff576eecdc3ff61e375cc16cdfd5ddb1f1a2bb59e7962793",
+   "testcasecount": "53",
+   "result": "Passed",
+   "passed": "53",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "2.6977693",
+   "start-time": "2026-09-11 13:48:27Z"
+  },
+  {
+   "file": "playmode.xml",
+   "sha256": "bedc69d131fc7a1b48093f77a5b87f9eda3b7f075f96032a2ee64129b127495b",
+   "testcasecount": "69",
+   "result": "Skipped:Ignored",
+   "passed": "68",
+   "failed": "0",
+   "skipped": "1",
+   "duration": "35.8410259",
+   "start-time": "2026-09-11 13:48:50Z"
+  },
+  {
+   "file": "boot.xml",
+   "sha256": "3532843bac0615f81203b9823280ee61654254b6b6dddba636a11de36ef851db",
+   "testcasecount": "1",
+   "result": "Passed",
+   "passed": "1",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "1.2787693",
+   "start-time": "2026-09-11 13:52:03Z"
+  },
+  {
+   "file": "editmode-final.xml",
+   "sha256": "57c41e0a08e69c2965044801e46f090f25ced865067d96d4d985276d78293417",
+   "testcasecount": "53",
+   "result": "Passed",
+   "passed": "53",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "2.5340742",
+   "start-time": "2026-09-11 13:55:16Z"
+  },
+  {
+   "file": "playmode-final.xml",
+   "sha256": "b9a1ac31152f3cd0c5eda08e11dcc3fa77451b2b9ae90d0eeb87491d2e55a2a0",
+   "testcasecount": "69",
+   "result": "Skipped:Ignored",
+   "passed": "68",
+   "failed": "0",
+   "skipped": "1",
+   "duration": "33.8424911",
+   "start-time": "2026-09-11 13:55:36Z"
+  },
+  {
+   "file": "boot-final.xml",
+   "sha256": "21563265ff25de8ed9f933af22255cd17286ab8dc43ed168f3b580c6e870e2b6",
+   "testcasecount": "1",
+   "result": "Passed",
+   "passed": "1",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "1.1288202",
+   "start-time": "2026-09-11 13:56:29Z"
+  },
+  {
+   "file": "editmode-fix1.xml",
+   "sha256": "daf8b52ad59f6e26e7e68eeb14d43abd0f8a2bc1d8a233ad2f6d45f433bc7744",
+   "testcasecount": "53",
+   "result": "Passed",
+   "passed": "53",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "2.5331536",
+   "start-time": "2026-09-11 14:27:38Z",
+   "phase": "qa-fix-cycle-1"
+  },
+  {
+   "file": "playmode-fix1.xml",
+   "sha256": "337176096763b56b83fb3ed9ec37f762bd62090e86cef931d8b9615d7f78a843",
+   "testcasecount": "70",
+   "result": "Skipped:Ignored",
+   "passed": "69",
+   "failed": "0",
+   "skipped": "1",
+   "duration": "34.1321514",
+   "start-time": "2026-09-11 14:27:58Z",
+   "phase": "qa-fix-cycle-1"
+  },
+  {
+   "file": "boot-fix1.xml",
+   "sha256": "dd76edf1f58bee8d25c77405127329cb00b946c2be273e84c72539add5203c22",
+   "testcasecount": "1",
+   "result": "Passed",
+   "passed": "1",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "1.2008143",
+   "start-time": "2026-09-11 14:29:55Z",
+   "phase": "qa-fix-cycle-1"
+  },
+  {
+   "file": "editmode-fix2.xml",
+   "sha256": "a3ddd6f2e25e9caf248169a57bbed4f91f2f1cc33aa4d2f5fa9fe47694fa71ed",
+   "testcasecount": "53",
+   "result": "Passed",
+   "passed": "53",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "2.5395961",
+   "start-time": "2026-09-11 14:52:31Z",
+   "phase": "qa-fix-cycle-2"
+  },
+  {
+   "file": "playmode-fix2.xml",
+   "sha256": "f21b781bb49246459ac282106d57685337441fd4c482fa7398cf1fa3f8f2c521",
+   "testcasecount": "71",
+   "result": "Skipped:Ignored",
+   "passed": "70",
+   "failed": "0",
+   "skipped": "1",
+   "duration": "35.8228932",
+   "start-time": "2026-09-11 14:52:54Z",
+   "phase": "qa-fix-cycle-2"
+  },
+  {
+   "file": "boot-fix2.xml",
+   "sha256": "6190792eb0c87c1246648e4c257249547417c9c61ab55a29cf647cc98161bb0a",
+   "testcasecount": "1",
+   "result": "Passed",
+   "passed": "1",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "1.5912831",
+   "start-time": "2026-09-11 14:53:49Z",
+   "phase": "qa-fix-cycle-2"
+  }
+ ],
+ "qaFixCycle1": {
+  "review": "_workspace/current/qa/completeness-m9-review.md",
+  "verdictBefore": "S1 0 · S2 1 · S3 10",
+  "fixed": [
+   "D-M9-01 (S2) C1 stage guard on source-original open + regression test",
+   "D-M9-02 Esc routes through CloseReviewNotes",
+   "D-M9-04 T0Simulation.IsSatisfied single source",
+   "D-M9-05 teachingRemaining 비트→단계",
+   "D-M9-08 literal per-beat test expectations",
+   "D-M9-10 hint-level dirty flush on commit settle"
+  ],
+  "ruled": [
+   "D-M9-03 select_ms removed, receipts corrected to 180/140/120",
+   "D-M9-06 teaching header is a separate guidance feature; not recorded as hint use",
+   "D-M9-07 zone/evidence-pair preview sentences deferred"
+  ],
+  "carried": [
+   "D-M9-09 replaced by player-smoke-transcript.log + player.log",
+   "D-M9-11 planner content (t0-b2 objective authoring note)"
+  ],
+  "macBuild": "T0_MAC_BUILD Succeeded bytes=354230869 (build-mac-fix1.log)",
+  "nativeLaunch": "player-smoke-transcript.log: fresh pid alive 12s, T0_BOOT entry-start/ui-root-loaded/hub-loaded/session-initialized, terminated exit-confirmed"
+ },
+ "qaFixCycle2": {
+  "review": "_workspace/current/qa/completeness-m9-review.md §QA R2",
+  "verdictBefore": "R2 S1 0 · S2 1 (D-M9-13 new) · S3 2 (D-M9-11, D-M9-12)",
+  "fixed": [
+   "D-M9-13 (S2) tool==null gate on source-original open + regression OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes",
+   "D-M9-12 manifest/changelog reflect FIX rulings and deferrals",
+   "G-2 evidence restoration assert on C1 regression"
+  ],
+  "macBuild": "T0_MAC_BUILD Succeeded bytes=354230868 (build-mac-fix2.log)",
+  "fixCyclesUsed": 2,
+  "fixCyclesAllowed": 2
+ }
+}

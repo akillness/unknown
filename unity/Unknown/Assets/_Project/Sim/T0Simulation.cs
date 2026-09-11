@@ -173,6 +173,8 @@ namespace Tide.Sim
             var beat=data.Beats.FirstOrDefault(b=>b.Id==beatId);
             return beat!=null && IsAvailable(state,beatId) && beat.Requirements.All(r=>Satisfied(state,r));
         }
+        // Read-only completion predicate for render-side projections (single source; CLAUDE.md §9).
+        public bool IsSatisfied(PuzzleState state,CompletionRequirement requirement) => Satisfied(state,requirement);
 
         private bool Satisfied(PuzzleState s,CompletionRequirement r)
         {

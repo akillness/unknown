@@ -112,6 +112,9 @@ namespace Tide.Tests {
    yield return AssertRenderOnly(0,false);
    yield return Window("H-1:00","H+2:00");
    yield return KeyboardClick("cite");
+   Assert.AreEqual("preview",game.Surface); // two-step default (interaction-rules §1-1): preview precedes confirm.
+   yield return AssertRenderOnly(0,false);
+   yield return KeyboardClick("preview-next");
    Assert.AreEqual("confirm",game.Surface);
    yield return AssertRenderOnly(0,false);
    var saveGate=new TaskCompletionSource<bool>();
@@ -135,7 +138,7 @@ namespace Tide.Tests {
    yield return PointerClick("read");
    AssertCard(1,false); // Loading/reading another medium is not a citation.
    yield return Window("H-1:00","H+3:00");
-   yield return KeyboardClick("cite");yield return KeyboardClick("confirm-submit");
+   yield return KeyboardClick("cite");Assert.AreEqual("preview",game.Surface);yield return KeyboardClick("preview-next");yield return KeyboardClick("confirm-submit");
    while(game.SavePending)yield return null;
    yield return Wait(game.FlushSaves());
    Assert.IsTrue(game.Journal.State.Has("citation:rec-tide-ledger-bureau"));
@@ -147,7 +150,7 @@ namespace Tide.Tests {
    Assert.AreEqual("H+3:00",game.Journal.State.Get("windowEnd:rec-plate-standard-hub"));
    Assert.AreEqual("H+2:00",game.Journal.State.Get("citationEnd:rec-plate-standard-hub"));
    yield return AssertRenderOnly(2,false); // Preview changes must never silently re-pin a citation.
-   yield return KeyboardClick("cite");yield return KeyboardClick("confirm-submit");
+   yield return KeyboardClick("cite");Assert.AreEqual("preview",game.Surface);yield return KeyboardClick("preview-next");yield return KeyboardClick("confirm-submit");
    while(game.SavePending)yield return null;
    yield return Wait(game.FlushSaves());
    AssertCard(2,true);
@@ -193,13 +196,25 @@ namespace Tide.Tests {
     StringAssert.DoesNotContain(banned,card);
   }
 
+  // RFC-CX-011 S-D (QA D-M9-08): literal per-beat expectations, independent of the runtime guard function.
+  // t0-b1's authored objective names records, so the disclosure guard must fall back to the legacy fixed objective;
+  // t0-b2/t0-b3 pass the guard and show their beats.json objective verbatim.
+  string ExpectedObjective() {
+   var beat=new[]{"t0-b1","t0-b2","t0-b3"}.FirstOrDefault(b=>game.Simulation.IsAvailable(game.Journal.State,b)&&!game.Simulation.IsComplete(game.Journal.State,b))??"t0-b3";
+   switch(beat){
+    case "t0-b2":return "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다.";
+    case "t0-b3":return "대조의 밤 표준판을 처음 판독해 검증 사본을 남기고 결손 구간의 시작과 끝을 확정한다.";
+    default:return "결손 4시간의 양 끝을 두 기록으로 고정";
+   }
+  }
+
   void AssertCard(int count,bool completed) {
    var cards=host.GetComponentsInChildren<Text>().Where(t=>t.name=="CaseThread").ToArray();
    Assert.AreEqual(1,cards.Length,"A visible Korean CaseThread must explain the existing T0 objective and citation progress");
    var card=cards[0];
    if(checkDisclosure)AssertNoDisclosure();
    Assert.IsTrue(card.enabled&&card.gameObject.activeInHierarchy);
-   StringAssert.Contains("결손 4시간의 양 끝을 두 기록으로 고정",card.text);
+   StringAssert.Contains(ExpectedObjective(),card.text);
    StringAssert.Contains("필요한 인용 "+count+"/2",card.text);
    StringAssert.Contains("다음:",card.text);
    StringAssert.DoesNotContain("H-1",card.text);

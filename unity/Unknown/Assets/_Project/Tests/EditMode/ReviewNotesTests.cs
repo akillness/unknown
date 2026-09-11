@@ -84,6 +84,29 @@ namespace Tide.Tests
             Assert.AreEqual(before, T0GameSession.ReviewQuestionFor(new[] { left, right }));
             StringAssert.DoesNotContain("정답", before);
         }
+
+        [Test] public void QuestionBranchesOnIndependentMediaAfterOriginDuplicatesTakePriority()
+        {
+            var logA = new ReviewNoteSource { Id = "a", SourceType = "log", OriginId = "origin-a" };
+            var logB = new ReviewNoteSource { Id = "b", SourceType = "log", OriginId = "origin-b" };
+            var plate = new ReviewNoteSource { Id = "c", SourceType = "plate", OriginId = "origin-c" };
+            // Two or more links, no origin duplicates, a single medium: ask for an independent medium.
+            StringAssert.Contains("서로 다른 매체", T0GameSession.ReviewQuestionFor(new[] { logA, logB }));
+            // Two distinct media keep the existing contrast question.
+            StringAssert.Contains("나란히", T0GameSession.ReviewQuestionFor(new[] { logA, plate }));
+            // Same-origin duplication outranks the media branch even across distinct media.
+            plate.OriginId = "origin-a";
+            StringAssert.Contains("같은 원본", T0GameSession.ReviewQuestionFor(new[] { logA, plate }));
+        }
+
+        [Test] public void UnknownMediaCountAsInsufficientForTheContrastQuestion()
+        {
+            var left = new ReviewNoteSource { Id = "a", SourceType = null, OriginId = "origin-a" };
+            var right = new ReviewNoteSource { Id = "b", SourceType = "", OriginId = "origin-b" };
+            StringAssert.Contains("서로 다른 매체", T0GameSession.ReviewQuestionFor(new[] { left, right }));
+            right.SourceType = "plate";
+            StringAssert.Contains("서로 다른 매체", T0GameSession.ReviewQuestionFor(new[] { left, right }));
+        }
     }
 }
 #endif

@@ -1,0 +1,15 @@
+== M9 FIX1 native launch transcript (clean rerun) 2026-09-11T14:33:08Z ==
+precondition: pgrep 'Unknown T0' -> 0 processes (must be 0)
+build: unity/Unknown/Builds/T0-mac/Unknown.app (T0_MAC_BUILD Succeeded bytes=354230869, build-mac-fix1.log)
+cmd: open -n unity/Unknown/Builds/T0-mac/Unknown.app --args --t0-save-dir /tmp/unknown-m9-smoke-fix1b-1789137188 --m8-review-notes-diagnostic
+open exit=0
+PLAYER_ALIVE pid=31749 after 12s
+31749   00:12
+player.log boot markers:
+T0_BOOT entry-start
+T0_BOOT ui-root-loaded
+T0_BOOT hub-loaded
+T0_BOOT session-initialized
+save dir: (none — title screen, no gameplay save)
+TERMINATED pid=31749 exit-confirmed
+postcondition: pgrep 'Unknown T0' -> 0 processes
