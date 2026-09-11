@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Failed(Child)" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.829396">
+  <test-suite type="TestSuite" id="1027" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.829396" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1021" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.751623" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="58476" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1022" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.750370" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1023" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.748802" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1017" name="T0ResourceInteractionTests" fullname="Tide.Tests.T0ResourceInteractionTests" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:48Z" duration="1.746456" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1020" name="CloserSceneGeometryBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserSceneGeometryBlocksDrawerSelection" methodname="CloserSceneGeometryBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1982047550" result="Failed" start-time="2026-09-10 10:53:46Z" end-time="2026-09-10 10:53:47Z" duration="1.436235" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  An unobscured drawer must remain selectable
+  Expected: collection containing "inspect-plate-zero"
+  But was:  < "handover", "transfer", "load-plate-zero" >
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ResourceInteractionTests+<CloserSceneGeometryBlocksDrawerSelection>d__18.MoveNext () [0x001a1] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:142
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1018" name="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" fullname="Tide.Tests.T0ResourceInteractionTests.LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" methodname="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1012537622" result="Failed" start-time="2026-09-10 10:53:47Z" end-time="2026-09-10 10:53:47Z" duration="0.097294" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Left-click on the visible approved r03 drawer must select its existing investigation
+  Expected: collection containing "inspect-plate-zero"
+  But was:  < "handover", "transfer", "load-plate-zero" >
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ResourceInteractionTests+<LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource>d__16.MoveNext () [0x00273] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1019" name="SceneClickDoesNotCrossOverlayToolDocumentOrUi" fullname="Tide.Tests.T0ResourceInteractionTests.SceneClickDoesNotCrossOverlayToolDocumentOrUi" methodname="SceneClickDoesNotCrossOverlayToolDocumentOrUi" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1417435336" result="Failed" start-time="2026-09-10 10:53:47Z" end-time="2026-09-10 10:53:48Z" duration="0.198416" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Removing all input blockers restores drawer interaction
+  Expected: collection containing "inspect-plate-zero"
+  But was:  < "handover", "transfer", "load-plate-zero" >
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ResourceInteractionTests+<SceneClickDoesNotCrossOverlayToolDocumentOrUi>d__17.MoveNext () [0x003e0] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:130
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,644 @@
+{
+  "pass": true,
+  "error": null,
+  "checks": [
+    "native player uses explicit isolated save directory",
+    "fresh native boot has no puzzle journal entries",
+    "existing start control available",
+    "desk investigation active",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "initial-0-of-2: objective visible",
+    "initial-0-of-2: 0/2 visible",
+    "initial-0-of-2: completion wording matches live state",
+    "initial-0-of-2: live t0-b3 completion agrees",
+    "initial-0-of-2: case thread is read-only and not a pointer target",
+    "initial-0-of-2: card creates no puzzle action",
+    "initial-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "initial-0-of-2: repeated Render preserves actions and keyboard focus",
+    "native Tab changes existing focus and skips card",
+    "native Tab causes no puzzle or save mutation",
+    "drawer front inside scene camera viewport",
+    "native pointer selects visible drawer",
+    "existing UI action available: hub-view-desk",
+    "drawer front inside scene camera viewport",
+    "retained occlusion fixture has no collider",
+    "retained occlusion fixture is active and camera-visible",
+    "retained occlusion fixture intersects pointer ray",
+    "renderer-only occluder precedes drawer bounds",
+    "no nearer physics collider masks renderer-only case",
+    "desk investigation active",
+    "disabling renderer restores native drawer pointer selection",
+    "existing UI action available: hub-view-desk",
+    "occluded drawer keyboard navigation target available",
+    "keyboard can still select occluded drawer",
+    "existing UI action available: hub-view-desk",
+    "drawer pointer/keyboard navigation changes no puzzle journal or save files",
+    "pointer target focusable: handover",
+    "pointer target selected: handover",
+    "pointer UI target inside screen: handover",
+    "native UI pointer opens existing handover document",
+    "pointer target focusable: line-hb-l1",
+    "pointer target selected: line-hb-l1",
+    "pointer UI target inside screen: line-hb-l1",
+    "native UI pointer performs actual existing record action",
+    "existing UI action available: line-hb-l2",
+    "existing UI action available: line-hb-l3",
+    "existing UI action available: close-document",
+    "existing UI action available: transfer",
+    "existing UI action available: row-tl-r1",
+    "existing UI action available: row-tl-r2",
+    "existing UI action available: row-tl-r3",
+    "existing UI action available: decision-written",
+    "existing UI action available: close-document",
+    "existing UI action available: load-plate-zero",
+    "actual intake completes t0-b1",
+    "existing UI action available: hub-view-circuitmap",
+    "existing UI action available: open-circuit",
+    "existing UI action available: trace-hub",
+    "existing UI action available: begin-overlay",
+    "existing UI action available: offset-left",
+    "existing UI action available: offset-up",
+    "existing UI action available: anchor-overlay",
+    "existing UI action available: area-hub-uncovered-1",
+    "existing UI action available: area-evidence-hub-uncovered-1",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "existing UI action available: area-hub-uncovered-2",
+    "existing UI action available: area-evidence-hub-uncovered-2",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "existing UI action available: area-hub-uncovered-3",
+    "existing UI action available: area-evidence-hub-uncovered-3",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "actual circuit actions complete t0-b2",
+    "existing UI action available: hub-view-reader",
+    "existing UI action available: open-reader",
+    "existing UI action available: load-rec-plate-standard-hub",
+    "existing UI action available: read",
+    "existing UI action available: pick-start",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "existing UI action available: phase-H-1:00",
+    "existing UI action available: pick-end",
+    "end phase picker bounded",
+    "existing UI action available: phase-prev",
+    "existing UI action available: phase-H+3:00",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "prepared-0-of-2: objective visible",
+    "prepared-0-of-2: 0/2 visible",
+    "prepared-0-of-2: completion wording matches live state",
+    "prepared-0-of-2: live t0-b3 completion agrees",
+    "prepared-0-of-2: case thread is read-only and not a pointer target",
+    "prepared-0-of-2: card creates no puzzle action",
+    "prepared-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "prepared-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: cite",
+    "first citation requests existing confirmation",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "first-confirm-still-0-of-2: objective visible",
+    "first-confirm-still-0-of-2: 0/2 visible",
+    "first-confirm-still-0-of-2: completion wording matches live state",
+    "first-confirm-still-0-of-2: live t0-b3 completion agrees",
+    "first-confirm-still-0-of-2: case thread is read-only and not a pointer target",
+    "first-confirm-still-0-of-2: card creates no puzzle action",
+    "first-confirm-still-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "first-confirm-still-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: confirm-submit",
+    "save queue settled",
+    "first actual citation committed once",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "first-1-of-2: objective visible",
+    "first-1-of-2: 1/2 visible",
+    "first-1-of-2: completion wording matches live state",
+    "first-1-of-2: live t0-b3 completion agrees",
+    "first-1-of-2: case thread is read-only and not a pointer target",
+    "first-1-of-2: card creates no puzzle action",
+    "first-1-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "first-1-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: select-record",
+    "existing UI action available: choose-rec-tide-ledger-bureau",
+    "existing UI action available: read",
+    "existing UI action available: pick-start",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "existing UI action available: phase-H-1:00",
+    "existing UI action available: pick-end",
+    "existing UI action available: phase-H+3:00",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "second-prepared-still-1-of-2: objective visible",
+    "second-prepared-still-1-of-2: 1/2 visible",
+    "second-prepared-still-1-of-2: completion wording matches live state",
+    "second-prepared-still-1-of-2: live t0-b3 completion agrees",
+    "second-prepared-still-1-of-2: case thread is read-only and not a pointer target",
+    "second-prepared-still-1-of-2: card creates no puzzle action",
+    "second-prepared-still-1-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "second-prepared-still-1-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: cite",
+    "second citation requests existing confirmation",
+    "second citation confirm reachable by keyboard",
+    "save queue settled",
+    "second actual citation committed once through native keyboard",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "completed-2-of-2: objective visible",
+    "completed-2-of-2: 2/2 visible",
+    "completed-2-of-2: completion wording matches live state",
+    "completed-2-of-2: live t0-b3 completion agrees",
+    "completed-2-of-2: case thread is read-only and not a pointer target",
+    "completed-2-of-2: card creates no puzzle action",
+    "completed-2-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "completed-2-of-2: repeated Render preserves actions and keyboard focus",
+    "actual completed live state agrees with persisted journal"
+  ],
+  "actionTrace": [
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Enter"
+    },
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Tab"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "visible approved drawer",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "drawer behind renderer-only occluder",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "drawer with occluder renderer disabled",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Enter"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "focus/scroll adapter only; activation follows through virtual mouse",
+      "id": "handover"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "UI handover",
+      "x": 920.937561,
+      "y": 446.243042
+    },
+    {
+      "path": "focus/scroll adapter only; activation follows through virtual mouse",
+      "id": "line-hb-l1"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "UI line-hb-l1",
+      "x": 920.937561,
+      "y": 489.362335
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "line-hb-l2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "line-hb-l3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "close-document"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "transfer"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "decision-written"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "close-document"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "load-plate-zero"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-circuitmap"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "open-circuit"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "trace-hub"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "begin-overlay"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "offset-left"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "offset-up"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "anchor-overlay"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-reader"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "open-reader"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "load-rec-plate-standard-hub"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "read"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-start"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H-1:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-end"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-prev"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H+3:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "cite"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "confirm-submit"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "select-record"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "choose-rec-tide-ledger-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "read"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-start"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H-1:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-end"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H+3:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "cite"
+    },
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Enter"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "initial-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 인수 각서",
+      "complete": false,
+      "footprint": {
+        "stateHash": "29ca8a3cca3900e160b3656b59c0def76e043a2f4a68007fbaa8f60a23de0389",
+        "headSeq": 0,
+        "branchId": "main",
+        "entries": 0,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "shell",
+        "files": []
+      }
+    },
+    {
+      "stage": "prepared-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 이 시간창을 가설판에 인용",
+      "complete": false,
+      "footprint": {
+        "stateHash": "087ced18e024e83c2fb55b136bb45934afcce8cdf91fdb15a78f5ccc55a60f30",
+        "headSeq": 25,
+        "branchId": "main",
+        "entries": 25,
+        "snapshots": 0,
+        "loadedRecord": "rec-plate-standard-hub",
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.bak",
+            "bytes": 6619,
+            "modifiedUtcTicks": 639246439697568709,
+            "sha256": "535deb3d47a3f7b22597ffe0b537fb1f7a6ba3b2a0bb1a0fd28074342c7d36c8"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.json",
+            "bytes": 6853,
+            "modifiedUtcTicks": 639246439697887331,
+            "sha256": "7714538d0f7b137ec796b9315523e2f617389a86451415a99f26cd4da88b3614"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "first-confirm-still-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 확정",
+      "complete": false,
+      "footprint": {
+        "stateHash": "087ced18e024e83c2fb55b136bb45934afcce8cdf91fdb15a78f5ccc55a60f30",
+        "headSeq": 25,
+        "branchId": "main",
+        "entries": 25,
+        "snapshots": 0,
+        "loadedRecord": "rec-plate-standard-hub",
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "confirm",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.bak",
+            "bytes": 6619,
+            "modifiedUtcTicks": 639246439697568709,
+            "sha256": "535deb3d47a3f7b22597ffe0b537fb1f7a6ba3b2a0bb1a0fd28074342c7d36c8"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.json",
+            "bytes": 6853,
+            "modifiedUtcTicks": 639246439697887331,
+            "sha256": "7714538d0f7b137ec796b9315523e2f617389a86451415a99f26cd4da88b3614"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "first-1-of-2",
+      "card": "사건 흐름 · 필요한 인용 1/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 자료 선택 / 교체",
+      "complete": false,
+      "footprint": {
+        "stateHash": "8428f63efc4621bff95083c07360eb3862a36773aa1b6aed9ddf3323ca527ad1",
+        "headSeq": 26,
+        "branchId": "main",
+        "entries": 26,
+        "snapshots": 0,
+        "loadedRecord": "rec-plate-standard-hub",
+        "successfulReceipts": 1,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/checkpoint.pre-commit.json",
+            "bytes": 6864,
+            "modifiedUtcTicks": 639246439704193877,
+            "sha256": "c15f9e81b98d70c3aa1c5e4cdcf42447c4772e5abb3fc57007e0249678fc6107"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.bak",
+            "bytes": 6853,
+            "modifiedUtcTicks": 639246439697887331,
+            "sha256": "7714538d0f7b137ec796b9315523e2f617389a86451415a99f26cd4da88b3614"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.json",
+            "bytes": 7101,
+            "modifiedUtcTicks": 639246439704408960,
+            "sha256": "9c95c215b5f970d6c69ed9019cf2db39dd15161bd42108e1715f95bb743f239f"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "second-prepared-still-1-of-2",
+      "card": "사건 흐름 · 필요한 인용 1/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 이 시간창을 가설판에 인용",
+      "complete": false,
+      "footprint": {
+        "stateHash": "e9caa8fd4ad3f029f44c9e8afffa37dd3fb6dc644641e6327596602fc8958c6d",
+        "headSeq": 30,
+        "branchId": "main",
+        "entries": 30,
+        "snapshots": 0,
+        "loadedRecord": "rec-tide-ledger-bureau",
+        "successfulReceipts": 1,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/checkpoint.pre-commit.json",
+            "bytes": 6864,
+            "modifiedUtcTicks": 639246439704193877,
+            "sha256": "c15f9e81b98d70c3aa1c5e4cdcf42447c4772e5abb3fc57007e0249678fc6107"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.bak",
+            "bytes": 7814,
+            "modifiedUtcTicks": 639246439708390379,
+            "sha256": "72fb3eea0350b1bfb873a07d79536cc7f3658e73918eefab4b66d0bf0f18c786"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.json",
+            "bytes": 8048,
+            "modifiedUtcTicks": 639246439708557430,
+            "sha256": "02e0c0b4903c9d3b1ee44ef19062cfd405b2abddee5028bde3f2cacbf1929237"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "completed-2-of-2",
+      "card": "사건 흐름 · 필요한 인용 2/2\n결손 4시간의 양 끝을 두 기록으로 고정\n근거 쌍이 고정됨\n다음: 증거함",
+      "complete": true,
+      "footprint": {
+        "stateHash": "7a28b84efc7a4e919be18354413358ce5370b4057ac189f432a15bce379485c4",
+        "headSeq": 31,
+        "branchId": "main",
+        "entries": 31,
+        "snapshots": 0,
+        "loadedRecord": "rec-tide-ledger-bureau",
+        "successfulReceipts": 2,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/checkpoint.pre-commit.json",
+            "bytes": 8059,
+            "modifiedUtcTicks": 639246439711803522,
+            "sha256": "66bc10e8b64d255e5f3fa7cd75a16a278ba3487581481c34fb9b3fa5cec73702"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/checkpoint.pre-commit.json.bak",
+            "bytes": 6864,
+            "modifiedUtcTicks": 639246439704193877,
+            "sha256": "c15f9e81b98d70c3aa1c5e4cdcf42447c4772e5abb3fc57007e0249678fc6107"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.bak",
+            "bytes": 8048,
+            "modifiedUtcTicks": 639246439708557430,
+            "sha256": "02e0c0b4903c9d3b1ee44ef19062cfd405b2abddee5028bde3f2cacbf1929237"
+          },
+          {
+            "path": "/tmp/t0-case-thread-20260910/native-save-final/save.json",
+            "bytes": 8296,
+            "modifiedUtcTicks": 639246439711988142,
+            "sha256": "4b09953be3b967809f1a883229f3af3a3c6e5267d9b1ccc95064cac420412a7e"
+          }
+        ]
+      }
+    }
+  ],
+  "occlusion": {
+    "colliderCount": 0,
+    "mesh": "Cube",
+    "material": "Workbench-above-drawer",
+    "sourceObject": "Workbench above drawer",
+    "rayDistance": 0.21967639,
+    "drawerRayDistance": 2.76798081
+  },
+  "utc": "2026-09-10T13:32:52.0315460Z",
+  "graphicsDevice": "Metal",
+  "device": "Apple M2 Pro",
+  "scope": "Automated native BuildMac smoke in isolated clone; virtual InputSystem keyboard/mouse plus explicitly labeled existing UI action adapters; no human playtest, performance, accessibility, physical-device, or gamepad validation"
+}

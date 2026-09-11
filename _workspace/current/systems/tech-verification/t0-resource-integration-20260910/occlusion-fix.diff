@@ -1,0 +1,93 @@
+--- a/unity/Unknown/Assets/_Project/App/T0GameSession.cs
++++ b/unity/Unknown/Assets/_Project/App/T0GameSession.cs
+@@ -86,14 +86,20 @@
+     EventSystem.current.RaycastAll(new PointerEventData(EventSystem.current){position=point},hits);
+     if(hits.Any(result=>result.module is GraphicRaycaster))return;
+    }
+-   var ray=camera.ScreenPointToRay(point);float nearest=float.PositiveInfinity;
++   var ray=camera.ScreenPointToRay(point);var frustum=GeometryUtility.CalculateFrustumPlanes(camera);float nearest=float.PositiveInfinity;
+    foreach(var renderer in approvedDrawerRenderers){
+-    if(renderer==null||!renderer.enabled||renderer.forceRenderingOff||!renderer.gameObject.activeInHierarchy||(camera.cullingMask&(1<<renderer.gameObject.layer))==0)continue;
++    if(!CameraCanRender(renderer,camera,frustum))continue;
+     if(renderer.bounds.IntersectRay(ray,out var distance)&&distance<=camera.farClipPlane)nearest=Mathf.Min(nearest,distance);
+    }
+    if(float.IsPositiveInfinity(nearest)||Physics.Raycast(ray,nearest,camera.cullingMask,QueryTriggerInteraction.Ignore))return;
++   // Bounds are a conservative visibility guard; approved r03 meshes stay non-readable.
++   foreach(var renderer in FindObjectsByType<Renderer>(FindObjectsSortMode.None)){
++    if(renderer.transform.IsChildOf(approvedDrawer)||!CameraCanRender(renderer,camera,frustum))continue;
++    if(renderer.bounds.IntersectRay(ray,out var distance)&&distance<nearest)return;
++   }
+    lastActivity=Time.unscaledTime;GoNode("hub-view-drawer");
+   }
++  static bool CameraCanRender(Renderer renderer,Camera camera,Plane[] frustum)=>renderer!=null&&renderer.enabled&&!renderer.forceRenderingOff&&renderer.gameObject.activeInHierarchy&&renderer.shadowCastingMode!=UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly&&(camera.cullingMask&(1<<renderer.gameObject.layer))!=0&&GeometryUtility.TestPlanesAABB(frustum,renderer.bounds);
+   void ApplySceneViewport(){var camera=Camera.main;if(camera==null||Interface==null||cameraHorizontalFov<=0)return;var viewport=Interface.SceneViewport;if(viewport.width<=0||viewport.height<=0||Screen.height<=0)return;camera.rect=viewport;camera.aspect=Screen.width*viewport.width/(Screen.height*viewport.height);camera.fieldOfView=Camera.HorizontalToVerticalFieldOfView(cameraHorizontalFov,camera.aspect);}
+   static Vector3 Point(JToken p)=>new Vector3((float)p["x"],(float)p["z"],(float)p["y"]);
+   void CloseTool(){if(tool=="circuit")SubmitImmediate(new PuzzleCommand("CloseTool","circuit"),false);tool=null;}
+--- a/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs
++++ b/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs
+@@ -151,6 +151,65 @@
+   }
+ 
+   [UnityTest]
++  public IEnumerator CloserRendererWithoutColliderBlocksDrawerSelection() {
++   game.StartGame();yield return null;
++   var point=DrawerFront();var camera=Camera.main;var ray=camera.ScreenPointToRay(point);
++   blocker=GameObject.CreatePrimitive(PrimitiveType.Cube);blocker.name="Test renderer-only occluder";
++   UnityEngine.Object.Destroy(blocker.GetComponent<Collider>());
++   blocker.transform.position=ray.GetPoint(.3f);blocker.transform.localScale=Vector3.one*.15f;
++   yield return null;Physics.SyncTransforms();
++   Assert.IsEmpty(blocker.GetComponentsInChildren<Collider>(),"The regression must exercise geometry without a Collider");
++   var renderer=blocker.GetComponent<Renderer>();
++   Assert.IsTrue(renderer.enabled&&renderer.gameObject.activeInHierarchy);
++   Assert.IsTrue(GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(camera),renderer.bounds),"Occluder must be inside the interaction camera frustum");
++   Assert.IsTrue(renderer.bounds.IntersectRay(ray,out var blockerDistance));
++   var drawerDistance=drawer.GetComponentsInChildren<Renderer>().Select(x=>x.bounds.IntersectRay(ray,out var distance)?distance:float.PositiveInfinity).Min();
++   Assert.Less(blockerDistance,drawerDistance,"Renderer-only geometry must precede the drawer on the same screen ray");
++   Assert.IsFalse(Physics.Raycast(ray,drawerDistance,camera.cullingMask,QueryTriggerInteraction.Ignore),"A Physics raycast must not mask the renderer-only regression");
++   yield return Click(point);
++   Assert.IsFalse(game.Interface.ActionIds.Contains("inspect-plate-zero"),"A nearer visible renderer without a Collider must block drawer selection");
++   AssertDesk();
++   Assert.IsTrue(game.Interface.Focus("hub-view-drawer"));yield return Enter();
++   Assert.Contains("inspect-plate-zero",game.Interface.ActionIds.ToArray(),"Occlusion must not disable keyboard navigation");
++   Assert.IsTrue(game.Interface.Activate("hub-view-desk"));AssertDesk();
++   UnityEngine.Object.Destroy(blocker);blocker=null;yield return null;
++   yield return Click(DrawerFront());
++   Assert.Contains("inspect-plate-zero",game.Interface.ActionIds.ToArray(),"Removing renderer-only geometry restores visible drawer selection");
++  }
++
++  [UnityTest]
++  public IEnumerator NonVisibleOrFartherRenderersDoNotBlockDrawerSelection() {
++   game.StartGame();Assert.IsTrue(game.Interface.Activate("hub-view-desk"));yield return null;
++   var point=DrawerFront();var camera=Camera.main;var ray=camera.ScreenPointToRay(point);int mask=camera.cullingMask;
++   blocker=GameObject.CreatePrimitive(PrimitiveType.Cube);blocker.name="Test filtered renderer-only occluder";
++   UnityEngine.Object.Destroy(blocker.GetComponent<Collider>());blocker.layer=31;
++   blocker.transform.localScale=Vector3.one*.15f;yield return null;
++   Assert.IsTrue((mask&(1<<blocker.layer))!=0,"The camera must initially include the occluder layer so each visibility filter is independently exercised");
++   Assert.IsEmpty(blocker.GetComponentsInChildren<Collider>());
++   var renderer=blocker.GetComponent<Renderer>();
++   var drawerDistance=drawer.GetComponentsInChildren<Renderer>().Select(x=>x.bounds.IntersectRay(ray,out var distance)?distance:float.PositiveInfinity).Min();
++   var cases=new (string label,Action change)[]{
++    ("disabled",()=>renderer.enabled=false),
++    ("inactive",()=>blocker.SetActive(false)),
++    ("forceRenderingOff",()=>renderer.forceRenderingOff=true),
++    ("camera-excluded layer",()=>camera.cullingMask=mask&~(1<<blocker.layer)),
++    ("shadows only",()=>renderer.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly),
++    ("behind drawer",()=>blocker.transform.position=ray.GetPoint(drawerDistance+1)),
++    ("behind camera",()=>blocker.transform.position=camera.transform.position-camera.transform.forward)
++   };
++   try {
++    foreach(var test in cases){
++     blocker.SetActive(true);renderer.enabled=true;renderer.forceRenderingOff=false;
++     renderer.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.On;
++     camera.cullingMask=mask;blocker.transform.position=ray.GetPoint(.3f);test.change();
++     yield return Click(point);
++     Assert.Contains("inspect-plate-zero",game.Interface.ActionIds.ToArray(),test.label+" geometry must not block visible drawer selection");
++     Assert.IsTrue(game.Interface.Activate("hub-view-desk"));AssertDesk();
++    }
++   } finally {camera.cullingMask=mask;}
++  }
++
++  [UnityTest]
+   public IEnumerator CloserSceneGeometryBlocksDrawerSelection() {
+    game.StartGame();yield return null;
+    var point=DrawerFront();var ray=Camera.main.ScreenPointToRay(point);

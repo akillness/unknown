@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.1011491">
+  <test-suite type="TestSuite" id="1029" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.101149" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1023" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.085408" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="37903" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1024" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.081572" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1025" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.079193" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1017" name="T0ResourceInteractionTests" fullname="Tide.Tests.T0ResourceInteractionTests" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.076568" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1021" name="CloserRendererWithoutColliderBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection" methodname="CloserRendererWithoutColliderBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1399746815" result="Failed" start-time="2026-09-10 11:22:14Z" end-time="2026-09-10 11:22:17Z" duration="2.056872" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A nearer visible renderer without a Collider must block drawer selection
+  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ResourceInteractionTests+<CloserRendererWithoutColliderBlocksDrawerSelection>d__19.MoveNext () [0x002c4] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:170
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

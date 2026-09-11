@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.2574044">
+  <test-suite type="TestSuite" id="1033" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="23" result="Failed" site="Child" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.257404" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1027" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="23" result="Failed" site="Child" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.251845" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="88059" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1028" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="23" result="Failed" site="Child" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.251392" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1029" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="23" result="Failed" site="Child" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.251066" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="T0CaseThreadTests" fullname="Tide.Tests.T0CaseThreadTests" classname="Tide.Tests.T0CaseThreadTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.249726" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1002" name="CaseThreadAfterCircuitNeverNamesTheSolutionSource" fullname="Tide.Tests.T0CaseThreadTests.CaseThreadAfterCircuitNeverNamesTheSolutionSource" methodname="CaseThreadAfterCircuitNeverNamesTheSolutionSource" classname="Tide.Tests.T0CaseThreadTests" runstate="Runnable" seed="839080547" result="Failed" start-time="2026-09-10 13:43:56Z" end-time="2026-09-10 13:43:57Z" duration="1.242182" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Post-t0-b2 next action must give generic objective guidance, never a record/action label
+  Expected string length 19 but was 7. Strings differ at index 0.
+  Expected: "근거를 살펴보고 인용을 고정하세요."
+  But was:  "당직실 표준판"
+  -----------^
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0CaseThreadTests+<CaseThreadAfterCircuitNeverNamesTheSolutionSource>d__9.MoveNext () [0x003eb] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0CaseThreadTests.cs:75
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

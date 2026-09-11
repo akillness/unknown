@@ -1,0 +1,819 @@
+{
+  "pass": false,
+  "error": "System.InvalidOperationException: first actual citation committed once\n  at Tide.App.T0CaseThreadSmoke.Require (System.Boolean condition, System.String label) [0x0002b] in /private/tmp/t0-case-thread-p1-native-20260910/build-project/Assets/_Project/App/T0GameSession.cs:304 \n  at Tide.App.T0CaseThreadSmoke+<Run>d__28.MoveNext () [0x006a6] in /private/tmp/t0-case-thread-p1-native-20260910/build-project/Assets/_Project/App/T0GameSession.cs:447 \n  at Tide.App.T0CaseThreadSmoke+<Start>d__11.MoveNext () [0x000bb] in /private/tmp/t0-case-thread-p1-native-20260910/build-project/Assets/_Project/App/T0GameSession.cs:295 ",
+  "checks": [
+    "native player uses explicit isolated save directory",
+    "fresh native boot has no puzzle journal entries",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "start-0-of-2: objective visible",
+    "start-0-of-2: 0/2 visible",
+    "start-0-of-2: next line present",
+    "start-0-of-2: next line is generic objective guidance: 기록을 읽고 근거를 살펴보세요.",
+    "start-0-of-2: no disclosure of rec-handover-brief",
+    "start-0-of-2: no disclosure of rec-plate-standard-hub",
+    "start-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "start-0-of-2: no disclosure of rec-transfer-list",
+    "start-0-of-2: no disclosure of rec-watchlog-bureau",
+    "start-0-of-2: no disclosure of 근무 규정 필사본",
+    "start-0-of-2: no disclosure of 기록국 조위대장",
+    "start-0-of-2: no disclosure of 당직실 표준판",
+    "start-0-of-2: no disclosure of 이관 목록",
+    "start-0-of-2: no disclosure of 인수 각서",
+    "start-0-of-2: no disclosure of 원판",
+    "start-0-of-2: no disclosure of 장부",
+    "start-0-of-2: no disclosure of 당직일지",
+    "start-0-of-2: no disclosure of H-1",
+    "start-0-of-2: no disclosure of H+3",
+    "start-0-of-2: no disclosure of 단일 사고",
+    "start-0-of-2: no disclosure of 유지 실패",
+    "start-0-of-2: no disclosure of 서명 순서",
+    "start-0-of-2: no disclosure of 책임 사슬",
+    "start-0-of-2: no disclosure of offset-left",
+    "start-0-of-2: no disclosure of offset-up",
+    "start-0-of-2: no authored time window",
+    "start-0-of-2: card text fits allocated height",
+    "start-0-of-2: completion wording matches live state",
+    "start-0-of-2: live t0-b3 completion agrees",
+    "start-0-of-2: case thread is read-only and not a pointer target",
+    "start-0-of-2: card creates no puzzle action",
+    "start-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "start-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing start control available",
+    "desk investigation active",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "initial-0-of-2: objective visible",
+    "initial-0-of-2: 0/2 visible",
+    "initial-0-of-2: next line present",
+    "initial-0-of-2: next line is generic objective guidance: 기록을 읽고 근거를 살펴보세요.",
+    "initial-0-of-2: no disclosure of rec-handover-brief",
+    "initial-0-of-2: no disclosure of rec-plate-standard-hub",
+    "initial-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "initial-0-of-2: no disclosure of rec-transfer-list",
+    "initial-0-of-2: no disclosure of rec-watchlog-bureau",
+    "initial-0-of-2: no disclosure of 근무 규정 필사본",
+    "initial-0-of-2: no disclosure of 기록국 조위대장",
+    "initial-0-of-2: no disclosure of 당직실 표준판",
+    "initial-0-of-2: no disclosure of 이관 목록",
+    "initial-0-of-2: no disclosure of 인수 각서",
+    "initial-0-of-2: no disclosure of 원판",
+    "initial-0-of-2: no disclosure of 장부",
+    "initial-0-of-2: no disclosure of 당직일지",
+    "initial-0-of-2: no disclosure of H-1",
+    "initial-0-of-2: no disclosure of H+3",
+    "initial-0-of-2: no disclosure of 단일 사고",
+    "initial-0-of-2: no disclosure of 유지 실패",
+    "initial-0-of-2: no disclosure of 서명 순서",
+    "initial-0-of-2: no disclosure of 책임 사슬",
+    "initial-0-of-2: no disclosure of offset-left",
+    "initial-0-of-2: no disclosure of offset-up",
+    "initial-0-of-2: no authored time window",
+    "initial-0-of-2: card text fits allocated height",
+    "initial-0-of-2: completion wording matches live state",
+    "initial-0-of-2: live t0-b3 completion agrees",
+    "initial-0-of-2: case thread is read-only and not a pointer target",
+    "initial-0-of-2: card creates no puzzle action",
+    "initial-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "initial-0-of-2: repeated Render preserves actions and keyboard focus",
+    "native Tab changes existing focus and skips card",
+    "native Tab causes no puzzle or save mutation",
+    "drawer front inside scene camera viewport",
+    "native pointer selects visible drawer",
+    "existing UI action available: hub-view-desk",
+    "drawer front inside scene camera viewport",
+    "retained occlusion fixture has no collider",
+    "retained occlusion fixture is active and camera-visible",
+    "retained occlusion fixture intersects pointer ray",
+    "renderer-only occluder precedes drawer bounds",
+    "no nearer physics collider masks renderer-only case",
+    "desk investigation active",
+    "disabling renderer restores native drawer pointer selection",
+    "existing UI action available: hub-view-desk",
+    "occluded drawer keyboard navigation target available",
+    "keyboard can still select occluded drawer",
+    "existing UI action available: hub-view-desk",
+    "drawer pointer/keyboard navigation changes no puzzle journal or save files",
+    "pointer target focusable: handover",
+    "pointer target selected: handover",
+    "pointer UI target inside screen: handover",
+    "native UI pointer opens existing handover document",
+    "pointer target focusable: line-hb-l1",
+    "pointer target selected: line-hb-l1",
+    "pointer UI target inside screen: line-hb-l1",
+    "native UI pointer performs actual existing record action",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "intake-document-0-of-2: objective visible",
+    "intake-document-0-of-2: 0/2 visible",
+    "intake-document-0-of-2: next line present",
+    "intake-document-0-of-2: next line is generic objective guidance: 기록을 읽고 근거를 살펴보세요.",
+    "intake-document-0-of-2: no disclosure of rec-handover-brief",
+    "intake-document-0-of-2: no disclosure of rec-plate-standard-hub",
+    "intake-document-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "intake-document-0-of-2: no disclosure of rec-transfer-list",
+    "intake-document-0-of-2: no disclosure of rec-watchlog-bureau",
+    "intake-document-0-of-2: no disclosure of 근무 규정 필사본",
+    "intake-document-0-of-2: no disclosure of 기록국 조위대장",
+    "intake-document-0-of-2: no disclosure of 당직실 표준판",
+    "intake-document-0-of-2: no disclosure of 이관 목록",
+    "intake-document-0-of-2: no disclosure of 인수 각서",
+    "intake-document-0-of-2: no disclosure of 원판",
+    "intake-document-0-of-2: no disclosure of 장부",
+    "intake-document-0-of-2: no disclosure of 당직일지",
+    "intake-document-0-of-2: no disclosure of H-1",
+    "intake-document-0-of-2: no disclosure of H+3",
+    "intake-document-0-of-2: no disclosure of 단일 사고",
+    "intake-document-0-of-2: no disclosure of 유지 실패",
+    "intake-document-0-of-2: no disclosure of 서명 순서",
+    "intake-document-0-of-2: no disclosure of 책임 사슬",
+    "intake-document-0-of-2: no disclosure of offset-left",
+    "intake-document-0-of-2: no disclosure of offset-up",
+    "intake-document-0-of-2: no authored time window",
+    "intake-document-0-of-2: card text fits allocated height",
+    "intake-document-0-of-2: completion wording matches live state",
+    "intake-document-0-of-2: live t0-b3 completion agrees",
+    "intake-document-0-of-2: case thread is read-only and not a pointer target",
+    "intake-document-0-of-2: card creates no puzzle action",
+    "intake-document-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "intake-document-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: line-hb-l2",
+    "existing UI action available: line-hb-l3",
+    "existing UI action available: close-document",
+    "existing UI action available: transfer",
+    "existing UI action available: row-tl-r1",
+    "existing UI action available: row-tl-r2",
+    "existing UI action available: row-tl-r3",
+    "existing UI action available: decision-written",
+    "existing UI action available: close-document",
+    "existing UI action available: load-plate-zero",
+    "actual intake completes t0-b1",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "post-b1-0-of-2: objective visible",
+    "post-b1-0-of-2: 0/2 visible",
+    "post-b1-0-of-2: next line present",
+    "post-b1-0-of-2: next line is generic objective guidance: 근거를 대조하고 정렬해 보세요.",
+    "post-b1-0-of-2: no disclosure of rec-handover-brief",
+    "post-b1-0-of-2: no disclosure of rec-plate-standard-hub",
+    "post-b1-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "post-b1-0-of-2: no disclosure of rec-transfer-list",
+    "post-b1-0-of-2: no disclosure of rec-watchlog-bureau",
+    "post-b1-0-of-2: no disclosure of 근무 규정 필사본",
+    "post-b1-0-of-2: no disclosure of 기록국 조위대장",
+    "post-b1-0-of-2: no disclosure of 당직실 표준판",
+    "post-b1-0-of-2: no disclosure of 이관 목록",
+    "post-b1-0-of-2: no disclosure of 인수 각서",
+    "post-b1-0-of-2: no disclosure of 원판",
+    "post-b1-0-of-2: no disclosure of 장부",
+    "post-b1-0-of-2: no disclosure of 당직일지",
+    "post-b1-0-of-2: no disclosure of H-1",
+    "post-b1-0-of-2: no disclosure of H+3",
+    "post-b1-0-of-2: no disclosure of 단일 사고",
+    "post-b1-0-of-2: no disclosure of 유지 실패",
+    "post-b1-0-of-2: no disclosure of 서명 순서",
+    "post-b1-0-of-2: no disclosure of 책임 사슬",
+    "post-b1-0-of-2: no disclosure of offset-left",
+    "post-b1-0-of-2: no disclosure of offset-up",
+    "post-b1-0-of-2: no authored time window",
+    "post-b1-0-of-2: card text fits allocated height",
+    "post-b1-0-of-2: completion wording matches live state",
+    "post-b1-0-of-2: live t0-b3 completion agrees",
+    "post-b1-0-of-2: case thread is read-only and not a pointer target",
+    "post-b1-0-of-2: card creates no puzzle action",
+    "post-b1-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "post-b1-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: hub-view-circuitmap",
+    "existing UI action available: open-circuit",
+    "existing UI action available: trace-hub",
+    "existing UI action available: begin-overlay",
+    "existing UI action available: offset-left",
+    "existing UI action available: offset-up",
+    "existing UI action available: anchor-overlay",
+    "existing UI action available: area-hub-uncovered-1",
+    "existing UI action available: area-evidence-hub-uncovered-1",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "existing UI action available: area-hub-uncovered-2",
+    "existing UI action available: area-evidence-hub-uncovered-2",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "existing UI action available: area-hub-uncovered-3",
+    "existing UI action available: area-evidence-hub-uncovered-3",
+    "existing UI action available: attach-rec-watchlog-bureau",
+    "existing UI action available: overlay-back",
+    "actual circuit actions complete t0-b2",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "post-b2-0-of-2: objective visible",
+    "post-b2-0-of-2: 0/2 visible",
+    "post-b2-0-of-2: next line present",
+    "post-b2-0-of-2: next line is generic objective guidance: 근거를 살펴보고 인용을 고정하세요.",
+    "post-b2-0-of-2: no disclosure of rec-handover-brief",
+    "post-b2-0-of-2: no disclosure of rec-plate-standard-hub",
+    "post-b2-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "post-b2-0-of-2: no disclosure of rec-transfer-list",
+    "post-b2-0-of-2: no disclosure of rec-watchlog-bureau",
+    "post-b2-0-of-2: no disclosure of 근무 규정 필사본",
+    "post-b2-0-of-2: no disclosure of 기록국 조위대장",
+    "post-b2-0-of-2: no disclosure of 당직실 표준판",
+    "post-b2-0-of-2: no disclosure of 이관 목록",
+    "post-b2-0-of-2: no disclosure of 인수 각서",
+    "post-b2-0-of-2: no disclosure of 원판",
+    "post-b2-0-of-2: no disclosure of 장부",
+    "post-b2-0-of-2: no disclosure of 당직일지",
+    "post-b2-0-of-2: no disclosure of H-1",
+    "post-b2-0-of-2: no disclosure of H+3",
+    "post-b2-0-of-2: no disclosure of 단일 사고",
+    "post-b2-0-of-2: no disclosure of 유지 실패",
+    "post-b2-0-of-2: no disclosure of 서명 순서",
+    "post-b2-0-of-2: no disclosure of 책임 사슬",
+    "post-b2-0-of-2: no disclosure of offset-left",
+    "post-b2-0-of-2: no disclosure of offset-up",
+    "post-b2-0-of-2: no authored time window",
+    "post-b2-0-of-2: card text fits allocated height",
+    "post-b2-0-of-2: completion wording matches live state",
+    "post-b2-0-of-2: live t0-b3 completion agrees",
+    "post-b2-0-of-2: case thread is read-only and not a pointer target",
+    "post-b2-0-of-2: card creates no puzzle action",
+    "post-b2-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "post-b2-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: hub-view-reader",
+    "existing UI action available: open-reader",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "reader-post-b2-0-of-2: objective visible",
+    "reader-post-b2-0-of-2: 0/2 visible",
+    "reader-post-b2-0-of-2: next line present",
+    "reader-post-b2-0-of-2: next line is generic objective guidance: 근거를 살펴보고 인용을 고정하세요.",
+    "reader-post-b2-0-of-2: no disclosure of rec-handover-brief",
+    "reader-post-b2-0-of-2: no disclosure of rec-plate-standard-hub",
+    "reader-post-b2-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "reader-post-b2-0-of-2: no disclosure of rec-transfer-list",
+    "reader-post-b2-0-of-2: no disclosure of rec-watchlog-bureau",
+    "reader-post-b2-0-of-2: no disclosure of 근무 규정 필사본",
+    "reader-post-b2-0-of-2: no disclosure of 기록국 조위대장",
+    "reader-post-b2-0-of-2: no disclosure of 당직실 표준판",
+    "reader-post-b2-0-of-2: no disclosure of 이관 목록",
+    "reader-post-b2-0-of-2: no disclosure of 인수 각서",
+    "reader-post-b2-0-of-2: no disclosure of 원판",
+    "reader-post-b2-0-of-2: no disclosure of 장부",
+    "reader-post-b2-0-of-2: no disclosure of 당직일지",
+    "reader-post-b2-0-of-2: no disclosure of H-1",
+    "reader-post-b2-0-of-2: no disclosure of H+3",
+    "reader-post-b2-0-of-2: no disclosure of 단일 사고",
+    "reader-post-b2-0-of-2: no disclosure of 유지 실패",
+    "reader-post-b2-0-of-2: no disclosure of 서명 순서",
+    "reader-post-b2-0-of-2: no disclosure of 책임 사슬",
+    "reader-post-b2-0-of-2: no disclosure of offset-left",
+    "reader-post-b2-0-of-2: no disclosure of offset-up",
+    "reader-post-b2-0-of-2: no authored time window",
+    "reader-post-b2-0-of-2: card text fits allocated height",
+    "reader-post-b2-0-of-2: completion wording matches live state",
+    "reader-post-b2-0-of-2: live t0-b3 completion agrees",
+    "reader-post-b2-0-of-2: case thread is read-only and not a pointer target",
+    "reader-post-b2-0-of-2: card creates no puzzle action",
+    "reader-post-b2-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "reader-post-b2-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: load-rec-plate-standard-hub",
+    "existing UI action available: read",
+    "existing UI action available: pick-start",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "start phase picker bounded",
+    "existing UI action available: phase-next",
+    "existing UI action available: phase-H-1:00",
+    "existing UI action available: pick-end",
+    "end phase picker bounded",
+    "existing UI action available: phase-prev",
+    "existing UI action available: phase-H+3:00",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "prepared-0-of-2: objective visible",
+    "prepared-0-of-2: 0/2 visible",
+    "prepared-0-of-2: next line present",
+    "prepared-0-of-2: next line is generic objective guidance: 근거를 살펴보고 인용을 고정하세요.",
+    "prepared-0-of-2: no disclosure of rec-handover-brief",
+    "prepared-0-of-2: no disclosure of rec-plate-standard-hub",
+    "prepared-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "prepared-0-of-2: no disclosure of rec-transfer-list",
+    "prepared-0-of-2: no disclosure of rec-watchlog-bureau",
+    "prepared-0-of-2: no disclosure of 근무 규정 필사본",
+    "prepared-0-of-2: no disclosure of 기록국 조위대장",
+    "prepared-0-of-2: no disclosure of 당직실 표준판",
+    "prepared-0-of-2: no disclosure of 이관 목록",
+    "prepared-0-of-2: no disclosure of 인수 각서",
+    "prepared-0-of-2: no disclosure of 원판",
+    "prepared-0-of-2: no disclosure of 장부",
+    "prepared-0-of-2: no disclosure of 당직일지",
+    "prepared-0-of-2: no disclosure of H-1",
+    "prepared-0-of-2: no disclosure of H+3",
+    "prepared-0-of-2: no disclosure of 단일 사고",
+    "prepared-0-of-2: no disclosure of 유지 실패",
+    "prepared-0-of-2: no disclosure of 서명 순서",
+    "prepared-0-of-2: no disclosure of 책임 사슬",
+    "prepared-0-of-2: no disclosure of offset-left",
+    "prepared-0-of-2: no disclosure of offset-up",
+    "prepared-0-of-2: no authored time window",
+    "prepared-0-of-2: card text fits allocated height",
+    "prepared-0-of-2: completion wording matches live state",
+    "prepared-0-of-2: live t0-b3 completion agrees",
+    "prepared-0-of-2: case thread is read-only and not a pointer target",
+    "prepared-0-of-2: card creates no puzzle action",
+    "prepared-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "prepared-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: cite",
+    "first citation requests existing confirmation",
+    "save queue settled",
+    "exactly one active CaseThread text",
+    "first-confirm-still-0-of-2: objective visible",
+    "first-confirm-still-0-of-2: 0/2 visible",
+    "first-confirm-still-0-of-2: next line present",
+    "first-confirm-still-0-of-2: next line is generic objective guidance: 근거를 살펴보고 인용을 고정하세요.",
+    "first-confirm-still-0-of-2: no disclosure of rec-handover-brief",
+    "first-confirm-still-0-of-2: no disclosure of rec-plate-standard-hub",
+    "first-confirm-still-0-of-2: no disclosure of rec-tide-ledger-bureau",
+    "first-confirm-still-0-of-2: no disclosure of rec-transfer-list",
+    "first-confirm-still-0-of-2: no disclosure of rec-watchlog-bureau",
+    "first-confirm-still-0-of-2: no disclosure of 근무 규정 필사본",
+    "first-confirm-still-0-of-2: no disclosure of 기록국 조위대장",
+    "first-confirm-still-0-of-2: no disclosure of 당직실 표준판",
+    "first-confirm-still-0-of-2: no disclosure of 이관 목록",
+    "first-confirm-still-0-of-2: no disclosure of 인수 각서",
+    "first-confirm-still-0-of-2: no disclosure of 원판",
+    "first-confirm-still-0-of-2: no disclosure of 장부",
+    "first-confirm-still-0-of-2: no disclosure of 당직일지",
+    "first-confirm-still-0-of-2: no disclosure of H-1",
+    "first-confirm-still-0-of-2: no disclosure of H+3",
+    "first-confirm-still-0-of-2: no disclosure of 단일 사고",
+    "first-confirm-still-0-of-2: no disclosure of 유지 실패",
+    "first-confirm-still-0-of-2: no disclosure of 서명 순서",
+    "first-confirm-still-0-of-2: no disclosure of 책임 사슬",
+    "first-confirm-still-0-of-2: no disclosure of offset-left",
+    "first-confirm-still-0-of-2: no disclosure of offset-up",
+    "first-confirm-still-0-of-2: no authored time window",
+    "first-confirm-still-0-of-2: card text fits allocated height",
+    "first-confirm-still-0-of-2: completion wording matches live state",
+    "first-confirm-still-0-of-2: live t0-b3 completion agrees",
+    "first-confirm-still-0-of-2: case thread is read-only and not a pointer target",
+    "first-confirm-still-0-of-2: card creates no puzzle action",
+    "first-confirm-still-0-of-2: repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps",
+    "first-confirm-still-0-of-2: repeated Render preserves actions and keyboard focus",
+    "existing UI action available: confirm-submit",
+    "save queue settled"
+  ],
+  "actionTrace": [
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Enter"
+    },
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Tab"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "visible approved drawer",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "drawer behind renderer-only occluder",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "drawer with occluder renderer disabled",
+      "x": 290.0,
+      "y": 452.1888
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "native player InputSystem virtual keyboard",
+      "key": "Enter"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-desk"
+    },
+    {
+      "path": "focus/scroll adapter only; activation follows through virtual mouse",
+      "id": "handover"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "UI handover",
+      "x": 920.937561,
+      "y": 446.243042
+    },
+    {
+      "path": "focus/scroll adapter only; activation follows through virtual mouse",
+      "id": "line-hb-l1"
+    },
+    {
+      "path": "native player InputSystem virtual mouse",
+      "target": "UI line-hb-l1",
+      "x": 920.937561,
+      "y": 489.362335
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "line-hb-l2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "line-hb-l3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "close-document"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "transfer"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "row-tl-r3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "decision-written"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "close-document"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "load-plate-zero"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-circuitmap"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "open-circuit"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "trace-hub"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "begin-overlay"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "offset-left"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "offset-up"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "anchor-overlay"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-1"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-2"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-hub-uncovered-3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "area-evidence-hub-uncovered-3"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "attach-rec-watchlog-bureau"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "overlay-back"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "hub-view-reader"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "open-reader"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "load-rec-plate-standard-hub"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "read"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-start"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-next"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H-1:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "pick-end"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-prev"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "phase-H+3:00"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "cite"
+    },
+    {
+      "path": "existing UI action adapter",
+      "id": "confirm-submit"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "start-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 기록을 읽고 근거를 살펴보세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "29ca8a3cca3900e160b3656b59c0def76e043a2f4a68007fbaa8f60a23de0389",
+        "headSeq": 0,
+        "branchId": "main",
+        "entries": 0,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "shell",
+        "files": []
+      }
+    },
+    {
+      "stage": "initial-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 기록을 읽고 근거를 살펴보세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "29ca8a3cca3900e160b3656b59c0def76e043a2f4a68007fbaa8f60a23de0389",
+        "headSeq": 0,
+        "branchId": "main",
+        "entries": 0,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "shell",
+        "files": []
+      }
+    },
+    {
+      "stage": "intake-document-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 기록을 읽고 근거를 살펴보세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "56c813da44366aad902bb44f664de97def3592c2dd2d710d81b0ac6899f11d16",
+        "headSeq": 1,
+        "branchId": "main",
+        "entries": 1,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "shell",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 1045,
+            "modifiedUtcTicks": 639246449776710438,
+            "sha256": "5f30f18a01371f2b18dbea9ce630f39701021392eba52bfcc81e229df9977258"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "post-b1-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 근거를 대조하고 정렬해 보세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "23afc36cab13e1d5a2feb833bdd0cf40e798a19c10d12889e1b96e71ee7b8f6f",
+        "headSeq": 8,
+        "branchId": "main",
+        "entries": 8,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "shell",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.bak",
+            "bytes": 2500,
+            "modifiedUtcTicks": 639246449780357329,
+            "sha256": "77de96c49093fcbea70ce4e5c8e9161d27f390e44840f6a754b24ab4258f3c69"
+          },
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 2755,
+            "modifiedUtcTicks": 639246449780417509,
+            "sha256": "e91115044ed11fb5f1cd18f628c84ba972a082653db09941a34b28d58966dd65"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "post-b2-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 근거를 살펴보고 인용을 고정하세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "1e78dc8a2fa7bc6eb94b627fd0e7e43fb1d63aa0cd79edc424f880156ff38d32",
+        "headSeq": 20,
+        "branchId": "main",
+        "entries": 20,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "circuit",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.bak",
+            "bytes": 5400,
+            "modifiedUtcTicks": 639246449784607616,
+            "sha256": "ca1a85815ea76e877a83ea01935a0180de420cbed365044676379823c92abd28"
+          },
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 5665,
+            "modifiedUtcTicks": 639246449784768039,
+            "sha256": "14a93a5ab2b307d27c2b472018f981ca8d1cc789f6df7fb445a682a1d9db8f58"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "reader-post-b2-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 근거를 살펴보고 인용을 고정하세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "bf7ade731ccf805e93cb5192ac25a427bf7e3e6129632cb09f05c99949f547d8",
+        "headSeq": 21,
+        "branchId": "main",
+        "entries": 21,
+        "snapshots": 0,
+        "loadedRecord": null,
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.bak",
+            "bytes": 5665,
+            "modifiedUtcTicks": 639246449784768039,
+            "sha256": "14a93a5ab2b307d27c2b472018f981ca8d1cc789f6df7fb445a682a1d9db8f58"
+          },
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 5896,
+            "modifiedUtcTicks": 639246449787699616,
+            "sha256": "8f9399cb231ecdcba642dcffe4855ec4212e8a70f5b4a447fd68141f1ccfccd2"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "prepared-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 근거를 살펴보고 인용을 고정하세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "087ced18e024e83c2fb55b136bb45934afcce8cdf91fdb15a78f5ccc55a60f30",
+        "headSeq": 25,
+        "branchId": "main",
+        "entries": 25,
+        "snapshots": 0,
+        "loadedRecord": "rec-plate-standard-hub",
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "reader",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.bak",
+            "bytes": 6619,
+            "modifiedUtcTicks": 639246449791551132,
+            "sha256": "ddb621988430922e40ba6ac37e1d0822262ab287aa18ce35a5e6bb5d851d0161"
+          },
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 6853,
+            "modifiedUtcTicks": 639246449791994998,
+            "sha256": "e025abd21ea9e51de455c373696c2fd81306b4e9d1cc6f03c2181c13e4586ba2"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "first-confirm-still-0-of-2",
+      "card": "사건 흐름 · 필요한 인용 0/2\n결손 4시간의 양 끝을 두 기록으로 고정\n서로 다른 매체의 두 기록을 대조하세요.\n다음: 근거를 살펴보고 인용을 고정하세요.",
+      "complete": false,
+      "footprint": {
+        "stateHash": "087ced18e024e83c2fb55b136bb45934afcce8cdf91fdb15a78f5ccc55a60f30",
+        "headSeq": 25,
+        "branchId": "main",
+        "entries": 25,
+        "snapshots": 0,
+        "loadedRecord": "rec-plate-standard-hub",
+        "successfulReceipts": 0,
+        "savePending": false,
+        "surface": "confirm",
+        "files": [
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.bak",
+            "bytes": 6619,
+            "modifiedUtcTicks": 639246449791551132,
+            "sha256": "ddb621988430922e40ba6ac37e1d0822262ab287aa18ce35a5e6bb5d851d0161"
+          },
+          {
+            "path": "/tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json",
+            "bytes": 6853,
+            "modifiedUtcTicks": 639246449791994998,
+            "sha256": "e025abd21ea9e51de455c373696c2fd81306b4e9d1cc6f03c2181c13e4586ba2"
+          }
+        ]
+      }
+    }
+  ],
+  "occlusion": {
+    "colliderCount": 0,
+    "mesh": "Cube",
+    "material": "Workbench-above-drawer",
+    "sourceObject": "Workbench above drawer",
+    "rayDistance": 0.21967639,
+    "drawerRayDistance": 2.76798081
+  },
+  "utc": "2026-09-10T13:49:39.8751940Z",
+  "graphicsDevice": "Metal",
+  "device": "Apple M2 Pro",
+  "scope": "Automated native BuildMac P1 generic-guidance smoke in isolated clone; virtual InputSystem keyboard/mouse plus explicitly labeled existing UI action adapters; no human playtest, performance, accessibility, physical-device, or gamepad validation"
+}

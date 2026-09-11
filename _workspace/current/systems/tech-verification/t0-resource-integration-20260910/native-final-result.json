@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "method": "OS-level CUA mouse/keyboard on standalone player",
+  "artifact": "/Users/jangyoung/orca/unknown/unity/Unknown/Builds/T0-resource-integration-20260910-final/Unknown.app",
+  "saveDirectory": "/tmp/t0-resource-cycle-20260910/native-save-final",
+  "windowPixels": [
+    1280,
+    800
+  ],
+  "cuaCapturePixels": [
+    640,
+    432
+  ],
+  "backend": "Metal / Apple M2 Pro",
+  "processExitCode": 0,
+  "observations": [
+    "Before Start, click visible drawer at CUA (145,204): start screen remains.",
+    "Click Start (441,133): workbench shows handover, transfer and plate-slot actions.",
+    "Click actual drawer (145,204), not navigation button: authored close camera view and Inspect plate #0 action appear.",
+    "Click existing inspect action (444,134): canonical plate-zero explanation appears.",
+    "F1 opens Hints; click visible drawer (145,203): Hints remains open.",
+    "Escape closes Hints; existing workbench navigation (132,249) returns to desk.",
+    "Click drawer again (145,204): investigation action returns.",
+    "Quit own player with Cmd+Q; tool session exits 0 and process lookup finds no final smoke process."
+  ],
+  "runtimeErrorMatches": [],
+  "screenshots": "Observed inline in CUA conversation; no standalone screenshot files retained",
+  "limits": [
+    "Bounds-based hit region, not triangle-exact picking",
+    "No human usability, physical gamepad, performance or production-gate measurement"
+  ]
+}

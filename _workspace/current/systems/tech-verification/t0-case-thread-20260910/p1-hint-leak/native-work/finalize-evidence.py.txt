@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,hashlib,datetime
+
+root=Path('/Users/jangyoung/orca/unknown')
+e=root/'_workspace/current/systems/tech-verification/t0-case-thread-20260910/p1-hint-leak/native-work'
+header='---\nupdated: 2026-09-10\ncycle: 20260909-preproduction-c7\nstatus: current\nsupersedes: null\nowner: game-systems-designer\n'
+for path in sorted(e.rglob('*')):
+    if path.is_file() and path.suffix!='.md' and path.name!='receipt-manifest.json':
+        meta=path.with_name(path.name+'.meta.md')
+        if not meta.exists():
+            meta.write_text(header+'source_path: '+json.dumps(str(path.relative_to(root)))+'\n---\n# Native P1 verification evidence\n\n[OBSERVED] Task-owned diagnostic verification receipt for the uncommitted T0 case-thread hint-leak fix. Exact build and launch commands, source-byte proofs, retained attempts, and limits are recorded in `native-summary.md`. This receipt does not establish human play, performance, accessibility, or final gates.\n')
+meta=e/'receipt-manifest.json.meta.md'
+if not meta.exists():
+    meta.write_text(header+'source_path: '+json.dumps(str((e/'receipt-manifest.json').relative_to(root)))+'\n---\n# Native receipt manifest\n\n[OBSERVED] SHA256 inventory of retained P1 diagnostic native evidence. The manifest excludes itself.\n')
+paths=[p for p in sorted(e.rglob('*')) if p.is_file() and p.name!='receipt-manifest.json']
+manifest={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Native P1 verification evidence only','files':{str(p.relative_to(e)):{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in paths}}
+(e/'receipt-manifest.json').write_text(json.dumps(manifest,indent=2))
+print('Evidence inventoried',len(paths))

@@ -1,9 +1,9 @@
 ---
 name: game-ops-harness
 description: >
-  13-role game production & live-ops harness (기획·밸런스·시스템·재화·연출·시놉시스·
+  14-specialist game preproduction & live-ops harness (기획·밸런스·시스템·재화·연출·시놉시스·
   세계관·컨셉·이팩트·에니메이션·모션·모델링·QA) under one production director.
-  Runs update-centric cycles (hotfix | balance-patch | content-update | season) over a
+  Runs update-centric cycles (preproduction | hotfix | balance-patch | content-update | season) over a
   single live `_workspace/current/` with read-only `_workspace/archive/`, freshness
   frontmatter on every artifact, cross-role RFC discussion, gates G1–G8, and a layered
   memory stack: mex (.mex/ long-term project memory) → llm-wiki vault (rationale &
@@ -15,15 +15,15 @@ description: >
   game ops, game production cycle, patch cycle, live-ops.
 allowed-tools: Bash Read Write Edit Glob Grep Agent TeamCreate TaskCreate TaskUpdate SendMessage
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tags: game-production, live-ops, multi-agent, mex, llm-wiki, graphify, zvec-grep, workspace-archive, freshness
   keyword: game-ops-harness
 ---
 
 # Game Ops Harness
 
-A standing 13-role studio for a game that will be **operated, expanded, and updated**
-far longer than it is initially built. Every cycle is an update. The workspace has one
+A standing 14-specialist + director studio for a game that will be **operated, expanded, and updated**
+far longer than it is initially built. Preproduction precedes live-update cycles. The workspace has one
 live folder and one archive; every artifact says when it was updated and what it
 replaced; every role can open a discussion with any other; and knowledge that must
 outlive the session goes into the memory stack, not chat.
@@ -111,10 +111,7 @@ status: current            # current | superseded | draft
 supersedes: _workspace/archive/20260801-season-1/planning/gdd.md   # or null
 ---
 ```
-When a file is replaced, `git mv` the old one into `_workspace/archive/{run-id}/{lane}/`,
-set its `status: superseded`, and point the new file's `supersedes:` at it. Old work is
-therefore always reachable and citable, never edited. `scripts/freshness-check.sh` is the
-G8 measurement.
+When replaced, use archive-cycle.sh --no-stage: status changes before the move, archive stays immutable and successor links supersedes. Default tracked moves use git mv and stage only those paths. Freshness-check is only the Markdown structure part of G8, not memory/runtime verification.
 
 ### Step 7: Memory sync at close (director)
 Follow `references/memory-stack.md`:
@@ -166,3 +163,6 @@ with fresh frontmatter and archived predecessors.
 - [Memory Stack (mex / llm-wiki / graphify / zg)](references/memory-stack.md)
 - [Dependency Matrix](references/dependency-matrix.md)
 - [Quality Gates G1–G8](references/quality-gates.md)
+
+## Premium preproduction
+Read `_workspace/current/production/premium-preproduction-contract.md`. Independent product PM owns product/ and demand/pricing/GTM, separate from economy. Five requested research/develop/review/playtime cycles leave versioned outputs. Structured/executable assets use sidecar metadata, never Markdown inside JSON. Document/model tests do not pass Unity runtime gates. Missing mex-agent records skipped, never invokes TeX mex.

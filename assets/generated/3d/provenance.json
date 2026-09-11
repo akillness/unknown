@@ -1,0 +1,777 @@
+{
+  "schema": "provenance/v1",
+  "folder": "assets/generated/3d",
+  "generator": "assets/generated/3d/scripts/write_provenance.py",
+  "written_at": "2026-09-09T23:56:43.735981+00:00",
+  "owner": "game-modeler",
+  "cycle": "20260909-preproduction-c4",
+  "promotion_rule": "runtimeEligible 는 production/decision-log.md 감사로만 true 가 된다 (CLAUDE.md 9)",
+  "assets": [
+    {
+      "id": "scripts-build_hub_greybox-py",
+      "file": "scripts/build_hub_greybox.py",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "authoring script (python/bpy)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "821be56bc9b42765023249fd41b1ed7510a690f5e1e89a34fa190392125cdb66",
+      "bytes": 14740,
+      "generated_at": "2026-09-09T23:56:32.161339+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] source script actually executed via Blender MCP"
+    },
+    {
+      "id": "hub-greybox-blend",
+      "file": "hub-greybox.blend",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive greybox",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "6cc895bf81461517f5451e78ba450010a937eb905ba910970974ee1dc3b07043",
+      "bytes": 117660,
+      "generated_at": "2026-09-09T17:03:59.075675+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "note": "scene source; collection HUB_GREYBOX; user default Cube/Light/Camera hidden, not deleted"
+    },
+    {
+      "id": "hub-greybox-glb",
+      "file": "hub-greybox.glb",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive greybox",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "07407bbe14bf8b768571e6b1d610856b871b9021403072de6f408fb5c9efc794",
+      "bytes": 16096,
+      "generated_at": "2026-09-09T17:03:39.679713+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "objects": [
+        "SM_Hub_Floor",
+        "SM_Hub_PlateShelf",
+        "SM_Hub_Wall_E",
+        "SM_Hub_Wall_N",
+        "SM_Hub_Wall_W",
+        "SM_Hub_Workbench",
+        "SM_Tool_alignment",
+        "SM_Tool_circuit",
+        "SM_Tool_corrosion",
+        "SM_Tool_reader",
+        "SM_Tool_routing",
+        "SM_Tool_seal"
+      ],
+      "tris_total": 144,
+      "dims_m": {
+        "SM_Hub_Floor": [
+          6.0,
+          8.0,
+          0.1
+        ],
+        "SM_Hub_Wall_N": [
+          6.0,
+          0.12,
+          2.6
+        ],
+        "SM_Hub_Wall_W": [
+          0.12,
+          8.0,
+          2.6
+        ],
+        "SM_Hub_Wall_E": [
+          0.12,
+          8.0,
+          2.6
+        ],
+        "SM_Hub_Workbench": [
+          2.4,
+          0.9,
+          0.9
+        ],
+        "SM_Hub_PlateShelf": [
+          0.36,
+          1.8,
+          1.15
+        ],
+        "SM_Tool_reader": [
+          0.8,
+          0.5,
+          0.34
+        ],
+        "SM_Tool_seal": [
+          0.7,
+          0.44,
+          0.22
+        ],
+        "SM_Tool_circuit": [
+          2.0,
+          0.09,
+          1.2
+        ],
+        "SM_Tool_routing": [
+          0.09,
+          1.6,
+          1.0
+        ],
+        "SM_Tool_alignment": [
+          1.2,
+          0.6,
+          1.0
+        ],
+        "SM_Tool_corrosion": [
+          1.0,
+          0.7,
+          0.85
+        ]
+      },
+      "units": "1 blender unit = 1 m"
+    },
+    {
+      "id": "hub-greybox-fbx",
+      "file": "hub-greybox.fbx",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive greybox",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "de3ccc10d859d220722947df4f7e5c4fa9f8d575406faa0d2bd1a1072f3fb931",
+      "bytes": 51148,
+      "generated_at": "2026-09-09T17:03:39.704125+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.fbx",
+        "axis_up": "Y",
+        "axis_forward": "-Z",
+        "global_scale": 1.0,
+        "apply_scale_options": "FBX_SCALE_NONE",
+        "apply_unit_scale": true,
+        "bake_space_transform": false,
+        "object_types": [
+          "MESH"
+        ],
+        "mesh_smooth_type": "FACE"
+      },
+      "tris_total": 144
+    },
+    {
+      "id": "SM_Tool_reader-glb",
+      "file": "SM_Tool_reader.glb",
+      "asset_id": "SM_Tool_reader",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "09f4d77c58580f75d8ce6922eed4c635364fed3cd9901f97b7bbc5fb98ef46e2",
+      "bytes": 1700,
+      "generated_at": "2026-09-09T17:03:39.707314+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        0.8,
+        0.5,
+        0.34
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "reader",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "SM_Tool_seal-glb",
+      "file": "SM_Tool_seal.glb",
+      "asset_id": "SM_Tool_seal",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "df79f847c792bba359fca4cbe783fb370e1f5b19404d87e8075fcc635aff9f65",
+      "bytes": 1720,
+      "generated_at": "2026-09-09T17:03:39.710195+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        0.7,
+        0.44,
+        0.22
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "seal",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "SM_Tool_circuit-glb",
+      "file": "SM_Tool_circuit.glb",
+      "asset_id": "SM_Tool_circuit",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "6b9480a8971a174d39684a8ebade3bc30b5a3e6647ac15dcf9251b9f0bcb6e15",
+      "bytes": 1696,
+      "generated_at": "2026-09-09T17:03:39.713298+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        2.0,
+        0.09,
+        1.2
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "circuit",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "SM_Tool_routing-glb",
+      "file": "SM_Tool_routing.glb",
+      "asset_id": "SM_Tool_routing",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "c33c0c110c189047a80e5fa8345aaa7bb30e1d9b726bd4785a2606384402b670",
+      "bytes": 1712,
+      "generated_at": "2026-09-09T17:03:39.715988+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        0.09,
+        1.6,
+        1.0
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "routing",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "SM_Tool_alignment-glb",
+      "file": "SM_Tool_alignment.glb",
+      "asset_id": "SM_Tool_alignment",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "f64e4699eccfc5067bb1b7c36c6977e66c6a0c1795ca7772d6be0941d9c52140",
+      "bytes": 1720,
+      "generated_at": "2026-09-09T17:03:39.718903+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        1.2,
+        0.6,
+        1.0
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "alignment",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "SM_Tool_corrosion-glb",
+      "file": "SM_Tool_corrosion.glb",
+      "asset_id": "SM_Tool_corrosion",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "primitive blockout",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "3411c588811670db60f6b35e6abb1c3791f6467b6504d32d7faecfec065aac84",
+      "bytes": 1740,
+      "generated_at": "2026-09-09T17:03:39.723793+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] greybox; not final art; not gameplay",
+      "export": {
+        "operator": "bpy.ops.export_scene.gltf",
+        "format": "GLB",
+        "export_apply": true,
+        "export_yup": true,
+        "use_selection": true
+      },
+      "dims_m": [
+        1.0,
+        0.7,
+        0.85
+      ],
+      "tris": 12,
+      "pivot": "base center (도구 원점) — 프롭을 월드 원점으로 옮겨 내보낸 뒤 씬 위치 복원",
+      "tool_id": "corrosion",
+      "note": "greybox proxy volume only; no mechanism, no readable surface"
+    },
+    {
+      "id": "renders-hub-cam-png",
+      "file": "renders/hub-cam.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "7a799b25f6951a86ade4b38c4fc246eb2f8e915ba285383395c7e5e2e53bb1fc",
+      "bytes": 2290445,
+      "generated_at": "2026-09-09T17:03:50.556360+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Fixed",
+        "lens_mm": 34.0,
+        "pitch_deg": 35.0,
+        "camera_location_m": [
+          0.0,
+          -5.3,
+          5.501
+        ],
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      }
+    },
+    {
+      "id": "renders-turntable-frame_00-png",
+      "file": "renders/turntable/frame_00.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "fad892b23386d9e8dca33dda50f6a7ee73b3ee93447c396d72d736a171462cde",
+      "bytes": 602155,
+      "generated_at": "2026-09-09T17:03:51.336691+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 0,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_01-png",
+      "file": "renders/turntable/frame_01.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "b150a0d173b0a5ced242651b63adc65646be765f8c86a023fc0213627b5d9eea",
+      "bytes": 620227,
+      "generated_at": "2026-09-09T17:03:52.168618+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 30,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_02-png",
+      "file": "renders/turntable/frame_02.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "55add7264da3e911abb06292adec0fbaea3e90d3d4978ee57fe14d81d2ed81e9",
+      "bytes": 617560,
+      "generated_at": "2026-09-09T17:03:53.013458+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 60,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_03-png",
+      "file": "renders/turntable/frame_03.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "77f5f52f1440d321af51193b077711e800c385e95e3f9dba4e6a9e108be49312",
+      "bytes": 590446,
+      "generated_at": "2026-09-09T17:03:53.776982+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 90,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_04-png",
+      "file": "renders/turntable/frame_04.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "03f896638b68918b6e1278bd4fd47c8e5ec9a3c194f8fee66d05df0b93bd859b",
+      "bytes": 556388,
+      "generated_at": "2026-09-09T17:03:54.450392+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 120,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_05-png",
+      "file": "renders/turntable/frame_05.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "b99147d7fb63d8c105a688fe0be4daa0e17f78136e57fdca7f98d5865398bc98",
+      "bytes": 522138,
+      "generated_at": "2026-09-09T17:03:55.125457+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 150,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_06-png",
+      "file": "renders/turntable/frame_06.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "59c14a26b755e66e69c2a649f4fed38e858b996fdc03ac5b051b90711938f31f",
+      "bytes": 496052,
+      "generated_at": "2026-09-09T17:03:55.762600+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 180,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_07-png",
+      "file": "renders/turntable/frame_07.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "a76fdf5053aba530f61786862aafc3910f2ac447d8abcd3b2e2beb0184a1f556",
+      "bytes": 513914,
+      "generated_at": "2026-09-09T17:03:56.391096+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 210,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_08-png",
+      "file": "renders/turntable/frame_08.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "76ae117f8e2df5fb94d325e044092f3863b7314e981390bd98de9421e7ecbde4",
+      "bytes": 553527,
+      "generated_at": "2026-09-09T17:03:56.993694+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 240,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_09-png",
+      "file": "renders/turntable/frame_09.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "6e4ff3aac909a18d65171225c1c28bd842ea8a43daca6eb29f022d720bebde2d",
+      "bytes": 581472,
+      "generated_at": "2026-09-09T17:03:57.663938+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 270,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_10-png",
+      "file": "renders/turntable/frame_10.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "8273001461fce5250123b07e9804391ede4cf11828eed3565f39152bbfec9827",
+      "bytes": 587483,
+      "generated_at": "2026-09-09T17:03:58.368615+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 300,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    },
+    {
+      "id": "renders-turntable-frame_11-png",
+      "file": "renders/turntable/frame_11.png",
+      "asset_id": "SM_Hub_Greybox",
+      "tool": "Blender 5.1.2 via MCP",
+      "method": "EEVEE render (previz turntable)",
+      "source_script": "assets/generated/3d/scripts/build_hub_greybox.py",
+      "sha256": "7b19899e827100b21b03afb30976cfb71dd6b3024e32c29d505ebe2f6eb56894",
+      "bytes": 591326,
+      "generated_at": "2026-09-09T17:03:59.046530+00:00",
+      "license": "original greybox",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] previz render of greybox; not final art; not gameplay",
+      "render": {
+        "engine": "BLENDER_EEVEE",
+        "resolution": [
+          960,
+          540
+        ],
+        "samples": 64,
+        "camera": "CAM_Hub_Turntable",
+        "orbit_deg": 330,
+        "radius_m": 6.5,
+        "aim_m": [
+          0.0,
+          1.2,
+          0.95
+        ]
+      },
+      "note": "3면 벽·천장 없음 구조라 북측(orbit 90~270) 프레임은 근접 벽이 하단을 가린다"
+    }
+  ]
+}

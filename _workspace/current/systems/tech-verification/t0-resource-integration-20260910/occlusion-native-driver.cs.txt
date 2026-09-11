@@ -1,0 +1,39 @@
+
+// Diagnostic driver appended only to the isolated native smoke build.
+namespace Tide.App {
+ public sealed class T0OcclusionSmoke:UnityEngine.MonoBehaviour {
+  string output; T0GameSession game; Mouse mouse; Keyboard keyboard; GameObject blocker;
+  readonly JArray checks=new JArray(); JObject blockerEvidence;
+  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+  static void Launch(){if(Array.IndexOf(Environment.GetCommandLineArgs(),"--t0-occlusion-smoke")>=0){var host=new GameObject("Temporary native occlusion smoke");DontDestroyOnLoad(host);host.AddComponent<T0OcclusionSmoke>();}}
+  System.Collections.IEnumerator Start(){
+   var args=Environment.GetCommandLineArgs();output=args[Array.IndexOf(args,"--t0-occlusion-output")+1];Directory.CreateDirectory(output);
+   var run=Run();while(true){bool more=false;Exception failure=null;try{more=run.MoveNext();}catch(Exception error){failure=error;}if(failure!=null){Debug.LogException(failure);Write(false,failure.ToString());Application.Quit(1);yield break;}if(!more)break;yield return run.Current;}
+   Write(true,null);Debug.Log("T0_OCCLUSION_NATIVE_PASS "+checks.ToString(Newtonsoft.Json.Formatting.None));Application.Quit(0);
+  }
+  void Require(bool condition,string label){if(!condition)throw new InvalidOperationException(label);checks.Add(label);Debug.Log("T0_OCCLUSION_CHECK "+label);}
+  void Write(bool pass,string error){File.WriteAllText(Path.Combine(output,"native-result.json"),new JObject{["pass"]=pass,["error"]=error,["checks"]=checks,["blocker"]=blockerEvidence,["utc"]=DateTime.UtcNow.ToString("O"),["graphicsDevice"]=SystemInfo.graphicsDeviceType.ToString(),["device"]=SystemInfo.processorType,["scope"]="Automated native BuildMac smoke with temporary command-gated driver; original runtime prefix unchanged; no human or performance evidence"}.ToString());}
+  void Desk(){Require(game.Interface.ActionIds.Contains("handover")&&!game.Interface.ActionIds.Contains("inspect-plate-zero"),"desk investigation remains selected");}
+  Vector2 Front(){var drawer=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="T0 approved r03 drawer");var tray=drawer.GetComponentsInChildren<Renderer>().Single(x=>x.name=="SM_Hub_Workbench_Drawer_Tray");var point=Camera.main.WorldToScreenPoint(new Vector3(tray.bounds.center.x,tray.bounds.center.y,tray.bounds.min.z));Require(point.z>0&&Camera.main.pixelRect.Contains(point),"drawer front projects inside camera viewport");return point;}
+  System.Collections.IEnumerator Click(Vector2 point){InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point});yield return null;InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point}.WithButton(UnityEngine.InputSystem.LowLevel.MouseButton.Left));yield return null;InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point});yield return null;}
+  System.Collections.IEnumerator Enter(){InputSystem.QueueStateEvent(keyboard,new UnityEngine.InputSystem.LowLevel.KeyboardState(Key.Enter));yield return null;InputSystem.QueueStateEvent(keyboard,new UnityEngine.InputSystem.LowLevel.KeyboardState());yield return null;}
+  System.Collections.IEnumerator Capture(string name){yield return new WaitForSeconds(1);yield return new WaitForEndOfFrame();ScreenCapture.CaptureScreenshot(Path.Combine(output,name+".png"));yield return null;}
+  System.Collections.IEnumerator Run(){
+   var deadline=Time.realtimeSinceStartup+30;while((game=FindFirstObjectByType<T0GameSession>())==null||game.Interface==null){if(Time.realtimeSinceStartup>deadline)throw new TimeoutException("T0 boot did not finish");yield return null;}
+   yield return null;InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;mouse=InputSystem.AddDevice<Mouse>();keyboard=InputSystem.AddDevice<Keyboard>();
+   Require(game.Interface.Focus("start"),"start control available");yield return Enter();Desk();
+   var state=game.Journal.State.StateHash;var point=Front();yield return Capture("native-visible-before");yield return Click(point);
+   Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"visible drawer left-click selects investigation");yield return Capture("native-visible-selected");
+   Require(game.Interface.Activate("hub-view-desk"),"return to desk control available");yield return null;point=Front();var ray=Camera.main.ScreenPointToRay(point);
+   var source=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="Workbench above drawer");
+   blocker=new GameObject("Temporary renderer-only smoke occluder",typeof(MeshFilter),typeof(MeshRenderer));blocker.GetComponent<MeshFilter>().sharedMesh=source.GetComponent<MeshFilter>().sharedMesh;var renderer=blocker.GetComponent<Renderer>();renderer.sharedMaterials=source.GetComponent<Renderer>().sharedMaterials;blocker.transform.position=ray.GetPoint(.3f);blocker.transform.localScale=Vector3.one*.15f;
+   yield return null;Require(blocker.GetComponentsInChildren<Collider>().Length==0,"occluder has no Collider");Require(renderer.enabled&&!renderer.forceRenderingOff&&blocker.activeInHierarchy&&(Camera.main.cullingMask&(1<<blocker.layer))!=0&&GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main),renderer.bounds),"occluder is active and camera-visible");Require(renderer.bounds.IntersectRay(ray,out var hit)&&hit<.3f,"occluder intersects nearer screen ray");
+   var drawerRoot=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="T0 approved r03 drawer");var nearest=float.PositiveInfinity;foreach(var r in drawerRoot.GetComponentsInChildren<Renderer>())if(r.bounds.IntersectRay(ray,out var d))nearest=Mathf.Min(nearest,d);Require(hit>=0&&hit<nearest&&!float.IsPositiveInfinity(nearest),"occluder ray hit precedes drawer bounds");Require(!Physics.Raycast(ray,nearest,Camera.main.cullingMask,QueryTriggerInteraction.Ignore),"no nearer physics collider hides renderer-only defect");Require(blocker.GetComponent<MeshFilter>().sharedMesh==source.GetComponent<MeshFilter>().sharedMesh&&renderer.sharedMaterials.SequenceEqual(source.GetComponent<Renderer>().sharedMaterials),"occluder reuses existing scene mesh and materials");
+   blockerEvidence=new JObject{["colliderCount"]=blocker.GetComponentsInChildren<Collider>().Length,["mesh"]=blocker.GetComponent<MeshFilter>().sharedMesh.name,["material"]=renderer.sharedMaterial.name,["sourceSceneObject"]=source.name,["screenX"]=point.x,["screenY"]=point.y,["rayDistance"]=hit,["drawerRayDistance"]=nearest,["cameraMask"]=Camera.main.cullingMask,["frustumIntersection"]=GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main),renderer.bounds)};
+   yield return Capture("native-renderer-only-blocked");yield return Click(point);Desk();Require(!game.Interface.ActionIds.Contains("inspect-plate-zero"),"renderer-only occluder blocks drawer click");yield return Capture("native-blocked-after-click");
+   renderer.enabled=false;yield return null;yield return Click(point);Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"disabling renderer-only blocker restores drawer click");yield return Capture("native-restored-selected");
+   Require(game.Interface.Activate("hub-view-desk"),"return to desk for keyboard check");yield return null;renderer.enabled=true;Require(game.Interface.Focus("hub-view-drawer"),"drawer keyboard control available while occluded");yield return Enter();Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"keyboard drawer navigation remains available while occluded");Require(game.Journal.State.StateHash==state,"smoke navigation leaves puzzle state unchanged");
+   Destroy(blocker);var saves=game.FlushSaves();while(!saves.IsCompleted)yield return null;InputSystem.RemoveDevice(mouse);InputSystem.RemoveDevice(keyboard);yield return new WaitForSeconds(1);
+  }
+ }
+}

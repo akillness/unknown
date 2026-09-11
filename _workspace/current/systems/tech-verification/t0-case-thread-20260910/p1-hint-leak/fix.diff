@@ -1,0 +1,248 @@
+--- P1-baseline/App/T0GameSession.cs
++++ current/App/T0GameSession.cs
+@@ -160,72 +160,25 @@
+    }
+    if(overlay!=null){s.Actions.Clear();OverlayScreen(s);}
+    if(Simulation.IsComplete(Journal.State,"t0-b3"))s.Subtitle+=" · "+L("complete");
+-   s.CaseThread=CaseThreadText(s);
++   s.CaseThread=CaseThreadText();
+    Interface.Render(s);ApplySceneViewport();
+   }
+   // Projection only: required pins are progress, but the existing full predicate owns completion.
+-  string CaseThreadText(GameScreen screen){
++  string CaseThreadText(){
+    var requirements=Definition.Beats.Single(b=>b.Id=="t0-b3").Requirements;
+    var pins=requirements.Where(r=>r.Type=="citationPinned").ToArray();
+    int count=pins.Count(r=>Journal.State.Has("citation:"+r.RecordId));
+    bool complete=Simulation.IsComplete(Journal.State,"t0-b3");
+    string detail=complete?L("caseComplete"):L(count==pins.Length?"caseCheckPins":"caseMedia");
+-   return L("caseTitle")+" · "+string.Format(L("caseProgress"),count,pins.Length)+"\n"+L("caseObjective")+"\n"+detail+"\n"+L("caseNext")+CaseThreadNext(screen,requirements);
+-  }
+-  string CaseThreadNext(GameScreen screen,IReadOnlyList<CompletionRequirement> requirements){
++   return L("caseTitle")+" · "+string.Format(L("caseProgress"),count,pins.Length)+"\n"+L("caseObjective")+"\n"+detail+"\n"+L("caseNext")+CaseThreadNext();
++  }
++  string CaseThreadNext(){
+    var state=Journal.State;
+-   var actions=screen.Actions.Concat(screen.Navigation).Concat(screen.Toolbar).ToArray();
+-   string Label(string id)=>actions.FirstOrDefault(a=>a.Id==id&&a.Enabled)?.Label??L("caseReview");
+-   string Route(string view,string action)=>Label(actions.Any(a=>a.Id==action&&a.Enabled)?action:view);
+    if(SavePending)return L("caseWait");
+-   if(overlay!=null){
+-    if(overlay=="phasePicker")return L("casePickPhase");
+-    if(overlay=="areaEvidence")return L("casePickEvidence");
+-    if(overlay=="readerEvidence")return L("casePickRecord");
+-    if(overlay=="confirm")return Label("confirm-submit");
+-    if(overlay=="preview")return Label("preview-next");
+-    return Label("overlay-back");
+-   }
+-   if(!started)return Label("start");
+-   if(Simulation.IsComplete(state,"t0-b3"))return Label("evidence");
+-   var intake=Definition.Beats.Single(b=>b.Id=="t0-b1").Requirements;
+-   var decision=intake.Single(r=>r.Type=="decisionRecorded");
+-   bool undecided=!decision.Ids.Contains(state.Get("decision:"+decision.Id));
+-   if(document!=null){
+-    var viewed=intake.FirstOrDefault(r=>r.RecordId==document&&(r.Type=="recordLinesViewed"||r.Type=="recordRowsViewed"));
+-    if(viewed!=null){var prefix=viewed.Type=="recordLinesViewed"?"line":"row";var missing=viewed.Ids.FirstOrDefault(id=>!state.Has(prefix+":"+document+":"+id));if(missing!=null)return L(prefix=="line"?"caseViewLine":"caseViewRow");}
+-    if(document=="rec-transfer-list"&&undecided)return L("caseDecide");
+-    return Label("close-document");
+-   }
+-   if(!Simulation.IsComplete(state,"t0-b1")){
+-    foreach(var r in intake.Where(r=>r.Type=="recordLinesViewed"||r.Type=="recordRowsViewed")){
+-     string prefix=r.Type=="recordLinesViewed"?"line":"row";
+-     if(r.Ids.Any(id=>!state.Has(prefix+":"+r.RecordId+":"+id)))return Route("hub-view-desk",r.RecordId=="rec-handover-brief"?"handover":"transfer");
+-    }
+-    return Route("hub-view-desk",undecided?"transfer":"load-plate-zero");
+-   }
+-   if(!Simulation.IsComplete(state,"t0-b2")){
+-    if(tool!="circuit")return Route("hub-view-circuitmap","open-circuit");
+-    var mode=Simulation.CircuitMode(state);
+-    if(mode=="Tracing")return Label("begin-overlay");
+-    if(mode=="Overlaying")return actions.Any(a=>a.Id=="anchor-overlay"&&a.Enabled)?Label("anchor-overlay"):L("caseAlign");
+-    int media=Definition.Beats.Single(b=>b.Id=="t0-b2").Requirements.Single(r=>r.Type=="eachAreaHasEvidence").Count;
+-    foreach(var area in Definition.UncoveredAreas){
+-     if(!state.Has("area:"+area))return Label("area-"+area);
+-     if(Definition.Records.Values.Where(r=>state.Has("evidence:"+area+":"+r.Id)).Select(r=>r.SourceType).Distinct().Count()<media)return Label("area-evidence-"+area);
+-    }
+-    return Label("back");
+-   }
+-   var gap=requirements.Single(r=>r.Type=="gapEndpointsFixed");
+-   bool gapFixed=state.Get("citationStart:"+gap.RecordId)==gap.Value&&state.Get("citationEnd:"+gap.RecordId)==gap.OtherValue;
+-   string target=!gapFixed||!state.Has("copy:"+gap.RecordId)?gap.RecordId:requirements.FirstOrDefault(r=>r.Type=="citationPinned"&&!state.Has("citation:"+r.RecordId))?.RecordId;
+-   if(target==null)return Label("evidence");
+-   if(tool!="reader")return Route("hub-view-reader","open-reader");
+-   if(state.LoadedRecordId!=target)return Label(state.LoadedRecordId==null?"load-"+target:"select-record");
+-   if(!state.Has("copy:"+target))return Label("read");
+-   if(state.Get("windowStart:"+target)==null||(target==gap.RecordId&&state.Get("windowStart:"+target)!=gap.Value))return Label("pick-start");
+-   if(state.Get("windowEnd:"+target)==null||(target==gap.RecordId&&state.Get("windowEnd:"+target)!=gap.OtherValue))return Label("pick-end");
+-   return Simulation.Validate(state,new PuzzleCommand("CiteToBoard",target)).IsValid?Label("cite"):Label("pick-end");
++   if(Simulation.IsComplete(state,"t0-b3"))return L("caseReview");
++   if(!Simulation.IsComplete(state,"t0-b1"))return L("caseRead");
++   if(!Simulation.IsComplete(state,"t0-b2"))return L("caseAlign");
++   return L("casePin");
+   }
+   void ShellScreen(GameScreen s){
+    s.Body=L("room")+"\n"+L("intakeProgress")+" "+(Simulation.IsComplete(Journal.State,"t0-b1")?L("done"):L("inProgress"));
+--- P1-baseline/Resources/T0Strings.json
++++ current/Resources/T0Strings.json
+@@ -1 +1 @@
+-{"title":{"ko":"조수기록국 · 당직 인수","en":"Tide Registry · Taking Watch"},"startTitle":{"ko":"시작 전 설정","en":"Before the watch"},"intro":{"ko":"21:00. 인수 각서와 이관 목록을 살핀 뒤, 당직실의 기록을 대조하세요.","en":"21:00. Read the handover and transfer list, then compare the watch room records."},"start":{"ko":"당직 시작 / 계속","en":"Begin / continue"},"settings":{"ko":"접근성 · 설정","en":"Accessibility / settings"},"welcome":{"ko":"각서와 목록을 열람하고 상시 슬롯을 준비하세요.","en":"Read the documents and prepare the standing slot."},"room":{"ko":"당직실. 시점 노드를 선택해 자료와 도구를 조사합니다.","en":"Watch room. Choose a view to inspect records and tools."},"controls":{"ko":"Tab 초점 · Enter 선택 · 방향키 조절 · 1~6 도구 · I 증거함 · H 가설판 · F1 힌트 · Ctrl+Z 되돌림","en":"Tab focus · Enter choose · Arrows adjust · 1–6 tools · I evidence · H board · F1 hint · Ctrl+Z undo"},"back":{"ko":"닫기 / 뒤로","en":"Back"},"undo":{"ko":"되돌림","en":"Undo"},"redo":{"ko":"다시","en":"Redo"},"undone":{"ko":"되돌렸습니다. 자동 사본은 보관됩니다.","en":"Undone. Verified copies remain kept."},"redone":{"ko":"다시 적용했습니다.","en":"Redone."},"evidence":{"ko":"증거함","en":"Evidence"},"hypothesis":{"ko":"가설판","en":"Hypothesis board"},"hints":{"ko":"힌트","en":"Hints"},"intakeProgress":{"ko":"인수 절차","en":"Intake"},"done":{"ko":"완료","en":"Complete"},"inProgress":{"ko":"진행 중","en":"In progress"},"placePlate":{"ko":"판 #0 → 작업대 상시 슬롯","en":"Plate #0 → standing slot"},"plateZero":{"ko":"서랍의 판 #0 조사","en":"Inspect plate #0"},"plateZeroDetail":{"ko":"판 #0은 인수 뒤 작업대 상시 슬롯에 놓습니다. 작업대에서 배치할 수 있습니다.","en":"Place plate #0 in the standing slot using the workbench view."},"circuit":{"ko":"벽 회로 지도","en":"Circuit map"},"reader":{"ko":"판독기","en":"Reader"},"sealOutsideT0":{"ko":"봉인대의 봉인 절차는 이후 구간에서 열립니다.","en":"Sealing procedures open in a later stage."},"written":{"ko":"이관 목록 네 번째 줄: 기입","en":"Fourth transfer row: written"},"blank":{"ko":"이관 목록 네 번째 줄: 공란","en":"Fourth transfer row: blank"},"koFallback":{"ko":"이 기록은 한국어 정본으로 표시합니다.","en":"This record is shown in the canonical Korean text."},"loadReader":{"ko":"판독기에 적재","en":"Load into reader"},"circuitInstructions":{"ko":"기록은 회선이 닿는 곳에만 남습니다. 투명지의 세 기준점을 정렬한 뒤 옥외 구획을 표시하고 자료를 붙이세요.","en":"Records exist only where lines reach. Align three reference points, mark outdoor areas, and attach sources."},"state":{"ko":"상태","en":"State"},"trace":{"ko":"당직실 계통 추적","en":"Trace watch-room system"},"beginOverlay":{"ko":"분기 투명지 겹치기","en":"Begin overlay"},"offset":{"ko":"투명지 오프셋","en":"Overlay offset"},"left":{"ko":"왼쪽","en":"Left"},"right":{"ko":"오른쪽","en":"Right"},"up":{"ko":"위","en":"Up"},"down":{"ko":"아래","en":"Down"},"resetOverlay":{"ko":"저작된 초기 위치로 복귀","en":"Reset to authored position"},"anchorOverlay":{"ko":"세 기준점 고정","en":"Anchor three points"},"outdoorArea":{"ko":"옥외 구획","en":"Outdoor area"},"attachEvidence":{"ko":"근거 붙이기","en":"Attach evidence"},"chooseRecord":{"ko":"자료 선택 / 교체","en":"Choose / change record"},"reads":{"ko":"원본 절차","en":"Original procedures"},"copyKept":{"ko":"검증 사본 보관됨","en":"Verified copy kept"},"copyOnRead":{"ko":"첫 판독에서 검증 사본 생성","en":"First read creates a verified copy"},"chartLegend":{"ko":"원본 수치 · 선=기록 · 빈 구간=결손 · 평탄 구간도 기록입니다","en":"Authored samples · line=record · gap=missing · a flat line is still a record"},"read":{"ko":"판독 · 검증 사본 보관","en":"Read · keep verified copy"},"readOriginal":{"ko":"원본에 추가 절차","en":"Additional original procedure"},"window":{"ko":"인용 시간창","en":"Citation window"},"startEarlier":{"ko":"시작 − 1 스텝","en":"Start − 1 step"},"startLater":{"ko":"시작 + 1 스텝","en":"Start + 1 step"},"endEarlier":{"ko":"끝 − 1 스텝","en":"End − 1 step"},"endLater":{"ko":"끝 + 1 스텝","en":"End + 1 step"},"cite":{"ko":"이 시간창을 가설판에 인용","en":"Pin this citation window"},"language":{"ko":"언어","en":"Language"},"textScale":{"ko":"글자 배율","en":"Text scale"},"reducedMotion":{"ko":"모션 축소","en":"Reduced motion"},"confirm-dialog":{"ko":"확정 대화상자 (기본)","en":"Confirmation dialog (default)"},"hold":{"ko":"누르고 놓기","en":"Hold then release"},"two-step":{"ko":"프리뷰 후 확정","en":"Preview then confirm"},"rebind":{"ko":"키 다시 지정","en":"Rebind"},"pressKey":{"ko":"새 키를 누르세요. Esc로 취소합니다.","en":"Press a new key. Esc cancels."},"areaEvidence":{"ko":"구획별 근거","en":"Area evidence"},"readerEvidence":{"ko":"원본·사본과 출처","en":"Sources and copies"},"evidenceRequirement":{"ko":"각 구획에 근거 매체 하나를 붙이세요.","en":"Attach one source medium to each area."},"evidenceIntro":{"ko":"보관된 자동 사본과 고정된 인용. 원본 시간창을 바꾸어도 기존 인용은 유지됩니다.","en":"Kept copies and pinned citations. Changing a reader window does not alter an existing citation."},"hintFree":{"ko":"힌트는 무료이며 결말이나 업적에 불이익이 없습니다.","en":"Hints are free and do not penalize endings or achievements."},"nextHint":{"ko":"다음 단계 힌트","en":"Next hint"},"hintWarning":{"ko":"값 공개 전 확인","en":"Before revealing values"},"hintSpoiler":{"ko":"다음 힌트는 구체적인 절차나 값을 공개합니다.","en":"The next hint reveals concrete steps or values."},"reveal":{"ko":"힌트 보기","en":"Reveal hint"},"pending":{"ko":"저장 중","en":"Saving"},"saving":{"ko":"확정 내용을 안전하게 저장하고 있습니다. 되돌림·설정·힌트는 사용할 수 있습니다.","en":"Saving the confirmation. Undo, settings, and hints remain available."},"saveFailure":{"ko":"저장을 완료하지 못했습니다","en":"Save did not complete"},"saveFailed":{"ko":"저장 실패. 확정 효과를 재생하지 않았습니다. 재시도하거나 되돌릴 수 있습니다.","en":"Save failed. Retry or undo."},"retry":{"ko":"재시도","en":"Retry"},"confirm":{"ko":"확정","en":"Confirm"},"preview":{"ko":"프리뷰","en":"Preview"},"confirmExplanation":{"ko":"이 변경을 적용합니다. 저장이 성공한 뒤에만 확정됩니다. 되돌림은 계속 사용할 수 있습니다.","en":"Apply this change after a successful save. Undo remains available."},"next":{"ko":"다음","en":"Next"},"saved":{"ko":"확정하여 저장했습니다.","en":"Confirmed and saved."},"complete":{"ko":"T0 완료","en":"T0 complete"},"recovery":{"ko":"저장 복구","en":"Save recovery"},"recovered":{"ko":"검증된 저장에서 복구했습니다.","en":"Recovered from a verified save."},"fineUnavailable":{"ko":"정밀 간격이 아직 정의되지 않았습니다. 일반 방향키를 사용하세요.","en":"Fine spacing is not authored. Use an unmodified direction."},"previewCircuit":{"ko":"현재 정렬과 해칭을 검토할 수 있습니다.","en":"Review the current alignment and hatching."},"finishIntake":{"ko":"각서 3행·목록 3행·상시 슬롯·네 번째 줄 결정을 먼저 마치세요.","en":"Complete the three clauses, three rows, standing slot and fourth-row decision first."},"unavailable":{"ko":"아직 적용할 수 없습니다. 현재 자료와 상태를 확인하세요.","en":"This action is not available in the current state."},"citationUndo":{"ko":"고정된 인용은 되돌림으로 취소할 수 있습니다.","en":"Undo removes a pinned citation."},"stub":{"ko":"이 도구는 T0 이후에 열립니다.","en":"This tool opens after T0."},"hintOffer":{"ko":"잠시 막혔다면 F1로 무료 힌트를 볼 수 있습니다.","en":"Press F1 for a free hint if you need one."},"coarseUndo":{"ko":"오래된 기록은 체크포인트 단위로 되돌립니다","en":"Older history uses checkpoint undo"},"reason.ORIGINAL_DEGRADED":{"ko":"원본 절차 한도에 도달했습니다. 보관된 사본은 계속 볼 수 있습니다.","en":"Original procedure limit reached. Kept copies remain available."},"reason.INDETERMINATE":{"ko":"시간창이 너무 짧아 판단할 수 없습니다.","en":"The window is too short."},"reason.MEDIA_DUPLICATE":{"ko":"서로 다른 매체가 필요합니다.","en":"A different medium is required."},"reason.NOT_IMPLEMENTED_IN_T0":{"ko":"이 기능은 이후 구간에서 열립니다.","en":"This feature opens after T0."},"pickStart":{"ko":"시작 시간 선택","en":"Choose start phase"},"pickEnd":{"ko":"끝 시간 선택","en":"Choose end phase"},"phasePicker":{"ko":"시간 눈금 선택","en":"Choose phase"},"previousPage":{"ko":"이전 눈금 페이지","en":"Previous phase page"},"nextPage":{"ko":"다음 눈금 페이지","en":"Next phase page"},"newSlot":{"ko":"원본 보존 · 새 슬롯으로 시작","en":"Preserve original · start a new slot"},"oldSavePreserved":{"ko":"이전 세이브는 보존했습니다. 새 슬롯을 사용합니다.","en":"Original save preserved. Using a new slot."},"recoverySlot":{"ko":"복구 저장 슬롯","en":"Recovery save slot"},"savedSlots":{"ko":"저장 슬롯 선택 · 복구","en":"Save slots / recovery"},"missing":{"ko":"결손","en":"Missing"},"flat":{"ko":"평탄 기록","en":"Flat record"},"toolWheel":{"ko":"도구 선택","en":"Tools"},"coverageQuery":{"ko":"근거 유효성 조회","en":"Evidence validity"},"outsideCoverage":{"ko":"배선 밖. 이 옥외 구획에는 회선이 닿지 않아 기록의 부재를 사건의 부재로 볼 수 없습니다.","en":"Outside line coverage. Missing records here cannot establish that an event did not happen."},"bindingConflict":{"ko":"이미 쓰는 키입니다. 이전 바인딩을 유지합니다.","en":"That input is already used. The previous binding is kept."},"action.Navigate":{"ko":"초점·값 조절","en":"Focus / adjust"},"action.Interact":{"ko":"선택·조사","en":"Select / inspect"},"action.Preview":{"ko":"시험·재생","en":"Test / replay"},"action.UndoRedo":{"ko":"되돌림·다시","en":"Undo / redo"},"action.Overlay":{"ko":"보관함·가설·힌트","en":"Evidence / board / hints"},"action.Query":{"ko":"도구 조회","en":"Tool query"},"action.Tool":{"ko":"도구 선택","en":"Tool selection"},"action.Disconnect":{"ko":"도구 보조 동작","en":"Tool secondary action"},"action.Cancel":{"ko":"닫기·취소","en":"Back / cancel"},"action.circuit":{"ko":"배선 추적","en":"Circuit trace"},"action.reader":{"ko":"판독","en":"Read"},"action.alignment":{"ko":"조위 정합","en":"Tide alignment"},"action.routing":{"ko":"배수 편성","en":"Drainage routing"},"action.corrosion":{"ko":"부식 시험","en":"Corrosion test"},"action.seal":{"ko":"봉인","en":"Seal"},"controlsPad":{"ko":"왼쪽 스틱 초점 · A 선택 · B 뒤로 · 방향 패드 조절 · X 실행 · Y 휠/인용 · RB 도구 · LB+RS 힌트","en":"Left stick focus · A choose · B back · D-pad adjust · X action · Y wheel/cite · RB tools · LB+RS hints"},"holdDuration":{"ko":"홀드 시간","en":"Hold duration"},"caseTitle":{"ko":"사건 흐름"},"caseObjective":{"ko":"결손 4시간의 양 끝을 두 기록으로 고정"},"caseProgress":{"ko":"필요한 인용 {0}/{1}"},"caseMedia":{"ko":"서로 다른 매체의 두 기록을 대조하세요."},"caseCheckPins":{"ko":"고정된 시간창의 양 끝을 확인하세요."},"caseComplete":{"ko":"근거 쌍이 고정됨"},"caseNext":{"ko":"다음: "},"caseReview":{"ko":"현재 화면의 기록 확인"},"caseWait":{"ko":"저장 완료 기다리기"},"casePickPhase":{"ko":"판독값을 보며 시간 선택"},"casePickEvidence":{"ko":"구획의 근거로 붙일 기록 선택"},"casePickRecord":{"ko":"대조할 기록 선택"},"caseDecide":{"ko":"이관 목록의 기입 여부 선택"},"caseAlign":{"ko":"기준점을 보며 화살표로 도면 위치 조절"},"caseViewLine":{"ko":"각서의 다음 미열람 줄 확인"},"caseViewRow":{"ko":"목록의 다음 미열람 항목 확인"}}
++{"title":{"ko":"조수기록국 · 당직 인수","en":"Tide Registry · Taking Watch"},"startTitle":{"ko":"시작 전 설정","en":"Before the watch"},"intro":{"ko":"21:00. 인수 각서와 이관 목록을 살핀 뒤, 당직실의 기록을 대조하세요.","en":"21:00. Read the handover and transfer list, then compare the watch room records."},"start":{"ko":"당직 시작 / 계속","en":"Begin / continue"},"settings":{"ko":"접근성 · 설정","en":"Accessibility / settings"},"welcome":{"ko":"각서와 목록을 열람하고 상시 슬롯을 준비하세요.","en":"Read the documents and prepare the standing slot."},"room":{"ko":"당직실. 시점 노드를 선택해 자료와 도구를 조사합니다.","en":"Watch room. Choose a view to inspect records and tools."},"controls":{"ko":"Tab 초점 · Enter 선택 · 방향키 조절 · 1~6 도구 · I 증거함 · H 가설판 · F1 힌트 · Ctrl+Z 되돌림","en":"Tab focus · Enter choose · Arrows adjust · 1–6 tools · I evidence · H board · F1 hint · Ctrl+Z undo"},"back":{"ko":"닫기 / 뒤로","en":"Back"},"undo":{"ko":"되돌림","en":"Undo"},"redo":{"ko":"다시","en":"Redo"},"undone":{"ko":"되돌렸습니다. 자동 사본은 보관됩니다.","en":"Undone. Verified copies remain kept."},"redone":{"ko":"다시 적용했습니다.","en":"Redone."},"evidence":{"ko":"증거함","en":"Evidence"},"hypothesis":{"ko":"가설판","en":"Hypothesis board"},"hints":{"ko":"힌트","en":"Hints"},"intakeProgress":{"ko":"인수 절차","en":"Intake"},"done":{"ko":"완료","en":"Complete"},"inProgress":{"ko":"진행 중","en":"In progress"},"placePlate":{"ko":"판 #0 → 작업대 상시 슬롯","en":"Plate #0 → standing slot"},"plateZero":{"ko":"서랍의 판 #0 조사","en":"Inspect plate #0"},"plateZeroDetail":{"ko":"판 #0은 인수 뒤 작업대 상시 슬롯에 놓습니다. 작업대에서 배치할 수 있습니다.","en":"Place plate #0 in the standing slot using the workbench view."},"circuit":{"ko":"벽 회로 지도","en":"Circuit map"},"reader":{"ko":"판독기","en":"Reader"},"sealOutsideT0":{"ko":"봉인대의 봉인 절차는 이후 구간에서 열립니다.","en":"Sealing procedures open in a later stage."},"written":{"ko":"이관 목록 네 번째 줄: 기입","en":"Fourth transfer row: written"},"blank":{"ko":"이관 목록 네 번째 줄: 공란","en":"Fourth transfer row: blank"},"koFallback":{"ko":"이 기록은 한국어 정본으로 표시합니다.","en":"This record is shown in the canonical Korean text."},"loadReader":{"ko":"판독기에 적재","en":"Load into reader"},"circuitInstructions":{"ko":"기록은 회선이 닿는 곳에만 남습니다. 투명지의 세 기준점을 정렬한 뒤 옥외 구획을 표시하고 자료를 붙이세요.","en":"Records exist only where lines reach. Align three reference points, mark outdoor areas, and attach sources."},"state":{"ko":"상태","en":"State"},"trace":{"ko":"당직실 계통 추적","en":"Trace watch-room system"},"beginOverlay":{"ko":"분기 투명지 겹치기","en":"Begin overlay"},"offset":{"ko":"투명지 오프셋","en":"Overlay offset"},"left":{"ko":"왼쪽","en":"Left"},"right":{"ko":"오른쪽","en":"Right"},"up":{"ko":"위","en":"Up"},"down":{"ko":"아래","en":"Down"},"resetOverlay":{"ko":"저작된 초기 위치로 복귀","en":"Reset to authored position"},"anchorOverlay":{"ko":"세 기준점 고정","en":"Anchor three points"},"outdoorArea":{"ko":"옥외 구획","en":"Outdoor area"},"attachEvidence":{"ko":"근거 붙이기","en":"Attach evidence"},"chooseRecord":{"ko":"자료 선택 / 교체","en":"Choose / change record"},"reads":{"ko":"원본 절차","en":"Original procedures"},"copyKept":{"ko":"검증 사본 보관됨","en":"Verified copy kept"},"copyOnRead":{"ko":"첫 판독에서 검증 사본 생성","en":"First read creates a verified copy"},"chartLegend":{"ko":"원본 수치 · 선=기록 · 빈 구간=결손 · 평탄 구간도 기록입니다","en":"Authored samples · line=record · gap=missing · a flat line is still a record"},"read":{"ko":"판독 · 검증 사본 보관","en":"Read · keep verified copy"},"readOriginal":{"ko":"원본에 추가 절차","en":"Additional original procedure"},"window":{"ko":"인용 시간창","en":"Citation window"},"startEarlier":{"ko":"시작 − 1 스텝","en":"Start − 1 step"},"startLater":{"ko":"시작 + 1 스텝","en":"Start + 1 step"},"endEarlier":{"ko":"끝 − 1 스텝","en":"End − 1 step"},"endLater":{"ko":"끝 + 1 스텝","en":"End + 1 step"},"cite":{"ko":"이 시간창을 가설판에 인용","en":"Pin this citation window"},"language":{"ko":"언어","en":"Language"},"textScale":{"ko":"글자 배율","en":"Text scale"},"reducedMotion":{"ko":"모션 축소","en":"Reduced motion"},"confirm-dialog":{"ko":"확정 대화상자 (기본)","en":"Confirmation dialog (default)"},"hold":{"ko":"누르고 놓기","en":"Hold then release"},"two-step":{"ko":"프리뷰 후 확정","en":"Preview then confirm"},"rebind":{"ko":"키 다시 지정","en":"Rebind"},"pressKey":{"ko":"새 키를 누르세요. Esc로 취소합니다.","en":"Press a new key. Esc cancels."},"areaEvidence":{"ko":"구획별 근거","en":"Area evidence"},"readerEvidence":{"ko":"원본·사본과 출처","en":"Sources and copies"},"evidenceRequirement":{"ko":"각 구획에 근거 매체 하나를 붙이세요.","en":"Attach one source medium to each area."},"evidenceIntro":{"ko":"보관된 자동 사본과 고정된 인용. 원본 시간창을 바꾸어도 기존 인용은 유지됩니다.","en":"Kept copies and pinned citations. Changing a reader window does not alter an existing citation."},"hintFree":{"ko":"힌트는 무료이며 결말이나 업적에 불이익이 없습니다.","en":"Hints are free and do not penalize endings or achievements."},"nextHint":{"ko":"다음 단계 힌트","en":"Next hint"},"hintWarning":{"ko":"값 공개 전 확인","en":"Before revealing values"},"hintSpoiler":{"ko":"다음 힌트는 구체적인 절차나 값을 공개합니다.","en":"The next hint reveals concrete steps or values."},"reveal":{"ko":"힌트 보기","en":"Reveal hint"},"pending":{"ko":"저장 중","en":"Saving"},"saving":{"ko":"확정 내용을 안전하게 저장하고 있습니다. 되돌림·설정·힌트는 사용할 수 있습니다.","en":"Saving the confirmation. Undo, settings, and hints remain available."},"saveFailure":{"ko":"저장을 완료하지 못했습니다","en":"Save did not complete"},"saveFailed":{"ko":"저장 실패. 확정 효과를 재생하지 않았습니다. 재시도하거나 되돌릴 수 있습니다.","en":"Save failed. Retry or undo."},"retry":{"ko":"재시도","en":"Retry"},"confirm":{"ko":"확정","en":"Confirm"},"preview":{"ko":"프리뷰","en":"Preview"},"confirmExplanation":{"ko":"이 변경을 적용합니다. 저장이 성공한 뒤에만 확정됩니다. 되돌림은 계속 사용할 수 있습니다.","en":"Apply this change after a successful save. Undo remains available."},"next":{"ko":"다음","en":"Next"},"saved":{"ko":"확정하여 저장했습니다.","en":"Confirmed and saved."},"complete":{"ko":"T0 완료","en":"T0 complete"},"recovery":{"ko":"저장 복구","en":"Save recovery"},"recovered":{"ko":"검증된 저장에서 복구했습니다.","en":"Recovered from a verified save."},"fineUnavailable":{"ko":"정밀 간격이 아직 정의되지 않았습니다. 일반 방향키를 사용하세요.","en":"Fine spacing is not authored. Use an unmodified direction."},"previewCircuit":{"ko":"현재 정렬과 해칭을 검토할 수 있습니다.","en":"Review the current alignment and hatching."},"finishIntake":{"ko":"각서 3행·목록 3행·상시 슬롯·네 번째 줄 결정을 먼저 마치세요.","en":"Complete the three clauses, three rows, standing slot and fourth-row decision first."},"unavailable":{"ko":"아직 적용할 수 없습니다. 현재 자료와 상태를 확인하세요.","en":"This action is not available in the current state."},"citationUndo":{"ko":"고정된 인용은 되돌림으로 취소할 수 있습니다.","en":"Undo removes a pinned citation."},"stub":{"ko":"이 도구는 T0 이후에 열립니다.","en":"This tool opens after T0."},"hintOffer":{"ko":"잠시 막혔다면 F1로 무료 힌트를 볼 수 있습니다.","en":"Press F1 for a free hint if you need one."},"coarseUndo":{"ko":"오래된 기록은 체크포인트 단위로 되돌립니다","en":"Older history uses checkpoint undo"},"reason.ORIGINAL_DEGRADED":{"ko":"원본 절차 한도에 도달했습니다. 보관된 사본은 계속 볼 수 있습니다.","en":"Original procedure limit reached. Kept copies remain available."},"reason.INDETERMINATE":{"ko":"시간창이 너무 짧아 판단할 수 없습니다.","en":"The window is too short."},"reason.MEDIA_DUPLICATE":{"ko":"서로 다른 매체가 필요합니다.","en":"A different medium is required."},"reason.NOT_IMPLEMENTED_IN_T0":{"ko":"이 기능은 이후 구간에서 열립니다.","en":"This feature opens after T0."},"pickStart":{"ko":"시작 시간 선택","en":"Choose start phase"},"pickEnd":{"ko":"끝 시간 선택","en":"Choose end phase"},"phasePicker":{"ko":"시간 눈금 선택","en":"Choose phase"},"previousPage":{"ko":"이전 눈금 페이지","en":"Previous phase page"},"nextPage":{"ko":"다음 눈금 페이지","en":"Next phase page"},"newSlot":{"ko":"원본 보존 · 새 슬롯으로 시작","en":"Preserve original · start a new slot"},"oldSavePreserved":{"ko":"이전 세이브는 보존했습니다. 새 슬롯을 사용합니다.","en":"Original save preserved. Using a new slot."},"recoverySlot":{"ko":"복구 저장 슬롯","en":"Recovery save slot"},"savedSlots":{"ko":"저장 슬롯 선택 · 복구","en":"Save slots / recovery"},"missing":{"ko":"결손","en":"Missing"},"flat":{"ko":"평탄 기록","en":"Flat record"},"toolWheel":{"ko":"도구 선택","en":"Tools"},"coverageQuery":{"ko":"근거 유효성 조회","en":"Evidence validity"},"outsideCoverage":{"ko":"배선 밖. 이 옥외 구획에는 회선이 닿지 않아 기록의 부재를 사건의 부재로 볼 수 없습니다.","en":"Outside line coverage. Missing records here cannot establish that an event did not happen."},"bindingConflict":{"ko":"이미 쓰는 키입니다. 이전 바인딩을 유지합니다.","en":"That input is already used. The previous binding is kept."},"action.Navigate":{"ko":"초점·값 조절","en":"Focus / adjust"},"action.Interact":{"ko":"선택·조사","en":"Select / inspect"},"action.Preview":{"ko":"시험·재생","en":"Test / replay"},"action.UndoRedo":{"ko":"되돌림·다시","en":"Undo / redo"},"action.Overlay":{"ko":"보관함·가설·힌트","en":"Evidence / board / hints"},"action.Query":{"ko":"도구 조회","en":"Tool query"},"action.Tool":{"ko":"도구 선택","en":"Tool selection"},"action.Disconnect":{"ko":"도구 보조 동작","en":"Tool secondary action"},"action.Cancel":{"ko":"닫기·취소","en":"Back / cancel"},"action.circuit":{"ko":"배선 추적","en":"Circuit trace"},"action.reader":{"ko":"판독","en":"Read"},"action.alignment":{"ko":"조위 정합","en":"Tide alignment"},"action.routing":{"ko":"배수 편성","en":"Drainage routing"},"action.corrosion":{"ko":"부식 시험","en":"Corrosion test"},"action.seal":{"ko":"봉인","en":"Seal"},"controlsPad":{"ko":"왼쪽 스틱 초점 · A 선택 · B 뒤로 · 방향 패드 조절 · X 실행 · Y 휠/인용 · RB 도구 · LB+RS 힌트","en":"Left stick focus · A choose · B back · D-pad adjust · X action · Y wheel/cite · RB tools · LB+RS hints"},"holdDuration":{"ko":"홀드 시간","en":"Hold duration"},"caseTitle":{"ko":"사건 흐름"},"caseObjective":{"ko":"결손 4시간의 양 끝을 두 기록으로 고정"},"caseProgress":{"ko":"필요한 인용 {0}/{1}"},"caseMedia":{"ko":"서로 다른 매체의 두 기록을 대조하세요."},"caseCheckPins":{"ko":"고정한 근거를 다시 검토하세요."},"caseComplete":{"ko":"근거 쌍이 고정됨"},"caseNext":{"ko":"다음: "},"caseReview":{"ko":"고정한 근거를 검토하세요."},"caseWait":{"ko":"저장 완료 기다리기"},"casePickPhase":{"ko":"판독값을 보며 시간 선택"},"casePickEvidence":{"ko":"구획의 근거로 붙일 기록 선택"},"casePickRecord":{"ko":"대조할 기록 선택"},"caseDecide":{"ko":"이관 목록의 기입 여부 선택"},"caseAlign":{"ko":"근거를 대조하고 정렬해 보세요."},"caseViewLine":{"ko":"각서의 다음 미열람 줄 확인"},"caseViewRow":{"ko":"목록의 다음 미열람 항목 확인"},"caseRead":{"ko":"기록을 읽고 근거를 살펴보세요."},"casePin":{"ko":"근거를 살펴보고 인용을 고정하세요."}}
+--- P1-baseline/Tests/PlayMode/T0CaseThreadTests.cs
++++ current/Tests/PlayMode/T0CaseThreadTests.cs
+@@ -6,6 +6,7 @@
+ using System.Security.Cryptography;
+ using System.Threading;
+ using System.Threading.Tasks;
++using Newtonsoft.Json.Linq;
+ using NUnit.Framework;
+ using Tide.App;
+ using UnityEngine;
+@@ -21,12 +22,14 @@
+   Keyboard keyboard;
+   Mouse mouse;
+   string directory;
++  bool checkDisclosure;
+   InputSettings.BackgroundBehavior originalBackground;
+ #if UNITY_EDITOR
+   InputSettings.EditorInputBehaviorInPlayMode originalEditorInput;
+ #endif
+ 
+   [UnitySetUp] public IEnumerator SetUp() {
++   checkDisclosure=false;
+ #if UNITY_EDITOR
+    originalEditorInput=InputSystem.settings.editorInputBehaviorInPlayMode;
+    InputSystem.settings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+@@ -55,10 +58,32 @@
+    if(directory!=null&&Directory.Exists(directory))Directory.Delete(directory,true);
+   }
+ 
++  [UnityTest] public IEnumerator CaseThreadAfterCircuitNeverNamesTheSolutionSource() {
++   Click("start");Click("handover");
++   foreach(var id in new[]{"hb-l1","hb-l2","hb-l3"})Click("line-"+id);
++   Click("close-document");Click("transfer");
++   foreach(var id in new[]{"tl-r1","tl-r2","tl-r3"})Click("row-"+id);
++   Click("decision-written");Click("close-document");Click("load-plate-zero");
++   Click("hub-view-circuitmap");Click("open-circuit");Click("trace-hub");
++   Click("begin-overlay");Click("offset-left");Click("offset-up");Click("anchor-overlay");
++   foreach(var area in game.Definition.UncoveredAreas){
++    Click("area-"+area);Click("area-evidence-"+area);Click("attach-rec-watchlog-bureau");Click("overlay-back");
++   }
++   Assert.IsTrue(game.Simulation.IsComplete(game.Journal.State,"t0-b2"),"Reach the live post-circuit state before checking disclosure");
++   Click("hub-view-reader");Click("open-reader");
++   yield return Wait(game.FlushSaves());
++   AssertCard(0,false);
++   var card=host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text;
++   var next=card.Substring(card.LastIndexOf("다음: ",StringComparison.Ordinal)+4);
++   Assert.AreEqual("근거를 살펴보고 인용을 고정하세요.",next,
++    "Post-t0-b2 next action must give generic objective guidance, never a record/action label");
++  }
+   [UnityTest] public IEnumerator CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation() {
++   checkDisclosure=true;
++   AssertNoDisclosure();
+    yield return KeyboardClick("start");
+    AssertCard(0,false); // The pre-implementation RED must fail on the missing visible card.
+-   AssertNext("handover");
++   AssertNext("기록을 읽고 근거를 살펴보세요.");
+    yield return AssertRenderOnly(0,false);
+ 
+    // Existing intake/circuit actions establish prerequisites; no fabricated state or journal writes.
+@@ -70,7 +95,7 @@
+    Click("close-document");Click("transfer");
+    foreach(var id in new[]{"tl-r1","tl-r2","tl-r3"})Click("row-"+id);
+    Click("decision-written");Click("close-document");Click("load-plate-zero");
+-   Click("hub-view-circuitmap");Click("open-circuit");AssertNext("begin-overlay");Click("trace-hub");
++   Click("hub-view-circuitmap");Click("open-circuit");AssertNext("근거를 대조하고 정렬해 보세요.");Click("trace-hub");
+    Click("begin-overlay");Click("offset-left");Click("offset-up");Click("anchor-overlay");
+    foreach(var area in game.Definition.UncoveredAreas){
+     Click("area-"+area);Click("area-evidence-"+area);Click("attach-rec-watchlog-bureau");Click("overlay-back");
+@@ -78,17 +103,24 @@
+    Assert.IsTrue(game.Simulation.IsComplete(game.Journal.State,"t0-b2"));
+    yield return KeyboardClick("hub-view-reader");
+    yield return PointerClick("open-reader");
++   AssertCard(0,false); // Post-t0-b2, before any source is selected.
+    yield return KeyboardClick("load-rec-plate-standard-hub");
+    yield return PointerClick("read");
+    AssertCard(0,false);
+-   AssertNext("pick-start");
++   AssertNext("근거를 살펴보고 인용을 고정하세요.");
+    Assert.IsFalse(game.Journal.State.Has("citation:rec-plate-standard-hub"));
+    yield return AssertRenderOnly(0,false);
+    yield return Window("H-1:00","H+2:00");
+    yield return KeyboardClick("cite");
+    Assert.AreEqual("confirm",game.Surface);
+    yield return AssertRenderOnly(0,false);
+-   yield return KeyboardClick("confirm-submit");
++   var saveGate=new TaskCompletionSource<bool>();
++   game.Store.Injection=(stage,token)=>saveGate.Task;
++   try {
++    yield return KeyboardClick("confirm-submit");
++    Assert.IsTrue(game.SavePending);
++    AssertNoDisclosure(); // The transient saving phase is exercised deterministically.
++   }finally{game.Store.Injection=null;saveGate.TrySetResult(true);}
+    while(game.SavePending)yield return null;
+    yield return Wait(game.FlushSaves());
+    Assert.IsTrue(game.Journal.State.Has("citation:rec-plate-standard-hub"));
+@@ -138,16 +170,34 @@
+    Click("text-scale");Click("overlay-back");
+   }
+ 
+-  void AssertNext(string actionId) {
+-   var label=host.GetComponentsInChildren<Button>().Single(b=>b.name==actionId)
+-    .GetComponentsInChildren<Text>().Single(t=>t.name=="Label").text;
+-   StringAssert.EndsWith("다음: "+label,host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text);
++  void AssertNext(string objective) {
++   StringAssert.EndsWith("다음: "+objective,host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text);
++  }
++  void AssertNoDisclosure() {
++   var card=host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text;
++   var next=card.Split('\n').Last();
++   CollectionAssert.Contains(new[]{
++    "다음: 기록을 읽고 근거를 살펴보세요.","다음: 근거를 대조하고 정렬해 보세요.",
++    "다음: 근거를 살펴보고 인용을 고정하세요.","다음: 고정한 근거를 검토하세요.","다음: 저장 완료 기다리기"
++   },next,"Every card phase must use generic objective guidance only");
++   var records=JObject.Parse(Resources.Load<T0RuntimeConfig>("T0Runtime").records.text);
++   foreach(var record in records["rows"]){
++    StringAssert.DoesNotContain((string)record["recordId"],card);
++    StringAssert.DoesNotContain((string)record["displayNameKo"],card);
++   }
++   foreach(var button in host.GetComponentsInChildren<Button>()){
++    Assert.AreNotEqual("다음: "+button.GetComponentsInChildren<Text>().Single(t=>t.name=="Label").text,next,
++     "The card must not copy a live action label");
++   }
++   foreach(var banned in new[]{"rec-","H-","H+","당직실 표준판","조위장부","시간창","단일 사고","유지 실패","서명 순서","책임 사슬"})
++    StringAssert.DoesNotContain(banned,card);
+   }
+ 
+   void AssertCard(int count,bool completed) {
+    var cards=host.GetComponentsInChildren<Text>().Where(t=>t.name=="CaseThread").ToArray();
+    Assert.AreEqual(1,cards.Length,"A visible Korean CaseThread must explain the existing T0 objective and citation progress");
+    var card=cards[0];
++   if(checkDisclosure)AssertNoDisclosure();
+    Assert.IsTrue(card.enabled&&card.gameObject.activeInHierarchy);
+    StringAssert.Contains("결손 4시간의 양 끝을 두 기록으로 고정",card.text);
+    StringAssert.Contains("필요한 인용 "+count+"/2",card.text);
+@@ -198,7 +248,7 @@
+      .Select(p=>p+":"+Convert.ToBase64String(sha.ComputeHash(File.ReadAllBytes(p)))).ToArray()
+     :Array.Empty<string>();
+   }
+-  void Click(string id){Assert.IsTrue(game.Interface.Activate(id),"Missing existing action "+id);}
++  void Click(string id){Assert.IsTrue(game.Interface.Activate(id),"Missing existing action "+id);if(checkDisclosure)AssertNoDisclosure();}
+   IEnumerator Wait(Task task){while(!task.IsCompleted)yield return null;if(task.IsFaulted)throw task.Exception;}
+   IEnumerator PressKey(Key key){
+    InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;
+@@ -208,6 +258,7 @@
+    int steps=0;
+    while(game.Interface.CurrentFocusId!=id){Assert.Less(steps++,100,"Keyboard cannot reach "+id);yield return PressKey(Key.Tab);}
+    yield return PressKey(Key.Enter);
++   if(checkDisclosure)AssertNoDisclosure();
+   }
+   IEnumerator PointerClick(string id){
+    Assert.IsTrue(game.Interface.Focus(id),"Missing pointer target "+id);
+@@ -216,6 +267,7 @@
+    var rect=(RectTransform)button.transform;
+    var point=RectTransformUtility.WorldToScreenPoint(null,rect.TransformPoint(rect.rect.center));
+    InputSystem.QueueStateEvent(mouse,new MouseState{position=point});yield return null;
++   if(checkDisclosure)AssertNoDisclosure();
+    InputSystem.QueueStateEvent(mouse,new MouseState{position=point}.WithButton(MouseButton.Left));yield return null;
+    InputSystem.QueueStateEvent(mouse,new MouseState{position=point});yield return null;
+   }

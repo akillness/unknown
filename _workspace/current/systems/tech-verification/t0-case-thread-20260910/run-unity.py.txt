@@ -1,0 +1,20 @@
+import sys,subprocess,json,hashlib,datetime,pathlib
+root=pathlib.Path('/Users/jangyoung/orca/unknown')
+e=root/'_workspace/current/systems/tech-verification/t0-case-thread-20260910'
+label,platform=sys.argv[1:3]
+project=sys.argv[3] if platform=='build' else str(root/'unity/Unknown')
+cmd=['rtk','proxy','/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity','-batchmode','-nographics','-projectPath',project]
+if platform=='build': cmd+=['-quit','-executeMethod','Tide.EditorTools.T0ProjectBuilder.BuildMac']
+else:
+ cmd+=['-runTests','-testPlatform',platform,'-testResults',str(e/(label+'.xml'))]
+ if len(sys.argv)>3: cmd+=['-testFilter',sys.argv[3]]
+cmd+=['-logFile',str(e/(label+'.log'))]
+files={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in (root/'unity/Unknown/Assets/_Project').rglob('*') if p.is_file() and p.suffix in ('.cs','.asmdef','.json')}
+receipt={'command':cmd,'startedUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'sourceHashes':files}
+(e/(label+'-command.json')).write_text(json.dumps(receipt,indent=2))
+print('START '+label,flush=True)
+code=subprocess.call(cmd)
+receipt.update(exitCode=code,finishedUtc=datetime.datetime.now(datetime.timezone.utc).isoformat())
+(e/(label+'-command.json')).write_text(json.dumps(receipt,indent=2))
+print('EXIT '+str(code)+' '+label,flush=True)
+sys.exit(code)

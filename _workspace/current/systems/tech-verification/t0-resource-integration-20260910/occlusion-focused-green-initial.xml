@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.5266582">
+  <test-suite type="TestSuite" id="1030" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.526658" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1024" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.520936" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41685" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1025" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.519980" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1026" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.519536" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1017" name="T0ResourceInteractionTests" fullname="Tide.Tests.T0ResourceInteractionTests" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:37Z" duration="1.518624" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1021" name="CloserRendererWithoutColliderBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection" methodname="CloserRendererWithoutColliderBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="435200424" result="Passed" start-time="2026-09-10 11:23:35Z" end-time="2026-09-10 11:23:36Z" duration="1.173111" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="CloserSceneGeometryBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserSceneGeometryBlocksDrawerSelection" methodname="CloserSceneGeometryBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="929675603" result="Passed" start-time="2026-09-10 11:23:36Z" end-time="2026-09-10 11:23:36Z" duration="0.035647" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" fullname="Tide.Tests.T0ResourceInteractionTests.LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" methodname="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="120292482" result="Passed" start-time="2026-09-10 11:23:36Z" end-time="2026-09-10 11:23:36Z" duration="0.058587" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="NonReadableDrawerPickingRejectsHiddenOrMissedBounds" fullname="Tide.Tests.T0ResourceInteractionTests.NonReadableDrawerPickingRejectsHiddenOrMissedBounds" methodname="NonReadableDrawerPickingRejectsHiddenOrMissedBounds" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="101526074" result="Passed" start-time="2026-09-10 11:23:36Z" end-time="2026-09-10 11:23:37Z" duration="0.040103" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" methodname="NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="2012467474" result="Passed" start-time="2026-09-10 11:23:37Z" end-time="2026-09-10 11:23:37Z" duration="0.116164" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="SceneClickDoesNotCrossOverlayToolDocumentOrUi" fullname="Tide.Tests.T0ResourceInteractionTests.SceneClickDoesNotCrossOverlayToolDocumentOrUi" methodname="SceneClickDoesNotCrossOverlayToolDocumentOrUi" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1512826132" result="Passed" start-time="2026-09-10 11:23:37Z" end-time="2026-09-10 11:23:37Z" duration="0.085846" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

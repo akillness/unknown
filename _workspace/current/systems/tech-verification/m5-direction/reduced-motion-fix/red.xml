@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.8469055">
+  <test-suite type="TestSuite" id="1070" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.846906" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1064" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.840439" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20307" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1065" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.839504" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1066" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.838306" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1020" name="M5DirectionPlayModeTests" fullname="Tide.Tests.M5DirectionPlayModeTests" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.835432" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1021" name="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" fullname="Tide.Tests.M5DirectionPlayModeTests.ReducedMotionStartsFreshGameImmediatelyWithoutWrites" methodname="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1642419460" result="Failed" start-time="2026-09-11 07:44:28Z" end-time="2026-09-11 07:44:30Z" duration="1.826897" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.M5DirectionPlayModeTests+<ReducedMotionStartsFreshGameImmediatelyWithoutWrites>d__19.MoveNext () [0x000cf] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/M5DirectionPlayModeTests.cs:50
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

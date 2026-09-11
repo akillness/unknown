@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "cycle": "20260909-preproduction-c5",
+  "status": "scenario-not-forecast",
+  "currency": "KRW",
+  "launchFloor": 9000,
+  "prices": [
+    14900,
+    17500,
+    19900
+  ],
+  "launchDiscount": 0.1,
+  "vatKR": 0.1,
+  "regionalFactors": [
+    1,
+    0.85
+  ],
+  "refundRate": 0.08,
+  "chargebackRate": 0,
+  "developerShareAssumption": 0.7,
+  "shareVerified": false,
+  "perUnitReserve": 500,
+  "usShare": null,
+  "usWithholdingRate": null,
+  "cashBudgets": [
+    10000000,
+    30000000,
+    60000000
+  ],
+  "humanPriceStudyN": 0,
+  "unitFormula": "price*(1-discount)/(1+vatKR)*regionalFactor*(1-refundRate-chargebackRate)*developerShareAssumption-perUnitReserve",
+  "limitations": [
+    "KR proxy not region-specific tax calculation",
+    "No corporate/income taxes deducted",
+    "No verified conversion/refund/share data",
+    "Include upfront Steam fee cash separately; offset only if recouped"
+  ]
+}

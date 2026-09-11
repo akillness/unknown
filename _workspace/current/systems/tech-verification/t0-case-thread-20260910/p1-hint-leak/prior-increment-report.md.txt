@@ -1,0 +1,86 @@
+---
+updated: 2026-09-10
+cycle: 20260909-preproduction-c7
+status: current
+supersedes: null
+owner: game-systems-designer
+---
+
+# T0 read-only case thread — one research-backed increment
+
+[OBSERVED] Implemented, verified and uncommitted. HEAD remains `687477d6428c7fc94e681cc6d11045acadc91aa1`; no staging, commit or push. The increment is one Korean case-thread card derived from existing live T0 state. No asset, puzzle rule, save schema, approval or runtimeEligible change was made.
+
+## First audit and decision, before production edits
+
+[OBSERVED] Read CLAUDE.md, .mex/ROUTER.md, session-start output, the authoritative planning/t0-research-to-implementation-r01.md, systems/unity-implementation.md, current runtime/tests and prior renderer-only occlusion evidence. Existing UI had intake, circuit, reader, citation confirmation and evidence/board surfaces; only the subtitle exposed t0-b3 completion. It had no persistent objective/required-citation count.
+
+[OBSERVED] Data/Tables/beats.json requires the two specifically authored citationPinned facts, an independentPair, the standard plate's autoCopyCreated fact and its pinned gapEndpointsFixed predicate. T0Simulation.IsComplete also requires prior beats. Independence means different media AND resolved roots. Critically, only the standard plate's pinned endpoints are checked against the authored gap; the ledger retains the existing valid nonzero-window requirement. Changing the reader window does not alter either pinned citation. This increment does not strengthen those rules.
+
+[INFERENCE] Under the user's FIRST AUDIT fallback, a raw two-citation count cannot truthfully stand for completion. The smallest equivalent is **“필요한 인용 N/2”**, counting the authored required citation facts, with **“근거 쌍이 고정됨” only from Simulation.IsComplete(state, "t0-b3")**. Two required pins with incorrect fixed plate endpoints remain 2/2 with an explicit window-check instruction. The focused test proves this distinction. The objective is the brief's “결손 4시간의 양 끝을 두 기록으로 고정”; no numeric answer or banned narrative fact is added to the card.
+
+[INFERENCE] The supplied brief cites Casebook 1899, Connected Clue and Ashes of Holloway Bay for genre context, and Game Accessibility Guidelines for revisitable objectives and contextual guidance. This increment applies that rationale through a persistent two-media objective and a single next existing action. Those supplied research observations were not independently refreshed here and do not establish demand, comprehension, fun or accessibility.
+
+## Production change and boundaries
+
+- `App/T0GameSession.cs`: read-only CaseThreadText/CaseThreadNext projection. Required pins and current completion come from existing Definition/Journal/Simulation. Guidance respects intake/circuit prerequisites, current overlay, verified copies and actual stored windows. It does not call a mutation API. Only the existing validation predicate is queried before suggesting citation.
+- `UI/T0Interface.cs`: existing Panel/Text primitives and Korean font render a persistent top-right card. Text and background reject raycasts; no Selectable/action/focus entry is added. Existing scene viewport and left navigation are unchanged; the existing right content scroll area makes room for the card. Card height follows existing text scale.
+- `Resources/T0Strings.json`: 16 Korean case strings, preserving every pre-existing string value. No new resource asset is created.
+- `Tests/PlayMode/T0CaseThreadTests.cs` and `.meta`: exactly one focused PlayMode testcase. Existing T0PlayModeTests and T0ResourceInteractionTests remain unchanged.
+
+[OBSERVED] `increment.diff` is the exact feature delta against this task's already-dirty baseline, not against HEAD. The previous drawer integration/renderer-only correction is not attributed to this increment. `independent-review.json` records two independently found guidance issues (Tracing mode and misleading other-medium wording), both fixed, and the final scoped no-P1/P2 review. The guard region and its entire existing test file remain byte-identical to baseline. Prior report and all prior occlusion receipts are preserved at `t0-resource-integration-20260910.md` and its adjacent directory.
+
+## TDD and final checks
+
+All receipt names below are relative to `t0-case-thread-20260910/`. Each Unity invocation has an adjacent `*-command.json` containing the exact argv, UTC start/end, exit code and source hashes. Source snapshots retain the pre-implementation production files and both original/final pre-implementation tests.
+
+| Check | Observed result | Raw receipt |
+| --- | --- | --- |
+| First focused RED | Exit 2; 0/1. Missing active CaseThread: expected 1, actual 0, after keyboard Start. No compile/setup failure. | `focused-red.xml/log` |
+| Final pre-implementation RED | Exit 2; same missing-card assertion, 0/1. Test's wrong-window case corrected to the actual plate-only endpoint predicate before runtime edits. Production remained byte-identical to baseline. | `focused-red-final.xml/log`, `red-source-proof.json`, `red-final-T0CaseThreadTests.cs.txt` |
+| First GREEN attempt | Exit 2; test checked citation before asynchronous CommitAsync finished. FlushSaves alone does not await that confirmation. Corrected test to wait SavePending, matching existing tests. Failed attempt retained; not claimed GREEN. | `focused-green.xml/log` |
+| Corrected focused GREEN | Exit 0; 1/1. | `focused-green-2.xml/log` |
+| Final focused GREEN | Exit 0; 1/1, no skips. Includes short-copy, next-action and layout assertions. | `focused-green-final.xml/log` |
+| Full EditMode | Exit 0; **19/19**, no skips; no assembly/test filter. | `editmode-final.xml/log` |
+| Full PlayMode | Exit 0; **22/22**, no skips; no assembly/test filter. Includes all six existing drawer/occlusion tests. | `playmode-final.xml/log` |
+| BuildMac | Exit 0; **Succeeded, 314144887 bytes**. | `build-mac.log`, `build-inputs.json`, `player-manifest.json` |
+| Final native Metal smoke | **PASS**, 157 driver assertions across six state snapshots; 8 screenshots. PID observed and absent after result; 16.33 seconds within external 300-second bound. | `native-final/native-result.json`, `native-launch-final.json`, `native-player-final.log` |
+
+[OBSERVED] The focused test drives existing intake/circuit controls, actual keyboard and pointer UI paths, reader phase selectors and confirmation. It proves 0/2 before citation, 1/2 after a durable first pin, 2/2 but incomplete after a wrong plate pin, unchanged pinned endpoints after only editing the reader window, and completion only after explicit re-citation. Undo/redo cover both 1→0→1 and complete→incomplete→complete. Repeated Render calls preserve state hash, command entries/head, loaded record, receipts, action IDs, focus, save-file hashes and zero save-injection calls. It checks non-interception and text preferred-height containment at default scale and the existing 1.5 maximum, including a handover document. These are bounded automated layout checks, not accessibility certification. The focused testcase is a subset of the full PlayMode total, not an additional suite count.
+
+Exact final suite/build commands (Unity 6000.5.6f1):
+
+```sh
+rtk proxy /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity -batchmode -nographics -projectPath /Users/jangyoung/orca/unknown/unity/Unknown -runTests -testPlatform EditMode -testResults /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-case-thread-20260910/editmode-final.xml -logFile /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-case-thread-20260910/editmode-final.log
+rtk proxy /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity -batchmode -nographics -projectPath /Users/jangyoung/orca/unknown/unity/Unknown -runTests -testPlatform PlayMode -testResults /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-case-thread-20260910/playmode-final.xml -logFile /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-case-thread-20260910/playmode-final.log
+rtk proxy /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity -batchmode -nographics -projectPath /tmp/t0-case-thread-20260910/build-project -quit -executeMethod Tide.EditorTools.T0ProjectBuilder.BuildMac -logFile /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-case-thread-20260910/build-mac.log
+```
+
+The focused commands use the same project and `-testPlatform PlayMode -testFilter Tide.Tests.T0CaseThreadTests.CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation`; exact RED/GREEN output paths and source versions are in the corresponding command receipts. `run-unity.py.txt` retains the invocation recorder.
+
+## Native artifact and observed interaction
+
+[OBSERVED] Retained bundle: `unity/Unknown/Builds/T0-case-thread-20260910-diagnostic/Unknown.app`. The unchanged BuildMac method ran in an isolated APFS clone. All **251 production input hashes** matched before and after build; the only diagnostic delta is the exact production T0GameSession.cs byte prefix plus the retained command-gated `native-driver.cs.txt` suffix. No diagnostic class was added to production source. The bundle manifest records 315 files. The task-owned temporary clone was removed after identity verification and successful native smoke; existing player bundles are untouched.
+
+[OBSERVED] The final foreground launch uses `/usr/bin/open -n <bundle> --args --t0-case-thread-smoke --t0-case-thread-output <evidence>/native-final --t0-save-dir /tmp/t0-case-thread-20260910/native-save-final -screen-fullscreen 0 -screen-width 1280 -screen-height 800 -logFile <evidence>/native-player-final.log`; the full exact command is `native-launch-final.json`. LaunchServices exit 0 is measured; it does not expose the player exit code, so none is claimed. The driver reported PASS, requested Application.Quit(0), and process PID 41177 was observed then absent. The first launch already passed behavior, but its BSD pgrep monitor used an unsupported regex and could not establish process absence. That failed monitoring attempt and its correction are retained in `native-launch.json`, `run-native-first.py.txt` and the first `native/` screenshots/result. The corrected launch reran the bounded smoke with an exit-checked POSIX regex.
+
+[OBSERVED] On Metal / Apple M2 Pro, native virtual InputSystem keyboard started the game, traversed focus and confirmed the second citation. Native virtual mouse selected the visible drawer and opened/read existing handover UI. Remaining prerequisite/reader controls used explicitly recorded Interface.Activate adapters, including actual window-picker and citation-confirmation controls; no fabricated puzzle state or direct simulation command was injected. The driver checked six read-only Render snapshots: initial 0/2, prepared 0/2, confirmation still 0/2, first committed 1/2, second prepared still 1/2, completed 2/2. Final live state matches a validated reload of the actual persisted journal (`native-final-save.json`).
+
+[OBSERVED] The retained renderer-only fixture reuses existing scene mesh/material references without a Collider: visible drawer click succeeds; nearer renderer blocks it; disabling the renderer restores it; keyboard navigation remains available while blocked. Repeated rendering and navigation preserve the measured puzzle/save footprints. Final player log has no matched exception, NullReference, MissingComponent or non-readable collision-mesh error. The 1280×800 initial/1-of-2/completed screenshots were visually inspected: the card is visible, its four lines fit, and left scene/navigation remain unobscured.
+
+## Preservation, memory and explicit limits
+
+[OBSERVED] Preservation baseline, feature file inventory, evidence hashes and final comparisons are retained in `preservation-baseline.json`, `changed-files.json`, `receipt-manifest.json` and `preservation.json`. HEAD/index remain unchanged. Unrelated pre-existing files were neither edited nor restored by this task. Two external baseline drifts are distinguished: the already-running root Editor's Logs/Editor.log and the planning brief's concurrent cycle/wording update. The latter is captured with original/current hashes and a current snapshot in `concurrent-brief-change.json`; this task did not write it. The card's count/completion separation follows the user's explicit FIRST AUDIT fallback and unchanged production predicates.
+
+[OBSERVED] Session-start initially reported the brief's missing cycle metadata. The concurrent brief later added that field; final freshness result is recorded separately. mex scope/check/log remain skipped because no identity-verified mex-agent is available; TeX mex was not used. A scoped seven-file graph refresh produced **200 nodes, 432 edges, 12 communities** with exact input/output receipts. Canonical repository/vault graphs were not targeted, no persistent zvec index was created/rebuilt, and no assistant-memory files were written. Durable task findings stay in the user-authorized systems evidence scope.
+
+[INFERENCE] This is automated diagnostic native smoke, not a human playtest, physical-device/gamepad smoke, performance benchmark, accessibility validation, 60-second comprehension result or G4/G5/G6/G8 gate promotion. The native input trace mixes real InputSystem virtual-device events with labeled UI adapters. Full native keyboard-only/gamepad-only coverage is not claimed; existing keyboard/gamepad PlayMode completion tests passed. Bounds-based drawer occlusion retains its prior approximation limits. No new puzzle constraints, asset approval or narrative fact follows from these results.
+
+
+## Conventions checklist
+
+1. [OBSERVED] New systems report and evidence sidecars carry current required frontmatter. This is an additive increment; no historical artifact was replaced.
+2. [OBSERVED] Final `rtk proxy bash .claude/skills/game-ops-harness/scripts/freshness-check.sh` exited **0**, with **0 findings across 371 Markdown artifacts** (`freshness.log`). This covers metadata/supersedes structure; no cycle start was supplied and memory freshness is not measured.
+3. [OBSERVED] RED/GREEN, full suites, build, native actions and failed monitoring/test-harness attempts have raw receipts, timestamps, source hashes and explicit interpretations.
+4. [OBSERVED] 417 protected resource, scene, approval and earlier occlusion evidence files are byte-identical to baseline. All 2,130 baseline files remain present. The two external drifts are identified, not restored or attributed to this increment.
+5. [OBSERVED] Scoped code graph and systems rationale are retained. Canonical graphs, unrelated authored files and assistant memory are unchanged by this task.
+6. [OBSERVED] mex-agent is unavailable; mex scope/check/log are explicitly skipped. No no-drift or full G8 claim is made. HEAD and index are unchanged; final source hashes match the passing suites and all 251 build inputs.

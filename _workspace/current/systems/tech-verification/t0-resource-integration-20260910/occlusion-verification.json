@@ -1,0 +1,127 @@
+{
+  "fullSuites": [
+    {
+      "platform": "editmode",
+      "exitCode": 0,
+      "filter": null,
+      "xml": "occlusion-editmode-final.xml",
+      "log": "occlusion-editmode-final.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "19",
+        "result": "Passed",
+        "total": "19",
+        "passed": "19",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:25:34Z",
+        "end-time": "2026-09-10 11:25:37Z",
+        "duration": "2.9504935"
+      }
+    },
+    {
+      "platform": "playmode",
+      "exitCode": 0,
+      "filter": null,
+      "xml": "occlusion-playmode-final.xml",
+      "log": "occlusion-playmode-final.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "21",
+        "result": "Passed",
+        "total": "21",
+        "passed": "21",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:26:24Z",
+        "end-time": "2026-09-10 11:26:42Z",
+        "duration": "18.0025641"
+      }
+    }
+  ],
+  "build": {
+    "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+    "projectPath": "/tmp/t0-occlusion-20260910/build-project",
+    "exitCode": 0,
+    "result": "Succeeded",
+    "bytes": 314122250,
+    "bundle": "/Users/jangyoung/orca/unknown/unity/Unknown/Builds/T0-renderer-occlusion-20260910-diagnostic/Unknown.app",
+    "inputManifest": "occlusion-build-inputs.json",
+    "fileManifest": "occlusion-player-manifest.json"
+  },
+  "native": {
+    "result": {
+      "pass": true,
+      "error": null,
+      "checks": [
+        "start control available",
+        "desk investigation remains selected",
+        "drawer front projects inside camera viewport",
+        "visible drawer left-click selects investigation",
+        "return to desk control available",
+        "drawer front projects inside camera viewport",
+        "occluder has no Collider",
+        "occluder is active and camera-visible",
+        "occluder intersects nearer screen ray",
+        "occluder ray hit precedes drawer bounds",
+        "no nearer physics collider hides renderer-only defect",
+        "occluder reuses existing scene mesh and materials",
+        "desk investigation remains selected",
+        "renderer-only occluder blocks drawer click",
+        "disabling renderer-only blocker restores drawer click",
+        "return to desk for keyboard check",
+        "drawer keyboard control available while occluded",
+        "keyboard drawer navigation remains available while occluded",
+        "smoke navigation leaves puzzle state unchanged"
+      ],
+      "blocker": {
+        "colliderCount": 0,
+        "mesh": "Cube",
+        "material": "Workbench-above-drawer",
+        "sourceSceneObject": "Workbench above drawer",
+        "screenX": 290.0,
+        "screenY": 452.1888,
+        "rayDistance": 0.21967639,
+        "drawerRayDistance": 2.76798081,
+        "cameraMask": -1,
+        "frustumIntersection": true
+      },
+      "utc": "2026-09-10T11:28:51.4146950Z",
+      "graphicsDevice": "Metal",
+      "device": "Apple M2 Pro",
+      "scope": "Automated native BuildMac smoke with temporary command-gated driver; original runtime prefix unchanged; no human or performance evidence"
+    },
+    "launcher": "open -n",
+    "launcherExitCode": 0,
+    "processExitCode": null,
+    "processExitNote": "Driver requested Application.Quit(0); process absence observed. LaunchServices does not expose player exit status.",
+    "firstAttempt": "Boot timeout before interaction checks; retained occlusion-native/native-result.json and occlusion-native-player.log",
+    "secondAttempt": "Background retry did not finish boot; task-owned diagnostic processes terminated before foreground launch; retained occlusion-native-player-retry.log",
+    "successCommand": "rtk proxy open -n /Users/jangyoung/orca/unknown/unity/Unknown/Builds/T0-renderer-occlusion-20260910-diagnostic/Unknown.app --args --t0-occlusion-smoke --t0-occlusion-output /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-native-foreground --t0-save-dir /tmp/t0-occlusion-20260910/native-save-foreground -screen-fullscreen 0 -screen-width 1280 -screen-height 800 -logFile /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-native-player-foreground.log"
+  },
+  "independentReview": {
+    "agent": "/root/qa_review",
+    "result": "No P1/P2 findings in new runtime delta or diagnostic driver; source review, not human testing",
+    "finalEvidenceAudit": {
+      "result": "No substantive discrepancy",
+      "productionInputHashesVerified": 249,
+      "bundleFileHashesVerified": 315,
+      "mismatches": 0,
+      "pngsVisuallyReviewed": 5,
+      "runtimePrefixPlusDriverHashReproduced": true,
+      "scope": "Read-only independent agent audit, not human testing"
+    }
+  },
+  "limits": [
+    "World-space AABB picking and occlusion are conservative; no triangle/fragment/alpha-perfect guarantee.",
+    "No human playtest or performance gate measurement."
+  ]
+}

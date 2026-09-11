@@ -1,0 +1,2865 @@
+{
+  "schemaVersion": 1,
+  "scope": "t0",
+  "generatedFrom": [
+    "planning/campaign.json",
+    "synopsis/t0-records.md"
+  ],
+  "sourceSha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
+  "recordsDocSha256": "f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f",
+  "fieldOwnership": {
+    "content": "game-synopsis-writer (synopsis/t0-records.md — 매체 내용)",
+    "shape": "game-systems-designer (systems/data-schemas/plates.md — 필드·불변식)",
+    "idsAndMedium": "game-planner (planning/campaign.json — clue id · originId · sourceType)"
+  },
+  "crossChecks": {
+    "plateAnchors": "33/33 일치",
+    "ledgerAnchors": "28/28 일치",
+    "clueIdOriginMedium": "문서 ↔ campaign 전건 일치(불일치 시 exit 2)"
+  },
+  "notMeasured": [
+    "플레이 0회 · 판독 화면 0회 · 이 값들이 읽히는지 n=0"
+  ],
+  "rows": [
+    {
+      "recordId": "rec-handover-brief",
+      "medium": "log",
+      "sourceType": "log",
+      "originId": "handover-brief",
+      "rootOriginId": "handover-brief",
+      "clueIds": [
+        "t0-b1-c1"
+      ],
+      "visibleAt": [
+        "t0-b1"
+      ],
+      "zoneId": "hub",
+      "displayNameKo": "인수 각서",
+      "_src": {
+        "recordId": "synopsis/t0-records.md §2 표 1 (행 1:1)",
+        "sourceType": "planning/campaign.json clues[].sourceType (문서와 일치 검사 통과)",
+        "originId": "planning/campaign.json clues[].originId",
+        "rootOriginId": "copiedFrom 체인 파생 (interaction-rules.md §3 — 사본은 원본의 루트를 물려받는다, RFC-S5 예외 없음)",
+        "displayNameKo": "worldview/glossary.md §7 카탈로그 (t0-records §2 표의 KO 명칭 열)",
+        "lines": "synopsis/t0-records.md §3.1 (형식 고정 표)"
+      },
+      "lines": [
+        {
+          "lineId": "hb-l1",
+          "kind": "clause",
+          "text": "본 각서로 조수기록국 본관 당직실의 계통 열람 권한과 보관 매체 일체를 인수한다. 열람은 판독기와 봉인대를 거친다.",
+          "flag": null
+        },
+        {
+          "lineId": "hb-l2",
+          "kind": "clause",
+          "text": "이관 목록 인쇄본과 사물 서랍의 실물을 한 점씩 대조한다. 목록에 없는 매체가 나오면 미분류로 적어 남긴다.",
+          "flag": null
+        },
+        {
+          "lineId": "hb-l3",
+          "kind": "clause",
+          "text": "12년 전 대조의 밤 당직 주임은 한도연이다. 당시 당직 기록의 결손 여부는 본 각서에서 판단하지 않는다.",
+          "flag": "canon:RFC-P3-012"
+        },
+        {
+          "lineId": "hb-l4",
+          "kind": "clause",
+          "text": "본 당직의 산출물은 청문에 낼 제출 문서 1건으로 한다. 이관 시각까지 접수부에 넘긴다.",
+          "flag": "goal:C6-F1 — live t0-b1.objective 가 지목하는 \"한 줄"
+        },
+        {
+          "lineId": "hb-l5",
+          "kind": "field",
+          "text": "인계자 서명: ________\" (공란)",
+          "flag": "omission — 폐국으로 인계할 당직자가 없다"
+        },
+        {
+          "lineId": "hb-l6",
+          "kind": "margin",
+          "text": "판독기 상태 양호",
+          "flag": "omission — 날짜가 적혀 있지 않다. 일지 계열의 누락 예시로만 쓴다"
+        }
+      ]
+    },
+    {
+      "recordId": "rec-transfer-list",
+      "medium": "ledger",
+      "sourceType": "ledger",
+      "originId": "transfer-list",
+      "rootOriginId": "transfer-list",
+      "clueIds": [
+        "t0-b1-c2"
+      ],
+      "visibleAt": [
+        "t0-b1"
+      ],
+      "zoneId": "hub",
+      "displayNameKo": "이관 목록",
+      "_src": {
+        "recordId": "synopsis/t0-records.md §2 표 1 (행 1:1)",
+        "sourceType": "planning/campaign.json clues[].sourceType (문서와 일치 검사 통과)",
+        "originId": "planning/campaign.json clues[].originId",
+        "rootOriginId": "copiedFrom 체인 파생 (interaction-rules.md §3 — 사본은 원본의 루트를 물려받는다, RFC-S5 예외 없음)",
+        "displayNameKo": "worldview/glossary.md §7 카탈로그 (t0-records §2 표의 KO 명칭 열)",
+        "rows": "synopsis/t0-records.md §4.1 (형식 고정 표)"
+      },
+      "rows": [
+        {
+          "rowId": "tl-r1",
+          "no": 1,
+          "item": "계통 표준판철",
+          "mediaKind": "plate",
+          "qty": 3,
+          "unit": "점",
+          "note": "대조의 밤 표준판을 포함한다"
+        },
+        {
+          "rowId": "tl-r2",
+          "no": 2,
+          "item": "당직일지철",
+          "mediaKind": "log",
+          "qty": 1,
+          "unit": "책",
+          "note": "근무 규정 필사본이 합철돼 있다"
+        },
+        {
+          "rowId": "tl-r3",
+          "no": 3,
+          "item": "조위대장",
+          "mediaKind": "ledger",
+          "qty": 1,
+          "unit": "책",
+          "note": "기록국 표준 관측소"
+        },
+        {
+          "rowId": "tl-r4",
+          "no": null,
+          "item": "(기입란)",
+          "mediaKind": null,
+          "qty": null,
+          "unit": null,
+          "note": "공란. t0-b1 의 행동으로 \"미분류 1점\"이 적히거나 비어 남는다"
+        }
+      ]
+    },
+    {
+      "recordId": "rec-plate-standard-hub",
+      "medium": "plate",
+      "sourceType": "plate",
+      "originId": "plate-standard-hub",
+      "rootOriginId": "plate-standard-hub",
+      "clueIds": [
+        "t0-b2-c1",
+        "t0-b3-c1"
+      ],
+      "visibleAt": [
+        "t0-b2",
+        "t0-b3"
+      ],
+      "zoneId": "hub",
+      "displayNameKo": "당직실 표준판",
+      "_src": {
+        "recordId": "synopsis/t0-records.md §2 표 1 (행 1:1)",
+        "sourceType": "planning/campaign.json clues[].sourceType (문서와 일치 검사 통과)",
+        "originId": "planning/campaign.json clues[].originId",
+        "rootOriginId": "copiedFrom 체인 파생 (interaction-rules.md §3 — 사본은 원본의 루트를 물려받는다, RFC-S5 예외 없음)",
+        "displayNameKo": "worldview/glossary.md §7 카탈로그 (t0-records §2 표의 KO 명칭 열)",
+        "samples": "synopsis/t0-records.md §5.2 규칙으로 생성(저장된 표가 아니라 규칙이 정본) · §5.3 앵커와 전건 대조",
+        "engravings": "synopsis/t0-records.md §5.4",
+        "layers": "synopsis/t0-records.md §5.5 (의미는 저작되지 않는다 — 상한 B02)",
+        "citationProvenance": "synopsis/t0-records.md §12 (RFC-CX-001 / RFC-CX-003)"
+      },
+      "ringWindow": {
+        "startMin": -360,
+        "endMin": 356,
+        "display": "H-6:00 ~ H+5:56"
+      },
+      "resolutionMin": 4,
+      "sampleCount": 180,
+      "authoredRange": {
+        "startMin": -360,
+        "endMin": 180,
+        "display": "H-6:00 ~ H+3:00"
+      },
+      "phaseFormat": "H±h:mm, 4분 격자 위",
+      "channels": [
+        {
+          "channelId": "valve",
+          "ko": "밸브 개폐",
+          "unit": "각인 이벤트(이산)",
+          "readableInT0": true,
+          "note": "이 판(허브 계통)에는 그 밤 0건 — §5.4"
+        },
+        {
+          "channelId": "pressure",
+          "ko": "관 압력",
+          "unit": "kPa",
+          "readableInT0": true,
+          "note": "t0-b2 가 읽는 채널. 평평 3구간이 여기 있다"
+        },
+        {
+          "channelId": "salinity",
+          "ko": "염도",
+          "unit": "psu",
+          "readableInT0": true,
+          "note": null
+        },
+        {
+          "channelId": "waterLevel",
+          "ko": "수위",
+          "unit": "cm",
+          "readableInT0": true,
+          "note": "계통(갑문 내측) 수위이며 조위와 다른 축이다"
+        }
+      ],
+      "rule": {
+        "tideBase": 500,
+        "tideAmp": 460,
+        "periodMin": 744,
+        "pressBase": 120,
+        "pressSlope": 0.05,
+        "pressPivot": 500,
+        "salBase": 28,
+        "salSlope": 0.004,
+        "salPivot": 500,
+        "waterSlope": 0.6,
+        "waterBase": 120,
+        "flatBands": [
+          [
+            -260,
+            -232
+          ],
+          [
+            -196,
+            -168
+          ],
+          [
+            -156,
+            -128
+          ]
+        ],
+        "missingBand": [
+          -60,
+          176
+        ],
+        "flatRule": "FLAT 구간 [a,b] 안에서는 pressure(t) := pressure(a) 로 고정한다(다른 채널은 그대로)",
+        "missingRule": "MISSING 구간 안에서는 4채널 전부 null 이고 state = \"missing\"",
+        "rounding": {
+          "tide": 0,
+          "pressure": 1,
+          "salinity": 1,
+          "waterLevel": 0,
+          "note": "표시 반올림은 raw 값에서 한 번만 한다"
+        },
+        "_src": "synopsis/t0-records.md §5.2 코드 펜스 (계수·구간을 파싱 · 손으로 옮기지 않음)"
+      },
+      "samples": [
+        {
+          "t": -360,
+          "phase": "H-6:00",
+          "tide": 42,
+          "pressure": 97.1,
+          "salinity": 26.2,
+          "waterLevel": 145,
+          "state": "normal"
+        },
+        {
+          "t": -356,
+          "phase": "H-5:56",
+          "tide": 44,
+          "pressure": 97.2,
+          "salinity": 26.2,
+          "waterLevel": 147,
+          "state": "normal"
+        },
+        {
+          "t": -352,
+          "phase": "H-5:52",
+          "tide": 47,
+          "pressure": 97.3,
+          "salinity": 26.2,
+          "waterLevel": 148,
+          "state": "normal"
+        },
+        {
+          "t": -348,
+          "phase": "H-5:48",
+          "tide": 49,
+          "pressure": 97.5,
+          "salinity": 26.2,
+          "waterLevel": 150,
+          "state": "normal"
+        },
+        {
+          "t": -344,
+          "phase": "H-5:44",
+          "tide": 53,
+          "pressure": 97.6,
+          "salinity": 26.2,
+          "waterLevel": 152,
+          "state": "normal"
+        },
+        {
+          "t": -340,
+          "phase": "H-5:40",
+          "tide": 57,
+          "pressure": 97.8,
+          "salinity": 26.2,
+          "waterLevel": 154,
+          "state": "normal"
+        },
+        {
+          "t": -336,
+          "phase": "H-5:36",
+          "tide": 61,
+          "pressure": 98.1,
+          "salinity": 26.2,
+          "waterLevel": 157,
+          "state": "normal"
+        },
+        {
+          "t": -332,
+          "phase": "H-5:32",
+          "tide": 66,
+          "pressure": 98.3,
+          "salinity": 26.3,
+          "waterLevel": 160,
+          "state": "normal"
+        },
+        {
+          "t": -328,
+          "phase": "H-5:28",
+          "tide": 71,
+          "pressure": 98.6,
+          "salinity": 26.3,
+          "waterLevel": 163,
+          "state": "normal"
+        },
+        {
+          "t": -324,
+          "phase": "H-5:24",
+          "tide": 77,
+          "pressure": 98.9,
+          "salinity": 26.3,
+          "waterLevel": 166,
+          "state": "normal"
+        },
+        {
+          "t": -320,
+          "phase": "H-5:20",
+          "tide": 84,
+          "pressure": 99.2,
+          "salinity": 26.3,
+          "waterLevel": 170,
+          "state": "normal"
+        },
+        {
+          "t": -316,
+          "phase": "H-5:16",
+          "tide": 90,
+          "pressure": 99.5,
+          "salinity": 26.4,
+          "waterLevel": 174,
+          "state": "normal"
+        },
+        {
+          "t": -312,
+          "phase": "H-5:12",
+          "tide": 98,
+          "pressure": 99.9,
+          "salinity": 26.4,
+          "waterLevel": 179,
+          "state": "normal"
+        },
+        {
+          "t": -308,
+          "phase": "H-5:08",
+          "tide": 106,
+          "pressure": 100.3,
+          "salinity": 26.4,
+          "waterLevel": 183,
+          "state": "normal"
+        },
+        {
+          "t": -304,
+          "phase": "H-5:04",
+          "tide": 114,
+          "pressure": 100.7,
+          "salinity": 26.5,
+          "waterLevel": 188,
+          "state": "normal"
+        },
+        {
+          "t": -300,
+          "phase": "H-5:00",
+          "tide": 122,
+          "pressure": 101.1,
+          "salinity": 26.5,
+          "waterLevel": 193,
+          "state": "normal"
+        },
+        {
+          "t": -296,
+          "phase": "H-4:56",
+          "tide": 132,
+          "pressure": 101.6,
+          "salinity": 26.5,
+          "waterLevel": 199,
+          "state": "normal"
+        },
+        {
+          "t": -292,
+          "phase": "H-4:52",
+          "tide": 141,
+          "pressure": 102.1,
+          "salinity": 26.6,
+          "waterLevel": 205,
+          "state": "normal"
+        },
+        {
+          "t": -288,
+          "phase": "H-4:48",
+          "tide": 151,
+          "pressure": 102.5,
+          "salinity": 26.6,
+          "waterLevel": 211,
+          "state": "normal"
+        },
+        {
+          "t": -284,
+          "phase": "H-4:44",
+          "tide": 161,
+          "pressure": 103.1,
+          "salinity": 26.6,
+          "waterLevel": 217,
+          "state": "normal"
+        },
+        {
+          "t": -280,
+          "phase": "H-4:40",
+          "tide": 172,
+          "pressure": 103.6,
+          "salinity": 26.7,
+          "waterLevel": 223,
+          "state": "normal"
+        },
+        {
+          "t": -276,
+          "phase": "H-4:36",
+          "tide": 183,
+          "pressure": 104.2,
+          "salinity": 26.7,
+          "waterLevel": 230,
+          "state": "normal"
+        },
+        {
+          "t": -272,
+          "phase": "H-4:32",
+          "tide": 195,
+          "pressure": 104.7,
+          "salinity": 26.8,
+          "waterLevel": 237,
+          "state": "normal"
+        },
+        {
+          "t": -268,
+          "phase": "H-4:28",
+          "tide": 206,
+          "pressure": 105.3,
+          "salinity": 26.8,
+          "waterLevel": 244,
+          "state": "normal"
+        },
+        {
+          "t": -264,
+          "phase": "H-4:24",
+          "tide": 218,
+          "pressure": 105.9,
+          "salinity": 26.9,
+          "waterLevel": 251,
+          "state": "normal"
+        },
+        {
+          "t": -260,
+          "phase": "H-4:20",
+          "tide": 231,
+          "pressure": 106.5,
+          "salinity": 26.9,
+          "waterLevel": 259,
+          "state": "flat"
+        },
+        {
+          "t": -256,
+          "phase": "H-4:16",
+          "tide": 244,
+          "pressure": 106.5,
+          "salinity": 27,
+          "waterLevel": 266,
+          "state": "flat"
+        },
+        {
+          "t": -252,
+          "phase": "H-4:12",
+          "tide": 257,
+          "pressure": 106.5,
+          "salinity": 27,
+          "waterLevel": 274,
+          "state": "flat"
+        },
+        {
+          "t": -248,
+          "phase": "H-4:08",
+          "tide": 270,
+          "pressure": 106.5,
+          "salinity": 27.1,
+          "waterLevel": 282,
+          "state": "flat"
+        },
+        {
+          "t": -244,
+          "phase": "H-4:04",
+          "tide": 284,
+          "pressure": 106.5,
+          "salinity": 27.1,
+          "waterLevel": 290,
+          "state": "flat"
+        },
+        {
+          "t": -240,
+          "phase": "H-4:00",
+          "tide": 297,
+          "pressure": 106.5,
+          "salinity": 27.2,
+          "waterLevel": 298,
+          "state": "flat"
+        },
+        {
+          "t": -236,
+          "phase": "H-3:56",
+          "tide": 311,
+          "pressure": 106.5,
+          "salinity": 27.2,
+          "waterLevel": 307,
+          "state": "flat"
+        },
+        {
+          "t": -232,
+          "phase": "H-3:52",
+          "tide": 326,
+          "pressure": 106.5,
+          "salinity": 27.3,
+          "waterLevel": 315,
+          "state": "flat"
+        },
+        {
+          "t": -228,
+          "phase": "H-3:48",
+          "tide": 340,
+          "pressure": 112,
+          "salinity": 27.4,
+          "waterLevel": 324,
+          "state": "normal"
+        },
+        {
+          "t": -224,
+          "phase": "H-3:44",
+          "tide": 355,
+          "pressure": 112.7,
+          "salinity": 27.4,
+          "waterLevel": 333,
+          "state": "normal"
+        },
+        {
+          "t": -220,
+          "phase": "H-3:40",
+          "tide": 370,
+          "pressure": 113.5,
+          "salinity": 27.5,
+          "waterLevel": 342,
+          "state": "normal"
+        },
+        {
+          "t": -216,
+          "phase": "H-3:36",
+          "tide": 385,
+          "pressure": 114.2,
+          "salinity": 27.5,
+          "waterLevel": 351,
+          "state": "normal"
+        },
+        {
+          "t": -212,
+          "phase": "H-3:32",
+          "tide": 400,
+          "pressure": 115,
+          "salinity": 27.6,
+          "waterLevel": 360,
+          "state": "normal"
+        },
+        {
+          "t": -208,
+          "phase": "H-3:28",
+          "tide": 415,
+          "pressure": 115.8,
+          "salinity": 27.7,
+          "waterLevel": 369,
+          "state": "normal"
+        },
+        {
+          "t": -204,
+          "phase": "H-3:24",
+          "tide": 430,
+          "pressure": 116.5,
+          "salinity": 27.7,
+          "waterLevel": 378,
+          "state": "normal"
+        },
+        {
+          "t": -200,
+          "phase": "H-3:20",
+          "tide": 446,
+          "pressure": 117.3,
+          "salinity": 27.8,
+          "waterLevel": 387,
+          "state": "normal"
+        },
+        {
+          "t": -196,
+          "phase": "H-3:16",
+          "tide": 461,
+          "pressure": 118.1,
+          "salinity": 27.8,
+          "waterLevel": 397,
+          "state": "flat"
+        },
+        {
+          "t": -192,
+          "phase": "H-3:12",
+          "tide": 477,
+          "pressure": 118.1,
+          "salinity": 27.9,
+          "waterLevel": 406,
+          "state": "flat"
+        },
+        {
+          "t": -188,
+          "phase": "H-3:08",
+          "tide": 492,
+          "pressure": 118.1,
+          "salinity": 28,
+          "waterLevel": 415,
+          "state": "flat"
+        },
+        {
+          "t": -184,
+          "phase": "H-3:04",
+          "tide": 508,
+          "pressure": 118.1,
+          "salinity": 28,
+          "waterLevel": 425,
+          "state": "flat"
+        },
+        {
+          "t": -180,
+          "phase": "H-3:00",
+          "tide": 523,
+          "pressure": 118.1,
+          "salinity": 28.1,
+          "waterLevel": 434,
+          "state": "flat"
+        },
+        {
+          "t": -176,
+          "phase": "H-2:56",
+          "tide": 539,
+          "pressure": 118.1,
+          "salinity": 28.2,
+          "waterLevel": 443,
+          "state": "flat"
+        },
+        {
+          "t": -172,
+          "phase": "H-2:52",
+          "tide": 554,
+          "pressure": 118.1,
+          "salinity": 28.2,
+          "waterLevel": 453,
+          "state": "flat"
+        },
+        {
+          "t": -168,
+          "phase": "H-2:48",
+          "tide": 570,
+          "pressure": 118.1,
+          "salinity": 28.3,
+          "waterLevel": 462,
+          "state": "flat"
+        },
+        {
+          "t": -164,
+          "phase": "H-2:44",
+          "tide": 585,
+          "pressure": 124.2,
+          "salinity": 28.3,
+          "waterLevel": 471,
+          "state": "normal"
+        },
+        {
+          "t": -160,
+          "phase": "H-2:40",
+          "tide": 600,
+          "pressure": 125,
+          "salinity": 28.4,
+          "waterLevel": 480,
+          "state": "normal"
+        },
+        {
+          "t": -156,
+          "phase": "H-2:36",
+          "tide": 615,
+          "pressure": 125.8,
+          "salinity": 28.5,
+          "waterLevel": 489,
+          "state": "flat"
+        },
+        {
+          "t": -152,
+          "phase": "H-2:32",
+          "tide": 630,
+          "pressure": 125.8,
+          "salinity": 28.5,
+          "waterLevel": 498,
+          "state": "flat"
+        },
+        {
+          "t": -148,
+          "phase": "H-2:28",
+          "tide": 645,
+          "pressure": 125.8,
+          "salinity": 28.6,
+          "waterLevel": 507,
+          "state": "flat"
+        },
+        {
+          "t": -144,
+          "phase": "H-2:24",
+          "tide": 660,
+          "pressure": 125.8,
+          "salinity": 28.6,
+          "waterLevel": 516,
+          "state": "flat"
+        },
+        {
+          "t": -140,
+          "phase": "H-2:20",
+          "tide": 674,
+          "pressure": 125.8,
+          "salinity": 28.7,
+          "waterLevel": 525,
+          "state": "flat"
+        },
+        {
+          "t": -136,
+          "phase": "H-2:16",
+          "tide": 689,
+          "pressure": 125.8,
+          "salinity": 28.8,
+          "waterLevel": 533,
+          "state": "flat"
+        },
+        {
+          "t": -132,
+          "phase": "H-2:12",
+          "tide": 703,
+          "pressure": 125.8,
+          "salinity": 28.8,
+          "waterLevel": 542,
+          "state": "flat"
+        },
+        {
+          "t": -128,
+          "phase": "H-2:08",
+          "tide": 716,
+          "pressure": 125.8,
+          "salinity": 28.9,
+          "waterLevel": 550,
+          "state": "flat"
+        },
+        {
+          "t": -124,
+          "phase": "H-2:04",
+          "tide": 730,
+          "pressure": 131.5,
+          "salinity": 28.9,
+          "waterLevel": 558,
+          "state": "normal"
+        },
+        {
+          "t": -120,
+          "phase": "H-2:00",
+          "tide": 743,
+          "pressure": 132.2,
+          "salinity": 29,
+          "waterLevel": 566,
+          "state": "normal"
+        },
+        {
+          "t": -116,
+          "phase": "H-1:56",
+          "tide": 756,
+          "pressure": 132.8,
+          "salinity": 29,
+          "waterLevel": 574,
+          "state": "normal"
+        },
+        {
+          "t": -112,
+          "phase": "H-1:52",
+          "tide": 769,
+          "pressure": 133.5,
+          "salinity": 29.1,
+          "waterLevel": 581,
+          "state": "normal"
+        },
+        {
+          "t": -108,
+          "phase": "H-1:48",
+          "tide": 782,
+          "pressure": 134.1,
+          "salinity": 29.1,
+          "waterLevel": 589,
+          "state": "normal"
+        },
+        {
+          "t": -104,
+          "phase": "H-1:44",
+          "tide": 794,
+          "pressure": 134.7,
+          "salinity": 29.2,
+          "waterLevel": 596,
+          "state": "normal"
+        },
+        {
+          "t": -100,
+          "phase": "H-1:40",
+          "tide": 805,
+          "pressure": 135.3,
+          "salinity": 29.2,
+          "waterLevel": 603,
+          "state": "normal"
+        },
+        {
+          "t": -96,
+          "phase": "H-1:36",
+          "tide": 817,
+          "pressure": 135.8,
+          "salinity": 29.3,
+          "waterLevel": 610,
+          "state": "normal"
+        },
+        {
+          "t": -92,
+          "phase": "H-1:32",
+          "tide": 828,
+          "pressure": 136.4,
+          "salinity": 29.3,
+          "waterLevel": 617,
+          "state": "normal"
+        },
+        {
+          "t": -88,
+          "phase": "H-1:28",
+          "tide": 839,
+          "pressure": 136.9,
+          "salinity": 29.4,
+          "waterLevel": 623,
+          "state": "normal"
+        },
+        {
+          "t": -84,
+          "phase": "H-1:24",
+          "tide": 849,
+          "pressure": 137.5,
+          "salinity": 29.4,
+          "waterLevel": 629,
+          "state": "normal"
+        },
+        {
+          "t": -80,
+          "phase": "H-1:20",
+          "tide": 859,
+          "pressure": 137.9,
+          "salinity": 29.4,
+          "waterLevel": 635,
+          "state": "normal"
+        },
+        {
+          "t": -76,
+          "phase": "H-1:16",
+          "tide": 868,
+          "pressure": 138.4,
+          "salinity": 29.5,
+          "waterLevel": 641,
+          "state": "normal"
+        },
+        {
+          "t": -72,
+          "phase": "H-1:12",
+          "tide": 878,
+          "pressure": 138.9,
+          "salinity": 29.5,
+          "waterLevel": 647,
+          "state": "normal"
+        },
+        {
+          "t": -68,
+          "phase": "H-1:08",
+          "tide": 886,
+          "pressure": 139.3,
+          "salinity": 29.5,
+          "waterLevel": 652,
+          "state": "normal"
+        },
+        {
+          "t": -64,
+          "phase": "H-1:04",
+          "tide": 894,
+          "pressure": 139.7,
+          "salinity": 29.6,
+          "waterLevel": 657,
+          "state": "normal"
+        },
+        {
+          "t": -60,
+          "phase": "H-1:00",
+          "tide": 902,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -56,
+          "phase": "H-0:56",
+          "tide": 910,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -52,
+          "phase": "H-0:52",
+          "tide": 916,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -48,
+          "phase": "H-0:48",
+          "tide": 923,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -44,
+          "phase": "H-0:44",
+          "tide": 929,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -40,
+          "phase": "H-0:40",
+          "tide": 934,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -36,
+          "phase": "H-0:36",
+          "tide": 939,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -32,
+          "phase": "H-0:32",
+          "tide": 943,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -28,
+          "phase": "H-0:28",
+          "tide": 947,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -24,
+          "phase": "H-0:24",
+          "tide": 951,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -20,
+          "phase": "H-0:20",
+          "tide": 953,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -16,
+          "phase": "H-0:16",
+          "tide": 956,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -12,
+          "phase": "H-0:12",
+          "tide": 958,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -8,
+          "phase": "H-0:08",
+          "tide": 959,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": -4,
+          "phase": "H-0:04",
+          "tide": 960,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 0,
+          "phase": "H+0:00",
+          "tide": 960,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 4,
+          "phase": "H+0:04",
+          "tide": 960,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 8,
+          "phase": "H+0:08",
+          "tide": 959,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 12,
+          "phase": "H+0:12",
+          "tide": 958,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 16,
+          "phase": "H+0:16",
+          "tide": 956,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 20,
+          "phase": "H+0:20",
+          "tide": 953,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 24,
+          "phase": "H+0:24",
+          "tide": 951,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 28,
+          "phase": "H+0:28",
+          "tide": 947,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 32,
+          "phase": "H+0:32",
+          "tide": 943,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 36,
+          "phase": "H+0:36",
+          "tide": 939,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 40,
+          "phase": "H+0:40",
+          "tide": 934,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 44,
+          "phase": "H+0:44",
+          "tide": 929,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 48,
+          "phase": "H+0:48",
+          "tide": 923,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 52,
+          "phase": "H+0:52",
+          "tide": 916,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 56,
+          "phase": "H+0:56",
+          "tide": 910,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 60,
+          "phase": "H+1:00",
+          "tide": 902,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 64,
+          "phase": "H+1:04",
+          "tide": 894,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 68,
+          "phase": "H+1:08",
+          "tide": 886,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 72,
+          "phase": "H+1:12",
+          "tide": 878,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 76,
+          "phase": "H+1:16",
+          "tide": 868,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 80,
+          "phase": "H+1:20",
+          "tide": 859,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 84,
+          "phase": "H+1:24",
+          "tide": 849,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 88,
+          "phase": "H+1:28",
+          "tide": 839,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 92,
+          "phase": "H+1:32",
+          "tide": 828,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 96,
+          "phase": "H+1:36",
+          "tide": 817,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 100,
+          "phase": "H+1:40",
+          "tide": 805,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 104,
+          "phase": "H+1:44",
+          "tide": 794,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 108,
+          "phase": "H+1:48",
+          "tide": 782,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 112,
+          "phase": "H+1:52",
+          "tide": 769,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 116,
+          "phase": "H+1:56",
+          "tide": 756,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 120,
+          "phase": "H+2:00",
+          "tide": 743,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 124,
+          "phase": "H+2:04",
+          "tide": 730,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 128,
+          "phase": "H+2:08",
+          "tide": 716,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 132,
+          "phase": "H+2:12",
+          "tide": 703,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 136,
+          "phase": "H+2:16",
+          "tide": 689,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 140,
+          "phase": "H+2:20",
+          "tide": 674,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 144,
+          "phase": "H+2:24",
+          "tide": 660,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 148,
+          "phase": "H+2:28",
+          "tide": 645,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 152,
+          "phase": "H+2:32",
+          "tide": 630,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 156,
+          "phase": "H+2:36",
+          "tide": 615,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 160,
+          "phase": "H+2:40",
+          "tide": 600,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 164,
+          "phase": "H+2:44",
+          "tide": 585,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 168,
+          "phase": "H+2:48",
+          "tide": 570,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 172,
+          "phase": "H+2:52",
+          "tide": 554,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 176,
+          "phase": "H+2:56",
+          "tide": 539,
+          "pressure": null,
+          "salinity": null,
+          "waterLevel": null,
+          "state": "missing"
+        },
+        {
+          "t": 180,
+          "phase": "H+3:00",
+          "tide": 523,
+          "pressure": 121.2,
+          "salinity": 28.1,
+          "waterLevel": 434,
+          "state": "normal"
+        },
+        {
+          "t": 184,
+          "phase": "H+3:04",
+          "tide": 508,
+          "pressure": 120.4,
+          "salinity": 28,
+          "waterLevel": 425,
+          "state": "normal"
+        },
+        {
+          "t": 188,
+          "phase": "H+3:08",
+          "tide": 492,
+          "pressure": 119.6,
+          "salinity": 28,
+          "waterLevel": 415,
+          "state": "normal"
+        },
+        {
+          "t": 192,
+          "phase": "H+3:12",
+          "tide": 477,
+          "pressure": 118.8,
+          "salinity": 27.9,
+          "waterLevel": 406,
+          "state": "normal"
+        },
+        {
+          "t": 196,
+          "phase": "H+3:16",
+          "tide": 461,
+          "pressure": 118.1,
+          "salinity": 27.8,
+          "waterLevel": 397,
+          "state": "normal"
+        },
+        {
+          "t": 200,
+          "phase": "H+3:20",
+          "tide": 446,
+          "pressure": 117.3,
+          "salinity": 27.8,
+          "waterLevel": 387,
+          "state": "normal"
+        },
+        {
+          "t": 204,
+          "phase": "H+3:24",
+          "tide": 430,
+          "pressure": 116.5,
+          "salinity": 27.7,
+          "waterLevel": 378,
+          "state": "normal"
+        },
+        {
+          "t": 208,
+          "phase": "H+3:28",
+          "tide": 415,
+          "pressure": 115.8,
+          "salinity": 27.7,
+          "waterLevel": 369,
+          "state": "normal"
+        },
+        {
+          "t": 212,
+          "phase": "H+3:32",
+          "tide": 400,
+          "pressure": 115,
+          "salinity": 27.6,
+          "waterLevel": 360,
+          "state": "normal"
+        },
+        {
+          "t": 216,
+          "phase": "H+3:36",
+          "tide": 385,
+          "pressure": 114.2,
+          "salinity": 27.5,
+          "waterLevel": 351,
+          "state": "normal"
+        },
+        {
+          "t": 220,
+          "phase": "H+3:40",
+          "tide": 370,
+          "pressure": 113.5,
+          "salinity": 27.5,
+          "waterLevel": 342,
+          "state": "normal"
+        },
+        {
+          "t": 224,
+          "phase": "H+3:44",
+          "tide": 355,
+          "pressure": 112.7,
+          "salinity": 27.4,
+          "waterLevel": 333,
+          "state": "normal"
+        },
+        {
+          "t": 228,
+          "phase": "H+3:48",
+          "tide": 340,
+          "pressure": 112,
+          "salinity": 27.4,
+          "waterLevel": 324,
+          "state": "normal"
+        },
+        {
+          "t": 232,
+          "phase": "H+3:52",
+          "tide": 326,
+          "pressure": 111.3,
+          "salinity": 27.3,
+          "waterLevel": 315,
+          "state": "normal"
+        },
+        {
+          "t": 236,
+          "phase": "H+3:56",
+          "tide": 311,
+          "pressure": 110.6,
+          "salinity": 27.2,
+          "waterLevel": 307,
+          "state": "normal"
+        },
+        {
+          "t": 240,
+          "phase": "H+4:00",
+          "tide": 297,
+          "pressure": 109.9,
+          "salinity": 27.2,
+          "waterLevel": 298,
+          "state": "normal"
+        },
+        {
+          "t": 244,
+          "phase": "H+4:04",
+          "tide": 284,
+          "pressure": 109.2,
+          "salinity": 27.1,
+          "waterLevel": 290,
+          "state": "normal"
+        },
+        {
+          "t": 248,
+          "phase": "H+4:08",
+          "tide": 270,
+          "pressure": 108.5,
+          "salinity": 27.1,
+          "waterLevel": 282,
+          "state": "normal"
+        },
+        {
+          "t": 252,
+          "phase": "H+4:12",
+          "tide": 257,
+          "pressure": 107.8,
+          "salinity": 27,
+          "waterLevel": 274,
+          "state": "normal"
+        },
+        {
+          "t": 256,
+          "phase": "H+4:16",
+          "tide": 244,
+          "pressure": 107.2,
+          "salinity": 27,
+          "waterLevel": 266,
+          "state": "normal"
+        },
+        {
+          "t": 260,
+          "phase": "H+4:20",
+          "tide": 231,
+          "pressure": 106.5,
+          "salinity": 26.9,
+          "waterLevel": 259,
+          "state": "normal"
+        },
+        {
+          "t": 264,
+          "phase": "H+4:24",
+          "tide": 218,
+          "pressure": 105.9,
+          "salinity": 26.9,
+          "waterLevel": 251,
+          "state": "normal"
+        },
+        {
+          "t": 268,
+          "phase": "H+4:28",
+          "tide": 206,
+          "pressure": 105.3,
+          "salinity": 26.8,
+          "waterLevel": 244,
+          "state": "normal"
+        },
+        {
+          "t": 272,
+          "phase": "H+4:32",
+          "tide": 195,
+          "pressure": 104.7,
+          "salinity": 26.8,
+          "waterLevel": 237,
+          "state": "normal"
+        },
+        {
+          "t": 276,
+          "phase": "H+4:36",
+          "tide": 183,
+          "pressure": 104.2,
+          "salinity": 26.7,
+          "waterLevel": 230,
+          "state": "normal"
+        },
+        {
+          "t": 280,
+          "phase": "H+4:40",
+          "tide": 172,
+          "pressure": 103.6,
+          "salinity": 26.7,
+          "waterLevel": 223,
+          "state": "normal"
+        },
+        {
+          "t": 284,
+          "phase": "H+4:44",
+          "tide": 161,
+          "pressure": 103.1,
+          "salinity": 26.6,
+          "waterLevel": 217,
+          "state": "normal"
+        },
+        {
+          "t": 288,
+          "phase": "H+4:48",
+          "tide": 151,
+          "pressure": 102.5,
+          "salinity": 26.6,
+          "waterLevel": 211,
+          "state": "normal"
+        },
+        {
+          "t": 292,
+          "phase": "H+4:52",
+          "tide": 141,
+          "pressure": 102.1,
+          "salinity": 26.6,
+          "waterLevel": 205,
+          "state": "normal"
+        },
+        {
+          "t": 296,
+          "phase": "H+4:56",
+          "tide": 132,
+          "pressure": 101.6,
+          "salinity": 26.5,
+          "waterLevel": 199,
+          "state": "normal"
+        },
+        {
+          "t": 300,
+          "phase": "H+5:00",
+          "tide": 122,
+          "pressure": 101.1,
+          "salinity": 26.5,
+          "waterLevel": 193,
+          "state": "normal"
+        },
+        {
+          "t": 304,
+          "phase": "H+5:04",
+          "tide": 114,
+          "pressure": 100.7,
+          "salinity": 26.5,
+          "waterLevel": 188,
+          "state": "normal"
+        },
+        {
+          "t": 308,
+          "phase": "H+5:08",
+          "tide": 106,
+          "pressure": 100.3,
+          "salinity": 26.4,
+          "waterLevel": 183,
+          "state": "normal"
+        },
+        {
+          "t": 312,
+          "phase": "H+5:12",
+          "tide": 98,
+          "pressure": 99.9,
+          "salinity": 26.4,
+          "waterLevel": 179,
+          "state": "normal"
+        },
+        {
+          "t": 316,
+          "phase": "H+5:16",
+          "tide": 90,
+          "pressure": 99.5,
+          "salinity": 26.4,
+          "waterLevel": 174,
+          "state": "normal"
+        },
+        {
+          "t": 320,
+          "phase": "H+5:20",
+          "tide": 84,
+          "pressure": 99.2,
+          "salinity": 26.3,
+          "waterLevel": 170,
+          "state": "normal"
+        },
+        {
+          "t": 324,
+          "phase": "H+5:24",
+          "tide": 77,
+          "pressure": 98.9,
+          "salinity": 26.3,
+          "waterLevel": 166,
+          "state": "normal"
+        },
+        {
+          "t": 328,
+          "phase": "H+5:28",
+          "tide": 71,
+          "pressure": 98.6,
+          "salinity": 26.3,
+          "waterLevel": 163,
+          "state": "normal"
+        },
+        {
+          "t": 332,
+          "phase": "H+5:32",
+          "tide": 66,
+          "pressure": 98.3,
+          "salinity": 26.3,
+          "waterLevel": 160,
+          "state": "normal"
+        },
+        {
+          "t": 336,
+          "phase": "H+5:36",
+          "tide": 61,
+          "pressure": 98.1,
+          "salinity": 26.2,
+          "waterLevel": 157,
+          "state": "normal"
+        },
+        {
+          "t": 340,
+          "phase": "H+5:40",
+          "tide": 57,
+          "pressure": 97.8,
+          "salinity": 26.2,
+          "waterLevel": 154,
+          "state": "normal"
+        },
+        {
+          "t": 344,
+          "phase": "H+5:44",
+          "tide": 53,
+          "pressure": 97.6,
+          "salinity": 26.2,
+          "waterLevel": 152,
+          "state": "normal"
+        },
+        {
+          "t": 348,
+          "phase": "H+5:48",
+          "tide": 49,
+          "pressure": 97.5,
+          "salinity": 26.2,
+          "waterLevel": 150,
+          "state": "normal"
+        },
+        {
+          "t": 352,
+          "phase": "H+5:52",
+          "tide": 47,
+          "pressure": 97.3,
+          "salinity": 26.2,
+          "waterLevel": 148,
+          "state": "normal"
+        },
+        {
+          "t": 356,
+          "phase": "H+5:56",
+          "tide": 44,
+          "pressure": 97.2,
+          "salinity": 26.2,
+          "waterLevel": 147,
+          "state": "normal"
+        }
+      ],
+      "samplesDerivation": "rule",
+      "engravings": [],
+      "engravingsNote": "그 밤 허브 계통 밸브 개폐 각인 0건 — 부재의 기록이며 부재의 증거가 아니다(법1)",
+      "layers": [
+        {
+          "layerId": "pl-corrosion-1",
+          "range": "결손 구간 표면 전역(H-1:00~H+2:56)",
+          "observation": "얇게 층진 무늬가 결손 구간 표면을 덮는다. 층은 균일하지 않고 가장자리가 번져 있다",
+          "visibleAt": [
+            "t0-b3"
+          ],
+          "meaning": null
+        }
+      ],
+      "systemId": "system-hub",
+      "stationId": "station-bureau-standard",
+      "sourceAssignment": {
+        "recordId": "rec-plate-standard-hub",
+        "systemId": "system-hub",
+        "stationId": "station-bureau-standard",
+        "assignmentKind": "authored-comparison-reference",
+        "evidence": [
+          "[OBSERVED] synopsis/t0-records.md §5.1 valve 행은 이 판을 허브 계통으로 명시한다.",
+          "[TARGET] worldview/glossary.md §6-2는 기존 허브 계통에 system-hub라는 기술 ID를 지정한다.",
+          "[TARGET] production/decision-log.md RFC-CX-003의 RFC-CX-001 director ruling은 station-bureau-standard를 이 판의 조위 비교 기준으로 새로 채택한다. 이는 관측 생산지 또는 센서 귀속의 기존 사실이 아니다.",
+          "[OBSERVED] systems/data-schemas/plates.md §1의 stationId는 기준 관측소이자 조위정합 입력이다."
+        ],
+        "decisionRfc": [
+          "RFC-CX-001",
+          "RFC-CX-003"
+        ]
+      }
+    },
+    {
+      "recordId": "rec-watchlog-bureau",
+      "medium": "log",
+      "sourceType": "log",
+      "originId": "watchlog-bureau",
+      "rootOriginId": "watchlog-bureau",
+      "clueIds": [
+        "t0-b2-c2"
+      ],
+      "visibleAt": [
+        "t0-b2"
+      ],
+      "zoneId": "hub",
+      "displayNameKo": "근무 규정 필사본",
+      "_src": {
+        "recordId": "synopsis/t0-records.md §2 표 1 (행 1:1)",
+        "sourceType": "planning/campaign.json clues[].sourceType (문서와 일치 검사 통과)",
+        "originId": "planning/campaign.json clues[].originId",
+        "rootOriginId": "copiedFrom 체인 파생 (interaction-rules.md §3 — 사본은 원본의 루트를 물려받는다, RFC-S5 예외 없음)",
+        "displayNameKo": "worldview/glossary.md §7 카탈로그 (t0-records §2 표의 KO 명칭 열)",
+        "lines": "synopsis/t0-records.md §6 (형식 고정 표)"
+      },
+      "lines": [
+        {
+          "lineId": "wb-l1",
+          "kind": "clause",
+          "text": "계통에 남는 것은 밸브 개폐, 관 압력, 염도, 수위, 문 개폐, 당직 호출, 봉인 완료 접점에 한한다.",
+          "flag": "quote:bible §2"
+        },
+        {
+          "lineId": "wb-l2",
+          "kind": "clause",
+          "text": "회선이 깔린 3개소 — 당직실·제3수문·부두사무소 — 에 한해 통화의 개시 시각과 계통만 남긴다. 통화 내용은 남기지 않는다.",
+          "flag": "quote:bible §2"
+        },
+        {
+          "lineId": "wb-l3",
+          "kind": "clause",
+          "text": "센서 밖 사건은 기록만으로 확정할 수 없다. 근거 부족 사유를 적고 판정을 보류한다.",
+          "flag": "quote:bible §3 법1"
+        },
+        {
+          "lineId": "wb-l4",
+          "kind": "margin",
+          "text": "제2조는 개소 수만 옮겨 적었다. 개소별 회선 번호는 원본에 있다.",
+          "flag": "omission — 필사본의 누락 예시"
+        }
+      ]
+    },
+    {
+      "recordId": "rec-tide-ledger-bureau",
+      "medium": "ledger",
+      "sourceType": "ledger",
+      "originId": "tide-ledger-bureau",
+      "rootOriginId": "tide-ledger-bureau",
+      "clueIds": [
+        "t0-b3-c2"
+      ],
+      "visibleAt": [
+        "t0-b3"
+      ],
+      "zoneId": "hub",
+      "displayNameKo": "기록국 조위대장",
+      "_src": {
+        "recordId": "synopsis/t0-records.md §2 표 1 (행 1:1)",
+        "sourceType": "planning/campaign.json clues[].sourceType (문서와 일치 검사 통과)",
+        "originId": "planning/campaign.json clues[].originId",
+        "rootOriginId": "copiedFrom 체인 파생 (interaction-rules.md §3 — 사본은 원본의 루트를 물려받는다, RFC-S5 예외 없음)",
+        "displayNameKo": "worldview/glossary.md §7 카탈로그 (t0-records §2 표의 KO 명칭 열)",
+        "samples": "synopsis/t0-records.md §7.2 규칙(§5.2 tide 와 같은 함수) · §7.3 앵커와 전건 대조",
+        "citationProvenance": "synopsis/t0-records.md §12 (RFC-CX-001 / RFC-CX-003)"
+      },
+      "columns": [
+        {
+          "columnId": "phase",
+          "ko": "시각(조위 위상)",
+          "unit": "H±h:mm",
+          "note": "4분 격자"
+        },
+        {
+          "columnId": "tideHeight",
+          "ko": "조위고",
+          "unit": "cm",
+          "note": "기록국 표준 관측소"
+        },
+        {
+          "columnId": "scribe",
+          "ko": "기입 표시",
+          "unit": "표시",
+          "note": "4분마다 기입 완료 표시. 그 밤 공백 0칸"
+        }
+      ],
+      "entryRange": {
+        "startMin": -360,
+        "endMin": 180,
+        "stepMin": 4,
+        "cells": 136,
+        "blanks": 0
+      },
+      "samples": [
+        {
+          "t": -360,
+          "phase": "H-6:00",
+          "tideHeight": 42,
+          "scribe": "written"
+        },
+        {
+          "t": -356,
+          "phase": "H-5:56",
+          "tideHeight": 44,
+          "scribe": "written"
+        },
+        {
+          "t": -352,
+          "phase": "H-5:52",
+          "tideHeight": 47,
+          "scribe": "written"
+        },
+        {
+          "t": -348,
+          "phase": "H-5:48",
+          "tideHeight": 49,
+          "scribe": "written"
+        },
+        {
+          "t": -344,
+          "phase": "H-5:44",
+          "tideHeight": 53,
+          "scribe": "written"
+        },
+        {
+          "t": -340,
+          "phase": "H-5:40",
+          "tideHeight": 57,
+          "scribe": "written"
+        },
+        {
+          "t": -336,
+          "phase": "H-5:36",
+          "tideHeight": 61,
+          "scribe": "written"
+        },
+        {
+          "t": -332,
+          "phase": "H-5:32",
+          "tideHeight": 66,
+          "scribe": "written"
+        },
+        {
+          "t": -328,
+          "phase": "H-5:28",
+          "tideHeight": 71,
+          "scribe": "written"
+        },
+        {
+          "t": -324,
+          "phase": "H-5:24",
+          "tideHeight": 77,
+          "scribe": "written"
+        },
+        {
+          "t": -320,
+          "phase": "H-5:20",
+          "tideHeight": 84,
+          "scribe": "written"
+        },
+        {
+          "t": -316,
+          "phase": "H-5:16",
+          "tideHeight": 90,
+          "scribe": "written"
+        },
+        {
+          "t": -312,
+          "phase": "H-5:12",
+          "tideHeight": 98,
+          "scribe": "written"
+        },
+        {
+          "t": -308,
+          "phase": "H-5:08",
+          "tideHeight": 106,
+          "scribe": "written"
+        },
+        {
+          "t": -304,
+          "phase": "H-5:04",
+          "tideHeight": 114,
+          "scribe": "written"
+        },
+        {
+          "t": -300,
+          "phase": "H-5:00",
+          "tideHeight": 122,
+          "scribe": "written"
+        },
+        {
+          "t": -296,
+          "phase": "H-4:56",
+          "tideHeight": 132,
+          "scribe": "written"
+        },
+        {
+          "t": -292,
+          "phase": "H-4:52",
+          "tideHeight": 141,
+          "scribe": "written"
+        },
+        {
+          "t": -288,
+          "phase": "H-4:48",
+          "tideHeight": 151,
+          "scribe": "written"
+        },
+        {
+          "t": -284,
+          "phase": "H-4:44",
+          "tideHeight": 161,
+          "scribe": "written"
+        },
+        {
+          "t": -280,
+          "phase": "H-4:40",
+          "tideHeight": 172,
+          "scribe": "written"
+        },
+        {
+          "t": -276,
+          "phase": "H-4:36",
+          "tideHeight": 183,
+          "scribe": "written"
+        },
+        {
+          "t": -272,
+          "phase": "H-4:32",
+          "tideHeight": 195,
+          "scribe": "written"
+        },
+        {
+          "t": -268,
+          "phase": "H-4:28",
+          "tideHeight": 206,
+          "scribe": "written"
+        },
+        {
+          "t": -264,
+          "phase": "H-4:24",
+          "tideHeight": 218,
+          "scribe": "written"
+        },
+        {
+          "t": -260,
+          "phase": "H-4:20",
+          "tideHeight": 231,
+          "scribe": "written"
+        },
+        {
+          "t": -256,
+          "phase": "H-4:16",
+          "tideHeight": 244,
+          "scribe": "written"
+        },
+        {
+          "t": -252,
+          "phase": "H-4:12",
+          "tideHeight": 257,
+          "scribe": "written"
+        },
+        {
+          "t": -248,
+          "phase": "H-4:08",
+          "tideHeight": 270,
+          "scribe": "written"
+        },
+        {
+          "t": -244,
+          "phase": "H-4:04",
+          "tideHeight": 284,
+          "scribe": "written"
+        },
+        {
+          "t": -240,
+          "phase": "H-4:00",
+          "tideHeight": 297,
+          "scribe": "written"
+        },
+        {
+          "t": -236,
+          "phase": "H-3:56",
+          "tideHeight": 311,
+          "scribe": "written"
+        },
+        {
+          "t": -232,
+          "phase": "H-3:52",
+          "tideHeight": 326,
+          "scribe": "written"
+        },
+        {
+          "t": -228,
+          "phase": "H-3:48",
+          "tideHeight": 340,
+          "scribe": "written"
+        },
+        {
+          "t": -224,
+          "phase": "H-3:44",
+          "tideHeight": 355,
+          "scribe": "written"
+        },
+        {
+          "t": -220,
+          "phase": "H-3:40",
+          "tideHeight": 370,
+          "scribe": "written"
+        },
+        {
+          "t": -216,
+          "phase": "H-3:36",
+          "tideHeight": 385,
+          "scribe": "written"
+        },
+        {
+          "t": -212,
+          "phase": "H-3:32",
+          "tideHeight": 400,
+          "scribe": "written"
+        },
+        {
+          "t": -208,
+          "phase": "H-3:28",
+          "tideHeight": 415,
+          "scribe": "written"
+        },
+        {
+          "t": -204,
+          "phase": "H-3:24",
+          "tideHeight": 430,
+          "scribe": "written"
+        },
+        {
+          "t": -200,
+          "phase": "H-3:20",
+          "tideHeight": 446,
+          "scribe": "written"
+        },
+        {
+          "t": -196,
+          "phase": "H-3:16",
+          "tideHeight": 461,
+          "scribe": "written"
+        },
+        {
+          "t": -192,
+          "phase": "H-3:12",
+          "tideHeight": 477,
+          "scribe": "written"
+        },
+        {
+          "t": -188,
+          "phase": "H-3:08",
+          "tideHeight": 492,
+          "scribe": "written"
+        },
+        {
+          "t": -184,
+          "phase": "H-3:04",
+          "tideHeight": 508,
+          "scribe": "written"
+        },
+        {
+          "t": -180,
+          "phase": "H-3:00",
+          "tideHeight": 523,
+          "scribe": "written"
+        },
+        {
+          "t": -176,
+          "phase": "H-2:56",
+          "tideHeight": 539,
+          "scribe": "written"
+        },
+        {
+          "t": -172,
+          "phase": "H-2:52",
+          "tideHeight": 554,
+          "scribe": "written"
+        },
+        {
+          "t": -168,
+          "phase": "H-2:48",
+          "tideHeight": 570,
+          "scribe": "written"
+        },
+        {
+          "t": -164,
+          "phase": "H-2:44",
+          "tideHeight": 585,
+          "scribe": "written"
+        },
+        {
+          "t": -160,
+          "phase": "H-2:40",
+          "tideHeight": 600,
+          "scribe": "written"
+        },
+        {
+          "t": -156,
+          "phase": "H-2:36",
+          "tideHeight": 615,
+          "scribe": "written"
+        },
+        {
+          "t": -152,
+          "phase": "H-2:32",
+          "tideHeight": 630,
+          "scribe": "written"
+        },
+        {
+          "t": -148,
+          "phase": "H-2:28",
+          "tideHeight": 645,
+          "scribe": "written"
+        },
+        {
+          "t": -144,
+          "phase": "H-2:24",
+          "tideHeight": 660,
+          "scribe": "written"
+        },
+        {
+          "t": -140,
+          "phase": "H-2:20",
+          "tideHeight": 674,
+          "scribe": "written"
+        },
+        {
+          "t": -136,
+          "phase": "H-2:16",
+          "tideHeight": 689,
+          "scribe": "written"
+        },
+        {
+          "t": -132,
+          "phase": "H-2:12",
+          "tideHeight": 703,
+          "scribe": "written"
+        },
+        {
+          "t": -128,
+          "phase": "H-2:08",
+          "tideHeight": 716,
+          "scribe": "written"
+        },
+        {
+          "t": -124,
+          "phase": "H-2:04",
+          "tideHeight": 730,
+          "scribe": "written"
+        },
+        {
+          "t": -120,
+          "phase": "H-2:00",
+          "tideHeight": 743,
+          "scribe": "written"
+        },
+        {
+          "t": -116,
+          "phase": "H-1:56",
+          "tideHeight": 756,
+          "scribe": "written"
+        },
+        {
+          "t": -112,
+          "phase": "H-1:52",
+          "tideHeight": 769,
+          "scribe": "written"
+        },
+        {
+          "t": -108,
+          "phase": "H-1:48",
+          "tideHeight": 782,
+          "scribe": "written"
+        },
+        {
+          "t": -104,
+          "phase": "H-1:44",
+          "tideHeight": 794,
+          "scribe": "written"
+        },
+        {
+          "t": -100,
+          "phase": "H-1:40",
+          "tideHeight": 805,
+          "scribe": "written"
+        },
+        {
+          "t": -96,
+          "phase": "H-1:36",
+          "tideHeight": 817,
+          "scribe": "written"
+        },
+        {
+          "t": -92,
+          "phase": "H-1:32",
+          "tideHeight": 828,
+          "scribe": "written"
+        },
+        {
+          "t": -88,
+          "phase": "H-1:28",
+          "tideHeight": 839,
+          "scribe": "written"
+        },
+        {
+          "t": -84,
+          "phase": "H-1:24",
+          "tideHeight": 849,
+          "scribe": "written"
+        },
+        {
+          "t": -80,
+          "phase": "H-1:20",
+          "tideHeight": 859,
+          "scribe": "written"
+        },
+        {
+          "t": -76,
+          "phase": "H-1:16",
+          "tideHeight": 868,
+          "scribe": "written"
+        },
+        {
+          "t": -72,
+          "phase": "H-1:12",
+          "tideHeight": 878,
+          "scribe": "written"
+        },
+        {
+          "t": -68,
+          "phase": "H-1:08",
+          "tideHeight": 886,
+          "scribe": "written"
+        },
+        {
+          "t": -64,
+          "phase": "H-1:04",
+          "tideHeight": 894,
+          "scribe": "written"
+        },
+        {
+          "t": -60,
+          "phase": "H-1:00",
+          "tideHeight": 902,
+          "scribe": "written"
+        },
+        {
+          "t": -56,
+          "phase": "H-0:56",
+          "tideHeight": 910,
+          "scribe": "written"
+        },
+        {
+          "t": -52,
+          "phase": "H-0:52",
+          "tideHeight": 916,
+          "scribe": "written"
+        },
+        {
+          "t": -48,
+          "phase": "H-0:48",
+          "tideHeight": 923,
+          "scribe": "written"
+        },
+        {
+          "t": -44,
+          "phase": "H-0:44",
+          "tideHeight": 929,
+          "scribe": "written"
+        },
+        {
+          "t": -40,
+          "phase": "H-0:40",
+          "tideHeight": 934,
+          "scribe": "written"
+        },
+        {
+          "t": -36,
+          "phase": "H-0:36",
+          "tideHeight": 939,
+          "scribe": "written"
+        },
+        {
+          "t": -32,
+          "phase": "H-0:32",
+          "tideHeight": 943,
+          "scribe": "written"
+        },
+        {
+          "t": -28,
+          "phase": "H-0:28",
+          "tideHeight": 947,
+          "scribe": "written"
+        },
+        {
+          "t": -24,
+          "phase": "H-0:24",
+          "tideHeight": 951,
+          "scribe": "written"
+        },
+        {
+          "t": -20,
+          "phase": "H-0:20",
+          "tideHeight": 953,
+          "scribe": "written"
+        },
+        {
+          "t": -16,
+          "phase": "H-0:16",
+          "tideHeight": 956,
+          "scribe": "written"
+        },
+        {
+          "t": -12,
+          "phase": "H-0:12",
+          "tideHeight": 958,
+          "scribe": "written"
+        },
+        {
+          "t": -8,
+          "phase": "H-0:08",
+          "tideHeight": 959,
+          "scribe": "written"
+        },
+        {
+          "t": -4,
+          "phase": "H-0:04",
+          "tideHeight": 960,
+          "scribe": "written"
+        },
+        {
+          "t": 0,
+          "phase": "H+0:00",
+          "tideHeight": 960,
+          "scribe": "written"
+        },
+        {
+          "t": 4,
+          "phase": "H+0:04",
+          "tideHeight": 960,
+          "scribe": "written"
+        },
+        {
+          "t": 8,
+          "phase": "H+0:08",
+          "tideHeight": 959,
+          "scribe": "written"
+        },
+        {
+          "t": 12,
+          "phase": "H+0:12",
+          "tideHeight": 958,
+          "scribe": "written"
+        },
+        {
+          "t": 16,
+          "phase": "H+0:16",
+          "tideHeight": 956,
+          "scribe": "written"
+        },
+        {
+          "t": 20,
+          "phase": "H+0:20",
+          "tideHeight": 953,
+          "scribe": "written"
+        },
+        {
+          "t": 24,
+          "phase": "H+0:24",
+          "tideHeight": 951,
+          "scribe": "written"
+        },
+        {
+          "t": 28,
+          "phase": "H+0:28",
+          "tideHeight": 947,
+          "scribe": "written"
+        },
+        {
+          "t": 32,
+          "phase": "H+0:32",
+          "tideHeight": 943,
+          "scribe": "written"
+        },
+        {
+          "t": 36,
+          "phase": "H+0:36",
+          "tideHeight": 939,
+          "scribe": "written"
+        },
+        {
+          "t": 40,
+          "phase": "H+0:40",
+          "tideHeight": 934,
+          "scribe": "written"
+        },
+        {
+          "t": 44,
+          "phase": "H+0:44",
+          "tideHeight": 929,
+          "scribe": "written"
+        },
+        {
+          "t": 48,
+          "phase": "H+0:48",
+          "tideHeight": 923,
+          "scribe": "written"
+        },
+        {
+          "t": 52,
+          "phase": "H+0:52",
+          "tideHeight": 916,
+          "scribe": "written"
+        },
+        {
+          "t": 56,
+          "phase": "H+0:56",
+          "tideHeight": 910,
+          "scribe": "written"
+        },
+        {
+          "t": 60,
+          "phase": "H+1:00",
+          "tideHeight": 902,
+          "scribe": "written"
+        },
+        {
+          "t": 64,
+          "phase": "H+1:04",
+          "tideHeight": 894,
+          "scribe": "written"
+        },
+        {
+          "t": 68,
+          "phase": "H+1:08",
+          "tideHeight": 886,
+          "scribe": "written"
+        },
+        {
+          "t": 72,
+          "phase": "H+1:12",
+          "tideHeight": 878,
+          "scribe": "written"
+        },
+        {
+          "t": 76,
+          "phase": "H+1:16",
+          "tideHeight": 868,
+          "scribe": "written"
+        },
+        {
+          "t": 80,
+          "phase": "H+1:20",
+          "tideHeight": 859,
+          "scribe": "written"
+        },
+        {
+          "t": 84,
+          "phase": "H+1:24",
+          "tideHeight": 849,
+          "scribe": "written"
+        },
+        {
+          "t": 88,
+          "phase": "H+1:28",
+          "tideHeight": 839,
+          "scribe": "written"
+        },
+        {
+          "t": 92,
+          "phase": "H+1:32",
+          "tideHeight": 828,
+          "scribe": "written"
+        },
+        {
+          "t": 96,
+          "phase": "H+1:36",
+          "tideHeight": 817,
+          "scribe": "written"
+        },
+        {
+          "t": 100,
+          "phase": "H+1:40",
+          "tideHeight": 805,
+          "scribe": "written"
+        },
+        {
+          "t": 104,
+          "phase": "H+1:44",
+          "tideHeight": 794,
+          "scribe": "written"
+        },
+        {
+          "t": 108,
+          "phase": "H+1:48",
+          "tideHeight": 782,
+          "scribe": "written"
+        },
+        {
+          "t": 112,
+          "phase": "H+1:52",
+          "tideHeight": 769,
+          "scribe": "written"
+        },
+        {
+          "t": 116,
+          "phase": "H+1:56",
+          "tideHeight": 756,
+          "scribe": "written"
+        },
+        {
+          "t": 120,
+          "phase": "H+2:00",
+          "tideHeight": 743,
+          "scribe": "written"
+        },
+        {
+          "t": 124,
+          "phase": "H+2:04",
+          "tideHeight": 730,
+          "scribe": "written"
+        },
+        {
+          "t": 128,
+          "phase": "H+2:08",
+          "tideHeight": 716,
+          "scribe": "written"
+        },
+        {
+          "t": 132,
+          "phase": "H+2:12",
+          "tideHeight": 703,
+          "scribe": "written"
+        },
+        {
+          "t": 136,
+          "phase": "H+2:16",
+          "tideHeight": 689,
+          "scribe": "written"
+        },
+        {
+          "t": 140,
+          "phase": "H+2:20",
+          "tideHeight": 674,
+          "scribe": "written"
+        },
+        {
+          "t": 144,
+          "phase": "H+2:24",
+          "tideHeight": 660,
+          "scribe": "written"
+        },
+        {
+          "t": 148,
+          "phase": "H+2:28",
+          "tideHeight": 645,
+          "scribe": "written"
+        },
+        {
+          "t": 152,
+          "phase": "H+2:32",
+          "tideHeight": 630,
+          "scribe": "written"
+        },
+        {
+          "t": 156,
+          "phase": "H+2:36",
+          "tideHeight": 615,
+          "scribe": "written"
+        },
+        {
+          "t": 160,
+          "phase": "H+2:40",
+          "tideHeight": 600,
+          "scribe": "written"
+        },
+        {
+          "t": 164,
+          "phase": "H+2:44",
+          "tideHeight": 585,
+          "scribe": "written"
+        },
+        {
+          "t": 168,
+          "phase": "H+2:48",
+          "tideHeight": 570,
+          "scribe": "written"
+        },
+        {
+          "t": 172,
+          "phase": "H+2:52",
+          "tideHeight": 554,
+          "scribe": "written"
+        },
+        {
+          "t": 176,
+          "phase": "H+2:56",
+          "tideHeight": 539,
+          "scribe": "written"
+        },
+        {
+          "t": 180,
+          "phase": "H+3:00",
+          "tideHeight": 523,
+          "scribe": "written"
+        }
+      ],
+      "samplesDerivation": "rule",
+      "rule": {
+        "formula": "tideHeight(t) = round(tideBase + tideAmp*cos(2π*t/periodMin))",
+        "sharedWith": "rec-plate-standard-hub",
+        "tideBase": 500,
+        "tideAmp": 460,
+        "periodMin": 744,
+        "pressBase": 120,
+        "pressSlope": 0.05,
+        "pressPivot": 500,
+        "salBase": 28,
+        "salSlope": 0.004,
+        "salPivot": 500,
+        "waterSlope": 0.6,
+        "waterBase": 120
+      },
+      "systemId": null,
+      "stationId": "station-bureau-standard",
+      "sourceAssignment": {
+        "recordId": "rec-tide-ledger-bureau",
+        "systemId": null,
+        "stationId": "station-bureau-standard",
+        "assignmentKind": "existing-reference-technical-id",
+        "evidence": [
+          "[OBSERVED] synopsis/t0-records.md §7 머리말과 §7.1 tideHeight 행은 기록국 표준 관측소를 이 대장의 기준으로 명시한다.",
+          "[TARGET] worldview/glossary.md §6-2는 그 기존 기준 관측소에 station-bureau-standard라는 기술 ID를 지정한다.",
+          "[OBSERVED] systems/data-schemas/plates.md §1의 systemId는 string?이며 sourceType == plate일 때만 필수다.",
+          "[TARGET] production/decision-log.md RFC-CX-003의 RFC-CX-001 director ruling은 이 수치대장에 systemId null을 적용하여 염판 계통 비해당을 표현한다."
+        ],
+        "decisionRfc": [
+          "RFC-CX-001",
+          "RFC-CX-003"
+        ]
+      }
+    }
+  ]
+}

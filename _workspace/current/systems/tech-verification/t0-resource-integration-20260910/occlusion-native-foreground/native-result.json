@@ -1,0 +1,41 @@
+{
+  "pass": true,
+  "error": null,
+  "checks": [
+    "start control available",
+    "desk investigation remains selected",
+    "drawer front projects inside camera viewport",
+    "visible drawer left-click selects investigation",
+    "return to desk control available",
+    "drawer front projects inside camera viewport",
+    "occluder has no Collider",
+    "occluder is active and camera-visible",
+    "occluder intersects nearer screen ray",
+    "occluder ray hit precedes drawer bounds",
+    "no nearer physics collider hides renderer-only defect",
+    "occluder reuses existing scene mesh and materials",
+    "desk investigation remains selected",
+    "renderer-only occluder blocks drawer click",
+    "disabling renderer-only blocker restores drawer click",
+    "return to desk for keyboard check",
+    "drawer keyboard control available while occluded",
+    "keyboard drawer navigation remains available while occluded",
+    "smoke navigation leaves puzzle state unchanged"
+  ],
+  "blocker": {
+    "colliderCount": 0,
+    "mesh": "Cube",
+    "material": "Workbench-above-drawer",
+    "sourceSceneObject": "Workbench above drawer",
+    "screenX": 290.0,
+    "screenY": 452.1888,
+    "rayDistance": 0.21967639,
+    "drawerRayDistance": 2.76798081,
+    "cameraMask": -1,
+    "frustumIntersection": true
+  },
+  "utc": "2026-09-10T11:28:51.4146950Z",
+  "graphicsDevice": "Metal",
+  "device": "Apple M2 Pro",
+  "scope": "Automated native BuildMac smoke with temporary command-gated driver; original runtime prefix unchanged; no human or performance evidence"
+}

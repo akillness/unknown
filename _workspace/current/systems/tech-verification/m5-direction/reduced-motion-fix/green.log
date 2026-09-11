@@ -1,0 +1,359 @@
+Unity Editor version:    6000.5.6f1 (0e0577a1a2ac)
+Branch:                  6000.5/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.3.1 (Build 25D2128)
+Darwin version:          25.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Date:                    2026-09-11T07:45:01Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-jangyoung doesn't exist
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 25465)
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-nographics
+-projectPath
+/Users/jangyoung/orca/unknown/unity/Unknown
+-runTests
+-testPlatform
+PlayMode
+-testFilter
+Tide.Tests.M5DirectionPlayModeTests.ReducedMotionStartsFreshGameImmediatelyWithoutWrites
+-testResults
+/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/reduced-motion-fix/green.xml
+-logFile
+/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/reduced-motion-fix/green.log
+Successfully changed project path to: /Users/jangyoung/orca/unknown/unity/Unknown
+/Users/jangyoung/orca/unknown/unity/Unknown
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [8682565888]  Target information:
+
+Player connection [8682565888]  * "[IP] 192.168.219.124 [Port] 55504 [Flags] 2 [Guid] 3626380391 [EditorId] 3626380391 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8682565888]  * "[IP] 100.119.58.79 [Port] 55504 [Flags] 2 [Guid] 3626380391 [EditorId] 3626380391 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8682565888] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8682565888] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-25462" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung" at "2026-09-11T07:45:02.403413Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              473b6b2144e142728fedd4ebacd9e3f9
+  Correlation Id:          6b0341b71e226f3159ec3b587d767e4d
+  External correlation Id: 5932827680529714618
+  Machine Id:              GDFq97hyJBwslTnyqVIUvhYydXg=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jangyoung" (connect: 0.86s, validation: 0.05s, handshake: 0.31s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung-notifications" at "2026-09-11T07:45:02.759038Z"
+[Licensing::Module] Connected to LicensingClient (PId: 25465, launch time: 0.00, total connection time: 1.22s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 4513980-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Module] Licensing Background thread has ended after 1.23s
+[Licensing::Module] Licensing is initialized (took 0.45s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.5.6f1 (0e0577a1a2ac)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/jangyoung/orca/unknown/unity/Unknown/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56462
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.004742 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.330 seconds
+Domain Reload Profiling: 1102ms
+	BeginReloadAssembly (420ms)
+		CreateAndSetChildDomain (7ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (268ms)
+		LoadAssemblies (413ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (176ms)
+	FinalizeReload (335ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (76ms)
+			ProcessInitializeOnLoadMethodAttributes (111ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 55 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.localization@1.5.13 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.localization@ef5a0677859d)
+    com.unity.addressables@2.9.1 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.addressables@8460f1c9c927)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64)
+    com.unity.searcher@4.9.4 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.burst@6bb9aca3ef38)
+    com.unity.profiling.core@1.0.3 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.profiling.core@8a49f7027d06)
+    com.unity.scriptablebuildpipeline@2.6.1 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.scriptablebuildpipeline@36e3b5898ee2)
+    com.unity.nuget.mono-cecil@1.11.6 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.universal@73b4c4ff130e)
+    com.unity.test-framework@1.7.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.ugui@67707a67a4ab)
+    com.unity.modules.accessibility@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.core@645717f21c5f)
+    com.unity.shadergraph@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.shadergraph@8d7376ec43ee)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.collections@6.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.collections@a43cabe808ca)
+    com.unity.mathematics@1.4.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.mathematics@981956d94fb6)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-91ce4cc105a82451580320b8034fc51a
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/jangyoung/orca/unknown/unity/Unknown
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 43.3060ms
+Starting: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/jangyoung/orca/unknown/unity/Unknown
+DisplayProgressbar: Compiling Scripts
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.burst@6bb9aca3ef38/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 16.7435ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll, with 135 defines and 306 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Sim.dll, with 136 defines and 301 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll, with 137 defines and 294 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 30.5954ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 28.6027ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 34.8833ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Play.dll, with 138 defines and 292 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 2.6308ms
+ExitCode: 0 Duration: 3s256ms
+[620/820    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[804/820    2s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll (+2 others)
+Assets/_Project/App/T0GameSession.cs(96,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/_Project/App/T0GameSession.cs(96,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[807/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.Tests.Sim.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Sim.dll, with 136 defines and 301 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[808/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.App.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll, with 137 defines and 294 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[809/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.EditorTools.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll, with 135 defines and 306 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[814/820    0s] CopyFiles Library/ScriptAssemblies/Tide.App.dll
+[815/820    0s] CopyFiles Library/ScriptAssemblies/Tide.App.pdb
+[816/820    0s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Play.dll (+2 others)
+[817/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.Tests.Play.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Play.dll, with 138 defines and 292 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[818/820    0s] CopyFiles Library/ScriptAssemblies/Tide.Tests.Play.pdb
+[819/820    0s] CopyFiles Library/ScriptAssemblies/Tide.Tests.Play.dll
+*** Tundra build success (3.23 seconds), 11 items updated, 820 evaluated
+Assets/_Project/App/T0GameSession.cs(96,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/_Project/App/T0GameSession.cs(96,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Total cache size 72886336
+AssetDatabase: script compilation time: 4.259123s
+Total cache size after purge 72886336, took 00:00:00.0324592
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file

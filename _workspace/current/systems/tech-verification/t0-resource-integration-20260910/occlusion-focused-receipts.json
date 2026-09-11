@@ -1,0 +1,196 @@
+{
+  "capturedUtc": "2026-09-10T11:25:09.117372+00:00",
+  "runtimeUnchangedUntilMeaningfulRed": {
+    "phase": "test-added-runtime-unchanged",
+    "capturedUtc": "2026-09-10T11:20:54.357107+00:00",
+    "sha256": {
+      "unity/Unknown/Assets/_Project/App/T0GameSession.cs": "4c94a06c1a5e0b8bc4a055c8cfbcaeea38dea6f8bdefea6bbd8a3aaf18ccea3a",
+      "unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs": "1e9103bda7265d1f052e1ea86b50ef055b8043b407dbb48913f20965fac4eed0"
+    }
+  },
+  "finalSourceHashes": {
+    "capturedUtc": "2026-09-10T11:24:28.677691+00:00",
+    "sha256": {
+      "unity/Unknown/Assets/_Project/App/T0GameSession.cs": "06569a459cb2ab2459f13aaf1733634aca928243b659cbf0b169eec0ea0f610c",
+      "unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs": "6d793f44e7b0e6ddb84bc07a18d2a92155ce0b3b89d947471ba8145475eef36f"
+    }
+  },
+  "runs": [
+    {
+      "stem": "occlusion-focused-filter-no-tests",
+      "purpose": "Rejected validation attempt: namespace filter typo; zero tests is not RED or GREEN",
+      "exitCode": 0,
+      "xmlSummary": {
+        "id": "2",
+        "testcasecount": "0",
+        "result": "Passed",
+        "total": "0",
+        "passed": "0",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:21:39Z",
+        "end-time": "2026-09-10 11:21:39Z",
+        "duration": "0.010101"
+      },
+      "commandArgv": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/Users/jangyoung/orca/unknown/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.Play.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-red.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-red.log"
+      ],
+      "artifactSha256": {
+        "occlusion-focused-filter-no-tests.xml": "ed9fd2556f35a63bb212ff19062f6e8968b6cf5ff9e51ac631a7867f27ef4c09",
+        "occlusion-focused-filter-no-tests.log": "c4e1c689536848f31e8ca05a33c9f5f83c2bfb70ec373fa16282a09f8e3ee1cb"
+      },
+      "failures": []
+    },
+    {
+      "stem": "occlusion-focused-red",
+      "purpose": "Meaningful RED: renderer-only click incorrectly selected drawer",
+      "exitCode": 2,
+      "xmlSummary": {
+        "id": "2",
+        "testcasecount": "1",
+        "result": "Failed(Child)",
+        "total": "1",
+        "passed": "0",
+        "failed": "1",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:22:14Z",
+        "end-time": "2026-09-10 11:22:17Z",
+        "duration": "2.1011491"
+      },
+      "commandArgv": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/Users/jangyoung/orca/unknown/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-red.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-red.log"
+      ],
+      "artifactSha256": {
+        "occlusion-focused-red.xml": "fd2b5a20d71f65f287fa8c80f0d8b2487cb480e1ea11fa3d1333090b909419d6",
+        "occlusion-focused-red.log": "f5c6f7a9a393c48d953d4335b273e3c46c8ed8ab71a974a446c144b1bf76c593"
+      },
+      "failures": [
+        {
+          "test": "Tide.Tests.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection",
+          "message": "  A nearer visible renderer without a Collider must block drawer selection\n  Expected: False\n  But was:  True\n",
+          "stack": "at Tide.Tests.T0ResourceInteractionTests+<CloserRendererWithoutColliderBlocksDrawerSelection>d__19.MoveNext () [0x002c4] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:170\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44\n"
+        }
+      ]
+    },
+    {
+      "stem": "occlusion-focused-green-initial",
+      "purpose": "Initial focused GREEN before independent-review fixture layer precondition",
+      "exitCode": 0,
+      "xmlSummary": {
+        "id": "2",
+        "testcasecount": "6",
+        "result": "Passed",
+        "total": "6",
+        "passed": "6",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:23:35Z",
+        "end-time": "2026-09-10 11:23:37Z",
+        "duration": "1.5266582"
+      },
+      "commandArgv": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/Users/jangyoung/orca/unknown/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.T0ResourceInteractionTests",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-green.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-green.log"
+      ],
+      "artifactSha256": {
+        "occlusion-focused-green-initial.xml": "e4772342e6353a2f0080275b0195fc0cd5750d6b9d124ff16210547d4c14413b",
+        "occlusion-focused-green-initial.log": "5e256c744ad12eafde5f7c5ac1960b9553e88ba4cc921d6168f0d0c1b72f45d8"
+      },
+      "failures": []
+    },
+    {
+      "stem": "occlusion-focused-green",
+      "purpose": "Final focused GREEN with independent camera-layer precondition",
+      "exitCode": 0,
+      "xmlSummary": {
+        "id": "2",
+        "testcasecount": "6",
+        "result": "Passed",
+        "total": "6",
+        "passed": "6",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-10 11:24:24Z",
+        "end-time": "2026-09-10 11:24:28Z",
+        "duration": "4.3923387"
+      },
+      "commandArgv": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/Users/jangyoung/orca/unknown/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.T0ResourceInteractionTests",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-green.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/t0-resource-integration-20260910/occlusion-focused-green.log"
+      ],
+      "artifactSha256": {
+        "occlusion-focused-green.xml": "86ee0f9a81a7e81aea2d62aed888a0252e8ebe75ca4f5a23da78bd6e74248329",
+        "occlusion-focused-green.log": "a8dcc9d107a153dc4ce389de9de2d0ca932c0d3c44784dd339f7cb3214134535"
+      },
+      "failures": []
+    }
+  ],
+  "scope": "Two existing C# files only; no asset, approval, project configuration, stage, commit, push edits. Root owns final full suites, BuildMac, native smoke, graph/memory, systems report.",
+  "limits": "Renderer world AABB intersection and per-camera eligibility form a conservative occlusion guard; not triangle-perfect or fragment-level visibility. No human testing/performance gates claimed."
+}

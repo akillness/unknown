@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "scope": "t0",
+  "generatedFrom": [
+    "systems/data-schemas/tools.md",
+    "systems/system-specs/wiring-trace.md",
+    "systems/system-specs/plate-readout.md",
+    "planning/campaign.json"
+  ],
+  "knobs": {
+    "commitHoldSeconds": {
+      "value": "0.4",
+      "owner": "balance"
+    },
+    "readBudget": {
+      "value": "3",
+      "owner": "balance"
+    },
+    "residualLimitMinutes": {
+      "value": "4",
+      "owner": "balance"
+    },
+    "corrosionLimit": {
+      "value": "9",
+      "owner": "economy"
+    },
+    "routeCorrosionCost[*]": {
+      "value": "lowland 7 · dock 8 · dock-express 12",
+      "owner": "economy"
+    },
+    "systemLimits[*]": {
+      "value": "null",
+      "owner": "economy"
+    },
+    "idleHintOfferSeconds": {
+      "value": "180",
+      "owner": "balance"
+    },
+    "hintCost": {
+      "value": "0",
+      "owner": "economy"
+    }
+  },
+  "invariantsChecked": {
+    "T-I1": "toolId 중복 0 · 6종 등록(구현 2 + 스텁 4)",
+    "T-I3": "PASS",
+    "T-I4": "PASS",
+    "T-I7": "PASS"
+  },
+  "notMeasured": [
+    "도구 전환 시간 · 패널 열기 지연 · 조작감 n=0 (tools.md §6)"
+  ],
+  "rows": [
+    {
+      "toolId": "circuit",
+      "lawId": 1,
+      "displayNameKey": "tool.circuit.name",
+      "panelPrefab": "ToolPanel_Circuit",
+      "hasCommit": false,
+      "requiresPreview": false,
+      "commitHoldSeconds": 0.4,
+      "introBeatId": "t0-b2",
+      "unguidedBeatId": "c6-b2",
+      "undoable": true,
+      "consumesBudget": "none",
+      "sandboxDisplaysOnly": false,
+      "practiceLayer": {
+        "mode": "always-free",
+        "note": "연습층과 확정층이 갈리지 않는다 — 판독 전용 도구이며 확정 명령이 없다",
+        "_src": "system-specs/wiring-trace.md 확정 조건 없음 · interaction-rules.md §2.1"
+      },
+      "commitCondition": null,
+      "commands": [
+        {
+          "commandId": "TraceSystem",
+          "kind": "inspect",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "handoff §⑤-3(A) 입력→의도 표 · system-specs/wiring-trace.md §1"
+        },
+        {
+          "commandId": "BeginOverlay",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "system-specs/wiring-trace.md §2 상태기계 Tracing→Overlaying"
+        },
+        {
+          "commandId": "SetOverlayOffset",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "동상 · 키보드 파생 D-3(격자 1칸)"
+        },
+        {
+          "commandId": "AnchorOverlay",
+          "kind": "edit",
+          "validationRules": [
+            "W-F2"
+          ],
+          "reasonCodes": [
+            "ANCHOR_INCOMPLETE"
+          ],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "system-specs/wiring-trace.md §4 W-F2"
+        },
+        {
+          "commandId": "ToggleUncovered",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "interaction-rules.md §1-3.2 「circuit = 구획 접기 토글」 · W-R5 무제한 토글"
+        },
+        {
+          "commandId": "QueryEvidenceValidity",
+          "kind": "inspect",
+          "validationRules": [],
+          "reasonCodes": [
+            "OUT_OF_COVERAGE",
+            "ZONE_LOCKED"
+          ],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "interaction-rules.md §1-3.2 조회 표 — `Q` / 패드 `RS`"
+        },
+        {
+          "commandId": "Cancel",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "system-specs/wiring-trace.md §2 Overlaying→Tracing (상태 손실 0)"
+        }
+      ],
+      "_src": {
+        "lawId": "systems/data-schemas/tools.md §1 도구 표",
+        "introBeatId": "동상 (도입 비트)",
+        "unguidedBeatId": "동상 (미안내 재문제 비트 — T0 범위 밖의 비트를 가리킨다)",
+        "commitHoldSeconds": "systems/data-schemas/tools.md §4 노브 (기본 0.4, 소유 balance) — hold opt-in 에서만 쓰인다",
+        "undoable": "systems/data-schemas/tools.md §2 「항상 true」"
+      }
+    },
+    {
+      "toolId": "reader",
+      "lawId": 2,
+      "displayNameKey": "tool.reader.name",
+      "panelPrefab": "ToolPanel_Reader",
+      "hasCommit": true,
+      "requiresPreview": true,
+      "commitHoldSeconds": 0.4,
+      "introBeatId": "t0-b3",
+      "unguidedBeatId": "c1-b2",
+      "undoable": true,
+      "consumesBudget": "readBudget",
+      "sandboxDisplaysOnly": true,
+      "practiceLayer": {
+        "mode": "two-layer",
+        "practice": "사본 재생(Read)은 비용 0 · 횟수 제한 0 — 연습층",
+        "commit": "인용 고정(CiteToBoard)이 T0 의 유일한 확정 명령이다",
+        "_src": "RFC-C7-001 (1) · planning/gdd.md §4 reader 확정 층 · interaction-rules.md §1-3.3"
+      },
+      "commitCondition": {
+        "commandId": "CiteToBoard",
+        "rule": "인용에 sourceType · 계통 · 관측소 출처가 모두 채워졌을 때만 고정된다",
+        "goesThrough": [
+          "프리뷰",
+          "확정 입력(two-step 기본)",
+          "사전 체크포인트",
+          "저장",
+          "되돌림"
+        ],
+        "_src": "planning/gdd.md §4 표 reader 확정 층 · RFC-C7-001 (1) · interaction-rules.md §0-4 · §5"
+      },
+      "commands": [
+        {
+          "commandId": "LoadRecord",
+          "kind": "inspect",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "system-specs/plate-readout.md §2 Empty→Loaded"
+        },
+        {
+          "commandId": "SetWindow",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "동상 Loaded→Loaded (재생 아님 · 카운터 0)"
+        },
+        {
+          "commandId": "SetZoom",
+          "kind": "edit",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "handoff §⑤-3(B) 배율 행 · 키보드 파생 D-3(1칸)"
+        },
+        {
+          "commandId": "Read",
+          "kind": "preview",
+          "validationRules": [],
+          "reasonCodes": [],
+          "checkpointBefore": false,
+          "telemetryKeys": [],
+          "_src": "interaction-rules.md §1-3.3 — 사본 재생. 부작용 0 · Space/X 배정"
+        },
+        {
+          "commandId": "ReadOriginal",
+          "kind": "commit",
+          "validationRules": [
+            "P-R9"
+          ],
+          "reasonCodes": [
+            "ORIGINAL_DEGRADED"
+          ],
+          "checkpointBefore": true,
+          "telemetryKeys": [],
+          "_src": "interaction-rules.md §1-3.3 — Space 가 아니라 확정 흐름을 거친다. readCounts +1(상한 readBudget)"
+        },
+        {
+          "commandId": "CiteToBoard",
+          "kind": "commit",
+          "validationRules": [
+            "P-F2",
+            "P-F4"
+          ],
+          "reasonCodes": [
+            "MEDIA_DUPLICATE",
+            "INDETERMINATE"
+          ],
+          "checkpointBefore": true,
+          "telemetryKeys": [],
+          "_src": "RFC-C7-001 (1) — T0 의 확정(인용 고정). interaction-rules.md §1-3.2 「패널 안 Y = reader 인용 고정」"
+        }
+      ],
+      "_src": {
+        "lawId": "systems/data-schemas/tools.md §1 도구 표",
+        "introBeatId": "동상 (도입 비트)",
+        "unguidedBeatId": "동상 (미안내 재문제 비트 — T0 범위 밖의 비트를 가리킨다)",
+        "commitHoldSeconds": "systems/data-schemas/tools.md §4 노브 (기본 0.4, 소유 balance) — hold opt-in 에서만 쓰인다",
+        "undoable": "systems/data-schemas/tools.md §2 「항상 true」"
+      }
+    }
+  ],
+  "stubs": [
+    {
+      "toolId": "alignment",
+      "lawId": 3,
+      "stub": true,
+      "validateReturns": "NOT_IMPLEMENTED_IN_T0",
+      "commitReturns": "events[0]",
+      "_src": "handoff/codex-unity-brief.md §⑤-4 — 나머지 4도구는 인터페이스 스텁만"
+    },
+    {
+      "toolId": "routing",
+      "lawId": 4,
+      "stub": true,
+      "validateReturns": "NOT_IMPLEMENTED_IN_T0",
+      "commitReturns": "events[0]",
+      "_src": "handoff/codex-unity-brief.md §⑤-4 — 나머지 4도구는 인터페이스 스텁만"
+    },
+    {
+      "toolId": "corrosion",
+      "lawId": 5,
+      "stub": true,
+      "validateReturns": "NOT_IMPLEMENTED_IN_T0",
+      "commitReturns": "events[0]",
+      "_src": "handoff/codex-unity-brief.md §⑤-4 — 나머지 4도구는 인터페이스 스텁만"
+    },
+    {
+      "toolId": "seal",
+      "lawId": 6,
+      "stub": true,
+      "validateReturns": "NOT_IMPLEMENTED_IN_T0",
+      "commitReturns": "events[0]",
+      "_src": "handoff/codex-unity-brief.md §⑤-4 — 나머지 4도구는 인터페이스 스텁만"
+    }
+  ],
+  "circuitOverlay": {
+    "gridStep": 1,
+    "fineGridStep": null,
+    "initialOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "anchors": [
+      {
+        "anchorId": "anchor-hub",
+        "displayNameKo": "당직실",
+        "target": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": {
+          "x": 1,
+          "y": -1
+        }
+      },
+      {
+        "anchorId": "anchor-gate",
+        "displayNameKo": "제3수문",
+        "target": {
+          "x": 3,
+          "y": 0
+        },
+        "overlay": {
+          "x": 4,
+          "y": -1
+        }
+      },
+      {
+        "anchorId": "anchor-dock",
+        "displayNameKo": "부두사무소",
+        "target": {
+          "x": 1,
+          "y": 2
+        },
+        "overlay": {
+          "x": 2,
+          "y": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "testRuns": [
+    {
+      "file": "editmode-final.xml",
+      "result": "Passed",
+      "total": "19",
+      "passed": "19",
+      "failed": "0",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:27:19Z",
+      "end-time": "2026-09-10 13:27:21Z",
+      "duration": "1.6322214",
+      "failures": []
+    },
+    {
+      "file": "focused-green-2.xml",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:25:47Z",
+      "end-time": "2026-09-10 13:25:50Z",
+      "duration": "2.9922455",
+      "failures": []
+    },
+    {
+      "file": "focused-green-final.xml",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:26:49Z",
+      "end-time": "2026-09-10 13:26:52Z",
+      "duration": "2.4009219",
+      "failures": []
+    },
+    {
+      "file": "focused-green.xml",
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:24:27Z",
+      "end-time": "2026-09-10 13:24:29Z",
+      "duration": "1.8096915",
+      "failures": [
+        {
+          "test": "Tide.Tests.T0CaseThreadTests.CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation",
+          "message": "  Expected: True\n  But was:  False\n"
+        }
+      ]
+    },
+    {
+      "file": "focused-red-final.xml",
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:22:53Z",
+      "end-time": "2026-09-10 13:22:55Z",
+      "duration": "1.5935346",
+      "failures": [
+        {
+          "test": "Tide.Tests.T0CaseThreadTests.CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation",
+          "message": "  A visible Korean CaseThread must explain the existing T0 objective and citation progress\n  Expected: 1\n  But was:  0\n"
+        }
+      ]
+    },
+    {
+      "file": "focused-red.xml",
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:21:59Z",
+      "end-time": "2026-09-10 13:22:04Z",
+      "duration": "5.5146451",
+      "failures": [
+        {
+          "test": "Tide.Tests.T0CaseThreadTests.CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation",
+          "message": "  A visible Korean CaseThread must explain the existing T0 objective and citation progress\n  Expected: 1\n  But was:  0\n"
+        }
+      ]
+    },
+    {
+      "file": "playmode-final.xml",
+      "result": "Passed",
+      "total": "22",
+      "passed": "22",
+      "failed": "0",
+      "skipped": "0",
+      "start-time": "2026-09-10 13:28:17Z",
+      "end-time": "2026-09-10 13:28:30Z",
+      "duration": "13.0530686",
+      "failures": []
+    }
+  ],
+  "finalNative": {
+    "receipt": "native-final/native-result.json",
+    "pass": true,
+    "driverAssertions": 157,
+    "snapshots": 6,
+    "screenshots": 8
+  },
+  "buildResult": "Succeeded",
+  "buildBytes": 314144887,
+  "diffCheckExit": 0,
+  "limits": [
+    "automated smoke, not human playtesting",
+    "no performance or accessibility validation",
+    "mixed virtual InputSystem events and labeled UI adapters",
+    "no physical gamepad smoke",
+    "no production gate or approval change"
+  ]
+}

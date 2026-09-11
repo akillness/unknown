@@ -44,6 +44,11 @@ namespace Tide.Tests {
   IEnumerator RestartWithSignatureSave(){yield return Wait(game.FlushSaves());UnityEngine.Object.Destroy(host);yield return null;File.Copy(Path.Combine(Application.dataPath,"_Project/Tests/Fixtures/C1PatrolCompletedV2.json"),Path.Combine(directory,"save.json"),true);Create();yield return null;}
   void Do(string id,string subject=null,string value=null){var verdict=game.SubmitImmediate(new PuzzleCommand(id,subject,value));Assert.IsTrue(verdict.IsValid,verdict.DataDiagnostic);}
   void Ready(){Click("continue-c1-signature");var def=game.Definition.Signature;foreach(var id in def.Observations)Do("ObserveSignature",id);Do("SetSignatureHumidity","low");Do("TrialSignature");Do("SeparateSignature");foreach(var id in def.Copies)Do("CopySignature",id);Do("MarkSignature",def.RegionId);Do("CompareSignature",def.ComparisonId);Do("SelectSignatureProof",def.LeftClue,def.RightClue);}
+  [UnityTest] public IEnumerator ReducedMotionStartsFreshGameImmediatelyWithoutWrites(){
+   Click("settings");Click("reduced-motion");Click("back");string hash=game.Journal.State.StateHash;long head=game.Journal.HeadSeq;
+   Click("start");yield return null;
+   Assert.IsFalse(game.OpeningActive);Assert.IsTrue(game.Interface.ActionIds.Contains("handover"));AssertNoSave(hash,head);
+  }
   [UnityTest] public IEnumerator FreshIntroUsesObservedCutAndTimeoutWithoutWrites(){
    string hash=game.Journal.State.StateHash;long head=game.Journal.HeadSeq;Click("start");Assert.IsTrue(game.OpeningActive);Assert.AreEqual("intro-skip",game.Interface.CurrentFocusId);Assert.AreEqual(3.125f,profile.firstShotSeconds);Assert.AreEqual(2.875f,profile.secondShotSeconds);
    yield return new WaitForSecondsRealtime(2.9f);Assert.IsTrue(game.OpeningActive);Assert.AreEqual(0,game.OpeningCaptionIndex);

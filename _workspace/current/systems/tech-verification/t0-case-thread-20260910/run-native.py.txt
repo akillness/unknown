@@ -1,0 +1,30 @@
+from pathlib import Path
+import subprocess,json,time,datetime,re,os,signal
+root=Path('/Users/jangyoung/orca/unknown')
+e=root/'_workspace/current/systems/tech-verification/t0-case-thread-20260910'
+app=root/'unity/Unknown/Builds/T0-case-thread-20260910-diagnostic/Unknown.app'
+output=e/'native-final';output.mkdir(exist_ok=True)
+save=Path('/tmp/t0-case-thread-20260910/native-save-final');assert not save.exists()
+exe=app/'Contents/MacOS/Unknown T0'
+cmd=['/usr/bin/open','-n',str(app),'--args','--t0-case-thread-smoke','--t0-case-thread-output',str(output),'--t0-save-dir',str(save),'-screen-fullscreen','0','-screen-width','1280','-screen-height','800','-logFile',str(e/'native-player-final.log')]
+receipt={'command':cmd,'startedUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'externalTimeoutSeconds':300,'directPlayerExitCode':None,'directPlayerExitCodeNote':'LaunchServices does not expose the launched player exit code'}
+(e/'native-launch-final.json').write_text(json.dumps(receipt,indent=2))
+r=subprocess.run(cmd);receipt['launchServicesExitCode']=r.returncode
+print('Native foreground launch',r.returncode,flush=True)
+def pids():
+ p=subprocess.run(['pgrep','-f','^'+re.escape(str(exe))+'( |$)'],capture_output=True,text=True)
+ if p.returncode not in (0,1):raise RuntimeError(p.stderr)
+ return [int(v) for v in p.stdout.split()]
+start=time.monotonic();seen=set();result=output/'native-result.json'
+while time.monotonic()-start<300:
+ active=pids();seen.update(active)
+ if result.exists() and not active:break
+ time.sleep(1)
+receipt.update(finishedUtc=datetime.datetime.now(datetime.timezone.utc).isoformat(),observedPids=sorted(seen),elapsedSeconds=round(time.monotonic()-start,2),playerAbsentAfterResult=result.exists() and not pids(),timedOut=time.monotonic()-start>=300)
+if receipt['timedOut']:
+ for pid in pids():os.kill(pid,signal.SIGTERM)
+receipt['resultExists']=result.exists()
+if result.exists():receipt['smokePass']=json.loads(result.read_text()).get('pass')
+(e/'native-launch-final.json').write_text(json.dumps(receipt,indent=2))
+print(json.dumps(receipt,ensure_ascii=False),flush=True)
+raise SystemExit(0 if receipt.get('smokePass') and receipt['playerAbsentAfterResult'] else 1)

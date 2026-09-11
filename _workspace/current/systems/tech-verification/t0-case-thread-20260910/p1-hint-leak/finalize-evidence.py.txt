@@ -1,0 +1,53 @@
+from pathlib import Path
+import datetime, difflib, hashlib, json, subprocess
+
+root = Path('/Users/jangyoung/orca/unknown')
+evidence = Path(__file__).resolve().parent
+digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+baseline = json.loads((evidence / 'preservation-baseline.json').read_text())
+changed = [p for p, h in baseline['files'].items() if (root / p).is_file() and digest(root / p) != h]
+missing = [p for p in baseline['files'] if not (root / p).is_file()]
+expected = {
+    '_workspace/current/systems/tech-verification/t0-case-thread-20260910.md',
+    'unity/Unknown/Assets/_Project/App/T0GameSession.cs',
+    'unity/Unknown/Assets/_Project/Resources/T0Strings.json',
+    'unity/Unknown/Assets/_Project/Tests/PlayMode/T0CaseThreadTests.cs',
+}
+head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip()
+proof = {
+    'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    'baselineFiles': len(baseline['files']), 'changedBaselinePaths': sorted(changed),
+    'missingBaselinePaths': missing,
+    'unchangedBaselineFiles': len(baseline['files']) - len(changed) - len(missing),
+    'unexpectedChanges': sorted(set(changed) - expected),
+    'head': head, 'headUnchanged': head == baseline['head'],
+    'indexUnchanged': digest(root / '.git/index') == baseline['index'],
+}
+(evidence / 'preservation.json').write_text(json.dumps(proof, indent=2))
+assert not missing and not proof['unexpectedChanges'] and proof['headUnchanged'] and proof['indexUnchanged'], proof
+
+delta = []
+for relative in ['App/T0GameSession.cs', 'Resources/T0Strings.json', 'Tests/PlayMode/T0CaseThreadTests.cs']:
+    current = root / 'unity/Unknown/Assets/_Project' / relative
+    old = evidence / ('baseline-' + current.name + '.txt')
+    delta.extend(difflib.unified_diff(old.read_text().splitlines(True), current.read_text().splitlines(True),
+                                     fromfile='P1-baseline/' + relative, tofile='current/' + relative))
+    (evidence / ('final-' + current.name + '.txt')).write_bytes(current.read_bytes())
+(evidence / 'fix.diff').write_text(''.join(delta))
+(evidence / 'freshness.log').touch()
+(evidence / 'receipt-manifest.json').write_text('{}\n')
+for path in list(evidence.rglob('*')):
+    if not path.is_file() or path.suffix == '.md':
+        continue
+    sidecar = path.with_name(path.name + '.meta.md')
+    if not sidecar.exists():
+        relative = str(path.relative_to(root))
+        sidecar.write_text('---\nupdated: 2026-09-10\ncycle: 20260909-preproduction-c7\nstatus: current\nsupersedes: null\nowner: game-systems-designer\nsource_path: ' + json.dumps(relative) + '\n---\n\n# T0 case-thread P1 technical receipt\n\n[OBSERVED] Retained source, command, result or preservation evidence for the P1 hint-disclosure correction. See the parent t0-case-thread-20260910.md report for interpretation, including failed attempts. This receipt does not establish human play, accessibility, performance or final gates.\n')
+command = ['rtk', 'proxy', 'bash', '.claude/skills/game-ops-harness/scripts/freshness-check.sh']
+with (evidence / 'freshness.log').open('w') as output:
+    code = subprocess.call(command, cwd=root, stdout=output, stderr=subprocess.STDOUT)
+assert code == 0, 'freshness failed; inspect retained log'
+manifest = {str(p.relative_to(evidence)): {'sha256': digest(p), 'bytes': p.stat().st_size}
+            for p in sorted(evidence.rglob('*')) if p.is_file() and p != evidence / 'receipt-manifest.json'}
+(evidence / 'receipt-manifest.json').write_text(json.dumps({'scope': 'P1 follow-up only; prior receipts untouched', 'files': manifest}, indent=2))
+print(json.dumps({'preservation': proof, 'receiptFiles': len(manifest), 'freshnessExit': code}))

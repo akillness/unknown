@@ -1,0 +1,20 @@
+Native smoke preparation only; no Unity Editor, build, or player started by this agent.
+
+Append native-driver.cs.txt after the exact production T0GameSession.cs in the isolated native smoke clone only. Existing production using directives cover the suffix types. Preserve and hash the original production prefix; production source must not contain this diagnostic class.
+
+Launch flags:
+--t0-case-thread-smoke --t0-case-thread-output <artifact-output-directory> --t0-save-dir <fresh-isolated-save-directory>
+
+Driver is bounded to 240 seconds. Parent must also externally bound player execution in case engine startup stalls before driver execution. Success/failure writes native-result.json and exit code 0/1. Nested coroutine failures are caught and written in the JSON receipt.
+
+Assertions depend on active UnityEngine.UI.Text named CaseThread containing the exact objective from the brief, progress 0/2, 1/2, 2/2 and completed phrase. UI action ids and two canonical records match current production T0PlayModeTests.FullInputRun. Driver does not call SubmitImmediate, CommitAsync, Simulation.Commit, direct journal Submit, or directly set puzzle state. Actual phase windows are selected through existing pick-start/phase-next/phase/pick-end/phase-prev UI adapters, then existing cite and confirm actions.
+
+Native InputSystem virtual device paths: keyboard start, Tab focus traversal, visible drawer pointer, blocked drawer pointer, disabled-occluder pointer restore, keyboard drawer selection while occluded, pointer handover open and first line action, keyboard second citation confirmation. Pointer UI setup uses existing Interface.Focus only to scroll/focus targets; activation uses queued mouse events. Other intake/circuit/reader actions use explicitly labeled Interface.Activate adapters. This mixed input scope must remain explicit in evidence.
+
+Repeated Render assertions at initial, prepared, confirmation, first citation, second prepared and completion stages compare state hash, journal identity/head/branch/entry/snapshot counts, loaded record, successful receipts, pending flag, surface, all save file bytes (SHA256), byte counts, and modification timestamps. Actions and keyboard focus must remain stable. Save queue settles before each read-only comparison, so ordinary authorized actions' pending writes are not mistaken for UI side effects. Actual completed state is decoded from the save and compared to the live state hash.
+
+Renderer-only fixture reuses existing Workbench above drawer mesh/material in memory, contains no collider, verifies camera/frustum visibility and nearest ray position, then verifies blocked mouse selection, renderer-off recovery and retained keyboard navigation. No assets are created or imported. Production renderer-only occlusion code and existing coverage remain untouched.
+
+Screenshots: initial-0-of-2, drawer-visible-pointer, drawer-renderer-only-blocked, prepared-0-of-2, first-confirm-still-0-of-2, first-1-of-2, second-prepared-still-1-of-2, completed-2-of-2. Parent should inspect screenshot output for card readability/layout. Assertions verify actual active text but do not themselves validate clipping/legibility at all resolutions.
+
+Limits: automated native diagnostic clone, no human playtest, physical input device, gamepad smoke, performance, accessibility or generalized UX validation. No research or campaign gates promoted. Preparation was syntax/API-inspected only; final Unity compilation and native execution remain parent-owned.

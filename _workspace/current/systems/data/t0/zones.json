@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "scope": "t0",
+  "generatedFrom": [
+    "concept/style-guide.md",
+    "modeling/specs/hub-watchroom.md",
+    "modeling/asset-manifest.md",
+    "worldview/worldview-bible.md",
+    "planning/campaign.json"
+  ],
+  "poseFrame": {
+    "name": "greybox-blender-zup-m",
+    "description": "단위 m · Blender Z-up · 원점 = 방 중앙 바닥면(hub-watchroom §2). 좌표는 실제로 만들어진 그레이박스의 값이다",
+    "unityConversion": "[INFERENCE] glTF Y-up 경유 임포트 규칙에 따라 Unity 좌표로 변환된다. 변환식을 이 파일이 확정하지 않는다 — 임포터가 hub-greybox.glb 임포트 결과와 대조해 확인한다(인수 T-Z1)"
+  },
+  "cameraConstants": {
+    "fovDeg": 54,
+    "fovAxis": "horizontal",
+    "eyeHeightM": 1.55,
+    "pitchDeg": -18,
+    "rollDeg": 0,
+    "yawOptionsDeg": [
+      -30,
+      0,
+      30
+    ],
+    "fillRatio": 0.7,
+    "_src": "concept/style-guide.md §5"
+  },
+  "roomBounds": {
+    "xMin": -2.88,
+    "xMax": 2.88,
+    "yMin": -4,
+    "yMax": 3.88,
+    "openFace": "-Y",
+    "_src": "modeling/specs/hub-watchroom.md §2"
+  },
+  "resolutionMinutes": 4,
+  "notMeasured": [
+    "viewNodes 실제 개수·프레이밍·loadCostMb 는 n=0 (data-schemas/zones.md §6)",
+    "Unity 임포트 0회 · 카메라 실측 0회"
+  ],
+  "rows": [
+    {
+      "zoneId": "hub",
+      "displayNameKey": "zone.hub.name",
+      "sceneName": "hub",
+      "addressableLabel": null,
+      "viewNodes": [
+        {
+          "nodeId": "hub-view-desk",
+          "label": "작업대 전경",
+          "cameraPose": {
+            "pos": {
+              "x": 0,
+              "y": -2.164,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 0,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": 0,
+              "y": 1.2,
+              "z": 0.9
+            },
+            "standDistanceM": 3.364,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-circuitmap",
+            "hub-view-drawer"
+          ],
+          "interactables": [
+            "workbench-standing-slot",
+            "rec-handover-brief",
+            "rec-transfer-list"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "greybox",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "modeling/specs/hub-watchroom.md §2 작업대 중심·상면 z",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        },
+        {
+          "nodeId": "hub-view-drawer",
+          "label": "사물 서랍",
+          "cameraPose": {
+            "pos": {
+              "x": 0,
+              "y": -0.482,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 0,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": 0,
+              "y": 1.2,
+              "z": 0.45
+            },
+            "standDistanceM": 1.682,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-desk",
+            "hub-view-reader"
+          ],
+          "interactables": [
+            "drawer",
+            "plate-zero"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "not-modeled",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "planning/campaign.json t0-b1.subtasks 「서랍에서 판 #0을 꺼내」 — 그레이박스에 서랍 오브젝트 0개(modeling/specs/hub-watchroom.md §2), 작업대 하부로 배치한 [TARGET]",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        },
+        {
+          "nodeId": "hub-view-reader",
+          "label": "판독기",
+          "cameraPose": {
+            "pos": {
+              "x": -0.62,
+              "y": 0.099,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 0,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": -0.62,
+              "y": 1.22,
+              "z": 1.07
+            },
+            "standDistanceM": 1.121,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-drawer",
+            "hub-view-sealdesk"
+          ],
+          "interactables": [
+            "tool-reader",
+            "rec-plate-standard-hub",
+            "rec-tide-ledger-bureau"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "greybox",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "modeling/asset-manifest.md §2 SM_Tool_reader 배치",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        },
+        {
+          "nodeId": "hub-view-sealdesk",
+          "label": "서명대·봉인대",
+          "cameraPose": {
+            "pos": {
+              "x": 0.68,
+              "y": 0.199,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 0,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": 0.68,
+              "y": 1.18,
+              "z": 1.01
+            },
+            "standDistanceM": 0.981,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-reader",
+            "hub-view-plateshelf"
+          ],
+          "interactables": [
+            "tool-seal"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "greybox",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "modeling/asset-manifest.md §2 SM_Tool_seal 배치",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        },
+        {
+          "nodeId": "hub-view-plateshelf",
+          "label": "염판 선반",
+          "cameraPose": {
+            "pos": {
+              "x": 1.744,
+              "y": -0.646,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 30,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": 2.55,
+              "y": 0.75,
+              "z": 0.575
+            },
+            "standDistanceM": 1.612,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-sealdesk",
+            "hub-view-circuitmap"
+          ],
+          "interactables": [
+            "plate-shelf"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "greybox",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "modeling/specs/hub-watchroom.md §2 염판 선반 중심",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        },
+        {
+          "nodeId": "hub-view-circuitmap",
+          "label": "벽 회로 지도",
+          "cameraPose": {
+            "pos": {
+              "x": 0,
+              "y": 0.986,
+              "z": 1.55
+            },
+            "rot": {
+              "pitchDeg": -18,
+              "yawDeg": 0,
+              "rollDeg": 0
+            },
+            "fovDeg": 54,
+            "fovAxis": "horizontal",
+            "lookAt": {
+              "x": 0,
+              "y": 3.79,
+              "z": 1.05
+            },
+            "standDistanceM": 2.804,
+            "distanceClampedToM": null
+          },
+          "neighbors": [
+            "hub-view-plateshelf",
+            "hub-view-desk"
+          ],
+          "interactables": [
+            "tool-circuit",
+            "rec-watchlog-bureau"
+          ],
+          "transitionType": "cut",
+          "loadCostMb": null,
+          "assetStatus": "greybox",
+          "_src": {
+            "cameraPose.pos.z": "concept/style-guide.md §5 시선 높이 1.55 m",
+            "cameraPose.rot": "concept/style-guide.md §5 피치 -18° · 롤 0° · 요 -30/0/30°",
+            "cameraPose.fovDeg": "concept/style-guide.md §5 수평 화각 약 54°",
+            "cameraPose.lookAt": "modeling/asset-manifest.md §2 SM_Tool_circuit 배치(북쪽 벽 패널)",
+            "cameraPose.standDistanceM": "파생 규칙: D = max(w,h)/0.7 / (2·tan(54°/2)), 방 경계(hub-watchroom §2) 안으로 0.05 m 단위 클램프",
+            "transitionType": "concept/style-guide.md §5 「장면 전환은 노드 컷」 · 모션 축소 시 전부 cut",
+            "loadCostMb": "NOT-MEASURED (data-schemas/zones.md §6 — n=0)"
+          }
+        }
+      ],
+      "systemIds": [
+        "hub"
+      ],
+      "sensorCoverage": [
+        {
+          "areaId": "hub-indoor",
+          "covered": true,
+          "systemId": "hub",
+          "hasLine": true,
+          "_src": "worldview/worldview-bible.md §2 「회선이 깔린 3개소(당직실·제3수문·부두사무소)」 — 당직실이 그 하나"
+        },
+        {
+          "areaId": "hub-uncovered-1",
+          "covered": false,
+          "systemId": null,
+          "hasLine": false,
+          "displayNameKey": null,
+          "pendingRfc": "RFC-N9",
+          "_src": "planning/campaign.json t0-b2.subtasks[2] 「센서가 닿지 않는 옥외 구획 세 곳」(구획 1/3). **이름은 캐논 미등재** — synopsis/t0-records.md §5.6 이 명명을 거부하고 RFC-N9 로 올렸다. 이 id 는 기술 식별자이며 용어집 명사가 아니다"
+        },
+        {
+          "areaId": "hub-uncovered-2",
+          "covered": false,
+          "systemId": null,
+          "hasLine": false,
+          "displayNameKey": null,
+          "pendingRfc": "RFC-N9",
+          "_src": "planning/campaign.json t0-b2.subtasks[2] 「센서가 닿지 않는 옥외 구획 세 곳」(구획 2/3). **이름은 캐논 미등재** — synopsis/t0-records.md §5.6 이 명명을 거부하고 RFC-N9 로 올렸다. 이 id 는 기술 식별자이며 용어집 명사가 아니다"
+        },
+        {
+          "areaId": "hub-uncovered-3",
+          "covered": false,
+          "systemId": null,
+          "hasLine": false,
+          "displayNameKey": null,
+          "pendingRfc": "RFC-N9",
+          "_src": "planning/campaign.json t0-b2.subtasks[2] 「센서가 닿지 않는 옥외 구획 세 곳」(구획 3/3). **이름은 캐논 미등재** — synopsis/t0-records.md §5.6 이 명명을 거부하고 RFC-N9 로 올렸다. 이 id 는 기술 식별자이며 용어집 명사가 아니다"
+        }
+      ],
+      "uncoveredAreaIds": [
+        "hub-uncovered-1",
+        "hub-uncovered-2",
+        "hub-uncovered-3"
+      ],
+      "drainEdges": [],
+      "valves": [],
+      "protectionAxis": null,
+      "systemLimits": null,
+      "initialFloodState": "dry",
+      "initialAccessState": "open",
+      "stageIds": [
+        "T0",
+        "C1",
+        "C2",
+        "C4",
+        "C6",
+        "C7",
+        "E0"
+      ],
+      "_src": {
+        "zoneId": "planning/campaign.json T0.zoneIds = [\"hub\"]",
+        "displayNameKey": "worldview/glossary.md 「당직실 / Watch Room」 — 문자열 직접 저장 금지(zones.md §1)",
+        "sceneName": "handoff/codex-unity-brief.md §③ Scenes/ 트리 (boot · ui-root · hub)",
+        "systemIds": "계통 id 는 구역 토큰을 그대로 쓴다 — 캐논은 계통에 고유명을 주지 않는다(worldview-bible §2 는 채널만 열거). 새 명사 0건이며 고유명이 필요해지면 worldview 판정 대상이다",
+        "drainEdges": "법4는 T0 범위 밖(campaign 의 routing 도입 비트는 c5-b2) → 빈 배열",
+        "valves": "허브 계통 밸브 개폐 각인 0건(synopsis/t0-records.md §5.4) → 빈 배열",
+        "protectionAxis": "data-schemas/zones.md Z-I5 — lowland·dock 에만 존재",
+        "systemLimits": "RFC-P3-009 — 표시 전용이며 현재 데이터에 값 없음(null)",
+        "initialFloodState": "planning/campaign.json T0 zoneRun 은 hub 뿐이고 침수 서술 0건",
+        "initialAccessState": "planning/campaign.json t0-b1 이 당직실 인수로 시작한다",
+        "stageIds": "planning/campaign.json stages[].zoneIds 파생"
+      }
+    }
+  ]
+}

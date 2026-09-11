@@ -1,0 +1,33 @@
+from pathlib import Path
+import json
+
+root = Path('/Users/jangyoung/orca/unknown')
+e = root / '_workspace/current/systems/tech-verification/t0-case-thread-20260910/p1-hint-leak/native-work'
+prior = e.parent.parent
+driver = (prior / 'native-driver.cs.txt').read_text()
+expected = json.loads((e / 'expected-guidance.json').read_text())
+rows = json.loads((root / 'unity/Unknown/Assets/_Project/Data/Tables/records.json').read_text())['rows']
+banned = sorted({r[k] for r in rows for k in ('recordId', 'displayNameKo')})
+banned += ['원판', '장부', '당직일지', 'H-1', 'H+3', '단일 사고', '유지 실패', '서명 순서', '책임 사슬', 'offset-left', 'offset-up']
+quoted = lambda values: ','.join(json.dumps(v, ensure_ascii=False) for v in values)
+method = '''  void GenericGuidance(Text card,string stage){
+   var lines=card.text.Split('\\n');var next=lines.Last();
+   Require(next.StartsWith("다음: ",StringComparison.Ordinal),stage+": next line present");
+   next=next.Substring(4);
+   Require(new[]{ALLOWED}.Contains(next),stage+": next line is generic objective guidance: "+next);
+   foreach(var term in new[]{BANNED})Require(!card.text.Contains(term),stage+": no disclosure of "+term);
+   Require(!System.Text.RegularExpressions.Regex.IsMatch(card.text,@"H[+-]\\d|\\d{1,2}:\\d{2}"),stage+": no authored time window");
+   Canvas.ForceUpdateCanvases();Require(card.preferredHeight<=card.rectTransform.rect.height+1f,stage+": card text fits allocated height");
+  }
+'''.replace('ALLOWED', quoted(expected['genericValues'])).replace('BANNED', quoted(banned))
+assert driver.count('  System.Collections.IEnumerator Inspect(') == 1
+driver = driver.replace('  System.Collections.IEnumerator Inspect(', method + '  System.Collections.IEnumerator Inspect(')
+driver = driver.replace('   Require(card.text.Contains(progress),stage+": "+progress+" visible");', '   Require(card.text.Contains(progress),stage+": "+progress+" visible");\n   GenericGuidance(card,stage);')
+driver = driver.replace('   yield return null;InputSystem.settings.backgroundBehavior=', '   yield return null;InputSystem.settings.backgroundBehavior=')
+driver = driver.replace('   Require(game.Interface.Focus("start"),', '   yield return Inspect("start-0-of-2","0/2",false);\n   Require(game.Interface.Focus("start"),')
+driver = driver.replace('   Act("line-hb-l2");', '   yield return Inspect("intake-document-0-of-2","0/2",false);\n   Act("line-hb-l2");')
+driver = driver.replace('   Act("hub-view-circuitmap");', '   yield return Inspect("post-b1-0-of-2","0/2",false);\n   Act("hub-view-circuitmap");')
+driver = driver.replace('   Act("hub-view-reader");Act("open-reader");Act("load-rec-plate-standard-hub");', '   yield return Inspect("post-b2-0-of-2","0/2",false);\n   Act("hub-view-reader");Act("open-reader");\n   yield return Inspect("reader-post-b2-0-of-2","0/2",false);\n   Act("load-rec-plate-standard-hub");')
+driver = driver.replace('Automated native BuildMac smoke in isolated clone;', 'Automated native BuildMac P1 generic-guidance smoke in isolated clone;')
+(e / 'native-driver.cs.txt').write_text(driver)
+print('Prepared generic-guidance driver; no Unity launched')

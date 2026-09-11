@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-10T13:51:04.291111+00:00",
+  "removedPath": "/tmp/t0-case-thread-p1-native-20260910/build-project",
+  "resolvedPath": "/private/tmp/t0-case-thread-p1-native-20260910/build-project",
+  "reason": "Native-1 real ENOSPC at commit. Release only this task-created APFS clone after successful BuildMac, input-byte proof, retained bundle hash equality, and diagnostic source snapshot.",
+  "nativeFailureLogLine": "T0 commit: Disk full. Path /tmp/t0-case-thread-p1-native-20260910/native-1-save/save.json.tmp",
+  "spaceBefore": {
+    "total": 994662584320,
+    "used": 994513858560,
+    "free": 148725760
+  },
+  "sourcePrefixPreserved": true,
+  "retainedBundleAllHashesVerified": true,
+  "operation": "shutil.rmtree(task_owned_clone)",
+  "finishedUtc": "2026-09-10T13:51:25.771042+00:00",
+  "cloneAbsent": true,
+  "spaceAfter": {
+    "total": 994662584320,
+    "used": 994143371264,
+    "free": 519213056
+  }
+}

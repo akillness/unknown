@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-10T13:49:09.530724+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "cp",
+    "-cR",
+    "/tmp/t0-case-thread-p1-native-20260910/build-project/Builds/T0-mac/Unknown.app",
+    "/Users/jangyoung/orca/unknown/unity/Unknown/Builds/T0-case-thread-p1-hint-leak-diagnostic/Unknown.app"
+  ],
+  "exitCode": 0,
+  "priorWrapperExitCode": 1,
+  "priorBuildExitCode": 0,
+  "reason": "Original parallel PlayMode runner temporary InitTestScene files caused strict post-build source check to stop; those test-owned files are now gone and all original input hashes match without intervention. No rebuild or source modification.",
+  "productionInputsUnchangedAfterTestCleanup": true,
+  "productionInputCount": 251,
+  "cloneInputDeltas": [
+    "Assets/_Project/App/T0GameSession.cs"
+  ],
+  "productionRuntimeExactPrefix": true,
+  "retainedBundleByteIdentical": true
+}

@@ -1,0 +1,501 @@
+Unity Editor version:    6000.5.6f1 (0e0577a1a2ac)
+Branch:                  6000.5/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.3.1 (Build 25D2128)
+Darwin version:          25.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Date:                    2026-09-10T05:33:08Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung" at "2026-09-10T05:33:08.609091Z"
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-nographics
+-projectPath
+/Users/jangyoung/orca/unknown/unity/Unknown
+-executeMethod
+Tide.EditorTools.T0Verification.RunBatch
+-logFile
+/tmp/unknown-t0-m1-native-checks-2.log
+Successfully changed project path to: /Users/jangyoung/orca/unknown/unity/Unknown
+/Users/jangyoung/orca/unknown/unity/Unknown
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [8594452736]  Target information:
+
+Player connection [8594452736]  * "[IP] 192.168.219.124 [Port] 55505 [Flags] 2 [Guid] 593245484 [EditorId] 593245484 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8594452736]  * "[IP] 100.119.58.79 [Port] 55505 [Flags] 2 [Guid] 593245484 [EditorId] 593245484 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8594452736] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8594452736] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              30a6a0b777a94baa9a387b91c041f94a
+  Correlation Id:          7eff4bd7a42a21a35f828ca90cd3d378
+  External correlation Id: 8402090905558403368
+  Machine Id:              GDFq97hyJBwslTnyqVIUvhYydXg=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jangyoung" (connect: 0.00s, validation: 0.01s, handshake: 0.41s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung-notifications" at "2026-09-10T05:33:09.019699Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 4513980-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.42s
+[Package Manager] Connected to IPC stream "Upm-4948" after 0.2 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.6f1 (0e0577a1a2ac)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/jangyoung/orca/unknown/unity/Unknown/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.004773 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.346 seconds
+Domain Reload Profiling: 817ms
+	BeginReloadAssembly (141ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (248ms)
+		LoadAssemblies (125ms)
+		AnalyzeDomain (184ms)
+			TypeCache.Refresh (183ms)
+				TypeCache.ScanAssembly (163ms)
+	FinalizeReload (350ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (94ms)
+			ProcessInitializeOnLoadMethodAttributes (121ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 37 packages:
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.1 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.multiplayer.center@b860850997d0)
+    com.unity.modules.accessibility@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.hierarchycore)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+[ScriptCompilation] Requested script compilation because: Assembly Definition File(s) changed
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Assembly for Assembly Definition File 'Assets/_Project/Input/Tide.Input.asmdef' will not be compiled, because it has no scripts associated with it.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,string,object[])
+UnityEngine.Debug:LogWarningFormat (string,object[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:WarnIfThereAreAssembliesWithoutAnyScripts (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings,UnityEditor.Scripting.ScriptCompilation.ScriptAssembly[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:814)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScriptsWithSettings (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:871)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:748)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface/<>c__DisplayClass21_0:<CompileScripts>b__0 () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionAsError<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus> (System.Func`1<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus>,UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:52)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs Line: 814)
+
+Assembly for Assembly Definition File 'Assets/_Project/Presentation/Tide.Presentation.asmdef' will not be compiled, because it has no scripts associated with it.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,string,object[])
+UnityEngine.Debug:LogWarningFormat (string,object[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:WarnIfThereAreAssembliesWithoutAnyScripts (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings,UnityEditor.Scripting.ScriptCompilation.ScriptAssembly[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:814)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScriptsWithSettings (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:871)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:748)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface/<>c__DisplayClass21_0:<CompileScripts>b__0 () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionAsError<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus> (System.Func`1<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus>,UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:52)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs Line: 814)
+
+Assembly for Assembly Definition File 'Assets/_Project/Save/Tide.Save.asmdef' will not be compiled, because it has no scripts associated with it.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,string,object[])
+UnityEngine.Debug:LogWarningFormat (string,object[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:WarnIfThereAreAssembliesWithoutAnyScripts (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings,UnityEditor.Scripting.ScriptCompilation.ScriptAssembly[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:814)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScriptsWithSettings (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:871)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:748)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface/<>c__DisplayClass21_0:<CompileScripts>b__0 () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionAsError<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus> (System.Func`1<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus>,UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:52)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs Line: 814)
+
+Assembly for Assembly Definition File 'Assets/_Project/UI/Tide.UI.asmdef' will not be compiled, because it has no scripts associated with it.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,string,object[])
+UnityEngine.Debug:LogWarningFormat (string,object[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:WarnIfThereAreAssembliesWithoutAnyScripts (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings,UnityEditor.Scripting.ScriptCompilation.ScriptAssembly[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:814)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScriptsWithSettings (UnityEditor.Scripting.ScriptCompilation.ScriptAssemblySettings) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:871)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilation:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs:748)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface/<>c__DisplayClass21_0:<CompileScripts>b__0 () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionAsError<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus> (System.Func`1<UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus>,UnityEditor.Scripting.ScriptCompilation.EditorCompilation/CompileStatus) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:52)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:CompileScripts (UnityEditor.Scripting.ScriptCompilation.EditorScriptCompilationOptions,UnityEditor.BuildTarget,int,string[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilationInterface.cs:187)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Scripting/ScriptCompilation/EditorCompilation.cs Line: 814)
+
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-91ce4cc105a82451580320b8034fc51a
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/jangyoung/orca/unknown/unity/Unknown
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 32.8857ms
+Starting: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/jangyoung/orca/unknown/unity/Unknown
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 2s83ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/200b0aEDbg-inputdata.json
+[195/210    2s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.Sim.dll (+2 others)
+*** Tundra requires additional run (2.06 seconds), 1 items updated, 194 evaluated
+Starting: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/netcorerun/netcorerun "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/BuildPipeline/ScriptCompilationBuildProgram.exe" "Library/Bee/200b0aEDbg.dag.json" "Library/Bee/200b0aEDbg-inputdata.json" "Library/Bee/buildprogram0.traceevents"
+WorkingDir: /Users/jangyoung/orca/unknown/unity/Unknown
+ExitCode: 0 Duration: 0s590ms
+Starting: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbg.dag" --continue-on-failure --dagfilejson="Library/Bee/200b0aEDbg.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: /Users/jangyoung/orca/unknown/unity/Unknown
+ExitCode: 0 Duration: 0s902ms
+Finished compiling graph: 205 nodes, 1218 flattened edges (1178 ToBuild, 12 ToUse), maximum node priority 33
+[           0s] Delete 5 artifact files that are no longer in use. (like Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Sim.rsp)
+[191/202    0s] CopyFiles Library/ScriptAssemblies/Tide.Sim.pdb
+[192/202    0s] CopyFiles Library/ScriptAssemblies/Tide.Sim.dll
+[193/202    0s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.Data.dll (+2 others)
+[194/202    0s] CopyFiles Library/ScriptAssemblies/Tide.Data.pdb
+[195/202    0s] CopyFiles Library/ScriptAssemblies/Tide.Data.dll
+[196/202    0s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll (+2 others)
+[197/202    0s] CopyFiles Library/ScriptAssemblies/Tide.App.pdb
+[198/202    0s] CopyFiles Library/ScriptAssemblies/Tide.App.dll
+[199/202    0s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll (+2 others)
+[200/202    0s] CopyFiles Library/ScriptAssemblies/Tide.EditorTools.dll
+[201/202    0s] CopyFiles Library/ScriptAssemblies/Tide.EditorTools.pdb
+*** Tundra build success (0.84 seconds), 11 items updated, 202 evaluated
+Total cache size 251752
+Total cache size after purge 251752, took 00:00:00.0082986
+AssetDatabase: script compilation time: 4.228734s
+Begin MonoManager ReloadAssembly
+Importing 'GUID: 138f595ac7cf74fb5a21958181a3274e - Path: Assets/_Project/Presentation' with importer (DefaultImporter)
+Imported 'GUID: 138f595ac7cf74fb5a21958181a3274e' -> (Import Result ID: 'aa94b04feac4a6d26a38bdb5fa311ea9') in 0.026 seconds [static dependencies only]. Details - ImportResultOutputID=de68d27233b6f4f3d5b5ff5c66deda9b DependenciesID=e68bdd6371d1f5b3a79435581480040b StaticDependenciesID=716eec0446087c57f2db00c3651e503d 
+Importing 'GUID: 3936c47130f9142f192156f661128061 - Path: Assets/_Project/Sim' with importer (DefaultImporter)
+Imported 'GUID: 3936c47130f9142f192156f661128061' -> (Import Result ID: '5b8e66f42bc58210217d13be1ff32f2f') in 0.007 seconds [static dependencies only]. Details - ImportResultOutputID=d536717dc279c4f902ef3723812b29fb DependenciesID=19411ae5c017e8ed72e1bbc388fe2345 StaticDependenciesID=35db1a647322158d01d8d92a44993b31 
+Importing 'GUID: b92ebda0ea6aa4315b64634fca3afc8a - Path: Assets/_Project/UI' with importer (DefaultImporter)
+Imported 'GUID: b92ebda0ea6aa4315b64634fca3afc8a' -> (Import Result ID: '4cf680e8550c77de925c11f1e85e1609') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=26f8b821d02116afa04f4281d2b561d4 DependenciesID=c536e93483ffdc0c9ea6a94683c3489b StaticDependenciesID=5a0f10e6865b4b93a2a892dd6189747a 
+Importing 'GUID: faeb8a19ba7f242fe9bbd7e7dccdd3c8 - Path: Assets/_Project/Save' with importer (DefaultImporter)
+Imported 'GUID: faeb8a19ba7f242fe9bbd7e7dccdd3c8' -> (Import Result ID: '90a2fb46b4475a237a34ca28b7d13345') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=181aaf6e6f7ed45b703a16e0a21fdfe9 DependenciesID=f4cf5c5a77f6dc5c61dac1e0983a93d5 StaticDependenciesID=87ea9f5163a604a1965f1c3abbab0395 
+Importing 'GUID: 3cbedd6fdccd94d488fc492288b059d5 - Path: Assets/_Project/Input' with importer (DefaultImporter)
+Imported 'GUID: 3cbedd6fdccd94d488fc492288b059d5' -> (Import Result ID: '898c1ec8b530a357c9e58628b9d495b5') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ee5708e53eb7901dbd76eb80f31dad65 DependenciesID=710ea4ce2b1c894387e047a5f3259c84 StaticDependenciesID=b6a01c4d70da4cb62548a1e4f250af5b 
+Importing 'GUID: bd33d03910a04410396555feae7e2a99 - Path: Assets/_Project/Tests' with importer (DefaultImporter)
+Imported 'GUID: bd33d03910a04410396555feae7e2a99' -> (Import Result ID: 'b90f59b77d59877b7fb5b68071f1eb42') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=f85dddc528714810b5d34c56856c6d10 DependenciesID=c38b8a6dc3feb6a9d2f0992db9d5dc52 StaticDependenciesID=0636f186dbbb711f8350be8748dbbed0 
+Importing 'GUID: 1fef459eca45d4e3fa4ae690ed52ff77 - Path: Assets/_Project/Data' with importer (DefaultImporter)
+Imported 'GUID: 1fef459eca45d4e3fa4ae690ed52ff77' -> (Import Result ID: '437e3519e7084d3465c2abb684cb079a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b91e79b6fb16240269c29ead0f516aae DependenciesID=dc325f732f02677ccfb64f85a0cd67e6 StaticDependenciesID=a538dce535f41df95797c71e3edacfb1 
+Importing 'GUID: bf407def7a4844fb991c6ef30addd761 - Path: Assets/_Project/App' with importer (DefaultImporter)
+Imported 'GUID: bf407def7a4844fb991c6ef30addd761' -> (Import Result ID: '0f71e27b685392901adc800dca8c63fb') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b66b71bcb84c0709883d8b8f25296705 DependenciesID=b261e7137e1468fdf86d81352a98a23e StaticDependenciesID=2b87580b881ad045b402c747dd54843a 
+Importing 'GUID: 536427c6fb2bb40e3829dd1e86cd7217 - Path: Assets/_Project/Tests/PlayMode' with importer (DefaultImporter)
+Imported 'GUID: 536427c6fb2bb40e3829dd1e86cd7217' -> (Import Result ID: '5ce23a8654e3739500d010334df30b02') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=0c212532f3a7a9d7e3aa8a6e5c6d3c59 DependenciesID=d69f79e18ada429a58ae9685e69389cd StaticDependenciesID=e4252d899ea11a68a00025199cb47e52 
+Importing 'GUID: f53c8ef7bfbd44e9cbcdead2ff169c9c - Path: Assets/_Project/Data/Tables' with importer (DefaultImporter)
+Imported 'GUID: f53c8ef7bfbd44e9cbcdead2ff169c9c' -> (Import Result ID: '94037e803557d6d90543f25efb92389e') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f973b669c1e0fd4cb3c25066233528a0 DependenciesID=29d92f6785863e89eb00985c1ee232b3 StaticDependenciesID=e9d951f9318940f52f75781f64d27ff7 
+Importing 'GUID: 7bebe4592770942bba43ebfa0369b150 - Path: Assets/_Project/Tests/EditMode' with importer (DefaultImporter)
+Imported 'GUID: 7bebe4592770942bba43ebfa0369b150' -> (Import Result ID: 'b34b4bcb55b9fba0dce44a0cfda93416') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9da247ead57aeeb2e6210dce41783ed3 DependenciesID=0c580e8317b5b2fe59412e43d253c90d StaticDependenciesID=84d48c8c93dfdd079d88590b597f4631 
+Importing 'GUID: 31fc75824449f4199a7daccd3f8bf57f - Path: Assets/_Project/Tests/EditMode/Tide.Tests.Sim.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: 31fc75824449f4199a7daccd3f8bf57f' -> (Import Result ID: 'bd3f3786d73a39b2457a2bcc66df871b') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=ec29f9cc259e5b8528cb5edb1503f2f0 DependenciesID=1abe6f3c2a7100787b675790f94e36ed StaticDependenciesID=9563ec8023e4888acc7bdd71d1ed2f9f 
+Importing 'GUID: c1d50420255a345448e1dd5c5370a577 - Path: Assets/_Project/Save/Tide.Save.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: c1d50420255a345448e1dd5c5370a577' -> (Import Result ID: '2372d8b64f321bd8d670fd700817a973') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=cc08bcb83feac4d890489e50f636b11c DependenciesID=e8407313b401fcdd7e3de81a5c037f10 StaticDependenciesID=f71eb5dd0a86e970584fc603d2632bf5 
+Importing 'GUID: 8605be434a8db49e6bdf29edf28e449b - Path: Assets/_Project/Tests/PlayMode/Tide.Tests.Play.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: 8605be434a8db49e6bdf29edf28e449b' -> (Import Result ID: 'b4bb09477a29c8e23bb19ffb6dd22638') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=340ff2c748dd3b334c04f34c22f12211 DependenciesID=86b0e4a83359f4d34467f6d3a51379a7 StaticDependenciesID=9690dcd2296c20692a816fa6c95ab448 
+Importing 'GUID: b70f720f61af54c4ba293ec070dbfdf1 - Path: Assets/_Project/Presentation/Tide.Presentation.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: b70f720f61af54c4ba293ec070dbfdf1' -> (Import Result ID: '2d50bef3d39d0d86a520ada8fa430b22') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e9f3f5da68db113a300c40aa8e6b12e8 DependenciesID=a6e45cf2feeb098b3ba4d64d64209b33 StaticDependenciesID=360672ad937cc392a2dac798568457d7 
+Importing 'GUID: c775817d1bc414cf5af65b4395fa698d - Path: Assets/_Project/Input/Tide.Input.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: c775817d1bc414cf5af65b4395fa698d' -> (Import Result ID: 'f948d5396f1c137499cffa3c3843bd2a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d3d004d91298ab9afcc9155d23246ebd DependenciesID=3a42f08e53b64360ac9a02fc36a03134 StaticDependenciesID=bb9eb79131320689f87bca9efb975ea6 
+Importing 'GUID: c919f35c8d89d4ef8ae92d4e60ee361d - Path: Assets/_Project/Sim/Tide.Sim.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: c919f35c8d89d4ef8ae92d4e60ee361d' -> (Import Result ID: '29c18f0d268f0c1f3ab51cb6dd1bbb4a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6e0079fce740a9a22faa213d4821ecf7 DependenciesID=f0c0c54b2057d756c4728f72c361e9af StaticDependenciesID=868fc6073ec5a001d8481d236fd280a3 
+Importing 'GUID: 6df83e718ecde4764a5e275d7e5c5620 - Path: Assets/_Project/App/Tide.App.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: 6df83e718ecde4764a5e275d7e5c5620' -> (Import Result ID: '2b44645e863514c126035ca47196a9a2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ef38f4ec8fc14d440114096dcca3d703 DependenciesID=14f1504ede97d8474947aaac0a0eb903 StaticDependenciesID=62d5fcc4439c7d67fec69806deefa710 
+Importing 'GUID: 6dfadd2067821497b9da436037390bda - Path: Assets/_Project/UI/Tide.UI.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: 6dfadd2067821497b9da436037390bda' -> (Import Result ID: 'cea90e346cb7a8d5f07c6e4375927090') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=474ddd420875acf17e77b00cb1c9f4b9 DependenciesID=1621184b66386b8b17bfaf11f2f61011 StaticDependenciesID=c7bf74d1884dcb224771e9e6999d11fd 
+Importing 'GUID: cd598e9e684944c3e81a9c56c32c270d - Path: Assets/_Project/Editor/Tide.EditorTools.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: cd598e9e684944c3e81a9c56c32c270d' -> (Import Result ID: 'c72f48727a3ba9a288d4ba2a11d06625') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3acd0b036be93e8d866c710dd47d05ef DependenciesID=3929472801e690019ea16afb5b9fc62f StaticDependenciesID=b2baa846ba0b1bea082ec09dd86a996f 
+Importing 'GUID: cd3bb2217d3ea46ab803db15a7ff686a - Path: Assets/_Project/Data/Tide.Data.asmdef' with importer (AssemblyDefinitionImporter)
+Imported 'GUID: cd3bb2217d3ea46ab803db15a7ff686a' -> (Import Result ID: 'd0a7c76eea76b16f647a488d7dc72c83') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=663cb7ae90dfa8536c611cb069a7afc5 DependenciesID=ab1c0dd592c9ad0a3747c09c9837d22a StaticDependenciesID=982f5dec61fe7453b754fbdefac95a35 
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.306 seconds
+Domain Reload Profiling: 673ms
+	BeginReloadAssembly (248ms)
+		DisableScriptedObjects (41ms)
+		CreateAndSetChildDomain (69ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (74ms)
+		LoadAssemblies (99ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (4ms)
+	FinalizeReload (307ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (46ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Importing 'GUID: 710417414a9a3474b8e461dda891d248 - Path: Assets/_Project/Data/Tables/hints.json' with importer (TextScriptImporter)
+Imported 'GUID: 710417414a9a3474b8e461dda891d248' -> (Import Result ID: 'ea8e681785dd737b627a73e8338764de') in 0.007 seconds [static dependencies only]. Details - ImportResultOutputID=ed4737c26580055489a1253698256569 DependenciesID=be02a5c91307c4e2f6d1d29d05038867 StaticDependenciesID=2070686a303259573504a9c3e3b3f4b1 
+Importing 'GUID: 03d8d7bafcb2349a2907bfa1ba0b4dc6 - Path: Assets/_Project/Data/Tables/zones.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 03d8d7bafcb2349a2907bfa1ba0b4dc6' -> (Import Result ID: 'ce4832c28a501bb3341c09f80872059b') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=45cf21f4aa41dde0f47806595678e5e2 DependenciesID=ea37b23ca36df71fd31a032db1384e93 StaticDependenciesID=95f1a85e3a3dc9601b0db64486b3badf 
+Importing 'GUID: 239c4327c55954e8894786c925cc0244 - Path: Assets/_Project/Data/Tables/beats.json' with importer (TextScriptImporter)
+Imported 'GUID: 239c4327c55954e8894786c925cc0244' -> (Import Result ID: '265cecde056cc34bb910340175bcde74') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=8dd11779f1cf11aae5dc6630ea4bc29c DependenciesID=a9c58b584ac8ce4ce96d135d02cf959b StaticDependenciesID=b468e6201e41fe6fd3168d6870144e96 
+Importing 'GUID: 534527834b2db4e348d7556d47059b61 - Path: Assets/_Project/Data/Tables/records.json' with importer (TextScriptImporter)
+Imported 'GUID: 534527834b2db4e348d7556d47059b61' -> (Import Result ID: '408220b39c6c79cbab165f34fe771eb0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f488fa2abd840a5a78636202a86570a6 DependenciesID=b6c118fb01984055cecb3967d2b8e243 StaticDependenciesID=1fb18dc33cf2549961e02f4c768bd784 
+Importing 'GUID: 566b25a78b8834a4a9097e4241e9c74c - Path: Assets/_Project/Data/Tables/tables-receipt.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 566b25a78b8834a4a9097e4241e9c74c' -> (Import Result ID: '659d865cffd7103a496f6136069ec9fd') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=1de85d56c456e632924f8d470ac7c80e DependenciesID=c6c75a5d8bd2b7921253405bd5a3c1e3 StaticDependenciesID=938c35fe5376ff14e5bcbf4b05e45cb6 
+Importing 'GUID: 76e562cab2a1a474fb7cd580bea84356 - Path: Assets/_Project/Data/Tables/beats.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 76e562cab2a1a474fb7cd580bea84356' -> (Import Result ID: 'c297e15f7813968d3a3f3cf5a4a1cf8c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=70617a1d8bc200b8f30b9e77b63532fc DependenciesID=ab0585df29476d2328f67c2671323322 StaticDependenciesID=9913d2d600ba408955c1336c66f6c9b1 
+Importing 'GUID: 866bb60bf1f924fe8acd1660963ca6e2 - Path: Assets/_Project/Data/Tables/tools.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 866bb60bf1f924fe8acd1660963ca6e2' -> (Import Result ID: '03f236f52310cb9d51dd78f0defa0c93') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=325fe50594e32292164d34ea4bb172d8 DependenciesID=f29bfd3ebd721039c3d21993fb14e228 StaticDependenciesID=6bcbc5991057654204103a4d3cd6d3a9 
+Importing 'GUID: 1835f84e1693a4bb79f7cc8d19375529 - Path: Assets/_Project/Data/Tables/hints.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 1835f84e1693a4bb79f7cc8d19375529' -> (Import Result ID: 'd5dad4706e9df3cb6547ce27df4fa2ce') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a789e6801e2ded821bbceec1965bed3f DependenciesID=ac20330fd6987f3b117ce9b69c0d2970 StaticDependenciesID=fe27291ef0a4a10f24a1b3197c93659e 
+Importing 'GUID: 0cfe8fb1d99434a38946654ec08a27fb - Path: Assets/_Project/Data/Tables/records.meta.md' with importer (TextScriptImporter)
+Imported 'GUID: 0cfe8fb1d99434a38946654ec08a27fb' -> (Import Result ID: '5a2835cfef2c5b4bc674d6d86608a639') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=36d78e6849aeafef2607808cfcbe90a3 DependenciesID=d064cb517647f50d534ed95c9ed90774 StaticDependenciesID=170a8bb7433ee6eb17e3a90aeb8c947c 
+Importing 'GUID: 8cda1cca7a8da45a8ae8aee90fbdb557 - Path: Assets/_Project/Data/Tables/tools.json' with importer (TextScriptImporter)
+Imported 'GUID: 8cda1cca7a8da45a8ae8aee90fbdb557' -> (Import Result ID: '2694ca27205859368066eab79747f249') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=cfab3f6e84be6c9e2466675e12f4a001 DependenciesID=11eeb7b82d7a36d61876d7acbfedac92 StaticDependenciesID=32203e35e2d55ad479f9c8401eab6996 
+Importing 'GUID: 2ed0e4112bc4643e69c5715653840d32 - Path: Assets/_Project/Data/Tables/tables-receipt.json' with importer (TextScriptImporter)
+Imported 'GUID: 2ed0e4112bc4643e69c5715653840d32' -> (Import Result ID: 'ddeaeca4b39304e960eee14769b6aca5') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=cc8c37d503cebbebc190e5ef96d71b74 DependenciesID=8a9f56afba082cf00e76bac3ae4ea0df StaticDependenciesID=711509eb0c3e30ca3a23f39848bdc036 
+Importing 'GUID: fe39ac644931845b6896ac392f012392 - Path: Assets/_Project/Data/Tables/zones.json' with importer (TextScriptImporter)
+Imported 'GUID: fe39ac644931845b6896ac392f012392' -> (Import Result ID: '91954a85dc7b00097aa578992f2351ad') in 0.005 seconds [static dependencies only]. Details - ImportResultOutputID=9c65181d8b0e8c5395988b02da18a723 DependenciesID=3630000faeee4cf8048cfd6ecea3c494 StaticDependenciesID=a8ee88cc0846884a89c09f6fbbaeb67c 
+Starting new worker id: 0 with log in /Users/jangyoung/orca/unknown/unity/Unknown/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=caf7b7b9262874963af1285ae714c7d6): Total: 5.257 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=33 (actual=33, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=555 ms
+		Asset DB Callback time: managed=53 ms, native=32 ms
+		Scripting: domain reloads=1, domain reload time=378 ms, compile time=4230 ms, other=4 ms
+		Project Asset Count: scripts=136, non-scripts=93
+		Asset File Changes: new=0, changed=5, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 30.557ms
+	ApplyChangesToAssetFolders: 0.221ms
+	Scan: 77.954ms
+	Collect global state as custom dependencies: 14.475ms
+	OnSourceAssetsModified: 0.367ms
+	CategorizeScriptCompilationAssets: 0.251ms
+	ProcessAssetsWithTransientArtifactChanges: 1.753ms
+	CategorizeAssets: 1.487ms
+	CompileScripts: 4229.976ms
+	ImportOutOfDateAssets: 431.764ms (308.544ms without children)
+		ImportManagerImport: 117.613ms (2.380ms without children)
+			UpdateCategorizedAssets: 0.112ms
+		UnloadImportedAssets: 0.164ms
+		ImportSchedulerStart: 5.404ms
+	PostProcessAllAssets: 53.529ms
+		AssemblyValidation.PostprocessAllAssets 0.565ms
+		MonoPostProcessAllAssets: 52.267ms
+			AssetPostprocessor.OnPostprocessAllAssets 20.294ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 10.161ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 5.916ms
+			SyncVS.PostprocessSyncProject 3.446ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 2.962ms
+			AssetChangedListener.OnPostprocessAllAssets 1.207ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.713ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.546ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.394ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.333ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.329ms
+			AssetEvents.OnPostprocessAllAssets 0.247ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.166ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.135ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.129ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.100ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.087ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.084ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.075ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.069ms
+	PostAssetChangesProfiler: 2.177ms
+	UnloadStreamsBegin: 1.022ms
+	PersistCurrentRevisions: 0.118ms
+	GenerateScriptTypeHashes: 0.204ms
+	GenerateScriptTypeSerializationHashes: 0.430ms
+	Untracked: 406.862ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 0.102ms
+Initializing Unity extensions:
+The currently available disk space (154 MB) is lower than the suggested threshold of 256 MBs. We strongly suggest that you free up some space before resuming work in the Editor.
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Unknown
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 92 unused Assets / (454.3 KB). Loaded Objects now: 741.
+Memory consumption went from 132.8 MB to 132.3 MB.
+Total: 5.058583 ms (FindLiveObjects: 0.032875 ms CreateObjectMapping: 0.012500 ms MarkObjects: 4.791458 ms  DeleteObjects: 0.221417 ms)
+
+InvalidOperationException: Producer source differs from campaign.json
+  at Tide.EditorTools.T0AssetImporter.Import () [0x000d2] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Editor/T0AssetImporter.cs:25 
+  at Tide.EditorTools.T0Verification.RunBatch () [0x00004] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Editor/T0Verification.cs:230 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Tide.EditorTools.T0Verification:RunBatch() (at Assets/_Project/Editor/T0Verification.cs:248)
+
+(Filename: Assets/_Project/Editor/T0Verification.cs Line: 248)
+
+MonoPathRemapper: Attempts to remap: 1126; Successful remaps: 0
+Serialized file version minimum: 23, current 23
+Curl error 42: Callback aborted
+Request timed out while processing request "https://public-cdn.cloud.unity3d.com/config/production", HTTP error code 0
+.[UnityConnect] Request timed out.
+Thread 0x16b7a7000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-jangyoung-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-jangyoung channel disconnected successfully.
+Thread 0x16c783000 may have been prematurely finalized
+Thread 0x16c80f000 may have been prematurely finalized
+AcceleratorClientConnectionCallback - disconnected - :0
+Thread 0x16e4c3000 may have been prematurely finalized
+Cleanup mono
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 43
+MSBuild 서버을(를) 종료하는 중...
+VB/C# 컴파일러 서버을(를) 종료하는 중...
+MSBuild 서버을(를) 종료했습니다.
+VB/C# 컴파일러 서버을(를) 종료했습니다.

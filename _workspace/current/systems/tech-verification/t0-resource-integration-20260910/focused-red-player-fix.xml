@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.1435884">
+  <test-suite type="TestSuite" id="1028" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="19" result="Failed" site="Child" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.143588" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1022" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="19" result="Failed" site="Child" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.090959" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="76949" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1023" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="19" result="Failed" site="Child" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.089621" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1024" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="19" result="Failed" site="Child" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.088861" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1017" name="T0ResourceInteractionTests" fullname="Tide.Tests.T0ResourceInteractionTests" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="2.087518" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1021" name="CloserSceneGeometryBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserSceneGeometryBlocksDrawerSelection" methodname="CloserSceneGeometryBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="731454854" result="Passed" start-time="2026-09-10 11:02:57Z" end-time="2026-09-10 11:02:59Z" duration="1.618061" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" fullname="Tide.Tests.T0ResourceInteractionTests.LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" methodname="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="278746189" result="Passed" start-time="2026-09-10 11:02:59Z" end-time="2026-09-10 11:02:59Z" duration="0.167098" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="NonReadableDrawerPickingNeedsNoCookedColliderAndRejectsHiddenOrMissedBounds" fullname="Tide.Tests.T0ResourceInteractionTests.NonReadableDrawerPickingNeedsNoCookedColliderAndRejectsHiddenOrMissedBounds" methodname="NonReadableDrawerPickingNeedsNoCookedColliderAndRejectsHiddenOrMissedBounds" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1223119295" result="Failed" start-time="2026-09-10 11:02:59Z" end-time="2026-09-10 11:02:59Z" duration="0.134438" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Picking must not cook runtime colliders for the non-readable player meshes
+  Expected: <empty>
+  But was:  < <SM_Hub_Workbench_Drawer_Tray (UnityEngine.MeshCollider)>, <SM_Hub_Workbench_Drawer_Casing (UnityEngine.MeshCollider)> >
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ResourceInteractionTests+<NonReadableDrawerPickingNeedsNoCookedColliderAndRejectsHiddenOrMissedBounds>d__18.MoveNext () [0x000a9] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ResourceInteractionTests.cs:136
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1019" name="SceneClickDoesNotCrossOverlayToolDocumentOrUi" fullname="Tide.Tests.T0ResourceInteractionTests.SceneClickDoesNotCrossOverlayToolDocumentOrUi" methodname="SceneClickDoesNotCrossOverlayToolDocumentOrUi" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1021472342" result="Passed" start-time="2026-09-10 11:02:59Z" end-time="2026-09-10 11:02:59Z" duration="0.159819" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

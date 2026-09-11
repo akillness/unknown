@@ -6,11 +6,26 @@ supersedes: null
 owner: game-production-director
 ---
 
-# Task Manifest
+# Task Manifest (R7 종료 · T0 M1 코어 구현·검증)
+
+2026-09-10 사용자 후속 요청: README/media `13a4133`, M1 경과 README `75102fd` 푸시 완료. T0 M1 코어 native 검사 21/0 및 독립 QA 완료; 출처 C7-F50과 디스크 공간 문제는 열려 있다. 상세 범위·영수증은 `production/codex-t0-m1-status.md`에서 추적한다. 본편 production gate는 그대로 유지한다.
+
+| task | owner | phase | artifact | gate | status | beat |
+|---|---|---|---|---|---|---|
+| C3 세계관 재기반·planner REDO·레인 재도출·QA 재검증 3회 | 전 설계 레인 + QA | P4 | worldview/ planning/ synopsis/ systems/ balance/ economy/ qa/c3-review.md | D-G1/G7 | done (S1 0·S2 0·S3 1·rfc 2) | C3 |
+| C4 재검증 + 승격 | systems, modeling, visual lanes, QA | P4 | qa/c4-review.md, 승격 5건 | D-G4/G5/G6 | done (S2 1 잔여) | C4 |
+| C5 독립 검토 + 수정 | product, presentation, systems, QA | P4 | qa/c5-review.md | D-G3/G7 | done (S2 1 = 대장, 재생성 완료) | C5 |
+| C6 통합 초안 v1 + 5렌즈 판정 + 수정 | planner, director, QA | P4 | planning/game-draft-v1.md qa/c6-review.md | D-all | done (S2 2 → R7b) | C6 |
+| C7 핸드오프 + T0 인스턴스 데이터 + 반박 3렌즈 | systems, modeling, synopsis, planner, QA | P5 | handoff/ systems/data/t0/ | D-G8 | done (S1 0·S2 1 → R7b) | C7 |
+| 2D 45장·3D 그레이박스·영상 2클립·README 미디어 | concept, modeling, director | P3 | assets/ docs/media/ README.md | D-G5 | done (runtimeEligible:false) | C7 |
+| Unity 6000.5.6f1 in-repo 스켈레톤 | systems | P3 | unity/Unknown/ | – | done (헤드리스 열기 영수증 2차) | C7 |
+| R7b 한 줄 수정 + 승격(interaction-rules·UI meta·business-model) | systems, product, planner, QA | P5 | 해당 파일 | – | in-progress | C7 |
+| 사이클 종료: 회고·freshness·graphify·zg·vault·CLAUDE.md | director | P5 | retrospectives/ | G8 | in-progress | C7 |
+| **다음: T0 구현(Codex) → 사람 검증 12명 → Base production gate** | Codex + QA + director | – | unity/Unknown, handoff/verification-plan.md | G4~G7 | open | 다음 회차 |
 
 ## T0 M2 continuation (2026-09-10)
 
-See `production/codex-t0-m2-status.md` for current scope and evidence.
+See `production/codex-t0-m2-status.md` for current scope and evidence; it supersedes the M1-only current-status paragraph above, while preserving historical receipts.
 
 | task | owner | phase | artifact | gate | status | beat |
 |---|---|---|---|---|---|---|

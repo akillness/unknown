@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-10T13:48:54.482178+00:00",
+  "buildUnityExitCode": 0,
+  "wrapperExitCode": 1,
+  "priorInputHashesChanged": false,
+  "interpretation": "Strict post-build exact source inventory check detects temporary InitTestScene files owned by concurrent original-project PlayMode run; no source is edited or removed by native task.",
+  "sourceDeltasAtReceiptTime": [],
+  "sourceDeltasObservedImmediatelyAfterWrapper": [
+    {
+      "path": "Assets/InitTestSceneb0ff8234-7e50-45b7-ae4f-b5d242a383c6.unity",
+      "before": null,
+      "observedSha256": "60e5cc1a248b8054fe36ed3dcc1380a03cf10836f881ef28992da5a5b525fbcd"
+    },
+    {
+      "path": "Assets/InitTestSceneb0ff8234-7e50-45b7-ae4f-b5d242a383c6.unity.meta",
+      "before": null,
+      "observedSha256": "e346a3fc00a2947956edc376a4e0adcb11cc98576b48a30ed889df2798217338"
+    }
+  ],
+  "note": "Source deltas were observed in immediate diagnostic tool output; by the time this receipt was written the parent PlayMode run had exited and Unity removed its temporary scene. Original failed build-mac-command.json remains unchanged."
+}

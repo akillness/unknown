@@ -1,0 +1,61 @@
+from pathlib import Path
+import subprocess, json, hashlib, datetime, sys
+
+root = Path('/Users/jangyoung/orca/unknown')
+source = root / 'unity/Unknown'
+e = root / '_workspace/current/systems/tech-verification/t0-case-thread-20260910/p1-hint-leak/native-work'
+owned = Path('/tmp/t0-case-thread-p1-native-20260910')
+clone = owned / 'build-project'
+runtime = Path('Assets/_Project/App/T0GameSession.cs')
+utc = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+def inputs(base):
+    return {str(p.relative_to(base)): sha(p) for tree in ('Assets', 'Packages', 'ProjectSettings') for p in sorted((base/tree).rglob('*')) if p.is_file()}
+
+assert not clone.exists(), 'Refuse to overwrite any existing clone'
+assert (e / 'native-driver.cs.txt').exists()
+owned.mkdir(exist_ok=True)
+clone.mkdir()
+original = inputs(source)
+prefix = (source/runtime).read_bytes()
+suffix = (e/'native-driver.cs.txt').read_bytes()
+receipt = {'utc': utc(), 'sourceRoot': str(source), 'clone': str(clone), 'productionInputs': original, 'productionInputCount': len(original), 'cloneCommands': []}
+for name in ('Assets', 'Packages', 'ProjectSettings', 'Library'):
+    command = ['rtk','proxy','cp','-cR',str(source/name),str(clone/name)]
+    receipt['cloneCommands'].append(command)
+    (e/'build-inputs.json').write_text(json.dumps(receipt, indent=2))
+    subprocess.run(command, check=True)
+assert inputs(clone) == original, 'Clone must initially equal production inputs'
+(clone/runtime).write_bytes(prefix + suffix)
+receipt.update(diagnosticOnlyDelta=str(runtime), productionRuntimeIsExactPrefix=(clone/runtime).read_bytes()==prefix+suffix,
+    productionRuntimeSha256=sha(source/runtime), driverSha256=sha(e/'native-driver.cs.txt'), diagnosticRuntimeSha256=sha(clone/runtime))
+(e/'build-inputs.json').write_text(json.dumps(receipt, indent=2))
+command = ['rtk','proxy','/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity','-batchmode','-nographics','-projectPath',str(clone),'-quit','-executeMethod','Tide.EditorTools.T0ProjectBuilder.BuildMac','-logFile',str(e/'build-mac.log')]
+build = {'command': command, 'startedUtc': utc(), 'sourceHashes': original, 'timeoutSeconds': 900}
+(e/'build-mac-command.json').write_text(json.dumps(build, indent=2))
+try:
+    build['exitCode'] = subprocess.run(command, timeout=900).returncode
+except subprocess.TimeoutExpired:
+    build.update(exitCode=None, timedOut=True)
+build['finishedUtc'] = utc()
+build['productionInputsUnchanged'] = inputs(source) == original
+build['productionRuntimeExactPrefixAfterBuild'] = (clone/runtime).read_bytes() == prefix+suffix
+clone_after=inputs(clone)
+build['cloneInputDeltasAfterBuild']=[p for p in sorted(set(original)|set(clone_after)) if original.get(p)!=clone_after.get(p)]
+(e/'build-mac-command.json').write_text(json.dumps(build, indent=2))
+if build.get('exitCode') != 0 or not build['productionInputsUnchanged'] or not build['productionRuntimeExactPrefixAfterBuild']:
+    print(json.dumps(build, indent=2));sys.exit(1)
+generated=clone/'Builds/T0-mac/Unknown.app'
+assert generated.is_dir(), 'BuildMac output absent'
+app=source/'Builds/T0-case-thread-p1-hint-leak-diagnostic/Unknown.app'
+assert not app.exists(), 'Refuse to overwrite a retained player bundle'
+app.parent.mkdir(exist_ok=True)
+retain_command=['rtk','proxy','cp','-cR',str(generated),str(app)]
+subprocess.run(retain_command,check=True)
+build['retainBundleCommand']=retain_command
+(e/'build-mac-command.json').write_text(json.dumps(build,indent=2))
+assert {str(p.relative_to(generated)):sha(p) for p in generated.rglob('*') if p.is_file()}=={str(p.relative_to(app)):sha(p) for p in app.rglob('*') if p.is_file()}
+manifest={'app': str(app), 'utc': utc(), 'files': {str(p.relative_to(app)): {'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(app.rglob('*')) if p.is_file()}}
+manifest['fileCount']=len(manifest['files'])
+(e/'player-manifest.json').write_text(json.dumps(manifest, indent=2))
+print(json.dumps({'buildExit':build['exitCode'],'productionInputCount':len(original),'productionInputsUnchanged':build['productionInputsUnchanged'],'cloneInputDeltasAfterBuild':build['cloneInputDeltasAfterBuild'],'app':str(app),'fileCount':manifest['fileCount']},indent=2))

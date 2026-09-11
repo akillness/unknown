@@ -1,0 +1,34 @@
+from pathlib import Path
+import json,hashlib,subprocess,datetime
+
+root=Path('/Users/jangyoung/orca/unknown')
+source=root/'unity/Unknown'
+e=root/'_workspace/current/systems/tech-verification/t0-case-thread-20260910/p1-hint-leak/native-work'
+original=json.loads((e/'build-inputs.json').read_text())
+build=json.loads((e/'build-mac-command.json').read_text())
+clone=Path(original['clone'])
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def inputs(base):
+ return {str(p.relative_to(base)):sha(p) for tree in ('Assets','Packages','ProjectSettings') for p in sorted((base/tree).rglob('*')) if p.is_file()}
+current=inputs(source)
+deltas=[p for p in sorted(set(current)|set(original['productionInputs'])) if current.get(p)!=original['productionInputs'].get(p)]
+assert not deltas, 'Wait for original Unity test runner to clean its temporary scene: '+repr(deltas)
+assert build['exitCode']==0
+assert 'T0_MAC_BUILD Succeeded' in (e/'build-mac.log').read_text()
+runtime=Path(original['diagnosticOnlyDelta'])
+assert (clone/runtime).read_bytes()==(source/runtime).read_bytes()+(e/'native-driver.cs.txt').read_bytes()
+clone_inputs=inputs(clone)
+clone_deltas=[p for p in sorted(set(clone_inputs)|set(current)) if clone_inputs.get(p)!=current.get(p)]
+assert clone_deltas==[str(runtime)], repr(clone_deltas)
+generated=clone/'Builds/T0-mac/Unknown.app'
+app=source/'Builds/T0-case-thread-p1-hint-leak-diagnostic/Unknown.app'
+assert generated.is_dir() and not app.exists()
+app.parent.mkdir(exist_ok=True)
+command=['rtk','proxy','cp','-cR',str(generated),str(app)]
+subprocess.run(command,check=True)
+assert {str(p.relative_to(generated)):sha(p) for p in generated.rglob('*') if p.is_file()}=={str(p.relative_to(app)):sha(p) for p in app.rglob('*') if p.is_file()}
+receipt={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'command':command,'exitCode':0,'priorWrapperExitCode':1,'priorBuildExitCode':0,'reason':'Original parallel PlayMode runner temporary InitTestScene files caused strict post-build source check to stop; those test-owned files are now gone and all original input hashes match without intervention. No rebuild or source modification.','productionInputsUnchangedAfterTestCleanup':True,'productionInputCount':len(current),'cloneInputDeltas':clone_deltas,'productionRuntimeExactPrefix':True,'retainedBundleByteIdentical':True}
+(e/'retention-after-test-cleanup.json').write_text(json.dumps(receipt,indent=2))
+files={str(p.relative_to(app)):{'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(app.rglob('*')) if p.is_file()}
+(e/'player-manifest.json').write_text(json.dumps({'utc':receipt['utc'],'app':str(app),'fileCount':len(files),'files':files},indent=2))
+print(json.dumps(receipt,indent=2))

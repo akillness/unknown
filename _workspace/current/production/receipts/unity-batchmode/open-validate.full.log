@@ -1,0 +1,34 @@
+Unity Editor version:    6000.5.6f1 (0e0577a1a2ac)
+Branch:                  6000.5/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.3.1 (Build 25D2128)
+Darwin version:          25.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Date:                    2026-09-09T18:29:25Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung" at "2026-09-09T18:29:25.031676Z"
+[Licensing::Client] Code 1 while verifying Licensing Client signature (process Id: 2303, path: "/Applications/Unity/Hub/Editor/2022.3.32f1-x86_64/Unity.app/Contents/Frameworks/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-jangyoung"
+[Licensing::IpcConnector] LicenseClient-jangyoung channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung-6000.5.6" at "2026-09-09T18:29:25.230616Z"
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-nographics
+-quit
+-projectPath
+/Users/jangyoung/orca/unknown/unity/Unknown
+-logFile
+/private/tmp/claude-501/-Users-jangyoung-orca-unknown/95acc4a2-a11a-4f7f-878e-328f74b90c9d/scratchpad/unity-logs/open-validate.log
+Successfully changed project path to: /Users/jangyoung/orca/unknown/unity/Unknown
+/Users/jangyoung/orca/unknown/unity/Unknown
+[Package Manager] Server process was shutdown

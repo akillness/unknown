@@ -1,0 +1,187 @@
+
+// Diagnostic-only suffix for the isolated native smoke clone's T0GameSession.cs.
+// The production prefix is preserved verbatim. No production diagnostic API is added.
+namespace Tide.App {
+ public sealed class T0CaseThreadSmoke : UnityEngine.MonoBehaviour {
+  string output; T0GameSession game; Mouse mouse; Keyboard keyboard; GameObject blocker;
+  readonly JArray checks=new JArray(), actions=new JArray(), stages=new JArray();
+  JObject occlusion; float deadline;
+  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+  static void Launch(){
+   if(Array.IndexOf(Environment.GetCommandLineArgs(),"--t0-case-thread-smoke")<0)return;
+   var host=new GameObject("Temporary native case thread smoke");DontDestroyOnLoad(host);host.AddComponent<T0CaseThreadSmoke>();
+  }
+  System.Collections.IEnumerator Start(){
+   var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--t0-case-thread-output");
+   if(index<0||index+1>=args.Length){Debug.LogError("Missing --t0-case-thread-output");Application.Quit(1);yield break;}
+   output=args[index+1];Directory.CreateDirectory(output);deadline=Time.realtimeSinceStartup+240;
+   // Flatten nested enumerators so any failed nested assertion produces the JSON failure receipt.
+   var stack=new System.Collections.Generic.Stack<System.Collections.IEnumerator>();stack.Push(Run());
+   while(stack.Count>0){
+    bool more=false;object current=null;Exception failure=null;
+    try{if(Time.realtimeSinceStartup>deadline)throw new TimeoutException("Bounded native smoke exceeded 240 seconds");more=stack.Peek().MoveNext();if(more)current=stack.Peek().Current;}catch(Exception error){failure=error;}
+    if(failure!=null){Debug.LogException(failure);Write(false,failure.ToString());Application.Quit(1);yield break;}
+    if(!more){stack.Pop();continue;}
+    if(current is System.Collections.IEnumerator nested){stack.Push(nested);continue;}
+    yield return current;
+   }
+   if(mouse!=null)InputSystem.RemoveDevice(mouse);if(keyboard!=null)InputSystem.RemoveDevice(keyboard);
+   Write(true,null);Debug.Log("T0_CASE_THREAD_NATIVE_PASS "+checks.Count);Application.Quit(0);
+  }
+  void Require(bool condition,string label){if(!condition)throw new InvalidOperationException(label);checks.Add(label);Debug.Log("T0_CASE_THREAD_CHECK "+label);}
+  void Write(bool pass,string error){
+   File.WriteAllText(Path.Combine(output,"native-result.json"),new JObject{
+    ["pass"]=pass,["error"]=error,["checks"]=checks,["actionTrace"]=actions,["stages"]=stages,["occlusion"]=occlusion,
+    ["utc"]=DateTime.UtcNow.ToString("O"),["graphicsDevice"]=SystemInfo.graphicsDeviceType.ToString(),["device"]=SystemInfo.processorType,
+    ["scope"]="Automated native BuildMac P1 generic-guidance smoke in isolated clone; virtual InputSystem keyboard/mouse plus explicitly labeled existing UI action adapters; no human playtest, performance, accessibility, physical-device, or gamepad validation"
+   }.ToString());
+  }
+  void Act(string id){actions.Add(new JObject{["path"]="existing UI action adapter",["id"]=id});Require(game.Interface.Activate(id),"existing UI action available: "+id);}
+  System.Collections.IEnumerator KeyPress(Key key){
+   actions.Add(new JObject{["path"]="native player InputSystem virtual keyboard",["key"]=key.ToString()});
+   InputSystem.QueueStateEvent(keyboard,new UnityEngine.InputSystem.LowLevel.KeyboardState(key));yield return null;
+   InputSystem.QueueStateEvent(keyboard,new UnityEngine.InputSystem.LowLevel.KeyboardState());yield return null;
+  }
+  System.Collections.IEnumerator Click(Vector2 point,string label){
+   actions.Add(new JObject{["path"]="native player InputSystem virtual mouse",["target"]=label,["x"]=point.x,["y"]=point.y});
+   InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point});yield return null;
+   InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point}.WithButton(UnityEngine.InputSystem.LowLevel.MouseButton.Left));yield return null;
+   InputSystem.QueueStateEvent(mouse,new UnityEngine.InputSystem.LowLevel.MouseState{position=point});yield return null;
+  }
+  System.Collections.IEnumerator PointerAction(string id){
+   actions.Add(new JObject{["path"]="focus/scroll adapter only; activation follows through virtual mouse",["id"]=id});
+   Require(game.Interface.Focus(id),"pointer target focusable: "+id);yield return null;yield return null;Canvas.ForceUpdateCanvases();
+   var target=UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+   Require(target!=null&&target.name==id,"pointer target selected: "+id);
+   var rect=target.GetComponent<RectTransform>();var point=RectTransformUtility.WorldToScreenPoint(null,rect.TransformPoint(rect.rect.center));
+   Require(point.x>=0&&point.x<Screen.width&&point.y>=0&&point.y<Screen.height,"pointer UI target inside screen: "+id);
+   yield return Click(point,"UI "+id);
+  }
+  System.Collections.IEnumerator Drain(){
+   while(game.SavePending)yield return null;
+   var task=game.FlushSaves();while(!task.IsCompleted)yield return null;
+   if(task.IsFaulted)throw task.Exception;
+   Require(!game.SavePending,"save queue settled");
+  }
+  Text Card(){
+   var found=game.GetComponentsInChildren<Text>().Where(t=>t.name=="CaseThread"&&t.gameObject.activeInHierarchy).ToArray();
+   Require(found.Length==1,"exactly one active CaseThread text");return found[0];
+  }
+  JObject Footprint(){
+   var files=new JArray();
+   if(Directory.Exists(game.Store.DirectoryPath))foreach(var path in Directory.GetFiles(game.Store.DirectoryPath,"*",SearchOption.AllDirectories).OrderBy(p=>p,StringComparer.Ordinal)){
+    using(var hash=System.Security.Cryptography.SHA256.Create())files.Add(new JObject{["path"]=path,["bytes"]=new FileInfo(path).Length,["modifiedUtcTicks"]=File.GetLastWriteTimeUtc(path).Ticks,["sha256"]=BitConverter.ToString(hash.ComputeHash(File.ReadAllBytes(path))).Replace("-","").ToLowerInvariant()});
+   }
+   return new JObject{["stateHash"]=game.Journal.State.StateHash,["headSeq"]=game.Journal.HeadSeq,["branchId"]=game.Journal.BranchId,["entries"]=game.Journal.Entries.Count,["snapshots"]=game.Journal.Snapshots.Count,["loadedRecord"]=game.Journal.State.LoadedRecordId,["successfulReceipts"]=game.SuccessfulReceipts,["savePending"]=game.SavePending,["surface"]=game.Surface,["files"]=files};
+  }
+  System.Collections.IEnumerator Capture(string name){
+   yield return new WaitForSecondsRealtime(.2f);yield return new WaitForEndOfFrame();
+   ScreenCapture.CaptureScreenshot(Path.Combine(output,name+".png"));yield return null;yield return null;
+  }
+  void GenericGuidance(Text card,string stage){
+   var lines=card.text.Split('\n');var next=lines.Last();
+   Require(next.StartsWith("다음: ",StringComparison.Ordinal),stage+": next line present");
+   next=next.Substring(4);
+   Require(new[]{"기록을 읽고 근거를 살펴보세요.","근거를 대조하고 정렬해 보세요.","근거를 살펴보고 인용을 고정하세요.","고정한 근거를 검토하세요.","저장 완료 기다리기"}.Contains(next),stage+": next line is generic objective guidance: "+next);
+   foreach(var term in new[]{"rec-handover-brief","rec-plate-standard-hub","rec-tide-ledger-bureau","rec-transfer-list","rec-watchlog-bureau","근무 규정 필사본","기록국 조위대장","당직실 표준판","이관 목록","인수 각서","원판","장부","당직일지","H-1","H+3","단일 사고","유지 실패","서명 순서","책임 사슬","offset-left","offset-up"})Require(!card.text.Contains(term),stage+": no disclosure of "+term);
+   Require(!System.Text.RegularExpressions.Regex.IsMatch(card.text,@"H[+-]\d|\d{1,2}:\d{2}"),stage+": no authored time window");
+   Canvas.ForceUpdateCanvases();Require(card.preferredHeight<=card.rectTransform.rect.height+1f,stage+": card text fits allocated height");
+  }
+  System.Collections.IEnumerator Inspect(string stage,string progress,bool complete){
+   yield return Drain();var journal=game.Journal;var before=Footprint();var ids=game.Interface.ActionIds.ToArray();var focus=game.Interface.CurrentFocusId;
+   for(int i=0;i<3;i++){game.Render();yield return null;}
+   var card=Card();Require(card.text.Contains("결손 4시간의 양 끝을 두 기록으로 고정"),stage+": objective visible");
+   Require(card.text.Contains(progress),stage+": "+progress+" visible");
+   GenericGuidance(card,stage);
+   Require(card.text.Contains("근거 쌍이 고정됨")==complete,stage+": completion wording matches live state");
+   Require(game.Simulation.IsComplete(game.Journal.State,"t0-b3")==complete,stage+": live t0-b3 completion agrees");
+   Require(!card.raycastTarget&&card.GetComponent<UnityEngine.UI.Selectable>()==null,stage+": case thread is read-only and not a pointer target");
+   Require(!game.Interface.ActionIds.Contains("CaseThread"),stage+": card creates no puzzle action");
+   Require(ReferenceEquals(journal,game.Journal)&&JToken.DeepEquals(before,Footprint()),stage+": repeated Render preserves journal, state, receipt count, pending flag and all save file bytes/timestamps");
+   Require(ids.SequenceEqual(game.Interface.ActionIds)&&focus==game.Interface.CurrentFocusId,stage+": repeated Render preserves actions and keyboard focus");
+   stages.Add(new JObject{["stage"]=stage,["card"]=card.text,["complete"]=complete,["footprint"]=before});
+   yield return Capture(stage);
+  }
+  Vector2 DrawerFront(){
+   var drawer=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="T0 approved r03 drawer");
+   var tray=drawer.GetComponentsInChildren<Renderer>().Single(x=>x.name=="SM_Hub_Workbench_Drawer_Tray");
+   var point=Camera.main.WorldToScreenPoint(new Vector3(tray.bounds.center.x,tray.bounds.center.y,tray.bounds.min.z));
+   Require(point.z>0&&Camera.main.pixelRect.Contains(point),"drawer front inside scene camera viewport");return point;
+  }
+  void Desk(){Require(game.Interface.ActionIds.Contains("handover")&&!game.Interface.ActionIds.Contains("inspect-plate-zero"),"desk investigation active");}
+  System.Collections.IEnumerator DrawerNavigation(){
+   var before=Footprint();var point=DrawerFront();yield return Click(point,"visible approved drawer");
+   Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"native pointer selects visible drawer");yield return Capture("drawer-visible-pointer");
+   Act("hub-view-desk");yield return null;point=DrawerFront();var ray=Camera.main.ScreenPointToRay(point);
+   var source=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="Workbench above drawer");
+   blocker=new GameObject("Temporary renderer-only case smoke occluder",typeof(MeshFilter),typeof(MeshRenderer));
+   blocker.GetComponent<MeshFilter>().sharedMesh=source.GetComponent<MeshFilter>().sharedMesh;
+   var renderer=blocker.GetComponent<Renderer>();renderer.sharedMaterials=source.GetComponent<Renderer>().sharedMaterials;
+   blocker.transform.position=ray.GetPoint(.3f);blocker.transform.localScale=Vector3.one*.15f;yield return null;
+   Require(blocker.GetComponentsInChildren<Collider>().Length==0,"retained occlusion fixture has no collider");
+   Require(renderer.enabled&&!renderer.forceRenderingOff&&blocker.activeInHierarchy&&(Camera.main.cullingMask&(1<<blocker.layer))!=0&&GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main),renderer.bounds),"retained occlusion fixture is active and camera-visible");
+   Require(renderer.bounds.IntersectRay(ray,out var hit)&&hit>=0,"retained occlusion fixture intersects pointer ray");
+   var drawer=SceneManager.GetSceneByName("hub").GetRootGameObjects().Single(x=>x.name=="T0 approved r03 drawer");float nearest=float.PositiveInfinity;
+   foreach(var r in drawer.GetComponentsInChildren<Renderer>())if(r.bounds.IntersectRay(ray,out var d))nearest=Mathf.Min(nearest,d);
+   Require(hit<nearest&&!float.IsPositiveInfinity(nearest),"renderer-only occluder precedes drawer bounds");
+   Require(!Physics.Raycast(ray,nearest,Camera.main.cullingMask,QueryTriggerInteraction.Ignore),"no nearer physics collider masks renderer-only case");
+   occlusion=new JObject{["colliderCount"]=0,["mesh"]=blocker.GetComponent<MeshFilter>().sharedMesh.name,["material"]=renderer.sharedMaterial.name,["sourceObject"]=source.name,["rayDistance"]=hit,["drawerRayDistance"]=nearest};
+   yield return Click(point,"drawer behind renderer-only occluder");Desk();yield return Capture("drawer-renderer-only-blocked");
+   renderer.enabled=false;yield return Click(point,"drawer with occluder renderer disabled");Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"disabling renderer restores native drawer pointer selection");
+   Act("hub-view-desk");renderer.enabled=true;Require(game.Interface.Focus("hub-view-drawer"),"occluded drawer keyboard navigation target available");yield return KeyPress(Key.Enter);
+   Require(game.Interface.ActionIds.Contains("inspect-plate-zero"),"keyboard can still select occluded drawer");
+   UnityEngine.Object.Destroy(blocker);Act("hub-view-desk");yield return null;
+   Require(JToken.DeepEquals(before,Footprint()),"drawer pointer/keyboard navigation changes no puzzle journal or save files");
+  }
+  System.Collections.IEnumerator PickWindow(){
+   Act("pick-start");int pages=0;
+   while(!game.Interface.ActionIds.Contains("phase-H-1:00")){Require(pages++<30,"start phase picker bounded");Act("phase-next");yield return null;}
+   Act("phase-H-1:00");Act("pick-end");pages=0;
+   while(!game.Interface.ActionIds.Contains("phase-H+3:00")){Require(pages++<30,"end phase picker bounded");Act("phase-prev");yield return null;}
+   Act("phase-H+3:00");
+  }
+  System.Collections.IEnumerator Run(){
+   while((game=FindFirstObjectByType<T0GameSession>())==null||game.Interface==null)yield return null;
+   yield return null;InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
+   mouse=InputSystem.AddDevice<Mouse>();keyboard=InputSystem.AddDevice<Keyboard>();
+   var args=Environment.GetCommandLineArgs();int saveArg=Array.IndexOf(args,"--t0-save-dir");
+   Require(saveArg>=0&&saveArg+1<args.Length&&Path.GetFullPath(game.Store.DirectoryPath)==Path.GetFullPath(args[saveArg+1]),"native player uses explicit isolated save directory");
+   Require(game.Journal.HeadSeq==0&&game.Journal.Entries.Count==0,"fresh native boot has no puzzle journal entries");
+   yield return Inspect("start-0-of-2","0/2",false);
+   Require(game.Interface.Focus("start"),"existing start control available");yield return KeyPress(Key.Enter);Desk();
+   yield return Inspect("initial-0-of-2","0/2",false);
+   var before=Footprint();string focused=game.Interface.CurrentFocusId;yield return KeyPress(Key.Tab);
+   Require(game.Interface.CurrentFocusId!=focused&&game.Interface.CurrentFocusId!="CaseThread","native Tab changes existing focus and skips card");
+   Require(JToken.DeepEquals(before,Footprint()),"native Tab causes no puzzle or save mutation");
+   yield return DrawerNavigation();
+   yield return PointerAction("handover");Require(game.Interface.ActionIds.Contains("line-hb-l1"),"native UI pointer opens existing handover document");
+   yield return PointerAction("line-hb-l1");Require(game.Journal.State.Has("line:rec-handover-brief:hb-l1"),"native UI pointer performs actual existing record action");
+   yield return Inspect("intake-document-0-of-2","0/2",false);
+   Act("line-hb-l2");Act("line-hb-l3");Act("close-document");Act("transfer");
+   foreach(var id in new[]{"tl-r1","tl-r2","tl-r3"})Act("row-"+id);
+   Act("decision-written");Act("close-document");Act("load-plate-zero");Require(game.Simulation.IsComplete(game.Journal.State,"t0-b1"),"actual intake completes t0-b1");
+   yield return Inspect("post-b1-0-of-2","0/2",false);
+   Act("hub-view-circuitmap");Act("open-circuit");Act("trace-hub");Act("begin-overlay");Act("offset-left");Act("offset-up");Act("anchor-overlay");
+   foreach(var area in game.Definition.UncoveredAreas){Act("area-"+area);Act("area-evidence-"+area);Act("attach-rec-watchlog-bureau");Act("overlay-back");}
+   Require(game.Simulation.IsComplete(game.Journal.State,"t0-b2"),"actual circuit actions complete t0-b2");
+   yield return Inspect("post-b2-0-of-2","0/2",false);
+   Act("hub-view-reader");Act("open-reader");
+   yield return Inspect("reader-post-b2-0-of-2","0/2",false);
+   Act("load-rec-plate-standard-hub");Act("read");yield return PickWindow();
+   yield return Inspect("prepared-0-of-2","0/2",false);
+   Act("cite");Require(game.Surface=="confirm","first citation requests existing confirmation");
+   yield return Inspect("first-confirm-still-0-of-2","0/2",false);
+   Act("confirm-submit");yield return Drain();Require(game.SuccessfulReceipts==1,"first actual citation committed once");
+   yield return Inspect("first-1-of-2","1/2",false);
+   Act("select-record");Act("choose-rec-tide-ledger-bureau");Act("read");yield return PickWindow();
+   yield return Inspect("second-prepared-still-1-of-2","1/2",false);
+   Act("cite");Require(game.Surface=="confirm","second citation requests existing confirmation");
+   Require(game.Interface.Focus("confirm-submit"),"second citation confirm reachable by keyboard");yield return KeyPress(Key.Enter);yield return Drain();
+   Require(game.SuccessfulReceipts==2,"second actual citation committed once through native keyboard");
+   yield return Inspect("completed-2-of-2","2/2",true);
+   var loaded=game.Store.Load(validate:d=>Tide.Save.JournalSave.Decode(d,game.Simulation));
+   Require(loaded.Document!=null&&Tide.Save.JournalSave.Decode(loaded.Document,game.Simulation).State.StateHash==game.Journal.State.StateHash,"actual completed live state agrees with persisted journal");
+   yield return new WaitForSecondsRealtime(.5f);
+  }
+ }
+}
