@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "wechat-ai-native-20260910",
+  "url": "https://mp.weixin.qq.com/s/YmqCm2Hh8l6WPTIAIEMFhQ",
+  "title": "200万销量、2000万玩家之后，AI游戏找到新方向了？",
+  "publisher": "罗斯基",
+  "language": "zh-CN",
+  "publishedAt": "2026-09-10T15:23:00.000Z",
+  "retrievedAt": "2026-09-11T09:07:19.926Z",
+  "retrieval": {
+    "method": "public HTTP GET",
+    "status": 200,
+    "selector": "#js_content",
+    "fullBodyRead": true,
+    "extractedTextSha256": "d2ef852b6a9a8bd41a8cd699cfccc5fe62171e1bf27bf123ce61ccc212f36a8f"
+  },
+  "sourceType": "secondary editorial; states it compiles/translates Naavik",
+  "verification": {
+    "articleRead": true,
+    "primaryReportIndependentlyVerified": false,
+    "marketFiguresIndependentlyVerified": false
+  },
+  "lessons": [
+    {
+      "id": "context",
+      "section": "MIMESIS",
+      "reportedIdea": "Context-dependent responses can change how players verify information; novelty and content limitations can weaken replay value.",
+      "adaptation": "Make evidence provenance and next verification actions visible; revisit authored evidence after state changes.",
+      "notAdopted": [
+        "voice recording",
+        "teammate imitation",
+        "multiplayer",
+        "randomized canonical truth"
+      ]
+    },
+    {
+      "id": "expression",
+      "section": "Death by AI",
+      "reportedIdea": "Freeform player proposals expand the action vocabulary; AI adjudication and inference cost become part of the product.",
+      "adaptation": "Offer freeform hypothesis notes alongside mechanically grounded source checks; keep formal validation in deterministic simulation.",
+      "notAdopted": [
+        "LLM verdicts",
+        "automatic semantic assessment of notes",
+        "model-controlled save or unlock"
+      ]
+    },
+    {
+      "id": "continuity-cost",
+      "section": "Status and conclusion",
+      "reportedIdea": "Persistent relationships/context can support engagement, while inference cost and monetization changes can affect experience; causal attribution is uncertain.",
+      "adaptation": "Keep player-authored hypothesis notes locally between visits; use zero-network reflection and preserve premium, unrestricted practice.",
+      "notAdopted": [
+        "subscription or energy economy",
+        "cloud social simulation",
+        "unverified market figures as forecasts"
+      ]
+    }
+  ],
+  "scope": {
+    "newInferenceProvider": false,
+    "newNetworkCalls": false,
+    "inferenceCostPerInteraction": 0,
+    "claim": "No runtime model has been integrated; this is a source-informed offline gameplay feature."
+  },
+  "visualAuthority": "_workspace/current/concept/concept-first-m7-sources.json",
+  "fullArticleRedistributed": false
+}

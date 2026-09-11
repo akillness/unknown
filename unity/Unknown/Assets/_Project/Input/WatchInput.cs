@@ -15,6 +15,17 @@ namespace Tide.Input {
   public bool LastDeviceIsGamepad {get;private set;} public event Action<bool> DeviceChanged;
   int pressGeneration=-1,previewGeneration=-1;bool previewUndo,armed,navigationStick;float nextNavigation;
   IDisposable deviceListener;
+  public bool TextEntryActive {get;private set;}
+  public bool GameInputSuspended => TextEntryActive || awaitTextRelease;
+  public bool ImeCompositionActive => imeComposing || Time.frameCount <= compositionChangedFrame + 1;
+  public event Action TextEntryExitRequested;
+  bool awaitTextRelease,imeComposing; int compositionChangedFrame=-100; Keyboard imeKeyboard;
+  void OnComposition(UnityEngine.InputSystem.LowLevel.IMECompositionString value){imeComposing=value.Count>0;compositionChangedFrame=Time.frameCount;}
+  public void SetTextEntry(bool active){
+   if(TextEntryActive==active)return;
+   NewContext();TextEntryActive=active;awaitTextRelease=!active;
+   if(active){Actions?.FindActionMap("Watch").Disable();imeComposing=false;compositionChangedFrame=-100;}
+  }
   void NoteDevice(InputDevice device){bool isPad=device is Gamepad;if(isPad!=LastDeviceIsGamepad){LastDeviceIsGamepad=isPad;DeviceChanged?.Invoke(isPad);}}
   InputActionRebindingExtensions.RebindingOperation rebinding;
   public void Initialize(string json,string overrides=null){
@@ -36,6 +47,15 @@ namespace Tide.Input {
   }
   void Update(){
    if(Actions==null||rebinding!=null)return;
+   if(imeKeyboard!=Keyboard.current){if(imeKeyboard!=null)imeKeyboard.onIMECompositionChange-=OnComposition;imeKeyboard=Keyboard.current;if(imeKeyboard!=null)imeKeyboard.onIMECompositionChange+=OnComposition;}
+   if(TextEntryActive){
+    if(!imeComposing&&Time.frameCount>compositionChangedFrame+1&&((Keyboard.current?.tabKey.wasPressedThisFrame??false)||(Keyboard.current?.escapeKey.wasPressedThisFrame??false)))TextEntryExitRequested?.Invoke();
+    return;
+   }
+   if(awaitTextRelease){
+    if(Actions.FindActionMap("Watch").actions.SelectMany(a=>a.controls).Any(control=>control.IsPressed()))return;
+    awaitTextRelease=false;NewContext();Actions.FindActionMap("Watch").Enable();return;
+   }
    if(Keyboard.current?.tabKey.wasPressedThisFrame??false)Navigate?.Invoke(Keyboard.current.shiftKey.isPressed?-1:1);
    var move=Actions.FindAction("Navigate").ReadValue<Vector2>();if(move.sqrMagnitude>.25f&&Time.unscaledTime>=nextNavigation)Move(move);
   }
@@ -55,6 +75,6 @@ namespace Tide.Input {
     .OnComplete(o=>{var path=action.bindings[index].effectivePath;bool conflict=path=="<Keyboard>/tab"||path=="<Gamepad>/leftShoulder"||Actions.actionMaps.SelectMany(m=>m.actions).Any(a=>a.bindings.Where((b,i)=>a!=action||i!=index).Any(b=>!b.isComposite&&b.effectivePath==path));if(conflict){if(oldOverride==null)action.RemoveBindingOverride(index);else action.ApplyBindingOverride(index,oldOverride);RebindError="bindingConflict";}o.Dispose();rebinding=null;action.Enable();completed?.Invoke(Actions.SaveBindingOverridesAsJson());});rebinding.Start();
   }
   void OnApplicationFocus(bool focus){if(!focus)NewContext();}
-  void OnDestroy(){deviceListener?.Dispose();rebinding?.Dispose();Actions?.Disable();if(Actions!=null)Destroy(Actions);}
+  void OnDestroy(){if(imeKeyboard!=null)imeKeyboard.onIMECompositionChange-=OnComposition;deviceListener?.Dispose();rebinding?.Dispose();Actions?.Disable();if(Actions!=null)Destroy(Actions);}
  }
 }

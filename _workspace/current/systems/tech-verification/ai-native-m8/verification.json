@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-native-m8-review-notes",
+  "recordedAt": "2026-09-11T09:57:05.348Z",
+  "unity": "6000.5.6f1",
+  "scope": "Optional offline notes; not runtime AI",
+  "baseCommit": "01bec3cb7a7431c4069633f0bf321a02f14ccd79",
+  "sourceManifest": {
+    "file": "delivery-source-manifest.json",
+    "sha256": "bf726e0efef74ba8d3c25e3a4e8103145a8bba610743ac8d5353bfe21eed7151",
+    "attempt": 5
+  },
+  "nativeRuns": [
+    {
+      "file": "editmode.xml",
+      "sha256": "cfea17139386b83417bc695fc5a088b491295b608bbbfa59f61b950dc0e4b7a0",
+      "id": "2",
+      "testcasecount": "46",
+      "result": "Passed",
+      "total": "46",
+      "passed": "46",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 09:54:13Z",
+      "end-time": "2026-09-11 09:54:17Z",
+      "duration": "3.2973349"
+    },
+    {
+      "file": "playmode.xml",
+      "sha256": "9d22e170e1a90014eb2439f67f780b1c3bfc72b27d8a625b96e726d12b6c0198",
+      "id": "2",
+      "testcasecount": "65",
+      "result": "Failed(Child)",
+      "total": "65",
+      "passed": "64",
+      "failed": "1",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 09:52:54Z",
+      "end-time": "2026-09-11 09:53:30Z",
+      "duration": "35.887346"
+    },
+    {
+      "file": "baseline-reduced-motion.xml",
+      "sha256": "84f4e16fefc93ca177f013874eaddb97b2ea13b4bf3f7e6622be8854701ad0ab",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 09:40:00Z",
+      "end-time": "2026-09-11 09:40:01Z",
+      "duration": "1.0356624"
+    },
+    {
+      "file": "native-tab-red.xml",
+      "sha256": "831a5f0b85eed0ff465dc1c858bf88f7625461b0c7292f7c80ffec11628421c7",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 09:51:38Z",
+      "end-time": "2026-09-11 09:51:39Z",
+      "duration": "1.2556711"
+    },
+    {
+      "file": "boot.xml",
+      "sha256": "1e73488b1ab1837efbbf32223d2448e032f628ec60a5d2c8d6851a3a9b8a13fa",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 09:55:25Z",
+      "end-time": "2026-09-11 09:55:27Z",
+      "duration": "1.4059173"
+    }
+  ],
+  "m8PlayModeSubset": {
+    "total": 10,
+    "passed": 10,
+    "cases": [
+      {
+        "name": "ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote",
+        "result": "Passed"
+      },
+      {
+        "name": "C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature",
+        "result": "Passed"
+      },
+      {
+        "name": "FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved",
+        "result": "Passed"
+      },
+      {
+        "name": "FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus",
+        "result": "Passed"
+      },
+      {
+        "name": "FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists",
+        "result": "Passed"
+      },
+      {
+        "name": "ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft",
+        "result": "Passed"
+      },
+      {
+        "name": "NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText",
+        "result": "Passed"
+      },
+      {
+        "name": "NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload",
+        "result": "Passed"
+      },
+      {
+        "name": "TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape",
+        "result": "Passed"
+      },
+      {
+        "name": "UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection",
+        "result": "Passed"
+      }
+    ],
+    "containedIn": "playmode.xml"
+  },
+  "commands": {
+    "prefix": "/Users/jangyoung/.local/bin/rtk proxy /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+    "project": "/tmp/unknown-ai-native-m8-20260911/unity/Unknown",
+    "editMode": "-batchmode -nographics -runTests -testPlatform EditMode -assemblyNames Tide.Tests.Sim",
+    "playMode": "-batchmode -nographics -runTests -testPlatform PlayMode -testFilter Tide.Tests.T0PlayModeTests;Tide.Tests.T0CaseThreadTests;Tide.Tests.T0ResourceInteractionTests;Tide.Tests.C1PlayModeTests;Tide.Tests.C1SignaturePlayModeTests;Tide.Tests.M5DirectionPlayModeTests;Tide.Tests.ReviewNotesPlayModeTests",
+    "baseline": "-batchmode -nographics -runTests -testPlatform PlayMode -testFilter Tide.Tests.M5DirectionPlayModeTests.ReducedMotionStartsFreshGameImmediatelyWithoutWrites",
+    "nativeTabRed": "-batchmode -nographics -runTests -testPlatform PlayMode -testFilter Tide.Tests.ReviewNotesPlayModeTests.NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText",
+    "boot": "-batchmode -nographics -runTests -testPlatform PlayMode -testFilter Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen --t0-save-dir /tmp/unknown-c1-m4-boot-m8-20260911-0955",
+    "build": "-batchmode -quit -executeMethod Tide.EditorTools.M5DirectionProjectBuilder.BuildMac",
+    "outputConvention": "Each final run uses -testResults <this evidence directory>/<run>.xml and -logFile <this evidence directory>/<run>.log; build has log only."
+  },
+  "knownBaselineFailure": {
+    "test": "ReducedMotionStartsFreshGameImmediatelyWithoutWrites",
+    "assertion": "Expected False / But True",
+    "line": 50,
+    "file": "M5DirectionPlayModeTests.cs",
+    "reproducedWithoutM8": true,
+    "protectedLocalFixExcluded": true
+  },
+  "priorAttempts": [
+    {
+      "attempt": 1,
+      "result": "compile error Key.Alpha1; corrected to Key.Digit1"
+    },
+    {
+      "attempt": 2,
+      "result": "EditMode40/46; InvalidDataException filters corrected"
+    },
+    {
+      "attempt": 3,
+      "result": "incomplete; shared global save path contaminated fixtures; owned Unity process terminated; no result XML",
+      "validEvidence": false
+    },
+    {
+      "attempt": 4,
+      "result": "M8 9/9, full63/64 and boot1/1; native smoke found Tab mutation missed by synthetic tests"
+    },
+    {
+      "attempt": 5,
+      "result": "native Tab RED1failed, final M8 10/10 inside full64/65; old M5 failure persists"
+    }
+  ],
+  "sourceReview": {
+    "file": "source-review.json",
+    "sha256": "556cca9738cfc65efaf82325137dac4d5c1d6a35c1e1d45cf2af255867041983",
+    "marketFiguresVerified": false
+  },
+  "independentCodeReview": {
+    "file": "code-review.md",
+    "sha256": "c7d8ee18238c65410a3995d7693ec0fa58e10f1e78607d484f262bbe8cdd803d"
+  },
+  "graph": {
+    "command": "rtk proxy graphify update .",
+    "exitCode": 0,
+    "scope": "current workspace; shared dirty graph outputs excluded from commit"
+  },
+  "mex": {
+    "status": "skipped",
+    "reason": "mex-agent not found or failed identity probe; PATH mex is TeX",
+    "fullG8Claimed": false
+  },
+  "limits": [
+    "No physical IME or controller-device certification",
+    "No human immersion or retention measurement",
+    "No complete-campaign or performance claim",
+    "No new AI provider, inference, dependencies or art assets",
+    "M7 original-concept-first visual authority preserved"
+  ],
+  "build": {
+    "result": "Success",
+    "exitCode": 0,
+    "appPath": "/tmp/unknown-ai-native-m8-20260911/unity/Unknown/Builds/M5-mac/Unknown.app",
+    "log": "build-mac.log",
+    "logSha256": "e67da77ffacb12c3f86c71127637ca0913d322ea20e5aa4b73b50bf72b6cb41a",
+    "assemblies": [
+      {
+        "name": "Tide.App.dll",
+        "sha256": "8fb1b5d1efe8587f66a5acf2569f95ae4faffe6fe6e8f63a32c32f8b61ee50bb"
+      },
+      {
+        "name": "Tide.Data.dll",
+        "sha256": "720707304c06535fb954e685268b7fbde8bdf2580d0fac758b8ba64b31fc4eb7"
+      },
+      {
+        "name": "Tide.Input.dll",
+        "sha256": "1b8a118800199af162c1790c4c4ce0d1ee5927eff0e2e4b3930d009a77a58803"
+      },
+      {
+        "name": "Tide.Presentation.dll",
+        "sha256": "d0e4446ff5855338dc9b0fb78a9929e4b66c8202185f390e302a0df9bfb04d7e"
+      },
+      {
+        "name": "Tide.Save.dll",
+        "sha256": "1f14ce4e7d67241ac76da94f1f3232e830907bd22e1a286c3c909635041d67d3"
+      },
+      {
+        "name": "Tide.Sim.dll",
+        "sha256": "52fafb87deb4c712f28341b6675c74386e48d2544ec3727faa0e6da98168f016"
+      },
+      {
+        "name": "Tide.UI.dll",
+        "sha256": "e1589e9d3cd63db8b33938a715b104dc1ded2c4218003b08a625a530c1d81f83"
+      }
+    ],
+    "developmentBuild": true
+  },
+  "nativeSmoke": {
+    "file": "player-smoke.json",
+    "exactTextPreserved": true,
+    "gameplaySaveByteUnchanged": true,
+    "physicalImeCompositionTested": false
+  },
+  "knowledge": {
+    "wikiReport": "/Users/jangyoung/vaults/llm-wiki/wiki/reports/2026-09-11-unknown-ai-native-m8-review-notes.md",
+    "indexUpdated": true,
+    "logUpdated": true,
+    "codexMemoryEdited": false
+  },
+  "staticChecks": {
+    "jsonFilesParsed": 12,
+    "brokenMarkdownLinks": 0,
+    "sourceHashMatches": 13,
+    "protectedDirtyFilesUnchanged": 3,
+    "freshness": {
+      "command": "rtk proxy bash .claude/skills/game-ops-harness/scripts/freshness-check.sh --root /Users/jangyoung/orca/unknown --since 2026-09-09",
+      "exitCode": 0,
+      "markdownArtifacts": 586,
+      "findings": 0,
+      "scope": "frontmatter and supersedes topology only"
+    },
+    "stagedOwnedPaths": 69,
+    "unexpectedStagedPaths": 0,
+    "diffCheck": {
+      "exitCode": 0,
+      "scope": "all staged source/docs/JSON/meta; raw native log/XML whitespace intentionally preserved"
+    },
+    "credentialPatternHits": 0
+  }
+}

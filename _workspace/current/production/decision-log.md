@@ -374,3 +374,18 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [OBSERVED] Independent art sampling accepted material/mood continuity and readable primary text. S2r02 skin is improved; exacthandrig/crankreturn and saltplate geometry remain unverified. S1partialprofile is a staging deviation, not portraitapproval. S3is recordcontext only; S4remainsclosed and is destination context, not observed savedrecord or unlockedstage.
 - [DECISION] Production texturemaps, meshes, handrig and Unity prefab reconstruction remain subsequent work under handoff/concept-first-m7-resources.json. Video staging informs that work; sourceconcept/GTIstill controls rigidgeometry and surface marks, so generated motion distortions are not baked into assets. Runtime/commercial eligibility remainsfalse; no new Unity or humanimmersion claims.
 - Art review: systems/tech-verification/concept-first-m7/art-review.md. Provider receipt and final validation are adjacent. Film gallery: docs/media/concept-first-m7/index.html.
+
+## RFC-CX-010 — Source-informed offline review notes (2026-09-11)
+
+- [OBSERVED] User asks to apply the WeChat article https://mp.weixin.qq.com/s/YmqCm2Hh8l6WPTIAIEMFhQ to game development. Public full-body retrieval and a second independent source read support the adaptation; market figures remain source-reported, not independent measurements. Source receipt: systems/tech-verification/ai-native-m8/source-review.json.
+- [DECISION] Add optional player-authored review notes, available evidence links and authored next-check questions. This is deterministic offline gameplay support; no semantic grading, AI verdict, hidden evidence disclosure, model calls, inference credits or monetization changes. Note use is never required for progression.
+- [DECISION] Preserve simulation, journal/save schema and accepted-save unlock authority. Store notes separately with explicit draft/error states; text entry must suppress gameplay shortcuts. Source identities and media relationships must come from canonical data, never inferred from naming or the player's prose.
+- [CARRIED] RFC-CX-009 original-concept/M7 video authority remains in force. M8 adds a note/card staging brief and GTI future resource requirements, without adopting current prefab/runtime art or third-party article images.
+- [OBSERVED] Actual role exchange: messages/006-director-m8-reference-decision.md. Design: planning/ai-native-m8-reference-application.md; presentation/ai-native-m8-direction.md. Implementation/native validation receipt follows separately; this decision is not proof of completion.
+
+### RFC-CX-010 delivery evidence — 2026-09-11
+
+- [OBSERVED] Optional review notes implemented with observed-source links, authored next-check text and separate per-save atomic storage. No model calls, semantic verdict, hidden evidence or progression authority. Existing unsaved drafts are labeled session-only.
+- [OBSERVED] Final exact-source tests: EditMode46/46, M8 subset10/10 within broad PlayMode64/65, boot1/1 and macOS development build success. The one M5 reduced-motion failure reproduces on base01bec3c with M8 removed; existing dirty M5 fixes remain excluded.
+- [OBSERVED] Native clipboard→Tab→save smoke uncovered a text-event bug missed by initial synthetic tests. New test failed against the old UI; the corrected UI passes and final native persisted text is exact, with gameplay save bytes unchanged. Receipts: systems/tech-verification/ai-native-m8/verification.md and verification.json.
+- [CARRIED] Full physical IME/controller QA, human engagement and complete-campaign gates remain open. M7 original-concept→film→GTI→prefab resource direction is unchanged, with no new art/provider spending in M8.

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.2556711">
+  <test-suite type="TestSuite" id="1081" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="66" result="Failed" site="Child" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.255671" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1075" name="Tide.Tests.Play.dll" fullname="/private/tmp/unknown-ai-native-m8-20260911/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="66" result="Failed" site="Child" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.244340" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="72529" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1076" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="66" result="Failed" site="Child" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.242242" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1077" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="66" result="Failed" site="Child" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.240642" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1036" name="ReviewNotesPlayModeTests" fullname="Tide.Tests.ReviewNotesPlayModeTests" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.236332" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1043" name="NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" fullname="Tide.Tests.ReviewNotesPlayModeTests.NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" methodname="NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="994797110" result="Failed" start-time="2026-09-11 09:51:38Z" end-time="2026-09-11 09:51:39Z" duration="1.223525" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.ReviewNotesPlayModeTests+<NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText>d__32.MoveNext () [0x00257] in /private/tmp/unknown-ai-native-m8-20260911/unity/Unknown/Assets/_Project/Tests/PlayMode/ReviewNotesPlayModeTests.cs:246
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-854c635f57fe4b41a24d136a5d4053e7
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · initialize begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · initialize complete
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · setup complete
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · observe brief begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · observe brief submitted
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait begin NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText status=WaitingForActivation
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait complete NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · cleanup drain begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · cleanup finished tasks=RanToCompletion
+Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -24,6 +24,7 @@ namespace Tide.UI
         public Vector2[] AnchorTargets,AnchorOverlay;
         public string[] AnchorLabels;
         public SignaturePaperView SignaturePaper;
+  public ReviewNotesView ReviewNotes;
         public Texture2D OpeningImage,SectionSurface;
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
@@ -60,6 +61,7 @@ namespace Tide.UI
         public void Render(GameScreen model)
         {
             if(canvas==null) Initialize();
+   ClearReviewEditor();
             if(EventSystem.current?.currentSelectedGameObject!=null)
                 focusKey=EventSystem.current.currentSelectedGameObject.name;
             if(root!=null) { root.gameObject.SetActive(false); Destroy(root.gameObject); }
@@ -99,6 +101,7 @@ namespace Tide.UI
             scroll=contentPanel.gameObject.AddComponent<ScrollRect>(); scroll.viewport=viewport; scroll.content=content;
             scroll.horizontal=false; scroll.vertical=true; scroll.scrollSensitivity=30;
             FlowText(content,model.Body,20,ink);
+   RenderReviewNotes(content,model.ReviewNotes);
             if(model.Chart!=null)
             {
                 FlowText(content,model.ChartLabel,15,ink);

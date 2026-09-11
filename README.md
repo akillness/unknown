@@ -32,6 +32,14 @@ Higgsfield **MCP**로 만든 4개 샷에 M5 Unity 실제 녹화, 한국어 안�
 
 </details>
 
+## 검토 노트 · M8
+
+[AI 게임 사례를 다룬 글](https://mp.weixin.qq.com/s/YmqCm2Hh8l6WPTIAIEMFhQ)을 참고해 자료 목록에 **검토 노트**를 추가했습니다. 자기 말로 가설을 적고, 직접 확인한 출처를 연결해 다음 검토 질문과 함께 살펴볼 수 있습니다. 메모는 선택 사항이며 기존 도구 조작으로 계속 진행할 수 있습니다.
+
+확인한 자료의 관계에 따라 저작된 질문을 보여주는 오프라인 기능입니다. 자유문장의 의미를 AI가 판정하지 않으며, 메모 보관과 게임의 증거 확정·해금은 분리되어 있습니다. 첫 자료 확인으로 진행 기록이 저장된 뒤 메모를 따로 보관할 수 있고, 그전 초안은 실행 중에만 유지됩니다.
+
+[설계와 원문 적용 범위](_workspace/current/planning/ai-native-m8-reference-application.md) · [M7 기반 노트 연출·GTI 후속 자원](_workspace/current/presentation/ai-native-m8-direction.md) · [검증 기록](_workspace/current/systems/tech-verification/ai-native-m8/verification.md)
+
 ## 한 줄 소개
 
 폐국을 3주 앞둔 조수기록국의 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.

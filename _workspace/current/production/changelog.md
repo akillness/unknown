@@ -56,3 +56,10 @@ owner: game-production-director
 - Latest user correction now governs CLAUDE.md/README: originalworldview and earlyconcepts drive video; currentgameplay/prefabs/runtime/M5M6visuals excluded (RFC-CX-009).
 - One newGTI opticalworkbench,5realMCPtakes/4selected,24s/32s concept-only films and gallery. R01handstyle rejected and replacedbyreviewedr02.
 - Strictsourcehash checks, framecounts and full decode passed. GTItexture/rebuild handoff records subsequent resource/prefab work separately.
+
+## 2026-09-11 · M8 source-informed review notes
+
+- Optional offline hypothesis notes link only observed sources and persist separately from gameplay; authored next-check questions retain canonical evidence/unlock authority (RFC-CX-010).
+- Protect drafts, unknown/future saves, source visibility and editing shortcuts; native clipboard/Tab regression fixed without transforming stored notes.
+- EditMode46/46, M8 PlayMode10/10, broad64/65, boot1/1, macOS build and actual note-save smoke. The one broad failure is baseline M5 reduced-motion behavior, independently reproduced without M8. Exact source/attempt history: systems/tech-verification/ai-native-m8/verification.md.
+- No new AI service or assets. Original-concept/M7/GTI resource direction remains in force; physical IME/controller and human outcome checks remain separate.

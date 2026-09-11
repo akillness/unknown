@@ -83,3 +83,12 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | Higgsfield MCP4scene target with1handrevision | presentation, director | P3 | assets/generated/previz/concept-first-m7 | complete;5jobs/4selected,20observedcredits |
 |24s cinema/32s method target and independent source/visual review | systems, presentation, QA | P4 | docs/media/concept-first-m7; systems/tech-verification/concept-first-m7 | scoped media delivery complete;576/768frames, strictsourceancestry, decode and sampledart checks pass |
 | GTI texturemaps and prefab reconstruction to approvedartdirection | concept, modeling, systems | next production | handoff/concept-first-m7-resources.json | planned; no texturepack/prefab implementation claimed in M7 |
+
+## M8 — article-informed review notes (2026-09-11)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| Public article review and scoped adaptation | director, independent reviewer, presentation | P2 | systems/tech-verification/ai-native-m8/source-review.json; planning/ai-native-m8-reference-application.md | complete; secondary-source metrics not independently verified |
+| Optional offline notes and source reflection | systems | P3/P4 | Unity App/UI/Input/Save and scoped tests | implemented; M8 PlayMode 10/10, journal and unlock authority unchanged |
+| M7-consistent note staging and future GTI material brief | presentation | P2 | presentation/ai-native-m8-direction.md | design complete; no assets generated |
+| Isolated native checks and publication | director, QA | P4 | systems/tech-verification/ai-native-m8/verification.md | scoped checks complete: EditMode46/46, M8 PlayMode10/10, boot1/1; broad64/65 with same baseline M5 failure; complete in this change; macOS build and native note-save smoke passed |

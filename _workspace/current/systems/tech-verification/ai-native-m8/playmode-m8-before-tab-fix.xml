@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.244549">
+  <test-suite type="TestSuite" id="1080" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.244549" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1074" name="Tide.Tests.Play.dll" fullname="/private/tmp/unknown-ai-native-m8-20260911/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.238443" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39917" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1075" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.237439" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1076" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.236200" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1036" name="ReviewNotesPlayModeTests" fullname="Tide.Tests.ReviewNotesPlayModeTests" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:51Z" duration="2.233880" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1040" name="ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" fullname="Tide.Tests.ReviewNotesPlayModeTests.ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" methodname="ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1405432843" result="Passed" start-time="2026-09-11 09:36:48Z" end-time="2026-09-11 09:36:49Z" duration="1.027738" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-fe77387985d4469ebf1c70e308e11d70
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · setup complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · observe brief begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · observe brief submitted
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=RanToCompletion
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · cleanup drain begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1045" name="C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" fullname="Tide.Tests.ReviewNotesPlayModeTests.C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" methodname="C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1393595578" result="Passed" start-time="2026-09-11 09:36:49Z" end-time="2026-09-11 09:36:50Z" duration="0.440403" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-5e00600a96494b59b83636412aa089bd
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · setup complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · wait begin C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature status=RanToCompletion
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · wait complete C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · cleanup drain begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1043" name="FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" fullname="Tide.Tests.ReviewNotesPlayModeTests.FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" methodname="FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1097980921" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.127224" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-2c730be50f504d63bc66f466f5e220db
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · initialize begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · initialize complete
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · setup complete
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · observe brief begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · observe brief submitted
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/injected-note-failure status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/injected-note-failure
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin WaitForGate/note-before-rename status=RanToCompletion
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete WaitForGate/note-before-rename
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-released status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-released
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-retry status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-retry
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · cleanup drain begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1041" name="FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" fullname="Tide.Tests.ReviewNotesPlayModeTests.FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" methodname="FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1762728838" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.099026" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-7861ece1f469400ab05bc369ca3ee86d
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · initialize begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · initialize complete
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · setup complete
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · observe brief begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · observe brief submitted
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin WaitForGate/autosave-before-rename status=RanToCompletion
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete WaitForGate/autosave-before-rename
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/autosave-released status=WaitingForActivation
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/autosave-released
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/note-after-autosave status=WaitingForActivation
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/note-after-autosave
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · cleanup drain begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1037" name="FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" fullname="Tide.Tests.ReviewNotesPlayModeTests.FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" methodname="FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="2133638896" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.158597" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-0627a51f791b41bc8cc1b50cf51132e9
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · setup complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait begin FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists status=RanToCompletion
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait complete FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait complete Restart
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · cleanup drain begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1042" name="ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" fullname="Tide.Tests.ReviewNotesPlayModeTests.ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" methodname="ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1852541291" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.062987" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-875a3ebcb84749bc979e73180dbe0e46
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · initialize begin
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · initialize complete
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · setup complete
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · cleanup drain begin
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1038" name="NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" fullname="Tide.Tests.ReviewNotesPlayModeTests.NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" methodname="NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1249389512" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.126513" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-8a17d2bf041c4c0d9aa8281b5540f04c
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · setup complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · observe brief begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · observe brief submitted
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload status=WaitingForActivation
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload status=WaitingForActivation
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete Restart
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · cleanup drain begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1039" name="TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" fullname="Tide.Tests.ReviewNotesPlayModeTests.TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" methodname="TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="212197640" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:50Z" duration="0.069783" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-fa605540bd3940928105561aea5adaa8
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · initialize begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · initialize complete
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · setup complete
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · observe brief begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · observe brief submitted
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · wait begin TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape status=WaitingForActivation
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · wait complete TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · cleanup drain begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1044" name="UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" fullname="Tide.Tests.ReviewNotesPlayModeTests.UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" methodname="UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="70631511" result="Passed" start-time="2026-09-11 09:36:50Z" end-time="2026-09-11 09:36:51Z" duration="0.111086" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-192eede4cd7d4e4e8feb5f3b5880d064
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · setup complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · observe brief begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · observe brief submitted
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete Restart
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · cleanup drain begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · cleanup finished tasks=RanToCompletion
+Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
