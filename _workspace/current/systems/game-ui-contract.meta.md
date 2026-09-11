@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c5
 status: draft
 supersedes: _workspace/archive/20260909-preproduction-c4/systems/game-ui-contract.meta.md
@@ -46,6 +46,26 @@ $ wc -c   같은 파일들
 - **2026-09-10 R4 수정 루프 2 재측정 [OBSERVED · C4-F19]**: `interaction-rules.md` 행이 위 표에서 다시 바뀌었다 — 루프 1 값 `3c901743…` · 25,545 B · 14,010자 → **`4f6b2546…` · 28,808 B · 15,975자**. 편집 범위는 **§1-2 한 절**(스펙 대조 절 재작성 + 전건 표 `Y` 행 모디파이어 열 정정)이며 §0·§1·§1-1 및 §2 이후는 불변이다. 같은 편집에 속하는 스펙 파일(이 표의 대상은 아니다): `system-specs/drainage-routing.md` **`389834d30d060e678b4a134879cf8590c10e8d093cbb9a24aab6f8328d41ffef`** · 11,165 B · 7,077자 — §1 「연결 해제」 행 1줄 + 변경 로그 절 신설.
 - **`game-ui-contract.json` 은 이번 루프에서 편집하지 않았다** [OBSERVED]: 재측정 해시 `9c89e9ae…` **불변**. C4-F19 는 계약 JSON 이 아니라 스펙 md 쪽 스테일이었다 — JSON L153 「패널이 열린 동안 X는 프리뷰 Y는 해제로 고정된다」 · L528 · L620 이 이미 정본이다. `unity-implementation.md` `453f8481…` · `animation-contract.md` `ec3ad8c1…` 도 재측정 결과 불변.
 - **문자 수 열의 측정 로케일 [OBSERVED]**: `wc -m` 은 기본 로케일(`C`)에서 바이트 수와 같은 값을 낸다. 이 표의 「문자 수」는 `LC_ALL=en_US.UTF-8 wc -m` 값이다. 로케일을 적지 않으면 다음 회차가 "재현 불가"로 읽는다.
+
+**2026-09-11 개정 8 [RFC-CX-012 ACK-c · B-15]**: 노출 위계의 메타 명사 **텍스트 치환 한 곳**(서식 정규화 없음). 판정 근거는 `production/term-decision-aside-20260911.md` B-15 행(「복귀 지점」 — glossary §3 R8 등재 완료)과 `worldview/term-audit-20260911.md` §B-15 교체 후보 ①.
+
+| # | 위치 | 전 | 후 | 결함 |
+|---|---|---|---|---|
+| 1 | `information_hierarchy.contextual[3]` (L360) | 「**체크포인트** 목록과 각 지점의 **스테이지** 조위 위상」 | 「**복귀 지점** 목록과 각 지점의 **장(章)** 조위 위상」 | **B-15** — `information_hierarchy` 는 표시 정보의 씨앗이라 in-fiction 명사(조위 위상)와 메타 명사가 한 문장에 섞였다 |
+
+- 다른 문자열 **무변경** [OBSERVED `git diff --stat` → `1 file changed, 1 insertion(+), 1 deletion(-)`]. 셸 화면(save-slots·load-recovery·result-checkpoint 등)의 「체크포인트」 9곳·저장·슬롯·버튼은 term-audit §B-15 범위 주의대로 **위반 아님** — 그대로 둔다. 개정 7 의 「스테이지」 도입(C7-F40 · RFC-S3 「일차」 금지)은 이 행에서 「장(章)」으로 대체됐지만 `layout.anchors[0]` 「상단 좌측에 스테이지와 조위 위상 표시」는 감사 대상 밖이라 **건드리지 않았다**.
+- 재현 [OBSERVED 2026-09-11]:
+```
+$ git diff -U1 -- _workspace/current/systems/game-ui-contract.json     # L360 한 행 -/+ 만
+$ python3 /Users/jangyoung/.aside/u/0/skills/user/game-ui-ux/scripts/validate-game-ui.py game-ui-contract.json
+PASS: valid game UI contract   (exit 0)
+$ python3 -c "import json;j=json.load(open('game-ui-contract.json'));print(len(j),len(j['screens']),len(j['verification']['matrix']),len(j['decisions']))"
+13 19 20 13        # 개정 7 직후와 동일 — 행 삭제·추가 0건
+$ wc -c game-ui-contract.json ; LC_ALL=en_US.UTF-8 wc -m game-ui-contract.json
+43637  26162       # 개정 7 값 43,643 B / 26,162자 대비 −6 B · 문자 수 동일
+```
+- 위 「해시」 표의 `game-ui-contract.json` 행은 이 개정으로 **스테일**이다 — RFC-Q1 대로 옮겨 적지 않고 인용 시 `shasum -a 256` 을 다시 돌린다. 형제 3파일은 이번에 **건드리지 않았다**.
+- **이 편집은 무엇도 재지 않았다.** 어떤 게이트도 올리지 않는다. ACK 본문: `systems/rfc-cx-012-ack.md`.
 
 **2026-09-10 개정 7 [C7-F40 · R7b 마무리]**: 「일차」 UI 라벨 금지(RFC-S3 — 캐논은 단일 야간, `dayIndex` 없음)를 **텍스트 치환 두 곳**으로 반영했다(서식 정규화 없음).
 

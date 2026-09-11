@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -98,5 +98,6 @@ $ shasum -a 256 _workspace/current/planning/campaign.json <scratch>/tables-test/
 | 날짜 | 회차 | 결함 | 바뀐 절 | 내용 |
 |---|---|---|---|---|
 | 2026-09-10 | **R7 종료 수정** | **C7-F1**(S1) · C7-F8 | §2 계약표 · §2.0 · §2.0a 신설 · §3 머리 · §5 · 이 절 | 생성기에 `--scope` 를 더해 T0 인스턴스 데이터 5종 + `.meta.md` 를 내게 했다. `scope=all` 경로는 한 줄도 바뀌지 않았고 그 사실을 드라이런 해시로 확인했다 |
+| 2026-09-11 | **RFC-CX-012 ACK-c** | QA `rfc-cx-012-review.md` 부기(systems 재량) · A-03 | L896 `autoCopyCreated._src` 1어 | 출처 인용문 「보관함에 생성」→「증거함에 생성」 — campaign `t0-b3.completion` 정본(ACK-a 교체)과 어긋난 주석 층위 1어. 로직·파싱·스코프 결정 무변경(`node --check` 통과 · 재생성 후 `--t0` 5/5 · 본체 49/49 PASS). 영수증: `systems/rfc-cx-012-ack.md` §2.1 |
 
 - `cycle` 값 불변(RFC-Q2). **새로 측정된 런타임 값 0건.**

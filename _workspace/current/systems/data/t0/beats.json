@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "scope": "t0",
   "generatedFrom": "planning/campaign.json",
-  "sourceSha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
+  "sourceSha256": "87623a68ff272370225cbaea95a64975af8cd56d73027f64ab9f02451e3564a7",
   "derivation": "subset+predicate",
   "stage": {
     "id": "T0",
@@ -160,7 +160,7 @@
         }
       ],
       "proofRequired": false,
-      "objective": "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다. 안내 표시가 각 단계에 붙는다.",
+      "objective": "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다.",
       "clues": [
         {
           "id": "t0-b2-c1",
@@ -269,7 +269,7 @@
       "inference": "계통 전체가 죽었다면 조위대장 수치도 함께 끊겨야 한다. 수치가 살아 있는데 각인만 무너졌다면 멈춘 것의 범위가 다르다.",
       "action": "원본을 판독기에 걸어 첫 판독으로 검증 사본을 자동 보존한 뒤 붕괴 구간의 앞뒤 끝에 집게를 물린다. 자동 사본 규칙이 화면 안내와 함께 시연된다.",
       "consequence": "사건판에 결손 구간 H-1:00~H+3:00(정확히 4시간)이 고정되고 원본은 잠금 보관으로 옮겨진다. 이후 판독은 전부 사본으로 진행된다.",
-      "completion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 보관함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다.",
+      "completion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 증거함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다.",
       "hints": [
         "지금 정할 것은 결손 구간의 시작과 끝이다. 당직실 판독기 앞에서, 하나의 자료만으로 닫으려 하지 말라.",
         "조위대장의 마지막 수치 시각과 각인이 무너진 시각을 같은 자에 놓고 읽어라.",
@@ -311,7 +311,7 @@
             "type": "autoCopyCreated",
             "count": 1,
             "recordId": "rec-plate-standard-hub",
-            "_src": "「첫 판독의 검증 사본 1점이 보관함에 생성」 · plate-readout.md P-R1"
+            "_src": "「첫 판독의 검증 사본 1점이 증거함에 생성」 · plate-readout.md P-R1"
           },
           {
             "type": "gapEndpointsFixed",
@@ -321,7 +321,7 @@
             "_src": "t0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING"
           }
         ],
-        "_srcCompletion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 보관함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다."
+        "_srcCompletion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 증거함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다."
       }
     }
   ]

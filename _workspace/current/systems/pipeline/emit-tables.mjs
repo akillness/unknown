@@ -893,7 +893,7 @@ function buildBeats(stage, records, zones) {
             _src: 'planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)',
           })),
           { type: 'independentPair', rule: 'sourceType 상이 AND rootOriginId 상이', validatorCheck: 'C-07', _src: 'interaction-rules.md §3 · RFC-S5(예외 없음)' },
-          { type: 'autoCopyCreated', count: 1, recordId: 'rec-plate-standard-hub', _src: '「첫 판독의 검증 사본 1점이 보관함에 생성」 · plate-readout.md P-R1' },
+          { type: 'autoCopyCreated', count: 1, recordId: 'rec-plate-standard-hub', _src: '「첫 판독의 검증 사본 1점이 증거함에 생성」 · plate-readout.md P-R1' },
           { type: 'gapEndpointsFixed', recordId: 'rec-plate-standard-hub', startPhase: 'H-1:00', endPhase: 'H+3:00', _src: 't0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING' },
         ],
         _srcCompletion: beat.completion,

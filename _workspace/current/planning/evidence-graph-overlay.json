@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "purpose": "timeline.md §7·§8의 반전 씨앗/회수 지점을 기계가독으로 옮긴 저작 오버레이 [TARGET]. 정본은 worldview/timeline.md이며 이 파일은 파생 저작물이다. 인용 키는 campaign id만 쓴다.",
+  "reveals": [
+    {
+      "factId": "R1",
+      "seedBeats": ["t0-b2"],
+      "revealBeat": "c2-b3",
+      "basis": "timeline.md §4 R1 행(튜토리얼 씨앗 → 2장 회수) · §7 t0-b2 행 'R1 씨앗' · c2-b3 행 '[R1 회수]'"
+    },
+    {
+      "factId": "R2-fact",
+      "seedBeats": ["c1-b2", "c1-b3", "c1-b4"],
+      "revealBeat": "c4-b2",
+      "basis": "timeline.md §4 R2 행(1장 씨앗 → 4장 사실) · §7 c1-b2/c1-b3 행 'R2 씨앗', c1-b4 행 'R2 씨앗 보강', c4-b2 행 '[R2 사실 회수]'"
+    },
+    {
+      "factId": "R2-effect",
+      "seedBeats": ["c1-b2", "c1-b3", "c1-b4"],
+      "revealBeat": "c4-b3",
+      "basis": "timeline.md §4 R2 행(4장 효력) · §7 c4-b3 행 'R2 회수(효력)'. RFC-W4: 효력 판정은 c4-b3까지"
+    },
+    {
+      "factId": "R2-intent",
+      "seedBeats": ["c1-b2", "c1-b3", "c1-b4", "c4-b4"],
+      "revealBeat": "c6-b4",
+      "basis": "timeline.md §4 R2 행(6장 의도) · §7 c4-b4 행 'R2 보강', c6-b4 행 'R2 회수(의도)'. RFC-W4(§9 OPEN-4 해소): 의도 확정은 c6-b4"
+    },
+    {
+      "factId": "R3",
+      "seedBeats": ["c2-b1", "c2-b4", "c3-b1"],
+      "revealBeat": "c6-b4",
+      "basis": "timeline.md §4 R3 행(3장 씨앗 → 6장 회수) · §7 c2-b1 행 'R3 원거리 씨앗', c2-b4/c3-b1 행 'R3 씨앗', c6-b4 행 '[R3 회수]'. c6-b1/c6-b2의 'R3 회수 준비'는 씨앗이 아니라 준비 단계라 제외"
+    },
+    {
+      "factId": "order-anchor",
+      "seedBeats": ["c1-b3", "c3-b3"],
+      "revealBeat": "c6-b3",
+      "basis": "timeline.md §8 표(씨앗 c1-b3 봉인대 훈련, 기준 c3-b3 반증 시험, 회수 c6-b3) · §7 c1-b3 행 '순서 앵커 씨앗', c3-b3 행 'B26으로 이월', c6-b3 행 '순서 앵커 회수'"
+    }
+  ]
+}

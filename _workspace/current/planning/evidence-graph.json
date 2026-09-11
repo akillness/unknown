@@ -1,0 +1,2833 @@
+{
+  "counts": {
+    "edges": {
+      "byType": {
+        "contains": 33,
+        "copied_from": 2,
+        "from_source": 73,
+        "requires": 42,
+        "teaches_tool": 12,
+        "uses_tool": 42,
+        "yields": 73
+      },
+      "total": 277
+    },
+    "nodes": {
+      "byType": {
+        "beat": 33,
+        "clue": 73,
+        "source": 31,
+        "stage": 9,
+        "tool": 6
+      },
+      "total": 152
+    }
+  },
+  "edges": [
+    {
+      "from": "C1",
+      "to": "c1-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C1",
+      "to": "c1-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C1",
+      "to": "c1-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C1",
+      "to": "c1-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C2",
+      "to": "c2-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C2",
+      "to": "c2-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C2",
+      "to": "c2-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C2",
+      "to": "c2-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C3",
+      "to": "c3-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C3",
+      "to": "c3-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C3",
+      "to": "c3-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C3",
+      "to": "c3-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C4",
+      "to": "c4-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C4",
+      "to": "c4-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C4",
+      "to": "c4-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C4",
+      "to": "c4-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C5",
+      "to": "c5-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C5",
+      "to": "c5-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C5",
+      "to": "c5-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C5",
+      "to": "c5-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C6",
+      "to": "c6-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C6",
+      "to": "c6-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C6",
+      "to": "c6-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C6",
+      "to": "c6-b4",
+      "type": "contains"
+    },
+    {
+      "from": "C7",
+      "to": "c7-b1",
+      "type": "contains"
+    },
+    {
+      "from": "C7",
+      "to": "c7-b2",
+      "type": "contains"
+    },
+    {
+      "from": "C7",
+      "to": "c7-b3",
+      "type": "contains"
+    },
+    {
+      "from": "C7",
+      "to": "c7-b4",
+      "type": "contains"
+    },
+    {
+      "from": "E0",
+      "to": "e0-b1",
+      "type": "contains"
+    },
+    {
+      "from": "E0",
+      "to": "e0-b2",
+      "type": "contains"
+    },
+    {
+      "from": "T0",
+      "to": "t0-b1",
+      "type": "contains"
+    },
+    {
+      "from": "T0",
+      "to": "t0-b2",
+      "type": "contains"
+    },
+    {
+      "from": "T0",
+      "to": "t0-b3",
+      "type": "contains"
+    },
+    {
+      "from": "c1-b1",
+      "to": "c1-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b1",
+      "to": "c1-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b2",
+      "to": "c1-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b2",
+      "to": "c1-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b3",
+      "to": "c1-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b3",
+      "to": "c1-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b3",
+      "to": "c1-b3-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b4",
+      "to": "c1-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b4",
+      "to": "c1-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b4",
+      "to": "c1-b4-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b1",
+      "to": "c2-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b1",
+      "to": "c2-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b2",
+      "to": "c2-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b2",
+      "to": "c2-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b3",
+      "to": "c2-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b3",
+      "to": "c2-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b3",
+      "to": "c2-b3-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b4",
+      "to": "c2-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c2-b4",
+      "to": "c2-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b1",
+      "to": "c3-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b1",
+      "to": "c3-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b2",
+      "to": "c3-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b2",
+      "to": "c3-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b3",
+      "to": "c3-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b3",
+      "to": "c3-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b4",
+      "to": "c3-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c3-b4",
+      "to": "c3-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b1",
+      "to": "c4-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b1",
+      "to": "c4-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b2",
+      "to": "c4-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b2",
+      "to": "c4-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b3",
+      "to": "c4-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b3",
+      "to": "c4-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b4",
+      "to": "c4-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c4-b4",
+      "to": "c4-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b1",
+      "to": "c5-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b1",
+      "to": "c5-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b1",
+      "to": "c5-b1-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b2",
+      "to": "c5-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b2",
+      "to": "c5-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b3",
+      "to": "c5-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b3",
+      "to": "c5-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b3",
+      "to": "c5-b3-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b4",
+      "to": "c5-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c5-b4",
+      "to": "c5-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b1",
+      "to": "c6-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b1",
+      "to": "c6-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b2",
+      "to": "c6-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b2",
+      "to": "c6-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c6-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c6-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c6-b3-c3",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c6-b3-c4",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b4",
+      "to": "c6-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c6-b4",
+      "to": "c6-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b1",
+      "to": "c7-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b1",
+      "to": "c7-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b2",
+      "to": "c7-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b2",
+      "to": "c7-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b3",
+      "to": "c7-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b3",
+      "to": "c7-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b4",
+      "to": "c7-b4-c1",
+      "type": "yields"
+    },
+    {
+      "from": "c7-b4",
+      "to": "c7-b4-c2",
+      "type": "yields"
+    },
+    {
+      "from": "e0-b1",
+      "to": "e0-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "e0-b1",
+      "to": "e0-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "e0-b2",
+      "to": "e0-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "e0-b2",
+      "to": "e0-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b1",
+      "to": "t0-b1-c1",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b1",
+      "to": "t0-b1-c2",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b2",
+      "to": "t0-b2-c1",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b2",
+      "to": "t0-b2-c2",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b3",
+      "to": "t0-b3-c1",
+      "type": "yields"
+    },
+    {
+      "from": "t0-b3",
+      "to": "t0-b3-c2",
+      "type": "yields"
+    },
+    {
+      "from": "c1-b1-c1",
+      "to": "watchlog-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b1-c2",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b2-c1",
+      "to": "signature-annex",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b2-c2",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b3-c1",
+      "to": "signature-annex",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b3-c2",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b3-c3",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b4-c1",
+      "to": "watchlog-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b4-c2",
+      "to": "handover-brief",
+      "type": "from_source"
+    },
+    {
+      "from": "c1-b4-c3",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b1-c1",
+      "to": "brine-log-pump1",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b1-c2",
+      "to": "pump-maintenance-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b2-c1",
+      "to": "plate-test-coupon",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b2-c2",
+      "to": "watchlog-archive-t12",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b3-c1",
+      "to": "plate-standard-hub",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b3-c2",
+      "to": "tide-ledger-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b3-c3",
+      "to": "watchlog-archive-t12",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b4-c1",
+      "to": "duty-roster",
+      "type": "from_source"
+    },
+    {
+      "from": "c2-b4-c2",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b1-c1",
+      "to": "tide-ledger-seongchan",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b1-c2",
+      "to": "brine-log-dock",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b2-c1",
+      "to": "tide-ledger-seongchan",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b2-c2",
+      "to": "plate-standard-hub",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b3-c1",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b3-c2",
+      "to": "tide-ledger-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b4-c1",
+      "to": "tide-ledger-seongchan",
+      "type": "from_source"
+    },
+    {
+      "from": "c3-b4-c2",
+      "to": "brine-log-dock",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b1-c1",
+      "to": "council-copybook",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b1-c2",
+      "to": "council-custody-log",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b2-c1",
+      "to": "signature-annex",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b2-c2",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b3-c1",
+      "to": "regulation-dual-seal",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b3-c2",
+      "to": "family-allowance-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b4-c1",
+      "to": "visit-log",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b4-c2",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b1-c1",
+      "to": "brine-log-pump1",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b1-c2",
+      "to": "forecast-table",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b1-c3",
+      "to": "evac-report",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b2-c1",
+      "to": "brine-log-pump1",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b2-c2",
+      "to": "watchlog-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b3-c1",
+      "to": "council-custody-log",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b3-c2",
+      "to": "brine-log-hub",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b3-c3",
+      "to": "bureau-copy-index",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b4-c1",
+      "to": "forecast-table",
+      "type": "from_source"
+    },
+    {
+      "from": "c5-b4-c2",
+      "to": "evac-report",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b1-c1",
+      "to": "brine-log-pump1",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b1-c2",
+      "to": "pump-maintenance-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b2-c1",
+      "to": "brine-log-pump1",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b2-c2",
+      "to": "sensor-install-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b3-c1",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b3-c2",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b3-c3",
+      "to": "pump-maintenance-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b3-c4",
+      "to": "expansion-approval-file",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b4-c1",
+      "to": "closure-report-t12",
+      "type": "from_source"
+    },
+    {
+      "from": "c6-b4-c2",
+      "to": "hearing-intake-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b1-c1",
+      "to": "regulation-verification",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b1-c2",
+      "to": "draft-set",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b2-c1",
+      "to": "tide-ledger-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b2-c2",
+      "to": "brine-log-gate3",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b3-c1",
+      "to": "draft-set",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b3-c2",
+      "to": "signature-annex",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b4-c1",
+      "to": "draft-set",
+      "type": "from_source"
+    },
+    {
+      "from": "c7-b4-c2",
+      "to": "hearing-intake-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "e0-b1-c1",
+      "to": "hearing-intake-ledger",
+      "type": "from_source"
+    },
+    {
+      "from": "e0-b1-c2",
+      "to": "transfer-completion-log",
+      "type": "from_source"
+    },
+    {
+      "from": "e0-b2-c1",
+      "to": "plate-zero",
+      "type": "from_source"
+    },
+    {
+      "from": "e0-b2-c2",
+      "to": "transfer-list",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b1-c1",
+      "to": "handover-brief",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b1-c2",
+      "to": "transfer-list",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b2-c1",
+      "to": "plate-standard-hub",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b2-c2",
+      "to": "watchlog-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b3-c1",
+      "to": "plate-standard-hub",
+      "type": "from_source"
+    },
+    {
+      "from": "t0-b3-c2",
+      "to": "tide-ledger-bureau",
+      "type": "from_source"
+    },
+    {
+      "from": "c4-b1-c1",
+      "to": "tide-ledger-bureau",
+      "type": "copied_from"
+    },
+    {
+      "from": "c5-b3-c3",
+      "to": "council-copybook",
+      "type": "copied_from"
+    },
+    {
+      "from": "c1-b1",
+      "to": "t0-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c1-b2",
+      "to": "c1-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c1-b3",
+      "to": "c1-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c1-b4",
+      "to": "c1-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c2-b1",
+      "to": "c1-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c2-b2",
+      "to": "c2-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c2-b3",
+      "to": "c2-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c2-b3",
+      "to": "t0-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c2-b4",
+      "to": "c2-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c3-b1",
+      "to": "c2-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c3-b2",
+      "to": "c3-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c3-b3",
+      "to": "c3-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c3-b4",
+      "to": "c3-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b1",
+      "to": "c3-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b2",
+      "to": "c1-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b2",
+      "to": "c4-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b3",
+      "to": "c1-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b3",
+      "to": "c4-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c4-b4",
+      "to": "c4-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c5-b1",
+      "to": "c4-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c5-b2",
+      "to": "c5-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c5-b3",
+      "to": "c4-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c5-b3",
+      "to": "c5-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c5-b4",
+      "to": "c5-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b1",
+      "to": "c5-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b2",
+      "to": "c6-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b2",
+      "to": "t0-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c1-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c3-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c4-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b3",
+      "to": "c6-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c6-b4",
+      "to": "c6-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b1",
+      "to": "c6-b4",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b2",
+      "to": "c5-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b2",
+      "to": "c7-b1",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b3",
+      "to": "c6-b3",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b3",
+      "to": "c7-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c7-b4",
+      "to": "c7-b3",
+      "type": "requires"
+    },
+    {
+      "from": "e0-b1",
+      "to": "c7-b4",
+      "type": "requires"
+    },
+    {
+      "from": "e0-b2",
+      "to": "e0-b1",
+      "type": "requires"
+    },
+    {
+      "from": "t0-b2",
+      "to": "t0-b1",
+      "type": "requires"
+    },
+    {
+      "from": "t0-b3",
+      "to": "t0-b2",
+      "type": "requires"
+    },
+    {
+      "from": "c1-b1",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c1-b2",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c1-b3",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c1-b3",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b1",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b1",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b2",
+      "to": "corrosion",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b3",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b3",
+      "to": "corrosion",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c2-b4",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c3-b1",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c3-b1",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c3-b2",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c3-b3",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c3-b3",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b1",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b1",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b2",
+      "to": "corrosion",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b2",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b3",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c4-b4",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b1",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b1",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b2",
+      "to": "routing",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b3",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b3",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c5-b4",
+      "to": "routing",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b1",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b2",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b3",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b3",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b3",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c6-b4",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c7-b2",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c7-b2",
+      "to": "routing",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c7-b3",
+      "to": "alignment",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c7-b3",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c7-b4",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "e0-b2",
+      "to": "seal",
+      "type": "uses_tool"
+    },
+    {
+      "from": "t0-b2",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "t0-b3",
+      "to": "circuit",
+      "type": "uses_tool"
+    },
+    {
+      "from": "t0-b3",
+      "to": "reader",
+      "type": "uses_tool"
+    },
+    {
+      "from": "c1-b2",
+      "mode": "unguided",
+      "to": "reader",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c1-b3",
+      "mode": "guided",
+      "to": "seal",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c2-b2",
+      "mode": "guided",
+      "to": "corrosion",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c3-b2",
+      "mode": "guided",
+      "to": "alignment",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c4-b2",
+      "mode": "unguided",
+      "to": "corrosion",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c4-b3",
+      "mode": "unguided",
+      "to": "seal",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c5-b2",
+      "mode": "guided",
+      "to": "routing",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c6-b2",
+      "mode": "unguided",
+      "to": "circuit",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c6-b3",
+      "mode": "unguided",
+      "to": "alignment",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "c7-b2",
+      "mode": "unguided",
+      "to": "routing",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "t0-b2",
+      "mode": "guided",
+      "to": "circuit",
+      "type": "teaches_tool"
+    },
+    {
+      "from": "t0-b3",
+      "mode": "guided",
+      "to": "reader",
+      "type": "teaches_tool"
+    }
+  ],
+  "kind": "evidence-graph",
+  "nodes": [
+    {
+      "beatCount": 4,
+      "id": "C1",
+      "minutes": 50,
+      "order": 2,
+      "title": "두 개의 필적",
+      "type": "stage",
+      "zoneIds": [
+        "gate",
+        "hub"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C2",
+      "minutes": 55,
+      "order": 3,
+      "title": "소금이 남긴 반증",
+      "type": "stage",
+      "zoneIds": [
+        "gate",
+        "hub",
+        "pump"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C3",
+      "minutes": 65,
+      "order": 4,
+      "title": "다른 관측소",
+      "type": "stage",
+      "zoneIds": [
+        "dock"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C4",
+      "minutes": 65,
+      "order": 5,
+      "title": "가려진 두 번째 이름",
+      "type": "stage",
+      "zoneIds": [
+        "hub",
+        "lowland"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C5",
+      "minutes": 70,
+      "order": 6,
+      "title": "이번 조수의 용량",
+      "type": "stage",
+      "zoneIds": [
+        "dock",
+        "lowland"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C6",
+      "minutes": 75,
+      "order": 7,
+      "title": "1호기의 은폐",
+      "type": "stage",
+      "zoneIds": [
+        "hub",
+        "pump"
+      ]
+    },
+    {
+      "beatCount": 4,
+      "id": "C7",
+      "minutes": 65,
+      "order": 8,
+      "title": "제출",
+      "type": "stage",
+      "zoneIds": [
+        "hub"
+      ]
+    },
+    {
+      "beatCount": 2,
+      "id": "E0",
+      "minutes": 10,
+      "order": 9,
+      "title": "에필로그: 인계",
+      "type": "stage",
+      "zoneIds": [
+        "hub"
+      ]
+    },
+    {
+      "beatCount": 3,
+      "id": "T0",
+      "minutes": 25,
+      "order": 1,
+      "title": "마지막 당직 인수",
+      "type": "stage",
+      "zoneIds": [
+        "hub"
+      ]
+    },
+    {
+      "docIndex": 4,
+      "id": "c1-b1",
+      "kind": "puzzle",
+      "minutes": 11,
+      "proofRequired": false,
+      "stageId": "C1",
+      "title": "순찰로의 두 분기",
+      "type": "beat",
+      "zoneId": "gate"
+    },
+    {
+      "docIndex": 5,
+      "id": "c1-b2",
+      "kind": "puzzle",
+      "minutes": 13,
+      "proofRequired": true,
+      "stageId": "C1",
+      "title": "겹쳐 붙은 서명지",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 6,
+      "id": "c1-b3",
+      "kind": "puzzle",
+      "minutes": 16,
+      "proofRequired": true,
+      "stageId": "C1",
+      "title": "봉인대 훈련: 필압과 완료 접점",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 7,
+      "id": "c1-b4",
+      "kind": "dialogue",
+      "minutes": 10,
+      "proofRequired": false,
+      "stageId": "C1",
+      "title": "각서의 이름, 서명란의 침묵",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 8,
+      "id": "c2-b1",
+      "kind": "puzzle",
+      "minutes": 13,
+      "proofRequired": false,
+      "stageId": "C2",
+      "title": "지하수로의 잔압",
+      "type": "beat",
+      "zoneId": "pump"
+    },
+    {
+      "docIndex": 9,
+      "id": "c2-b2",
+      "kind": "puzzle",
+      "minutes": 14,
+      "proofRequired": false,
+      "stageId": "C2",
+      "title": "부식 시험대: 한도 안에서",
+      "type": "beat",
+      "zoneId": "pump"
+    },
+    {
+      "docIndex": 10,
+      "id": "c2-b3",
+      "kind": "puzzle",
+      "minutes": 15,
+      "proofRequired": true,
+      "stageId": "C2",
+      "title": "정전이면 남지 않을 무늬",
+      "type": "beat",
+      "zoneId": "gate"
+    },
+    {
+      "docIndex": 11,
+      "id": "c2-b4",
+      "kind": "dialogue",
+      "minutes": 13,
+      "proofRequired": true,
+      "stageId": "C2",
+      "title": "되풀이되는 4분",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 12,
+      "id": "c3-b1",
+      "kind": "puzzle",
+      "minutes": 16,
+      "proofRequired": true,
+      "stageId": "C3",
+      "title": "기준이 다른 대장",
+      "type": "beat",
+      "zoneId": "dock"
+    },
+    {
+      "docIndex": 13,
+      "id": "c3-b2",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C3",
+      "title": "조위정합: 공통 피크 셋",
+      "type": "beat",
+      "zoneId": "dock"
+    },
+    {
+      "docIndex": 14,
+      "id": "c3-b3",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C3",
+      "title": "오차띠가 겹치면 unknown",
+      "type": "beat",
+      "zoneId": "dock"
+    },
+    {
+      "docIndex": 15,
+      "id": "c3-b4",
+      "kind": "dialogue",
+      "minutes": 15,
+      "proofRequired": false,
+      "stageId": "C3",
+      "title": "거래",
+      "type": "beat",
+      "zoneId": "dock"
+    },
+    {
+      "docIndex": 16,
+      "id": "c4-b1",
+      "kind": "puzzle",
+      "minutes": 16,
+      "proofRequired": true,
+      "stageId": "C4",
+      "title": "결번 두 장",
+      "type": "beat",
+      "zoneId": "lowland"
+    },
+    {
+      "docIndex": 17,
+      "id": "c4-b2",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C4",
+      "title": "소금 그늘 아래의 글자",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 18,
+      "id": "c4-b3",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C4",
+      "title": "무효 서명의 요건",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 19,
+      "id": "c4-b4",
+      "kind": "dialogue",
+      "minutes": 15,
+      "proofRequired": false,
+      "stageId": "C4",
+      "title": "전화, 다섯 문장",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 20,
+      "id": "c5-b1",
+      "kind": "puzzle",
+      "minutes": 16,
+      "proofRequired": true,
+      "stageId": "C5",
+      "title": "두 현장의 잔여 용량",
+      "type": "beat",
+      "zoneId": "lowland"
+    },
+    {
+      "docIndex": 21,
+      "id": "c5-b2",
+      "kind": "puzzle",
+      "minutes": 19,
+      "proofRequired": false,
+      "stageId": "C5",
+      "title": "배수 경로 편성: 두 경로 연습",
+      "type": "beat",
+      "zoneId": "dock"
+    },
+    {
+      "docIndex": 22,
+      "id": "c5-b3",
+      "kind": "puzzle",
+      "minutes": 19,
+      "proofRequired": true,
+      "stageId": "C5",
+      "title": "소각된 두 장",
+      "type": "beat",
+      "zoneId": "lowland"
+    },
+    {
+      "docIndex": 23,
+      "id": "c5-b4",
+      "kind": "payoff",
+      "minutes": 16,
+      "proofRequired": false,
+      "stageId": "C5",
+      "title": "우선순위 확정",
+      "type": "beat",
+      "zoneId": "lowland"
+    },
+    {
+      "docIndex": 24,
+      "id": "c6-b1",
+      "kind": "exploration",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C6",
+      "title": "1호기 실물",
+      "type": "beat",
+      "zoneId": "pump"
+    },
+    {
+      "docIndex": 25,
+      "id": "c6-b2",
+      "kind": "puzzle",
+      "minutes": 19,
+      "proofRequired": true,
+      "stageId": "C6",
+      "title": "없는 센서의 자리",
+      "type": "beat",
+      "zoneId": "pump"
+    },
+    {
+      "docIndex": 26,
+      "id": "c6-b3",
+      "kind": "puzzle",
+      "minutes": 22,
+      "proofRequired": true,
+      "stageId": "C6",
+      "title": "종합: 밸브가 먼저 돌았다",
+      "type": "beat",
+      "zoneId": "pump"
+    },
+    {
+      "docIndex": 27,
+      "id": "c6-b4",
+      "kind": "payoff",
+      "minutes": 17,
+      "proofRequired": false,
+      "stageId": "C6",
+      "title": "사후에 만들어진 이유",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 28,
+      "id": "c7-b1",
+      "kind": "dialogue",
+      "minutes": 16,
+      "proofRequired": false,
+      "stageId": "C7",
+      "title": "청문 검증 개시",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 29,
+      "id": "c7-b2",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": true,
+      "stageId": "C7",
+      "title": "그날 밤 가능했던 편성",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 30,
+      "id": "c7-b3",
+      "kind": "puzzle",
+      "minutes": 17,
+      "proofRequired": false,
+      "stageId": "C7",
+      "title": "세 관점의 초안 대조",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 31,
+      "id": "c7-b4",
+      "kind": "payoff",
+      "minutes": 15,
+      "proofRequired": false,
+      "stageId": "C7",
+      "title": "제출 확정",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 32,
+      "id": "e0-b1",
+      "kind": "payoff",
+      "minutes": 6,
+      "proofRequired": false,
+      "stageId": "E0",
+      "title": "청문 결과와 네 구역",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 33,
+      "id": "e0-b2",
+      "kind": "payoff",
+      "minutes": 4,
+      "proofRequired": false,
+      "stageId": "E0",
+      "title": "판 #0의 처리",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 1,
+      "id": "t0-b1",
+      "kind": "exploration",
+      "minutes": 5,
+      "proofRequired": false,
+      "stageId": "T0",
+      "title": "숨겨둔 판을 목록에 올릴 것인가",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 2,
+      "id": "t0-b2",
+      "kind": "puzzle",
+      "minutes": 10,
+      "proofRequired": false,
+      "stageId": "T0",
+      "title": "회로 지도: 배선된 것만 남는다",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "docIndex": 3,
+      "id": "t0-b3",
+      "kind": "puzzle",
+      "minutes": 10,
+      "proofRequired": true,
+      "stageId": "T0",
+      "title": "첫 판독과 4시간의 공백",
+      "type": "beat",
+      "zoneId": "hub"
+    },
+    {
+      "beatId": "c1-b1",
+      "copiedFrom": null,
+      "id": "c1-b1-c1",
+      "originId": "watchlog-bureau",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b1",
+      "copiedFrom": null,
+      "id": "c1-b1-c2",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b2",
+      "copiedFrom": null,
+      "id": "c1-b2-c1",
+      "originId": "signature-annex",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b2",
+      "copiedFrom": null,
+      "id": "c1-b2-c2",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b3",
+      "copiedFrom": null,
+      "id": "c1-b3-c1",
+      "originId": "signature-annex",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b3",
+      "copiedFrom": null,
+      "id": "c1-b3-c2",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b3",
+      "copiedFrom": null,
+      "id": "c1-b3-c3",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b4",
+      "copiedFrom": null,
+      "id": "c1-b4-c1",
+      "originId": "watchlog-bureau",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b4",
+      "copiedFrom": null,
+      "id": "c1-b4-c2",
+      "originId": "handover-brief",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c1-b4",
+      "copiedFrom": null,
+      "id": "c1-b4-c3",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b1",
+      "copiedFrom": null,
+      "id": "c2-b1-c1",
+      "originId": "brine-log-pump1",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b1",
+      "copiedFrom": null,
+      "id": "c2-b1-c2",
+      "originId": "pump-maintenance-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b2",
+      "copiedFrom": null,
+      "id": "c2-b2-c1",
+      "originId": "plate-test-coupon",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b2",
+      "copiedFrom": null,
+      "id": "c2-b2-c2",
+      "originId": "watchlog-archive-t12",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b3",
+      "copiedFrom": null,
+      "id": "c2-b3-c1",
+      "originId": "plate-standard-hub",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b3",
+      "copiedFrom": null,
+      "id": "c2-b3-c2",
+      "originId": "tide-ledger-bureau",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b3",
+      "copiedFrom": null,
+      "id": "c2-b3-c3",
+      "originId": "watchlog-archive-t12",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b4",
+      "copiedFrom": null,
+      "id": "c2-b4-c1",
+      "originId": "duty-roster",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c2-b4",
+      "copiedFrom": null,
+      "id": "c2-b4-c2",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b1",
+      "copiedFrom": null,
+      "id": "c3-b1-c1",
+      "originId": "tide-ledger-seongchan",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b1",
+      "copiedFrom": null,
+      "id": "c3-b1-c2",
+      "originId": "brine-log-dock",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b2",
+      "copiedFrom": null,
+      "id": "c3-b2-c1",
+      "originId": "tide-ledger-seongchan",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b2",
+      "copiedFrom": null,
+      "id": "c3-b2-c2",
+      "originId": "plate-standard-hub",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b3",
+      "copiedFrom": null,
+      "id": "c3-b3-c1",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b3",
+      "copiedFrom": null,
+      "id": "c3-b3-c2",
+      "originId": "tide-ledger-bureau",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b4",
+      "copiedFrom": null,
+      "id": "c3-b4-c1",
+      "originId": "tide-ledger-seongchan",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c3-b4",
+      "copiedFrom": null,
+      "id": "c3-b4-c2",
+      "originId": "brine-log-dock",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b1",
+      "copiedFrom": "tide-ledger-bureau",
+      "id": "c4-b1-c1",
+      "originId": "council-copybook",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b1",
+      "copiedFrom": null,
+      "id": "c4-b1-c2",
+      "originId": "council-custody-log",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b2",
+      "copiedFrom": null,
+      "id": "c4-b2-c1",
+      "originId": "signature-annex",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b2",
+      "copiedFrom": null,
+      "id": "c4-b2-c2",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b3",
+      "copiedFrom": null,
+      "id": "c4-b3-c1",
+      "originId": "regulation-dual-seal",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b3",
+      "copiedFrom": null,
+      "id": "c4-b3-c2",
+      "originId": "family-allowance-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b4",
+      "copiedFrom": null,
+      "id": "c4-b4-c1",
+      "originId": "visit-log",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c4-b4",
+      "copiedFrom": null,
+      "id": "c4-b4-c2",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b1",
+      "copiedFrom": null,
+      "id": "c5-b1-c1",
+      "originId": "brine-log-pump1",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b1",
+      "copiedFrom": null,
+      "id": "c5-b1-c2",
+      "originId": "forecast-table",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b1",
+      "copiedFrom": null,
+      "id": "c5-b1-c3",
+      "originId": "evac-report",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b2",
+      "copiedFrom": null,
+      "id": "c5-b2-c1",
+      "originId": "brine-log-pump1",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b2",
+      "copiedFrom": null,
+      "id": "c5-b2-c2",
+      "originId": "watchlog-bureau",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b3",
+      "copiedFrom": null,
+      "id": "c5-b3-c1",
+      "originId": "council-custody-log",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b3",
+      "copiedFrom": null,
+      "id": "c5-b3-c2",
+      "originId": "brine-log-hub",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b3",
+      "copiedFrom": "council-copybook",
+      "id": "c5-b3-c3",
+      "originId": "bureau-copy-index",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b4",
+      "copiedFrom": null,
+      "id": "c5-b4-c1",
+      "originId": "forecast-table",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c5-b4",
+      "copiedFrom": null,
+      "id": "c5-b4-c2",
+      "originId": "evac-report",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b1",
+      "copiedFrom": null,
+      "id": "c6-b1-c1",
+      "originId": "brine-log-pump1",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b1",
+      "copiedFrom": null,
+      "id": "c6-b1-c2",
+      "originId": "pump-maintenance-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b2",
+      "copiedFrom": null,
+      "id": "c6-b2-c1",
+      "originId": "brine-log-pump1",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b2",
+      "copiedFrom": null,
+      "id": "c6-b2-c2",
+      "originId": "sensor-install-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b3",
+      "copiedFrom": null,
+      "id": "c6-b3-c1",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b3",
+      "copiedFrom": null,
+      "id": "c6-b3-c2",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b3",
+      "copiedFrom": null,
+      "id": "c6-b3-c3",
+      "originId": "pump-maintenance-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b3",
+      "copiedFrom": null,
+      "id": "c6-b3-c4",
+      "originId": "expansion-approval-file",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b4",
+      "copiedFrom": null,
+      "id": "c6-b4-c1",
+      "originId": "closure-report-t12",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c6-b4",
+      "copiedFrom": null,
+      "id": "c6-b4-c2",
+      "originId": "hearing-intake-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b1",
+      "copiedFrom": null,
+      "id": "c7-b1-c1",
+      "originId": "regulation-verification",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b1",
+      "copiedFrom": null,
+      "id": "c7-b1-c2",
+      "originId": "draft-set",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b2",
+      "copiedFrom": null,
+      "id": "c7-b2-c1",
+      "originId": "tide-ledger-bureau",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b2",
+      "copiedFrom": null,
+      "id": "c7-b2-c2",
+      "originId": "brine-log-gate3",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b3",
+      "copiedFrom": null,
+      "id": "c7-b3-c1",
+      "originId": "draft-set",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b3",
+      "copiedFrom": null,
+      "id": "c7-b3-c2",
+      "originId": "signature-annex",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b4",
+      "copiedFrom": null,
+      "id": "c7-b4-c1",
+      "originId": "draft-set",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "c7-b4",
+      "copiedFrom": null,
+      "id": "c7-b4-c2",
+      "originId": "hearing-intake-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "e0-b1",
+      "copiedFrom": null,
+      "id": "e0-b1-c1",
+      "originId": "hearing-intake-ledger",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "e0-b1",
+      "copiedFrom": null,
+      "id": "e0-b1-c2",
+      "originId": "transfer-completion-log",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "e0-b2",
+      "copiedFrom": null,
+      "id": "e0-b2-c1",
+      "originId": "plate-zero",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "e0-b2",
+      "copiedFrom": null,
+      "id": "e0-b2-c2",
+      "originId": "transfer-list",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b1",
+      "copiedFrom": null,
+      "id": "t0-b1-c1",
+      "originId": "handover-brief",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b1",
+      "copiedFrom": null,
+      "id": "t0-b1-c2",
+      "originId": "transfer-list",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b2",
+      "copiedFrom": null,
+      "id": "t0-b2-c1",
+      "originId": "plate-standard-hub",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b2",
+      "copiedFrom": null,
+      "id": "t0-b2-c2",
+      "originId": "watchlog-bureau",
+      "sourceType": "log",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b3",
+      "copiedFrom": null,
+      "id": "t0-b3-c1",
+      "originId": "plate-standard-hub",
+      "sourceType": "plate",
+      "type": "clue"
+    },
+    {
+      "beatId": "t0-b3",
+      "copiedFrom": null,
+      "id": "t0-b3-c2",
+      "originId": "tide-ledger-bureau",
+      "sourceType": "ledger",
+      "type": "clue"
+    },
+    {
+      "clueCount": 2,
+      "id": "brine-log-dock",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 7,
+      "id": "brine-log-gate3",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "brine-log-hub",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 5,
+      "id": "brine-log-pump1",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "bureau-copy-index",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "closure-report-t12",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "council-copybook",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "council-custody-log",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 3,
+      "id": "draft-set",
+      "sourceTypes": [
+        "ledger",
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "duty-roster",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "evac-report",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "expansion-approval-file",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "family-allowance-ledger",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "forecast-table",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "handover-brief",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 3,
+      "id": "hearing-intake-ledger",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 4,
+      "id": "plate-standard-hub",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "plate-test-coupon",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 6,
+      "id": "plate-zero",
+      "sourceTypes": [
+        "plate"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 3,
+      "id": "pump-maintenance-ledger",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "regulation-dual-seal",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "regulation-verification",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "sensor-install-ledger",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 4,
+      "id": "signature-annex",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 4,
+      "id": "tide-ledger-bureau",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 3,
+      "id": "tide-ledger-seongchan",
+      "sourceTypes": [
+        "ledger"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "transfer-completion-log",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "transfer-list",
+      "sourceTypes": [
+        "ledger",
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 1,
+      "id": "visit-log",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 2,
+      "id": "watchlog-archive-t12",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "clueCount": 4,
+      "id": "watchlog-bureau",
+      "sourceTypes": [
+        "log"
+      ],
+      "type": "source"
+    },
+    {
+      "id": "alignment",
+      "type": "tool"
+    },
+    {
+      "id": "circuit",
+      "type": "tool"
+    },
+    {
+      "id": "corrosion",
+      "type": "tool"
+    },
+    {
+      "id": "reader",
+      "type": "tool"
+    },
+    {
+      "id": "routing",
+      "type": "tool"
+    },
+    {
+      "id": "seal",
+      "type": "tool"
+    }
+  ],
+  "note": "파생물 — emit-evidence-graph.mjs 가 campaign.json(+overlay)에서 생성한다. 손으로 편집하지 않는다. 검증: node _workspace/current/planning/validate-evidence-graph.mjs",
+  "overlay": {
+    "reveals": [
+      {
+        "basis": "timeline.md §4 R1 행(튜토리얼 씨앗 → 2장 회수) · §7 t0-b2 행 'R1 씨앗' · c2-b3 행 '[R1 회수]'",
+        "factId": "R1",
+        "revealBeat": "c2-b3",
+        "seedBeats": [
+          "t0-b2"
+        ]
+      },
+      {
+        "basis": "timeline.md §4 R2 행(1장 씨앗 → 4장 사실) · §7 c1-b2/c1-b3 행 'R2 씨앗', c1-b4 행 'R2 씨앗 보강', c4-b2 행 '[R2 사실 회수]'",
+        "factId": "R2-fact",
+        "revealBeat": "c4-b2",
+        "seedBeats": [
+          "c1-b2",
+          "c1-b3",
+          "c1-b4"
+        ]
+      },
+      {
+        "basis": "timeline.md §4 R2 행(4장 효력) · §7 c4-b3 행 'R2 회수(효력)'. RFC-W4: 효력 판정은 c4-b3까지",
+        "factId": "R2-effect",
+        "revealBeat": "c4-b3",
+        "seedBeats": [
+          "c1-b2",
+          "c1-b3",
+          "c1-b4"
+        ]
+      },
+      {
+        "basis": "timeline.md §4 R2 행(6장 의도) · §7 c4-b4 행 'R2 보강', c6-b4 행 'R2 회수(의도)'. RFC-W4(§9 OPEN-4 해소): 의도 확정은 c6-b4",
+        "factId": "R2-intent",
+        "revealBeat": "c6-b4",
+        "seedBeats": [
+          "c1-b2",
+          "c1-b3",
+          "c1-b4",
+          "c4-b4"
+        ]
+      },
+      {
+        "basis": "timeline.md §4 R3 행(3장 씨앗 → 6장 회수) · §7 c2-b1 행 'R3 원거리 씨앗', c2-b4/c3-b1 행 'R3 씨앗', c6-b4 행 '[R3 회수]'. c6-b1/c6-b2의 'R3 회수 준비'는 씨앗이 아니라 준비 단계라 제외",
+        "factId": "R3",
+        "revealBeat": "c6-b4",
+        "seedBeats": [
+          "c2-b1",
+          "c2-b4",
+          "c3-b1"
+        ]
+      },
+      {
+        "basis": "timeline.md §8 표(씨앗 c1-b3 봉인대 훈련, 기준 c3-b3 반증 시험, 회수 c6-b3) · §7 c1-b3 행 '순서 앵커 씨앗', c3-b3 행 'B26으로 이월', c6-b3 행 '순서 앵커 회수'",
+        "factId": "order-anchor",
+        "revealBeat": "c6-b3",
+        "seedBeats": [
+          "c1-b3",
+          "c3-b3"
+        ]
+      }
+    ]
+  },
+  "provenance": {
+    "generator": "emit-evidence-graph.mjs",
+    "inputs": [
+      {
+        "bytes": 123722,
+        "path": "planning/campaign.json",
+        "sha256": "87623a68ff272370225cbaea95a64975af8cd56d73027f64ab9f02451e3564a7"
+      },
+      {
+        "bytes": 2016,
+        "path": "planning/evidence-graph-overlay.json",
+        "sha256": "87d64509c900c2ffcb89c23c9b71d89047ec63dd76a6994ea2023e25b2359d89"
+      }
+    ]
+  },
+  "schemaVersion": 1
+}

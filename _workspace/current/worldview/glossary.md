@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: _workspace/archive/20260909-preproduction-c2/worldview/glossary.md
@@ -13,6 +13,8 @@ owner: game-worldview-architect
 **입력 판 정정 (C3-F28 · 2026-09-10 2차 수정 루프)**: 이 문서의 앞선 판은 planner 수리 **전** 파일(sha `775a984c…` · 120087 B)을 입력으로 적었다. 그 판은 디스크에 없어 재검증할 수 없으므로 `775a984c…`는 [CARRIED · `planning/campaign.meta.md` §11 브로드캐스트]로만 인용한다. 두 판의 차분은 단서 `c1-b4-c3`(`sourceType: plate` · `originId: brine-log-gate3`) **1건**이고 그 `originId`는 이미 §7 카탈로그에 있다 [OBSERVED] → **수록 명사 판정(C3-F13)과 §7 카탈로그 본문·행 수는 바뀌지 않는다.** 바뀐 것은 §7 머리글의 집계 영수증 숫자와 입력 해시뿐이며 아래 §7에서 재측정값으로 교체했다.
 **R4 개정 (2026-09-10, 같은 사이클 제자리 갱신 · RFC-Q2)** [OBSERVED]: 대체가 아니라 개정이므로 `cycle`·`supersedes:`는 그대로다. 바뀐 곳 — **§6-1 신설**(비트 `zoneId` 5종의 KO/EN 대응과 에셋 토큰 파생 규칙, C3-F22 · 모델러 OPEN-M1 판정) · §7 머리글의 입력 해시·집계 영수증을 R4 재측정값으로 교체(RFC-Q1). 기존 명사 행은 추가만 있고 삭제·개명은 없다.
 **R7 개정 (2026-09-10, 같은 사이클 제자리 갱신 · RFC-Q2)** [OBSERVED]: **§3 에 도구 표시명 4건 등재**(배선 추적·판독·배수 편성·부식 시험) + **§3-1 신설**(도구 id 6종 ↔ 표시명 대응, RFC-S6 판정 반영). 기존 행은 추가만 있고 삭제·개명·정의 변경은 없다. `cycle`·`supersedes:`·`status:` 그대로.
+**R8 개정 (2026-09-11, 같은 사이클 제자리 갱신 · RFC-Q2 · RFC-CX-012 ACK-b)** [OBSERVED]: `production/term-decision-aside-20260911.md` §4 등재 대기 목록 적용 — **§2 신설 5행**(판독대·조습기·구역 지도·서명 요건표·1호기) · **§2 「회로 지도」 정의 확장**("기록 밖"·"기록 억제" 2상태 명시, A-07 — 이 1행만 정의문 확장이며 개명 아님) · **§3 신설 4행**(확정 전 보존·복귀 지점·연습 압착·연습 서식) · **§7 머리글 파생 규칙 1줄**(등재명사+「철」 허용, 낱장 수량 「N점」, A-15). 신설 행의 first cycle `c7` = 이번 사이클 판정(RFC-CX-012)으로 태어난 명사. 기존 행은 삭제·개명 없음. campaign·UI 계약 문자열 교체는 planner(ACK-a 선결)·systems 레인 소관이라 이 개정에 포함하지 않는다. `cycle`·`supersedes:`·`status:` 그대로.
+**R9 개정 (2026-09-11, 같은 사이클 제자리 갱신 · RFC-Q2 · QA `qa/rfc-cx-012-review.md` D-CX012-03/06 디렉터 판정 반영)** [OBSERVED]: RFC-CX-012 교체로 표시 문자열에 들어간 신규 어휘 5종의 등재 완전성 결함(D-CX012-03) 해소 — **§3 신설 3행**(보호 지정·공통 종결부·종결부 후일담, term-decision §2 B-05·B-06·B-07) · **§7 머리글 어간 파생 면제 규칙 1줄**(「역대조」=잠금 용어 「대조표」의 어간 파생 · 「확대 판독」=「판독」의 어간 파생, B-08·B-09 — 정본 행이 있는 어간을 따르므로 별도 등재하지 않음) · **§4 「공통 조위 피크」 정의문에 축약 허용 1절**('공통'이 문맥에서 확정된 뒤 「조위 피크」 축약 가능, D-CX012-06 — 정의·명칭 변경 아님). 신설 행의 first cycle `c7`. 기존 행은 삭제·개명 없음. `cycle`·`supersedes:`·`status:` 그대로.
 **영어명 주의** [OBSERVED]: 아래 EN 표기는 내부 설계 라벨이며 상표·동명 조사를 하지 않았다. 상점명·번들명·공개물에 그대로 쓰지 않는다.
 first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 
@@ -55,7 +57,7 @@ first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 | 증거함 | Evidence Box | 확보한 자료가 자동으로 들어가는 보관·열람 UI 패널 | c3 | worldview |
 | 사건판 | Case Board | 확정된 사실과 미해결 영역이 고정되는 사건 전개 판 | c3 | worldview |
 | 결론 카드 | Conclusion Card | 가설판에서 확정 직전에 여는 결론 요약 카드 | c3 | worldview |
-| 회로 지도 | Circuit Map | 판독 가능 범위와 "기록 밖" 구획을 접어 표시하는 지도(법1의 도구) | c3 | worldview |
+| 회로 지도 | Circuit Map | 판독 가능 범위와 "기록 밖"·"기록 억제" 구획을 구분해 접어 표시하는 지도(법1의 도구). 음영 상태 어휘는 "기록 밖"(판독 범위 밖)과 "기록 억제"(범위 안이나 기록이 억제된 구획) 2종이다 | c3 | worldview |
 | 판 #0 | Plate Zero | **번호만 적힌 미봉인 염판** 1매. 서린이 구 서고에서 빼내 서랍에 숨겼다. 이름은 각인되지 않으며 이 판이 담은 것은 명령이 대기한 시간뿐이다 | c2 | worldview |
 | 자동 사본 | Auto Copy | 원본을 처음 판독할 때 계통이 자동으로 남기는 검증 사본(법2). 원본의 루트 출처를 물려받는다 | c3 | worldview |
 | 사본 | Certified Copy | 확정된 사실이 청문 접수부에 등재된 복본. 원본 소실 후에도 남는다 | c3 | worldview |
@@ -65,6 +67,11 @@ first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 | 소금 그늘 | Salt Shade | 잉크가 마르기 전에 소금이 덮인 자리에 생기는 가림. 염도·시간을 역산하면 아래 획을 되살릴 수 있다 | c3 | worldview |
 | 결번 | Missing Folio | 사본철에서 페이지 번호가 건너뛴 자리. 원래 무언가 있던 자리다 | c3 | worldview |
 | 잠금 보관 | Sealed Storage | 첫 판독을 마친 원본을 옮겨 두는 보관 상태. 이후 판독은 사본으로 한다 | c3 | worldview |
+| 판독대 | Reader Stand | 구역 현장에서 판독기를 거치하는 대. 서명대·봉인대와 같은 대(臺) 계열이며, 장치 「판독기」와는 별개 항이다 | c7 | worldview |
+| 조습기 | Humidity Regulator | 판독기에 물리는 가습 기구. 단수로 소금 용해 강도를 조절하며 표기는 「조습기 N단」. 판(板)은 기록 매체 전용 계열이므로 기구에는 기(器)를 쓴다 | c7 | worldview |
+| 구역 지도 | Zone Map | 네 구역 이동용 지도. 신호 계통을 다루는 「회로 지도」와 별개의 물건이다 | c7 | worldview |
+| 서명 요건표 | Signature Requirement Table | 봉인대에 붙은, 서명 자격 요건을 대조하는 표. 규정 필사본의 3항을 칸으로 갖는다. 약칭 「요건표」 | c7 | worldview |
+| 1호기 | Pump Unit One | 제1양수장의 주 양수기 실물. 정식 표기는 「제1양수장 1호기」(문서 최초 1회), 이후 약칭 「1호기」로 운용한다 | c7 | worldview |
 
 ## 3. 절차 · 행동
 
@@ -91,6 +98,13 @@ first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 | 확정 게이트 | Commit Gate | 서명대가 봉인을 받기 위한 4조건(G-a~G-d) | c3 | worldview |
 | 결과 예고 | Outcome Preview | 확정 직전에 제시되는 결과 요약. 보지 않고 고르지 않는 것이 이 작업대의 방식이다 | c3 | worldview |
 | 대조표 | Cross-Table | 두 자료의 항을 나란히 놓고 일치·불일치를 채우는 표 | c3 | worldview |
+| 확정 전 보존 | Pre-Commit Preservation | 확정 직전 상태가 당직자의 어떤 조작도 없이 보존되는 절차. 법2의 「자동 사본」(원본 첫 판독의 검증 사본)과는 별개다 | c7 | worldview |
+| 복귀 지점 | Return Point | 당직 기록상 되돌아갈 수 있는 지점 | c7 | worldview |
+| 연습 압착 | Rehearsal Press | 빈 서식에 하는 연습 단계 압착. §3 「연습」의 봉인대 적용형이며, 확정을 만들지 못한다 | c7 | worldview |
+| 연습 서식 | Rehearsal Form | 연습 압착용 빈 서식 | c7 | worldview |
+| 보호 지정 | Protection Designation | 배수 편성 확정으로 보호 구역 하나를 지정하는 행위 명사(법4). 5장에서 1건이 확정되며, 종결부 후일담의 저지대·부두 문단 쌍만 바꾼다 | c7 | worldview |
+| 공통 종결부 | Common Ending Section | 결말 3갈래가 공유하는 종결 문단 묶음(부(部)=문서 구조 단위). 청문 결과·4구역 최종 상태·서린의 다음 근무 여부가 여기서 확인된다 | c7 | worldview |
+| 종결부 후일담 | Ending Section Aftermath | 공통 종결부 안의 후일담 문단. 결과 예고 2층이 가리키는 대상이며, 보호 지정에 따라 어느 쌍으로 바뀌는지가 정해진다 | c7 | worldview |
 
 ## 3-1. 도구 표시명 정본 ↔ 데이터 id (RFC-S6 / RFC-C6-001 / C4-F9 / C7-F5 · 2026-09-10 R7 신설)
 
@@ -118,7 +132,7 @@ first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 | 분해능 4분 | Four-Minute Resolution | 기록이 구별할 수 있는 최소 시간 칸 | c3 | worldview |
 | 정합 잔차 | Alignment Residual | 정합 후 남는 관측소별 오차. 확정 요건은 ≤4분 | c3 | worldview |
 | 8분 오차폭 | Eight-Minute Error Band | 관측소별 ±4분이 두 관측소에 걸칠 때의 총 오차폭. 이보다 큰 간격만 선후를 말할 수 있다 | c3 | worldview |
-| 공통 조위 피크 | Common Tide Peak | 두 계통이 함께 기록한 조위 극값. 정합의 기준점(3개 필요) | c3 | worldview |
+| 공통 조위 피크 | Common Tide Peak | 두 계통이 함께 기록한 조위 극값. 정합의 기준점(3개 필요). (문맥에서 '공통'이 확정된 뒤는 「조위 피크」로 축약 가능 — R9 · D-CX012-06) | c3 | worldview |
 | 오차띠 | Error Band | 한 사건 시각의 허용 범위. 두 띠가 겹치면 순서를 확정하지 못한다 | c3 | worldview |
 | unknown 판정 | Unknown Verdict | 확정도 부정도 아닌 상태. 실패가 아니며 제출 문서에 그대로 적힐 수 있다 | c3 | worldview |
 | 필수 단서 | Critical Clue | 결말 3갈래 중 최소 한 갈래 도달에 반드시 확정돼야 하는 증거. 목록 소유자는 timeline §7 | c3 | worldview |
@@ -203,6 +217,10 @@ first cycle 표기: `c1`~`c3` = 그 사이클에서 태어남.
 
 입력 [OBSERVED, 2026-09-10 R4 재측정 · RFC-Q1(고정 숫자를 손으로 다시 적지 않고 검증기 출력을 인용)]: `node _workspace/current/planning/validate-campaign.mjs` → `sha256 92301c0a5ecfc7e142646f5f17c29c21609e2b2de7c90408de7bffc9d815ae23` · `bytes 121457` · `summary {checks 47, pass 47, fail 0, PASS}`. 앞선 판이 적은 `fdabf1d4…`/`120479`(검사 44종)는 RFC-W4 의도 문장 이동과 `zoneId` 추가 **전** 값이며 폐기한다.
 집계 [OBSERVED, 같은 입력]: `node` 로 `stages[].beats[].clues[].{originId,sourceType}` 를 집계 → **31종 / 단서 73건 / sourceType `log 27 · ledger 22 · plate 24`**(합 73), 검증기 `aggregates` 와 전건 일치. **입력이 바뀌었어도 이 세 값은 불변**이다 [OBSERVED, R4 재계산] — 이번 차분은 `zoneId` 필드 추가와 `c4-b3`→`c6-b4` 문장 이동이라 단서·출처 카탈로그를 건드리지 않았다. 미수록 검사 `originId 미수록: []` 재실행 [OBSERVED R4]. 더 앞선 판의 `단서 72 / plate 23`은 수리 전 파일(`775a984c…`)의 값이며 폐기한다(C3-F28). 이 표의 KO 명칭이 대사·UI에 쓸 수 있는 유일한 서류 이름이다. 표는 30종을 싣고 `plate-zero`는 §2 "판 #0"이 보유하므로 **31/31 수록**이다(기계 검사 `missing=[]`). `(규정 부속)`·`(정비 대장 부속)`으로 표기한 2행은 originId가 없는 파생 서류이며 `synopsis/chapter-beats.md` 표 B에서 이름으로만 쓰인다.
+
+**파생 규칙 (R8 · A-15)**: 등재 명사 + 「철」(합철 묶음)은 허용 파생 서류명이다(예: 「계통 표준판철」·「당직일지철」 — 기등재 「주민회 사본철」·「증설 심사철」·「제출 초안철」과 같은 계열). 낱장 수량은 「N점」으로 적는다 — 철(綴)은 묶음이지 수량 단위가 아니다.
+
+**파생 면제 규칙 (R9 · D-CX012-03)**: 등재 명사의 어간 파생 합성어(예: 역대조=대조 어간, 확대 판독=판독 어간)는 정본 행이 있는 어간을 따르며 별도 등재하지 않는다.
 
 | term (KO) | originId | definition | owner-lane |
 |---|---|---|---|

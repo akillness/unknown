@@ -389,3 +389,82 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [OBSERVED] Final exact-source tests: EditMode46/46, M8 subset10/10 within broad PlayMode64/65, boot1/1 and macOS development build success. The one M5 reduced-motion failure reproduces on base01bec3c with M8 removed; existing dirty M5 fixes remain excluded.
 - [OBSERVED] Native clipboard→Tab→save smoke uncovered a text-event bug missed by initial synthetic tests. New test failed against the old UI; the corrected UI passes and final native persisted text is exact, with gameplay save bytes unchanged. Receipts: systems/tech-verification/ai-native-m8/verification.md and verification.json.
 - [CARRIED] Full physical IME/controller QA, human engagement and complete-campaign gates remain open. M7 original-concept→film→GTI→prefab resource direction is unchanged, with no new art/provider spending in M8.
+
+## RFC-CX-011 — M9 완성도 hop: 코어루프·튜토리얼·리소스 반영 연출·밸런스 (2026-09-11)
+
+- [OBSERVED] 사용자 지시(2026-09-11, 동일 문안 반복): 서브에이전트로 지금까지의 작업을 확인하고, 게임 코어루프·튜토리얼·리소스 반영 연출·밸런스를 고려해 완성도를 높이며, 워크스페이스 구현 단계의 hop을 한 단계 깊게 강화한다. hop 해석: T0(M1·M2)→C1(M3·M4)→M5→M6→M7→M8로 이어진 구현 마일스톤 사다리의 다음 단(M9). M9는 문서·previz가 아니라 **기존 계약(TARGET)의 런타임 구현**으로 한 단계 내려간다.
+- [OBSERVED] 3레인 병렬 감사(시스템/밸런스/연출, 각 READ-ONLY) 완료. 근거: 본 세션 감사 보고 3건 — 코어루프(미세루프 4단계·2층 분리 성립, 힌트 기록 미저장 G1, 프리뷰 정적문 G3, M8 TARGET 3건 미구현 G5), 튜토리얼·밸런스(guided 티칭 데이터 `toolTeaching`/`introBeatId` 소비처 0건 G6, 기본 확정 방식 `confirm-dialog` ≠ 정본 `two-step` G5, 비트 목표 미노출 G7, snapshotInterval 노브 사장 G9), 리소스·연출(M7 materials 미생성 G1, 검토 노트 텍스처 슬롯·전환 시스템 부재 G2/G3, 초점 복귀 불일치 G4).
+- [DECISION] M9 범위 (전부 기존 정본 계약의 이행 — 새 밸런스 수치 발명 0건):
+  - S-A 힌트 영속화: 비트별 hintLevel 사전, 저장 `progress.hintLevelUsed` 왕복, OpenOverlay 리셋 제거, 경고 게이트를 `warnsBeforeReveal` 데이터 구동으로. (interaction-rules §4, balance-sheet §6, hint-system.md)
+  - S-B 기본 확정 방식 `two-step` 정합 (interaction-rules §1-1). 기존 세이브 settings.json 불변.
+  - S-C 런타임 프리뷰 diff: preview 오버레이에서 `T0Simulation.Preview` 차이를 문장화 (GDD §3.3 원칙1).
+  - S-D guided 티칭 최소판: `toolTeaching` 비트의 도구 패널에 1단 힌트+잔여 술어 집계 병기, CaseThread 목표를 비트별 objective로 (campaign.json t0-b2/b3 안내 약속, beats.json 기존 데이터).
+  - S-E M8 TARGET 3건: 명시적 `검토 질문 보기` 버튼(누를 때 갱신), 출처 원문 열기+검토 노트 복귀, 독립 매체 부족/충족 질문 분기 (ai-native-m8-reference-application.md 표, ai-native-m8-direction.md).
+  - S-F 검토 노트 연출: M8ReviewNotesProfile SO(runtimeApproved 게이트)+카드 배경 텍스처 슬롯+열림/닫힘 180/140ms CanvasGroup 페이드+reduced-motion 0ms+직전 오버레이 복귀. 수치는 `Resources/M8ReviewVfx.json` 저작.
+  - S-G 소형 계약 마감: snapshotInterval policy 전달(G9), 유휴 힌트 제안 타이머 document 열람 중 정지(G4a).
+  - S-H GTI 리소스 1건: M7-MAT-rag-paper 방향의 검토 카드 바탕(글자·증거 표식 없음) 생성 → `assets/generated/2d/texture/m8-review-card-r01/` provenance(runtimeEligible:false) → 빌더로 Candidates 임포트(runtimeApproved=false) → 네이티브 검수 후 별도 승격 판정. 참조는 concept-first-m7-sources.json allowlist 원본만.
+- [DECISION] 제외: emit-tables 재생성이 필요한 `hintOfferCooldownSeconds` 노브 분리(G4d)와 EN 힌트 textKey 연결(G10)은 M9 범위 밖 개방 항목으로 이월. alignment 신규 도구 동사(G6 전략)는 콘텐츠 저작이 따라와야 하므로 기획 재-인테이크 대상. ReadOriginal 마모 undo 복원(G7 판정 필요)은 본 RFC에서 판정하지 않고 개방 RFC로 남긴다.
+- [DECISION] 파일 소유 경계(병렬 세션 안전): SYS-CORE = T0GameSession.cs·T0OpeningSession.cs(문자열 L() 이관 시)·JournalSave.cs·T0Strings.json·T0ContractTests/T0M2Tests·M9 신규 EditMode 테스트. SYS-M8 = ReviewNotesSession.cs·T0ReviewNotesInterface.cs·신규 M8ReviewNotesProfile.cs·M8ReviewNotesProjectBuilder.cs·M8ReviewVfx.json·ReviewNotesTests/ReviewNotesPlayModeTests. 공유 지점은 `OpenReviewNotes()` 진입 메서드 하나로 계약: SYS-M8이 ReviewNotesSession partial에 정의하고 SYS-CORE의 T0GameSession.cs:164 액션이 그것을 호출한다.
+- [CARRIED] 기존 미커밋 변경(M5 reduced-motion fix + M8 소스)은 선행 세션의 완료 작업으로 보존하고 그 위에 얹는다. 커밋/푸시는 사용자가 수행. mex-agent identity probe 실패 시 degraded G8 PARTIAL 유지.
+
+## RFC-CX-012 — TRACE-RPG 방법론 이식: 증거 그래프 계약 · aside 용어 판정 · 내러티브 브리지 (2026-09-11)
+
+- [OBSERVED] 사용자 지시(2026-09-11): subagent로 `../neural_symbolic_in_game/`(TRACE-RPG) 방법론을 이용해 게임의 일관성·증거 로직이 깨지지 않도록 그래프 형식으로 코어 증거해금·흐름을 유지하고, 용어는 세계관에 맞게 aside에 요청해 바꾸되 주요 용어는 유지, 게임플레이 흐름을 잇는 내러티브 구성을 개선한다.
+- [OBSERVED] 방법론 원전: TRACE-RPG README(생성 이벤트=미신뢰 트랜잭션 제안, 결정론적 커밋 게이트 7검사/6가족, 실패 시 상태 불변, 해시 연동 영수증, 진단적 ledger 문법 [P]/[C]/[H]/[N])와 KG 시뮬레이션 계약(typed 노드/엣지, closed-world, 온톨로지 위반 0 검사).
+- [DECISION] 산출물 3계열 (전부 status: draft — QA 독립 재검증 후 승격 판정 별도):
+  - **G-A 증거 그래프 계약** (planner): `planning/emit-evidence-graph.mjs`(campaign.json→typed 그래프 파생, provenance 수록) · `planning/evidence-graph.json`(노드 152 = stage 9·beat 33·clue 73·source 31·tool 6, 엣지 277) · `planning/evidence-graph-overlay.json`(반전 seed/reveal 6팩트: R1→c2-b3, R2-fact→c4-b2, R2-effect→c4-b3, R2-intent→c6-b4[RFC-W4 준수], R3→c6-b4, order-anchor→c6-b3 [TARGET 저작 — worldview 캐논 대조 ACK 대기]) · `planning/validate-evidence-graph.mjs`(TRACE-RPG 6가족 번안 EG-PROV/PRE/STAGE/REACH/KNOW/TOOL/DISC 18검사). 실측 [OBSERVED]: EG-SUMMARY 18/18 PASS · 2회 실행 byte-동일 · /tmp 사본 결함 4종 주입 시 7검사 FAIL·저장소 무변경(공허 통과 아님 확인) · validate-campaign.mjs 49/49 PASS 병존. 이 검증기는 캠페인 검증기를 대체하지 않는 **추가 게이트**다.
+  - **G-B 용어 판정** (worldview 감사 + aside 협의 + 디렉터 판정): `worldview/term-audit-20260911.md`(A 미수록 16·B 톤 미정합 15·C 유지 확인 13, campaign 노출 문자열 453건 스캔) → aside exec 자문 회신 → `production/term-decision-aside-20260911.md`(최종 선정 표). 디렉터 가감 3건: ① 훈련→연습 흡수(「연습 서식」·「연습 압착」 — 용어집 §3 「연습」 정의가 aside 확인 질문에 답함), ② B-05 aside의 "보호 지정 5장" 기각(원문 "5장"은 章 — "5장의 보호 지정"으로 정정), ③ aside 미회부 기계적 통일 12건은 감사 후보 ① 채택. 유지 13행 침해 0 [OBSERVED].
+  - **G-C 내러티브 브리지** (synopsis): `synopsis/narrative-flow-bridges.md` — TRACE-RPG ledger 문법을 세계관 언어로 번안한 33비트 × 3줄(이음/해금 예고/보류 문구) 저작. timeline §7 공개 상한·오해 유지·B23/B28 금지열 준수 자기 검사 포함.
+- [DECISION] 적용 경계: 본 RFC 시점에 **정본 무변경** — glossary.md·campaign.json·timeline.md·validate-campaign.mjs 전부 그대로 [OBSERVED, git status]. 문자열 교체·용어 등재는 아래 ACK 후 별도 편집 회차: (a) planner — completion/objective 필드가 표시 문자열인지 검증 술어인지 재분류(B-11·B-12·B-14 종속, **선결**), (b) worldview — 오버레이 seed/reveal 캐논 대조 + §4 신설 등재 대기 목록(term-decision §4), (c) systems — UI 계약 `information_hierarchy` 「체크포인트」→「복귀 지점」 반영 여부.
+- [DECISION] 게이트 연결: G-A 검증기는 G1(세계관 일관성)·G7(코어루프)의 **문서 수준 기계 검사**를 보강한다. 런타임 게이트 아님 — 회고 "빌드 0줄" 한계 그대로. campaign.json이 바뀌는 미래 회차는 validate-campaign 49검사 + validate-evidence-graph 18검사를 함께 통과해야 한다.
+- decided_by: game-production-director · 영향 레인: planner(ACK-a), worldview(ACK-b), systems(ACK-c), synopsis(브리지 저작 완료), qa(승격 검증 대기)
+
+### RFC-CX-009 delivery evidence — GTI 재질·Blender 블록아웃·pre-runtime QA (2026-09-11)
+
+- [OBSERVED] 사용자 지시(2026-09-11): M7 시네마틱을 바탕으로 GTI 텍스처와 Blender 3D 리소스를 생성·적용. 후속 지시로 서브에이전트 병렬 진행과 마무리를 요청.
+- [OBSERVED] GTI 재질 5종 생성 완료 — `assets/generated/2d/texture/m7-{bronze,perforated-steel,salt-concrete,salt-crystal,rag-paper}-r01/`. dry-run 선행, `--model gpt-6-astra` 요청 1024x1024/실제 1254x1254(요청·실제 분리 기록), 참조는 concept-first-m7-sources allowlist 원본 4장 + 승인 키프레임(`8bdf991d…`)만. basecolor만 GTI 산출이고 roughness/height/microdetail은 휘도 파생 후보로 provenance에 구분 기록. 백엔드 크레딧 소모량은 이 영수증에 노출되지 않으며 0으로 기재하지 않는다.
+- [OBSERVED] Blender 5.1.2 headless 블록아웃 — `assets/generated/3d/concept-first-m7/concept-first-m7.blend` (재실행 스크립트 `scripts/blender/build_m7_assets.py`, 4 컬렉션 M7-ENV-watchroom/M7-PROP-optical-reader/M7-PROP-record-set/M7-ENV-gate-three, 236 오브젝트, box-projection으로 5재질 적용, 텍스처 pack). Cycles 검수 렌더 3장 `renders/`. M7-PROP-player-hand는 핸드오프대로 후속 리깅 단계로 제외.
+- [OBSERVED] 서브에이전트 3레인 pre-runtime QA:
+  - 타일 이음새(`m7-tiling-qa-report.{json,md}`): rag-paper 8.53/10.57 최우수, bronze·perforated-steel·salt-crystal needs-edge-blend, salt-concrete Y축 Δ67.76 not-tileable(조수선 수직 그라디언트 — 좌우 타일 전용 설계, X=20.03 경계). 어느 재질도 무보정 tileable-candidate 아님 — 인엔진 검사 전 엣지 블렌드 필요.
+  - 가동 테스트(`articulation/`): S02 전진→멈춤→원위치를 48프레임 키로 재현, 복원 편차 0.0(허용 1e-3). 발견: 크랭크 180° 풀스트로크가 작업대 상판을 0.025m 관통(AABB) — 런타임 리깅 전 ~150° 제한 또는 판독기 높이 상향 필요. 파생 씬 `concept-first-m7-articulation.blend` 별도 저장, 원본 blend sha 전후 동일(`8c76350a…`).
+  - GLB 후보 4종(`SM_Env_Watchroom/SM_Prop_OpticalReader/SM_Prop_RecordSet/SM_Env_GateThree.glb`): 재임포트 라운드트립 224/224 일치. glTF가 box projection을 표현하지 못해 export 시 Smart-UV로 대체 — 시각 동등성 미보장, Bump 노드 미이관.
+- [BOUNDARY] 전 산출물 `runtimeEligible:false` 유지. 미검증: 인엔진 이음새/반복·밉·텍셀 밀도, 무조명 base colour 리뷰 승인, Unity 임포트, 메시 수준 충돌, 크랭크-판 기어 연동, 라이트맵 UV/LOD. 승격은 decision-log 감사로만.
+- Sources: `assets/generated/2d/texture/m7-*-r01/provenance.json`(5) · `assets/generated/3d/concept-first-m7/provenance.json`(16 자산 + acceptanceProgress) · `glb-export-report.json` · `articulation/articulation-report.json` · `m7-tiling-qa-report.json`. 소유: 재질/연출 방향 game-presentation-director, 블록아웃 game-modeler 후속 인수 대상.
+
+### RFC-CX-011 delivery evidence — 2026-09-11
+
+- [OBSERVED] 구현 2레인 병렬(SYS-CORE/SYS-M8) + 디렉터 리소스 레인 완료. SYS-M8 서브에이전트는 보고 단계에서 세션 경계로 종료됐고 코드는 온전했다 — 디렉터가 diff 검수 후 `completeness-m9/impl-sysm8.md`로 보고를 재구성했다. 세션 중 irc 판정 3건: T0PlayModeTests/T0CaseThreadTests·T0RuntimeConfig/T0ProjectBuilder 경계 확장(승인), S-D 비공개 충돌 → 판정 B(objective에 record 표시명 포함 시 폴백하는 데이터 구동 가드; AssertNoDisclosure 유지).
+- [OBSERVED] 배선은 `T0ProjectBuilder.WireBeats`(신규, beats 테이블만)와 `M8ReviewNotesProjectBuilder.ImportReviewCard`(sha 65fc439b… 대조)로 수행 — 전체 Prepare는 후속 마일스톤 빌더 소유 씬을 재생성하므로 실행하지 않았다.
+- [OBSERVED] 최종 네이티브: EditMode 53/53(+7: M9CoreTests 5·ReviewNotesTests 매체 분기), PlayMode 68/68 + 직렬화 부트 1/1(격리 인자), macOS 개발 빌드 Succeeded 354233020B, `open` 실행 생존 12초. 이전 M5 reduced-motion 실패는 선행 수정 위에서 통과. 영수증: `systems/tech-verification/completeness-m9/verification.{md,json}`.
+- [OBSERVED] 창 캡처는 데스크톱 전체만 얻어 판독 증거로 무효(병행 세션 창 포함) → 즉시 폐기. 따라서 GTI 카드 텍스처는 `runtimeApproved:false`·`runtimeEligible:false` 후보로 유지하며, 승격은 네이티브 창 가독성 검수 후 별도 감사 블록으로만 기록한다. 크레딧 사용량은 백엔드가 노출하지 않아 null(0으로 적지 않음).
+- [DECISION] 이월 확정: hintOfferCooldownSeconds 분리(G4d, tools.md §4 + emit-tables 재생성), EN 힌트 textKey(G10), alignment 신규 동사(기획 재-인테이크), ReadOriginal 마모 undo 복원 여부(개방 RFC — 법2 압력 판정 필요), t0-b1 objective 무스포일러 재작성(planner). 독립 QA: `qa/completeness-m9-review.md`.
+- [CARRIED] 사람 플레이·IME/컨트롤러 실기·25분 예산 실측·G4 몰입은 미측정. 커밋/푸시는 사용자 수행. 병행 세션(M7 텍스처 QA·M10 TRACE-RPG)이 같은 트리를 편집 중 — 본 RFC는 그 레인 파일을 쓰지 않았다.
+
+### RFC-CX-011 QA FIX cycle 1 — 2026-09-11
+
+- [OBSERVED] 독립 QA(`qa/completeness-m9-review.md`): S1 0 · **S2 1** · S3 10. S2 = D-M9-01 (C1 단계에서 `원문 열기`가 원문을 열지 못하고 `document`를 잔류시켜 다음 Esc가 검토 노트를 재개). FIX 1회차로 디렉터가 직접 수리(서브에이전트 세션 경계 유실 3회 후 판단).
+- [DECISION·수리] D-M9-01: `ReviewSourceOriginalAvailable`(=!PatrolActive&&!SignatureActive) 게이트로 C1에서 액션 미생성 + 메서드 조기 반환; 회귀 테스트 `C1StagesNeverOfferSourceOriginalOpen` 추가. D-M9-02: `Back()`이 reviewNotes에서 `CloseReviewNotes()`로 위임 — Esc와 버튼이 같은 140ms 닫힘·직전 오버레이 복원. D-M9-04: `T0Simulation.IsSatisfied` 공개, App 복제 술어 삭제(단일 출처). D-M9-05: `teachingRemaining` "비트"→"단계"(en beat→step). D-M9-08: `T0CaseThreadTests.ExpectedObjective`를 비트별 리터럴로(동어반복 제거). D-M9-10: `SaveHintLevels`/`FlushHintLevelsIfDirty` — pending 중 힌트 단계 상승은 commit 성공/실패/취소 시 1회 QueueSave.
+- [DECISION] D-M9-03: `select_ms`(100ms 선택 윤곽)는 소비처가 없고 전체 재구성 UI에서 토글마다 리스트 페이드는 지시된 "윤곽 변화"가 아니라 깜빡임이 된다 → 키 제거·영수증 문구 180/140/120으로 정정, 100ms 윤곽은 TARGET 이월.
+- [DECISION] D-M9-06: guided 티칭 헤더는 **힌트 사다리와 별개의 안내 기능**으로 판정한다(선택 a). 1단 문장을 재사용하되 `hintLevelUsed`에 기록하지 않는다 — 플레이어가 요청한 힌트가 아니므로 텔레메트리 의미(H-R7 "플레이어가 연 단계")를 보존한다. hint-system.md 등재는 systems 후속.
+- [DECISION] D-M9-07: 프리뷰 문장은 GDD §3.3 4요소 중 "바뀌는 것·되돌림" 2요소를 구현했고 "영향 구역·근거 2종"은 이월 항목에 추가한다(T0는 구역=hub 고정, 근거=independentPair 충족 여부로 보강 가능).
+- [CARRIED] D-M9-09: 실행 영수증은 재실행 트랜스크립트로 교체(아래 FIX 검증). D-M9-11: t0-b2 objective 두 번째 문장("안내 표시가 각 단계에 붙는다")은 저작 지시문이 화면에 노출되는 콘텐츠 결함 — planner 이월(t0-b1 무스포일러 재작성과 함께).
+
+### RFC-CX-011 QA FIX cycle 2 (마지막 허용 회차) — 2026-09-11
+
+- [OBSERVED] QA R2: 수리 6건 전부 CLOSED(독립 확인), 판정 3건 수용, D-M9-09 CLOSED, D-M9-11 STILL-OPEN(planner). 신규: D-M9-12(S3, 이월·판정이 decision-log에만 있고 manifest/changelog 미반영), **D-M9-13(S2, 도구 패널 열린 상태에서 `원문 열기` → 복귀 플래그 즉시 해제 + 문서 아래 숨은 도구로 Adjust/Query/Disconnect 입력 전달 — R1 누락 경로, 수리로 생긴 것 아님)**.
+- [DECISION·수리] D-M9-13: 최소 수리(QA 권고 후자) — `ReviewSourceOriginalAvailable`에 `tool==null` 추가. 도구 중 노트에서는 `원문 열기`를 내지 않고, 셸에서는 유지. 회귀 `OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes`(reader 열림→노트→액션 0건→닫기→reader 복귀→셸→액션 존재). 도구를 기억·닫고 문서를 여는 확장안은 이월(manifest). D-M9-12: manifest 이월 목록·changelog에 FIX 판정 반영. G-2: C1 회귀에 `evidence` 복원 단정 추가.
+- [DECISION] FIX 회차는 2회로 종료(quality-gates FIX≤2). R3에서 S2가 다시 열리면 REDO가 아니라 해당 항목을 개방 결함으로 등록하고 hop 완료 판정을 보류한다.
+
+## RFC-CX-012 종합 판정 — ACK 3건 해소·적용 완료·승격 (2026-09-11, decided_by: game-production-director)
+
+- [OBSERVED] 사용자 지시(2026-09-11): "subagent 이용해서 완료시키고 메인에 머지". 적용 단계 3 wave + QA 2회로 이행. 세션 소멸로 2회 재-스폰(PlannerApply→PlannerFix, SynopsisApply→BridgeAlign); 산출물 무손실.
+- [DECISION] **ACK-a(planner, `planning/field-classification-20260911.md`) 수용**: `completion` = 검증 술어 — 런타임 소비처 0건(`T0Json.BeatJson`에 필드 부재, 로더는 `completionPredicate.requires`만 역직렬화, `unity/**/*.cs` grep 0), `objective`·`subtasks`·`hints`·`recovery`·`title`·`clues.description` = 표시(CaseObjective verbatim 표기 + `M9CoreTests` 단언 + emit-tables 투영). 파급: B-11 위반 아님(토큰 보존) · B-12 표시 필드 4건만 교체 · B-14 objective 안내문 9곳 제거(`toolTeaching` 1:1 보유 확인).
+- [DECISION] **ACK-b(worldview) 수용**: glossary R8(신설 9행 + 회로 지도 2상태 + §7 「-철」 규칙) + R9(신설 3행 보호 지정·공통 종결부·종결부 후일담 + §7 어간 파생 면제 규칙[역대조·확대 판독] + §4 공통 조위 피크 축약 허용). HEAD↔live: 추가 12·삭제 0·개명 0 [OBSERVED]. 오버레이 6팩트 seed/reveal 캐논 대조 counter 0. `c6-b3.consequence` R3 문장 vs §7 상한 긴장은 §7 우선(RFC-W4 선례)으로 판정, 수정 형태(이관 vs 한정)는 차기 consistency-audit 안건 — planner 편집 회차 판정.
+- [DECISION] **ACK-c(systems, `systems/rfc-cx-012-ack.md`) 수용**: `game-ui-contract.json` information_hierarchy 「복귀 지점 목록과 각 지점의 장(章) 조위 위상」 1곳. `data/t0/*` emit-tables 재생성 2회(2차는 QA 조사 정정 반영 + emitter L896 `_src` 「증거함」 1어 정정 승인). diff는 문자열·sha·날짜·`_src` 주석만, 수치·id 변화 0. **Unity `Assets/_Project/Data/Tables/` 사본은 교체 전 campaign sha를 물고 있어 다음 `Tools/T0/Import`가 fail-closed** — 이 RFC는 unity/ 무접촉이며 재복사·재임포트는 M9 세션/다음 회차 systems 몫 [CARRIED].
+- [DECISION] **디렉터 가감(aside 자문 대비)**: ① 훈련→연습 흡수(glossary §3 「연습」 정의가 aside 확인 질문에 답함 → 「연습 서식」·「연습 압착」), ② aside "보호 지정 5장" 기각(5장=章 → "5장의 보호 지정"), ③ aside 미회부 기계적 통일 12건은 감사 후보 ① 채택. `production/term-decision-aside-20260911.md` §1·§2가 교체어 유일 정본.
+- [OBSERVED] **적용 실측**: campaign.json 교체 65연산/62필드 + QA 조사 정정 2건(D-CX012-01/02). t0-records.md 2행(hb-l4 청문 접수부, hb-l1 봉인대→서명대 — §2 자리/기구 구분 근거). narrative-flow-bridges.md 8행/10셀 정합. 유지 13행(27명사) 개명·재정의 0.
+- [OBSERVED] **QA 2차 (`qa/rfc-cx-012-review.md`)**: validate-campaign 49/49 · `--pairs` 17쌍 · `--t0` 5/5(sourceSha 일치) · evidence-graph 2회 emit sha 동일 · EG 18/18(음성 시험 비공허 확인) · K-06 {c4-b3:false, c6-b4:true} · validate-game-ui PASS. 결함: S1 0 · S2 0(3건 closed) · S3 closed 5 / open 0(D-07 term-decision §4 R9 반영·D-08 bridges §3.3 R9 정합 — 디렉터 직접 정정). 승격 14/14 PASS.
+- [DECISION] **승격**: QA PASS 근거로 draft 10건 → `status: current` (planning 4 meta + field-classification, worldview term-audit, production term-decision, synopsis bridges, systems ack, qa review). glossary·t0-records·timeline·ui-contract meta·data/t0 meta는 기존 current의 RFC-Q2 제자리 갱신. 디렉터 재검증 [OBSERVED]: 49/49 · `--t0` 5/5 · EG 18/18 · `freshness-check.sh` 0 finding / 600 artifacts.
+- [DECISION] **게이트 영향**: G1(세계관 일관성) 문서 수준 — 용어집 미수록 노출 고유명사 16→0, 톤 미정합 기술어 15→0(표시 필드 기준), 캐논 변경 0. G7 문서 수준 — 증거 해금 위상·도달성·공개 순서가 기계 검사(EG 18)로 고정. **런타임 게이트는 여전히 NOT-MEASURED**(빌드 0·플레이 n=0). campaign.json이 바뀌는 모든 미래 회차의 완료 조건 = 49 + `--t0` 5 + EG 18 동시 PASS.
+- [CARRIED] 이월(비차단): 저작 주석 필드(action/consequence/inference) 교체 전 어휘 22건 잔존(감사 범위 밖, 화면 비노출) · `c1-b3` title/completion/clue의 「훈련」 3건(제목은 타 레인 인용 위험으로 단독 개명 보류) · timeline §7 B13 "공통 피크" 이형 · `c6-b3.consequence` R3 정렬 · Unity Data/Tables 재복사. 전부 다음 worldview/planner/systems 편집 회차 안건.
+- 머지: main 직접 커밋(사용자 지시). 스테이징은 RFC-CX-012 범위 파일만 명시 pathspec — M5/M9 병행 세션 산출물(unity/·assets/·m5-direction/·concept/·handoff/·changelog·.mex/·qa/completeness-m9-review.md·tech-verification/completeness-m9/·graphify-out/)은 스테이징하지 않는다. decision-log.md·task-manifest.md는 공유 append-only 파일이라 병행 세션의 M9 append가 함께 실린다(되돌리지 않음, §8).

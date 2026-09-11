@@ -1,14 +1,14 @@
 {
   "emitter": "systems/pipeline/emit-tables.mjs",
   "emitterOwner": "game-systems-designer",
-  "emittedUtc": "2026-09-10T07:56:28.749Z",
+  "emittedUtc": "2026-09-11T14:41:04.422Z",
   "scope": "t0",
   "scopeSource": "--scope",
   "dryRun": false,
   "source": {
     "path": "planning/campaign.json",
-    "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
-    "bytes": 124007
+    "sha256": "87623a68ff272370225cbaea95a64975af8cd56d73027f64ab9f02451e3564a7",
+    "bytes": 123722
   },
   "validator": {
     "path": "planning/validate-campaign.mjs",
@@ -50,14 +50,14 @@
     {
       "file": "beats.json",
       "derivation": "subset+predicate",
-      "sha256": "9bf5634a0908ef8f6bbcecf2fdd6d19ecf01e76eff1820ce213eec35a4bd5a8f",
-      "bytes": 16532,
+      "sha256": "b82f8361e58ccc9d7b40acc8663f61092cf72526c74a0954db8d64a45f892fd2",
+      "bytes": 16490,
       "rows": 3
     },
     {
       "file": "hints.json",
       "derivation": "projection",
-      "sha256": "8bbfc9318ee6decde387245482901959be04dfe28f74e0831d530ffbd9bb4839",
+      "sha256": "c847a91d31e29425a6039acad2280eb0673baffbe2e85e4076eecb5687c1326f",
       "bytes": 4032,
       "rows": 9
     },
@@ -78,8 +78,8 @@
     {
       "file": "records.json",
       "derivation": "markdown-parse+rule",
-      "sha256": "7703643983f733a49f173296530710bb719d5ec663fa6ba863a25c6c9d7989cd",
-      "bytes": 70687,
+      "sha256": "fc660c8a2a8ed461a1b7ddc6befcfe0bf0963c9c50f72df31b18ffaceae75976",
+      "bytes": 70694,
       "rows": 5
     }
   ],
@@ -111,7 +111,7 @@
   "authoringSources": {
     "records": {
       "path": "synopsis/t0-records.md",
-      "sha256": "f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f"
+      "sha256": "d586adf86cd15db26b6f283ef595390f750d2f10b6ccbd097d30fb6dfc7f0419"
     },
     "toolsSchema": {
       "path": "systems/data-schemas/tools.md",
@@ -131,7 +131,7 @@
     },
     "manifest": {
       "path": "modeling/asset-manifest.md",
-      "sha256": "b32fe494d1c8af87494177e0387cf0417fab9447bf17d06c6a9c17210393b285"
+      "sha256": "b1e8654f4fcf80daae05eb2b9a2f60828325adaba55b94136f370fe3db87987f"
     },
     "bible": {
       "path": "worldview/worldview-bible.md",

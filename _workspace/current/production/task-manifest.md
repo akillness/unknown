@@ -92,3 +92,25 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | Optional offline notes and source reflection | systems | P3/P4 | Unity App/UI/Input/Save and scoped tests | implemented; M8 PlayMode 10/10, journal and unlock authority unchanged |
 | M7-consistent note staging and future GTI material brief | presentation | P2 | presentation/ai-native-m8-direction.md | design complete; no assets generated |
 | Isolated native checks and publication | director, QA | P4 | systems/tech-verification/ai-native-m8/verification.md | scoped checks complete: EditMode46/46, M8 PlayMode10/10, boot1/1; broad64/65 with same baseline M5 failure; complete in this change; macOS build and native note-save smoke passed |
+
+## M9 — 완성도 hop: 코어루프·튜토리얼·리소스 반영 연출·밸런스 (2026-09-11, RFC-CX-011)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| 3레인 병렬 감사(코어루프/튜토리얼·밸런스/리소스·연출, READ-ONLY) → 범위 판정 | systems, balance, presentation, director | P1/P2 | production/decision-log.md RFC-CX-011 | complete; 갭 목록·슬라이스 근거 RFC에 인용 |
+| S-A~S-D·S-G 코어루프·튜토리얼·밸런스 계약 이행(힌트 영속화, two-step 기본, 프리뷰 diff, guided 티칭+비트 목표, snapshotInterval·유휴 타이머) | systems | P3 | unity/Unknown App/Save/Editor/Resources, Tests/EditMode/M9CoreTests.cs, systems/tech-verification/completeness-m9/impl-syscore.md | implemented; 판정 B(비공개 가드) 반영 |
+| S-E·S-F M8 TARGET 3건 + 검토 노트 연출 계층(질문 버튼·원문 복귀·매체 분기·CanvasGroup 전환(180/140/120ms)·프로필 게이트) | systems, presentation | P3 | App/ReviewNotesSession.cs, UI/T0ReviewNotesInterface.cs, Presentation/M8ReviewNotesProfile.cs, Resources/M8ReviewVfx.json, Editor/M8ReviewNotesProjectBuilder.cs, completeness-m9/impl-sysm8.md | implemented; 서브에이전트 보고 단계 유실로 디렉터가 diff 검수 후 보고 재구성 |
+| S-H GTI 검토 카드 텍스처 생성·임포트 | director, concept | P3 | assets/generated/2d/texture/m8-review-card-r01/, Art/Candidates/m8-review-card/, Resources/M8ReviewNotes.asset | candidate; runtimeEligible:false·runtimeApproved:false, 네이티브 창 가독성 검수 후 승격 |
+| 네이티브 검증 + 독립 QA | director, QA | P4 | completeness-m9/verification.md·verification.json, qa/completeness-m9-review.md | QA R1: S1 0·S2 1·S3 10 → FIX 1 수리 6·판정 3·이월 2; FIX 1 검증 EditMode 53/53 · PlayMode 69/69 · boot 1/1 · macOS build Succeeded 354230869B · 트랜스크립트 실행 영수증; 창 가독성 캡처 미완; QA R2: 수리 6 CLOSED·판정 3 수용, 신규 S2 D-M9-13(도구 열림 중 원문 열기) → FIX 2 `tool==null` 게이트 + 회귀 테스트; R3 확인 대기 |
+
+[OBSERVED] 이월(RFC-CX-011 명시 + QA FIX 판정): hintOfferCooldownSeconds 노브 분리, EN 힌트 textKey, alignment 신규 동사(기획 재-인테이크), ReadOriginal 마모 undo 판정(개방 RFC), t0-b1 objective 무스포일러 재작성 + t0-b2 objective 저작 지시문 제거(planner·campaign.json, D-M9-11), 프리뷰 문장 영향 구역·근거 2종(D-M9-07), 검토 노트 출처 선택 100ms 윤곽(D-M9-03), 티칭 헤더 hint-system.md 등재(D-M9-06), 도구 열림 중 원문 열기 허용(D-M9-13 축소 수리의 확장안).
+
+## M10 — TRACE-RPG methodology: evidence-graph contract, terminology, narrative bridges (2026-09-11)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| Evidence-unlock typed graph + deterministic validator (TRACE-RPG 6-family adaptation) | planner | P2/P4 | planning/emit-evidence-graph.mjs, planning/evidence-graph.json, planning/evidence-graph-overlay.json, planning/validate-evidence-graph.mjs (+4 .meta.md) | **current** (QA PASS); EG-SUMMARY 18/18, byte-deterministic, negative test non-vacuous, provenance re-bound to post-replacement campaign (RFC-CX-012 G-A) |
+| Worldview terminology audit + aside consultation + director decision + application | worldview, planner, systems, synopsis, director | P2/P4 | worldview/term-audit-20260911.md, production/term-decision-aside-20260911.md, planning/field-classification-20260911.md, systems/rfc-cx-012-ack.md; campaign.json 65+2 edits, glossary R8+R9 (+12 rows, 0 deleted), t0-records 2 rows, ui-contract 1, data/t0 regenerated ×2 | **current** (QA PASS); ACK a/b/c resolved, completion=predicate / 6 display fields, 유지 13행 침해 0, 49/49 · --t0 5/5 · EG 18/18 (RFC-CX-012 G-B) |
+| 33-beat narrative bridge layer (ledger grammar adaptation: 이음/해금 예고/보류) | synopsis | P2 | synopsis/narrative-flow-bridges.md | **current** (QA PASS); 33×3 rows realigned post-replacement (8 rows/10 cells), ceiling violations 0, misconception negations 0, unregistered nouns 0 (R9 basis), rule naming 33/33 (RFC-CX-012 G-C) |
+| Independent QA verification ×2 + promotion | qa, director | P4 | qa/rfc-cx-012-review.md | complete; S1 0 · S2 0 · S3 closed 5, promotion 14/14 PASS, director re-run 49/5/18 + freshness 0/600 |
+| **Carried**: Unity Data/Tables re-copy (stale sha → Import fail-closed), authoring-annotation residue 22, c1-b3 훈련 ×3, c6-b3.consequence R3 alignment, timeline B13 "공통 피크" | systems, worldview, planner | next | unity/Unknown/Assets/_Project/Data/Tables/, campaign.json, timeline.md | open — next editing cycle |
