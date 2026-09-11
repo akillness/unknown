@@ -77,15 +77,15 @@ namespace Tide.Save
                 {
                     var doc=SaveCodec.Decode(File.ReadAllText(path));
                     int version;
-                    if(doc["schemaVersion"]?.Type!=JTokenType.Integer || !int.TryParse(doc["schemaVersion"].ToString(),out version) || version<0 || version>2) return new SaveLoadResult{Failure="SAVE_VERSION_REFUSED",Source=candidate};
-                    if(version>2) return new SaveLoadResult{Failure="SAVE_VERSION_REFUSED",Source=candidate};
+                    if(doc["schemaVersion"]?.Type!=JTokenType.Integer || !int.TryParse(doc["schemaVersion"].ToString(),out version) || version<0 || version>3) return new SaveLoadResult{Failure="SAVE_VERSION_REFUSED",Source=candidate};
+                    if(version>3) return new SaveLoadResult{Failure="SAVE_VERSION_REFUSED",Source=candidate};
                     if(version<0) throw new InvalidOperationException("SAVE_VERSION_REFUSED");
-                    bool migrated=version<2;
+                    bool migrated=version<3;
                     if(migrated)
                     {
                         var original=path+".v"+version+".bak";
                         if(!File.Exists(original)) File.Copy(path,original);
-                        doc["schemaVersion"]=2; if(version==0)doc["storyClock"]="21:00";
+                        doc["schemaVersion"]=3; if(version==0)doc["storyClock"]="21:00";
                     }
                     validate?.Invoke(doc);
                     return new SaveLoadResult{Document=doc,Source=candidate,Migrated=migrated};

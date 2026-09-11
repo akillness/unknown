@@ -1,0 +1,638 @@
+Unity Editor version:    6000.5.6f1 (0e0577a1a2ac)
+Branch:                  6000.5/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.3.1 (Build 25D2128)
+Darwin version:          25.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Date:                    2026-09-11T03:59:45Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-jangyoung doesn't exist
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 15029)
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-quit
+-projectPath
+/Users/jangyoung/orca/unknown/unity/Unknown
+-executeMethod
+Tide.EditorTools.C1SignatureProjectBuilder.ImportAndCapture
+-logFile
+/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/c1-m4/logs/reader-r02-diagnostic.log
+Successfully changed project path to: /Users/jangyoung/orca/unknown/unity/Unknown
+/Users/jangyoung/orca/unknown/unity/Unknown
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [8682565888]  Target information:
+
+Player connection [8682565888]  * "[IP] 192.168.219.124 [Port] 55504 [Flags] 2 [Guid] 443147329 [EditorId] 443147329 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8682565888]  * "[IP] 100.119.58.79 [Port] 55504 [Flags] 2 [Guid] 443147329 [EditorId] 443147329 [Version] 1048832 [Id] OSXEditor(0,MacBook-Pro-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8682565888] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8682565888] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung" at "2026-09-11T03:59:46.03369Z"
+[Package Manager] Connected to IPC stream "Upm-15028" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              741fb628f3da4adfb006c24b88cf5818
+  Correlation Id:          424c31fb1aad6f0ad2b795bcafb237d9
+  External correlation Id: 6090116840784582695
+  Machine Id:              GDFq97hyJBwslTnyqVIUvhYydXg=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jangyoung" (connect: 0.57s, validation: 0.04s, handshake: 0.34s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jangyoung-notifications" at "2026-09-11T03:59:46.406193Z"
+[Licensing::Module] Connected to LicensingClient (PId: 15029, launch time: 0.00, total connection time: 0.95s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 4513980-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.97s
+[Licensing::Module] Licensing is initialized (took 0.30s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.5.6f1 (0e0577a1a2ac)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/jangyoung/orca/unknown/unity/Unknown/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+ preferred device: Apple M2 Pro (high power)
+Metal devices available: 1
+0: Apple M2 Pro (high power)
+Using device Apple M2 Pro (high power)
+Initializing Metal device caps: Apple M2 Pro
+Mac GPU Family: 2
+Apple GPU Family: 8
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/6000.5.6f1/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001670 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.300 seconds
+Domain Reload Profiling: 718ms
+	BeginReloadAssembly (107ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (230ms)
+		LoadAssemblies (104ms)
+		AnalyzeDomain (175ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (158ms)
+	FinalizeReload (301ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (72ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 55 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.localization@1.5.13 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.localization@ef5a0677859d)
+    com.unity.addressables@2.9.1 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.addressables@8460f1c9c927)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64)
+    com.unity.searcher@4.9.4 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.burst@6bb9aca3ef38)
+    com.unity.profiling.core@1.0.3 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.profiling.core@8a49f7027d06)
+    com.unity.scriptablebuildpipeline@2.6.1 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.scriptablebuildpipeline@36e3b5898ee2)
+    com.unity.nuget.mono-cecil@1.11.6 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.universal@73b4c4ff130e)
+    com.unity.test-framework@1.7.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.ugui@67707a67a4ab)
+    com.unity.modules.accessibility@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.core@645717f21c5f)
+    com.unity.shadergraph@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.shadergraph@8d7376ec43ee)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.collections@6.5.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.collections@a43cabe808ca)
+    com.unity.mathematics@1.4.0 (location: /Users/jangyoung/orca/unknown/unity/Unknown/Library/PackageCache/com.unity.mathematics@981956d94fb6)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-91ce4cc105a82451580320b8034fc51a
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/jangyoung/orca/unknown/unity/Unknown
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 30.0440ms
+Starting: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/jangyoung/orca/unknown/unity/Unknown
+DisplayProgressbar: Compiling Scripts
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api/System.ComponentModel.Composition.dll" in favor of "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Resources/Scripting/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.burst@6bb9aca3ef38/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff/Mono.Cecil.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 19.4174ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll, with 137 defines and 294 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Play.dll, with 138 defines and 292 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 6.0932ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 11.3396ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll, with 135 defines and 305 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Sim.dll, with 136 defines and 301 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 2.9855ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 3.4104ms
+ExitCode: 0 Duration: 2s896ms
+[620/820    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[804/820    2s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll (+2 others)
+Assets/_Project/App/T0GameSession.cs(96,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/_Project/App/T0GameSession.cs(96,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[806/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.App.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.App.dll, with 137 defines and 294 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[807/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.Tests.Play.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Play.dll, with 138 defines and 292 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[810/820    0s] CopyFiles Library/ScriptAssemblies/Tide.App.pdb
+[811/820    0s] CopyFiles Library/ScriptAssemblies/Tide.App.dll
+[812/820    0s] Csc Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll (+2 others)
+[814/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.Tests.Sim.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.Tests.Sim.dll, with 136 defines and 301 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[815/820    0s] ILPostProcess Library/Bee/artifacts/200b0aEDbg.dag/post-processed/Tide.EditorTools.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aEDbg.dag/Tide.EditorTools.dll, with 135 defines and 305 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[818/820    0s] CopyFiles Library/ScriptAssemblies/Tide.EditorTools.pdb
+[819/820    0s] CopyFiles Library/ScriptAssemblies/Tide.EditorTools.dll
+*** Tundra build success (2.88 seconds), 11 items updated, 820 evaluated
+Assets/_Project/App/T0GameSession.cs(96,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/_Project/App/T0GameSession.cs(96,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+AssetDatabase: script compilation time: 3.547112s
+Total cache size 72886336
+Total cache size after purge 72886336, took 00:00:00.0857052
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.820 seconds
+Domain Reload Profiling: 3365ms
+	BeginReloadAssembly (126ms)
+		DisableScriptedObjects (12ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (371ms)
+		LoadAssemblies (207ms)
+		AnalyzeDomain (130ms)
+			TypeCache.Refresh (96ms)
+				TypeCache.ScanAssembly (86ms)
+			BuildScriptInfoCaches (29ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (2821ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (60ms)
+			ProcessInitializeOnLoadAttributes (2181ms)
+			ProcessInitializeOnLoadMethodAttributes (419ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Starting new worker id: 0 with log in /Users/jangyoung/orca/unknown/unity/Unknown/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=6026e1824e21c4f29be7c7c155391b5c): Total: 7.859 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3455 ms
+		Asset DB Callback time: managed=215 ms, native=29 ms
+		Scripting: domain reloads=1, domain reload time=565 ms, compile time=3548 ms, other=44 ms
+		Project Asset Count: scripts=1114, non-scripts=1977
+		Asset File Changes: new=0, changed=2, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 16.504ms
+	ApplyChangesToAssetFolders: 0.273ms
+	Scan: 347.612ms
+	Collect global state as custom dependencies: 12.601ms
+	OnSourceAssetsModified: 0.399ms
+	CategorizeScriptCompilationAssets: 28.880ms
+	ProcessAssetsWithTransientArtifactChanges: 41.518ms
+	CategorizeAssets: 48.905ms
+	CompileScripts: 3547.910ms
+	ImportOutOfDateAssets: 2862.206ms (2830.460ms without children)
+		UnloadImportedAssets: 2.149ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.421ms
+		ImportSchedulerStart: 29.146ms
+	PostProcessAllAssets: 217.288ms
+		VCAutoAddAssetPostprocess 1.710ms
+		PostProcessCallbackCreateDeferredMaterials 0.206ms
+		XRBuildSystem.XRAssetImported 0.055ms
+		MonoPostProcessAllAssets: 214.831ms
+			AssetPostprocessor.OnPostprocessAllAssets 151.495ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 16.524ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 8.125ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 6.743ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.490ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.223ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.183ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.664ms
+			SyncVS.PostprocessSyncProject 1.508ms
+			AssetChangedListener.OnPostprocessAllAssets 0.972ms
+			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.878ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.829ms
+			LocalizationAssetPostProcessor.OnPostprocessAllAssets 0.790ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.692ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.684ms
+			AssetPathToTypes.OnPostprocessAllAssets 0.675ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.605ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.556ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.381ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.341ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.321ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.305ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.275ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.273ms
+			PostProcessor.OnPostprocessAllAssets 0.250ms
+			AssetEvents.OnPostprocessAllAssets 0.244ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.216ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.213ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.181ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.176ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.112ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.087ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.070ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.067ms
+	PostAssetChangesProfiler: 12.066ms
+	UnloadStreamsBegin: 1.066ms
+	PersistCurrentRevisions: 0.078ms
+	GenerateScriptTypeHashes: 1.441ms
+	GenerateScriptTypeSerializationHashes: 2.584ms
+	Untracked: 719.220ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Launching external process: /Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/Helpers/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.13 seconds
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 0.065ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Unknown T0
+2026-09-11 12:59:56.478 Unity[15028:315580] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xc089573e0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Unloading 66 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4753 unused Assets / (8.1 MB). Loaded Objects now: 5588.
+Memory consumption went from 257.0 MB to 248.8 MB.
+Total: 13.380958 ms (FindLiveObjects: 0.554625 ms CreateObjectMapping: 1.179458 ms MarkObjects: 7.328500 ms  DeleteObjects: 4.317750 ms)
+
+2026-09-11 12:59:56.566 Unity[15028:315580] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0xc08954780 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Importing 'GUID: fe0ba809b4dee4358a731506e5fccd73 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02' with importer (DefaultImporter)
+Worker ready: AssetImportWorkerHW0 0
+Imported 'GUID: fe0ba809b4dee4358a731506e5fccd73' -> (Import Result ID: '0fcea88bcd3dc451fc544d4cd91ebf6d') in 0.018 seconds [static dependencies only]. Details - ImportResultOutputID=70f1dc679f95fe997d7d023cc690191c DependenciesID=1112aff2c6484fac744ec52afe1fae25 StaticDependenciesID=2374e2506b6522cd77f8988e26cce2b6 
+Importing 'GUID: 8e722a99e968c4b3cb7aebd780806ef4 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures' with importer (DefaultImporter)
+Imported 'GUID: 8e722a99e968c4b3cb7aebd780806ef4' -> (Import Result ID: '8111b20ef4f3ab9a4bb5e4862c44f6fb') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=4ab221de720226e86948f520b8d382ae DependenciesID=19c1b929b621ef1160b0409bb3a0c52c StaticDependenciesID=86ed54c190baf202d7b3b488c2de1cae 
+Importing 'GUID: 6362ff236cd624632b2ace3c50c2e802 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/SignaturePaper.png' with importer (TextureImporter)
+Imported 'GUID: 6362ff236cd624632b2ace3c50c2e802' -> (Import Result ID: '44359f088e291d6ec956f71a92bfa996') in 0.059 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=31e99b4e5da2abe024add712d7af881f DependenciesID=25cdf2989cc9b381e707f2c14cad55d5 StaticDependenciesID=865e722e1b3d0f76ff26eb3ab6af5150 
+Importing 'GUID: 96cff1016755643bea78169fcc414f89 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Patina_BaseColor.png' with importer (TextureImporter)
+Imported 'GUID: 96cff1016755643bea78169fcc414f89' -> (Import Result ID: '7966ec684b64c872c7fd2c275a93158b') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52abbbb67fbcc89dfade7fc3629017c0 DependenciesID=58044aaa2e4674d0ffc548e5806255a6 StaticDependenciesID=838a12b19c67627cc39f1e46b89babc0 
+Importing 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Casting_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f' -> (Import Result ID: '9d33dc40bd78a8415720d9c566b8ab97') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=38cdd867eeda61ba08922b077e3cf77a DependenciesID=295315c3f6c2c0becbe209b2b79e18f7 StaticDependenciesID=86194fbe190b33c338c237e4b35f68e0 
+Importing 'GUID: 3cdca96af45914a029ad2536e03b5761 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Patina_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 3cdca96af45914a029ad2536e03b5761' -> (Import Result ID: '14323c74f54d17af010bbefbecc317ef') in 0.022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=33a8c66e0798d7faaa1407bb6df487d8 DependenciesID=27ee3c5ca01ce611779ed42b023877c0 StaticDependenciesID=9bd833d1ad38fae4d6d807f1d506d671 
+Importing 'GUID: cc8c4fe2b494d4773ae75d1c1ed15768 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Casting_BaseColor.png' with importer (TextureImporter)
+Imported 'GUID: cc8c4fe2b494d4773ae75d1c1ed15768' -> (Import Result ID: 'dabe961e084e2b6e081034bbc142721a') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=74f767745dfb043a1c9372a0aaec02d3 DependenciesID=a94a5fdbb099c0a197fd7aa0278f1eef StaticDependenciesID=8ba81171436d89230982dd810894b87d 
+Importing 'GUID: 98e14afe3f0b14558be1a82afde00925 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/Reader.fbx' with importer (FBXImporter)
+Imported 'GUID: 98e14afe3f0b14558be1a82afde00925' -> (Import Result ID: '6a64463db94fdfe2f4d63cf159ce75cc') in 0.175 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e7a7592c3c70d5fa53883296ab569e66 DependenciesID=e50aa9e8c8f6db43538ef59511e1bb8e StaticDependenciesID=1b410ead28235011c054d0595c6a2593 
+
+Asset Pipeline Refresh (id=a13d82de065fd4559b7b27ac0e2c8dc0): Total: 0.717 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=8 (actual=8, local cache=0, cache server=0)
+		Asset DB Process Time: managed=88 ms, native=590 ms
+		Asset DB Callback time: managed=35 ms, native=2 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1116, non-scripts=1983
+		Asset File Changes: new=8, changed=8, moved=0, deleted=0
+		Scan Filter Count: 1
+	ApplyChangesToAssetFolders: 0.129ms
+	Scan: 239.672ms
+	Collect global state as custom dependencies: 0.295ms
+	OnSourceAssetsModified: 0.510ms
+	ProcessAssetsWithTransientArtifactChanges: 0.178ms
+	CategorizeAssets: 25.922ms
+	ImportOutOfDateAssets: 406.351ms (7.001ms without children)
+		ImportManagerImport: 375.714ms (37.467ms without children)
+			UpdateCategorizedAssets: 0.083ms
+		UnloadImportedAssets: 0.584ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.358ms
+		ImportSchedulerStart: 22.652ms
+	PostProcessAllAssets: 35.093ms
+		XRBuildSystem.XRAssetImported 0.285ms
+		MonoPostProcessAllAssets: 33.727ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 20.119ms
+			AssetPostprocessor.OnPostprocessAllAssets 9.836ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.249ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.783ms
+			AssetChangedListener.OnPostprocessAllAssets 0.265ms
+			LocalizationAssetPostProcessor.OnPostprocessAllAssets 0.226ms
+			PostProcessor.OnPostprocessAllAssets 0.126ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.076ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.068ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.058ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.058ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.057ms
+	PostAssetChangesProfiler: 2.051ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.216ms
+	PersistCurrentRevisions: 0.217ms
+	Untracked: 5.096ms
+
+Importing 'GUID: 6362ff236cd624632b2ace3c50c2e802 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/SignaturePaper.png' with importer (TextureImporter)
+Imported 'GUID: 6362ff236cd624632b2ace3c50c2e802' -> (Import Result ID: '3e42ab8cadead44f150ca207365a0acf') in 0.027 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4afe46bc887e15ac3cb6858ca484dbcb DependenciesID=2d8fb1774d3e60de1f86d711b2e5aa6d StaticDependenciesID=2694b36b633e738cb8cba06dc60a8efc 
+Asset Pipeline Refresh (id=44bcdcbaec66d480da46ca82deb0f6a8): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: cc8c4fe2b494d4773ae75d1c1ed15768 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Casting_BaseColor.png' with importer (TextureImporter)
+Imported 'GUID: cc8c4fe2b494d4773ae75d1c1ed15768' -> (Import Result ID: '611f0042bd44c8a95f41c7fe619024fa') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fb092ba9a1d7a9e32db3feaf47d40a7f DependenciesID=59e2793197c055d098a778f14889d3ea StaticDependenciesID=677d9a66bc84cec4580d42c12a3c8c89 
+Asset Pipeline Refresh (id=07b648511cf9743369934c0ffa9cc1ba): Total: 0.073 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Casting_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f' -> (Import Result ID: 'ee49e1965b7be0fc4eaffca254c175a9') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2686604c096ce348acf94fd77227603 DependenciesID=9a6ef553800b81cbc1c09a01adf07268 StaticDependenciesID=b0b6f8bc78081c0684cf9209936ff39e 
+Asset Pipeline Refresh (id=2562112fc2e024b54848054067942982): Total: 0.068 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 96cff1016755643bea78169fcc414f89 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Patina_BaseColor.png' with importer (TextureImporter)
+Imported 'GUID: 96cff1016755643bea78169fcc414f89' -> (Import Result ID: '36e0930f1cc900fc0ba3c98f4719446f') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=672bf27f21ddd205bd04c3f0ebbb46a9 DependenciesID=ae10c96879f58afc9e94b1a577621a8d StaticDependenciesID=def7e7514f4483cb5bde26d1b4855a63 
+Asset Pipeline Refresh (id=3e2c6228de1f145609fa614b9f1b3f29): Total: 0.073 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 3cdca96af45914a029ad2536e03b5761 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Patina_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 3cdca96af45914a029ad2536e03b5761' -> (Import Result ID: 'd49302a6b0152e730ebf189989fc70ae') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fb6608787dddeb268dbe4affc2d2e714 DependenciesID=aea70cec56c5f92afd9b91088cab8260 StaticDependenciesID=efc2c1c9916f2bec3160f8452564a6b1 
+Asset Pipeline Refresh (id=87e82da4d975d4967aff077c5d03d183): Total: 0.072 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 9 unused Assets / (6.1 KB). Loaded Objects now: 5590.
+Memory consumption went from 217.1 MB to 217.1 MB.
+Total: 7.356959 ms (FindLiveObjects: 0.202916 ms CreateObjectMapping: 0.578000 ms MarkObjects: 6.517208 ms  DeleteObjects: 0.058250 ms)
+
+Importing 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Casting_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 58f9e2c10ffa7481d9f6223bcd78e64f' -> (Import Result ID: 'cc67041b594138dfc0250d0e9f84ed63') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75022afba2a932cd8f044ad640f01745 DependenciesID=e3e0734f70173638c1147b701997f5bc StaticDependenciesID=550a0f1e7954dfc4b38de4d91c8b8f0b 
+Asset Pipeline Refresh (id=c27f3fed1670b41d29c43e751cf2952d): Total: 0.076 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: fced162e52880471398de9e961063dc2 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Casting_MetallicSmoothness.asset' with importer (NativeFormatImporter)
+Imported 'GUID: fced162e52880471398de9e961063dc2' -> (Import Result ID: 'f978929551e85ba1b4207adc3b46f56c') in 0.029 seconds [static dependencies only]. Details - ImportResultOutputID=73dac3b60cf112c30e1465c27367b0e6 DependenciesID=1e88074b62ae098ec774db06fc7c3f18 StaticDependenciesID=f80b185f37d6865349ee8214d0934a60 
+Asset Pipeline Refresh (id=360f6a5c9429c4e6eb149ff1bddc25b9): Total: 0.126 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 57bf06ae75c9546ec9ae660e2f664cb6 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Casting.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 57bf06ae75c9546ec9ae660e2f664cb6' -> (Import Result ID: '32c3c9b42da18a26e86567b3ec2b9725') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4c0ad3a741b5ffb9bda76d51bbafc8d5 DependenciesID=c1cdf56907556bdc22f4afe33c9d7b63 StaticDependenciesID=5d6f3880941b918e77fa58c837417b4b 
+Asset Pipeline Refresh (id=4e43665a1632b4e4186c0c26d734cf63): Total: 0.058 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 3cdca96af45914a029ad2536e03b5761 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/textures/MAT_C1_Reader_Patina_Roughness.png' with importer (TextureImporter)
+Imported 'GUID: 3cdca96af45914a029ad2536e03b5761' -> (Import Result ID: '940b50ad39bf04d80fa4fbf44925dcff') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1b4fb89f72a32e6194e1f15c7e90e8aa DependenciesID=091ae3cf38c5f35b30c9e12e094dcb16 StaticDependenciesID=3bb8e01d40a354c519977accc94a2bee 
+Asset Pipeline Refresh (id=7a030594e54d94c7f888a241055db9f5): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 4de7a79fc48704c0a9e48b911c591c3f - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Patina_MetallicSmoothness.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 4de7a79fc48704c0a9e48b911c591c3f' -> (Import Result ID: '9a5527ce7d3979cc2629e2e406ac30eb') in 0.023 seconds [static dependencies only]. Details - ImportResultOutputID=1c69c3e44f90fa16b5dca9e8ce00d8cf DependenciesID=7ccb5cd8e226ac8e0a7721c2bade93d2 StaticDependenciesID=0abc5bff94e8cdc89125d7dc04b69891 
+Asset Pipeline Refresh (id=c2bbc02fde4ff41ada229a2ad1eb4e8d): Total: 0.111 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 4f164ccafb3274b2692e2ce4af702cd3 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Patina.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 4f164ccafb3274b2692e2ce4af702cd3' -> (Import Result ID: 'd8356a75477d10a2b56e06c6c4a97e48') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6dd42ee3e2e9c725397fb62883742819 DependenciesID=4fb551632f72032fb25b5b1139164455 StaticDependenciesID=b7be7a71f7315fe2b97742de38c21484 
+Asset Pipeline Refresh (id=e7251e9e185ef4b72a762909ab9cf04d): Total: 0.052 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 74cd89c9eea5c453296ccbd0b2cc9a5c - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Recess.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 74cd89c9eea5c453296ccbd0b2cc9a5c' -> (Import Result ID: '0eac277004338bafe8d5a16cdf965edd') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=364fedb8102ab8923321556e86e7e1c1 DependenciesID=0d408d1939f6ba0df97e89cdbe7c904b StaticDependenciesID=19199a2330fc54170478acfabf5d511f 
+Asset Pipeline Refresh (id=efa94a62e1bb242aebc0b2ed1a66dc8d): Total: 0.052 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f684c63c0ec624d89b804e31b47f2c48 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Salt.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f684c63c0ec624d89b804e31b47f2c48' -> (Import Result ID: 'fa803bd3b6f014e37b1cb00fd1566a59') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0b3bcae652232103594850489108fd05 DependenciesID=9d0c7f35e274f0b4b8292f0f9c47f9c2 StaticDependenciesID=8d2100a22fe4ba22f6ecbde058707f9d 
+Asset Pipeline Refresh (id=2d9b2a9a644a64ef493f2f66bfc493db): Total: 0.050 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c92f1b0b223404c0cb07bf1bf3869126 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/SignatureReader.prefab' with importer (PrefabImporter)
+Imported 'GUID: c92f1b0b223404c0cb07bf1bf3869126' -> (Import Result ID: 'edb96e83ceba778632a4900fbe9f7fed') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c75e135e6faffb86af29f761b9cc3de8 DependenciesID=399058247259641ffa758b982a9f276b StaticDependenciesID=09a414217453af0449cf697b04fdc287 
+Asset Pipeline Refresh (id=6ba2aed87af5b47e387dfd40129cb17f): Total: 0.050 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 74cd89c9eea5c453296ccbd0b2cc9a5c - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Recess.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 74cd89c9eea5c453296ccbd0b2cc9a5c' -> (Import Result ID: 'bff73a899409f7b41c937cd01cf32b75') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=364fedb8102ab8923321556e86e7e1c1 DependenciesID=0e7eb097e6b40d5a5ce4dbf35c578d13 StaticDependenciesID=6bb56f2f521e697954befe941c8b966f 
+Importing 'GUID: f684c63c0ec624d89b804e31b47f2c48 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Salt.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f684c63c0ec624d89b804e31b47f2c48' -> (Import Result ID: 'd2eb1916c57f2596b191847bd327f2cc') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0b3bcae652232103594850489108fd05 DependenciesID=e16730435f8af754d655a0a20fd00210 StaticDependenciesID=c471513b18010203e412e71151cf3cb6 
+Importing 'GUID: 57bf06ae75c9546ec9ae660e2f664cb6 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Casting.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 57bf06ae75c9546ec9ae660e2f664cb6' -> (Import Result ID: '8cb45a9e4aecd7b917b18b10c64af59d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4c0ad3a741b5ffb9bda76d51bbafc8d5 DependenciesID=495d3611e1b9b72aa3c0b81a1f021323 StaticDependenciesID=7d9361e10b437e507784d67b93440a2b 
+Importing 'GUID: 4f164ccafb3274b2692e2ce4af702cd3 - Path: Assets/_Project/Art/Candidates/c1-signature-reader-r02/MAT_C1_Reader_Patina.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 4f164ccafb3274b2692e2ce4af702cd3' -> (Import Result ID: 'ddb411ab36d38613fb1707bc9c629998') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6dd42ee3e2e9c725397fb62883742819 DependenciesID=4a07052ef3aca443f81ad05df0bc2623 StaticDependenciesID=eb013fd6054c65602372bd36ae92cead 
+Importing 'GUID: 9198acca6fecb4bfeb17c81c67a2e9f8 - Path: Assets/_Project/Resources/C1SignatureView.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 9198acca6fecb4bfeb17c81c67a2e9f8' -> (Import Result ID: '872963832626a157dfccf3db17ed4110') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f35b5ac2ed24ae2831f3f135fe2d449d DependenciesID=e84d31820844a17425d5973ea9d6d1f2 StaticDependenciesID=73f7df9384c99192e6e91b3de2387cb7 
+Asset Pipeline Refresh (id=dffbec2dbeb674e858be71efad9f1dcb): Total: 0.058 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Shader warmup: 101 shaders 31 combinations 0.253s
+C1_SIGNATURE_NATIVE_DIAGNOSTIC /Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/c1-m4/reader
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tide.EditorTools.C1SignatureProjectBuilder:ImportAndCapture () (at Assets/_Project/Editor/C1SignatureProjectBuilder.cs:67)
+
+(Filename: Assets/_Project/Editor/C1SignatureProjectBuilder.cs Line: 67)
+
+Batchmode quit successfully invoked - shutting down!
+Thread 0x337507000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+MSBuild 서버을(를) 종료하는 중...
+VB/C# 컴파일러 서버을(를) 종료하는 중...
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-jangyoung-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-jangyoung channel disconnected successfully.
+Thread 0x16f91b000 may have been prematurely finalized
+Thread 0x16fd7b000 may have been prematurely finalized
+Thread 0x16fe07000 may have been prematurely finalized
+Thread 0x16fabf000 may have been prematurely finalized
+Thread 0x16fb4b000 may have been prematurely finalized
+Thread 0x16fbd7000 may have been prematurely finalized
+Thread 0x16fcef000 may have been prematurely finalized
+Thread 0x16fc63000 may have been prematurely finalized
+Thread 0x16fa33000 may have been prematurely finalized
+Thread 0x16f9a7000 may have been prematurely finalized
+AcceleratorClientConnectionCallback - disconnected - :0
+Thread 0x1733bf000 may have been prematurely finalized
+MSBuild 서버을(를) 종료했습니다.
+Cleanup mono
+CodeReloadManager destroyed
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      ALC ILPP context 1 is unloading
+VB/C# 컴파일러 서버을(를) 종료했습니다.
+debugger-agent: Unable to listen on 32
+Exiting batchmode successfully now!
+[Package Manager] Server process was shutdown

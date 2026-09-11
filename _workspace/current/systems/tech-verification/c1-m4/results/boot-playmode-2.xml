@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.1232518">
+  <test-suite type="TestSuite" id="1049" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="36" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.123252" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1043" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="36" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.115783" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19873" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1044" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="36" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.114856" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1045" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="36" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.114075" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1015" name="T0BootSceneTests" fullname="Tide.Tests.T0BootSceneTests" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.112313" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1016" name="SerializedBootLoadsHubAndInitializesVisibleStartScreen" fullname="Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen" methodname="SerializedBootLoadsHubAndInitializesVisibleStartScreen" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" seed="766973067" result="Passed" start-time="2026-09-11 04:03:08Z" end-time="2026-09-11 04:03:10Z" duration="1.103833" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0_BOOT entry-start
+T0_BOOT ui-root-loaded
+T0_BOOT hub-loaded
+T0_BOOT session-initialized
+Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

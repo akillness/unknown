@@ -67,8 +67,8 @@
 | 2D 컨셉 리소스 | 45장 (인물·공간·도구·UI·키아트·캡슐·README·프리비즈), GTI, 전부 `runtimeEligible:false` |
 | 3D | 허브 당직실 그레이박스 + 도구 6종 블록아웃 (GLB 7 / FBX 1, 144 tris), Blender 5.1.2 |
 | 영상 | Higgsfield image-to-video 프리비즈 2클립 (5초·720p) |
-| Unity 프로젝트 | `unity/Unknown/` — Unity 6000.5.6f1 빈 프로젝트 (코드 0줄, 배치 생성·헤드리스 열기 영수증 `_workspace/current/production/receipts/unity-batchmode/`) |
-| 실제 빌드 · 플레이테스트 · 성능 | **없음 / n = 0** — 본 생산은 계약의 "Base production gate" 네 조건 충족 후에만 |
+| Unity 프로젝트 | `unity/Unknown/` — Unity 6000.5.6f1, T0·C1 개발용 씬·코드·리소스와 저장/복구 포함. 구간별 구현·검증 범위는 아래 보고서 참조 |
+| 실제 빌드 · 플레이테스트 · 성능 | macOS 개발 빌드와 에이전트 조작 스모크 있음. 사람 플레이테스트·성능 실측은 **n = 0**. 본 생산 진입은 별도 Base production gate 적용 |
 
 정직성 규칙: 표를 더해 480분이 나왔다는 사실은 8시간을 플레이했다는 증거가 아닙니다. 게이트 측정치는 [`_workspace/current/qa/gate-measurements.md`](_workspace/current/qa/gate-measurements.md) 에만 있고, 실측이 없는 게이트는 `NOT-MEASURED`로 남습니다.
 
@@ -119,7 +119,7 @@ M1의 내부 계약 검사 21개는 EditMode wrapper 1건에 포함되며 테스
 
 Blender r03 서랍은 실제 Unity 임포트·재질·배치 검토를 거쳐 **T0 씬 한정**으로 연결했습니다. Higgsfield 도장 소리는 생성 후보이며 청취 검수 전이라 런타임 재생을 비활성 상태로 유지합니다. MuAPI의 공식 인터페이스는 확인했으나 인증된 로컬 연결이 없어 이번 리소스 생성에는 사용하지 못했습니다.
 
-현재 구현은 T0 범위입니다. **25분은 설계 목표**이며 측정된 플레이 시간이 아닙니다. 전체 9장 캠페인, G4/G5/G6, 상품 출시 준비가 완료됐다는 뜻도 아닙니다.
+T0 M2 당시 구현 범위입니다. **25분은 설계 목표**이며 측정된 플레이 시간이 아닙니다. 전체 9장 캠페인, G4/G5/G6, 상품 출시 준비가 완료됐다는 뜻도 아닙니다.
 
 ## C1 M3 구현과 검증
 
@@ -133,6 +133,28 @@ Blender 5.1.2에서 원본 계통판을 제작했습니다: 정적 메시 6개, 
 ![C1 수문 계통판 Blender 미리보기](docs/media/c1-patrol-panel-blender-r01.png)
 
 범위는 c1-b1까지입니다. C1 전체 네 구간, 설계상 50분 플레이타임, 재미·성능·G4/G5 완료를 입증하지 않습니다. 리소스 제작 이력은 [작업자 검토](_workspace/current/production/c1-panel-operator-review.md)와 [provenance](assets/generated/3d/c1-patrol-panel-r01/provenance.json)에 남깁니다.
+
+## C1 M4 — 겹쳐 붙은 서명지
+
+C1 두 번째 구간 `c1-b2`를 구현했습니다. 습도 시험과 원상 복구, 두 장 분리·개별 사본 보존, 하단 미해결 영역 표시, 판 #0과의 명시적 비교를 연결했습니다. 확정 저장이 성공한 뒤에만 완료·체크포인트·사본·근거 관계를 함께 반영합니다. 이전 v1/v2 저장 호환과 읽기 전용 화면 규칙도 검증 범위에 포함합니다.
+
+Blender **r02 판독기·트레이**는 3,920 triangles / 4 meshes / 4 materials이며, Higgsfield의 **1024² 빈 종이 질감**을 사용합니다. 종이의 접착 소금과 아래쪽 가림은 별도 UI 상태로 구성해 단서를 이미지에 굽지 않습니다. 아래 그림은 **Unity 네이티브 리소스 검수 캡처**로, 플레이 화면이나 성능 측정이 아닙니다.
+
+![C1 판독기와 습도 트레이 — Unity 네이티브 리소스 검수](docs/media/c1-signature-reader-native-r02.png)
+
+포함된 리소스로 M4 macOS 빌드를 재현하려면 다음 명령을 사용합니다.
+
+```bash
+"$UNITY_EDITOR" -batchmode -nographics -quit \
+  -projectPath "$PWD/unity/Unknown" \
+  -executeMethod Tide.EditorTools.C1SignatureProjectBuilder.BuildMac \
+  -logFile /tmp/unknown-c1-m4-build.log
+open -a "$PWD/unity/Unknown/Builds/C1-M4-mac/Unknown.app"
+```
+
+**[OBSERVED · 2026-09-11]** 분리한 배포 소스에서 **EditMode 36/36 · PlayMode 39/39 · 직렬화 부팅 1/1 PASS**. 실제 v2 저장의 기존 42개 명령과 백업을 보존해 v3로 이전했고, 완료 후 최종 macOS 앱을 재시작해 두 사본·가림·완료 상태를 확인했습니다. 최종 빌드는 348,163,868 bytes입니다. 사람 플레이·성능 검증은 별도입니다.
+
+구현·검증 영수증은 [M4 보고서](_workspace/current/production/codex-c1-m4-status.md), 리소스 생성·수정·승격은 [작업자 검토](_workspace/current/production/c1-signature-operator-review.md)에 기록합니다. 범위는 `c1-b2`까지이며, C1 전체·설계 플레이시간·사람 플레이테스트·성능·G4/G5 완료를 뜻하지 않습니다. MuAPI 생성과 신규 음향의 청취 검수는 완료되지 않았습니다.
 
 ## 개발용 준비와 정본 재생성
 

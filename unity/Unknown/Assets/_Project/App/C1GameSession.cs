@@ -9,19 +9,20 @@ namespace Tide.App
     public sealed partial class T0GameSession
     {
         JObject patrolPacket;
-        string ConfirmMode=>PatrolActive?(string)settings["c1ConfirmMode"]??(string)patrolPacket["confirmation"]["defaultMode"]:(string)settings["confirmMode"];
-        bool patrolShown;
+        string ConfirmMode=>SignatureActive?(string)settings["c1SignatureConfirmMode"]??(string)signaturePacket["confirmation"]["defaultMode"]:PatrolActive?(string)settings["c1ConfirmMode"]??(string)patrolPacket["confirmation"]["defaultMode"]:(string)settings["confirmMode"];
+        string shownStage="hub";
         GameObject patrolVisual;
         GameObject[] hiddenHubRoots;
         Vector3 hubCameraPosition;
         Quaternion hubCameraRotation;
         Color hubCameraBackground;
+        CameraClearFlags hubCameraClearFlags;
         float hubCameraFov;
         public bool PatrolActive=>Journal.State.Has("c1:entered");
         public bool PatrolComplete=>Simulation.IsComplete(Journal.State,C1PatrolDefinition.BeatId);
         string PatrolText(string key)=>(string)patrolPacket["localization"]?[key]??key;
-        string BeatFor(PuzzleState state)=>state.Has("c1:entered")?C1PatrolDefinition.BeatId:
-            Definition.Beats.FirstOrDefault(b=>b.Id!=C1PatrolDefinition.BeatId && Simulation.IsAvailable(state,b.Id)&&!Simulation.IsComplete(state,b.Id))?.Id??"t0-b3";
+        string BeatFor(PuzzleState state)=>C1SignatureDefinition.Has(state,"entered")?C1SignatureDefinition.BeatId:state.Has("c1:entered")?C1PatrolDefinition.BeatId:
+            Definition.Beats.FirstOrDefault(b=>b.Id!=C1PatrolDefinition.BeatId && b.Id!=C1SignatureDefinition.BeatId && Simulation.IsAvailable(state,b.Id)&&!Simulation.IsComplete(state,b.Id))?.Id??"t0-b3";
         public void ContinueToPatrol()
         {
             CloseTool();document=null;overlay=null;
@@ -31,7 +32,7 @@ namespace Tide.App
             C1PatrolDefinition.Boolean(C1PatrolDefinition.Enabled(Journal.State,"lighting")),
             C1PatrolDefinition.Boolean(C1PatrolDefinition.Enabled(Journal.State,"reader")));
         string PatrolDiagnostic(ValidationResult verdict)=>verdict.Reason.HasValue?Reason(verdict.Reason.Value):
-            verdict.DataDiagnostic!=null&&verdict.DataDiagnostic.StartsWith("c1.patrol.")?PatrolText(verdict.DataDiagnostic):L("unavailable");
+            verdict.DataDiagnostic!=null&&verdict.DataDiagnostic.StartsWith("c1.signature.")?SignatureText(verdict.DataDiagnostic,"작업의 앞 단계를 확인하세요."):verdict.DataDiagnostic!=null&&verdict.DataDiagnostic.StartsWith("c1.patrol.")?PatrolText(verdict.DataDiagnostic):L("unavailable");
         string PatrolConditionText()=>PatrolText((string)patrolPacket["journalCondition"]["labelKey"])+" · "+
             (string)patrolPacket["journalCondition"]["actorDisplayName"]+"\n“"+PatrolText((string)patrolPacket["journalCondition"]["textKey"])+"”";
         string PatrolCaseThread()
@@ -48,7 +49,8 @@ namespace Tide.App
             if(PatrolComplete)
             {
                 screen.Body=PatrolText("c1.patrol.complete")+"\n\n"+PatrolConditionText()+
-                    "\n\n현재 구현된 구간을 마쳤습니다. 다음 이야기는 아직 열리지 않았습니다.";
+                    "\n\n다음 기록: 겹쳐 붙은 서명지 ";
+                screen.Actions.Add(A("continue-c1-signature","서명지철 조사로 이동",ContinueToSignature));
                 screen.Actions.Add(A("c1-review",L("evidence"),()=>OpenOverlay("evidence")));
                 return;
             }
@@ -65,7 +67,7 @@ namespace Tide.App
             }
             screen.Body=(string)patrolPacket["narrative"]["objective"]+"\n\n"+PatrolText("c1.patrol.sharedSupply")+" → "+
                 string.Join(" / ",patrolPacket["branches"].Select(b=>PatrolText((string)b["labelKey"])))+"\n"+
-                PatrolText(Definition.Patrol.Configuration(C1PatrolDefinition.Enabled(Journal.State,"lighting"),C1PatrolDefinition.Enabled(Journal.State,"reader")).ReasonKey);
+                PatrolText("c1.patrol.preview");
             foreach(var item in patrolPacket["observations"])
             {
                 var id=(string)item["id"];screen.Actions.Add(A("c1-open-"+id,
@@ -90,25 +92,43 @@ namespace Tide.App
         void ApplyStagePresentation(bool forceHub=false)
         {
             var camera=Camera.main;if(camera==null)return;
-            bool show=!forceHub&&started&&PatrolActive;if(show==patrolShown)return;patrolShown=show;
-            if(show)
+            string stage=forceHub||!started||!PatrolActive?"hub":SignatureActive?"signature":"patrol";
+            if(stage==shownStage){ApplySignatureVisualState();return;}
+            if(shownStage!="hub")
             {
-                hubCameraPosition=camera.transform.position;hubCameraRotation=camera.transform.rotation;
-                hubCameraBackground=camera.backgroundColor;hubCameraFov=cameraHorizontalFov;
-                var hub=UnityEngine.SceneManagement.SceneManager.GetSceneByName("hub");
-                hiddenHubRoots=hub.IsValid()&&hub.isLoaded?hub.GetRootGameObjects().Where(g=>g.activeSelf&&g.GetComponentsInChildren<Renderer>().Length>0).ToArray():new GameObject[0];
-                foreach(var root in hiddenHubRoots)root.SetActive(false);
-                var view=Resources.Load<C1ViewSettings>("C1View");
-                if(view==null)return;
+                if(patrolVisual!=null){patrolVisual.SetActive(false);Destroy(patrolVisual);patrolVisual=null;}
+                foreach(var item in hiddenHubRoots??new GameObject[0])if(item!=null)item.SetActive(true);
+                camera.transform.SetPositionAndRotation(hubCameraPosition,hubCameraRotation);camera.backgroundColor=hubCameraBackground;camera.clearFlags=hubCameraClearFlags;cameraHorizontalFov=hubCameraFov;
+            }
+            shownStage=stage;if(stage=="hub")return;
+            hubCameraPosition=camera.transform.position;hubCameraRotation=camera.transform.rotation;
+            hubCameraBackground=camera.backgroundColor;hubCameraClearFlags=camera.clearFlags;hubCameraFov=cameraHorizontalFov;
+            var hub=UnityEngine.SceneManagement.SceneManager.GetSceneByName("hub");
+            hiddenHubRoots=hub.IsValid()&&hub.isLoaded?hub.GetRootGameObjects().Where(g=>g.activeSelf&&g.GetComponentsInChildren<Renderer>().Length>0).ToArray():new GameObject[0];
+            foreach(var item in hiddenHubRoots)item.SetActive(false);
+            camera.clearFlags=CameraClearFlags.SolidColor;
+            if(stage=="signature")
+            {
+                var view=Resources.Load<C1SignatureViewSettings>("C1SignatureView");if(view==null){camera.backgroundColor=new Color(.035f,.065f,.075f);return;}
+                camera.transform.position=view.cameraPosition;camera.transform.LookAt(view.lookAt);camera.backgroundColor=view.background;cameraHorizontalFov=view.horizontalFov;
+                if(view.reader!=null&&(view.runtimeApproved||System.Environment.GetCommandLineArgs().Contains("--c1-signature-diagnostic")))
+                {patrolVisual=Instantiate(view.reader,transform);patrolVisual.name="C1 signature reader";ApplySignatureVisualState();}
+            }
+            else
+            {
+                var view=Resources.Load<C1ViewSettings>("C1View");if(view==null)return;
                 camera.transform.position=view.cameraPosition;camera.transform.LookAt(view.lookAt);camera.backgroundColor=view.background;cameraHorizontalFov=view.horizontalFov;
                 if(view.panel!=null&&(view.runtimeApproved||System.Environment.GetCommandLineArgs().Contains("--c1-panel-diagnostic")))
                 {patrolVisual=Instantiate(view.panel,transform);patrolVisual.name="C1 static system panel";}
             }
-            else
+        }
+        void ApplySignatureVisualState()
+        {
+            if(!SignatureActive||patrolVisual==null)return;
+            foreach(var item in patrolVisual.GetComponentsInChildren<Transform>(true))
             {
-                if(patrolVisual!=null)Destroy(patrolVisual);
-                foreach(var root in hiddenHubRoots??new GameObject[0])if(root!=null)root.SetActive(true);
-                camera.transform.SetPositionAndRotation(hubCameraPosition,hubCameraRotation);camera.backgroundColor=hubCameraBackground;cameraHorizontalFov=hubCameraFov;
+                if(item.name=="STATE_SaltAdhesion")item.gameObject.SetActive(!SignatureHas("separated"));
+                if(item.name=="STATE_LowerObscuration")item.gameObject.SetActive(true);
             }
         }
     }

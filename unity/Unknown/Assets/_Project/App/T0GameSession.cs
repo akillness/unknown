@@ -37,7 +37,7 @@ namespace Tide.App {
    config=value; Interface=gameObject.AddComponent<T0Interface>();Interface.Initialize();
    if(EventSystem.current==null){var es=new GameObject("Input event system",typeof(EventSystem));DontDestroyOnLoad(es);var input=es.AddComponent<InputSystemUIInputModule>();input.AssignDefaultActions();input.move=null;input.submit=null;input.cancel=null;}
    try{
-    patrolPacket=JObject.Parse(Resources.Load<TextAsset>("C1PatrolContract").text);Definition=C1PatrolData.Attach(config.catalog.Load(),patrolPacket);Simulation=new T0Simulation(Definition);Journal=new CommandJournal(Simulation);
+    patrolPacket=JObject.Parse(Resources.Load<TextAsset>("C1PatrolContract").text);signaturePacket=JObject.Parse(Resources.Load<TextAsset>("C1SignatureContract").text);Definition=C1SignatureData.Attach(C1PatrolData.Attach(config.catalog.Load(),patrolPacket),signaturePacket);Simulation=new T0Simulation(Definition);Journal=new CommandJournal(Simulation);
     records=JObject.Parse(config.records.text);zones=JObject.Parse(config.zones.text);tools=JObject.Parse(config.tools.text);hints=JObject.Parse(config.hints.text);strings=JObject.Parse(config.strings.text);policy=JObject.Parse(config.savePolicy.text);
     cameraHorizontalFov=(float)zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==node)["cameraPose"]["fovDeg"];
     if(T0DataLoader.CitationBlockers(Definition).Count>0)throw new InvalidOperationException("Canonical citation metadata absent");
@@ -50,7 +50,7 @@ namespace Tide.App {
     Watch.ToolWheel+=()=>OpenOverlay("toolWheel");Watch.Adjust+=Adjust;Watch.Tool+=SelectTool;Watch.Overlay+=OpenOverlay;Watch.Query+=Query;Watch.Disconnect+=Disconnect;
     Watch.Cancel+=Back;Watch.Undo+=Undo;Watch.Redo+=Redo;Watch.Preview+=Preview;
     var fx=JObject.Parse(Resources.Load<TextAsset>("T0Vfx").text);feedback=gameObject.AddComponent<T0CommitFeedback>();feedback.Initialize((float)fx["duration_ms"]/1000f,((JArray)fx["phases"]).Where(x=>(string)x["id"]!="await_impact").Select(x=>(float)x["start_ms"]).DefaultIfEmpty((float)fx["duration_ms"]).Min()/1000f);
-    tCommitReceipt+=receipt=>{if(!C1PatrolDefinition.Handles(receipt.CommandId))feedback.Present(receipt.AttemptId,receipt.Success,(bool)settings["reducedMotion"]);};
+    tCommitReceipt+=receipt=>{if(!C1PatrolDefinition.Handles(receipt.CommandId)&&!C1SignatureDefinition.Handles(receipt.CommandId))feedback.Present(receipt.AttemptId,receipt.Success,(bool)settings["reducedMotion"]);};
     Interface.ScreenChanged+=()=>{Watch.NewContext();feedback.Clear();};
     Watch.DeviceChanged+=_=>Interface.SetFooter(ControlFooter());
     var loaded=Store.Load(validate:doc=>JournalSave.Decode(doc,Simulation));
@@ -65,7 +65,7 @@ namespace Tide.App {
   string CurrentBeat=>BeatFor(Journal.State);
   ViewAction A(string id,string label,Action action,bool enabled=true,string detail=null,float hold=0)=>new ViewAction{Id=id,Label=label,Activate=()=>{lastActivity=Time.unscaledTime;action();},Enabled=enabled,Detail=detail,HoldSeconds=hold};
   void Update(){if(!bootFailed&&started&&overlay==null&&Time.unscaledTime-lastActivity>float.Parse((string)tools["knobs"]["idleHintOfferSeconds"]["value"],CultureInfo.InvariantCulture)){status=L("hintOffer");lastActivity=Time.unscaledTime;Render();}}
-  public void StartGame(){if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=L("welcome");Render();}
+  public void StartGame(){if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=SignatureActive?(SignatureComplete?"저장된 대조 기록을 복원했습니다.":"저장된 서명지 작업을 복원했습니다."):PatrolActive?"저장된 순찰 기록을 복원했습니다.":L("welcome");Render();}
   public void GoNode(string id){CloseTool();node=id;document=null;overlay=null;var camera=Camera.main;var target=zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==id);if(camera!=null){var pos=target["cameraPose"]["pos"];var look=target["cameraPose"]["lookAt"];camera.transform.position=Point(pos);camera.transform.LookAt(Point(look));cameraHorizontalFov=(float)target["cameraPose"]["fovDeg"];}Render();}
   Transform approvedDrawer;
   Renderer[] approvedDrawerRenderers;
@@ -110,7 +110,7 @@ namespace Tide.App {
   void Disconnect(){if(tool=="reader"&&Journal.State.LoadedRecordId!=null)RequestConfirm(new PuzzleCommand("CiteToBoard",Journal.State.LoadedRecordId));}
   public void Back(){if(SavePending){CancelPending();QueueSave();}if(overlay!=null){overlay=null;proposed=null;Render();return;}if(document!=null){document=null;Render();return;}if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){SubmitImmediate(new PuzzleCommand("Cancel"));return;}CloseTool();Render();}
   public ValidationResult SubmitImmediate(PuzzleCommand command,bool render=true){
-   if(command.CommandId=="ConfirmPatrol")return ValidationResult.InvalidData("C1_REQUIRES_ATOMIC_COMMIT");
+   if(command.CommandId=="ConfirmPatrol"||command.CommandId=="ConfirmSignature")return ValidationResult.InvalidData("C1_REQUIRES_ATOMIC_COMMIT");
    CancelPending();var verdict=Journal.Submit(command);status=verdict.IsValid?"":PatrolDiagnostic(verdict);
    if(verdict.IsValid)QueueSave();if(render)Render();return verdict;
   }
@@ -147,7 +147,7 @@ namespace Tide.App {
   string ControlFooter()=>L(Watch!=null&&Watch.LastDeviceIsGamepad?"controlsPad":"controls");
   float HoldSeconds=>settings["holdSeconds"]==null?float.Parse((string)tools["knobs"]["commitHoldSeconds"]["value"],CultureInfo.InvariantCulture):(float)settings["holdSeconds"];
   void CycleHoldDuration(){var option=JObject.Parse(Resources.Load<TextAsset>("HoldOptions").text);float min=(float)option["minSeconds"],max=(float)option["maxSeconds"],step=(float)option["stepSeconds"];settings["holdSeconds"]=HoldSeconds>=max?min:Math.Round(HoldSeconds+step,1);SaveSettings();}
-  public void SetConfirmMode(string mode){settings[PatrolActive?"c1ConfirmMode":"confirmMode"]=mode;SaveSettings();}
+  public void SetConfirmMode(string mode){settings[SignatureActive?"c1SignatureConfirmMode":PatrolActive?"c1ConfirmMode":"confirmMode"]=mode;SaveSettings();}
   public void Render(){
    if(bootFailed||strings==null)return;Interface.TextScale=(float?)settings["textScale"]??1f;
    var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter()};
@@ -157,7 +157,7 @@ namespace Tide.App {
     if(!PatrolActive)foreach(var n in zones["rows"][0]["viewNodes"]){string id=(string)n["nodeId"];s.Navigation.Add(A(id,(string)n["label"],()=>GoNode(id)));}
     s.Toolbar.Add(A("undo",L("undo"),Undo));s.Toolbar.Add(A("redo",L("redo"),Redo));s.Toolbar.Add(A("evidence",L("evidence"),()=>OpenOverlay("evidence")));s.Toolbar.Add(A("hints",L("hints"),()=>OpenOverlay("hints")));s.Toolbar.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));s.Toolbar.Add(A("back",L("back"),Back));
     if(Journal.CoarseUndo)s.Footer=L("coarseUndo")+" · "+s.Footer;
-    if(overlay==null){if(PatrolActive)PatrolScreen(s);else if(document!=null)DocumentScreen(s);else if(tool=="circuit")CircuitScreen(s);else if(tool=="reader")ReaderScreen(s);else if(tool!=null){s.Body=L("stub");s.Actions.Add(A("close-tool",L("back"),Back));}else ShellScreen(s);}
+    if(overlay==null){if(SignatureActive)SignatureScreen(s);else if(PatrolActive)PatrolScreen(s);else if(document!=null)DocumentScreen(s);else if(tool=="circuit")CircuitScreen(s);else if(tool=="reader")ReaderScreen(s);else if(tool!=null){s.Body=L("stub");s.Actions.Add(A("close-tool",L("back"),Back));}else ShellScreen(s);}
    }
    if(overlay!=null){s.Actions.Clear();OverlayScreen(s);}
    if(!PatrolActive&&Simulation.IsComplete(Journal.State,"t0-b3"))s.Subtitle+=" · "+L("complete");
@@ -166,7 +166,8 @@ namespace Tide.App {
   }
   // Projection only: required pins are progress, but the existing full predicate owns completion.
   string CaseThreadText(){
-   if(PatrolActive)return PatrolCaseThread();
+   if(SignatureActive)return SignatureCaseThread();
+            if(PatrolActive)return PatrolCaseThread();
    var requirements=Definition.Beats.Single(b=>b.Id=="t0-b3").Requirements;
    var pins=requirements.Where(r=>r.Type=="citationPinned").ToArray();
    int count=pins.Count(r=>Journal.State.Has("citation:"+r.RecordId));
@@ -238,7 +239,8 @@ namespace Tide.App {
    }
   }
   void OverlayScreen(GameScreen s){
-   if(PatrolActive&&overlay=="toolWheel"){s.Body="C1 · "+PatrolText("c1.patrol.preview");s.Actions.Add(A("c1-circuit",PatrolText("c1.patrol.title"),()=>{overlay=null;document=null;Render();}));s.Actions.Add(A("overlay-back",L("back"),Back));return;}
+   if(SignatureOverlay(s))return;
+            if(PatrolActive&&overlay=="toolWheel"){s.Body="C1 · "+PatrolText("c1.patrol.preview");s.Actions.Add(A("c1-circuit",PatrolText("c1.patrol.title"),()=>{overlay=null;document=null;Render();}));s.Actions.Add(A("overlay-back",L("back"),Back));return;}
    s.Title=L(overlay);s.Body="";
    if(overlay=="toolWheel"){foreach(var id in new[]{"circuit","reader","alignment","routing","corrosion","seal"}){var selected=id;s.Actions.Add(A("wheel-"+id,L("action."+id),()=>OpenTool(selected)));}}
    else if(overlay=="coverageQuery"){s.Body=L("outsideCoverage");}
@@ -259,13 +261,13 @@ namespace Tide.App {
     s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+(string)observation["originId"];if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var id in Journal.State.AutoKeptClues)s.Body+="\n✓ "+id;
     foreach(var id in Definition.Records.Keys.Where(id=>Journal.State.Has("citation:"+id)))s.Body+="\n"+Name(id)+" · "+Journal.State.Get("citationStart:"+id)+" → "+Journal.State.Get("citationEnd:"+id);
    }else if(overlay=="hints"){
-    var rows=(PatrolActive?new JArray(patrolPacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1PatrolDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):hints["rows"]).Where(h=>(string)h["beatId"]==CurrentBeat).OrderBy(h=>(int)h["level"]).ToArray();s.Body=L("hintFree");foreach(var row in rows.Where(h=>(int)h["level"]<=hintLevel))s.Body+="\n"+(string)row["sourceTextKo"];
+    var rows=(SignatureActive?new JArray(signaturePacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1SignatureDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):PatrolActive?new JArray(patrolPacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1PatrolDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):hints["rows"]).Where(h=>(string)h["beatId"]==CurrentBeat).OrderBy(h=>(int)h["level"]).ToArray();s.Body=L("hintFree");foreach(var row in rows.Where(h=>(int)h["level"]<=hintLevel))s.Body+="\n"+(string)row["sourceTextKo"];
     if(hintLevel<rows.Length)s.Actions.Add(A("hint-next",L("nextHint"),()=>{if(hintLevel==2){overlay="hintWarning";}else hintLevel++;Render();}));
    }else if(overlay=="hintWarning"){s.Body=L("hintSpoiler");s.Actions.Add(A("hint-reveal",L("reveal"),()=>{overlay="hints";hintLevel=3;Render();}));}
    else if(overlay=="pending"){s.Body=L("saving");s.Actions.Add(A("pending-undo",L("undo"),Undo));}
    else if(overlay=="saveFailure"){s.Body=L("saveFailed");s.Actions.Add(A("retry-save",L("retry"),()=>{_ = CommitAsync(proposed);}));}
    else if(overlay=="confirm"||overlay=="preview"){
-    s.Body=proposed?.CommandId=="ConfirmPatrol"?PatrolConfirmationText():L("confirmExplanation");if(proposed!=null){var v=Simulation.Validate(Journal.State,proposed);if(!v.IsValid)s.Body+="\n"+(PatrolDiagnostic(v));}
+    s.Body=proposed?.CommandId=="ConfirmSignature"?SignatureConfirmationText():proposed?.CommandId=="ConfirmPatrol"?PatrolConfirmationText():L("confirmExplanation");if(proposed!=null){var v=Simulation.Validate(Journal.State,proposed);if(!v.IsValid)s.Body+="\n"+(PatrolDiagnostic(v));}
     if(overlay=="preview"&&ConfirmMode=="two-step")s.Actions.Add(A("preview-next",L("next"),()=>{overlay="confirm";Render();}));
     else s.Actions.Add(A("confirm-submit",L("confirm"),()=>{_ = CommitAsync(proposed);},proposed!=null&&Simulation.Validate(Journal.State,proposed).IsValid,hold:ConfirmMode=="hold"?HoldSeconds:0));
    }else if(overlay=="recovery"){s.Body=status;RecoverySlots(s);s.Actions.Add(A("recovery-new-slot",L("newSlot"),()=>{Store=new AtomicSaveStore(Path.Combine(saveRootDirectory,"recovery-"+Guid.NewGuid().ToString("N")));saveId=Guid.NewGuid().ToString();createdUtc=DateTime.UtcNow.ToString("O");Journal=new CommandJournal(Simulation);saveReadOnly=false;overlay=null;status=L("oldSavePreserved");Render();}));s.Actions.Add(A("recovery-retry",L("retry"),()=>{var loaded=Store.Load();if(loaded.Document!=null)try{Journal=JournalSave.Decode(loaded.Document,Simulation);saveReadOnly=false;saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];overlay=null;status=L("recovered");}catch(Exception e){status=e.Message;}Render();}));}

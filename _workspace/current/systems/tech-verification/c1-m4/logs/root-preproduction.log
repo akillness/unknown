@@ -1,0 +1,111 @@
+{
+  "status": "SPEC-PASS",
+  "runtimeStatus": "NOT-MEASURED",
+  "scope": "document/schema/arithmetic only; not whole-game reachability, market fit or player time",
+  "observedAt": "2026-09-11T04:30:04.756Z",
+  "checks": 514,
+  "passed": 514,
+  "errors": [],
+  "summary": {
+    "stages": 9,
+    "beats": 33,
+    "puzzles": 21,
+    "clues": 73,
+    "designMinutes": 480,
+    "fastMinutes": 322,
+    "deliberateMinutes": 673,
+    "observedMedianMinutes": null,
+    "humanPlaytests": 0
+  },
+  "economy": [
+    {
+      "price": 14900,
+      "launchPrice": 13410,
+      "netAssumption": 7350.945454545455,
+      "breakEvenCash": [
+        {
+          "cash": 10000000,
+          "units": 1361
+        },
+        {
+          "cash": 30000000,
+          "units": 4082
+        },
+        {
+          "cash": 60000000,
+          "units": 8163
+        }
+      ]
+    },
+    {
+      "price": 17500,
+      "launchPrice": 15750,
+      "netAssumption": 8720.90909090909,
+      "breakEvenCash": [
+        {
+          "cash": 10000000,
+          "units": 1147
+        },
+        {
+          "cash": 30000000,
+          "units": 3441
+        },
+        {
+          "cash": 60000000,
+          "units": 6881
+        }
+      ]
+    },
+    {
+      "price": 19900,
+      "launchPrice": 17910,
+      "netAssumption": 9985.490909090908,
+      "breakEvenCash": [
+        {
+          "cash": 10000000,
+          "units": 1002
+        },
+        {
+          "cash": 30000000,
+          "units": 3005
+        },
+        {
+          "cash": 60000000,
+          "units": 6009
+        }
+      ]
+    }
+  ],
+  "production": {
+    "personDays": 287,
+    "withContingency": 359,
+    "laborOpportunityCost": 107700000
+  },
+  "files": [
+    {
+      "path": "planning/campaign.json",
+      "bytes": 124007,
+      "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a"
+    },
+    {
+      "path": "product/economics.json",
+      "bytes": 923,
+      "sha256": "309101e41cdd67eef9aa8860ab7904c9d48e8b6d28731e8c08a3bc8b5a2c0a94"
+    },
+    {
+      "path": "production/production-estimate.json",
+      "bytes": 2775,
+      "sha256": "962791f254f69c8c7b94e68beb8f00d31a1ab78eeaf670f4683ed0ef823e2129"
+    },
+    {
+      "path": "systems/game-ui-contract.json",
+      "bytes": 43643,
+      "sha256": "5b3ffdb15ee30d6a06b8960d3b99900ef64e647d15fd78baaf2e0ae9f9cdabc0"
+    },
+    {
+      "path": "production/cycle-ledger.json",
+      "bytes": 2102,
+      "sha256": "932fa3746a4b8b406efb98ab518fb6d489229a0affa9c60e0e793f2be4b39b91"
+    }
+  ]
+}

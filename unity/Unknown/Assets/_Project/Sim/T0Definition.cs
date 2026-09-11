@@ -67,11 +67,12 @@ namespace Tide.Sim
         public int ResolutionMinutes { get; }
         public CircuitOverlay Overlay { get; }
         public C1PatrolDefinition Patrol { get; }
+        public C1SignatureDefinition Signature { get; }
         public T0Definition(IEnumerable<RecordDefinition> records, IEnumerable<BeatDefinition> beats,
             IEnumerable<string> uncoveredAreas, IEnumerable<string> systemIds, IEnumerable<string> stubs,
-            int readBudget, int resolutionMinutes,CircuitOverlay overlay=null,C1PatrolDefinition patrol=null)
+            int readBudget, int resolutionMinutes,CircuitOverlay overlay=null,C1PatrolDefinition patrol=null,C1SignatureDefinition signature=null)
         {
-            Overlay=overlay; Patrol=patrol;
+            Overlay=overlay; Patrol=patrol; Signature=signature;
             Records=new ReadOnlyDictionary<string, RecordDefinition>(records.ToDictionary(r=>r.Id, StringComparer.Ordinal));
             Beats=Array.AsReadOnly(beats.ToArray()); UncoveredAreas=RecordDefinition.Freeze(uncoveredAreas);
             SystemIds=RecordDefinition.Freeze(systemIds); StubToolIds=RecordDefinition.Freeze(stubs);

@@ -1,0 +1,202 @@
+{
+  "schema": "c1-m4-root-verification/v1",
+  "verifiedAt": "2026-09-11T04:39:50.892Z",
+  "scope": "C1 M4 c1-b2 only",
+  "baselineHead": "ae098e0636b0075d1abb0ebf408bd66f7f459811",
+  "status": "bounded-runtime-and-art-verified",
+  "source": {
+    "overlayFiles": 65,
+    "stagedHashMismatches": [],
+    "manifest": "delivery-source-manifest.json",
+    "excludedExternalChanges": [
+      "PatrolText localization-first fallback",
+      "ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction test",
+      "T0Strings.json guidance changes"
+    ],
+    "mixedWorkspace40TestRunIsNotDeliveryEvidence": true
+  },
+  "tests": {
+    "editModePassed": 36,
+    "playModePassed": 39,
+    "bootPassed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "build": {
+    "path": "unity/Unknown/Builds/C1-M4-mac/Unknown.app",
+    "bytes": 348163868,
+    "files": 316,
+    "bundleFingerprint": "af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738"
+  },
+  "native": {
+    "ordinaryRuntimeRestart": {
+      "build": "isolated final2 ordinary runtime",
+      "buildBytes": 348163868,
+      "bundleFingerprint": "af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738",
+      "diagnosticFlag": false,
+      "sourceManifest": "../delivery-source-manifest.json",
+      "viewportRequested": [
+        1280,
+        800
+      ],
+      "textScale": 1.5,
+      "reducedMotion": true,
+      "method": "OS process restart, CUA titlebar activation, mouse Continue and native screenshot inspection",
+      "windowActivation": "Initial inactive window was black; activating its titlebar displayed the start UI, without another build or process restart",
+      "completedStateRestored": true,
+      "resourcesVisible": true,
+      "lowerMaskRetained": true,
+      "copyCount": 2,
+      "restoredMessage": "저장된 대조 기록을 복원했습니다.",
+      "staleT0MessageAbsent": true,
+      "saveBytesUnchanged": true,
+      "confirmSignatureCount": 1,
+      "limits": [
+        "Agent-operated native smoke, not human playtest, physical pad, auditory or performance certification"
+      ]
+    },
+    "fullRouteReceipt": "player-final-smoke/native-observation.json",
+    "oldCommandsPreserved": 42,
+    "finalCommands": 57,
+    "confirmSignatureCommands": 1,
+    "v2BackupByteIdentical": true,
+    "checkpointPublishedOnlyOnConfirmation": true,
+    "nonfocusedPointerToKeyboardAndPersistentTrialFeedback": "feedback-smoke/native-observation.json"
+  },
+  "resources": {
+    "paper": {
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_5",
+      "job": "54b52722-337a-42fc-baa4-e289c64db09e",
+      "requestedSize": [
+        1024,
+        1024
+      ],
+      "actualSize": [
+        1024,
+        1024
+      ],
+      "bytes": 1752951,
+      "credits": 3.5,
+      "sha256": "0b35b75810e2bb052b580b4671541e06a92e68169e2c70ee3af3e66f02e66efe",
+      "runtimeEligible": true
+    },
+    "reader": {
+      "provider": "Blender 5.1.2 CLI",
+      "revision": "r02",
+      "triangles": 3920,
+      "meshes": 4,
+      "materials": 4,
+      "dimensionsMetres": [
+        0.7,
+        0.39,
+        0.24
+      ],
+      "textureBytes": 1732640,
+      "runtimeEligible": true
+    },
+    "promotion": "production/decision-log.md#rfc-cx-005",
+    "muapi": "not-connected; no output claimed",
+    "audio": "disabled pending listening review"
+  },
+  "static": {
+    "campaign": {
+      "passed": 49,
+      "total": 49
+    },
+    "preproduction": {
+      "passed": 514,
+      "total": 514
+    },
+    "authoredContract": {
+      "passed": 44,
+      "total": 44
+    },
+    "acceptanceDeclarations": 17,
+    "humanPlaytests": 0,
+    "freshness": {
+      "findings": 0,
+      "markdownArtifacts": 543,
+      "scope": "frontmatter contract and supersedes topology only",
+      "memorySyncVerified": false,
+      "stalenessMeasured": false,
+      "receipt": "logs/root-freshness.log"
+    }
+  },
+  "memorySync": {
+    "mex": "skipped: mex-agent identity unavailable; TeX mex not invoked",
+    "graphify": "workspace updated; includes unrelated workspace material",
+    "zg": "index not mutated",
+    "wikiReport": "wiki/reports/2026-09-11-unknown-c1-m4-runtime.md"
+  },
+  "limits": [
+    "Not full campaign completion",
+    "Native observations are agent-operated, not human-playtest evidence",
+    "G4/G5, representative hardware performance and full gate completion remain unmeasured",
+    "Historical failed and diagnostic receipts retained with final isolated receipts authoritative"
+  ],
+  "evidence": [
+    {
+      "path": "delivery-source-manifest.json",
+      "sha256": "1190c68d973151433c830fb726228fe271974e1350ef1ecdefd7c7f2c769e2ac",
+      "bytes": 23325
+    },
+    {
+      "path": "isolated/build-copy-receipt.json",
+      "sha256": "6be5bd0a65a3648fcecc21be4abef10756ac0480f7e8e838e2d2de07fe334046",
+      "bytes": 837
+    },
+    {
+      "path": "isolated/results/editmode.xml",
+      "sha256": "845df56cfe457aa1697d03c9bed3762a692e4f1caafc00399fbb48c89d1e919a",
+      "bytes": 27280
+    },
+    {
+      "path": "isolated/results/playmode.xml",
+      "sha256": "972e3bb5855840cbf1b956af8aa2756e8b7ddf3e84e36ccceb1f1d12a8770e49",
+      "bytes": 32787
+    },
+    {
+      "path": "isolated/results/boot-playmode.xml",
+      "sha256": "16755ac5e912357f30ca424346823ae197aee5d103cdbb25fb22c2c869d0d828",
+      "bytes": 3449
+    },
+    {
+      "path": "player-final-smoke/native-observation.json",
+      "sha256": "db5be3b55709c943c622aa95990bfda7d5189d0e18dbed2d44274ccd78b51ff2",
+      "bytes": 1978
+    },
+    {
+      "path": "player-final-smoke/final-runtime-verification.json",
+      "sha256": "b316ba90a8c253d24121b22883d486c5edcf072f46eae1715eba72dc4fdb5283",
+      "bytes": 999
+    },
+    {
+      "path": "feedback-smoke/native-observation.json",
+      "sha256": "25e0eb68f39c2376f2918c747959765a93766a49843b432a9883a6cadb37dd68",
+      "bytes": 1180
+    },
+    {
+      "path": "logs/root-campaign.log",
+      "sha256": "7867b5278caed4288aadffb96f77fe285e690218ea3f1bce132f1d0176e581e3",
+      "bytes": 12390
+    },
+    {
+      "path": "logs/root-preproduction.log",
+      "sha256": "cd97f6a31c78ed7a0bb67dac02ceff8aae4c6a2393011d822b1b0c49e3acd384",
+      "bytes": 2516
+    },
+    {
+      "path": "logs/root-freshness.log",
+      "sha256": "72b230c2bba16186efc30503c87478a96e7c365100f484599988d3b396208eb6",
+      "bytes": 278
+    }
+  ],
+  "publicationReview": {
+    "independentQa": "passed after two stale historical status sentences corrected",
+    "authoredWhitespace": "passed",
+    "publishedJsonParse": "passed",
+    "credentialPatternScan": "no findings",
+    "plannedFiles": 275
+  }
+}

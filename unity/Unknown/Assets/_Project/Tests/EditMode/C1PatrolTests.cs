@@ -39,7 +39,7 @@ namespace Tide.Tests
             var path=Path.Combine(directory,"save.json");File.WriteAllBytes(path,legacy);
             var before=SaveCodec.Decode(System.Text.Encoding.UTF8.GetString(legacy));var state=T0().State.StateHash;
             var loaded=new AtomicSaveStore(directory).Load(validate:d=>JournalSave.Decode(d,simulation));
-            Assert.IsTrue(loaded.Migrated);Assert.AreEqual(2,(int)loaded.Document["schemaVersion"]);
+            Assert.IsTrue(loaded.Migrated);Assert.AreEqual(3,(int)loaded.Document["schemaVersion"]);
             Assert.IsTrue(JToken.DeepEquals(before["commandLog"],loaded.Document["commandLog"]));
             Assert.IsTrue(JToken.DeepEquals(before["progress"],loaded.Document["progress"]));
             Assert.AreEqual((string)before["saveId"],(string)loaded.Document["saveId"]);
@@ -50,7 +50,7 @@ namespace Tide.Tests
         [Test] public void FutureSchemaRefusesBeforeBackupFallback()
         {
             var store=new AtomicSaveStore(directory);var valid=JournalSave.Encode(T0(),"valid",20000,6291456);
-            store.WriteAsync(valid).GetAwaiter().GetResult();var future=(JObject)valid.DeepClone();future["schemaVersion"]=3;future["commitIdempotencyKey"]="future";
+            store.WriteAsync(valid).GetAwaiter().GetResult();var future=(JObject)valid.DeepClone();future["schemaVersion"]=4;future["commitIdempotencyKey"]="future";
             store.WriteAsync(future).GetAwaiter().GetResult();File.WriteAllBytes(Path.Combine(directory,"save.bak"),legacy);var raw=File.ReadAllBytes(Path.Combine(directory,"save.json"));
             Assert.AreEqual("SAVE_VERSION_REFUSED",store.Load().Failure);CollectionAssert.AreEqual(raw,File.ReadAllBytes(Path.Combine(directory,"save.json")));CollectionAssert.AreEqual(legacy,File.ReadAllBytes(Path.Combine(directory,"save.bak")));
         }

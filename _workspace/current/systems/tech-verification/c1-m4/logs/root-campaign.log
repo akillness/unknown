@@ -1,0 +1,573 @@
+{
+  "validator": "planning/validate-campaign.mjs",
+  "contract": "RFC-P3-008 계보 B (live planning/campaign.json)",
+  "file": "/Users/jangyoung/orca/unknown/_workspace/current/planning/campaign.json",
+  "bytes": 124007,
+  "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a",
+  "summary": {
+    "checks": 49,
+    "pass": 49,
+    "fail": 0,
+    "verdict": "PASS"
+  },
+  "aggregates": {
+    "stages": 9,
+    "stageMinutes": [
+      25,
+      50,
+      55,
+      65,
+      65,
+      70,
+      75,
+      65,
+      10
+    ],
+    "totalMinutes": 480,
+    "beats": 33,
+    "kindCounts": {
+      "exploration": 2,
+      "puzzle": 21,
+      "dialogue": 5,
+      "payoff": 5
+    },
+    "clues": 73,
+    "sourceTypeDist": {
+      "log": 27,
+      "ledger": 22,
+      "plate": 24
+    },
+    "originCatalogSize": 31,
+    "activityBudgetSums": {
+      "exploration": 53,
+      "reasoning": 190,
+      "manipulation": 168,
+      "dialogue": 28,
+      "payoff": 41
+    },
+    "fastMinutesSum": 322,
+    "deliberateMinutesSum": 673,
+    "toolBeatCounts": {
+      "circuit": 10,
+      "reader": 11,
+      "alignment": 8,
+      "routing": 3,
+      "corrosion": 3,
+      "seal": 7
+    },
+    "toolBeatMinutes": {
+      "circuit": 149,
+      "reader": 165,
+      "alignment": 141,
+      "routing": 52,
+      "corrosion": 46,
+      "seal": 108
+    },
+    "toollessBeats": [
+      "t0-b1",
+      "c1-b4",
+      "c3-b4",
+      "c7-b1",
+      "e0-b1"
+    ],
+    "proofRequiredBeats": 17,
+    "zoneBeatCounts": {
+      "hub": 17,
+      "gate": 2,
+      "pump": 5,
+      "dock": 5,
+      "lowland": 4
+    },
+    "zoneBeatMinutes": {
+      "hub": 218,
+      "gate": 26,
+      "pump": 85,
+      "dock": 84,
+      "lowland": 67
+    },
+    "zoneStageSpan": {
+      "hub": 7,
+      "gate": 2,
+      "pump": 2,
+      "dock": 2,
+      "lowland": 2
+    },
+    "zoneRuns": {
+      "hub": 5,
+      "gate": 2,
+      "pump": 2,
+      "dock": 2,
+      "lowland": 3
+    },
+    "zoneRunCount": 14,
+    "zoneRunSequence": [
+      "hub:t0-b1→t0-b3(3)",
+      "gate:c1-b1→c1-b1(1)",
+      "hub:c1-b2→c1-b4(3)",
+      "pump:c2-b1→c2-b2(2)",
+      "gate:c2-b3→c2-b3(1)",
+      "hub:c2-b4→c2-b4(1)",
+      "dock:c3-b1→c3-b4(4)",
+      "lowland:c4-b1→c4-b1(1)",
+      "hub:c4-b2→c4-b4(3)",
+      "lowland:c5-b1→c5-b1(1)",
+      "dock:c5-b2→c5-b2(1)",
+      "lowland:c5-b3→c5-b4(2)",
+      "pump:c6-b1→c6-b3(3)",
+      "hub:c6-b4→e0-b2(7)"
+    ],
+    "mediaKindsPerBeatMin": 2,
+    "timeConfidenceCounts": {
+      "low": 12,
+      "medium": 21,
+      "high": 0
+    }
+  },
+  "checks": [
+    {
+      "id": "F-01",
+      "name": "schemaVersion = 1",
+      "status": "PASS",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "id": "F-02",
+      "name": "designMinutes = 480 (문서 상수 [TARGET])",
+      "status": "PASS",
+      "expected": 480,
+      "actual": 480
+    },
+    {
+      "id": "F-03",
+      "name": "observedMedianMinutes = null (실측 n=0)",
+      "status": "PASS",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "F-04",
+      "name": "humanPlaytests = [] (모집·실행 0회)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "id": "S-01",
+      "name": "스테이지 9개",
+      "status": "PASS",
+      "expected": 9,
+      "actual": 9
+    },
+    {
+      "id": "S-02",
+      "name": "스테이지 분 배분",
+      "status": "PASS",
+      "expected": [
+        25,
+        50,
+        55,
+        65,
+        65,
+        70,
+        75,
+        65,
+        10
+      ],
+      "actual": [
+        25,
+        50,
+        55,
+        65,
+        65,
+        70,
+        75,
+        65,
+        10
+      ]
+    },
+    {
+      "id": "S-03",
+      "name": "스테이지 분 총합 480",
+      "status": "PASS",
+      "expected": 480,
+      "actual": 480
+    },
+    {
+      "id": "S-04",
+      "name": "비트 분 총합 480",
+      "status": "PASS",
+      "expected": 480,
+      "actual": 480
+    },
+    {
+      "id": "S-05",
+      "name": "스테이지별 (분 = 소속 비트 분 합)",
+      "status": "PASS",
+      "expected": [
+        25,
+        50,
+        55,
+        65,
+        65,
+        70,
+        75,
+        65,
+        10
+      ],
+      "actual": [
+        25,
+        50,
+        55,
+        65,
+        65,
+        70,
+        75,
+        65,
+        10
+      ]
+    },
+    {
+      "id": "S-06",
+      "name": "스테이지 zoneIds ⊂ 고정 5구역",
+      "status": "PASS",
+      "expected": [
+        "hub",
+        "gate",
+        "pump",
+        "dock",
+        "lowland"
+      ],
+      "actual": [
+        "hub",
+        "gate",
+        "pump",
+        "dock",
+        "lowland"
+      ]
+    },
+    {
+      "id": "Z-01",
+      "name": "beat.zoneId ∈ 소속 stage.zoneIds",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "Z-02",
+      "name": "전 비트 zoneId 존재",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "Z-03",
+      "name": "본문(subtasks[0])이 말하는 구역 ∋ beat.zoneId (구역 무언급은 대상 외)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "B-01",
+      "name": "비트 33개",
+      "status": "PASS",
+      "expected": 33,
+      "actual": 33
+    },
+    {
+      "id": "B-02",
+      "name": "스테이지별 비트 수 (T0 3 · C1~C7 4 · E0 2)",
+      "status": "PASS",
+      "expected": {
+        "t0": 3,
+        "c1": 4,
+        "c2": 4,
+        "c3": 4,
+        "c4": 4,
+        "c5": 4,
+        "c6": 4,
+        "c7": 4,
+        "e0": 2
+      },
+      "actual": {
+        "t0": 3,
+        "c1": 4,
+        "c2": 4,
+        "c3": 4,
+        "c4": 4,
+        "c5": 4,
+        "c6": 4,
+        "c7": 4,
+        "e0": 2
+      }
+    },
+    {
+      "id": "B-03",
+      "name": "beat id 유일",
+      "status": "PASS",
+      "expected": 33,
+      "actual": 33
+    },
+    {
+      "id": "B-04",
+      "name": "clue id 유일",
+      "status": "PASS",
+      "expected": 73,
+      "actual": 73
+    },
+    {
+      "id": "B-05",
+      "name": "checkpoint id 유일",
+      "status": "PASS",
+      "expected": 33,
+      "actual": 33
+    },
+    {
+      "id": "B-06",
+      "name": "kind 분포",
+      "status": "PASS",
+      "expected": {
+        "puzzle": 21,
+        "exploration": 2,
+        "dialogue": 5,
+        "payoff": 5
+      },
+      "actual": {
+        "exploration": 2,
+        "puzzle": 21,
+        "dialogue": 5,
+        "payoff": 5
+      }
+    },
+    {
+      "id": "T-01",
+      "name": "activityBudget 5키 · 음수 없음 · 합 = minutes",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "T-02",
+      "name": "activityBudget 범주 합 = 480",
+      "status": "PASS",
+      "expected": 480,
+      "actual": 480,
+      "note": "{\"exploration\":53,\"reasoning\":190,\"manipulation\":168,\"dialogue\":28,\"payoff\":41}"
+    },
+    {
+      "id": "T-03",
+      "name": "fastMinutes < minutes < deliberateMinutes",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "T-04",
+      "name": "timeConfidence ∈ {low, medium} ('high' 금지 — 표본 0)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "T-05",
+      "name": "authorEstimateBasis 전건 존재",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "T-06",
+      "name": "subtasks 3~5개",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "H-01",
+      "name": "힌트 3단 (빈 문자열 없음)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "H-02",
+      "name": "recovery 비어있지 않음",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "H-03",
+      "name": "checkpoint 존재",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "H-04",
+      "name": "1단 힌트에 자료명·정답값·정답 단정·조작 지시 없음 (gdd §6 1단 정의)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": [],
+      "note": "어휘 바닥 검사 — 의미 유출 일반은 판정하지 않는다"
+    },
+    {
+      "id": "C-01",
+      "name": "clue sourceType ∈ {log, ledger, plate}",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-02",
+      "name": "clue originId 전건 부착",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-03",
+      "name": "copiedFrom 참조가 카탈로그 안에 있음",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-04",
+      "name": "originId → copiedFrom 지도 모순 없음",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-05",
+      "name": "copiedFrom 계보에 순환 없음",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-06",
+      "name": "모든 비트 매체 종류 ≥ 2",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "C-07",
+      "name": "proofRequired 비트의 독립 쌍 (루트 originId 상이 AND sourceType 상이)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": [],
+      "note": "proofRequired 비트 17건"
+    },
+    {
+      "id": "V-01",
+      "name": "도구 id 고정 6종",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "V-02",
+      "name": "toolTeaching 총 12건",
+      "status": "PASS",
+      "expected": 12,
+      "actual": 12
+    },
+    {
+      "id": "V-03",
+      "name": "도구 6종 각각 guided 1 + unguided 1",
+      "status": "PASS",
+      "expected": 0,
+      "actual": [],
+      "note": "{\"circuit\":{\"guided\":[\"t0-b2\"],\"unguided\":[\"c6-b2\"]},\"reader\":{\"guided\":[\"t0-b3\"],\"unguided\":[\"c1-b2\"]},\"alignment\":{\"guided\":[\"c3-b2\"],\"unguided\":[\"c6-b3\"]},\"routing\":{\"guided\":[\"c5-b2\"],\"unguided\":[\"c7-b2\"]},\"corrosion\":{\"guided\":[\"c2-b2\"],\"unguided\":[\"c4-b2\"]},\"seal\":{\"guided\":[\"c1-b3\"],\"unguided\":[\"c4-b3\"]}}"
+    },
+    {
+      "id": "V-04",
+      "name": "toolTeaching의 도구가 그 비트 tools에 포함",
+      "status": "PASS",
+      "expected": true,
+      "actual": []
+    },
+    {
+      "id": "P-01",
+      "name": "prerequisites 참조 비트 존재",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "P-02",
+      "name": "prerequisites 전건이 앞선 비트를 가리킴",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "P-03",
+      "name": "prerequisites 무순환",
+      "status": "PASS",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "id": "K-01",
+      "name": "기록 불가 명제 문자열 부재 (이전 C3 F1 회귀)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "K-02",
+      "name": "'봉인 완료 접점' 존재",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "K-03",
+      "name": "RFC-P3-013 캐논 시각 존재 (H-1:24 · H-1:04 · H+0:12)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "K-04",
+      "name": "RFC-P3-013 폐기 시각 부재 (H-1:20 · H+0:10)",
+      "status": "PASS",
+      "expected": 0,
+      "actual": []
+    },
+    {
+      "id": "K-05",
+      "name": "RFC-P3-012 공개 순서 (도연 = t0-b1 · 한서린 = c4-b2)",
+      "status": "PASS",
+      "expected": {
+        "도연": "t0-b1",
+        "한서린": "c4-b2"
+      },
+      "actual": {
+        "도연": "t0-b1",
+        "한서린": "c4-b2"
+      }
+    },
+    {
+      "id": "K-06",
+      "name": "RFC-W4 의도 문장 위치 ('방패가 아니라 잠금장치' — c4-b3 부재 · c6-b4 존재)",
+      "status": "PASS",
+      "expected": {
+        "c4-b3": false,
+        "c6-b4": true
+      },
+      "actual": {
+        "c4-b3": false,
+        "c6-b4": true
+      }
+    }
+  ],
+  "notMeasured": [
+    "사람 플레이 표본 n=0 — 완주 분·힌트 실효성·도달성·이탈률 전부 미측정",
+    "이 검증기는 문서 정합만 본다. G2/G4/G5/G6/G7을 올리지 않는다"
+  ]
+}

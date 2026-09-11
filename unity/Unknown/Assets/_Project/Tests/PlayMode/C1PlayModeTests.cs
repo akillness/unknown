@@ -55,6 +55,33 @@ namespace Tide.Tests
             Click("c1-bypass");Click("c1-condition");
         }
         PuzzleCommand Confirm()=>new PuzzleCommand("ConfirmPatrol",game.Definition.Patrol.ConditionId,"false","true");
+        [UnityTest] public IEnumerator DefaultPatrolGuidanceDoesNotRevealSolutionOrMutateState()
+        {
+            Click("continue-c1");yield return Wait(game.FlushSaves());
+            Assert.IsTrue(game.PatrolActive);Assert.IsFalse(game.PatrolComplete);
+            Assert.IsTrue(game.Definition.Patrol.Observations.All(id=>!game.Journal.State.Has("c1:observed:"+id)));
+            var state=game.Journal.State.StateHash;var head=game.Journal.HeadSeq;
+            var saved=File.ReadAllBytes(Path.Combine(directory,"save.json"));var focus=game.Interface.CurrentFocusId;
+            var actions=game.Interface.ActionIds.ToArray();var receipts=game.SuccessfulReceipts;
+            game.Render();yield return null;
+            Assert.AreEqual(state,game.Journal.State.StateHash,"Rendering guidance must not change puzzle state");
+            Assert.AreEqual(head,game.Journal.HeadSeq,"Rendering guidance must not append a command");
+            CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(directory,"save.json")),"Rendering guidance must not rewrite the save");
+            Assert.AreEqual(focus,game.Interface.CurrentFocusId,"Rendering guidance must preserve focus");
+            CollectionAssert.AreEqual(actions,game.Interface.ActionIds);
+            Assert.AreEqual(receipts,game.SuccessfulReceipts);
+            var text=string.Join("\n",host.GetComponentsInChildren<UnityEngine.UI.Text>().Select(t=>t.text));
+            var card=host.GetComponentsInChildren<UnityEngine.UI.Text>().Single(t=>t.name=="CaseThread").text;
+            StringAssert.Contains("관찰 0 / 2",card);
+            StringAssert.Contains("당직일지",text);StringAssert.Contains("수문 계통판",text);
+            var contract=Newtonsoft.Json.Linq.JObject.Parse(Resources.Load<TextAsset>("C1PatrolContract").text);
+            foreach(var observation in contract["observations"])
+                foreach(var field in new[]{"id","originId","rootOriginId"})
+                    StringAssert.DoesNotContain((string)observation[field],text,"Default guidance must not name a solution source");
+            StringAssert.DoesNotContain("조명 분기를 접",text,"Default guidance must not prescribe the correct branch action");
+            StringAssert.DoesNotContain("판독 분기만 남",text,"Default guidance must not prescribe the correct branch action");
+            Assert.IsFalse(game.Interface.Focus("c1-confirm"),"Missing observations must still block confirmation");
+        }
         [UnityTest] public IEnumerator KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice()
         {
             Ready();yield return Wait(game.FlushSaves());Assert.IsTrue(game.Interface.Focus("c1-confirm"));

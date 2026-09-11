@@ -23,8 +23,10 @@ namespace Tide.UI
         public string ChartLabel;
         public Vector2[] AnchorTargets,AnchorOverlay;
         public string[] AnchorLabels;
+        public SignaturePaperView SignaturePaper;
+        public bool ResetScroll;
     }
-    public sealed class T0Interface:MonoBehaviour
+    public sealed partial class T0Interface:MonoBehaviour
     {
         private Canvas canvas;
         private Font font;
@@ -71,6 +73,7 @@ namespace Tide.UI
             navigationScroll=left.gameObject.AddComponent<ScrollRect>();navigationScroll.viewport=navigationViewport;navigationScroll.content=leftFlow;navigationScroll.horizontal=false;navigationScroll.vertical=true;navigationScroll.scrollSensitivity=30;
             foreach(var a in model.Navigation) Button(leftFlow,a);
             float contentTop=.865f;
+            if(model.SignaturePaper!=null)RenderSignaturePaper(leftFlow,model.SignaturePaper);
             if(!string.IsNullOrEmpty(model.CaseThread)) {
                 float height=.185f*scale;
                 var card=Panel("Case thread",root,new Vector2(.46f,.865f-height),new Vector2(1,.865f),ink);
@@ -122,7 +125,9 @@ namespace Tide.UI
             var sceneCorners=new Vector3[4];sceneWindow.GetWorldCorners(sceneCorners);SceneViewport=new UnityEngine.Rect(sceneCorners[0].x/Screen.width,sceneCorners[0].y/Screen.height,(sceneCorners[2].x-sceneCorners[0].x)/Screen.width,(sceneCorners[2].y-sceneCorners[0].y)/Screen.height);
             focusIndex=0;
             if(focusKey!=null && keyed.TryGetValue(focusKey,out var selected)) focusIndex=focus.IndexOf(selected);
-            SelectFocus(); ScreenChanged?.Invoke();
+            SelectFocus();
+            if(model.ResetScroll){scroll.verticalNormalizedPosition=1;navigationScroll.verticalNormalizedPosition=1;}
+            ScreenChanged?.Invoke();
         }
         public void Navigate(int delta)
         {
@@ -207,8 +212,17 @@ namespace Tide.UI
                 var hold=r.gameObject.AddComponent<HoldButton>(); hold.Duration=action.HoldSeconds;hold.Confirmed=action.Activate;
                 var ring=Rect("Hold progress",r,new Vector2(.91f,.15f),new Vector2(.98f,.85f));ring.gameObject.AddComponent<CanvasRenderer>();hold.Progress=ring.gameObject.AddComponent<HoldProgressRing>();hold.Progress.color=brass;hold.Progress.raycastTarget=false;
             }
-            if(action.Enabled) { focus.Add(button); keyed[action.Id]=button; }
+            if(action.Enabled) {
+                focus.Add(button); keyed[action.Id]=button;
+                var selection=r.gameObject.AddComponent<FocusSelection>();
+                selection.Selected=()=>{focusIndex=focus.IndexOf(button);focusKey=button.name;};
+            }
         }
+    }
+    public sealed class FocusSelection:MonoBehaviour,ISelectHandler
+    {
+        public Action Selected;
+        public void OnSelect(BaseEventData data)=>Selected?.Invoke();
     }
     public sealed class HoldButton:MonoBehaviour,IPointerDownHandler,IPointerUpHandler,IPointerExitHandler
     {

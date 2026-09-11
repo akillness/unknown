@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "c1-m4-delivery-isolation-qa",
+  "status": "current",
+  "reviewedAt": "2026-09-11T04:38:20.452Z",
+  "baselineHead": "ae098e0636b0075d1abb0ebf408bd66f7f459811",
+  "isolatedProject": "/tmp/unknown-c1-m4-publish-20260911/unity/Unknown",
+  "approvedOverlayCount": 65,
+  "baselineTrackedFileCount": 315,
+  "method": "QA hashes approved isolated source bytes and compares non-overlay files to git ls-tree blob identities; inspects isolated NUnit XML and command lines. No Unity execution or shared-source edits by QA.",
+  "checks": [
+    {
+      "id": "overlay-count",
+      "result": "PASS",
+      "detail": "65 authorized overlay paths"
+    },
+    {
+      "id": "unique-paths",
+      "result": "PASS",
+      "detail": "No repeated paths"
+    },
+    {
+      "id": "manifest-list-equality",
+      "result": "PASS",
+      "detail": "Approved list equals manifest"
+    },
+    {
+      "id": "untouched-baseline-hashes",
+      "result": "PASS",
+      "detail": "Final post-build baseline blob audit:0 mismatches; transient runtime-list difference recorded separately"
+    },
+    {
+      "id": "overlay-hashes",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "no-extra-source-files",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "id": "head-t0-strings",
+      "result": "PASS",
+      "detail": "Isolated T0Strings equals HEAD blob"
+    },
+    {
+      "id": "authorized-patrol-fallback",
+      "result": "PASS",
+      "detail": "Exact HEAD fallback line equals isolated fallback"
+    },
+    {
+      "id": "approved-no-spoiler-regression",
+      "result": "PASS",
+      "detail": "Intake regression retained"
+    },
+    {
+      "id": "external-test-excluded",
+      "result": "PASS",
+      "detail": "External later test absent"
+    }
+  ],
+  "manifest": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/delivery-source-manifest.json",
+    "sha256": "1190c68d973151433c830fb726228fe271974e1350ef1ecdefd7c7f2c769e2ac"
+  },
+  "substitutions": [
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+      "reason": "Restore pre-external packet-first PatrolText fallback in isolation"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/C1PlayModeTests.cs",
+      "reason": "Remove only external ObservedInvalidRouting test; retain approved DefaultPatrolGuidance regression"
+    }
+  ],
+  "excludedExternal": [
+    "unity/Unknown/Assets/_Project/Resources/T0Strings.json"
+  ],
+  "testRuns": [
+    {
+      "name": "editmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/editmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/editmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "36",
+        "result": "Passed",
+        "total": "36",
+        "passed": "36",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:28:36Z",
+        "end-time": "2026-09-11 04:28:38Z",
+        "duration": "2.2779123"
+      },
+      "sha256": "845df56cfe457aa1697d03c9bed3762a692e4f1caafc00399fbb48c89d1e919a",
+      "isolatedPathInCommandLine": true
+    },
+    {
+      "name": "playmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/playmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/playmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "39",
+        "result": "Passed",
+        "total": "39",
+        "passed": "39",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:30:42Z",
+        "end-time": "2026-09-11 04:30:57Z",
+        "duration": "14.2563969"
+      },
+      "sha256": "972e3bb5855840cbf1b956af8aa2756e8b7ddf3e84e36ccceb1f1d12a8770e49",
+      "isolatedPathInCommandLine": true
+    },
+    {
+      "name": "boot-playmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/boot-playmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/boot-playmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "1",
+        "result": "Passed",
+        "total": "1",
+        "passed": "1",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:31:19Z",
+        "end-time": "2026-09-11 04:31:20Z",
+        "duration": "0.5965604"
+      },
+      "sha256": "16755ac5e912357f30ca424346823ae197aee5d103cdbb25fb22c2c869d0d828",
+      "isolatedPathInCommandLine": true
+    }
+  ],
+  "generatedSettingsObservation": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/urp-runtime-settings-observation.json",
+    "installedSourceHashVerified": true,
+    "reason": "Unity package clears runtime-only list in Editor and populates on player serialization; authoring m_SettingsList unchanged",
+    "status": "Final post-build URP source exactly matches HEAD; no additional source overlay required"
+  },
+  "nativeFinal1": {
+    "feedbackReceipt": "_workspace/current/systems/tech-verification/c1-m4/feedback-smoke/native-observation.json",
+    "feedbackSha256": "25e0eb68f39c2376f2918c747959765a93766a49843b432a9883a6cadb37dd68",
+    "restoredSave": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/restored-save.json",
+    "restoredEqualsConfirmed": true,
+    "claim": "Director observed ordinary-runtime pointer/card and OS restart; QA reviewed receipt and resulting save. No universal click-reliability claim."
+  },
+  "remaining": [],
+  "boundary": "Mixed shared-worktree 40-test evidence is not used for delivery. External source files are preserved in the shared checkout; only the isolated approved closure is reviewed.",
+  "initialGeneratedSettingsDifference": {
+    "path": "unity/Unknown/Assets/UniversalRenderPipelineGlobalSettings.asset",
+    "difference": "runtime-only m_List13RIDs→[] during Editor import",
+    "classificationReceipt": "_workspace/current/systems/tech-verification/c1-m4/isolated/urp-runtime-settings-observation.json"
+  },
+  "finalClosure": {
+    "measuredAt": "2026-09-11T04:37:05.561876+00:00",
+    "overlayMismatches": [],
+    "baselineMismatches": [],
+    "extraSourceFiles": [],
+    "overlayCount": 65,
+    "baselineTrackedCount": 315,
+    "manifestCopyByteEqual": true,
+    "indexAudit": {
+      "approvedMismatches": [],
+      "baselineMismatches": [],
+      "extraPaths": []
+    }
+  },
+  "verdict": "PASS: isolated source and staged Unity closure equal baseline plus approved65 files; isolated native36/39/1 passed; director final2 completed-save native resume and independent save-byte crosscheck passed. No playtest or performance gate promotion.",
+  "nativeFinal2": {
+    "receiptPath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final-runtime-verification.json",
+    "receiptSha256": "b316ba90a8c253d24121b22883d486c5edcf072f46eae1715eba72dc4fdb5283",
+    "observer": "Director CUA/native process session; receipt independently reviewed by QA",
+    "bundleFingerprint": "af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738",
+    "buildBytes": 348163868,
+    "diagnosticFlag": false,
+    "completedStateRestored": true,
+    "copyCount": 2,
+    "resourcesVisible": true,
+    "lowerMaskRetained": true,
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "resumedStatus": "저장된 대조 기록을 복원했습니다.",
+    "staleT0MessageAbsent": true,
+    "restoredSavePath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final2-restored-save.json",
+    "restoredSaveSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+    "qaSaveByteEqual": true,
+    "qaConfirmSignatureCount": 1,
+    "windowObservation": "Director reported initial inactive black window; the same process and build displayed UI after titlebar activation.",
+    "limits": [
+      "Agent-operated native smoke, not human playtest, physical pad, auditory or performance certification"
+    ]
+  }
+}

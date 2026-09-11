@@ -27,3 +27,13 @@ See `production/codex-c1-m3-status.md` and RFC-CX-004 for bounded c1-b1 implemen
 | C1 first-beat authored contract | planner | P2 | planning/c1-patrol-contract.json | current; static review passed |
 | C1 entry, circuit preview, atomic chapter save and v1 migration | systems, QA | P3/P4 | unity/Unknown/ | complete: EditMode 27/27, PlayMode 28/28, native restart verified |
 | Original patrol panel | modeler, director | P3 | assets/generated/3d/c1-patrol-panel-r01 | complete: generated, native-inspected and scoped runtime-approved (RFC-CX-004) |
+
+## C1 M4 continuation (2026-09-11)
+
+See RFC-CX-005 and production/codex-c1-m4-status.md.
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| Signature reader authored packet | planner | P2 | planning/c1-signature-contract.json | complete — scoped evidence recorded |
+| State-driven paper/reader art and reveal | presentation, modeling, director | P2/P3 | presentation/c1-signature-presentation.md | complete — scoped evidence recorded |
+| c1-b2 runtime, safe saves and native verification | systems, QA | P3/P4 | unity/Unknown/ | complete — scoped evidence recorded |

@@ -1,0 +1,125 @@
+{
+  "asset_id": "c1-signature-reader",
+  "canonical_name": "판독기",
+  "glossary_id": "reader",
+  "revision": "r01",
+  "created_utc": "2026-09-11T03:51:14.161091+00:00",
+  "runtimeEligible": false,
+  "status": "candidate-pending-director-native-review",
+  "source_type": "original-procedural-blender",
+  "generator": "Blender CLI root operator",
+  "authoring_lane": "game-modeler recipe/spec only; no modeler execution claim",
+  "generator_version": "5.1.2",
+  "source_prompt": "Original static plate reader with a shallow circular left cradle, short rear swing arm and magnifier ring, short hand crank, and a shallow rectangular paper-treatment tray at right. Overall metre bounds <= 0.72 x 0.42 x 0.28; pivot at base bottom centre. Worn blue-grey #36565C, dark #0E1F26/#173238, irregular dark-based verdigris #4F7A6B and restrained matte #C8D6D3 salt. Use original geometry with quiet blank label recesses and matte opaque lens. No text, glyphs, numbers, signatures, page content, scales, logos, LEDs, emission, moisture animation, hidden evidence or puzzle state. Static art only.",
+  "prompt_sha256": "b53b4106ae0ad65f421d45d37bf2f739bdadd22569f862a00ac5853496caca91",
+  "recipe_path": "assets/generated/3d/scripts/build_c1_signature_reader_r01.py",
+  "recipe_sha256": "c5c06cac885d62345cc9bb096de8abc7646a6e38baf7a295b2e634d91cdb582e",
+  "seed": 2026091104,
+  "concept_ref": [
+    "_workspace/current/concept/c1-signature-art-brief.md",
+    "_workspace/current/presentation/c1-signature-presentation.md",
+    "_workspace/current/concept/prompts/tool-reader-hero.txt",
+    "assets/generated/2d/concept/tool-reader-hero.png",
+    "_workspace/current/worldview/glossary.md#reader",
+    "_workspace/current/production/decision-log.md#rfc-cx-005"
+  ],
+  "reference_receipts": [
+    {
+      "path": "_workspace/current/concept/c1-signature-art-brief.md",
+      "sha256": "ea644d4972dc5d639abb52e9d8ab21511330c85eb736249fc750a5f92728be00"
+    },
+    {
+      "path": "_workspace/current/presentation/c1-signature-presentation.md",
+      "sha256": "cf3ffa5b6c204a0d1ab4fa879e77efcff22df08d4fd55d2b2e070cda10acce8c"
+    },
+    {
+      "path": "_workspace/current/concept/prompts/tool-reader-hero.txt",
+      "sha256": "d8cc54f0f54499d10a2868095cef23407b44fbd682ac048a4d21ff13c4137460"
+    },
+    {
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8"
+    },
+    {
+      "path": "_workspace/current/worldview/glossary.md#reader",
+      "sha256": "e655b330ed73ed49f0f6cd724d11bd1aaf5de74330405d92338a7b6e33aafeef"
+    },
+    {
+      "path": "_workspace/current/production/decision-log.md#rfc-cx-005",
+      "sha256": "2cac66f9cf9b12c08c7becd60a37f97e865ca8f02e769af0cadc7fa261e50bee"
+    }
+  ],
+  "third_party_assets": [],
+  "imported_external_media": [],
+  "fees": 0,
+  "concept_scope": "RFC-CX-005: original reader geometry from approved M4 brief and existing reader concept",
+  "formats": {
+    "authoring": "blend",
+    "canonical_delivery": "GLB",
+    "unity_candidate": "FBX adapter with sidecar textures; native importer/material validation pending"
+  },
+  "preview_kind": "Blender product render; not gameplay or Unity capture",
+  "preview_requested_size": [
+    1024,
+    1024
+  ],
+  "preview_actual_size": [
+    1024,
+    1024
+  ],
+  "runtime_review": "pending",
+  "g4_passed": false,
+  "g5_passed": false,
+  "outputs": [
+    {
+      "path": "SM_C1_Signature_Reader.blend",
+      "bytes": 188789,
+      "sha256": "dac690da86db9e6690bae4f854e025aa74f10ce5ba1c97cd55c460883f6406e7"
+    },
+    {
+      "path": "SM_C1_Signature_Reader.fbx",
+      "bytes": 126396,
+      "sha256": "1316aee0e2dabbc276d49c7eb4c81a270308fcd2ac4adf3069509c1be9aa7f44"
+    },
+    {
+      "path": "SM_C1_Signature_Reader.glb",
+      "bytes": 2242516,
+      "sha256": "0d2f85cbdb0fa5479af36e669bd953613e2c3d3bca879b064686b33ba4650c43"
+    },
+    {
+      "path": "measurements.json",
+      "bytes": 5453,
+      "sha256": "6ab044f0478eb5c838aa1b5d3eb4e585ab7d85d95c1311c037e14b856f30bba8"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 1251918,
+      "sha256": "213f80c6de0172e19d3f15f50b5b56bc010140a9772ba45dd4d5a6e798d97154"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 605,
+      "sha256": "b53b4106ae0ad65f421d45d37bf2f739bdadd22569f862a00ac5853496caca91"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Casting_BaseColor.png",
+      "bytes": 584029,
+      "sha256": "26b8a5d82296b896942dcf145f2eb6c99c566cdb84e695690dca4fbdc98b07ee"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Casting_Roughness.png",
+      "bytes": 284350,
+      "sha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Patina_BaseColor.png",
+      "bytes": 579911,
+      "sha256": "1a3da4bead6f4526e5ccd27043e0e36f4984857465d1f9a7422a73e00c3bd814"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Patina_Roughness.png",
+      "bytes": 284350,
+      "sha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0"
+    }
+  ]
+}

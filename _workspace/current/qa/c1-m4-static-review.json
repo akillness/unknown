@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "c1-m4-independent-static",
+  "status": "current",
+  "scope": "c1-b2 only",
+  "measuredAt": "2026-09-11T03:50:18.312Z",
+  "method": "Independent Node assertions comparing campaign and runtime packet fields plus acceptance-critical source guards. Source checks are not Unity execution.",
+  "totals": {
+    "assertions": 32,
+    "passed": 32,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "M4-Q01",
+      "claim": "Packaged runtime packet equals planner packet",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/Resources/C1SignatureContract.json"
+    },
+    {
+      "id": "M4-Q02",
+      "claim": "Beat scope/title/location/proof/checkpoint match campaign",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q03",
+      "claim": "Only c1-b2 is in scope",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-objective",
+      "claim": "Canonical narrative field preserved: objective",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-action",
+      "claim": "Canonical narrative field preserved: action",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-inference",
+      "claim": "Canonical narrative field preserved: inference",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-completion",
+      "claim": "Canonical narrative field preserved: completion",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-consequence",
+      "claim": "Canonical narrative field preserved: consequence",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-recovery",
+      "claim": "Canonical narrative field preserved: recovery",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-N-hints",
+      "claim": "Canonical narrative field preserved: hints",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-CLUE-c1-b2-c1",
+      "claim": "Authored clue fields preserved",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-CLUE-c1-b2-c2",
+      "claim": "Authored clue fields preserved",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q04",
+      "claim": "Two copies retain the same signature-annex root",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q05",
+      "claim": "Proof roots and media remain distinct",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q06",
+      "claim": "No initial humidity or fictional percentage",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q07",
+      "claim": "One low safe level and two reversible risk levels",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q08",
+      "claim": "Free trials do not age or damage originals",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q09",
+      "claim": "Only explicit trials permit separation",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q10",
+      "claim": "Reset preserves source copies and prior progress",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q11",
+      "claim": "Mask exact normalized rectangle persists unresolved",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q12",
+      "claim": "Explicit comparison does not infer identity or invented times",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q13",
+      "claim": "Confirmation contract demands accepted save and no immediate grants",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q14",
+      "claim": "Migration contract preserves historical identity",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q15",
+      "claim": "No automatic hints or defaults containing solution fields",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-Q16",
+      "claim": "Static view is not evidence, generated text or color-only proof",
+      "result": "PASS",
+      "reference": "_workspace/current/planning/c1-signature-contract.json"
+    },
+    {
+      "id": "M4-S01",
+      "claim": "Source explicitly rejects unknown humidity and observation IDs",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs"
+    },
+    {
+      "id": "M4-S02",
+      "claim": "Source checks per-sheet IDs and distinct original proof pair",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs"
+    },
+    {
+      "id": "M4-S03",
+      "claim": "Source confirmation guard contains all accumulated requirements",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs"
+    },
+    {
+      "id": "M4-S04",
+      "claim": "Source immediate path rejects both chapter confirmations",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/App/T0GameSession.cs"
+    },
+    {
+      "id": "M4-S05",
+      "claim": "Source candidate writes before journal replacement with stale receipt guard",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/App/T0GameSession.cs"
+    },
+    {
+      "id": "M4-S06",
+      "claim": "Source UI sends signature confirmation through RequestConfirm",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs"
+    },
+    {
+      "id": "M4-S07",
+      "claim": "Source paper graphic disables pointer interception",
+      "result": "PASS",
+      "reference": "unity/Unknown/Assets/_Project/UI/SignaturePaperView.cs"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "_workspace/current/planning/campaign.json",
+      "sha256": "8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a"
+    },
+    {
+      "path": "_workspace/current/planning/c1-signature-contract.json",
+      "sha256": "9bff17b3118e8c51388fca96f4ec94e6451b388d816ec504cd1737166d651515"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/C1SignatureContract.json",
+      "sha256": "9bff17b3118e8c51388fca96f4ec94e6451b388d816ec504cd1737166d651515"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+      "sha256": "9f8c4d435f21a3ae76bdfbfc623d2f577141a9102a8d765925cb33e9d428b958"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+      "sha256": "b9e9f715c7f4750ea95b69c6f8826209e068d4e96a66a57f9de3b3ba650b6761"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+      "sha256": "1ab45b826d3805d4e99397d4bd7f55043424f6d7b03f02615fff9837357ff220"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+      "sha256": "f717fb87249e1a74cac8d3f0885d307b0e4bbf83a018547d0d9088997b8b37fb"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/SignaturePaperView.cs",
+      "sha256": "a2abf583058afeb8b882818cc0648caa19cdec11fc0cd503653e68bd1df6b967"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Save/JournalSave.cs",
+      "sha256": "d9409d635c2e7e8905f7ee66ffe376c0f025e5089959f08246666d0d9efa0972"
+    }
+  ],
+  "nonClaims": [
+    "native Unity test execution",
+    "player visual inspection",
+    "G4/G5/G6 PASS",
+    "full C1 completion",
+    "measured playtime",
+    "resource runtime approval"
+  ]
+}

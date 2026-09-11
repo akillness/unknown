@@ -77,3 +77,41 @@ Successful resource:6 meshes, 2,092 triangles, four 1024-square maps totaling 1,
 ### Native panel promotion — 2026-09-11
 
 [OBSERVED] Director inspected diagnostic #3 front and alternate PNGs in systems/tech-verification/c1-m3/panel. The adapter is upright, retains the six meshes and texture maps, shows the shared connection clearly, and separates the warm lamp lens from the readout recess. Approve this exact static c1-b1 panel/adapter for runtime use. Blank plaques and readout are decorative; the UI remains authoritative for switch/readout state. Full G4/G5 and performance remain unmeasured. Original generation provenance and SUCCESS pair are preserved under assets/generated/3d/c1-patrol-panel-r01/generation-receipt/. The live provenance records capture hashes and this scoped promotion.
+
+## RFC-CX-005 · C1 signature reader and art continuity (2026-09-11)
+
+- lanes: planner, systems, presentation, modeling, QA; balance/economy carried because no currencies or authored numeric balance changes.
+- request: Continue c1-b2 with resources/art, consistency, presentation and logic as explicit priorities.
+- scope: c1-b2 only, continuing from shipped c1-b1 (ae098e0); no c1-b3/C4 identity reveal and no chapter-duration or full-game gate claim.
+- canonical evidence: planning/campaign.json c1-b2; current reader/save specs; concept/style-guide.md.
+- decision: ACK planner's three ordinal humidity choices (low/medium/high), initially unset, with low enabling separation and other levels producing reversible ink-risk preview. This is a labeled implementation inference, not a humidity percentage or additional lore. Canonical lowest-step hint remains opt-in; default guidance must not reveal the correct step or branch.
+- first observation preserves the joined source; both post-separation verified copies must be made explicitly, inherit signature-annex, and never count as independent proof. Plate-zero comparison requires the distinct plate observation and explicit player comparison; no inferred signature identity is revealed.
+- hidden region: approve a document-local normalized lower-sheet rectangle x=0.12, y=0.70, width=0.76, height=0.22, origin top-left. These are authored presentation coordinates for the visible paper surface, not a measurement of fictional historical evidence. Mark the same region on original/copy with a hatch and plain unresolved label; preserve obscuration after completion.
+- completion: accepted-save receipt atomically publishes both copy receipts, unresolved region annotation, distinct-source plate-band link, completed c1-b2 and cp-c1-b2. All preview/recovery is free; no premature completion on failed/cancelled save or direct immediate submission.
+- save architecture: ACK systems proposal for schema v3, backup-preserving v2 and v1 migration, byte/identity preservation of existing commands, and future-schema refusal. A shipped v2 binary must not silently replay new c1-b2 commands and fall back to a stale save.
+- art intent: approve presentation lead's blank damp paper substrate via Higgsfield and static Blender reader/humidity tray assembly in existing palette/material language. Exact state reveal remains in Unity renderer driven only by authoritative snapshot; no generated lettering/numerals/signatures, no static prop presented as live simulation. Assets start runtimeEligible:false; native visual inspection precedes scoped promotion.
+- evidence boundaries: include native edit/play tests, actual prior-v2 standalone route/restart, 150% text and reduced-motion capture; production G4/G5/performance/fun remain unmeasured.
+- continuity: preserve the pre-existing unstaged C1PlayModeTests.cs non-spoiler regression (observed mtime 2026-09-11 02:08) and complete its intended fix; no concurrent coding process found at intake, Blender UI left untouched.
+- status: implemented and independently verified within c1-b2; final isolated source and native restart approved.
+- memory: mex-agent unavailable pending identity check; no zg index mutation authorized.
+
+
+### RFC-CX-005 resource receipt — Higgsfield paper
+
+[OBSERVED] Higgsfield 1.1.23, GPT Image 2.5 high/1k, job 54b52722-337a-42fc-baa4-e289c64db09e completed. Requested and actual 1024×1024; cost quote 3.5 credits and account delta 120.68 → 117.18 = 3.5. Exact prompt, schema and response are preserved in assets/generated/2d/texture/c1-signature-paper-r01/. Full-resolution visual source inspection found no generated text, numerals, signatures or clue marks. Approved for diagnostic import only; runtime eligibility remains false pending native inspection and provider terms review.
+
+### RFC-CX-005 r02 geometry correction
+
+[OBSERVED] Independent native review found a disconnected swing arm in r01 (rotation sign). ACK the minimal r02 derivative: same source recipe except revision/output path and arm Z rotation −0.47 → +0.47. Preserve r01 as rejected diagnostic evidence. Root re-executed and hash-verified r02; native promotion must reference r02 and final Unity adapter. No new lore, motion or gameplay state is introduced.
+
+### RFC-CX-005 native reader r02 approval
+
+[OBSERVED] Director inspected the r02 native Metal capture in systems/tech-verification/c1-m4/reader/reader-front.png (SHA-256 e22f401da9e2a3751448056d23ad66eb31ec83959dc520be16435634da769c45). The elevated fixed front view exposes the circular cradle, lens opening and right treatment tray; corrected arm connects the rear post to the lens neck. Muted weathered materials load correctly on a neutral dark background. Approve this exact static r02 housing/Unity adapter for c1-b2. Paper and its state layers require separate native inspection. This is scoped asset approval, not G4/G5/performance certification.
+
+### RFC-CX-005 native paper approval
+
+[OBSERVED] Director exercised diagnostic-3 standalone at 1280×800 requested viewport, 150% text and reduced motion using actual previous v2 save. Original, separated, individually copied, marked, compared and completed paper states kept the lower obscuration without exposing a name. Labels and mask remained inside the viewport after layout repair; original/individual copies were distinguishable. Approve the exact Higgsfield blank paper (SHA-256 0b35b75810e2bb052b580b4671541e06a92e68169e2c70ee3af3e66f02e66efe) and this UI state adapter for c1-b2. Evidence: systems/tech-verification/c1-m4/player-final-smoke/native-observation.json. The static reader r02 approval remains in force. Normal resource view may now be enabled and final app built; later pointer/fixed-summary corrections require native spot checks. This is not human accessibility/fun or performance proof.
+
+### RFC-CX-005 final delivery verification
+
+[OBSERVED] Isolated HEAD+65 approved Unity source passed EditMode36/36, PlayMode39/39 and serialized boot1/1. Concurrent external patrol fallback/string/test edits remain in the workspace and are excluded through two isolated index blobs and HEAD T0Strings. Final copied app is348,163,868 bytes (316 files; bundle fingerprint af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738). Ordinary-runtime restart restored c1-b2 completion, two copied papers, unresolved lower mask and correct resumed status with unchanged save bytes. Scope-approved implementation/resources may be committed and pushed per the user’s standing request. Human playtime/fun/accessibility, physical pad, auditory approval, performance and full G4/G5 remain unmeasured.

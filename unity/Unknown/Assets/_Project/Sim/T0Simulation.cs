@@ -13,6 +13,7 @@ namespace Tide.Sim
         public ValidationResult Validate(PuzzleState state,PuzzleCommand command)
         {
             if(state==null || command==null) throw new ArgumentNullException();
+            if(C1SignatureDefinition.Handles(command.CommandId))return data.Signature==null?ValidationResult.InvalidData("C1_SIGNATURE_NOT_PACKAGED"):data.Signature.Validate(state,command,IsComplete(state,C1PatrolDefinition.BeatId));
             if(C1PatrolDefinition.Handles(command.CommandId))return data.Patrol==null?ValidationResult.InvalidData("C1_NOT_PACKAGED"):data.Patrol.Validate(state,command,IsComplete(state,"t0-b3"));
             var id=command.SubjectId;
             bool exists=id!=null && data.Records.TryGetValue(id,out _);
@@ -85,6 +86,7 @@ namespace Tide.Sim
         {
             var verdict=Validate(state,command);
             if(!verdict.IsValid) return new CommandResult(verdict,Array.Empty<PuzzleEvent>());
+            if(C1SignatureDefinition.Handles(command.CommandId))command=data.Signature.Materialize(state,command);
             if(C1PatrolDefinition.Handles(command.CommandId))command=data.Patrol.Materialize(command);
             IEnumerable<string> kept=null;
             if(command.CommandId=="Read") kept=data.Records[state.LoadedRecordId].ClueIds;
@@ -108,7 +110,8 @@ namespace Tide.Sim
             var values=new Dictionary<string,string>(state.Values,StringComparer.Ordinal);
             var counts=new Dictionary<string,int>(state.Counts,StringComparer.Ordinal);
             var c=evt.Command;
-            if(C1PatrolDefinition.Handles(c.CommandId))C1PatrolDefinition.Reduce(c,facts,values);
+            if(C1SignatureDefinition.Handles(c.CommandId))C1SignatureDefinition.Reduce(c,facts,values);
+            else if(C1PatrolDefinition.Handles(c.CommandId))C1PatrolDefinition.Reduce(c,facts,values);
             else switch(c.CommandId)
             {
                 case "OpenTool": values["circuitMode"]="Tracing"; break;
@@ -175,6 +178,7 @@ namespace Tide.Sim
         {
             switch(r.Type)
             {
+                case "signatureFiled": return C1SignatureDefinition.Has(s,"committed") && C1SignatureDefinition.Has(s,"copiesFiled") && C1SignatureDefinition.Has(s,"regionFiled:"+data.Signature.RegionId) && C1SignatureDefinition.Has(s,"bandFiled:"+data.Signature.ComparisonId) && C1SignatureDefinition.Has(s,"proofFiled") && s.Has("checkpoint:"+C1SignatureDefinition.CheckpointId);
                 case "patrolAccessGranted": return s.Has("c1:gateAccess") && s.Has("c1:journal:"+r.Id) && s.Has("checkpoint:"+C1PatrolDefinition.CheckpointId);
                 case "recordLinesViewed": return r.Ids.All(id=>s.Has("line:"+r.RecordId+":"+id));
                 case "recordRowsViewed": return r.Ids.All(id=>s.Has("row:"+r.RecordId+":"+id));

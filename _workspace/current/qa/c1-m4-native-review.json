@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "c1-m4-independent-native-receipt-review",
+  "status": "current",
+  "measuredAt": "2026-09-11T04:38:20.452Z",
+  "method": "QA inspected systems-produced NUnit XML and associated test source. QA did not run a second Unity instance or perform director-owned player/image inspection.",
+  "runs": [
+    {
+      "name": "editmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/editmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/editmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "36",
+        "result": "Passed",
+        "total": "36",
+        "passed": "36",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:28:36Z",
+        "end-time": "2026-09-11 04:28:38Z",
+        "duration": "2.2779123"
+      },
+      "sha256": "845df56cfe457aa1697d03c9bed3762a692e4f1caafc00399fbb48c89d1e919a",
+      "isolatedPathInCommandLine": true
+    },
+    {
+      "name": "playmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/playmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/playmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "39",
+        "result": "Passed",
+        "total": "39",
+        "passed": "39",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:30:42Z",
+        "end-time": "2026-09-11 04:30:57Z",
+        "duration": "14.2563969"
+      },
+      "sha256": "972e3bb5855840cbf1b956af8aa2756e8b7ddf3e84e36ccceb1f1d12a8770e49",
+      "isolatedPathInCommandLine": true
+    },
+    {
+      "name": "boot-playmode",
+      "path": "_workspace/current/systems/tech-verification/c1-m4/isolated/results/boot-playmode.xml",
+      "logPath": "_workspace/current/systems/tech-verification/c1-m4/isolated/logs/boot-playmode.log",
+      "summary": {
+        "id": "2",
+        "testcasecount": "1",
+        "result": "Passed",
+        "total": "1",
+        "passed": "1",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:31:19Z",
+        "end-time": "2026-09-11 04:31:20Z",
+        "duration": "0.5965604"
+      },
+      "sha256": "16755ac5e912357f30ca424346823ae197aee5d103cdbb25fb22c2c869d0d828",
+      "isolatedPathInCommandLine": true
+    }
+  ],
+  "fixtureEvidence": [
+    {
+      "version": "v2",
+      "fixture": "unity/Unknown/Assets/_Project/Tests/Fixtures/C1PatrolCompletedV2.json",
+      "source": "_workspace/current/systems/tech-verification/c1-m3/player-smoke/save.json",
+      "bytesEqual": true,
+      "sha256": "7ae0d63f3bbd1ac911b9d4b274725a9ef2a117bd34713402f1038638a5676733"
+    },
+    {
+      "version": "v1",
+      "fixture": "unity/Unknown/Assets/_Project/Tests/Fixtures/T0CompletedV1.json",
+      "source": "_workspace/current/systems/tech-verification/t0-m2/player-smoke/save.json",
+      "bytesEqual": true,
+      "sha256": "6625ef4e331d893ae142fbd1eabc63e683095194f19e00efe5aa7ff53e394a57"
+    }
+  ],
+  "closedFindings": [
+    {
+      "id": "C1-M4-QA-01",
+      "status": "closed",
+      "evidence": "DefaultGuidanceDoesNotRevealHumidityOrInventPageValue; page label conditional on observed source, no invented value"
+    },
+    {
+      "id": "C1-M4-QA-02",
+      "status": "closed",
+      "evidence": "FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint asserts beatId=c1-b2 and cp-c1-b2 checkpoint summary"
+    },
+    {
+      "id": "C1-M4-QA-03",
+      "status": "closed",
+      "evidence": "Source no longer contains obsolete next-story-closed sentence; explicit continuation remains"
+    },
+    {
+      "id": "C1-M4-QA-04",
+      "status": "closed",
+      "evidence": "DefaultGuidanceDoesNotRevealHumidityOrInventPageValue rejects same-source footer at entry; footer is gated by both copies; labels preserve original identity"
+    },
+    {
+      "id": "C1-M4-QA-05",
+      "status": "closed",
+      "evidence": "FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint faults second BeforeRename, asserts checkpoint exists, original save bytes/replayed state unchanged, retry once, duplicate refused"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/EditMode/C1SignatureTests.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "695962f1209fde6a2ca388092973eccbde914acb31f309e9f5e12fd1cba79b10"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/C1SignaturePlayModeTests.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "44501f0eef19036c783e4537b10f2d2a9184e4bd30d2f3b58864ed3fe2314802"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/C1PlayModeTests.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "fb31cfb9fd84fe5bf197288487fcbe12a7ca7f4ae065f0296bc67656819f7ebc"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/SignaturePaperView.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "dd213246808c6c518d421f5690225b5495f3a34e4c6b890047ee4ceb17b55051"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "e109c8543bb3da46ee48c0a20ad400b6ef83f64342831b9258c38ce190d1497e"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Save/JournalSave.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "d9409d635c2e7e8905f7ee66ffe376c0f025e5089959f08246666d0d9efa0972"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+      "sourceRoot": "/tmp/unknown-c1-m4-publish-20260911",
+      "sha256": "d50d88d3c25c01a84d5fd121cff47ed33f20f8492292be2377f64c2f86520853"
+    }
+  ],
+  "visualStateSourceReview": {
+    "maskAuthored": {
+      "x": 0.12,
+      "y": 0.7,
+      "width": 0.76,
+      "height": 0.22,
+      "origin": "top-left"
+    },
+    "maskUnityAnchors": {
+      "min": [
+        0.12,
+        0.08
+      ],
+      "max": [
+        0.88,
+        0.3
+      ]
+    },
+    "maskOpaque": true,
+    "maskExistsAfterSeparation": true,
+    "signerTextRenderedBehindMask": false,
+    "readerMeshNames": [
+      "SM_C1_Signature_Reader_Casting",
+      "SM_C1_Signature_Reader_Patina",
+      "SM_C1_Signature_Reader_Recess",
+      "SM_C1_Signature_Reader_Salt"
+    ],
+    "stateClaim": "Reader housing is static; signature paper, adhesion, copy and mask states are rendered independently in UI. No dynamic 3D paper claim."
+  },
+  "remainingEvidence": [
+    "Physical gamepad, human archetype playtests, audio and performance/full-chapter metrics remain unmeasured"
+  ],
+  "claimBoundary": "17 planner acceptance cases remain declared cases, not an executed17/17 suite. Isolated EditMode36/36, normal PlayMode39/39 and separate serialized boot1/1 passed; nine EditMode and ten normal PlayMode tests are signature-specific. Native director observations are separate from QA source/XML inspection.",
+  "priorPlayModeReceipt": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-3.xml",
+    "sha256": "2d844f545126aaa4f252ceeffe13e3b6406685d8bf0b42629c4cbfc4b8c8b82c",
+    "summary": {
+      "id": "2",
+      "testcasecount": "35",
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 03:54:46Z",
+      "end-time": "2026-09-11 03:55:00Z",
+      "duration": "13.7953178"
+    },
+    "signatureTestCases": [
+      {
+        "name": "DefaultGuidanceDoesNotRevealHumidityOrInventPageValue",
+        "result": "Passed",
+        "duration": "0.092007"
+      },
+      {
+        "name": "FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint",
+        "result": "Passed",
+        "duration": "0.458416"
+      },
+      {
+        "name": "ImmediateSubmissionCannotPublishSignatureCompletion",
+        "result": "Passed",
+        "duration": "0.308342"
+      },
+      {
+        "name": "MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender",
+        "result": "Passed",
+        "duration": "0.454991"
+      },
+      {
+        "name": "PendingUndoCancelsAllSixSignatureEffectsAndReceipt",
+        "result": "Passed",
+        "duration": "0.370827"
+      },
+      {
+        "name": "TwoStepConfirmationDoesNotCommitEarly",
+        "result": "Passed",
+        "duration": "0.657295"
+      }
+    ]
+  },
+  "startupFollowup": "_workspace/current/qa/c1-m4-startup-review.json",
+  "nativeLayoutFindings": [
+    {
+      "id": "C1-M4-QA-06",
+      "status": "closed",
+      "evidence": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+      "observedBy": "director actual diagnostic-3 at150 percent and reduced-motion; QA reviewed receipt and save files, not a second native route"
+    },
+    {
+      "id": "C1-M4-QA-07",
+      "status": "closed",
+      "evidence": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+      "observedBy": "director actual diagnostic-3 at150 percent and reduced-motion"
+    }
+  ],
+  "previousLayoutReceipt": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-8.xml",
+    "sha256": "9b421b268f7a435c6b0a7fa1fa41ee5036332622f5ca2378b07cbd12dbbe4959",
+    "summary": {
+      "id": "2",
+      "testcasecount": "35",
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 04:10:03Z",
+      "end-time": "2026-09-11 04:10:17Z",
+      "duration": "14.0594273"
+    },
+    "signatureTestCases": [
+      {
+        "name": "DefaultGuidanceDoesNotRevealHumidityOrInventPageValue",
+        "result": "Passed",
+        "duration": "0.279856"
+      },
+      {
+        "name": "FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint",
+        "result": "Passed",
+        "duration": "0.441519"
+      },
+      {
+        "name": "ImmediateSubmissionCannotPublishSignatureCompletion",
+        "result": "Passed",
+        "duration": "0.290551"
+      },
+      {
+        "name": "MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender",
+        "result": "Passed",
+        "duration": "0.481220"
+      },
+      {
+        "name": "PendingUndoCancelsAllSixSignatureEffectsAndReceipt",
+        "result": "Passed",
+        "duration": "0.296273"
+      },
+      {
+        "name": "TwoStepConfirmationDoesNotCommitEarly",
+        "result": "Passed",
+        "duration": "0.620066"
+      }
+    ]
+  },
+  "directorNativeRoute": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+    "sha256": "db5be3b55709c943c622aa95990bfda7d5189d0e18dbed2d44274ccd78b51ff2",
+    "qaSaveCrosscheck": {
+      "oldCount": 42,
+      "newCount": 57,
+      "oldPrefixPreserved": true,
+      "backupByteEqual": true,
+      "confirmBefore": 0,
+      "confirmAfter": 1,
+      "checkpointBefore": [
+        "cp-c1-b1"
+      ],
+      "checkpointAfter": [
+        "cp-c1-b1",
+        "cp-c1-b2"
+      ],
+      "identityPreserved": true
+    }
+  },
+  "latestInteractionRegressions": {
+    "xml": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-9.xml",
+    "passedTests": [
+      "ExecutedTrialOutcomeStaysVisibleWhileLowerControlsAreFocused",
+      "NonfocusedSourceOpensOnOneFastMouseClick",
+      "NonfocusedSourceOpensOnOneMouseClick",
+      "PointerSelectedButtonBecomesKeyboardTargetWithoutRerenderOrScroll"
+    ],
+    "nativeStatus": "Director final1 ordinary-runtime input/trial-card spot-check passed: one nonfocused click opens plate #0, Return activates selected plate, persistent humidity/trial result stays visible while lower controls are focused. Earlier intermittent CUA clicking remains recorded; this bounded observation is not universal reliability proof."
+  },
+  "previousSharedWorkspaceReceipts": [
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m4/results/editmode-2.xml",
+      "sha256": "71eca1b412f7b525d3b9a46a75bd2434db6df9eb8fb4390809c9e56c395bff16",
+      "summary": {
+        "id": "2",
+        "testcasecount": "36",
+        "result": "Passed",
+        "total": "36",
+        "passed": "36",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 03:52:06Z",
+        "end-time": "2026-09-11 03:52:09Z",
+        "duration": "2.1906806"
+      },
+      "signatureTestCases": [
+        {
+          "name": "ActualPriorV2SaveMigratesWithoutChangingReplayIdentityOrOriginalBytes",
+          "result": "Passed",
+          "duration": "0.053458"
+        },
+        {
+          "name": "AtomicCompletionUndoRedoReplayAndResetPreserveUnresolvedRegion",
+          "result": "Passed",
+          "duration": "0.040361"
+        },
+        {
+          "name": "ConfirmationNeedsMaskComparisonAndExplicitDistinctSourceProof",
+          "result": "Passed",
+          "duration": "0.017901"
+        },
+        {
+          "name": "CopiesAreExplicitIdempotentAndCannotFormIndependentProof",
+          "result": "Passed",
+          "duration": "0.017955"
+        },
+        {
+          "name": "EntryRequiresPatrolAndDoesNotCompleteOrGrantCopies",
+          "result": "Passed",
+          "duration": "0.017467"
+        },
+        {
+          "name": "PacketRejectsSameRootProofAndResolvableCopySelfReference",
+          "result": "Passed",
+          "duration": "0.015167"
+        },
+        {
+          "name": "RiskTrialsNeverDamageSourceAndResetNeverGrantsEvidence",
+          "result": "Passed",
+          "duration": "0.017965"
+        },
+        {
+          "name": "TrialRequiresObservationAndExplicitChoiceAndSelectionInvalidatesTrial",
+          "result": "Passed",
+          "duration": "0.017322"
+        },
+        {
+          "name": "UnsupportedIdsCannotMutatePrerequisiteReadyState",
+          "result": "Passed",
+          "duration": "0.018675"
+        }
+      ]
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-9.xml",
+      "sha256": "38c7b72a2ede48dc3b4f7e094850926a1139dd0a78434284d1e1cebc651694d4",
+      "summary": {
+        "id": "2",
+        "testcasecount": "39",
+        "result": "Passed",
+        "total": "39",
+        "passed": "39",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 04:15:59Z",
+        "end-time": "2026-09-11 04:16:15Z",
+        "duration": "16.2970941"
+      },
+      "signatureTestCases": [
+        {
+          "name": "DefaultGuidanceDoesNotRevealHumidityOrInventPageValue",
+          "result": "Passed",
+          "duration": "0.332714"
+        },
+        {
+          "name": "ExecutedTrialOutcomeStaysVisibleWhileLowerControlsAreFocused",
+          "result": "Passed",
+          "duration": "0.290075"
+        },
+        {
+          "name": "FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint",
+          "result": "Passed",
+          "duration": "0.466448"
+        },
+        {
+          "name": "ImmediateSubmissionCannotPublishSignatureCompletion",
+          "result": "Passed",
+          "duration": "0.307107"
+        },
+        {
+          "name": "MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender",
+          "result": "Passed",
+          "duration": "0.703994"
+        },
+        {
+          "name": "NonfocusedSourceOpensOnOneFastMouseClick",
+          "result": "Passed",
+          "duration": "0.299711"
+        },
+        {
+          "name": "NonfocusedSourceOpensOnOneMouseClick",
+          "result": "Passed",
+          "duration": "0.271273"
+        },
+        {
+          "name": "PendingUndoCancelsAllSixSignatureEffectsAndReceipt",
+          "result": "Passed",
+          "duration": "0.290923"
+        },
+        {
+          "name": "PointerSelectedButtonBecomesKeyboardTargetWithoutRerenderOrScroll",
+          "result": "Passed",
+          "duration": "0.096477"
+        },
+        {
+          "name": "TwoStepConfirmationDoesNotCommitEarly",
+          "result": "Passed",
+          "duration": "0.288849"
+        }
+      ]
+    }
+  ],
+  "deliveryIsolation": "_workspace/current/qa/c1-m4-isolation-review.json",
+  "finalOrdinaryInputReceipt": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/feedback-smoke/native-observation.json",
+    "sha256": "25e0eb68f39c2376f2918c747959765a93766a49843b432a9883a6cadb37dd68",
+    "status": "Director ordinary-runtime one-route PASS for click, pointer→keyboard, persistent selected/trial card; no universal causal/reliability claim"
+  },
+  "osRestartReceipt": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/restored-save.json",
+    "sha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+    "qaSaveEqualsConfirmed": true,
+    "observer": "Director final1 process restart"
+  },
+  "finalOrdinaryRuntime": {
+    "receiptPath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final-runtime-verification.json",
+    "receiptSha256": "b316ba90a8c253d24121b22883d486c5edcf072f46eae1715eba72dc4fdb5283",
+    "observer": "Director CUA/native process session; receipt independently reviewed by QA",
+    "bundleFingerprint": "af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738",
+    "buildBytes": 348163868,
+    "diagnosticFlag": false,
+    "completedStateRestored": true,
+    "copyCount": 2,
+    "resourcesVisible": true,
+    "lowerMaskRetained": true,
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "resumedStatus": "저장된 대조 기록을 복원했습니다.",
+    "staleT0MessageAbsent": true,
+    "restoredSavePath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final2-restored-save.json",
+    "restoredSaveSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+    "qaSaveByteEqual": true,
+    "qaConfirmSignatureCount": 1,
+    "windowObservation": "Director reported initial inactive black window; the same process and build displayed UI after titlebar activation.",
+    "limits": [
+      "Agent-operated native smoke, not human playtest, physical pad, auditory or performance certification"
+    ]
+  },
+  "finalDeliveryClosure": {
+    "measuredAt": "2026-09-11T04:37:05.561876+00:00",
+    "overlayMismatches": [],
+    "baselineMismatches": [],
+    "extraSourceFiles": [],
+    "overlayCount": 65,
+    "baselineTrackedCount": 315,
+    "manifestCopyByteEqual": true,
+    "indexAudit": {
+      "approvedMismatches": [],
+      "baselineMismatches": [],
+      "extraPaths": []
+    }
+  }
+}

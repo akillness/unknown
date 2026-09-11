@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "c1-m4-startup-regression-review",
+  "status": "current",
+  "reviewedAt": "2026-09-11T04:38:20.452Z",
+  "method": "Independent source review and inspection of systems-produced exact-filter NUnit XML and T0_BOOT logs; QA did not run Unity.",
+  "reportedIssue": {
+    "reporter": "game-production-director",
+    "symptom": "Diagnostic standalone black startup with cursor, no reported exception or player progress",
+    "status": "Director diagnostic-2 standalone startup passed; subsequent 150-percent layout defects remain open"
+  },
+  "passedRun": {
+    "xml": "_workspace/current/systems/tech-verification/c1-m4/results/boot-playmode-2.xml",
+    "summary": {
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 04:03:08Z",
+      "end-time": "2026-09-11 04:03:10Z",
+      "duration": "1.1232518"
+    },
+    "testFilter": "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+    "saveDirectory": "/tmp/unknown-c1-m4-boot-isolated-20260911-r3",
+    "saveDirectoryRemoved": true,
+    "log": "_workspace/current/systems/tech-verification/c1-m4/logs/boot-playmode-2.log",
+    "stageLogs": [
+      {
+        "text": "T0_BOOT entry-start",
+        "present": true
+      },
+      {
+        "text": "T0_BOOT ui-root-loaded",
+        "present": true
+      },
+      {
+        "text": "T0_BOOT hub-loaded",
+        "present": true
+      },
+      {
+        "text": "T0_BOOT session-initialized",
+        "present": true
+      }
+    ]
+  },
+  "sourceAssertions": [
+    "Task-prefixed newly owned temp directory required before recursive cleanup",
+    "Actual serialized boot scene loaded in Single mode",
+    "Serialized T0Entry loads ui-root and hub scenes",
+    "Simulation and journal initialized from byte-identical prior v2 fixture",
+    "Named active Interface Canvas enabled",
+    "Active enabled interactable start button has nonzero width/height and nonempty text",
+    "Prior patrol complete and signature not auto-entered"
+  ],
+  "supersededAttempts": [
+    {
+      "xml": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-4.xml",
+      "classification": "invalid whole-suite invocation",
+      "total": 36,
+      "passed": 6,
+      "failed": 30,
+      "reason": "Global --t0-save-dir overrides unrelated fixture directories; old boot temp prefix precondition failed before scene load. Not gameplay pass or gameplay-regression evidence."
+    },
+    {
+      "xml": "_workspace/current/systems/tech-verification/c1-m4/results/boot-playmode-1.xml",
+      "classification": "test selector defect",
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "reason": "Canvas.Single matched multiple active canvases after initialization; corrected to named Interface Canvas. T0_BOOT reached initialized."
+    }
+  ],
+  "inputHashes": [
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0BootSceneTests.cs",
+      "sha256": "06b39ee2d3f8dbb45e4c87c64fc9d278e1ca1f48991084d8c5e0f74af79a6a4f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0Entry.cs",
+      "sha256": "2d3c48b3d61c8d3b386323aa04c1ccfb80251257dd012234f6332c19a3f2642b"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0Entry.cs.meta",
+      "sha256": "bb7ad929147db6ea6ff2e2a8cd7c5950de6be74dcdc9b7ec0b0e10bbdb0b64cb"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Scenes/boot.unity",
+      "sha256": "5481468ebb8d817e7df2e718b3821db63070508a247375d5158b35887c6e354d"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m4/results/boot-playmode-2.xml",
+      "sha256": "a413e63a266853438843f2cab9274b4e0cd33b2f088439bca61b34aedd86757c"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/c1-m4/logs/boot-playmode-2.log",
+      "sha256": "1d6351a678223d9866f40e04ac4727b83894404d2b8cb50930d564c9fba112aa"
+    }
+  ],
+  "remainingEvidence": [],
+  "nonClaims": [
+    "Black standalone issue fixed",
+    "Actual standalone visible state",
+    "Production G4/G5/G6 PASS",
+    "Human playtests",
+    "Performance"
+  ],
+  "refreshedRegression": {
+    "xml": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-5.xml",
+    "summary": {
+      "id": "2",
+      "testcasecount": "35",
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 04:04:45Z",
+      "end-time": "2026-09-11 04:05:01Z",
+      "duration": "15.8485481"
+    },
+    "globalSaveOverride": false,
+    "testSelection": "Normal five PlayMode fixtures; serialized boot test executed separately",
+    "sha256": "3e3bf5385b3c223c2fdad033be86d270c1cd8efd8e94550bb5ebdff68eafd1b2"
+  },
+  "followupFindings": [
+    {
+      "id": "C1-M4-QA-06",
+      "origin": "director actual diagnostic-2",
+      "severity": "S2",
+      "status": "closed",
+      "symptom": "At 150 percent text, lower source mask clipped entirely by left viewport",
+      "closureEvidence": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+      "observer": "director actual diagnostic-3"
+    },
+    {
+      "id": "C1-M4-QA-07",
+      "origin": "director actual diagnostic-2",
+      "severity": "S2",
+      "status": "closed",
+      "symptom": "Right introduction auto-scrolled down to first action, hiding beginning until manual scroll up",
+      "closureEvidence": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+      "observer": "director actual diagnostic-3"
+    }
+  ],
+  "correctiveLayoutRun": {
+    "xml": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-8.xml",
+    "sha256": "9b421b268f7a435c6b0a7fa1fa41ee5036332622f5ca2378b07cbd12dbbe4959",
+    "summary": {
+      "id": "2",
+      "testcasecount": "35",
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 04:10:03Z",
+      "end-time": "2026-09-11 04:10:17Z",
+      "duration": "14.0594273"
+    },
+    "assertions": [
+      "At 150 percent, full lower mask and five source labels lie within vertical clipping bounds",
+      "Entry begins with prior right scroll at bottom, then next-frame entry restores top",
+      "At 150 percent, first document open restores next-frame body top",
+      "Render consumes ResetScroll after SelectFocus; explicit navigation behavior is retained"
+    ]
+  },
+  "directorRouteEvidence": {
+    "path": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/native-observation.json",
+    "sha256": "db5be3b55709c943c622aa95990bfda7d5189d0e18dbed2d44274ccd78b51ff2",
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "qaVerifiedSavePrefix": true
+  },
+  "latestInteractionTests": {
+    "xml": "_workspace/current/systems/tech-verification/c1-m4/results/playmode-9.xml",
+    "passed": 39,
+    "total": 39,
+    "finalNativeSpotCheck": "Director final1 one native route PASS; earlier intermittent CUA observation retained"
+  },
+  "finalOrdinaryInputAndRestart": {
+    "feedbackReceipt": "_workspace/current/systems/tech-verification/c1-m4/feedback-smoke/native-observation.json",
+    "restoredSave": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/restored-save.json",
+    "status": "Director final1 PASS; QA receipt/save crosscheck PASS"
+  },
+  "finalOrdinaryRuntime": {
+    "receiptPath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final-runtime-verification.json",
+    "receiptSha256": "b316ba90a8c253d24121b22883d486c5edcf072f46eae1715eba72dc4fdb5283",
+    "observer": "Director CUA/native process session; receipt independently reviewed by QA",
+    "bundleFingerprint": "af69e25e5c1f677c9203cee0600ca68998ee25c4d2bbaf2430c1b7b38af51738",
+    "buildBytes": 348163868,
+    "diagnosticFlag": false,
+    "completedStateRestored": true,
+    "copyCount": 2,
+    "resourcesVisible": true,
+    "lowerMaskRetained": true,
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "resumedStatus": "저장된 대조 기록을 복원했습니다.",
+    "staleT0MessageAbsent": true,
+    "restoredSavePath": "_workspace/current/systems/tech-verification/c1-m4/player-final-smoke/final2-restored-save.json",
+    "restoredSaveSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+    "qaSaveByteEqual": true,
+    "qaConfirmSignatureCount": 1,
+    "windowObservation": "Director reported initial inactive black window; the same process and build displayed UI after titlebar activation.",
+    "limits": [
+      "Agent-operated native smoke, not human playtest, physical pad, auditory or performance certification"
+    ]
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "contractId": "c1-signature-contract",
+  "scope": {
+    "stageId": "C1",
+    "stageTitle": "두 개의 필적",
+    "beatId": "c1-b2",
+    "beatTitle": "겹쳐 붙은 서명지",
+    "zoneId": "hub",
+    "checkpointId": "cp-c1-b2",
+    "proofRequired": true,
+    "fullChapter": false
+  },
+  "authority": {
+    "decisionId": "RFC-CX-005",
+    "decision": "director-acknowledged",
+    "authoredSource": "_workspace/current/planning/campaign.json",
+    "beatLocator": "stages[id=C1].beats[id=c1-b2]",
+    "references": [
+      "_workspace/current/synopsis/chapter-beats.md",
+      "_workspace/current/synopsis/continuity.md",
+      "_workspace/current/worldview/worldview-bible.md",
+      "_workspace/current/systems/system-specs/plate-readout.md",
+      "_workspace/current/systems/interaction-rules.md",
+      "_workspace/current/systems/system-specs/save-undo.md"
+    ]
+  },
+  "entry": {
+    "requiredCompletedBeatIds": [
+      "c1-b1"
+    ],
+    "requiresT0Complete": true,
+    "explicitContinueRequired": true,
+    "autoCompletesOnEntry": false,
+    "blockedReasonKey": "c1.signature.blocked.prerequisite"
+  },
+  "playerFantasy": "원본을 보존하는 기록 담당자로서 손끝으로 서명지를 분리하고, 서로 다른 매체가 같은 밤을 가리키는지 스스로 대조한다.",
+  "narrative": {
+    "objective": "소금에 눌어붙은 부속 서명지 두 장을 손상 없이 분리해 사본으로 뜨고, 판 #0의 번호대가 같은 철에 걸리는지 확인한다.",
+    "action": "판독기 습도판의 단수를 스스로 골라 소금을 풀고 두 장을 각각 사본으로 뜬다. 이번에는 안내 표시가 붙지 않는다.",
+    "inference": "등재는 두 장인데 번호가 하나면 두 번째 장은 번호를 받기 전에 철해졌다. 그리고 내가 숨겨 온 판이 하필 같은 밤 같은 계통의 대역이라면, 이 철과 그 판은 같은 사건을 두 매체로 보고 있다.",
+    "completion": "서명지 2장이 사본으로 보존되고 가려진 영역이 좌표와 함께 표시되며 판 #0의 번호대 연결이 기록된다.",
+    "consequence": "서명지 2장의 사본이 확보되고 두 번째 서명란의 아래쪽이 가려진 채 미해결 영역으로 남는다. 판 #0이 처음으로 사건판의 계통 대역에 연결된다.",
+    "recovery": "습도 단수는 확정 전 무제한 시험할 수 있고 원본은 이미 사본이 있어 표면 손상이 진행을 막지 않는다.",
+    "hints": [
+      "지금 할 일은 눌어붙은 종이를 손상 없이 떼는 것이다. 당직실 판독기에서 표면 조건을 다루는 자리를 찾아라.",
+      "높은 단수부터 쓰면 잉크가 번진다. 낮은 단수에서 시작해 붙은 자리만 풀어라.",
+      "습도판을 가장 낮은 단에 물려 두 장을 떼고 각각 사본을 뜬 뒤, 판 #0의 번호대를 이 철과 대조하라."
+    ]
+  },
+  "observations": [
+    {
+      "id": "c1-b2-c1",
+      "sourceType": "log",
+      "originId": "signature-annex",
+      "copiedFrom": null,
+      "description": "서명지 두 장이 가장자리에서 소금으로 붙었고 두 번째 장의 아래쪽이 가려져 있다. 목록에는 두 장인데 페이지 번호는 하나만 찍혀 있다.",
+      "rootOriginId": "signature-annex",
+      "labelKey": "c1.signature.clue.1.label",
+      "descriptionKey": "c1.signature.clue.1.description",
+      "firstReadAutoPreserved": true
+    },
+    {
+      "id": "c1-b2-c2",
+      "sourceType": "plate",
+      "originId": "plate-zero",
+      "copiedFrom": null,
+      "description": "판 #0의 번호대가 그날 제3수문 계통의 12시간 대역과 같고, 곡선에 명령이 대기한 구간이 이어져 있다. 서린은 이 번호가 그날 밤 것임을 알지만 서명란의 이름은 모른다.",
+      "rootOriginId": "plate-zero",
+      "labelKey": "c1.signature.clue.2.label",
+      "descriptionKey": "c1.signature.clue.2.description",
+      "firstReadAutoPreserved": true
+    }
+  ],
+  "humidity": {
+    "initialLevelId": null,
+    "unit": "ordinal",
+    "minimumPercent": null,
+    "levels": [
+      {
+        "id": "low",
+        "ordinal": 1,
+        "labelKey": "c1.signature.humidity.low",
+        "safeSeparation": true,
+        "previewKey": "c1.signature.preview.saltReleased"
+      },
+      {
+        "id": "medium",
+        "ordinal": 2,
+        "labelKey": "c1.signature.humidity.medium",
+        "safeSeparation": false,
+        "previewKey": "c1.signature.preview.inkRisk"
+      },
+      {
+        "id": "high",
+        "ordinal": 3,
+        "labelKey": "c1.signature.humidity.high",
+        "safeSeparation": false,
+        "previewKey": "c1.signature.preview.inkRisk"
+      }
+    ],
+    "requiresExplicitTrial": true,
+    "trialRequiresClueId": "c1-b2-c1",
+    "trialCost": 0,
+    "trialLimit": null,
+    "simulatedTimeAdvance": 0,
+    "originalWear": 0,
+    "selectionInvalidatesTrial": true,
+    "selectionDoesNotDestroyExistingCopies": true
+  },
+  "separation": {
+    "requiresObservedClueId": "c1-b2-c1",
+    "requiresSuccessfulTrial": true,
+    "requiresSafeSelectedLevel": true,
+    "explicitActionRequired": true,
+    "firstReadBackupMustExist": true,
+    "sourceDamageAllowed": false,
+    "alreadySeparatedIsIdempotent": true
+  },
+  "copies": {
+    "requiredCount": 2,
+    "requireSeparation": true,
+    "requireExplicitPerSheetAction": true,
+    "firstReadBackupCountsAsVerifiedSheetCopy": false,
+    "duplicateCopyIncreasesCount": false,
+    "records": [
+      {
+        "id": "c1-b2-copy-1",
+        "sheetId": "signature-sheet-1",
+        "sourceClueId": "c1-b2-c1",
+        "sourceType": "log",
+        "originId": "c1-b2-copy-1",
+        "rootOriginId": "signature-annex",
+        "copiedFrom": "signature-annex"
+      },
+      {
+        "id": "c1-b2-copy-2",
+        "sheetId": "signature-sheet-2",
+        "sourceClueId": "c1-b2-c1",
+        "sourceType": "log",
+        "originId": "c1-b2-copy-2",
+        "rootOriginId": "signature-annex",
+        "copiedFrom": "signature-annex"
+      }
+    ],
+    "formsIndependentProofPair": false,
+    "leafIdentityPolicy": "copy-record-id-is-bookkeeping-only; copiedFrom resolves to signature-annex"
+  },
+  "obscuredRegion": {
+    "id": "c1-b2-region-lower",
+    "sheetId": "signature-sheet-2",
+    "copyId": "c1-b2-copy-2",
+    "labelKey": "c1.signature.region.label",
+    "requiresCopy": true,
+    "explicitMarkRequired": true,
+    "coordinateSpace": "copy-local-normalized-top-left",
+    "rectangle": {
+      "x": 0.12,
+      "y": 0.7,
+      "width": 0.76,
+      "height": 0.22
+    },
+    "coordinateClaim": "presentation-annotation-not-fictional-measurement",
+    "state": "unresolved",
+    "restoreTextAllowed": false,
+    "remainsObscuredAfterSeparation": true
+  },
+  "comparison": {
+    "id": "c1-b2-plate-zero-band",
+    "requiresObservedClueIds": [
+      "c1-b2-c1",
+      "c1-b2-c2"
+    ],
+    "requiresVerifiedCopyIds": [
+      "c1-b2-copy-1",
+      "c1-b2-copy-2"
+    ],
+    "explicitActionRequired": true,
+    "relationship": "same-event-band",
+    "sourceOriginId": "signature-annex",
+    "plateOriginId": "plate-zero",
+    "ringHours": 12,
+    "serialNumber": null,
+    "absoluteStartTime": null,
+    "absoluteEndTime": null,
+    "numericCurveSamples": null,
+    "recordsWaitingSegment": true,
+    "derivesSignerIdentity": false
+  },
+  "proof": {
+    "required": true,
+    "requiredClueIds": [
+      "c1-b2-c1",
+      "c1-b2-c2"
+    ],
+    "requiredPairCount": 1,
+    "requiredDistinctSourceTypes": 2,
+    "requiredDistinctRootOrigins": 2,
+    "acceptedPair": {
+      "leftClueId": "c1-b2-c1",
+      "leftSourceType": "log",
+      "leftRootOriginId": "signature-annex",
+      "rightClueId": "c1-b2-c2",
+      "rightSourceType": "plate",
+      "rightRootOriginId": "plate-zero"
+    },
+    "copyRootPolicy": "inherit-source-root",
+    "explicitCitationSelectionRequired": true,
+    "sameRootPairAccepted": false,
+    "sameTypePairAccepted": false
+  },
+  "confirmation": {
+    "kind": "reader-citation",
+    "isC1PatrolConfirmation": false,
+    "defaultMode": "two-step",
+    "supportedModes": [
+      "two-step",
+      "hold",
+      "confirm-dialog"
+    ],
+    "previewRequired": true,
+    "saveSuccessRequired": true,
+    "atomic": true,
+    "idempotencyRequired": true,
+    "preCommitCheckpointRequired": true,
+    "readiness": {
+      "requiredCompletedBeatIds": [
+        "c1-b1"
+      ],
+      "requiredObservedClueCount": 2,
+      "separated": true,
+      "requiredVerifiedCopyCount": 2,
+      "requiredMarkedRegionCount": 1,
+      "requiredComparisonCount": 1,
+      "requiredIndependentPairCount": 1
+    },
+    "atomicEffects": [
+      "verifiedCopies:c1-b2-copy-1,c1-b2-copy-2",
+      "unresolvedRegion:c1-b2-region-lower",
+      "plateZeroBandLink:c1-b2-plate-zero-band",
+      "independentCitation:c1-b2-c1,c1-b2-c2",
+      "completedBeat:c1-b2",
+      "checkpoint:cp-c1-b2"
+    ],
+    "recordingBoundary": "accepted-current-save-receipt",
+    "failureEffects": {
+      "partialApplications": 0,
+      "completionGrants": 0,
+      "checkpointGrants": 0
+    },
+    "cancelKeepsPriorCommittedState": true,
+    "staleReceiptEffects": 0,
+    "duplicateReceiptEffects": 0,
+    "undoRedoUnit": "whole-reader-citation",
+    "immediateSubmissionMayCommit": false
+  },
+  "recovery": {
+    "trialLimit": null,
+    "cost": 0,
+    "automaticBackupIndestructible": true,
+    "resetPreviewPreservesObservedClues": true,
+    "resetPreviewPreservesAutomaticBackups": true,
+    "resetPreviewGrantsCopies": false,
+    "resetPreviewMarksRegion": false,
+    "resetPreviewRecordsComparison": false,
+    "resetPreviewCompletesBeat": false,
+    "failedTrialDestroysCopies": false,
+    "unlimitedCopyReplay": true,
+    "simulatedTimeAdvance": 0,
+    "priorCommittedStatePreserved": true,
+    "resetPreviewScope": [
+      "humidity-selection",
+      "trial-result"
+    ],
+    "resetPreviewPreservesExistingCopies": true,
+    "resetPreviewPreservesSeparation": true,
+    "resetPreviewPreservesExistingRegionMark": true,
+    "resetPreviewPreservesExistingComparison": true
+  },
+  "saveCompatibility": {
+    "minimumWriteSchemaVersion": 3,
+    "readVersions": [
+      1,
+      2,
+      3
+    ],
+    "requiresExplicitBackupPreservingMigration": true,
+    "futureVersionRefusal": true,
+    "preserveT0CommandIdentities": true,
+    "preserveT0SnapshotHashes": true,
+    "preserveC1PatrolState": true,
+    "preservePlateZeroTransferDecision": true,
+    "previewNamespace": "c1.signature",
+    "futureBeatAutoCompletionAllowed": false
+  },
+  "guidance": {
+    "defaultHintLevel": 0,
+    "automaticHintAdvance": false,
+    "maximumHintLevel": 3,
+    "hintRevealIncrement": 1,
+    "entryShows": "objective-only",
+    "defaultGuidanceKey": "c1.signature.guidance.default",
+    "hintTextSource": "narrative.hints",
+    "defaultExcludes": [
+      "narrative.action",
+      "narrative.inference",
+      "narrative.hints",
+      "safeHumidityLevel",
+      "solutionPath"
+    ],
+    "hintsMutatePuzzleState": false,
+    "trialFeedbackAllowedAfterExplicitTrial": true,
+    "blockedReasonMayRevealOnlyMissingPrerequisite": true
+  },
+  "presentation": {
+    "stageOnly": true,
+    "readOnlyFromSimulation": true,
+    "stateThroughTextAndShape": true,
+    "colorOnlyStatesAllowed": false,
+    "geometryProvesFacts": false,
+    "generatedTextureContainsNarrativeText": false,
+    "hiddenSignatureReadable": false,
+    "plateZeroPermanentHubSlot": true,
+    "minimumTextScaleChecks": [
+      1,
+      1.5
+    ],
+    "requiredInputPaths": [
+      "pointer",
+      "keyboard",
+      "gamepad"
+    ]
+  },
+  "narrativeGuardrails": {
+    "unresolved": [
+      "second-signature-name",
+      "second-signature-author",
+      "signer-intent",
+      "command-waiting-reason"
+    ],
+    "forbiddenReveals": [
+      "c1-b3-pen-pressure-and-ink-difference",
+      "c1-b3-seal-contact-demonstration",
+      "c4-b2-hidden-name"
+    ],
+    "forbiddenGeneratedFacts": [
+      "numeric-serial-number",
+      "numeric-pressure-threshold",
+      "exact-waiting-interval",
+      "new-dialogue",
+      "new-people",
+      "face-voice-or-intent-from-plate"
+    ]
+  },
+  "localization": {
+    "c1.signature.title": "겹쳐 붙은 서명지",
+    "c1.signature.guidance.default": "소금에 눌어붙은 부속 서명지 두 장을 손상 없이 분리해 사본으로 뜨고, 판 #0의 번호대가 같은 철에 걸리는지 확인한다.",
+    "c1.signature.clue.1.label": "부속 서명지철",
+    "c1.signature.clue.2.label": "판 #0",
+    "c1.signature.clue.1.description": "서명지 두 장이 가장자리에서 소금으로 붙었고 두 번째 장의 아래쪽이 가려져 있다. 목록에는 두 장인데 페이지 번호는 하나만 찍혀 있다.",
+    "c1.signature.clue.2.description": "판 #0의 번호대가 그날 제3수문 계통의 12시간 대역과 같고, 곡선에 명령이 대기한 구간이 이어져 있다. 서린은 이 번호가 그날 밤 것임을 알지만 서명란의 이름은 모른다.",
+    "c1.signature.humidity.low": "습도 1단",
+    "c1.signature.humidity.medium": "습도 2단",
+    "c1.signature.humidity.high": "습도 3단",
+    "c1.signature.humidity.unset": "습도 미선택",
+    "c1.signature.preview.saltReleased": "붙은 가장자리가 풀리고 잉크는 번지지 않았다.",
+    "c1.signature.preview.inkRisk": "잉크 번짐 위험이 보인다. 이 시험은 원본이나 보존 사본을 손상시키지 않는다.",
+    "c1.signature.region.label": "둘째 장 아래쪽 · 미해결 영역",
+    "c1.signature.blocked.prerequisite": "순찰로의 열람과 출처 조건을 먼저 확정해야 한다.",
+    "c1.signature.blocked.observation": "대조할 자료를 먼저 확인해야 한다.",
+    "c1.signature.blocked.trial": "선택한 습도를 먼저 시험해야 한다.",
+    "c1.signature.blocked.unsafe": "이번 시험은 안전한 분리 조건을 충족하지 못했다.",
+    "c1.signature.blocked.separation": "두 장을 먼저 분리해야 한다.",
+    "c1.signature.blocked.copies": "각 장의 검증 사본을 한 장씩 보존해야 한다.",
+    "c1.signature.blocked.region": "가려진 영역을 사본 위에 표시해야 한다.",
+    "c1.signature.blocked.comparison": "서명지철과 판 #0의 번호대를 대조해야 한다.",
+    "c1.signature.blocked.proof": "서로 다른 매체와 루트 출처를 근거로 선택해야 한다.",
+    "c1.signature.trial": "습도 시험",
+    "c1.signature.separate": "서명지 분리",
+    "c1.signature.copy.1": "첫째 장 사본 보존",
+    "c1.signature.copy.2": "둘째 장 사본 보존",
+    "c1.signature.mark": "가려진 영역 표시",
+    "c1.signature.compare": "번호대 대조",
+    "c1.signature.cite": "대조 근거 선택",
+    "c1.signature.confirm": "사본과 번호대 연결 확정",
+    "c1.signature.reset": "시험 상태 되돌리기",
+    "c1.signature.complete": "서명지 2장이 사본으로 보존되고 가려진 영역이 좌표와 함께 표시되며 판 #0의 번호대 연결이 기록된다."
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "C1-S01",
+      "case": "Prerequisite c1-b1 absent: entry/confirm blocked",
+      "expected": {
+        "entryGrants": 0,
+        "commits": 0
+      }
+    },
+    {
+      "id": "C1-S02",
+      "case": "Observe exact authored records, preserve both on first read, duplicate observation idempotent",
+      "expected": {
+        "observations": 2,
+        "sourceMismatches": 0,
+        "automaticBackups": 2,
+        "verifiedSheetCopies": 0
+      }
+    },
+    {
+      "id": "C1-S03",
+      "case": "Unselected and three ordinal humidity states; explicit low trial permits separation only",
+      "expected": {
+        "totalStates": 4,
+        "safeLevels": 1,
+        "unsafeLevels": 2,
+        "unselectedSeparationGrants": 0
+      }
+    },
+    {
+      "id": "C1-S04",
+      "case": "Medium/high trials then reset/retry do not destroy originals, backups, copies or prior progress",
+      "expected": {
+        "originalDamage": 0,
+        "lostBackups": 0,
+        "cost": 0,
+        "completionGrants": 0
+      }
+    },
+    {
+      "id": "C1-S05",
+      "case": "Separation before source observation or successful trial rejected; valid repeated separation idempotent",
+      "expected": {
+        "invalidGrants": 0,
+        "validSeparationCount": 1
+      }
+    },
+    {
+      "id": "C1-S06",
+      "case": "Two explicit per-sheet copies after separation; duplicate sheet action not a third copy",
+      "expected": {
+        "distinctCopies": 2,
+        "duplicateAddedCopies": 0,
+        "independentRoots": 1
+      }
+    },
+    {
+      "id": "C1-S07",
+      "case": "One copy-local lower region marked only after second copy exists; remains unreadable",
+      "expected": {
+        "regionCount": 1,
+        "unresolvedRegionCount": 1,
+        "newReadableNames": 0
+      }
+    },
+    {
+      "id": "C1-S08",
+      "case": "Explicit comparison requires both observations and copies and preserves exact origins",
+      "expected": {
+        "comparisonCount": 1,
+        "sourceMismatches": 0,
+        "inventedNumericSamples": 0
+      }
+    },
+    {
+      "id": "C1-S09",
+      "case": "Valid log/plate pair accepted; same-root copies and same-type pairs rejected",
+      "expected": {
+        "acceptedPairCount": 1,
+        "sameRootAccepted": 0,
+        "sameTypeAccepted": 0
+      }
+    },
+    {
+      "id": "C1-S10",
+      "case": "Missing any readiness predicate blocks confirmation even when all others are ready",
+      "expected": {
+        "partialApplications": 0,
+        "completionGrants": 0
+      }
+    },
+    {
+      "id": "C1-S11",
+      "case": "Current successful save receipt commits all effects exactly once",
+      "expected": {
+        "atomicEffectCount": 6,
+        "completedBeatsAdded": 1,
+        "checkpointsAdded": 1
+      }
+    },
+    {
+      "id": "C1-S12",
+      "case": "Immediate submission, cancel, failed write, stale/duplicate receipt cannot commit or partially apply",
+      "expected": {
+        "prematureCommits": 0,
+        "partialApplications": 0,
+        "duplicateApplications": 0
+      }
+    },
+    {
+      "id": "C1-S13",
+      "case": "Whole citation undo/redo preserves backup and prior T0/c1-b1 state",
+      "expected": {
+        "partialStates": 0,
+        "lostAutomaticBackups": 0,
+        "priorStateMismatches": 0
+      }
+    },
+    {
+      "id": "C1-S14",
+      "case": "Actual v1/v2 fixture migration to v3 retains command identity/hash; future versions refused",
+      "expected": {
+        "supportedReadVersions": 3,
+        "priorIdentityMismatches": 0,
+        "discardedOriginalBackups": 0,
+        "futureVersionsAccepted": 0
+      }
+    },
+    {
+      "id": "C1-S15",
+      "case": "Level-zero default omits solution; each explicit hint reveal advances at most one layer and changes no puzzle state",
+      "expected": {
+        "defaultHintLevel": 0,
+        "hintLayers": 3,
+        "maxIncrement": 1,
+        "stateMutations": 0,
+        "defaultSolutionLines": 0
+      }
+    },
+    {
+      "id": "C1-S16",
+      "case": "150% text remains readable; pointer keyboard pad expose actions; art does not reveal name",
+      "expected": {
+        "textScale": 1.5,
+        "requiredInputPaths": 3,
+        "missingLocalizationKeys": 0,
+        "colorOnlyStates": 0,
+        "readableHiddenNames": 0
+      }
+    },
+    {
+      "id": "C1-S17",
+      "case": "Native save/restart preserves completed c1-b2 evidence and shows bounded endpoint",
+      "expected": {
+        "completedSignatureBeats": 1,
+        "checkpointMismatches": 0,
+        "c1b3AutoCompletions": 0
+      }
+    }
+  ],
+  "telemetryFields": [
+    "beat_id",
+    "clue_id",
+    "source_type",
+    "root_origin_id",
+    "humidity_level_id",
+    "trial_result",
+    "separated",
+    "verified_copy_id",
+    "verified_copy_count",
+    "marked_region_id",
+    "comparison_id",
+    "proof_left_clue_id",
+    "proof_right_clue_id",
+    "independent_pair_valid",
+    "hint_level",
+    "commit_idempotency_key",
+    "save_receipt_status",
+    "checkpoint_id",
+    "save_schema_version"
+  ],
+  "nonClaims": {
+    "observedPlayMinutes": null,
+    "humanPlaytests": 0,
+    "measuredFun": null,
+    "fullC1Complete": false,
+    "providerGenerationClaim": null,
+    "newLoreNumbers": 0,
+    "newRewards": 0
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "objects": [
+    {
+      "name": "SM_C1_Signature_Reader_Casting",
+      "triangles": 528,
+      "vertices": 280,
+      "materials": [
+        "MAT_C1_Reader_Casting"
+      ],
+      "dimensions_m": [
+        0.699999988079071,
+        0.38999998569488525,
+        0.23499999940395355
+      ],
+      "uv_layers": 2
+    },
+    {
+      "name": "SM_C1_Signature_Reader_Patina",
+      "triangles": 2168,
+      "vertices": 1120,
+      "materials": [
+        "MAT_C1_Reader_Patina"
+      ],
+      "dimensions_m": [
+        0.6650000214576721,
+        0.3179999887943268,
+        0.20750001072883606
+      ],
+      "uv_layers": 2
+    },
+    {
+      "name": "SM_C1_Signature_Reader_Recess",
+      "triangles": 816,
+      "vertices": 432,
+      "materials": [
+        "MAT_C1_Reader_Recess"
+      ],
+      "dimensions_m": [
+        0.6380000114440918,
+        0.35749998688697815,
+        0.23100000619888306
+      ],
+      "uv_layers": 2
+    },
+    {
+      "name": "SM_C1_Signature_Reader_Salt",
+      "triangles": 408,
+      "vertices": 216,
+      "materials": [
+        "MAT_C1_Reader_Salt"
+      ],
+      "dimensions_m": [
+        0.6237712502479553,
+        0.2401999980211258,
+        0.02619999647140503
+      ],
+      "uv_layers": 2
+    }
+  ],
+  "mesh_count": 4,
+  "material_count": 4,
+  "triangles": 3920,
+  "bounds_m": {
+    "min": [
+      -0.3499999940395355,
+      -0.19499999284744263,
+      0.0
+    ],
+    "max": [
+      0.3499999940395355,
+      0.19499999284744263,
+      0.24000000953674316
+    ],
+    "size": [
+      0.699999988079071,
+      0.38999998569488525,
+      0.24000000953674316
+    ]
+  },
+  "asset_id": "c1-signature-reader",
+  "canonical_name": "판독기",
+  "glossary_id": "reader",
+  "revision": "r01",
+  "status": "blender-measured",
+  "runtimeEligible": false,
+  "blender_version": "5.1.2",
+  "initial_scene": [
+    {
+      "name": "Camera",
+      "type": "CAMERA"
+    },
+    {
+      "name": "Cube",
+      "type": "MESH"
+    },
+    {
+      "name": "Light",
+      "type": "LIGHT"
+    }
+  ],
+  "unit": "metre",
+  "front_axis_blender": "-Y",
+  "up_axis_blender": "+Z",
+  "pivot": "base bottom centre",
+  "rig": null,
+  "lod_levels": [
+    0
+  ],
+  "collision": "none; static visual prop only",
+  "tri_budget_target": 6000,
+  "mesh_budget_target": 8,
+  "material_budget_target": 4,
+  "dimension_budget_m": [
+    0.72,
+    0.42,
+    0.28
+  ],
+  "performance_budget_passed": false,
+  "gameplay_visibility_review": "not performed",
+  "measured_frame_palette_coverage": null,
+  "texture_files": [
+    {
+      "path": "textures/MAT_C1_Reader_Casting_BaseColor.png",
+      "bytes": 584029,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "sRGB"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Casting_Roughness.png",
+      "bytes": 284350,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "linear"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Patina_BaseColor.png",
+      "bytes": 579911,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "sRGB"
+    },
+    {
+      "path": "textures/MAT_C1_Reader_Patina_Roughness.png",
+      "bytes": 284350,
+      "width": 1024,
+      "height": 1024,
+      "color_space": "linear"
+    }
+  ],
+  "texture_bytes": 1732640,
+  "authored_budget_checks_passed": true,
+  "canonical_glb": {
+    "path": "SM_C1_Signature_Reader.glb",
+    "triangles": 3920,
+    "mesh_count": 4,
+    "material_count": 4,
+    "bytes": 2242516,
+    "basis": "glTF 2 index accessors"
+  },
+  "fbx_adapter": {
+    "objects": [
+      {
+        "name": "SM_C1_Signature_Reader_Casting.001",
+        "triangles": 528,
+        "vertices": 280,
+        "materials": [
+          "MAT_C1_Reader_Casting.001"
+        ],
+        "dimensions_m": [
+          0.699999988079071,
+          0.38999998569488525,
+          0.23499999940395355
+        ],
+        "uv_layers": 2
+      },
+      {
+        "name": "SM_C1_Signature_Reader_Patina.001",
+        "triangles": 2168,
+        "vertices": 1120,
+        "materials": [
+          "MAT_C1_Reader_Patina.001"
+        ],
+        "dimensions_m": [
+          0.6650000214576721,
+          0.3179999887943268,
+          0.20750001072883606
+        ],
+        "uv_layers": 2
+      },
+      {
+        "name": "SM_C1_Signature_Reader_Recess.001",
+        "triangles": 816,
+        "vertices": 432,
+        "materials": [
+          "MAT_C1_Reader_Recess.001"
+        ],
+        "dimensions_m": [
+          0.6380000114440918,
+          0.35749998688697815,
+          0.23100000619888306
+        ],
+        "uv_layers": 2
+      },
+      {
+        "name": "SM_C1_Signature_Reader_Salt.001",
+        "triangles": 408,
+        "vertices": 216,
+        "materials": [
+          "MAT_C1_Reader_Salt.001"
+        ],
+        "dimensions_m": [
+          0.6237712502479553,
+          0.2401999980211258,
+          0.02619999647140503
+        ],
+        "uv_layers": 2
+      }
+    ],
+    "mesh_count": 4,
+    "material_count": 4,
+    "triangles": 3920,
+    "bounds_m": {
+      "min": [
+        -0.3499999940395355,
+        -0.19499999284744263,
+        -3.1769531005920726e-08
+      ],
+      "max": [
+        0.3499999940395355,
+        0.1950000375509262,
+        0.24000003933906555
+      ],
+      "size": [
+        0.699999988079071,
+        0.39000003039836884,
+        0.24000007110859656
+      ]
+    },
+    "path": "SM_C1_Signature_Reader.fbx",
+    "bytes": 126396,
+    "basis": "Blender FBX export then fresh scene reimport; not Unity validation"
+  }
+}
