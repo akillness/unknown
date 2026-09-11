@@ -73,3 +73,13 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | Official Higgsfield MCP four-shot production + GTI references | director, concept, modeling | P3 | assets/generated/previz/cinematic-gameplay-m6/; two m6 concept keyframes | complete; four jobs and provenance verified; previz-only |
 | 36s cinematic +54s method edit and accessible manual-play gallery | presentation, systems | P3/P4 | docs/media/cinematic-gameplay-m6/ | complete; exact1080/1620frames, full decode and10asset links pass |
 | Source semantics, masks, accepted-save boundary and caption review | QA, presentation | P4 | systems/tech-verification/cinematic-gameplay-m6/editorial-review.md | scoped editorial review complete; target gaps explicit; no humanG4/Unity claims |
+
+
+## M7 — original-concept-first art target (2026-09-11)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| Originalart sourceallowlist and GTI opticalkeyframe | concept, director | P2/P3 | concept/concept-first-m7-sources.json; assets/generated/2d/concept/m7-optical-workbench-r01 | complete; inputhashes bound, currentruntime sources excluded |
+| Higgsfield MCP4scene target with1handrevision | presentation, director | P3 | assets/generated/previz/concept-first-m7 | complete;5jobs/4selected,20observedcredits |
+|24s cinema/32s method target and independent source/visual review | systems, presentation, QA | P4 | docs/media/concept-first-m7; systems/tech-verification/concept-first-m7 | scoped media delivery complete;576/768frames, strictsourceancestry, decode and sampledart checks pass |
+| GTI texturemaps and prefab reconstruction to approvedartdirection | concept, modeling, systems | next production | handoff/concept-first-m7-resources.json | planned; no texturepack/prefab implementation claimed in M7 |

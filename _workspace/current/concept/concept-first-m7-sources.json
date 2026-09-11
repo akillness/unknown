@@ -1,0 +1,444 @@
+{
+  "schema": "concept-first-source-audit/v1",
+  "auditId": "M7-original-concept-only",
+  "auditedAt": "2026-09-11T08:33:44.916Z",
+  "owner": "game-concept-artist",
+  "status": "source-audit-complete-authorized-keyframe-generated-root-review-pending",
+  "scope": "M7 image/texture and cinematic-film visual sources; no code/runtime changes",
+  "userDirection": "Canonical worldview and original preproduction concept art only. Current gameplay, prefabs, runtime resources and M5/M6 derivatives must not visually constrain the new films.",
+  "visualReferencePolicy": {
+    "mode": "exact-path-and-sha256-allowlist",
+    "default": "deny",
+    "allowlistPurpose": "Design reference only; not runtime or commercial promotion",
+    "approvedForProviderExecution": true,
+    "nextStep": "Run only the explicitly authorized GTI keyframe, preserve original output, then root visual review before any I2V use.",
+    "currentRuntimeIsVisualAuthority": false,
+    "currentRuntimeCameraContractIsFilmConstraint": false,
+    "newDerivativeReferencePolicy": "No derived M5/M6 reference. A new M7 derivative is not automatically allowlisted; root must explicitly bind a separately reviewed M7 derivative if later needed."
+  },
+  "textAuthorities": [
+    {
+      "path": "_workspace/current/concept/style-guide.md",
+      "sha256": "a70e3dc7929228c74913a0dd3d5ed94b729f0eed7031b28ce707cf0c9f810659",
+      "role": "정식 팔레트·재료·실루엣 TARGET"
+    },
+    {
+      "path": "_workspace/current/concept/art-direction.md",
+      "sha256": "c62120fa629d9e4d360bf8efa6668dcca0a45427a187d90775313a56bf9bab63",
+      "role": "시각 의도·공간별 감각과 기능 TARGET"
+    }
+  ],
+  "worldviewScope": "Canonical worldview remains narrative authority. This bounded audit verifies original concept art and its concept documents; it does not independently audit the complete worldview bible.",
+  "allowlist": [
+    {
+      "id": "space-hub-watchroom-mood",
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "bytes": 2789391,
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "provenancePath": "assets/generated/2d/concept/provenance.json",
+      "provenanceSha256": "20e17a1719d0d419649a98b0a0a9066f09b4cce3107c7e8bf10f437cbe350c9c",
+      "sourceEntry": {
+        "id": "space-hub-watchroom-mood",
+        "file": "space-hub-watchroom-mood.png",
+        "category": "concept",
+        "tool": "god-tibo-imagen(gti)",
+        "backend": "codex private backend (chatgpt.com)",
+        "model": "gpt-6-astra",
+        "size": "1536x1024",
+        "prompt_file": "../../../../_workspace/current/concept/prompts/space-hub-watchroom-mood.txt",
+        "prompt_sha256": "1c6ff3656fac08834ff2201540b86a16d2446214e8f3bc90d3a048cb1bab41b4",
+        "output_sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+        "generated_at": "2026-09-09T17:09:28.721812+00:00",
+        "license": "UNVERIFIED (generated; check backend ToS before commercial use)",
+        "runtimeEligible": false,
+        "promoted_by": null,
+        "claim": "[OBSERVED] generated image; not gameplay",
+        "requested_size": "1536x1024",
+        "actual_size": "1536x1024",
+        "size_note": "matches request",
+        "bytes": 2789391
+      },
+      "provenanceHashMatches": true,
+      "resolvedPromptPath": "_workspace/current/concept/prompts/space-hub-watchroom-mood.txt",
+      "resolvedPromptSha256": "1c6ff3656fac08834ff2201540b86a16d2446214e8f3bc90d3a048cb1bab41b4",
+      "promptHashMatches": true,
+      "allowFor": "original preproduction visual reference",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "visualAnchors": {
+        "role": "당직실 공간·작업 맥락",
+        "palette": [
+          "심해 잉크",
+          "젖은 금속 청회",
+          "부식 청동 녹청",
+          "기록 종이 회백",
+          "절제된 램프 황토"
+        ],
+        "materials": [
+          "젖은 타공 금속 작업대",
+          "녹슨 서랍장과 황동 손잡이",
+          "창틀·배관 이음의 백색 소금 퇴적",
+          "습한 콘크리트와 무광 종이"
+        ],
+        "silhouette": [
+          "넓게 이어진 낮은 수평 창과 방파제 틈의 바다",
+          "작업대 위 큰 원형 장치",
+          "여러 칸 서랍장의 반복 직사각 리듬",
+          "벽 원형 계기와 수직 배관",
+          "작은 실용등"
+        ],
+        "observedLimitations": [
+          "종이의 미세한 망상·눈금처럼 보이는 표시는 배경 시각요소이며 정식 단서나 UI로 승격하지 않는다.",
+          "원본 장면 소품은 원본 공간 설정 참조로 허용되지만 게임 상호작용의 존재를 증명하지 않는다."
+        ]
+      }
+    },
+    {
+      "id": "tool-reader-hero",
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+      "bytes": 2811234,
+      "actualDimensions": {
+        "width": 1312,
+        "height": 1199
+      },
+      "provenancePath": "assets/generated/2d/concept/provenance.json",
+      "provenanceSha256": "20e17a1719d0d419649a98b0a0a9066f09b4cce3107c7e8bf10f437cbe350c9c",
+      "sourceEntry": {
+        "id": "tool-reader-hero",
+        "file": "tool-reader-hero.png",
+        "category": "concept",
+        "tool": "god-tibo-imagen(gti)",
+        "backend": "codex private backend (chatgpt.com)",
+        "model": "gpt-6-astra",
+        "size": "1312x1199",
+        "prompt_file": "_workspace/current/concept/prompts/tool-reader-hero.txt",
+        "prompt_sha256": "d8cc54f0f54499d10a2868095cef23407b44fbd682ac048a4d21ff13c4137460",
+        "output_sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+        "generated_at": "2026-09-09T16:59:03.457635+00:00",
+        "license": "UNVERIFIED (generated; check backend ToS before commercial use)",
+        "runtimeEligible": false,
+        "promoted_by": null,
+        "claim": "[OBSERVED] generated image; not gameplay",
+        "requested_size": "1024x1024",
+        "actual_size": "1312x1199",
+        "size_note": "backend ignored --size",
+        "bytes": 2811234
+      },
+      "provenanceHashMatches": true,
+      "resolvedPromptPath": "_workspace/current/concept/prompts/tool-reader-hero.txt",
+      "resolvedPromptSha256": "d8cc54f0f54499d10a2868095cef23407b44fbd682ac048a4d21ff13c4137460",
+      "promptHashMatches": true,
+      "allowFor": "original preproduction visual reference",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "visualAnchors": {
+        "role": "원본 소금 판독기 형태·재료",
+        "palette": [
+          "부식 청동 녹청",
+          "심해 잉크",
+          "소금 결정 백청",
+          "작은 황토 크랭크 손잡이"
+        ],
+        "materials": [
+          "하부가 어둡고 녹청과 아래로 흐르는 마모 자국이 있는 청동",
+          "육각 결정과 가장자리 부스러기를 가진 무광 소금 판",
+          "투명 유리 확대경",
+          "염화된 금속·젖은 작업대"
+        ],
+        "silhouette": [
+          "두꺼운 원형 회전 베이스와 얕은 원형 받침",
+          "육각형 소금 원판/판재",
+          "오른쪽 수직 기둥에서 뻗는 관절식 암",
+          "큰 원형 유리 확대경",
+          "아래로 향하는 가는 탐침과 미세조절 노브",
+          "오른쪽 외부 크랭크와 황토색 손잡이"
+        ],
+        "observedLimitations": [
+          "원본 이미지에 직사각 종이 베드나 평행 이중 가이드 레일은 보이지 않는다.",
+          "원본 프롬프트도 round plate reader, hexagonal salt disc, swing arm, stylus and magnifier lens, side crank를 명시한다.",
+          "현재 리소스는 이번 감사에서 열거나 비교하지 않았다. 원본 자체의 특징만 다음 제작의 기준으로 삼는다."
+        ]
+      }
+    },
+    {
+      "id": "space-gate-three-mood",
+      "path": "assets/generated/2d/concept/space-gate-three-mood.png",
+      "sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013",
+      "bytes": 2616965,
+      "actualDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "provenancePath": "assets/generated/2d/concept/provenance.json",
+      "provenanceSha256": "20e17a1719d0d419649a98b0a0a9066f09b4cce3107c7e8bf10f437cbe350c9c",
+      "sourceEntry": {
+        "id": "space-gate-three-mood",
+        "file": "space-gate-three-mood.png",
+        "category": "concept",
+        "tool": "god-tibo-imagen(gti)",
+        "requested_size": "1536x1024",
+        "actual_size": "1536x1024",
+        "backend": "codex private backend (chatgpt.com)",
+        "model": "gpt-6-astra",
+        "size": "1536x1024",
+        "prompt_file": "_workspace/current/concept/prompts/space-gate-three-mood.txt",
+        "prompt_sha256": "21dde4cbaceb23405b64b7b943cba58c17b34b6ea81ec96c7f2c2801f13f1600",
+        "output_sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013",
+        "generated_at": "2026-09-09T23:58:25.609616+00:00",
+        "license": "UNVERIFIED (generated; check backend ToS before commercial use)",
+        "runtimeEligible": false,
+        "promoted_by": null,
+        "claim": "[OBSERVED] generated image; not gameplay",
+        "size_note": "matches request",
+        "bytes": 2616965
+      },
+      "provenanceHashMatches": true,
+      "resolvedPromptPath": "_workspace/current/concept/prompts/space-gate-three-mood.txt",
+      "resolvedPromptSha256": "21dde4cbaceb23405b64b7b943cba58c17b34b6ea81ec96c7f2c2801f13f1600",
+      "promptHashMatches": true,
+      "allowFor": "original preproduction visual reference",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "visualAnchors": {
+        "role": "제3수문 외관·해금 공간의 시각 기준",
+        "palette": [
+          "심해 잉크 바다",
+          "젖은 금속 청회 문짝",
+          "젖은 콘크리트",
+          "작은 황토 실용등"
+        ],
+        "materials": [
+          "젖은 콘크리트 교각과 수위 얼룩",
+          "부식 철제 문짝",
+          "염화 고리가 있는 배관",
+          "체인·와이어 드럼과 난간"
+        ],
+        "silhouette": [
+          "양쪽 수직 콘크리트 기둥 사이 사각 철제 수문",
+          "상부 수평 보행교와 큰 드럼 권양기",
+          "양측 체인",
+          "왼쪽 아날로그 계기 두 개와 수동 휠",
+          "수문 아래 어두운 수면"
+        ],
+        "observedLimitations": [
+          "정지된 원본 외형만 근거로 인정한다. 문이 열리는 조건·개방량·스테이지 연결은 이미지로 확정하지 않는다.",
+          "완료/해금 UI나 초자연적 빛을 이 원본에서 도출하지 않는다."
+        ]
+      }
+    },
+    {
+      "id": "keyart-watchroom-wide",
+      "path": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992",
+      "bytes": 2369742,
+      "actualDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "provenancePath": "assets/generated/2d/keyart/provenance.json",
+      "provenanceSha256": "2ed91e0280ac05491b22f02716fc06e632fe7104c00d9aeb09d8cd31bb3a8ffd",
+      "sourceEntry": {
+        "id": "keyart-watchroom-wide",
+        "file": "keyart-watchroom-wide.png",
+        "category": "keyart",
+        "tool": "god-tibo-imagen(gti)",
+        "backend": "codex private backend (chatgpt.com)",
+        "model": "gpt-6-astra",
+        "size": "1672x941",
+        "prompt_file": "../../../../_workspace/current/concept/prompts/keyart-watchroom-wide.txt",
+        "prompt_sha256": "44e0d5c9efe47c463a675fe4b5bdec821dd4e0d249c8f51caba953b8be70eb1d",
+        "output_sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992",
+        "generated_at": "2026-09-09T17:17:36.389503+00:00",
+        "license": "UNVERIFIED (generated; check backend ToS before commercial use)",
+        "runtimeEligible": false,
+        "promoted_by": null,
+        "claim": "[OBSERVED] generated image; not gameplay",
+        "requested_size": "2048x1152",
+        "actual_size": "1672x941",
+        "size_note": "backend ignored --size",
+        "bytes": 2369742
+      },
+      "provenanceHashMatches": true,
+      "resolvedPromptPath": "_workspace/current/concept/prompts/keyart-watchroom-wide.txt",
+      "resolvedPromptSha256": "44e0d5c9efe47c463a675fe4b5bdec821dd4e0d249c8f51caba953b8be70eb1d",
+      "promptHashMatches": true,
+      "allowFor": "original preproduction visual reference",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "visualAnchors": {
+        "role": "인물 규모·공간 몰입·와이드 구도",
+        "palette": [
+          "어두운 잉크 작업복",
+          "금속 청회",
+          "종이 회백",
+          "오른쪽 작은 작업등 황토"
+        ],
+        "materials": [
+          "때와 소금이 묻은 작업복·앞치마",
+          "젖은 타공 책상",
+          "소금이 자란 창틀",
+          "닫힌 기록 묶음과 낡은 서랍"
+        ],
+        "silhouette": [
+          "왼쪽 3/4 후면 인물과 묶은 머리",
+          "넓은 바다·방파제 창",
+          "작업대 중앙 낮은 원형 판독 장치",
+          "오른쪽 작업등과 종이 묶음",
+          "수평 창틀과 바다의 압력감"
+        ],
+        "observedLimitations": [
+          "키아트의 후면 인물은 얼굴·대사·게임 애니메이션 또는 조작 입력을 증명하지 않는다.",
+          "큰 원형 장치의 디테일은 hero 원본이 우선한다."
+        ]
+      }
+    }
+  ],
+  "denylist": [
+    {
+      "prefix": "unity/",
+      "reason": "All current gameplay screens, scene/prefab/model/material resources and builds are excluded as M7 visual constraints."
+    },
+    {
+      "prefix": "docs/media/",
+      "reason": "All native captures and previous film/gallery media are excluded as source visuals."
+    },
+    {
+      "prefix": "assets/generated/3d/",
+      "reason": "All current Blender/generated 3D resources and previews are excluded as source visuals."
+    },
+    {
+      "prefix": "assets/generated/previz/",
+      "reason": "All previous generated films including M5/M6 are excluded; original-concept allowlist governs."
+    },
+    {
+      "prefix": "_workspace/current/systems/tech-verification/",
+      "reason": "Runtime screenshots and verification footage must not provide the new visual template."
+    },
+    {
+      "pattern": "assets/generated/2d/** except exact allowlist paths",
+      "reason": "M5/M6 hub, playflow, direction surface, reader/record keyframes and all unlisted derivatives are denied."
+    }
+  ],
+  "styleAnchors": {
+    "palette": [
+      {
+        "name": "심해 잉크",
+        "hex": "#0E1F26"
+      },
+      {
+        "name": "확정 잉크",
+        "hex": "#173238"
+      },
+      {
+        "name": "젖은 금속 청회",
+        "hex": "#36565C"
+      },
+      {
+        "name": "부식 청동 녹청",
+        "hex": "#4F7A6B"
+      },
+      {
+        "name": "젖은 콘크리트",
+        "hex": "#8A8E88"
+      },
+      {
+        "name": "소금 결정 백청",
+        "hex": "#C8D6D3"
+      },
+      {
+        "name": "기록 종이 회백",
+        "hex": "#E7E3D8"
+      },
+      {
+        "name": "변경예정 황토",
+        "hex": "#E2AF62"
+      }
+    ],
+    "frameColorTargets": {
+      "singleWarmAccent": "황토 #E2AF62 ≤8%",
+      "spareOxidationAccent": "#8C4A3A only on conduit couplings ≤2%; not a general ninth palette color",
+      "wetMetal": "25–45%",
+      "wetConcrete": "15–35%",
+      "saltCrystal": "≤12%",
+      "recordPaper": "≤20%"
+    },
+    "tonePillars": [
+      "젖은 금속과 소금",
+      "절차의 무게",
+      "조용한 압력"
+    ],
+    "materialRules": [
+      "Fine hexagonal salt clusters grow from edges; matte scatter, not snow or sugar lumps.",
+      "Bronze: dark substrate, verdigris flecks and downward corrosion runs; broad low sheen, never uniform mint paint.",
+      "Wet concrete target is 20% darker than dry; horizontal waterline records prior level; restrained vertical reflection.",
+      "Brine conduit: constant-diameter cylinders, white salt ring at every coupling, round analog instruments; no digital LEDs."
+    ],
+    "silhouetteRule": "원형 판독기, 수문의 수직 문짝, 서랍의 반복 직사각과 낮은 수평 창을 읽을 수 있게 분리한다.",
+    "cameraScope": "Style-guide §5 describes an in-game fixed-view TARGET. M7 film composition is separately authored from original concept/worldview; neither existing runtime camera nor current prefab geometry becomes a visual reference.",
+    "negative": [
+      "광택 크롬",
+      "새 도장/흠 없는 표면",
+      "네온·홀로그램·디지털 대시보드",
+      "초자연적 광휘",
+      "전투·무기·유령",
+      "자막·문자·로고를 생성 이미지에 직접 그리기"
+    ]
+  },
+  "originalReaderFinding": {
+    "comparisonWithCurrent": "not-performed; no current visual resource opened for this audit",
+    "originalOnlyConclusion": "The hero source is a circular salt-disc reader with optical arm, stylus and side crank. It does not depict a rectangular paper bed or parallel double guide rails.",
+    "promptSubject": "round plate reader: shallow circular cradle holding hexagonal salt disc, swing arm carrying stylus and magnifier lens, hand crank at side; dominant circle plus arm."
+  },
+  "verification": {
+    "imageShaMatchesProvenance": 4,
+    "promptShaMatchesProvenance": 4,
+    "visuallyInspectedOriginalImages": 4,
+    "openedCurrentResources": 0,
+    "newGenerations": 0,
+    "newRuntimePromotions": 0,
+    "rights": "All original provenance entries remain runtimeEligible:false and generated/not gameplay. Their ToS/license status was UNVERIFIED; allowlisting does not grant commercial clearance.",
+    "scope": "Source-audit checkpoint before newly authorized GTI generation",
+    "measuredAt": "2026-09-11T08:33:44.916Z"
+  },
+  "generationAuthorizations": [
+    {
+      "id": "m7-optical-workbench-r01",
+      "authorizedAt": "2026-09-11T08:35:41.823Z",
+      "authorizedBy": "root director instruction after user M7 correction",
+      "provider": "GTI",
+      "model": "gpt-6-astra",
+      "referenceInputs": [
+        {
+          "path": "assets/generated/2d/concept/tool-reader-hero.png",
+          "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+          "provenancePath": "assets/generated/2d/concept/provenance.json"
+        },
+        {
+          "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+          "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+          "provenancePath": "assets/generated/2d/concept/provenance.json"
+        }
+      ],
+      "promptFile": "assets/generated/2d/concept/m7-optical-workbench-r01/prompt.txt",
+      "promptSha256": "bbb8ca2722bfb9079b7759ba6e38d84d1dc205dad5432f41c2908262d29ce4c3",
+      "requestedSize": "2048x1152",
+      "scope": "one original GTI image with no post-edit; no video generation; root visual review before I2V",
+      "dryRunExitCode": 0,
+      "result": {
+        "completedAt": "2026-09-11T08:37:35.533Z",
+        "exitCode": 0,
+        "output": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+        "outputSha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+        "actualSize": "1672x941",
+        "postProcessing": "none",
+        "provenance": "assets/generated/2d/concept/m7-optical-workbench-r01/provenance.json",
+        "review": "creator visual pass; root I2V reference review pending"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "m7-original-concept-final-films",
+  "scope": "future art and gameplay-experience target",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "sources": "../../../assets/generated/previz/concept-first-m7/provenance.json",
+  "selection": "../../../assets/generated/previz/concept-first-m7/selected-shots.json",
+  "sourceAncestry": "../../../_workspace/current/systems/tech-verification/concept-first-m7/source-ancestry-check.json",
+  "artReview": "../../../_workspace/current/systems/tech-verification/concept-first-m7/art-review.json",
+  "currentRuntimeVisualInputs": [],
+  "films": {
+    "cinematic": {
+      "file": "cinematic.mp4",
+      "sha256": "dcaa64a84edf20c307908d28a0415da9a0ef4177236d47ddd963cf999eca4007",
+      "frames": 576,
+      "durationSeconds": 24,
+      "width": 1280,
+      "height": 720,
+      "fps": 24
+    },
+    "gameplay-method": {
+      "file": "gameplay-method.mp4",
+      "sha256": "e8b718f2858919100bed4cd16755e8713e1e2dd8b1197e9cebe4d568579d7184",
+      "frames": 768,
+      "durationSeconds": 32,
+      "width": 1280,
+      "height": 720,
+      "fps": 24
+    }
+  },
+  "soundtrack": {
+    "source": "new locally authored filtered pink-noise temporary ambience",
+    "providerAudioUsed": false,
+    "humanAudition": false
+  },
+  "processing": {
+    "sourceDurationSeconds": 5.875,
+    "holdFramesPerShot": 3,
+    "holdSecondsPerShot": 0.125,
+    "uniformScale": true,
+    "topAlignedCrop": true,
+    "noNonuniformStretch": true,
+    "captionSource": "locally authored Korean text; not generated typography"
+  },
+  "futureResources": "../../../_workspace/current/handoff/concept-first-m7-resources.json",
+  "limitations": [
+    "no current gameplay capture",
+    "record shot is camera-only",
+    "gate remains closed",
+    "physical inverse crank and save/unlock semantics require future runtime implementation",
+    "source aspect ratio deviations are preserved in provenance; final composition uses declared top crop"
+  ]
+}

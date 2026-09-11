@@ -1,0 +1,188 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-s3-record-context",
+  "provider": "Higgsfield AI",
+  "provider_route": {
+    "endpoint": "https://mcp.higgsfield.ai/mcp",
+    "transport": "MCP Streamable HTTP",
+    "protocol_version": "2025-03-26",
+    "tool": "generate_video",
+    "authentication": "Existing official CLI access token used privately for Bearer bootstrap; generation submitted through the real official Higgsfield MCP endpoint.",
+    "official_endpoint_source": "https://github.com/higgsfield-ai/cursor-plugin/blob/develop/mcp.json"
+  },
+  "cli_version_for_token_bootstrap": "1.1.23",
+  "model": "minimax_hailuo",
+  "variant": "minimax-2.3-fast",
+  "job_id": "945f7ab3-68fe-4aa0-bc33-9bc006f3f158",
+  "provider_created_at": "2026-09-11T08:37:47.059Z",
+  "recorded_at": "2026-09-11T08:45:07.726Z",
+  "completion_status": "completed",
+  "prompt_file": "assets/generated/previz/concept-first-m7/m7-s3-record-context/prompt.txt",
+  "prompt_sha256": "f42bfc36ce9501068e50bbcae564c7779d1a8a9675ba0650797af86bb6b6c1f5",
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "media_id": "46ed293a-79d4-4776-8d5e-f549bf64a8da",
+      "media_role": "start_image",
+      "sha256_verified": true,
+      "source_kind": "original_preproduction_concept_art"
+    }
+  ],
+  "input_lineage": {
+    "policy": "Lore and original concept art only; exact allowlist plus separately reviewed M7 derivative.",
+    "direct_source_approval": {
+      "audit_path": "_workspace/current/concept/concept-first-m7-sources.json",
+      "allowlist_id": "space-hub-watchroom-mood",
+      "source_provenance": {
+        "path": "assets/generated/2d/concept/provenance.json",
+        "sha256": "20e17a1719d0d419649a98b0a0a9066f09b4cce3107c7e8bf10f437cbe350c9c",
+        "bytes": 19808
+      },
+      "source_prompt": {
+        "path": "_workspace/current/concept/prompts/space-hub-watchroom-mood.txt",
+        "sha256": "1c6ff3656fac08834ff2201540b86a16d2446214e8f3bc90d3a048cb1bab41b4",
+        "bytes": 2485
+      }
+    },
+    "parent_original_images": [],
+    "derivative_provenance": null,
+    "native_gameplay_input_used": false,
+    "current_gameplay_input_used": false,
+    "unity_input_used": false,
+    "blender_runtime_input_used": false,
+    "m5_or_m6_visual_reference_used": false,
+    "upload_receipt": {
+      "path": "assets/generated/previz/concept-first-m7/reference-uploads.json",
+      "sha256": "53c311c38ccce21e34bb2363d1bbe0799791cc5b13d8638f16a97a6ef0c3a9de",
+      "bytes": 1587
+    }
+  },
+  "requested": {
+    "duration_seconds": 6,
+    "resolution": "768",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "model": "minimax_hailuo",
+    "variant": "minimax-2.3-fast"
+  },
+  "requested_duration_seconds": 6,
+  "actual_duration_seconds": 5.875,
+  "requested_resolution": "768",
+  "actual_size": {
+    "width": 1152,
+    "height": 768
+  },
+  "actual": {
+    "container_duration_seconds": 5.875,
+    "video_duration_seconds": 5.875,
+    "video_codec": "h264",
+    "frame_rate": "24/1",
+    "frame_count": 141,
+    "audio_streams": 0,
+    "aspect_ratio": "3:2",
+    "aspect_ratio_decimal": 1.5
+  },
+  "audio_streams": 0,
+  "audio_note": "Original generated output has no audio stream. Any edited soundtrack belongs to the separate film edit receipt.",
+  "output_file": "assets/generated/previz/concept-first-m7/m7-s3-record-context/clip.mp4",
+  "output_sha256": "171fa7d3be35dd43a8d230c2145b9f97e54cb5a2a78edb1fe705578252992614",
+  "bytes": 1464159,
+  "source_url": null,
+  "source_url_note": "Original provider output URLs remain in status.json; this provenance binds the local original file by SHA256.",
+  "credits_quote": 4,
+  "credits_charged": null,
+  "billing_scope": "Original four M7 jobs only. Quote4 each,16total; observed account balance21.18 to5.18. Per-job itemized charges are not established.",
+  "claim": "Concept-first generated film source, derived from original lore/art direction. No current gameplay or engine footage input; this is not recorded gameplay or proof of interaction, saved records or stage unlocks.",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "review": {
+    "method": "Independent visual inspection of supplied six-frame contact sheet, strict source/approval/hash audit, and request/status/ffprobe verification.",
+    "intent": "Tactile record-comparison workspace",
+    "status": "selected_for_concept_editorial_use",
+    "observed": "Paper stacks, round desk instrument and room props remain recognisable while the camera changes context across the six sampled frames. No hand, writing, stamp, new clue or recording action is shown.",
+    "materialDrift": "No recording action is a deliberate prompt constraint, not a generation failure.",
+    "proves": "Record-context setting only, not an accepted record or completed save.",
+    "sampled_frames": 6,
+    "full_frame_visual_audit": false,
+    "current_runtime_camera_contract_applied": false,
+    "limitations": [
+      "Concept films do not establish runtime controls, saved record acceptance, actual stage unlock triggers, accessibility, performance or human-playtest results.",
+      "Observed source consistency is bounded to sampled frames; exact mechanical reversibility and anatomy are not proven.",
+      "Original art allowlist is for concept reference only and grants no runtime or commercial promotion."
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/request.json",
+      "sha256": "ad4300e91898e40f8213b756ee01c8861256d3b9545998e734e43639b28f12b1",
+      "bytes": 1826
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/submission.json",
+      "sha256": "5b66ba3d336392c1c58188229ea08a0e25e99aef0e4035e1735d6bb1fa6d7aef",
+      "bytes": 3270
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/status.json",
+      "sha256": "ea3cec002183ea93b50ed77236a6a3ba9b02ab5c0519479e2470f8076fb7c29c",
+      "bytes": 3902
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/ffprobe.json",
+      "sha256": "a25c46ff6635fdbef6870818174af5342f03ccbc4635611d2d47c9419b3222b5",
+      "bytes": 3489
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/contact-sheet.jpg",
+      "sha256": "f62eddce142297bcfbf60dead0749cb441e4ef2bb93f2eb6382f9d6fa901c767",
+      "bytes": 70099
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/prompt.txt",
+      "sha256": "f42bfc36ce9501068e50bbcae564c7779d1a8a9675ba0650797af86bb6b6c1f5",
+      "bytes": 1144
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/clip.mp4",
+      "sha256": "171fa7d3be35dd43a8d230c2145b9f97e54cb5a2a78edb1fe705578252992614",
+      "bytes": 1464159
+    }
+  ],
+  "delivery_deviations": {
+    "duration": "Requested 6 seconds; measured original video/container 5.875 seconds.",
+    "aspect_ratio": "Requested 16:9; delivered 3:2 (1152x768).",
+    "audio": "No audio stream in delivered original."
+  },
+  "selection": {
+    "included_in_final_concept_edits": true,
+    "scope": "upstream cinematic art target only",
+    "receipt": {
+      "path": "assets/generated/previz/concept-first-m7/selected-shots.json",
+      "sha256": "90ef52b70e24b1e4540c4e55d444db23aa5cf5031fc34ddec2700d23eba819b7",
+      "bytes": 1075
+    }
+  },
+  "source_authority_receipt": {
+    "path": "_workspace/current/concept/concept-first-m7-sources.json",
+    "sha256": "55aff76106c47141c9a81277d4dfadc86855efbf75f6879a1c712c46818b210e",
+    "bytes": 20122
+  },
+  "billing_evidence": [
+    {
+      "path": "assets/generated/previz/concept-first-m7/model-quotes.json",
+      "sha256": "fc5fdd4e6b3dee09d66d44429856f58f31c0e4f688ebc717a2aa2aa282f11d40",
+      "bytes": 1957
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/balance-before.json",
+      "sha256": "175667bb725deed626756afc958d000725c683203826bd1a20c6e3e650e93f34",
+      "bytes": 192
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/balance-after-initial-batch.json",
+      "sha256": "56ba72a40cfcf6c3996fb1473e2b8aaf2ab68aa2aee63d878d7f171422f59f84",
+      "bytes": 190
+    }
+  ]
+}

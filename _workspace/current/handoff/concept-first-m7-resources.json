@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "concept-first-m7-resource-rebuild",
+  "status": "planned-after-video-art-review",
+  "visualAuthority": [
+    "_workspace/current/worldview/worldview-bible.md",
+    "_workspace/current/concept/concept-first-m7-sources.json",
+    "_workspace/current/presentation/concept-first-m7.json"
+  ],
+  "direction": [
+    "worldview-and-original-concept",
+    "concept-only-video-target",
+    "gti-textures-and-images",
+    "rebuild-project-prefabs"
+  ],
+  "videoSelection": "assets/generated/previz/concept-first-m7/selected-shots.json",
+  "keyframe": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+  "keyframeSha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+  "forbiddenVisualParents": [
+    "unity/",
+    "current prefab exports",
+    "current runtime texture or mesh",
+    "native gameplay capture",
+    "M5/M6 implementation-derived media"
+  ],
+  "imageProvider": {
+    "skill": "god-tibo-imagen",
+    "cli": "gti",
+    "model": "gpt-6-astra",
+    "dryRunRequired": true,
+    "credentialLogging": false
+  },
+  "materials": [
+    {
+      "id": "M7-MAT-bronze",
+      "source": "optical instrument / original reader",
+      "channels": [
+        "base colour candidate",
+        "roughness candidate"
+      ],
+      "direction": "weathered bronze; directional verdigris in recesses, burnished ochre contact edges; no baked lamp glare"
+    },
+    {
+      "id": "M7-MAT-perforated-steel",
+      "source": "watchroom desk",
+      "channels": [
+        "base colour candidate",
+        "roughness candidate"
+      ],
+      "direction": "deep sea-teal iron, worn perforation rims, local wetness; holes represented geometrically or validated opacity, not painted depth"
+    },
+    {
+      "id": "M7-MAT-salt-concrete",
+      "source": "gate piers and brine pipes",
+      "channels": [
+        "base colour candidate",
+        "roughness candidate",
+        "height candidate"
+      ],
+      "direction": "dark damp concrete, coherent horizontal tide line, salt concentrated at joints and evaporation bands"
+    },
+    {
+      "id": "M7-MAT-salt-crystal",
+      "source": "original reader + approved optical keyframe",
+      "channels": [
+        "base colour candidate",
+        "roughness candidate",
+        "microdetail candidate"
+      ],
+      "direction": "non-emissive hexagonal salt crystals; preserve symbolic marks separately from noise; never adopt moving-video pattern drift"
+    },
+    {
+      "id": "M7-MAT-rag-paper",
+      "source": "original watchroom records",
+      "channels": [
+        "base colour candidate",
+        "roughness candidate"
+      ],
+      "direction": "layered fibres, weathered edges, blank writable content; readable evidence/typesetting authored separately"
+    }
+  ],
+  "assetRebuildTargets": [
+    {
+      "id": "M7-ENV-watchroom",
+      "direction": "wide horizontal harbour window, cabinets, wet perforated benches, salt-encrusted pipe joints and restrained practical lights"
+    },
+    {
+      "id": "M7-PROP-optical-reader",
+      "direction": "thick circular rotating base, hexagonal crystal plate, right optical pillar, articulated magnifier, vertical probe and ochre handcrank",
+      "geometryReference": "original reader + approved GTI keyframe; do not copy current model or moving-video distortions"
+    },
+    {
+      "id": "M7-PROP-record-set",
+      "direction": "preserved copy, notebook/ledger and review stand remain distinguishable silhouettes; no generated legible text or automatic success stamp"
+    },
+    {
+      "id": "M7-ENV-gate-three",
+      "direction": "tall closed floodgate, overhead winch, two analog gauges, handwheel, vertical brine pipes and horizontal wet line"
+    },
+    {
+      "id": "M7-PROP-player-hand",
+      "direction": "separate later GTI/rig development; video hand is staging reference only, not approved mesh/texture/rig"
+    }
+  ],
+  "acceptanceBeforeRuntime": [
+    "new input ancestry is within original/approved-GTI allowlist",
+    "reported actual image dimensions and SHA match output",
+    "check tile seams and repeat-frequency in-engine",
+    "lighting-free base colour review; candidate roughness/height maps are not automatically physical PBR truth",
+    "mesh articulation and reverse motion tested separately",
+    "preserve authored evidence and accepted-save semantics",
+    "native visual/performance/accessibility verification after prefab replacement"
+  ],
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "generatedThisTurn": [
+    "one optical-workbench GTI keyframe",
+    "five MCP video takes, four selected"
+  ],
+  "notGeneratedThisTurn": [
+    "production texture maps",
+    "new Unity prefabs",
+    "hand rig",
+    "game runtime implementation"
+  ]
+}

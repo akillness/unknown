@@ -1,0 +1,64 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-optical-workbench-r01",
+  "generated_at": "2026-09-11T08:37:35.533Z",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_0a5aad6e1c1afb1e016aa3bd65534487d0bc905cb614e64f69",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "bbb8ca2722bfb9079b7759ba6e38d84d1dc205dad5432f41c2908262d29ce4c3",
+  "requested_size": "2048x1152",
+  "actual_size": "1672x941",
+  "output_file": "image.png",
+  "output_sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+  "bytes": 2748681,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+      "provenancePath": "assets/generated/2d/concept/provenance.json"
+    },
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "provenancePath": "assets/generated/2d/concept/provenance.json"
+    }
+  ],
+  "reference_policy": "Only original preproduction tool-reader-hero and space-hub-watchroom-mood; no current runtime, 3D, native capture, M5 or M6 source input",
+  "source_audit": "_workspace/current/concept/concept-first-m7-sources.json",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "rights_scope": "Existing provider-route rights review referenced for unresolved limitations only, not as visual input. No runtime or commercial promotion. Private GTI route support and commercial clearance remain unverified.",
+  "postProcessing": "none; provider original retained without cropping, resizing or pixel edits",
+  "review": {
+    "status": "creator-visual-pass-awaiting-root-film-reference-review",
+    "reviewed_at": "2026-09-11T08:38:24.582Z",
+    "purpose": "M7 concept-first cinematic physical salt-optical gameplay vantage",
+    "verified": [
+      "Thick circular rotating base and clearly hexagonal crystalline salt plate retained",
+      "Right rear brass pillar and articulated optical arm retained",
+      "Large glass magnifier, vertical probe and fine adjustment retained",
+      "Right lower crank and ochre handle visible and reachable in composition",
+      "Original expansive watchroom, breakwater view, drawers, salt-lined pipes and wet perforated workbench retained",
+      "No hands, modern UI, floating labels, legible text, rectangular paper bed or paired guide rails",
+      "No magic glow or blank flat plate"
+    ],
+    "limitations": [
+      "Requested 2048x1152; actual 1672x941, preserved without upscaling",
+      "Paper has fine diagram-like linework inherited from original concept language, not authored clues or reading content",
+      "Nearby salt-tray count and prop placement are compositional interpretations, not inventory or interaction specifications",
+      "Palette and material targets visually followed; pixel-percentage targets not measured",
+      "Cinematic concept only; does not prove runtime behavior, exact meshes, stage logic or gameplay input response",
+      "Root must inspect before any video source use"
+    ]
+  },
+  "runtimePromotion": {
+    "status": "not-requested",
+    "decision": null,
+    "scope": "concept-first film reference only"
+  }
+}

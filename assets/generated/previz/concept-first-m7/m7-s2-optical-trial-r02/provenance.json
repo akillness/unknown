@@ -1,0 +1,198 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-s2-optical-trial-r02",
+  "provider": "Higgsfield AI",
+  "provider_route": {
+    "endpoint": "https://mcp.higgsfield.ai/mcp",
+    "transport": "MCP Streamable HTTP",
+    "protocol_version": "2025-03-26",
+    "tool": "generate_video",
+    "authentication": "Existing official CLI access token used privately for Bearer bootstrap; generation submitted through the real official Higgsfield MCP endpoint.",
+    "official_endpoint_source": "https://github.com/higgsfield-ai/cursor-plugin/blob/develop/mcp.json"
+  },
+  "cli_version_for_token_bootstrap": "1.1.23",
+  "model": "minimax_hailuo",
+  "variant": "minimax-2.3-fast",
+  "job_id": "c5cd47f6-b7c7-4059-ac76-132b7fe992ec",
+  "provider_created_at": "2026-09-11T08:45:46.061Z",
+  "recorded_at": "2026-09-11T08:49:40.778Z",
+  "completion_status": "completed",
+  "prompt_file": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/prompt.txt",
+  "prompt_sha256": "8b9c794b039b8b5ebcf14633b06a5413e008e73e4ec0ddf29d7511dc48bb091c",
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+      "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+      "media_id": "5fbef461-3803-4e79-98fc-a0682393bf30",
+      "media_role": "start_image",
+      "sha256_verified": true,
+      "source_kind": "new_M7_GTI_derivative_from_two_original_concepts"
+    }
+  ],
+  "input_lineage": {
+    "policy": "Lore and original concept art only; exact allowlist plus separately reviewed M7 derivative.",
+    "direct_source_approval": {
+      "path": "_workspace/current/systems/tech-verification/concept-first-m7/optical-source-approval.json",
+      "sha256": "86c36dfa045742ba60a245801f11dd2f785f6bb37fe7f223af2b2ea64cef5756",
+      "bytes": 1053
+    },
+    "parent_original_images": [
+      {
+        "path": "assets/generated/2d/concept/tool-reader-hero.png",
+        "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+        "bytes": 2811234,
+        "original_allowlisted": true
+      },
+      {
+        "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+        "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+        "bytes": 2789391,
+        "original_allowlisted": true
+      }
+    ],
+    "derivative_provenance": {
+      "path": "assets/generated/2d/concept/m7-optical-workbench-r01/provenance.json",
+      "sha256": "0d80085aa88e0f6f4dbfbe8a385b7e20f7de873d142626e8ff4b1e6c40d650d0",
+      "bytes": 3521
+    },
+    "native_gameplay_input_used": false,
+    "current_gameplay_input_used": false,
+    "unity_input_used": false,
+    "blender_runtime_input_used": false,
+    "m5_or_m6_visual_reference_used": false,
+    "upload_receipt": {
+      "path": "assets/generated/previz/concept-first-m7/optical-reference-upload.json",
+      "sha256": "85db296df373d194b97ac27035ee16f34b323df0b2da301eaf5f6d366b669480",
+      "bytes": 667
+    }
+  },
+  "requested": {
+    "duration_seconds": 6,
+    "resolution": "768",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "model": "minimax_hailuo",
+    "variant": "minimax-2.3-fast"
+  },
+  "requested_duration_seconds": 6,
+  "actual_duration_seconds": 5.875,
+  "requested_resolution": "768",
+  "actual_size": {
+    "width": 1364,
+    "height": 768
+  },
+  "actual": {
+    "container_duration_seconds": 5.875,
+    "video_duration_seconds": 5.875,
+    "video_codec": "h264",
+    "frame_rate": "24/1",
+    "frame_count": 141,
+    "audio_streams": 0,
+    "aspect_ratio_decimal": 1.7760416666666667,
+    "aspect_ratio": "341:192"
+  },
+  "audio_streams": 0,
+  "audio_note": "Original generated output has no audio stream. Any edited soundtrack belongs to the separate film edit receipt.",
+  "output_file": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/clip.mp4",
+  "output_sha256": "5634895ceba5fc5a9c61586378360095c868ca52d530493453658b5b14ce9047",
+  "bytes": 1303894,
+  "source_url": null,
+  "source_url_note": "Original provider output URLs remain in status.json; this provenance binds the local original file by SHA256.",
+  "credits_quote": 4,
+  "credits_charged": null,
+  "billing_scope": "One optical hand-material refinement job, quoted 4 additional credits at the selected model settings. Five-job batch quote 20; observed account balance 21.18 to 1.18. Per-job itemized charges are not established.",
+  "claim": "Concept-first generated film source, derived from original lore/art direction. No current gameplay or engine footage input; this is not recorded gameplay or proof of interaction, saved records or stage unlocks.",
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "review": {
+    "method": "Independent visual inspection of six-frame contact sheet, original source/hash approval audit, and request/status/ffprobe verification.",
+    "intent": "Original circular optical reader reversible-trial concept, refined hand rendering",
+    "status": "selected_for_concept_editorial_use_with_qualifications",
+    "observed": "One right hand grips the existing crank; skin shading and finger articulation fit the material rendering better than rejected r01. Circular reader, optical arm and salt plate remain recognisable.",
+    "materialDrift": "The initial hexagonal salt-slab outline is less distinct in later sampled frames, a possible generated shape drift. Exact crank/plate return to the starting orientation and mechanically consistent actuation are not established.",
+    "proves": "Concept animation of a trial gesture only, not runtime input, a validated mechanism, evidence invariance, or accepted puzzle outcome.",
+    "sampled_frames": 6,
+    "full_frame_visual_audit": false,
+    "current_runtime_camera_contract_applied": false,
+    "prior_rejected_asset_id": "m7-s2-optical-trial",
+    "revision_input": "Same root-approved GTI still; rejected movie was not a provider input.",
+    "limitations": [
+      "Concept films do not establish runtime controls, saved record acceptance, actual stage unlock triggers, accessibility, performance or human-playtest results.",
+      "Observed source consistency is bounded to sampled frames; exact mechanical reversibility and anatomy are not proven.",
+      "Original art allowlist is for concept reference only and grants no runtime or commercial promotion."
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/request.json",
+      "sha256": "b2a3a5738089ac9b305f26e86600e8cca4d6719c29d0f949118d52fe97164d13",
+      "bytes": 2321
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/submission.json",
+      "sha256": "51e2d0858704effbd9b8b41eeb5d09464c794222b9b7ef1687cc28b34f23c247",
+      "bytes": 4246
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/status.json",
+      "sha256": "7539814a7eef76301cde83f0f87cc54268ee0521dd511c9762e1a62161c5439a",
+      "bytes": 4877
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/ffprobe.json",
+      "sha256": "8516ad4c789cd9faaab4040a7506c9631323d96b5b498daa22cea47ddda2efaa",
+      "bytes": 3492
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/contact-sheet.jpg",
+      "sha256": "2a93b4fab24e2b796dfb9a261ee9406a6530b95db5181c101e4a462f14c68637",
+      "bytes": 91106
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/prompt.txt",
+      "sha256": "8b9c794b039b8b5ebcf14633b06a5413e008e73e4ec0ddf29d7511dc48bb091c",
+      "bytes": 1632
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/clip.mp4",
+      "sha256": "5634895ceba5fc5a9c61586378360095c868ca52d530493453658b5b14ce9047",
+      "bytes": 1303894
+    }
+  ],
+  "delivery_deviations": {
+    "duration": "Requested 6 seconds; measured original video/container 5.875 seconds.",
+    "aspect_ratio": "Delivered ratio differs from 16:9 only by pixel-dimension rounding.",
+    "audio": "No audio stream in delivered original."
+  },
+  "selection": {
+    "included_in_final_concept_edits": true,
+    "scope": "upstream cinematic art target only",
+    "receipt": {
+      "path": "assets/generated/previz/concept-first-m7/selected-shots.json",
+      "sha256": "90ef52b70e24b1e4540c4e55d444db23aa5cf5031fc34ddec2700d23eba819b7",
+      "bytes": 1075
+    }
+  },
+  "source_authority_receipt": {
+    "path": "_workspace/current/concept/concept-first-m7-sources.json",
+    "sha256": "55aff76106c47141c9a81277d4dfadc86855efbf75f6879a1c712c46818b210e",
+    "bytes": 20122
+  },
+  "billing_evidence": [
+    {
+      "path": "assets/generated/previz/concept-first-m7/model-quotes.json",
+      "sha256": "fc5fdd4e6b3dee09d66d44429856f58f31c0e4f688ebc717a2aa2aa282f11d40",
+      "bytes": 1957
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/balance-after-initial-batch.json",
+      "sha256": "56ba72a40cfcf6c3996fb1473e2b8aaf2ab68aa2aee63d878d7f171422f59f84",
+      "bytes": 190
+    },
+    {
+      "path": "assets/generated/previz/concept-first-m7/balance-final.json",
+      "sha256": "859985440db63af88f48e051e84a8bc4bad83ef90c09af37667e699d8aba27d6",
+      "bytes": 190
+    }
+  ]
+}

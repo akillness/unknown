@@ -1,0 +1,91 @@
+{
+  "alternatives": [
+    {
+      "params": {
+        "model": "seedance1_5",
+        "duration": 8,
+        "resolution": "720p",
+        "generate_audio": false
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Cost preflight for seedance1_5: 9.6 credits (9.6 exact). No job submitted."
+          }
+        ],
+        "structuredContent": {
+          "cost": {
+            "credits": 9.6,
+            "credits_exact": 9.6
+          }
+        }
+      }
+    },
+    {
+      "params": {
+        "model": "kling3_0_turbo",
+        "duration": 6,
+        "resolution": "720p"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Cost preflight for kling3_0_turbo: 9 credits (9 exact). No job submitted."
+          }
+        ],
+        "structuredContent": {
+          "cost": {
+            "credits": 9,
+            "credits_exact": 9
+          }
+        }
+      }
+    },
+    {
+      "params": {
+        "model": "minimax_hailuo",
+        "variant": "minimax-2.3",
+        "duration": 6,
+        "resolution": "768"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Cost preflight for minimax_hailuo: 6 credits (6 exact). No job submitted."
+          }
+        ],
+        "structuredContent": {
+          "cost": {
+            "credits": 6,
+            "credits_exact": 6
+          }
+        }
+      }
+    }
+  ],
+  "selected": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Cost preflight for minimax_hailuo: 4 credits (4 exact). No job submitted."
+      }
+    ],
+    "structuredContent": {
+      "cost": {
+        "credits": 4,
+        "credits_exact": 4
+      }
+    }
+  },
+  "selectedParams": {
+    "model": "minimax_hailuo",
+    "variant": "minimax-2.3-fast",
+    "duration": 6,
+    "resolution": "768"
+  },
+  "plannedJobs": 4,
+  "quotedCreditsTotal": 16
+}

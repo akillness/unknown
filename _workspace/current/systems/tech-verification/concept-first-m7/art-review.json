@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 1,
+  "id": "concept-first-m7-art-review",
+  "status": "final-art-and-editorial-sample-review-complete",
+  "scope": "Independent final file identity/ffprobe, new M7 raw/final frame samples, manual captions and supplied original-only image lineage; not every-frame, human immersion, rig/mechanism or audio-listening approval.",
+  "allowedOriginalSources": [
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "actualWidth": 1536,
+      "actualHeight": 1024,
+      "role": "environment geometry and material"
+    },
+    {
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+      "actualWidth": 1312,
+      "actualHeight": 1199,
+      "role": "reader silhouette and mechanism"
+    },
+    {
+      "path": "assets/generated/2d/concept/space-gate-three-mood.png",
+      "sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013",
+      "actualWidth": 1536,
+      "actualHeight": 1024,
+      "role": "exterior pressure and horizon"
+    },
+    {
+      "path": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992",
+      "actualWidth": 1672,
+      "actualHeight": 941,
+      "role": "character silhouette and composition"
+    }
+  ],
+  "derivedKeyframePolicy": "New GTI workbench may derive only from original reader and watchroom; parent production receipt owns exact derived-file lineage.",
+  "clips": [
+    {
+      "shot": "M7-S01",
+      "revision": "initial",
+      "path": "assets/generated/previz/concept-first-m7/m7-s1-last-duty/clip.mp4",
+      "sha256": "a450ae391940011a048365fedae254a793fd5ab68dddb4bda08ca871b57dcbc2",
+      "bytes": 1355032,
+      "width": 1364,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s1-last-duty/contact-sheet.jpg",
+      "verdict": "accept-scene-and-material-context",
+      "observed": [
+        "Original keyart composition, apron silhouette, long sea horizon and restrained lamp remain coherent in sampled frames.",
+        "Small body/arm movement and camera motion are present; this is generated staging, not verified hand interaction."
+      ]
+    },
+    {
+      "shot": "M7-S02",
+      "revision": "initial",
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial/clip.mp4",
+      "sha256": "ea541e176b1759448cf359762745ade8cf6e5c1093ad04a4f00b42bf70e33b67",
+      "bytes": 1358766,
+      "width": 1364,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial/contact-sheet.jpg",
+      "verdict": "revision-required-hand-style",
+      "observed": [
+        "Fullscale frame60 at2.5s shows an oversized smooth uniformly peach hand with block-like contour and weak finger/knuckle articulation against detailed weathered bronze and salt.",
+        "Hand appearance breaks the upstream photoreal material target. Request one revision; preserve raw and exclude this hand from final visual target and asset reference.",
+        "Crank/plate apparent motion does not establish mechanically correct or reversible runtime interaction."
+      ]
+    },
+    {
+      "shot": "M7-S03",
+      "revision": "initial",
+      "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/clip.mp4",
+      "sha256": "171fa7d3be35dd43a8d230c2145b9f97e54cb5a2a78edb1fe705578252992614",
+      "bytes": 1464159,
+      "width": 1152,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s3-record-context/contact-sheet.jpg",
+      "verdict": "accept-record-context-camera-only",
+      "observed": [
+        "Desk, paper stacks, low windows, drawers and salt deposits remain visually consistent.",
+        "Camera motion supplies record context; no hand-clipped card, completed comparison or recording action is established. Explain those actions using explicitly future-target typography/diagrams."
+      ]
+    },
+    {
+      "shot": "M7-S04",
+      "revision": "initial",
+      "path": "assets/generated/previz/concept-first-m7/m7-s4-next-area/clip.mp4",
+      "sha256": "f0b98d1a5d6b8c82dc80199b5c30f7459348e743cfa40e2256183d2a7a6bd243",
+      "bytes": 2240799,
+      "width": 1152,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s4-next-area/contact-sheet.jpg",
+      "verdict": "accept-closed-exterior-context",
+      "observed": [
+        "Gate remains closed in reviewed contact-sheet samples; winch, analog gauges, brine pipes and waterline match original setting.",
+        "This is prospective observation-area atmosphere, not an actual access unlock or gate command."
+      ]
+    },
+    {
+      "shot": "M7-S02",
+      "revision": "r02",
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/clip.mp4",
+      "sha256": "5634895ceba5fc5a9c61586378360095c868ca52d530493453658b5b14ce9047",
+      "bytes": 1303894,
+      "width": 1364,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/contact-sheet.jpg",
+      "verdict": "select-material-and-staging-direction-only",
+      "observed": [
+        "Skin folds and surface detail, distinct fingers and textured dark knit cuff materially improve coherence with the weathered instrument.",
+        "No certification of precise anatomy/hand scale, crank attachment, reversal angle or stable salt-surface texture. Use original/GTI stills for geometry/texture production; motion clip supplies staging/material direction."
+      ]
+    }
+  ],
+  "inspection": {
+    "contactSheets": "All four initial raw clip contact sheets viewed.",
+    "fullScaleFrames": [
+      {
+        "shot": "M7-S02",
+        "frameIndex": 60,
+        "seconds": 2.5,
+        "localInspectionPath": "/tmp/m7-s2-r1-hand-frame60.png",
+        "durableIdentity": "initial clip SHA256 plus zero-based frame index; regenerate with ffmpeg"
+      },
+      {
+        "shot": "M7-S02",
+        "revision": "r02",
+        "frameIndex": "producer-supplied-fullscale-sample",
+        "durablePath": "_workspace/current/systems/tech-verification/concept-first-m7/hand-r02-frame.png"
+      }
+    ],
+    "allFramesInspected": false,
+    "finalContactSheets": [
+      "_workspace/current/systems/tech-verification/concept-first-m7/cinematic-contact-sheet.jpg",
+      "_workspace/current/systems/tech-verification/concept-first-m7/gameplay-method-contact-sheet.jpg"
+    ],
+    "finalFullScaleFrames": {
+      "file": "docs/media/concept-first-m7/gameplay-method.mp4",
+      "zeroBasedFrameIndices": [
+        100,
+        220,
+        330,
+        490,
+        650
+      ],
+      "fps": 24,
+      "localInspectionPaths": "/tmp/m7-final-method-{frame}.png; regenerate from final film hash for durable evidence."
+    }
+  },
+  "styleFinding": {
+    "id": "M7-ART01",
+    "severity": "revise-key-shot",
+    "issue": "S2 hand is smooth/blocky and visually detached from the photoreal weathered instrument.",
+    "recommendation": "Use the one available4credit revision for S2 with a smaller anatomically articulated textured human hand and woven sleeve matching original keyart. If revision fails, exclude visible hand from final art target and asset reference, using instrument/camera-only fallback.",
+    "status": "r02-selected-for-material-direction;r1-hand-excluded",
+    "resolution": "One revised shot reviewed by contact sheet and fullscale hand-r02-frame.png; skin/finger/knit detail now coheres. No rig/anatomy/linkage correctness approval."
+  },
+  "formatFinding": {
+    "id": "M7-ART02",
+    "issue": "Initial producer summary said all clips1364x768; independent ffprobe found S3/S4at1152x768.",
+    "resolution": "Parent notified to preserve aspect ratio; do not stretch/crop away gate winch, horizontal waterline or desk.",
+    "requestedSeconds": 6,
+    "actualSeconds": 5.875,
+    "sourceFrames": 141,
+    "sourceFPS": 24,
+    "plannedSixSecondComposition": "Hold the last frame for0.125s; no loop. At24fps this adds3held frames to144total. Final composite measurement remains pending."
+  },
+  "adoptionBoundaries": [
+    "S1 room/body context and S4closed gate can guide art composition; neither proves gameplay state.",
+    "S2 instrument/material may guide new resources, but initial generated hand must not be an asset reference.",
+    "S3is camera-only record context, not observed cross-check/clip/record completion.",
+    "No current runtime-derived visual source used.",
+    "All new clips are silent; no raw-audio listening test applies."
+  ],
+  "remaining": [
+    "No human immersion or subjective audio audition.",
+    "No anatomy/rig/crank connection/exact return or runtime mechanics proof.",
+    "No every-frame generated-artifact or salt-texture stability audit.",
+    "No independent semantic validation of generated paper/plate marks as evidence; they are visual context only.",
+    "No runtime or commercial release promotion."
+  ],
+  "eligibility": {
+    "runtimeEligible": false,
+    "commercialReleaseEligible": false,
+    "humanImmersionMeasured": false,
+    "runtimeMechanicsProven": false
+  },
+  "selectedRawClips": {
+    "M7-S01": "assets/generated/previz/concept-first-m7/m7-s1-last-duty/clip.mp4",
+    "M7-S02": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/clip.mp4",
+    "M7-S03": "assets/generated/previz/concept-first-m7/m7-s3-record-context/clip.mp4",
+    "M7-S04": "assets/generated/previz/concept-first-m7/m7-s4-next-area/clip.mp4"
+  },
+  "finalFilms": [
+    {
+      "path": "docs/media/concept-first-m7/cinematic.mp4",
+      "sha256": "dcaa64a84edf20c307908d28a0415da9a0ef4177236d47ddd963cf999eca4007",
+      "bytes": 8122677,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "frames": 576,
+      "videoSeconds": 24.0,
+      "videoCodec": "h264",
+      "audioSeconds": 24.0,
+      "audioCodec": "aac",
+      "audioSampleRate": 48000,
+      "audioChannels": 2,
+      "captionFile": {
+        "path": "docs/media/concept-first-m7/cinematic.ass",
+        "sha256": "a7fb43e6b4d10252f9f050027cfab40793f45a1cba0155fc182f29783ba760df",
+        "bytes": 1715
+      }
+    },
+    {
+      "path": "docs/media/concept-first-m7/gameplay-method.mp4",
+      "sha256": "e8b718f2858919100bed4cd16755e8713e1e2dd8b1197e9cebe4d568579d7184",
+      "bytes": 8484010,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "frames": 768,
+      "videoSeconds": 32.0,
+      "videoCodec": "h264",
+      "audioSeconds": 32.0,
+      "audioCodec": "aac",
+      "audioSampleRate": 48000,
+      "audioChannels": 2,
+      "captionFile": {
+        "path": "docs/media/concept-first-m7/gameplay-method.ass",
+        "sha256": "71f90b06e8df7cafb9c795d9ff30eb2f521c111ce69a76bfca09b3ce4650041a",
+        "bytes": 2508
+      }
+    }
+  ],
+  "finalArtifacts": {
+    "editTimeline": {
+      "path": "docs/media/concept-first-m7/edit-timeline.json",
+      "sha256": "cce9c01661e4f599c15ad0b04ce39579e46eb8a85d211d932e82d1d0360137ae",
+      "bytes": 479
+    },
+    "selectedShots": {
+      "path": "assets/generated/previz/concept-first-m7/selected-shots.json",
+      "sha256": "90ef52b70e24b1e4540c4e55d444db23aa5cf5031fc34ddec2700d23eba819b7",
+      "bytes": 1075
+    },
+    "productionValidation": {
+      "path": "_workspace/current/systems/tech-verification/concept-first-m7/validation.json",
+      "sha256": "32a78f34bb5992f044f08fa563bba6b67f0de32fd376c634457a374730053e84",
+      "bytes": 11892
+    },
+    "productionReceipt": {
+      "path": "_workspace/current/systems/tech-verification/concept-first-m7/provider-receipt.json",
+      "sha256": "243cd3f33c92c9a28d36c5f969e9d4f24e5d337109a4e103256e7aa27463cfa6",
+      "bytes": 21420
+    },
+    "opticalSourceApproval": {
+      "path": "_workspace/current/systems/tech-verification/concept-first-m7/optical-source-approval.json",
+      "sha256": "86c36dfa045742ba60a245801f11dd2f785f6bb37fe7f223af2b2ea64cef5756",
+      "bytes": 1053
+    }
+  },
+  "finalExecution": {
+    "cinematicRangesSeconds": [
+      [
+        0,
+        6
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        18,
+        24
+      ]
+    ],
+    "methodRangesSeconds": [
+      [
+        0,
+        6
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        18,
+        24
+      ],
+      [
+        24,
+        32
+      ]
+    ],
+    "methodLastRange": "Eight-second editor-authored future-play explanation over held original-derived watchroom context; not native UI.",
+    "rawHold": "Each selected141frame/24fps source gets3last-frame holds to144frames/6seconds; no loop. Production validator records this; final independent counts576/768match.",
+    "crop": "Uniform scale and top-aligned16:9crop; S3/S4were1152x768. Sampled finals retain top structures/horizon; lower foreground/water trimmed. No nonuniform stretch identified."
+  },
+  "lineageReview": {
+    "result": "pass-supplied-input-lineage",
+    "originalImageHashesRechecked": true,
+    "opticalDerivativeHashRechecked": true,
+    "originalImages": [
+      "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "assets/generated/2d/concept/tool-reader-hero.png",
+      "assets/generated/2d/concept/space-gate-three-mood.png",
+      "assets/generated/2d/keyart/keyart-watchroom-wide.png"
+    ],
+    "opticalDerivative": {
+      "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+      "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+      "parents": [
+        "assets/generated/2d/concept/tool-reader-hero.png",
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+      ]
+    },
+    "providerGenerationImageInputs": [
+      "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+      "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "assets/generated/2d/concept/space-gate-three-mood.png"
+    ],
+    "noCurrentRuntimeVisualsInSelectedManifestOrTimeline": true,
+    "qualification": "Verified supplied local image paths/hashes and declared generation references, not provider model training or unrelated files."
+  },
+  "finalChecks": [
+    {
+      "id": "M7-F01",
+      "result": "pass-measured",
+      "detail": "Independent ffprobe and hashes:24s576frames and32s768frames;1280x720H264/24fps,AAC48kHzstereo with matching duration. Hashes match production validation."
+    },
+    {
+      "id": "M7-F02",
+      "result": "pass-sampled",
+      "detail": "S2r02skin/finger/knit material coheres; initialr1hand not selected. No approval of anatomy, precise crank linkage/return or temporally stable salt textures."
+    },
+    {
+      "id": "M7-F03",
+      "result": "pass-sampled-crop",
+      "detail": "S3topcrop retains window/sea/workbench context; S4retains winch, gauges, horizontal horizon, closed gate and waterline. Lower foreground/water crop is deliberate."
+    },
+    {
+      "id": "M7-F04",
+      "result": "pass-sampled-caption-fit",
+      "detail": "Primary bodies32–34px and headings46–54px via ASS; fullscale Korean samples fit with intact glyphs.18pxsource/target metadata is legible at fullscale but smaller. Numerical contrast and human reading speed not measured."
+    },
+    {
+      "id": "M7-F05",
+      "result": "pass-scoped-future-target-label",
+      "detail": "Persistent worldview/original-concept/play-experience-target label. Endcard explicitly describes recording/next-area entry as intended future play and does not claim current gameplay or completed unlock. Gate stays closed in samples; no saved-state UI/receipt appears."
+    },
+    {
+      "id": "M7-F06",
+      "result": "qualified-staging-deviation",
+      "detail": "S1turn exposes a partial side profile, beyond strictly rear-only prompt. Accept for room/body staging; not face identity/portrait asset approval."
+    },
+    {
+      "id": "M7-F07",
+      "result": "pass-supplied-lineage",
+      "detail": "Original four image hashes and approved GTI derivative hash rechecked. GTIparents are original reader+watchroom; generation inputs and selected clips are within M7allowlist, with no current runtime visual source."
+    },
+    {
+      "id": "M7-F08",
+      "result": "not-auditioned",
+      "detail": "Raw clips silent; final soundtrack is newly authored filtered pink-noise temporary ambience per production validator. No provider audio or human audition; final technical audio duration checked only."
+    }
+  ],
+  "verdict": {
+    "result": "PASS_SCOPED_ART_AND_EDITORIAL_SAMPLE",
+    "selectedS2Revision": "r02",
+    "initialS2HandAssetReference": "excluded",
+    "allTargetsCertified": false,
+    "meaning": "Final upstream concept films accepted for sampled composition/material direction and honest future-play explanation; outstanding rig/semantics/human checks remain explicit."
+  }
+}

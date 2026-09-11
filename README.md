@@ -6,7 +6,20 @@
 
 ![README hero — 은포항 야경 컨셉 (프리비즈, 게임플레이 아님)](docs/media/readme-hero.jpg)
 
-## 인트로와 플레이 방식 영상 · M6
+## 원본 컨셉 기반 영상 · M7
+
+[![원본 세계관과 컨셉만으로 만든 시네마틱 아트 목표](docs/media/concept-first-m7/poster-cinematic.jpg)](docs/media/concept-first-m7/cinematic.mp4)
+
+[24초 시네마틱](docs/media/concept-first-m7/cinematic.mp4) · [32초 플레이 경험 목표](docs/media/concept-first-m7/gameplay-method.mp4) · [영상·GTI 키프레임 모음](docs/media/concept-first-m7/index.html)
+
+**세계관·초기 원본 컨셉 → 영상 아트 목표 → GTI 텍스처·리소스 → 프리팹 재구성** 순서로 제작합니다. 현재 게임 화면·프리팹·런타임 리소스와 M5/M6 파생 이미지는 이번 영상의 참조에서 제외했습니다. 넓은 당직실, 소금 결정판, 원형 광학 장치와 제3수문의 물성을 새 시각 기준으로 삼습니다.
+
+이 영상은 앞으로 구현할 플레이 경험의 목표이며, 현재 플레이 녹화나 저장·해금 구현의 증거가 아닙니다. 새 GTI 광학 작업대 키프레임과 영상은 제작됐고, 텍스처 맵과 프로젝트 프리팹 재구성은 [후속 제작 계약](_workspace/current/handoff/concept-first-m7-resources.json)에 명시했습니다.
+
+<details>
+<summary>이전 M6 기록 — 새 아트 기준에서 제외</summary>
+
+### M6 이전 구현 비교 기록
 
 [![36초 시네마틱 인트로 — 생성 프리비즈와 실제 플레이 발췌 편집](docs/media/cinematic-gameplay-m6/poster-cinematic.jpg)](docs/media/cinematic-gameplay-m6/cinematic.mp4)
 
@@ -16,6 +29,8 @@ Higgsfield **MCP**로 만든 4개 샷에 M5 Unity 실제 녹화, 한국어 안�
 
 [제작·출처 기록](assets/generated/previz/cinematic-gameplay-m6/provenance.json) · [편집 검수](_workspace/current/systems/tech-verification/cinematic-gameplay-m6/editorial-review.md)
 
+
+</details>
 
 ## 한 줄 소개
 

@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "id": "concept-first-m7",
+  "status": "authored-future-cinematic-target",
+  "basis": "worldview and the four original concept images only",
+  "referencePolicy": {
+    "allowedText": [
+      "worldview/worldview-bible.md",
+      "concept/art-direction.md",
+      "concept/style-guide.md"
+    ],
+    "allowedImages": [
+      {
+        "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+        "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+        "actualWidth": 1536,
+        "actualHeight": 1024,
+        "role": "environment geometry and material"
+      },
+      {
+        "path": "assets/generated/2d/concept/tool-reader-hero.png",
+        "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+        "actualWidth": 1312,
+        "actualHeight": 1199,
+        "role": "reader silhouette and mechanism"
+      },
+      {
+        "path": "assets/generated/2d/concept/space-gate-three-mood.png",
+        "sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013",
+        "actualWidth": 1536,
+        "actualHeight": 1024,
+        "role": "exterior pressure and horizon"
+      },
+      {
+        "path": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+        "sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992",
+        "actualWidth": 1672,
+        "actualHeight": 941,
+        "role": "character silhouette and composition"
+      }
+    ],
+    "runtimeDerivedReferenceUsed": false,
+    "newKeyframesProvider": "god-tibo-imagen",
+    "newMotionProvider": "official Higgsfield MCP, subject to parent production execution",
+    "allowedDerivedKeyframes": [
+      {
+        "id": "m7-optical-workbench-gti",
+        "pathStatus": "actual-generated-and-source-approved",
+        "provider": "god-tibo-imagen",
+        "sourceAllowlist": [
+          "assets/generated/2d/concept/tool-reader-hero.png",
+          "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+        ],
+        "restriction": "Derived solely from these original images and approved worldview; no runtime-derived input.",
+        "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+        "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+        "reviewScope": "M7image-to-video input only; no runtime/commercial promotion"
+      }
+    ]
+  },
+  "outputIntent": "Create upstream cinematic visual targets from which new game resources, materials and prefabs can later be designed. No current runtime visuals constrain this film.",
+  "loreRules": [
+    "The last duty is one night; story time is not a real-time countdown.",
+    "Records are salt plates, handwritten duty logs and tide ledgers; pipes carry brine pressure/salinity signals.",
+    "Optics reveal existing curves and imprints, never past video, voices, intentions or ghosts.",
+    "Preserve a verification copy at first reading; retry on copies without destroying required clues.",
+    "A conclusion needs two independent source media; two copies are one origin.",
+    "Reversible trial is distinct from commitment; submission requires verifier confirmation and protagonist signature."
+  ],
+  "visualGrammar": {
+    "palette": [
+      "#0E1F26",
+      "#173238",
+      "#36565C",
+      "#4F7A6B",
+      "#8A8E88",
+      "#C8D6D3",
+      "#E7E3D8",
+      "#E2AF62"
+    ],
+    "forms": [
+      "broad low windows and horizontal sea/wet lines",
+      "circular reader, crank, articulated magnifier and round gauges",
+      "perforated desk and archive drawers",
+      "vertical Gate3 leaf and overhead winch"
+    ],
+    "materials": [
+      "downward verdigris streaks over worn bronze",
+      "matte microhexagonal salt clusters at edges and brine joints",
+      "wet concrete with visible historic waterline",
+      "fibrous off-white rag paper and worn stitched binding",
+      "dark damp work-apron fabric"
+    ],
+    "cinematicCamera": "Authored dolly/arc/focus moves permitted; level horizon and stable tool-action closeups. These are film targets, not runtime camera specifications."
+  },
+  "shots": [
+    {
+      "id": "M7-S01",
+      "name": "인트로 — 마지막 당직",
+      "durationMs": 6000,
+      "intent": "바깥의 거대한 물과 실내의 작은 기록 업무를 한 번에 느낀다.",
+      "references": [
+        "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+      ],
+      "beats": [
+        {
+          "atMs": 0,
+          "action": "등진 작업자·긴 창·바다 수평선."
+        },
+        {
+          "atMs": 700,
+          "action": "책상 쪽으로 느리게40cm 접근; 인물은 소매와 손의 작은 움직임만."
+        },
+        {
+          "atMs": 3500,
+          "action": "원형 판독기·종이·바다를 한 구도에 놓는다."
+        },
+        {
+          "atMs": 4800,
+          "action": "마지막1200ms 정착."
+        }
+      ],
+      "camera": "35mm; 수평40cm 접근; roll0;700–4800ms 이동.",
+      "audioCue": "먼 파도·낮은 배관 진동·옷과 종이 접촉.",
+      "vfxRef": "M7-FX01 창 염분·수평 젖음선",
+      "animRef": "M7-AN01 소매/손의 작은 정착",
+      "motionRef": "M7-MO01 느린 수평 접근",
+      "immersionTarget": 4,
+      "meaningfulChange": "바다 전체에서 검토할 작업물로 주의 이동; 사건이나 해금은 발생하지 않는다.",
+      "caption": "마지막 밤, 남은 기록을 살핀다.",
+      "prompt": "Six-second future cinematic target from the approved original concepts only. Weathered maritime archive: teal-gray wet metal, downward verdigris, matte salt at pipe joints, off-white paper, one restrained amber light, level sea horizon. No readable text, numerals, logos, HUD, digital screens, new evidence, fantasy visions, morphing, pristine metal, red alarms or explosions. Explanatory text is added by the editor. Use the original wide watchroom key art. Slow level40cm push from the back-facing restorer toward the perforated desk; paper, full circular reader and sea horizon share the frame. One small sleeve and hand settling movement. Preserve the architecture and person silhouette. No walking sequence or face reveal."
+    },
+    {
+      "id": "M7-S02",
+      "name": "관찰과 시험 — 읽고, 돌리고, 되돌린다",
+      "durationMs": 6000,
+      "intent": "손으로 기존 도구를 조작하며 같은 흔적을 여러 번 비교할 수 있다는 감각을 준다.",
+      "references": [
+        "m7-optical-workbench-gti",
+        "assets/generated/2d/concept/tool-reader-hero.png",
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+      ],
+      "beats": [
+        {
+          "atMs": 0,
+          "action": "원본 컨셉의 본체·확대경·크랭크를 모두 보이게 한다."
+        },
+        {
+          "atMs": 700,
+          "action": "한 손이 기존 크랭크를 천천히 전진; 연결된 기존 기구만 움직인다."
+        },
+        {
+          "atMs": 2300,
+          "action": "정지; 광학 초점이 이미 있던 각인과 표면에 정착."
+        },
+        {
+          "atMs": 3400,
+          "action": "같은 손이 반대로 돌려 시작 각도로 돌아온다."
+        },
+        {
+          "atMs": 4900,
+          "action": "1100ms 정지. 원본 표면과 각인은 그대로."
+        }
+      ],
+      "camera": "50–65mm; 피치−30도; 조작 중 고정; 초점 정착1000ms.",
+      "audioCue": "저속 기어 클릭·반전 마찰·정지 후 실내 정적.",
+      "vfxRef": "M7-FX02 이미 존재하는 각인/염결정의 사광 반응",
+      "animRef": "M7-AN02 기존 크랭크와 기계 연결 회전",
+      "motionRef": "M7-MO02 전진·정지·복원; 정확한 각도는 채택 클립에서 측정",
+      "immersionTarget": 4,
+      "meaningfulChange": "같은 자료의 관찰 각도/후보 배치→복원. 원본 손상·새 각인·실설비 상태 변경은 없다.",
+      "caption": "관찰 · 흔적을 읽고 / 시험 · 비교하고 되돌린다.",
+      "fallback": "손/기어 연결 실패 시 카메라·초점만 있는 컷을 채택한다. 이 경우 자막은 시험 방식의 목표 설명이며 실제 조작 성공을 주장하지 않는다.",
+      "prompt": "Six-second future cinematic target from the approved original concepts only. Weathered maritime archive: teal-gray wet metal, downward verdigris, matte salt at pipe joints, off-white paper, one restrained amber light, level sea horizon. No readable text, numerals, logos, HUD, digital screens, new evidence, fantasy visions, morphing, pristine metal, red alarms or explosions. Explanatory text is added by the editor. Use the new optical-workbench keyframe derived only from the original hero reader and watchroom. The full existing reader base, articulated magnifier and wooden crank stay visible. One believable hand slowly turns the original crank forward, pauses, then reverses to its starting angle. Only existing mechanically connected parts move; the optical plate surface and its old marks remain unchanged. Keep the camera steady during manipulation and settle focus on old grooves. No new ring or module, extra limbs, magical tracing or live infrastructure action."
+    },
+    {
+      "id": "M7-S03",
+      "name": "기록 — 독립 자료와 빈칸",
+      "durationMs": 6000,
+      "intent": "대조한 판단과 남은 빈칸을 다음 사람이 이어받을 질서로 만든다.",
+      "references": [
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+      ],
+      "beats": [
+        {
+          "atMs": 0,
+          "action": "원형 판독 자료·실제본 일지·긴 조위대장의 서로 다른 형태."
+        },
+        {
+          "atMs": 800,
+          "action": "카메라가 종이/장부 쪽으로25cm 이동."
+        },
+        {
+          "atMs": 2500,
+          "action": "가능하면 한 손이 별도 검토 카드를 자료 옆에 정렬; 원본 문서에 쓰지 않는다."
+        },
+        {
+          "atMs": 4000,
+          "action": "단순 클립과 미제출 거치대로 정리. 손동작이 불안하면 카메라 관찰만 유지."
+        },
+        {
+          "atMs": 4800,
+          "action": "1200ms 대조 구조 홀드. 실제 제출/봉인은 없다."
+        }
+      ],
+      "camera": "50mm; roll0;800–4000ms 책상25cm 슬라이드.",
+      "audioCue": "실내 파도·종이 정렬; 실제 채택 클립에 클립 동작이 보일 때만 단발 클립 소리.",
+      "vfxRef": "M7-FX03 글자 없는 종이섬유·별도 편집 대조선",
+      "animRef": "M7-AN03 선택적 카드 정렬/클립; 실패 시 생략",
+      "motionRef": "M7-MO03 느린 책상 슬라이드",
+      "immersionTarget": 4,
+      "meaningfulChange": "관찰한 자료를 독립 매체별로 대조하고 미제출 검토안으로 정리하는 목표. 사본2장을 독립 출처로 세지 않는다.",
+      "caption": "기록 · 서로 다른 자료를 대조해, 빈칸도 남긴다.",
+      "fallback": "카메라만 채택한 경우 카드 정리/기록 완료의 실제 행동이 보였다고 쓰지 않는다.",
+      "prompt": "Six-second future cinematic target from the approved original concepts only. Weathered maritime archive: teal-gray wet metal, downward verdigris, matte salt at pipe joints, off-white paper, one restrained amber light, level sea horizon. No readable text, numerals, logos, HUD, digital screens, new evidence, fantasy visions, morphing, pristine metal, red alarms or explosions. Explanatory text is added by the editor. Use the original watchroom mood. A gentle level25cm slide across paper stacks, a stitched duty notebook and a tall tide ledger toward a pending-review stand. If physically reliable, one hand aligns a loose review card and rests a simple clip across its referenced pages; no handwriting, stamp or sealing. Preserve separate record silhouettes and unresolved blank areas. Prefer a camera-only shot over unreliable hand mechanics. The source papers never rewrite themselves."
+    },
+    {
+      "id": "M7-S04",
+      "name": "다음 관측의 대상 — 제3수문",
+      "durationMs": 6000,
+      "intent": "정리한 기록 너머에도 조용한 압력이 계속됨을 남긴다.",
+      "references": [
+        "assets/generated/2d/concept/space-gate-three-mood.png"
+      ],
+      "beats": [
+        {
+          "atMs": 0,
+          "action": "닫힌 수직 문짝·상부 윈치·원형 계기·수평 수면."
+        },
+        {
+          "atMs": 1000,
+          "action": "수평30cm 이내의 느린 접근; 낮은 파도가 젖음선 아래로 스친다."
+        },
+        {
+          "atMs": 4200,
+          "action": "차가운 구조와 작은 황토색 등을 고정 관찰."
+        },
+        {
+          "atMs": 5000,
+          "action": "마지막1000ms 정착. 문은 닫힌 상태."
+        }
+      ],
+      "camera": "50mm; roll0; 수평30cm 이내 접근1000–4200ms.",
+      "audioCue": "실내 소리를 외항 물소리로 연결; 경보·성공음 없음.",
+      "vfxRef": "M7-FX04 낮은 파도·수평 젖음 경계",
+      "animRef": "M7-AN04 수문/윈치 정지",
+      "motionRef": "M7-MO04 외항 접근 후 홀드",
+      "immersionTarget": 4,
+      "meaningfulChange": "작업실에서 다음 관측 장소로 시선 이동. 실제 진행 해금이나 문 개방을 주장하지 않는다.",
+      "caption": "다음 구역의 관측을 준비한다.",
+      "prompt": "Six-second future cinematic target from the approved original concepts only. Weathered maritime archive: teal-gray wet metal, downward verdigris, matte salt at pipe joints, off-white paper, one restrained amber light, level sea horizon. No readable text, numerals, logos, HUD, digital screens, new evidence, fantasy visions, morphing, pristine metal, red alarms or explosions. Explanatory text is added by the editor. Use the original third sea-gate mood. Restrained level slow push; the tall CLOSED gate and overhead winch remain fixed, analog gauges and brine pipes intact. Low waves and a horizontal wetness line carry quiet pressure beneath a small steady amber lamp. No gate opening, flood surge, invented markings or autonomous machinery. This is prospective next-area context, not an actual runtime unlock."
+    }
+  ],
+  "edits": {
+    "cinematic": {
+      "targetSeconds": 24,
+      "sequence": [
+        {
+          "shot": "M7-S01",
+          "startSeconds": 0,
+          "endSeconds": 6
+        },
+        {
+          "shot": "M7-S02",
+          "startSeconds": 6,
+          "endSeconds": 12
+        },
+        {
+          "shot": "M7-S03",
+          "startSeconds": 12,
+          "endSeconds": 18
+        },
+        {
+          "shot": "M7-S04",
+          "startSeconds": 18,
+          "endSeconds": 24
+        }
+      ]
+    },
+    "gameplayMethod": {
+      "targetSeconds": 32,
+      "sequence": [
+        {
+          "shot": "M7-S01",
+          "startSeconds": 0,
+          "endSeconds": 4,
+          "use": "4s intro excerpt",
+          "caption": "마지막 밤, 남은 기록을 살핀다."
+        },
+        {
+          "shot": "M7-S02",
+          "startSeconds": 4,
+          "endSeconds": 16,
+          "use": "6s clip +6s clearly editorial held target diagrams",
+          "caption": "관찰: 남아 있는 흔적을 읽는다. / 시험: 같은 자료로 비교하고 되돌린다."
+        },
+        {
+          "shot": "M7-S03",
+          "startSeconds": 16,
+          "endSeconds": 26,
+          "use": "6s clip +4s clearly editorial independent-media diagram",
+          "caption": "기록: 서로 다른 자료를 대조한다. / 모르는 부분은 빈칸으로 남긴다."
+        },
+        {
+          "shot": "M7-S04",
+          "startSeconds": 26,
+          "endSeconds": 32,
+          "use": "6s exterior context",
+          "caption": "다음 구역의 관측을 준비한다."
+        }
+      ],
+      "nativeUIInserts": false,
+      "typography": "Editor-authored32px or larger, <=2lines; persistent future-target label. Holds/diagrams illustrate intended play, not measured interaction or elapsed playtime."
+    }
+  },
+  "resourceNeeds": [
+    {
+      "id": "M7-R01",
+      "resource": "watchroom modular environment",
+      "features": [
+        "low broad salt-encrusted windows",
+        "perforated workbench",
+        "drawer wall",
+        "pipe elbows with salt-ring masks",
+        "archive stands"
+      ],
+      "sourceImage": "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+    },
+    {
+      "id": "M7-R02",
+      "resource": "complete hand-cranked reader",
+      "features": [
+        "original substantial round base",
+        "original side crank and worn wooden grip",
+        "mechanically linked original components",
+        "articulated magnifier",
+        "probe support",
+        "original optical plate; no new comparison ring mechanism"
+      ],
+      "sourceImage": "assets/generated/2d/concept/tool-reader-hero.png"
+    },
+    {
+      "id": "M7-R03",
+      "resource": "three record-media silhouettes and review kit",
+      "features": [
+        "salt-copy disc",
+        "stitched notebook",
+        "tall ledger",
+        "blank draft card",
+        "clip",
+        "pending-review stand"
+      ],
+      "sourceImage": "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+    },
+    {
+      "id": "M7-R04",
+      "resource": "third sea-gate environment",
+      "features": [
+        "tall gate leaf",
+        "top winch",
+        "brine routing",
+        "round gauges",
+        "layered horizontal wetness marks"
+      ],
+      "sourceImage": "assets/generated/2d/concept/space-gate-three-mood.png"
+    }
+  ],
+  "gtiMaterialNeeds": [
+    "weathered bronze basecolor/roughness/normal with downward patina mask",
+    "matte salt microcrystal sheet and joint accumulation mask",
+    "wet/dry concrete surfaces plus separate wetness mask",
+    "rag-paper fiber sheet without handwriting",
+    "dark worn workcloth tile without baked folds"
+  ],
+  "materialHandoff": "GTI sheets are reference textures, not automatically validated PBR maps. Derive calibrated seamless maps and author independent wetness/salt controls for later resource work. Keep words and evidence marks on separately authored surfaces.",
+  "deliveryLabel": "세계관·원본 컨셉 기반 연출 목표 — 향후 제작 방향",
+  "evidenceLimits": {
+    "generationPerformedByThisLane": false,
+    "providerSpendByThisLane": 0,
+    "runtimeImplementationClaim": false,
+    "playtestClaim": false,
+    "humanImmersionMeasured": false,
+    "runtimeEligible": false,
+    "commercialReleaseEligible": false
+  },
+  "originalProposal": {
+    "status": "historical-target-superseded-before-generation",
+    "shotCount": 4,
+    "secondsPerShot": 8,
+    "cinematicSeconds": 32,
+    "methodSeconds": 40,
+    "note": "Initial eight-second duration proposal retained as target history. Proposed removable comparison ring withdrawn; execution uses the original optical reader mechanism only."
+  },
+  "productionAdaptation": {
+    "authority": "parent production director message",
+    "requestedModel": "Hailuo2.3Fast",
+    "requestedSecondsPerShot": 6,
+    "requestedResolution": "768",
+    "shotCount": 4,
+    "quotedCreditsPerShot": 4,
+    "quotedTotalCredits": 16,
+    "reportedAvailableCredits": 21.18,
+    "purchaseRequired": false,
+    "costEvidence": "Parent-reported official MCP quote; this presentation lane did not call provider or verify billing.",
+    "generationStatus": "four-initial-clips-plusS2r02-and-final-films-produced",
+    "reason": "Four consistent six-second clips fit the existing balance and retain the original instruments; no new ring mechanism."
+  },
+  "actualProductionReview": {
+    "status": "final-art-and-editorial-sample-review-complete",
+    "review": "systems/tech-verification/concept-first-m7/art-review.json",
+    "rawClips": [
+      {
+        "shot": "M7-S01",
+        "path": "assets/generated/previz/concept-first-m7/m7-s1-last-duty/clip.mp4",
+        "sha256": "a450ae391940011a048365fedae254a793fd5ab68dddb4bda08ca871b57dcbc2",
+        "width": 1364,
+        "height": 768,
+        "frames": 141,
+        "fps": 24,
+        "durationSeconds": 5.875,
+        "adoption": "accept-scene-and-material-context"
+      },
+      {
+        "shot": "M7-S02",
+        "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial/clip.mp4",
+        "sha256": "ea541e176b1759448cf359762745ade8cf6e5c1093ad04a4f00b42bf70e33b67",
+        "width": 1364,
+        "height": 768,
+        "frames": 141,
+        "fps": 24,
+        "durationSeconds": 5.875,
+        "adoption": "revision-required-hand-style"
+      },
+      {
+        "shot": "M7-S03",
+        "path": "assets/generated/previz/concept-first-m7/m7-s3-record-context/clip.mp4",
+        "sha256": "171fa7d3be35dd43a8d230c2145b9f97e54cb5a2a78edb1fe705578252992614",
+        "width": 1152,
+        "height": 768,
+        "frames": 141,
+        "fps": 24,
+        "durationSeconds": 5.875,
+        "adoption": "accept-record-context-camera-only"
+      },
+      {
+        "shot": "M7-S04",
+        "path": "assets/generated/previz/concept-first-m7/m7-s4-next-area/clip.mp4",
+        "sha256": "f0b98d1a5d6b8c82dc80199b5c30f7459348e743cfa40e2256183d2a7a6bd243",
+        "width": 1152,
+        "height": 768,
+        "frames": 141,
+        "fps": 24,
+        "durationSeconds": 5.875,
+        "adoption": "accept-closed-exterior-context"
+      }
+    ],
+    "nominalSixSecondEdit": "Each141frame source at24fps gets3frame end hold; no loop.",
+    "finalFilmReview": {
+      "result": "PASS_SCOPED_ART_AND_EDITORIAL_SAMPLE",
+      "selectedS2Revision": "r02",
+      "initialS2HandAssetReference": "excluded",
+      "allTargetsCertified": false,
+      "meaning": "Final upstream concept films accepted for sampled composition/material direction and honest future-play explanation; outstanding rig/semantics/human checks remain explicit."
+    },
+    "s2HandReference": "r02-selected-material-direction;r1-excluded;anatomy-linkage-not-certified",
+    "s3ActionClaim": "camera-only context; no observed card/clip/record completion",
+    "s4ActionClaim": "closed-gate context; no unlock",
+    "selectedS2": {
+      "shot": "M7-S02",
+      "revision": "r02",
+      "path": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/clip.mp4",
+      "sha256": "5634895ceba5fc5a9c61586378360095c868ca52d530493453658b5b14ce9047",
+      "bytes": 1303894,
+      "width": 1364,
+      "height": 768,
+      "fps": 24,
+      "frames": 141,
+      "durationSeconds": 5.875,
+      "audioStreams": 0,
+      "contactSheet": "assets/generated/previz/concept-first-m7/m7-s2-optical-trial-r02/contact-sheet.jpg",
+      "verdict": "select-material-and-staging-direction-only",
+      "observed": [
+        "Skin folds and surface detail, distinct fingers and textured dark knit cuff materially improve coherence with the weathered instrument.",
+        "No certification of precise anatomy/hand scale, crank attachment, reversal angle or stable salt-surface texture. Use original/GTI stills for geometry/texture production; motion clip supplies staging/material direction."
+      ]
+    },
+    "finalFilms": [
+      {
+        "path": "docs/media/concept-first-m7/cinematic.mp4",
+        "sha256": "dcaa64a84edf20c307908d28a0415da9a0ef4177236d47ddd963cf999eca4007",
+        "bytes": 8122677,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "frames": 576,
+        "videoSeconds": 24.0,
+        "videoCodec": "h264",
+        "audioSeconds": 24.0,
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2,
+        "captionFile": {
+          "path": "docs/media/concept-first-m7/cinematic.ass",
+          "sha256": "a7fb43e6b4d10252f9f050027cfab40793f45a1cba0155fc182f29783ba760df",
+          "bytes": 1715
+        }
+      },
+      {
+        "path": "docs/media/concept-first-m7/gameplay-method.mp4",
+        "sha256": "e8b718f2858919100bed4cd16755e8713e1e2dd8b1197e9cebe4d568579d7184",
+        "bytes": 8484010,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "frames": 768,
+        "videoSeconds": 32.0,
+        "videoCodec": "h264",
+        "audioSeconds": 32.0,
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2,
+        "captionFile": {
+          "path": "docs/media/concept-first-m7/gameplay-method.ass",
+          "sha256": "71f90b06e8df7cafb9c795d9ff30eb2f521c111ce69a76bfca09b3ce4650041a",
+          "bytes": 2508
+        }
+      }
+    ],
+    "finalExecution": {
+      "cinematicRangesSeconds": [
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          18,
+          24
+        ]
+      ],
+      "methodRangesSeconds": [
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          18,
+          24
+        ],
+        [
+          24,
+          32
+        ]
+      ],
+      "methodLastRange": "Eight-second editor-authored future-play explanation over held original-derived watchroom context; not native UI.",
+      "rawHold": "Each selected141frame/24fps source gets3last-frame holds to144frames/6seconds; no loop. Production validator records this; final independent counts576/768match.",
+      "crop": "Uniform scale and top-aligned16:9crop; S3/S4were1152x768. Sampled finals retain top structures/horizon; lower foreground/water trimmed. No nonuniform stretch identified."
+    },
+    "lineageReview": {
+      "result": "pass-supplied-input-lineage",
+      "originalImageHashesRechecked": true,
+      "opticalDerivativeHashRechecked": true,
+      "originalImages": [
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+        "assets/generated/2d/concept/tool-reader-hero.png",
+        "assets/generated/2d/concept/space-gate-three-mood.png",
+        "assets/generated/2d/keyart/keyart-watchroom-wide.png"
+      ],
+      "opticalDerivative": {
+        "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+        "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+        "parents": [
+          "assets/generated/2d/concept/tool-reader-hero.png",
+          "assets/generated/2d/concept/space-hub-watchroom-mood.png"
+        ]
+      },
+      "providerGenerationImageInputs": [
+        "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+        "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+        "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+        "assets/generated/2d/concept/space-gate-three-mood.png"
+      ],
+      "noCurrentRuntimeVisualsInSelectedManifestOrTimeline": true,
+      "qualification": "Verified supplied local image paths/hashes and declared generation references, not provider model training or unrelated files."
+    },
+    "s1Qualification": "Partial side profile visible; staging only, not face/portrait asset approval."
+  }
+}

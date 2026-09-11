@@ -49,3 +49,10 @@ owner: game-production-director
 - Four real Higgsfield MCP clips plus two GTI keyframes; original requests, hashes and60credit observed delta preserved (RFC-CX-008).
 - 36second intro/progression film and54second gameplay-method film, Korean captions, stage-rule cards, spoiler masks, authored quiet ambience and separately labeled M5 native inserts.
 - Exactframe boundary correction and readable primary captions; full media decode and gallery link checks pass. No M6 Unity changes or new playable chapter claims.
+
+
+## 2026-09-11 · M7 original-concept art target
+
+- Latest user correction now governs CLAUDE.md/README: originalworldview and earlyconcepts drive video; currentgameplay/prefabs/runtime/M5M6visuals excluded (RFC-CX-009).
+- One newGTI opticalworkbench,5realMCPtakes/4selected,24s/32s concept-only films and gallery. R01handstyle rejected and replacedbyreviewedr02.
+- Strictsourcehash checks, framecounts and full decode passed. GTItexture/rebuild handoff records subsequent resource/prefab work separately.

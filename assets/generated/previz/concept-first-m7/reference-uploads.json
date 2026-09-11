@@ -1,0 +1,47 @@
+{
+  "transport": "official Higgsfield MCP media_upload + signed PUT + media_confirm",
+  "references": [
+    {
+      "id": "intro",
+      "file": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "mediaId": "b0b6469f-db60-4944-ae5d-e94bddc3830f",
+      "sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992"
+    },
+    {
+      "id": "record",
+      "file": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "mediaId": "46ed293a-79d4-4776-8d5e-f549bf64a8da",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c"
+    },
+    {
+      "id": "gate",
+      "file": "assets/generated/2d/concept/space-gate-three-mood.png",
+      "mediaId": "e8c90c6c-f3a1-4d5c-a6d8-340580ec5236",
+      "sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013"
+    }
+  ],
+  "confirm": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Confirmed 3 uploads. Pass media_id as value in the medias array of generation tools.\n- b0b6469f-db60-4944-ae5d-e94bddc3830f (uploaded)\n- 46ed293a-79d4-4776-8d5e-f549bf64a8da (uploaded)\n- e8c90c6c-f3a1-4d5c-a6d8-340580ec5236 (uploaded)"
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "media_id": "b0b6469f-db60-4944-ae5d-e94bddc3830f",
+          "status": "uploaded"
+        },
+        {
+          "media_id": "46ed293a-79d4-4776-8d5e-f549bf64a8da",
+          "status": "uploaded"
+        },
+        {
+          "media_id": "e8c90c6c-f3a1-4d5c-a6d8-340580ec5236",
+          "status": "uploaded"
+        }
+      ]
+    }
+  }
+}
