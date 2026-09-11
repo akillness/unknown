@@ -113,3 +113,13 @@ EG-SUMMARY checks 18 pass 18 fail 0 PASS · exit 0
 - 쓴 파일: `systems/game-ui-contract.json`(1행) · `systems/game-ui-contract.meta.md` · `systems/data/t0/*.json` + `*.meta.md`(생성기 출력 10파일 — 손 편집 0) · `systems/pipeline/emit-tables.mjs`(§2.1 `_src` 1어, 디렉터 IRC 승인) + `emit-tables.meta.md`(변경 로그 1행) · 이 문서. `unity/**` · `assets/**` · `production/decision-log.md` · `planning/**` · `synopsis/**` · `worldview/**` 쓰기 **0건**. 삭제·git add/commit·포매터·전체 테스트 실행 0건.
 - 재지 않은 것: Unity 임포트 0회 · 빌드 0회 · 플레이 표본 n=0. G1~G7 어느 게이트도 이 문서로 오르지 않는다.
 - 고정 sha 숫자는 옮겨 적지 않았다(RFC-Q1) — 값은 `systems/data/t0/tables-receipt.json` 과 각 `.meta.md` 가 갖고, 인용 시 생성기를 다시 돌린다.
+
+## RFC-CX-013 ACK
+
+RFC-CX-012 이월 해소 wave 2 — §3 이 "다음 회차 몫" 으로 남긴 **Unity 사본 재복사 + 재임포트** 를 닫았다. 영수증 정본: `systems/tech-verification/rfc-cx-013-tables-resync.md`(owner game-systems-designer, status draft). 요약 [OBSERVED 2026-09-11]:
+
+- **t0 3차 재생성** `emit-tables.mjs --scope t0 --out systems/data/t0` → validator **50/50**(K-07 반영). diff 10파일 28/28 = provenance + `t0-b2.action` 「훈련이다」→「연습이다」 1리프(campaign L127 원문; 상위 예상 "T0 문자열 변화 0" 은 이 1건만큼 어긋남). `--t0` **5/5 · sourceShaMatchesLiveCampaign True**.
+- **Unity 사본 재발행** — 스코프는 사본 영수증 `scope: t0 · scopeSource: --scope` + 파일 집합(5테이블)으로 **`--scope t0`** 확정(`all` 아님; §3 명령 표기는 생성기 템플릿이 `--scope` 를 생략한 것). `--scope t0 --out unity/Unknown/Assets/_Project/Data/Tables` → 10파일 65/65; 문자열 변화 = ACK-c §2 의 4건 + `_src` 1행 + `t0-b2.action` 1건 = **7리프**, python 리프 대조로 **수치 0 · id 0 · 구조 동일**, `tools/zones.json` 바이트 동일. 사본 receipt `source.sha256` == live campaign(`hashlib` 독립 재계산 **True**). 되돌림 0.
+- **가드드 헤드리스**(`pgrep` Unity 0건 확인 후) — (a) `Tide.EditorTools.T0AssetImporter.Import` exit 0 · `Citation blockers: 0` · "Producer source differs" **부재** · Exception/`error CS` 0 → §3 의 fail-closed 예측이 해소됨. `Data/Authoring/` Unity 갱신 6파일(T0Catalog + Records ×5; Tools/Zones 무변경). (b) `Tide.EditorTools.T0Verification.RunBatch` exit 0 · **`T0_M1_CHECKS tests=21 failures=0`**. 로그 `/tmp/unknown-cx013-import.log`(52454 B) · `/tmp/unknown-cx013-t0verify.log`(33786 B).
+- 부기: `RunBatch` 가 다시 쓴 `unity/Unknown/results/t0-m1-contract-checks.xml` 은 testcase 1건 개명뿐(HEAD 소스 대비 원래 스테일). director 판정(Main IRC) = **재커밋 대상** → `/tmp` 보존본 원위치 복원, diff 1/1 · 21→21 · 0→0 재확인. unity/ 변경은 `Data/Tables`·`Data/Authoring`·이 XML 밖 **0**.
+- 검증 3종: validate-campaign **50/50** · `--t0` **5/5** · evidence-graph **18/18**. 게이트 상승 0 · 빌드 0 · 플레이 n=0.

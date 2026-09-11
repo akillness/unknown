@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -120,7 +120,7 @@ $ wc -c _workspace/current/planning/campaign.json
 | `t0-b3` | B03 | T0 | `hub` H0 | — | 퍼즐 | 10 | `reader`·`circuit` | 대장+염판 | 2 | 1/4/4/0/1 | medium | 첫 판독과 4시간의 공백 |
 | `c1-b1` | B04 | C1 | `gate` G0 | — | 퍼즐 | 11 | `circuit` | 염판+일지 | 2 | 3/3/4/1/0 | medium | 순찰로의 두 분기 |
 | `c1-b2` | B05 | C1 | `hub` H1 | — (R7: 본문의 「제3수문 판독대」를 「당직실 판독대」로 정정) | 퍼즐 | 13 | `reader` | 염판+일지 | 2 | 2/4/6/0/1 | medium | 겹쳐 붙은 서명지 |
-| `c1-b3` | B06 | C1 | `hub` H1 | — | 퍼즐 | 16 | `seal`·`reader` | 염판+일지 | 3 | 2/6/7/0/1 | medium | 봉인대 훈련: 필압과 완료 접점 |
+| `c1-b3` | B06 | C1 | `hub` H1 | — | 퍼즐 | 16 | `seal`·`reader` | 염판+일지 | 3 | 2/6/7/0/1 | medium | 봉인대 연습: 필압과 완료 접점 |
 | `c1-b4` | B07 | C1 | `hub` H1 | — | 대화 | 10 | — | 염판+일지 | 3 | 0/4/2/3/1 | low | 각서의 이름, 서명란의 침묵 |
 | `c2-b1` | B08 | C2 | `pump` P0 | — | 퍼즐 | 13 | `circuit`·`reader` | 대장+염판 | 2 | 4/3/6/0/0 | medium | 지하수로의 잔압 |
 | `c2-b2` | B09 | C2 | `pump` P1(연습) | — | 퍼즐 | 14 | `corrosion` | 염판+일지 | 2 | 1/5/7/0/1 | medium | 부식 시험대: 한도 안에서 |

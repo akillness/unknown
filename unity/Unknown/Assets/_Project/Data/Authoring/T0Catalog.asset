@@ -20,12 +20,12 @@ MonoBehaviour:
   - {fileID: 4900000, guid: fe39ac644931845b6896ac392f012392, type: 3}
   receipt: {fileID: 4900000, guid: 2ed0e4112bc4643e69c5715653840d32, type: 3}
   producerReceipt: "{\n  \"emitter\": \"systems/pipeline/emit-tables.mjs\",\n  \"emitterOwner\":
-    \"game-systems-designer\",\n  \"emittedUtc\": \"2026-09-10T07:54:33.119Z\",\n 
+    \"game-systems-designer\",\n  \"emittedUtc\": \"2026-09-11T15:43:39.881Z\",\n 
     \"scope\": \"t0\",\n  \"scopeSource\": \"--scope\",\n  \"dryRun\": false,\n 
-    \"source\": {\n    \"path\": \"planning/campaign.json\",\n    \"sha256\": \"8a43d334f8f69d6642a74708e7b3d68353c7982fb5f506dbba291021a538a93a\",\n   
-    \"bytes\": 124007\n  },\n  \"validator\": {\n    \"path\": \"planning/validate-campaign.mjs\",\n   
-    \"owner\": \"game-planner\",\n    \"exitCode\": 0,\n    \"checks\": 49,\n   
-    \"pass\": 49,\n    \"fail\": 0,\n    \"verdict\": \"PASS\"\n  },\n  \"aggregates\":
+    \"source\": {\n    \"path\": \"planning/campaign.json\",\n    \"sha256\": \"044780ef4349f86f9618768de34b179187cee740f371bbe5a52fb3a62c3d59ab\",\n   
+    \"bytes\": 124221\n  },\n  \"validator\": {\n    \"path\": \"planning/validate-campaign.mjs\",\n   
+    \"owner\": \"game-planner\",\n    \"exitCode\": 0,\n    \"checks\": 50,\n   
+    \"pass\": 50,\n    \"fail\": 0,\n    \"verdict\": \"PASS\"\n  },\n  \"aggregates\":
     {\n    \"stages\": 9,\n    \"beats\": 33,\n    \"clues\": 73,\n    \"sourceTypeDist\":
     {\n      \"log\": 27,\n      \"ledger\": 22,\n      \"plate\": 24\n    },\n   
     \"toolBeatCounts\": {\n      \"circuit\": 10,\n      \"reader\": 11,\n      \"alignment\":
@@ -34,16 +34,16 @@ MonoBehaviour:
     5,\n      \"dock\": 5,\n      \"lowland\": 4\n    },\n    \"proofRequiredBeats\":
     17,\n    \"totalMinutes\": 480\n  },\n  \"tables\": [\n    {\n      \"file\":
     \"beats.json\",\n      \"derivation\": \"subset+predicate\",\n      \"sha256\":
-    \"9bf5634a0908ef8f6bbcecf2fdd6d19ecf01e76eff1820ce213eec35a4bd5a8f\",\n     
-    \"bytes\": 16532,\n      \"rows\": 3\n    },\n    {\n      \"file\": \"hints.json\",\n     
-    \"derivation\": \"projection\",\n      \"sha256\": \"8bbfc9318ee6decde387245482901959be04dfe28f74e0831d530ffbd9bb4839\",\n     
+    \"d2d1af05c99f60ae6b1263e24fd6532df679a5c1a9cf3c118cca1af01b5cd74d\",\n     
+    \"bytes\": 16490,\n      \"rows\": 3\n    },\n    {\n      \"file\": \"hints.json\",\n     
+    \"derivation\": \"projection\",\n      \"sha256\": \"d35ada6fd327f85ddd106eff3f2285f99f85b8222eebdd4bab67597507bedcba\",\n     
     \"bytes\": 4032,\n      \"rows\": 9\n    },\n    {\n      \"file\": \"tools.json\",\n     
     \"derivation\": \"schema-projection\",\n      \"sha256\": \"1cfa4654173b0de4143035a51b36aa487e8ec0d60c399a37344225ef9eb265d9\",\n     
     \"bytes\": 10324,\n      \"rows\": 2\n    },\n    {\n      \"file\": \"zones.json\",\n     
     \"derivation\": \"authoring-derivation\",\n      \"sha256\": \"3c3d043f6f4573ebafff1d4a5c6229d3ac632f3dadc3a425ef07e65214bd0f08\",\n     
     \"bytes\": 15341,\n      \"rows\": 1\n    },\n    {\n      \"file\": \"records.json\",\n     
-    \"derivation\": \"markdown-parse+rule\",\n      \"sha256\": \"7703643983f733a49f173296530710bb719d5ec663fa6ba863a25c6c9d7989cd\",\n     
-    \"bytes\": 70687,\n      \"rows\": 5\n    }\n  ],\n  \"importerContract\": {\n   
+    \"derivation\": \"markdown-parse+rule\",\n      \"sha256\": \"2bb67911e6e4e2720c75dd456058f34c2072a63a4b64780e1fbc28b0c7a63683\",\n     
+    \"bytes\": 70694,\n      \"rows\": 5\n    }\n  ],\n  \"importerContract\": {\n   
     \"mustVerify\": [\n      \"validator.verdict === \\\"PASS\\\"\",\n      \"sha256(beats.json)
     === receipt.tables[beats.json].sha256\",\n      \"sha256(hints.json) === receipt.tables[hints.json].sha256\",\n     
     \"sha256(tools.json) === receipt.tables[tools.json].sha256\",\n      \"sha256(zones.json)
@@ -66,7 +66,7 @@ MonoBehaviour:
     \uB370\uC774\uD130 \uC815\uD569\uB9CC \uC99D\uBA85\uD55C\uB2E4. \uC5B4\uB5A4
     \uAC8C\uC774\uD2B8\uB3C4 PASS \uB85C \uC62C\uB9AC\uC9C0 \uC54A\uB294\uB2E4\"\n 
     ],\n  \"authoringSources\": {\n    \"records\": {\n      \"path\": \"synopsis/t0-records.md\",\n     
-    \"sha256\": \"f56188a7610901b6cfb45a1a83f3937e43ec08f10467e823598af910ae3d656f\"\n   
+    \"sha256\": \"d586adf86cd15db26b6f283ef595390f750d2f10b6ccbd097d30fb6dfc7f0419\"\n   
     },\n    \"toolsSchema\": {\n      \"path\": \"systems/data-schemas/tools.md\",\n     
     \"sha256\": \"f7ee4e1b854f8a8708c3879dc4489730fe18064484f49e8ec1cee45200fa6c2e\"\n   
     },\n    \"zonesSchema\": {\n      \"path\": \"systems/data-schemas/zones.md\",\n     
@@ -76,7 +76,7 @@ MonoBehaviour:
     },\n    \"hubModel\": {\n      \"path\": \"modeling/specs/hub-watchroom.md\",\n     
     \"sha256\": \"d2e08e4e119fc624e447f29d5951add142c969a170c19fee6da9cf3b7ee37529\"\n   
     },\n    \"manifest\": {\n      \"path\": \"modeling/asset-manifest.md\",\n     
-    \"sha256\": \"b32fe494d1c8af87494177e0387cf0417fab9447bf17d06c6a9c17210393b285\"\n   
+    \"sha256\": \"b1e8654f4fcf80daae05eb2b9a2f60828325adaba55b94136f370fe3db87987f\"\n   
     },\n    \"bible\": {\n      \"path\": \"worldview/worldview-bible.md\",\n     
     \"sha256\": \"87a9617ec9fe6ac1eeac46db4391d4fcf9080efd62c477ee9f1e3cff3db43826\"\n   
     },\n    \"wiring\": {\n      \"path\": \"systems/system-specs/wiring-trace.md\",\n     

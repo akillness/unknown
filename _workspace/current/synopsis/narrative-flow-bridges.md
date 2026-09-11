@@ -15,7 +15,7 @@ owner: game-synopsis-writer
 - **방법론 원문** [OBSERVED]: `~/orca/neural_symbolic_in_game/README.md` — ledger 문법 `[P] PROPOSAL / [C] ENTRY·CONTRIBUTION | COMMITTED / [H] HELD | [V] GATE <family> | state unchanged / [V] RULE LEARNED / [N] UNLOCKED·NEXT VALID ENTRY`, 7검사/6가족(action policy·precondition·reachability·NPC knowledge·disclosure·quest stage×2), 실패 시 상태 불변, "a hold names the family that held it and teaches the rule".
 - **인용 키**: campaign id(`t0-b1`…`e0-b2`)만 쓴다. B#는 `worldview/timeline.md` §7-0의 파생 표시 색인이므로 본 문서 §2에서 사용하지 않는다.
 - **이 문서의 지위**: 전량 [TARGET] 저작(대사·UI 후보 문안)이다. `campaign.json`·`timeline.md`·`chapter-beats.md`를 편집하지 않으며, 세 줄이 데이터의 objective/consequence/completion과 겹칠 때는 그 문자열 계열을 따른다. 고유명사는 `glossary.md` 수록 명사만 쓴다(§3 자기 검사).
-- **R3 위치 결정** [INFERENCE · 상한 우선]: live `c6-b3.consequence`는 R3(동기) 문장을 포함하지만, 상한표 `timeline.md` §7의 `c6-b3` 행 공개 상한은 순서 앵커까지다. 상한표 사용 규칙 (1)("상한을 넘는 대사는 G1 violation")에 따라 본 문서의 `c6-b3` 세 줄은 순서 앵커까지만 말하고, 동기(R3)·의도(R2 재해석)는 `c6-b4` 행이 싣는다. 이는 RFC-W4(의도 확정 = `c6-b4`)·검증기 `K-06`과 같은 방향이며, `planning/evidence-graph-overlay.json`(evidence-graph 레인, draft)의 회수 비트 배치와도 일치한다.
+- **R3 위치 결정** [OBSERVED · 상한 = 데이터]: 상한표 `timeline.md` §7의 `c6-b3` 행 공개 상한은 순서 앵커까지이고, **RFC-CX-013에서 planner가 R3(동기) 문장을 `c6-b3.consequence`에서 `c6-b4.consequence`로 이관해 live 데이터와 상한이 일치한다**(검증기 `K-07` 기계 검사 `{c6-b3: false, c6-b4: true}`, `consistency-audit.md` A44 pass). 따라서 본 문서의 `c6-b3` 세 줄은 순서 앵커까지만 말하고, 동기(R3)·의도(R2 재해석)는 `c6-b4` 행이 싣는다. 이는 RFC-W4(의도 확정 = `c6-b4`)·검증기 `K-06`과 같은 방향이며, `planning/evidence-graph-overlay.json`의 회수 비트 배치와도 일치한다. (RFC-CX-012 시점의 [INFERENCE] "live `c6-b3.consequence`는 R3 문장을 포함하지만 상한 우선" 판단은 이관으로 해소됐다.)
 
 ## 1. 설계 원리 — TRACE-RPG ledger 문법의 세계관 번안
 
@@ -136,7 +136,7 @@ TRACE-RPG의 "실패 시 상태 불변"은 이 세계의 정본 문장 "서명 �
 ### 3.4 한계 [OBSERVED]
 
 - 이 문서의 세 줄은 대사·UI **후보 문안**이며 G1 게이트를 통과한 확정 대사가 아니다(status: draft). 기계 검사는 문자열 수준까지이고, 상한·오해의 의미 판정은 §3.2 수동 대조가 근거다.
-- `c6-b3`의 R3 위치는 §0의 [INFERENCE] 결정을 따른다 — live `c6-b3.consequence` 문장과 timeline §7 상한의 긴장은 본 문서가 해소할 수 없으며(데이터·상한표 모두 타 레인 정본), consistency-audit 레인에 관찰로만 전달했다.
+- `c6-b3`의 R3 위치는 §0의 결정을 따른다 — RFC-CX-012 시점에 있던 live `c6-b3.consequence` 문장과 timeline §7 상한의 긴장은 **RFC-CX-013에서 planner가 R3 문장을 `c6-b4.consequence`로 이관해 해소됐고**(K-07 기계 검사·A44), 본 문서는 그 결과를 인용할 뿐 데이터·상한표를 편집하지 않는다(둘 다 타 레인 정본).
 
 ## RFC-CX-012 ACK
 
@@ -146,3 +146,7 @@ TRACE-RPG의 "실패 시 상태 불변"은 이 세계의 정본 문장 "서명 �
 2. **갱신 행 수: 8행 / 10셀** [OBSERVED]. `c1-b2` ②(봉인대(훈련)→봉인대(연습 압착)) · `c1-b3` ①②③(훈련→연습 압착·연습 서식, "훈련 로그"→"연습 서식의 연습 압착 1회로 시연") · `c3-b1` ①(판독기→냉동창고 판독대, live `c3-b1.subtasks[0]`·hints 계열) · `c5-b4` ②(보호 구역 1곳→보호 지정 1건, 확정 직전 저장→확정 전 보존) · `c6-b4` ②(역매핑→역대조) · `c7-b3` ②(확정 전 요약→확정 전 결과 예고, live `c7-b3.subtasks[4]` 계열) · `c7-b4` ②(확정 직전 저장→확정 전 보존) · `e0-b2` ③(집행 직전 저장→집행 직전 상태의 확정 전 보존). 나머지 25행은 이미 정본 용어(공통 조위 피크·증거함·가상 완주·구역 지도·요건표·1호기·결과 예고·청문 접수 대장 등)라 무변경. §1.2 규칙 명명 집계(법1×5 · 법2×2 · 법3×1 · 법4×2 · 법5×1 · 법6×8 · G-a×9 · G-b×2 · G-c×2 · G-d×1 = 33)는 변동 없음 [OBSERVED, §3.1 재실행]. 부수 갱신: §1.1 연습 행에 「연습 압착(연습 서식)」 병기, §3.1에 「교체 잔존어」 검사 행 추가, §3.3 목록을 R8 기준으로 재작성(「확정 직전 저장」 정본 어구 재사용 주장 철회 — bible §3 6법 표 문구는 유지되나 §2 세 줄은 live 문자열 계열인 「확정 전 보존」을 따른다).
 3. **자기 검사 3값 재실행** [OBSERVED — 2026-09-11 재대조 후]: **상한 위반 0건 · 오해 부정 0건 · 미등록 고유명사 0건**(glossary R8 개정본 기준, 신설 9행 포함). 기계 검사 §3.1 전 행 재실행 결과 동일(33행·순서 일치·형식 위반 0·회귀/폐기 문자열 0·`서린` 최초 `c4-b2`·캐논 시각 최초 행 일치·메타 어휘 0·B# 0·교체 잔존어 0). 본문의 「등재 예정」류 표기: 재대조 전후 0건 [OBSERVED, grep `등재 예정|신설 예정|등재 대기`] — 정정 대상 없음. §3.3은 「등재 완료(R8)」로 명시.
 4. **무접촉** [OBSERVED]: `campaign.json`·`t0-records.md`·`glossary.md`·`timeline.md`·`chapter-beats.md`·`production/decision-log.md`·`unity/**`·`systems/**` 무변경. 본 문서만 제자리 갱신.
+
+## RFC-CX-013 ACK
+
+**ACK (synopsis — 브리지 문서 D-CX013-04 정정) — 2026-09-11, 같은 cycle 제자리 갱신(RFC-Q2, `updated` 유지)** [OBSERVED]: `qa/rfc-cx-013-review.md` D-CX013-04(S3) — §0 「R3 위치 결정」 행(L18)과 §3.4 둘째 항(L139)이 "live `c6-b3.consequence`는 R3 문장을 포함하지만…"이라 적던 것을 CX-013 이관 후 상태(R3 문장은 `c6-b4.consequence`, K-07 `{c6-b3:false, c6-b4:true}`, A44 pass)로 정정. 2행 갱신, §2 33행 무변경(`c6-b3` 세 줄은 이미 순서 앵커까지). `c6-b3.consequence` 문자열 grep = 이 ACK 절과 정정된 2행의 이력 언급뿐. 다른 파일 무접촉.

@@ -1,21 +1,21 @@
 {
   "emitter": "systems/pipeline/emit-tables.mjs",
   "emitterOwner": "game-systems-designer",
-  "emittedUtc": "2026-09-11T14:41:04.422Z",
+  "emittedUtc": "2026-09-11T15:43:08.118Z",
   "scope": "t0",
   "scopeSource": "--scope",
   "dryRun": false,
   "source": {
     "path": "planning/campaign.json",
-    "sha256": "87623a68ff272370225cbaea95a64975af8cd56d73027f64ab9f02451e3564a7",
-    "bytes": 123722
+    "sha256": "044780ef4349f86f9618768de34b179187cee740f371bbe5a52fb3a62c3d59ab",
+    "bytes": 124221
   },
   "validator": {
     "path": "planning/validate-campaign.mjs",
     "owner": "game-planner",
     "exitCode": 0,
-    "checks": 49,
-    "pass": 49,
+    "checks": 50,
+    "pass": 50,
     "fail": 0,
     "verdict": "PASS"
   },
@@ -50,14 +50,14 @@
     {
       "file": "beats.json",
       "derivation": "subset+predicate",
-      "sha256": "b82f8361e58ccc9d7b40acc8663f61092cf72526c74a0954db8d64a45f892fd2",
+      "sha256": "d2d1af05c99f60ae6b1263e24fd6532df679a5c1a9cf3c118cca1af01b5cd74d",
       "bytes": 16490,
       "rows": 3
     },
     {
       "file": "hints.json",
       "derivation": "projection",
-      "sha256": "c847a91d31e29425a6039acad2280eb0673baffbe2e85e4076eecb5687c1326f",
+      "sha256": "d35ada6fd327f85ddd106eff3f2285f99f85b8222eebdd4bab67597507bedcba",
       "bytes": 4032,
       "rows": 9
     },
@@ -78,7 +78,7 @@
     {
       "file": "records.json",
       "derivation": "markdown-parse+rule",
-      "sha256": "fc660c8a2a8ed461a1b7ddc6befcfe0bf0963c9c50f72df31b18ffaceae75976",
+      "sha256": "2bb67911e6e4e2720c75dd456058f34c2072a63a4b64780e1fbc28b0c7a63683",
       "bytes": 70694,
       "rows": 5
     }

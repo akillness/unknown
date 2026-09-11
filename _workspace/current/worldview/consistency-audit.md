@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -13,29 +13,32 @@ owner: game-worldview-architect
 **3차(C3-F34, 2026-09-10 수정 루프 3)**: 유일하게 남아 있던 violation **A33**이 systems 레인의 정본 교체로 실체를 잃었음을 직접 재측정으로 확인하고, §1 집계 · §2 A33 · §3 「법 문구 유통」행 · §4-1 · §5 · §6을 그 실측 위에서 다시 썼다. 항목 수는 **41로 불변**이다 — 새 항목을 만들지 않고 A33의 verdict만 뒤집었다. 앞선 판이 A33을 현행 `[OBSERVED]` 위반으로 유지한 것은 감사 문서 자신의 스테일이었고, 그 스테일이 §3의 "2차 재측정" 표제 아래 있었다는 점이 결함의 핵심이다.
 **4차(R4, 2026-09-10 · C3 종료 판정 묶음 반영)**: 디렉터 판정 **RFC-W4**(4장 효력 / 6장 의도) · **C3-F25**(H-1:40 캐논 유지) · **C3-F30**(B# 색인 정의 단일화) · **C3-F22**(비트 `zoneId`) · **RFC-W3 소멸** · **RFC-Q1/Q2**를 반영해 §1·§2(A22·A37 종결, **A42·A43 신설**)·§3(입력 교체 + 검사 4행 추가)·§4-1(인용 방식 규칙)·§5·§6을 다시 실행했다. 항목 수는 41 → **43**으로 늘었고 늘어난 2건 중 1건은 **open**이다 — 집계를 좋게 만드는 방향의 항목 추가가 아니다. 이 판도 **대체가 아니라 개정**이며 `cycle`·`supersedes:`는 그대로다(RFC-Q2).
 **5차(R7, 2026-09-10 · C6/C7 디렉터 판정 묶음 반영)**: **RFC-S6 / RFC-C6-001 / C4-F9 / C7-F5** 판정에 따라 도구 표시명 4건(배선 추적·판독·배수 편성·부식 시험)을 `glossary.md` §3에 등재하고 §3-1(도구 id 6종 ↔ 표시명)을 신설했다. §3 기계 검사에 **등재 검사 4행**(도구 표시명 6종 · id 6종 · zone 토큰 5종 · 총 행 수 재도출)을 추가했다. **캐논 변경·항목 신설 없음** — §2 점검표는 43항목 그대로이며 verdict 변경도 없다. 이 판도 개정이므로 `cycle`·`supersedes:`·`status:`는 그대로다(RFC-Q2). 이 회차에 `campaign.json`은 입력으로 다시 돌리지 않았다(§3 4차 행의 해시·집계는 그 회차 값으로 유지).
+**6차(RFC-CX-013 ACK-b, 2026-09-11 · RFC-CX-012 [CARRIED] 이월 마감)**: RFC-CX-012 ACK-b(`term-audit-20260911.md` §ACK 2)가 후속 안건으로 남긴 `c6-b3.consequence` R3 문장 vs §7 B26 상한 긴장을 **A44 신설**로 등재하고, planner ACK-a의 이관(`c6-b4.consequence`로) + 신설 검증기 **K-07** PASS를 세계관 레인이 직접 재측정해 **pass**로 닫았다. 같은 회차에 timeline §7 B13(`c3-b2`) "공통 피크"→"공통 조위 피크" 이형 1셀 정정(timeline 말미 ACK 절). 항목 수 43 → **44**, verdict 변경 0(신설 1건 = pass). **캐논 변경 없음** — glossary 무변경, 유지 13행 개명·재정의 0. 이 판도 개정이며 `cycle`·`supersedes:`·`status:`는 그대로다(RFC-Q2). §3 기계 검사 표는 이번 회차에 다시 돌리지 않았다 — 입력 sha가 바뀌었으므로(ACK-a 교체) §3 표의 4차 값은 그 회차 값이며, 현행 검증기 출력은 A44 행이 인용한다(RFC-Q1: 고정 숫자 재기재 없음). §3 전 행 재실행은 §6 자기 인계 「집계 영수증 재실행」에 따라 다음 세계관 편집 회차 몫으로 남긴다(아래 §1 집계 주석).
 범위: 6법 ↔ 인물 5인 ↔ 저자 진실 연표 ↔ 플레이어 인지 연표 ↔ 33비트 상한 ↔ 결말 3갈래 ↔ DLC 독립성 ↔ 용어집 ↔ live `planning/campaign.json`.
 방법 [OBSERVED]: 문서·데이터 대조만 수행했다. 빌드·플레이 표본 0건이므로 도달 가능성·진행 막힘은 **문서상 불변식의 존재 여부**만 검사했고 실제 도달률은 측정하지 않았다.
 대상: `_workspace/current/worldview/{worldview-bible,timeline,glossary}.md`(2026-09-10 R4판), 대조 입력 `_workspace/archive/20260909-preproduction-c3/worldview/*`, live `planning/campaign.json`(sha `92301c0a…` · 121457 B, 2026-09-10 **R4 재측정**, 검증기 47/47 PASS), `synopsis/{chapter-beats,continuity}.md`, `planning/content-matrix.md`, `modeling/{pipeline,asset-manifest}.md`, `planning/campaign.meta.md`, `systems/{interaction-rules.md,game-ui-contract.json,system-specs/*}`, `production/decision-log.md` RFC-P3-008~015, `qa/c3-review.md`, `qa/defect-register.md`.
 
 ## 1. 집계
 
-집계 회차 [OBSERVED]: 아래 표는 **2026-09-10 4차 재측정(R4 · C3 종료 판정 묶음)** 기준이며, 손으로 세지 않고 §2 표에서 재도출했다. 실행한 명령(행 번호가 아니라 A01·A43 앵커를 쓰므로 편집 후에도 재실행 가능):
+집계 회차 [OBSERVED]: 아래 표는 **2026-09-11 6차 재도출(RFC-CX-013 ACK-b)** 기준이며, 손으로 세지 않고 §2 표에서 재도출했다. 실행한 명령(행 번호가 아니라 A01·A44 앵커를 쓰므로 편집 후에도 재실행 가능):
 
 ```sh
 F=_workspace/current/worldview/consistency-audit.md
-S=$(grep -n "^| A01 " $F | cut -d: -f1); E=$(grep -n "^| A43 " $F | cut -d: -f1)
+S=$(grep -n "^| A01 " $F | cut -d: -f1); E=$(grep -n "^| A44 " $F | cut -d: -f1)
 awk -v s=$S -v e=$E 'NR>=s && NR<=e' $F | awk -F'|' '{print $5}' | sed 's/ //g' | sort | uniq -c
-# → 40 pass · 3 **open** · violation 0 · 행 수 43  [OBSERVED 2026-09-10 R4]
+# → 41 pass · 3 **open** · violation 0 · 행 수 44  [OBSERVED 2026-09-11 6차]
+# (4차: 40 pass · 3 open · 0 violation · 43행 [OBSERVED 2026-09-10 R4])
 ```
 
-| verdict | 건수 | 의미 | 4차 전(3차 값) |
+| verdict | 건수 | 의미 | 6차 전(4차·5차 값) |
 |---|---|---|---|
-| pass | **40** | 문서 간 모순 없음 | 37 |
+| pass | **41** | 문서 간 모순 없음 | 40 |
 | violation | **0** | 현재 문서가 서로 모순. 소유 레인 수정 필요 | 0 |
-| open | **3** | 모순은 아니나 미정의·타 레인 소유로 남음 | 4 |
-| **합계** | **43** | | 41 |
+| open | **3** | 모순은 아니나 미정의·타 레인 소유로 남음 | 3 |
+| **합계** | **44** | | 43 |
 
-증감 내역 [OBSERVED]: A22 open→pass(RFC-W4) · A37 open→pass(synopsis 파생 완료) · **A42 신설 = open**(타 레인 표의 B# 파생 불일치) · **A43 신설 = pass**(zoneId 5값 용어집 등재). 늘어난 항목이 집계를 개선하지 않는다는 점을 남긴다 — 신설 2건 중 1건이 open이다.
+증감 내역 [OBSERVED]: **6차** — **A44 신설 = pass**(`c6-b3` R3 문장 §7 상한 정렬, RFC-CX-013 이관 + K-07). 4차 — A22 open→pass(RFC-W4) · A37 open→pass(synopsis 파생 완료) · **A42 신설 = open**(타 레인 표의 B# 파생 불일치) · **A43 신설 = pass**(zoneId 5값 용어집 등재). 4차에 늘어난 항목이 집계를 개선하지 않았다는 점(신설 2건 중 1건 open)은 그대로 남긴다. 6차 A44는 관찰 시점(RFC-CX-012 ACK-b)에 이미 planner 이월 안건으로 열려 있던 것을 이관 완료 뒤 등재한 것이라 open 이력 없이 pass로 들어온다 — 열린 상태의 기록은 `term-audit-20260911.md` §ACK 2에 있다.
+**§3 기계 검사 표 회차 주의 [OBSERVED, 6차]**: §3 표의 값은 **4차·R7 회차 값**이며 현행 live 입력(ACK-a 교체 후, 검증기 50검사)으로는 다시 돌리지 않았다. 현행 출력은 A44 행(K-06·K-07·summary·`--pairs`·`--t0`·EG)이 인용한다. 표 전 행 재실행은 §6 「집계 영수증 재실행」 인계대로 다음 세계관 편집 회차에 한다 — 이 문서가 4차 값을 현행으로 오독하지 않도록 여기 적어 둔다.
 
 차단 판단 [OBSERVED, 2026-09-10 4차 재측정]: **violation 0건**(3차에 이어 유지). 앞선 판이 유일한 violation으로 적었던 A33(= 폐기 6법 호명 문구가 `systems/system-specs/*` 5행에 살아 있다)은 systems 레인이 6곳(스펙 5행 + `interaction-rules.md` L101)을 정본으로 교체해 **실체가 사라졌다** — 재측정 `grep -rlE "<법 호명 문구 5종>" _workspace/current/systems` = **0파일 / 0행**(§3 「법 문구 유통 — 폐기(3차)」). 앞선 판의 violation 3건(A10·A11·A31)은 세션 P 본문 재기반으로 이미 해소됐다.
 남은 open **3건**은 **A25**(에필로그 조합 축약 · planner/synopsis) · **A29**(EN 표기 상표 조사 n=0 · product-manager) · **A42**(synopsis 표의 B# 파생 불일치 17행 · synopsis)이며 전부 **타 레인 소유 또는 미조사**로, 세계관 본문 내부의 모순이 아니다. 3차의 open 2건은 이번 회차에 닫혔다 — **A22**는 디렉터 판정 RFC-W4 + 검증기 K-06 PASS로, **A37**은 `synopsis/continuity.md` §5.1이 루트·종류가 모두 다른 쌍으로 재작성되고 검증기 `C-07`·`--pairs`(`beatsWithoutPair []`)가 그것을 뒷받침하면서 닫혔다. **A42는 세계관이 정의를 소유하고 타 레인이 파생을 아직 안 맞춘 경우**이므로 세계관 본문 수정으로는 닫히지 않는다.
@@ -88,6 +91,7 @@ awk -v s=$S -v e=$E 'NR>=s && NR<=e' $F | awk -F'|' '{print $5}' | sed 's/ //g' 
 | A41 | glossary §7 머리글 · 본 문서 §3 ↔ live `campaign.json` | 집계 영수증이 planner 수리 **전** 판(sha `775a984c…` / 단서 72 / `plate` 23)을 [OBSERVED]로 적는다 | pass | **해소(C3-F28) · R4에서 재이행**(입력이 다시 바뀌어 `92301c0a…`·121457 B로 교체, §3·§5).** 두 문서의 해시·크기·단서 수·`sourceType` 분포를 `fdabf1d4…`·120479 B / 73 / `log 27 · ledger 22 · plate 24`로 교체. `originCatalogSize`는 31로 불변이고 추가 단서의 `originId`(`brine-log-gate3`)가 이미 수록돼 있어 **C3-F13 수록 판정과 §7 카탈로그 본문은 영향받지 않는다** [OBSERVED, `missing=[]` 재실행] |
 | A42 | timeline §7-0 B# 정의 ↔ `synopsis/chapter-beats.md` 표 A · `synopsis/continuity.md` §5.1 | 같은 B#가 문서에 따라 다른 비트를 가리킨다(C3-F30) | **open** | **정의는 이번 회차에 고정됐다** — timeline §7-0이 한 줄 정의를 소유하고 표 33행이 그 정의와 **전건 일치**(재도출 명령 §3). planner `content-matrix.md` §3도 33행 **불일치 0**. 남은 것은 synopsis 두 표다 [OBSERVED 2026-09-10 R4 기계 대조]: `chapter-beats.md` 표 A **14행**(`c1-b1 c1-b2 c1-b3 c2-b1 c2-b2 c3-b3 c3-b4 c4-b1 c4-b2 c4-b3 c5-b3 c5-b4 c7-b2 c7-b3`), `continuity.md` §5.1 **3행**(K2 `c1-b2` · K3 `c1-b3` · K7 `c4-b2`, 추가로 K5 본문의 `c3-b3` 참조 1건). `chapter-beats.md` §0의 "B#는 synopsis가 유지하는 고정 라벨"·"두 체계" 주석은 C3-F30 판정으로 **폐기 대상**이다. 소유: **synopsis**(세계관 본문 수정으로 닫히지 않음) |
 | A43 | glossary §6-1 ↔ live `campaign.json` `zoneId` (C3-F22) | 데이터가 쓰는 구역 토큰 5종이 용어집에 없어 에셋·UI 이름의 출처가 불명확하다 | pass | **해소(2026-09-10 R4).** glossary **§6-1 신설** — `hub·gate·pump·dock·lowland` 5값에 KO/EN 정본 행을 연결하고, 값의 소유자가 `campaign.json`임을 명시(비트→구역 배정은 복제하지 않음). 재측정 [OBSERVED R4] `--pairs.zoneBeatCounts` = `{hub 15, gate 3, pump 6, dock 5, lowland 4}`(합 33), 검증기 `Z-01`·`Z-02` PASS. 모델러 **OPEN-M1 닫힘**: 오브젝트명 토큰은 `zoneId` 영문 토큰을 그대로 써도 되며 `Hub`는 유효, `Quay`↔`dock` 대응을 기록 |
+| A44 | live `c6-b3.consequence`·`inference` ↔ timeline §7 B26(`c6-b3`)/B27(`c6-b4`) 상한 | `c6-b3.consequence`의 R3 동기("1호기 고장 은폐"·"창고 보호=사후 설명")·R2 의도 재해석("거부 수단") 문장이 §7 B26 상한(순서 확정까지)을 한 비트 앞선다 — RFC-CX-012 ACK-b(`term-audit-20260911.md` §ACK 2) 관찰, §7 우선(RFC-W4 선례) 판정 후 planner 편집 회차로 이월 | pass | **해소 · closed (2026-09-11, RFC-CX-013 ACK-a 이관 + ACK-b 확인).** planner가 R3 동기·R2 재해석 문장을 `c6-b3.consequence`/`inference`에서 빼고 `c6-b4.consequence` 말미로 **이관**했다(전후 원문 `planning/field-classification-20260911.md` §RFC-CX-013 ACK §3). 세계관 레인이 직접 재측정 [OBSERVED 2026-09-11]: live `c6-b3.consequence` = "순서 앵커가 확정 항목으로 오른다 — 밸브가 봉인 완료보다 20분 앞서 돌았고 … 그 이유의 확정은 다음 비트로 넘어간다" (B26 문면 일치) · `c6-b4.consequence` 말미 "R3 확정. 실제 동기는 1호기 고장 은폐이고 \"창고 보호\"는 사후 설명이다. 동시에 R2가 재해석돼 무효 서명이 도연의 거부 수단이었음이…" (B27 문면 일치). 기계 검사: `node planning/validate-campaign.mjs` **K-07**(RFC-CX-013 R3 회수 위치 = c6-b4, 동기 문구 3종 `c6-b3` consequence·inference·objective 부재 · `c6-b4` 존재) = `PASS`, `actual {"c6-b3": false, "c6-b4": true}` · **K-06** 유지 `{"c4-b3": false, "c6-b4": true}` · summary `{checks 50, pass 50, fail 0, PASS}` · `--pairs` `beatsWithoutPair []`(독립쌍 17) · `--t0` 5/5 · `emit-evidence-graph` → `validate-evidence-graph` **18/18 PASS**. 완료 조건(ACK-b가 건 49→50 + EG 18 동시 PASS) 충족. 잔여(비차단, 세계관 소유 아님): `c6-b3.objective`/`completion`의 "이유·동기" 문장은 K-07 문구 검사 밖의 문장 긴장으로 planner가 디렉터 종합에 올렸다(ACK-a §6) — 본 항목 verdict에 영향 없음 |
 
 ## 3. 기계 검사 [OBSERVED · 입력 = live `campaign.json` sha `92301c0a…` · 121457 B · 검증기 47/47 PASS]
 

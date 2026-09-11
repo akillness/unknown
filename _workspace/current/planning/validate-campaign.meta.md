@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-11
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -28,7 +28,7 @@ describes: _workspace/current/planning/validate-campaign.mjs
 `qa/c3-review.md` C3-F11이 `campaign.meta.md` §4의 "검증 영수증"을 반증했다 — 그 표는 생성기 결과를 **손으로 옮겨 적은 것**이라 live 파일과 어긋났고, 실제로는 매체 2종 미달 1건·`tools: []` 5건이 "PASS"로 적혀 있었다.
 같은 실수가 반복되지 않도록 **주장을 실행 가능한 검사로 바꿨다.** 이제 §4는 사람이 쓴 표가 아니라 이 스크립트의 출력이다.
 
-## 3. 무엇을 검사하는가 (49건) [OBSERVED]
+## 3. 무엇을 검사하는가 (50건) [OBSERVED]
 
 | 군 | 검사 | 대표 id |
 |---|---|---|
@@ -43,12 +43,13 @@ describes: _workspace/current/planning/validate-campaign.mjs
 | 선행 조건 | `prerequisites` 참조 존재 · 전건이 앞선 비트 · **무순환**(DFS) | `P-01`~`P-03` |
 | 캐논 회귀 | 기록 불가 명제 문자열 부재 · `봉인 완료 접점` 존재 · **RFC-P3-013 시각**(H-1:24·H-1:04·H+0:12 존재 / H-1:20·H+0:10 부재) · **RFC-P3-012 공개 순서**(도연 = `t0-b1`, 한서린 = `c4-b2`) | `K-01`~`K-05` |
 | **의도 공개 시점 (R4 신설)** | **RFC-W4**: '방패가 아니라 잠금장치'가 `c4-b3`에 **부재**하고 `c6-b4`에 **존재** | `K-06` |
+| **R3 회수 위치 (RFC-CX-013 신설)** | **timeline §7 B27**: R3 동기 문구(`고장 은폐`·`창고 보호`·`거부 수단`)가 `c6-b3`의 `consequence`·`inference`·`objective`에 **부재**하고 `c6-b4`에 **전부 존재** — §7 상한 우선(RFC-W4 선례, worldview ACK-b) | `K-07` |
 
 **독립성 판정 방식** [OBSERVED]: `copiedFrom`을 재귀적으로 해석해 **루트 `originId`**를 구한다(순환 방지). 사본은 루트를 물려받으므로 "원본 × 그 사본"은 독립 쌍이 되지 못한다 — `worldview/worldview-bible.md` §3-bis.3 P3, `systems/interaction-rules.md` §3.
 
 ## 4. 무엇을 검사하지 **않는가** [OBSERVED]
 
-- **재미·난이도·도달 가능성**. 49/49 PASS는 JSON이 문서 계약과 자기 자신에 대해 무모순이라는 뜻뿐이다.
+- **재미·난이도·도달 가능성**. 50/50 PASS는 JSON이 문서 계약과 자기 자신에 대해 무모순이라는 뜻뿐이다.
 - **구역이 그 장면의 옳은 무대인지**. `Z-01`은 `zoneId`가 스테이지 구역 목록 **안에** 있는지만 본다. R7의 `Z-03`이 그 구멍을 **첫 하위과제 한 줄**까지 좁혔지만(C6-F17로 4비트 적발), 뒤 하위과제·`consequence`의 구역 이동과 **구역 명사를 아예 쓰지 않는 16비트**는 여전히 사람이 읽어야 한다.
 - **1단 힌트가 정말 방향만 주는지**. `H-04`는 **어휘 바닥**이다 — 자료명·정답값·정답 단정·조작 지시 네 부류의 어휘만 막는다. 금지 어휘를 피하면서 문장으로 정답 통찰을 흘리는 1단(`c3-b4`·`c4-b3`·`c4-b4`가 그랬다)은 잡지 못하며 그 판정은 QA 렌즈가 한다. **힌트의 실효성은 표본 n=0으로 미측정**이다.
 - **`--pairs`의 쌍이 플레이어에게 발견 가능한지**. 쌍의 존재는 문서 정합이며 실제 도달성은 표본 n=0.
@@ -310,6 +311,16 @@ node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/s
 ### 5.3.3 이 모드가 올리지 않는 것 [OBSERVED]
 
 Unity 실행 0회이므로 이 데이터가 런타임에 로드되는지, 완료 술어가 실제로 판정되는지는 **미측정**이다. 사람 표본 n=0 이므로 힌트 실효성·카메라 프레이밍 가독성·조작감도 미측정이다. `--t0` PASS 는 **문서·데이터 정합**일 뿐 어떤 G 게이트도 올리지 않는다.
+
+## 5.4 RFC-CX-013 개정 — `K-07` 신설 (2026-09-11) [OBSERVED]
+
+| 무엇 | 왜 | 근거 |
+|---|---|---|
+| `K-07` 신설 | R3 회수(동기 「1호기 고장 은폐」·「창고 보호」=사후 설명·R2 「거부 수단」)가 `c6-b3`(B26)로 되돌아오는 회귀를 막는다. `c6-b3`은 순서 앵커까지만 말한다 | **RFC-CX-013** (worldview ACK-b: §7 상한 우선, RFC-W4 선례) · `timeline.md` §7 B26·B27 |
+
+검사 꼴은 `K-06`과 같다(`EXPECT.r3Phrases`·`r3AbsentBeat`·`r3AbsentFields`·`r3PresentBeat`). 부재 판정은 `c6-b3`의 **`consequence`·`inference`·`objective` 세 필드만** 본다(단서·힌트·completion은 서류 기제 — "사유란이 봉인 완료 시각 기준으로 심사철에 옮겨 적힌다" — 를 말할 수 있고 그것은 동기 문구가 아니다). 존재 판정은 `c6-b4` 비트 전문에서 세 문구 **전부**.
+
+음성 시험 [OBSERVED · 재현 가능]: 교체 전 campaign(`git show fc737c1:_workspace/current/planning/campaign.json` → 저장소 밖 임시 경로, 위치 인자로 전달)에 같은 검증기를 돌리면 `{"checks":50,"pass":49,"fail":1,"verdict":"FAIL"}` · `K-07 FAIL {"c6-b3":true,"c6-b4":false}` · exit 1. live campaign은 `K-07 PASS {"c6-b3":false,"c6-b4":true}`. 검사를 데이터에 맞춰 사후 조정하지 않았다는 뜻이다. `summary.checks`는 `checks.length` 자동 집계라 49→50에 상수 갱신은 없다(§3 표제·§4 첫 줄의 산문만 갱신).
 
 ## 6. 미실행 [OBSERVED]
 

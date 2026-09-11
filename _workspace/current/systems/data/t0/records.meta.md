@@ -23,10 +23,10 @@ node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/curren
 | 항목 | 값 |
 |---|---|
 | 파생 | `markdown-parse+rule` |
-| sha256 | `fc660c8a2a8ed461a1b7ddc6befcfe0bf0963c9c50f72df31b18ffaceae75976` |
+| sha256 | `2bb67911e6e4e2720c75dd456058f34c2072a63a4b64780e1fbc28b0c7a63683` |
 | 바이트 (`wc -c`) | 70694 |
 | 행 수 | 5 |
-| 검증기 판정 | `verdict PASS · checks 49 · fail 0` (exit 0) |
+| 검증기 판정 | `verdict PASS · checks 50 · fail 0` (exit 0) |
 
 > 해시·바이트는 저작 원본이 바뀌면 달라진다. 인용할 때 옮겨 적지 말고 생성기를 다시 돌린다(RFC-Q1).
 
@@ -34,7 +34,7 @@ node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/curren
 
 | 파일 | sha256(앞 12) |
 |---|---|
-| `planning/campaign.json` | `87623a68ff27…` |
+| `planning/campaign.json` | `044780ef4349…` |
 | `synopsis/t0-records.md` | `d586adf86cd1…` |
 | `systems/data-schemas/tools.md` | `f7ee4e1b854f…` |
 | `systems/data-schemas/zones.md` | `0c166c80b9b5…` |

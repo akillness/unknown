@@ -9,6 +9,7 @@ owner: game-worldview-architect
 # 세계관 용어 감사 — 사용자-노출 문자열 (2026-09-11)
 
 **제자리 갱신 (2026-09-11 · RFC-Q2 · RFC-CX-012 ACK-b) — 등재 완료 항목** [OBSERVED]: aside 협의(`production/term-decision-aside-20260911.md` 최종 선정 표)와 RFC-CX-012를 거쳐 `glossary.md` **R8 개정**으로 다음 항목이 등재 해소됐다 — **A-01**(판독대 §2) · **A-02**(조습기로 개칭 §2) · **A-04**(구역 지도 §2) · **A-06**(서명 요건표/요건표 §2) · **A-07**(회로 지도 정의 확장: "기록 밖"·"기록 억제" 2상태) · **A-08**(1호기 §2) · **A-15**(§7 머리글 파생 규칙: 등재명사+「철」, 수량 「N점」) · **B-01**(확정 전 보존 §3) · **B-02**(연습 서식 §3) · **B-03**(연습 압착 §3) · **B-15**(복귀 지점 §3). 나머지 항목의 **문자열 교체**는 planner(campaign, ACK-a 선결)·systems(UI 계약) 레인 소관으로 이 문서가 수행하지 않는다. 캐논 대조 결과는 말미 `## RFC-CX-012 ACK` 절.
+**제자리 갱신 2 (2026-09-11 · RFC-Q2 · RFC-CX-013 ACK-b) — 이월 항목 마감** [OBSERVED]: RFC-CX-012 [CARRIED] 줄(`production/decision-log.md` 「RFC-CX-012 종합 판정」)이 worldview에 넘긴 3건 — ① timeline §7 B13 "공통 피크" 이형 · ② `c1-b3` 「훈련」 3건 + 저작 주석 22건 후속 감사 · ③ `c6-b3.consequence` R3 정렬 — 의 처리 결과는 말미 `## RFC-CX-013 ACK` 절. ②는 planner 레인(ACK-a)이 해소하고 이 문서는 건수만 인용한다.
 
 ## 0. 지위 · 입력 · 스캔 범위
 
@@ -256,6 +257,7 @@ owner: game-worldview-architect
 1. 감사 시점(2026-09-11 스캔)에는 draft·전 파일 무변경이었다. **등재 완료 [OBSERVED, 같은 날 R8]**: term-decision §4 대기 목록 전부가 `glossary.md` R8 개정으로 등재됐다(추가만 — 삭제 0행·기존 행 개명 0건, 「회로 지도」 정의 확장 1행만 제자리 수정, git diff로 확인). campaign.json·타 레인 파일은 여전히 무변경.
 2. 잔여 RFC 안건 처리 현황: **(a) completion/objective 필드 재분류(B-11·B-12·B-14 선결)** — 해소: planner 회신 **ACK-a**(`planning/field-classification-20260911.md`, 2026-09-11)로 `completion` = 검증 술어(조건 서술), `title/objective/subtasks/hints/recovery/clues.description` = 표시 문자열로 확정. 파급: B-11 위반 아님(문자열 보존) · B-12는 표시 필드 4건만 교체 · B-14는 objective 9곳 제거. **(b) A-10 캐논 폭** — 해소: term-decision 디렉터 판정으로 §4 정본 「공통 조위 피크」 유지, 노출 문자열이 정본을 따른다(만조 고정 캐논 개정 없음). 실제 적용형은 「조위 피크」(문맥상 '공통' 확정 뒤 축약, glossary R9 §4 정의문에 축약 허용 명시). **(c) 신설 등재 후보** — 해소: R8 등재 완료(위 갱신 주석 목록) + R9 §3 3행(보호 지정·공통 종결부·종결부 후일담)·§7 어간 파생 면제 규칙(역대조·확대 판독) 등재(QA D-CX012-03 디렉터 판정).
 3. campaign.json 문자열 수정은 planner 레인 소유이며 **ACK-a로 이번 사이클 내 교체 완료**됐다 [OBSERVED, `planning/field-classification-20260911.md` §3·§ACK: 고유 위치 필드 62곳, 감사 스캔 범위 7필드 잔존 0]. QA 독립 재검증(`qa/rfc-cx-012-review.md` R2-1)이 표시 필드 잔존 0건을 재확인했다. 이 문서는 여전히 campaign.json을 편집하지 않는다.
+4. **이월 항목 closed (2026-09-11 · RFC-CX-013)** [OBSERVED]: RFC-CX-012 [CARRIED] 줄의 저작 주석 잔존 22건(`action`·`consequence`·`inference`·`authorEstimateBasis` 4필드, 화면 비노출)과 `c1-b3` 「훈련」 3건(title·completion·clue)은 **RFC-CX-013에서 planner가 해소**했다 — 실측 **22 필드-히트 / 23 어휘**(`c7-b4.consequence` 「씬」 2회) 전부 교체, 4필드 × 12군 잔존 **0**, campaign.json 전문 잔존 0(「훈련」 포함) · `c1-b3.title` 「봉인대 연습: 필압과 완료 접점」 개명 포함 3건 교체(`planning/field-classification-20260911.md` §RFC-CX-013 ACK §1·§2). 이 문서는 건수만 인용하고 campaign.json을 편집하지 않는다. 처리 결과 총괄은 말미 `## RFC-CX-013 ACK`.
 
 ---
 
@@ -272,7 +274,7 @@ owner: game-worldview-architect
 | R2-effect | `c1-b2`·`c1-b3`·`c1-b4` → `c4-b3` | §7 B18(`c4-b3`) "R2 회수(효력)" · RFC-W4 "효력 판정은 c4-b3까지" 문면 일치 | **일치 — ack** |
 | R2-intent | `c1-b2`·`c1-b3`·`c1-b4`·`c4-b4` → `c6-b4` | §7 B19(`c4-b4`) "R2 보강" · B27(`c6-b4`) "R2 회수(의도)" · §9 OPEN-4 해소(RFC-W4: 의도 확정은 `c6-b4`) 문면 일치 | **일치 — ack** |
 | R3 | `c2-b1`·`c2-b4`·`c3-b1` → `c6-b4` | §7 B08 "R3 원거리 씨앗" · B11 "R3 씨앗" · B12 "R3 씨앗" · B27 "R3 회수". overlay가 B24/B25의 "R3 회수 준비"를 씨앗에서 제외한 것도 §7 문면과 정합 | **일치 — ack** |
-| order-anchor | `c1-b3`·`c3-b3` → `c6-b3` | §8 표 "씨앗은 B06(`c1-b3`) 봉인대 훈련, 기준은 B14(`c3-b3`) 반증 시험, 회수 B26(`c6-b3`)" · §7 B06 "순서 앵커 씨앗" · B14 "B26으로 이월" · B26 "순서 앵커 회수" | **일치 — ack** |
+| order-anchor | `c1-b3`·`c3-b3` → `c6-b3` | §8 표 "씨앗은 B06(`c1-b3`) 봉인대 연습, 기준은 B14(`c3-b3`) 반증 시험, 회수 B26(`c6-b3`)"(RFC-CX-013에서 「봉인대 훈련」→「봉인대 연습」으로 제자리 갱신 — `c1-b3.title` 개명 추종) · §7 B06 "순서 앵커 씨앗" · B14 "B26으로 이월" · B26 "순서 앵커 회수" | **일치 — ack** |
 
 **비결함 관찰 2건** (counter 아님, 기록만):
 - ① §4 R3 행은 씨앗을 "3장: 성찬 대장…"으로만 요약하지만 §7은 2장 씨앗 2건(B08 원거리·B11)을 추가로 갖는다 [OBSERVED]. §7이 비트 단위 정본이고 §4는 반전 단위 요약 표다 — overlay는 §7 전건과 일치하므로 결함 아님.
@@ -284,7 +286,25 @@ owner: game-worldview-architect
 - [OBSERVED] §7 상한: B26(`c6-b3`)은 **순서 확정까지**(밸브가 봉인 완료보다 20분 앞서 돌았다, 씨앗/회수 열 "순서 앵커 회수"). R3 회수와 R2 의도 재해석은 **B27(`c6-b4`)** 소유다. 즉 `consequence`의 "R3 확정"·"R2 재해석" 두 주장은 §7 기준 한 비트 이르다.
 - **판정 — §7 상한 우선** [INFERENCE, RFC-W4 선례 적용]: RFC-W4(§9 OPEN-4)가 같은 구조의 충돌(`c4-b3` 의도 문장 vs 연표)에서 "연표가 이긴다"로 판정하고 planner가 문장을 이관해 해소한 선례를 그대로 적용한다. 캐논은 §7이며 `c6-b3`의 R3/R2 확정 서술이 따라와야 한다.
 - **처분 — 즉시 해소가 아니라 후속 consistency-audit 안건으로 유지**. 사유 3건: ① `consequence`·`inference`는 본 감사의 노출 문자열 7필드 스캔 범위 밖이며, ACK-a 분류표가 이 필드들을 **저작 주석(비감사 대상)**으로 확정했다 — 대사 상한 위반은 아니고 데이터-캐논 정렬 문제로 심각도가 내려간다. ② campaign.json은 planner 소유이며 ACK-a 교체 범위는 표시 필드·completion 통일 건에 한정됐다 — 저작 주석 필드는 손대지 않았다 [OBSERVED, §E 3 · QA R2-1 주석 필드 잔존 22건 관찰과 정합]. ③ 수정 형태(문장을 `c6-b4`로 이관 vs `consequence`를 "순서 확정"으로 한정)는 RFC-W4 때처럼 planner 편집 회차의 판정 사안이다. 차기 G1 감사(`worldview/consistency-audit.md`)에 안건으로 등재하고, 그 회차는 validate-campaign 49검사 + validate-evidence-graph 18검사 동시 PASS를 완료 조건으로 한다.
+- **후속 처리 (2026-09-11, RFC-CX-013) [OBSERVED]**: 위 처분대로 planner가 **이관**을 택해 R3 동기·R2 재해석 문장을 `c6-b3.consequence`/`inference`에서 빼고 `c6-b4.consequence` 말미로 옮겼고, 검증기에 **K-07**(`c6-b3` 부재 · `c6-b4` 존재)을 신설했다. 세계관 재측정 K-07 `PASS` · 50/50 · EG 18/18 — `consistency-audit.md` **A44 = pass**로 마감. 위 두 [OBSERVED] 인용문은 관찰 시점 원문이며 현행 문면은 A44 행이 인용한다.
 
 ### 3. ACK 표명
 
 worldview 레인은 RFC-CX-012 (b)항을 **ack**한다 — 오버레이 6팩트 전수 일치(counter 0), 등재 대기 목록 R8 반영 완료. 유지 13행(§C) 침해 0 재확인 [OBSERVED]: R8 신설 9행·확장 1행 어디에도 §C 명사의 개명·재정의 없음(「연습 압착」·「확정 전 보존」은 잠금 쌍 「확정·연습」을 어간으로 재사용하는 강화 방향이다).
+
+---
+
+## RFC-CX-013 ACK — 이월 항목 마감 (ACK-b, worldview 레인, 2026-09-11)
+
+RFC-CX-012 [CARRIED] 줄(`production/decision-log.md` 「RFC-CX-012 종합 판정」)이 넘긴 항목의 처리 결과. 기준 커밋 `fc737c1`(main). 편집 파일: `worldview/timeline.md`(§7 B13 1셀 · §8 인용 1행 · 말미 ACK) · `worldview/consistency-audit.md`(A44 신설 · §1 재도출 · 6차 고지) · 본 문서. `glossary.md`·`unity/**`·`assets/**`·`production/decision-log.md`·타 레인 파일 무접촉.
+
+| 이월 항목 | 소유 | 처리 | 상태 |
+|---|---|---|---|
+| timeline §7 B13 "공통 피크" 이형 | worldview | `c3-b2` 셀 1개 "공통 피크 3개"→"공통 조위 피크 3개"(glossary §4 정본 · R9 축약 규칙은 「조위 피크」이지 「공통 피크」가 아님). `git diff -U0` 1행. 다른 셀 무접촉 | **closed** |
+| `c6-b3.consequence` R3 정렬 | planner(편집) / worldview(감사) | planner 이관 + K-07 신설 → 세계관 재측정 K-07 `PASS` `{c6-b3:false, c6-b4:true}` · K-06 유지 · 50/50 · `--pairs` `beatsWithoutPair []` · `--t0` 5/5 · EG 18/18 → `consistency-audit.md` **A44 pass** | **closed** |
+| 저작 주석 잔존 22건 + `c1-b3` 「훈련」 3건 | planner | RFC-CX-013에서 planner가 해소 — 22 필드-히트/23 어휘 교체, 잔존 0 · `c1-b3` 3건 교체(§E 4) | **closed** (worldview는 건수 인용만) |
+| §8 인용 「봉인대 훈련」→「봉인대 연습」 (planner 넘김) | worldview | timeline §8 표 1행 · 본 문서 §ACK-012 order-anchor 행 인용 갱신. §B-02·B-03의 감사 시점 원문(「훈련 화면」·「훈련 모드」·「봉인대 훈련대」)은 심사 기록이라 보존 | **closed** |
+
+**캐논 대조 [OBSERVED]**: glossary 무변경. 유지 13행(§C) 개명·재정의 0 — B13 정정은 §C 「공통 조위 피크」의 *정본 복원*이지 변경이 아니다. 경계 관찰(비결함): glossary §2 「정합기」 정의문의 "공통 피크" 축약형은 정의문 내부 표기라 손대지 않고 다음 glossary 개정 후보로만 남긴다(timeline ACK 절과 동일 기록).
+
+worldview 레인은 RFC-CX-013 (b)항을 **ack**한다 — 이월 4항목 전부 closed, open 0.

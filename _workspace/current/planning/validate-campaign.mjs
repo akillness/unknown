@@ -66,6 +66,12 @@ const EXPECT = {
   intentPhrase: '방패가 아니라 잠금장치',
   intentAbsentBeat: 'c4-b3',
   intentPresentBeat: 'c6-b4',
+  // RFC-CX-013 R3 회수 위치: 동기(1호기 고장 은폐·창고 보호=사후 설명)와 R2 의도 재해석은 c6-b4(=timeline §7 B27)에서만 확정된다.
+  // c6-b3(=B26)은 순서 앵커까지만 말한다 — §7 상한 우선(RFC-W4 선례, worldview ACK-b).
+  r3Phrases: ['고장 은폐', '창고 보호', '거부 수단'],
+  r3AbsentBeat: 'c6-b3',
+  r3AbsentFields: ['consequence', 'inference', 'objective'],
+  r3PresentBeat: 'c6-b4',
 };
 
 // ── 유틸 ──────────────────────────────────────────────────────────────
@@ -375,6 +381,20 @@ const intentExpected = { [EXPECT.intentAbsentBeat]: false, [EXPECT.intentPresent
 const intentActual = { [EXPECT.intentAbsentBeat]: intentAt(EXPECT.intentAbsentBeat), [EXPECT.intentPresentBeat]: intentAt(EXPECT.intentPresentBeat) };
 check('K-06', `RFC-W4 의도 문장 위치 ('${EXPECT.intentPhrase}' — ${EXPECT.intentAbsentBeat} 부재 · ${EXPECT.intentPresentBeat} 존재)`,
   eq(intentActual, intentExpected), intentExpected, intentActual);
+
+// RFC-CX-013: R3 회수 위치 = c6-b4 (timeline §7 B27). c6-b3(B26)의 consequence·inference·objective에는
+// R3 동기 문구가 없어야 하고, c6-b4에는 있어야 한다. K-06과 같은 꼴 — 위치를 데이터에 맞춰 조용히 옮기면 FAIL.
+const r3FieldText = (id) => {
+  const b = beats.find((x) => x.id === id) ?? {};
+  return EXPECT.r3AbsentFields.map((f) => String(b[f] ?? '')).join('\n');
+};
+const r3Expected = { [EXPECT.r3AbsentBeat]: false, [EXPECT.r3PresentBeat]: true };
+const r3Actual = {
+  [EXPECT.r3AbsentBeat]: EXPECT.r3Phrases.some((p) => r3FieldText(EXPECT.r3AbsentBeat).includes(p)),
+  [EXPECT.r3PresentBeat]: EXPECT.r3Phrases.every((p) => beatText(EXPECT.r3PresentBeat).includes(p)),
+};
+check('K-07', `RFC-CX-013 R3 회수 위치 = ${EXPECT.r3PresentBeat} (timeline §7 B27) — 동기 문구 ${JSON.stringify(EXPECT.r3Phrases)}: ${EXPECT.r3AbsentBeat} ${EXPECT.r3AbsentFields.join('·')} 부재 · ${EXPECT.r3PresentBeat} 존재`,
+  eq(r3Actual, r3Expected), r3Expected, r3Actual);
 
 // ── 10. 구역 파생 집계 (content-matrix §1·§3·§4.3의 단일 출처) ────────
 const zoneBeatCounts = EXPECT.zoneIds.reduce((o, z) => { o[z] = beats.filter((b) => b.zoneId === z).length; return o; }, {});
