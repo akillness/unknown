@@ -1,0 +1,119 @@
+{
+  "schema": "unknown.m5.native-acceptance.v1",
+  "recordedAt": "2026-09-11T07:14:56.869Z",
+  "status": "PASS-bounded-native-smoke",
+  "appFingerprint": "18066f11cd0a556758916d9c654e7b293d44cfc7b26cb0e683783090ca92e629",
+  "profileRuntimeApproved": false,
+  "launchOverride": "--m5-direction-diagnostic",
+  "renderSize": "1280x720",
+  "windowSizePoints": "640x392 (including title bar)",
+  "fixtureScope": "Dedicated repository evidence save directories; no user save used",
+  "checks": [
+    {
+      "id": "N01",
+      "result": "PASS",
+      "scope": "Diagnostic native1280x720",
+      "observation": "Fresh intro with150% text and reduced motion shows all captions and start/settings buttons.",
+      "screenshot": "native-fresh/intro-reduced-150.png",
+      "screenshotSha256": "008c72051364c64ac4f4390a444519e971d85f9128efb2a90b4b2f21ad15a4cc"
+    },
+    {
+      "id": "N02",
+      "result": "PASS",
+      "observation": "Pointer settings at100% and150% opens; Escape returns to static intro. Reduced-motion intro remains until explicit exit."
+    },
+    {
+      "id": "N03",
+      "result": "PASS",
+      "observation": "Fresh intro/settings did not create save.json."
+    },
+    {
+      "id": "N04",
+      "result": "PASS",
+      "observation": "Existing v2 save continued without intro. After first observation, humidity2 trial is allowed and direction row highlights Trial; lower mask remains.",
+      "screenshot": "native-v2/trial-after-one-observation.png",
+      "screenshotSha256": "3804abdae4deb727a63dad8d3c9733d899997f9cff8b5fdea6b3affacc87862d"
+    },
+    {
+      "id": "N05",
+      "result": "PASS",
+      "observation": "Completed v3 save continued without intro. Record saved state and lower unresolved region retained;57commands and entire save SHA unchanged.",
+      "screenshot": "native-v3/completed-record-restart.png",
+      "saveSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+      "screenshotSha256": "807b59181397e6c03d7304256c79af0cded6084af65cf45345a45eb6300c2df7"
+    }
+  ],
+  "observations": [
+    {
+      "id": "N-OBS-01",
+      "state": "NOT-REPRODUCED",
+      "detail": "One click after shell screenshot only focused the150% intro and Return startedplay; repeated active-window100%/150% pointer settings succeeded. Possible focus-only activation is an inference, not a source defect."
+    }
+  ],
+  "limits": [
+    "Agent-operated native smoke, not human playtest",
+    "No performance or physical gamepad measurement",
+    "Diagnostic checks remain separately bound to their earlier app fingerprint; final checks use ordinary approved build"
+  ],
+  "finalOrdinaryBuild": {
+    "fingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736",
+    "appPath": "/Users/jangyoung/orca/unknown/unity/Unknown/Builds/M5-mac/Unknown.app",
+    "runtimeApproved": true,
+    "diagnosticOverride": false,
+    "integratedBase": "2ece5174dde8a973752b38a1fd16598d6d27dfd5",
+    "tests": {
+      "editMode": {
+        "file": "editmode-integrated-final.xml",
+        "sha256": "1973275b04f501c4c1025088097a9105013c4e9b63788858271b09455489c7f1",
+        "result": "Passed",
+        "total": 36,
+        "passed": 36,
+        "failed": 0,
+        "skipped": 0
+      },
+      "playMode": {
+        "file": "playmode-integrated-final.xml",
+        "sha256": "c33bbe3a546844daf89eb6d1fddde308a17c97af87a532f37f2757b8f961fbda",
+        "result": "Passed",
+        "total": 54,
+        "passed": 54,
+        "failed": 0,
+        "skipped": 0
+      },
+      "boot": {
+        "file": "boot-integrated-final.xml",
+        "sha256": "f3852e5b05a16ce0c7e514867927656135fb6d121d39d43167ff0ea6556f196d",
+        "result": "Passed",
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "checks": [
+      {
+        "id": "F01",
+        "result": "PASS",
+        "observation": "Natural six-second intro reached t0-b1 in an empty fixture without save.json.",
+        "screenshot": "native-final-fresh/intro-recording-frame.png",
+        "screenshotSha256": "89315bc49cde81ca980ede8d36ac548afa2756d95ad15d5825c1031d6a057357"
+      },
+      {
+        "id": "F02",
+        "result": "PASS",
+        "observation": "Existing v2 save bypassed intro. Actual low-humidity investigation reached an accepted record with54 commands and one ConfirmSignature; observation/trial/record direction and lower mask retained.",
+        "screenshot": "native-final-v2/saved-record.png",
+        "saveSha256": "c1ca60aca948d8e2008165796f25b7c1978135a6de860b4eb12f18d292162433",
+        "screenshotSha256": "19ede8feb539cfba642ec1dd204da25e757fac9cf7e8f342032ffb316c584485"
+      },
+      {
+        "id": "F03",
+        "result": "PASS",
+        "observation": "Canonical workspace app reopened completed v3 fixture without intro;57 commands and exact save bytes unchanged.",
+        "screenshot": "native-final-v3/completed-record-restart.png",
+        "saveSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+        "screenshotSha256": "414cbb85a5cdaac230a35149af7e692c5acc584000437bad1a77fabd9b557a6f"
+      }
+    ]
+  }
+}

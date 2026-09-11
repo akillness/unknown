@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "intro-gameplay-m5-code-and-targeted-test-review",
+  "reviewedAt": "2026-09-11T07:34:02Z",
+  "status": "current",
+  "isolatedProject": "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown",
+  "baseline": "6514f549ac7b2e71846005c75a4ff9227882c47c",
+  "method": "Independent read-only branch trace of six implementation files, bounded WatchInput dependency and 11 targeted PlayMode test methods; QA did not launch Unity or execute behavior tests; follow-up independently parsed diagnostic XML and inspected three director-captured native screenshots, without running Unity",
+  "snapshots": {
+    "initial": [
+      {
+        "path": "App/T0OpeningSession.cs",
+        "sha256": "d7ec101a0427908d8fa0e2973eff2f1d6fcd70ad082481ce89825668b48f5c55"
+      },
+      {
+        "path": "UI/T0OpeningInterface.cs",
+        "sha256": "6e2545c6da86d09fbe3bf17b411779cfed418a4e9432934397e50fa12b659291"
+      },
+      {
+        "path": "Presentation/M5DirectionProfile.cs",
+        "sha256": "0bc65181b4c3f07587e9119c18e53add85bec9e2ad8add5d35ddd9a4a91d159c"
+      },
+      {
+        "path": "App/T0GameSession.cs",
+        "sha256": "58e567dba307c5107e02eed74101fd22f6f253beed71ac3e4189fa390d723509"
+      },
+      {
+        "path": "App/C1SignatureGameSession.cs",
+        "sha256": "c756f0c1797d08c119390518aa4341f1db6d2abe68a993241b8ceb1ca772106b"
+      },
+      {
+        "path": "UI/T0Interface.cs",
+        "sha256": "636646273bb00d4a4ec9c1bbd3b6aa244ff8e9cb44b85fb89c80f302fc42afcb"
+      }
+    ],
+    "afterSystemsFirstFix": [
+      {
+        "path": "App/T0OpeningSession.cs",
+        "sha256": "8195dd8c5a87a9f705ab9ef0d9196d2d66c47ac2807d1224b659a8ba67e8d81a"
+      },
+      {
+        "path": "UI/T0OpeningInterface.cs",
+        "sha256": "e08efbef9e0c6dbcbfada7ea71e421972fc10c670525126e0034a5e8ef8c0c22"
+      },
+      {
+        "path": "Presentation/M5DirectionProfile.cs",
+        "sha256": "0bc65181b4c3f07587e9119c18e53add85bec9e2ad8add5d35ddd9a4a91d159c"
+      },
+      {
+        "path": "App/T0GameSession.cs",
+        "sha256": "e3e8e2e8d4b42670344d2f13d1a6961820602774cec272940f07b35a62b3107a"
+      },
+      {
+        "path": "App/C1SignatureGameSession.cs",
+        "sha256": "c756f0c1797d08c119390518aa4341f1db6d2abe68a993241b8ceb1ca772106b"
+      },
+      {
+        "path": "UI/T0Interface.cs",
+        "sha256": "4a0a6b13dfb2503556ec0626bdf15395521ef47655cf9336119251e2fa10c5d7"
+      }
+    ],
+    "afterSystemsFinalSourceFix": [
+      {
+        "path": "App/T0OpeningSession.cs",
+        "sha256": "0c8b8d9de8dc974e02ca310bc752978d35aa536e0f3b0d1b95db0965630fb23d"
+      },
+      {
+        "path": "UI/T0OpeningInterface.cs",
+        "sha256": "e08efbef9e0c6dbcbfada7ea71e421972fc10c670525126e0034a5e8ef8c0c22"
+      },
+      {
+        "path": "Presentation/M5DirectionProfile.cs",
+        "sha256": "0bc65181b4c3f07587e9119c18e53add85bec9e2ad8add5d35ddd9a4a91d159c"
+      },
+      {
+        "path": "App/T0GameSession.cs",
+        "sha256": "ca8d3a8ed9bda57aa2925afcdad1402e8fcb5509b0d4d1d4f343c7ae5b7ff8f8"
+      },
+      {
+        "path": "App/C1SignatureGameSession.cs",
+        "sha256": "3e3727260fd64ee651d0b94b837e90a6195c10f9e6e84177cac9c9b28822cf48"
+      },
+      {
+        "path": "UI/T0Interface.cs",
+        "sha256": "4a0a6b13dfb2503556ec0626bdf15395521ef47655cf9336119251e2fa10c5d7"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "M5-C01",
+      "severity": "S2",
+      "status": "FIXED; integrated regression verified",
+      "owner": "systems",
+      "title": "Escape/back did not close intro",
+      "firstSource": "App/T0GameSession.cs:111; Watch.Cancel registration:51",
+      "repro": "Enter intro without overlay; invoke Escape/existing back. Initial Back only closed tool and re-rendered.",
+      "sourceFollowup": "Back handles OpeningActive and finishes it; settings-back clears overlay and returns to paused intro. Final Render provides a Back toolbar before start and during intro settings.",
+      "testsRequired": [
+        "Escape/back skip once",
+        "settings-back returns to same intro",
+        "held input does not activate underlying game"
+      ],
+      "coverage": [
+        "SkipFirstFrameAndEscapeConsumeInput: first-frame skip and actual keyboard Escape from replay",
+        "SettingsPauseAndReducedMotionShowAllLabelsAt150Percent: pre-start/settings Back and paused timer"
+      ],
+      "gap": "Integrated held-cut/timeout and synthetic focus/pause-clock regressions pass. Physical focus-held-input remains unmeasured."
+    },
+    {
+      "id": "M5-C02",
+      "severity": "S2",
+      "status": "FIXED; integrated regression verified",
+      "owner": "systems",
+      "title": "Missing image bypassed required readable fallback",
+      "firstSource": "App/T0OpeningSession.cs:23; UI/T0Interface.cs:69",
+      "repro": "Approved/diagnostic profile present but openingImage null. Initial entry called StartGame; opening UI required non-null texture.",
+      "sourceFollowup": "ShowOpening is independent of texture; null image leaves the solid panel and same action/copy path.",
+      "testsRequired": [
+        "null image displays caption and skip/settings",
+        "skip from fallback preserves game/save state"
+      ],
+      "coverage": [
+        "MissingImageKeepsReadableInkFallbackAndSkip: null texture, solid panel, skip, labels, initial state/head/no save"
+      ],
+      "gap": "Integrated150% caption fit passes; diagnostic150% and final ordinary intro screenshots are visible. Other aspect ratios/corrupt profile are not separately certified."
+    },
+    {
+      "id": "M5-C03",
+      "severity": "S2",
+      "status": "FIXED; integrated regression verified",
+      "owner": "systems",
+      "title": "Tool replay drops arrow/D-pad navigation",
+      "source": "App/T0GameSession.cs:139,154; Input/WatchInput.cs:42-44",
+      "repro": "While a T0 reader/circuit tool remains open, enter settings and replay intro. Render preserves ToolPanel=true while overlay=null. WatchInput routes keyboard arrows/D-pad to Adjust, whose OpeningActive guard returns.",
+      "expected": "Opening/replay supplies an interface-navigation input context while retaining underlying tool for return.",
+      "sourceFollowup": "Render sets Watch.ToolPanel=tool!=null&&!OpeningActive. Opening therefore owns arrow/D-pad navigation while the underlying tool remains preserved for replay return.",
+      "coverage": [
+        "ReplayFromToolKeepsKeyboardNavigationAndReturnContext: ToolPanel false, keyboard Down selects settings, replay returns settings then reader, journal head unchanged"
+      ],
+      "gap": "Physical D-pad remains unmeasured; shared routing branch is verified in source."
+    },
+    {
+      "id": "M5-C04",
+      "severity": "S3",
+      "status": "FIXED; integrated regression verified",
+      "owner": "systems",
+      "title": "Cached intro eligibility does not follow save-slot changes",
+      "source": "App/T0OpeningSession.cs:18-24; App/T0GameSession.cs:240,275",
+      "repro": "Initialize with fresh primary store, choose existing recovery slot from title settings, then Start: cached openingEligible can still force intro. Conversely an explicitly new recovery slot can retain previous ineligible/finished flags.",
+      "expected": "Recompute/cancel/reset opening policy at selected/new/retried slot transitions using the actual restored/new state.",
+      "sourceFollowup": "ConfigureOpening cancels prior opening/replay and clears finished state; selected existing and retry paths pass false, explicitly new recovery slot resets journal/tool/document/start and passes true.",
+      "coverage": [
+        "SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro: existing bypass, new fresh intro and old slot bytes preserved"
+      ],
+      "gap": "Recovery-retry path is source-reviewed but not exercised in the 11 targeted methods."
+    },
+    {
+      "id": "M5-C05",
+      "severity": "S3",
+      "status": "FIXED; integrated regression verified",
+      "owner": "systems",
+      "title": "Intro settings offers an enabled no-op saved-slots action",
+      "source": "App/T0GameSession.cs:108,250",
+      "repro": "During intro open settings and activate saved-slots. OpenOverlay rejects any id except settings while OpeningActive, silently retaining settings.",
+      "expected": "Hide/disable unsupported saved-slot action with a reason or implement a deliberate safe restore transition.",
+      "sourceFollowup": "Settings adds saved-slots only when !OpeningActive, removing the enabled no-op route.",
+      "coverage": [
+        "SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro: asserts saved-slots absent during opening settings"
+      ],
+      "gap": null
+    }
+  ],
+  "additionalValidation": [
+    {
+      "id": "M5-V01",
+      "status": "PASS-INTEGRATED; bounded geometry plus diagnostic screenshot",
+      "detail": "Updated test checks full caption content410.8944 <= viewport523.2525 at Editor640x480/150%. Independently viewed native intro-reduced-150.png: full caption and both buttons visible. This does not certify other aspect ratios."
+    },
+    {
+      "id": "M5-V02",
+      "status": "PASS-INTEGRATED; timed-cut and timeout",
+      "detail": "HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease presses Enter before3.125s and6s boundaries, releases afterward and asserts no next-screen activation; fresh subsequent press works. FocusLossAndPauseStopIntroClock separately verifies callback-driven clock pause/resume. Physical focus/pause-held input not measured."
+    }
+  ],
+  "sourceObservations": [
+    "Watch.NewContext on ScreenChanged clears armed interact/preview generations. Integrated held-caption-cut and held-timeout release tests pass; synthetic focus/pause clock callbacks pass. Physical focus-held-input remains unmeasured.",
+    "Opening time updates presentation fields only; source contains no direct simulation/save commands in opening callbacks, and integrated initial-state/no-save/replay-byte tests pass.",
+    "Orientation category maps selected existing action IDs; accepted status reads authoritative SignatureComplete, pending reads SavePending. Integrated selection and pending/cancel/failure/accepted tests pass.",
+    "Diagnostic and approved-baseline36/53/1 results are retained as historical evidence. Publication authority is integrated upstream2ece517 plus M5:36/54/1 with runtimeApproved=true and no diagnostic override; ordinary build inventory verified."
+  ],
+  "claimBoundary": "All five source findings are fixed with integrated regression evidence on upstream2ece517 plus M5:36/54/1, approved profile and no diagnostic override. Ordinary316-file app,28-source canonical copy and final native screenshots/saves are verified. Bounded internal-prototype QA is complete; broad matrix limits and unmeasured human quality gates remain explicit.",
+  "testSourceReview": {
+    "path": "Assets/_Project/Tests/PlayMode/M5DirectionPlayModeTests.cs",
+    "sha256": "676f6013138f561834abaf2405839cd19b55bc911846b7b81a8ebe4b7cb5bef5",
+    "methods": 14,
+    "systemsReported": "Independently parsed playmode-integrated-final.xml:54/54, including14/14 M5 cases; EditMode36/36 and boot1/1, zero failures/skips, no diagnostic override.",
+    "reviewedCoverage": [
+      "Fresh 3.125-second caption boundary and 6-second timeout retain initial state/head and no save",
+      "Immediate skip and keyboard Escape replay return",
+      "Release-based activation and fresh next press",
+      "Settings pause, reduced-motion timer stop, 150 percent setting, label existence, skip-button bounds",
+      "Reader replay keyboard Down and original context return",
+      "Existing/new recovery slots and intro-time saved-slots action absence",
+      "Null-image ink fallback and skip retain state",
+      "Loaded v2 fixture bypass and explicit replay preserve post-load bytes/state/head; undo/redo/tool are guarded",
+      "Selected existing action category changes without rerender or journal mutation",
+      "Trial remains allowed after first clue; lower obscuration persists",
+      "Pending/cancelled/failed save cannot show accepted completion; retry success yields one receipt"
+    ],
+    "limits": [
+      "Native sequence performed by director and independently audited through screenshots/state/hash evidence",
+      "Synthetic keyboard/mouse/focus callbacks do not certify physical controller or all OS lifecycle combinations"
+    ],
+    "previousMethods": 11
+  },
+  "profileAtReview": {
+    "path": "Assets/_Project/Resources/M5Direction.asset",
+    "sha256": "5d138fdeaf39380ac5061c61234239e22886653541957fd1d2fa7fc8ec51c6ac",
+    "runtimeApproved": false,
+    "meaning": "Diagnostic profile; not final runtime acceptance"
+  },
+  "diagnosticFollowup": {
+    "reviewedAt": "2026-09-11T07:16:01Z",
+    "receipt": "intro-gameplay-m5-diagnostic-review.json",
+    "suites": {
+      "editmode": 36,
+      "playmode": 53,
+      "boot": 1
+    },
+    "targetedCases": 14,
+    "testsSha256": "676f6013138f561834abaf2405839cd19b55bc911846b7b81a8ebe4b7cb5bef5"
+  },
+  "approvedBaselineEvidence": {
+    "inspectedAt": "2026-09-11T07:17:47Z",
+    "status": "SUPERSEDED-BASELINE; not integrated final delivery",
+    "profileSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b",
+    "diagnosticOverride": false,
+    "suites": [
+      {
+        "path": "../systems/tech-verification/m5-direction/editmode-final.xml",
+        "sha256": "5a7b44729772b785fbc3d183809774fa052443d094d16c1347a701cd8ed543c0",
+        "id": "2",
+        "testcasecount": "36",
+        "result": "Passed",
+        "total": "36",
+        "passed": "36",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 07:14:48Z",
+        "end-time": "2026-09-11 07:14:50Z",
+        "duration": "2.0884934"
+      },
+      {
+        "path": "../systems/tech-verification/m5-direction/playmode-final.xml",
+        "sha256": "ce730e40145c3a603fece4e975b644c17e7800f78e07ed05f7c4c2ec37f652fd",
+        "id": "2",
+        "testcasecount": "53",
+        "result": "Passed",
+        "total": "53",
+        "passed": "53",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 07:15:27Z",
+        "end-time": "2026-09-11 07:15:57Z",
+        "duration": "29.9426984"
+      },
+      {
+        "path": "../systems/tech-verification/m5-direction/boot-final.xml",
+        "sha256": "bf9c917f1243217878fc59cab1262f1933306b427d3d038a5731b90586925974",
+        "id": "2",
+        "testcasecount": "1",
+        "result": "Passed",
+        "total": "1",
+        "passed": "1",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-11 07:16:21Z",
+        "end-time": "2026-09-11 07:16:22Z",
+        "duration": "0.9644856"
+      }
+    ],
+    "logs": [
+      {
+        "path": "../systems/tech-verification/m5-direction/logs/editmode-final.log",
+        "sha256": "de6a6d9f1b8ce7414499396481f6f7a8c7875bd4a13e795ac38cf5bb85c50ee2",
+        "diagnosticOverrideMention": false
+      },
+      {
+        "path": "../systems/tech-verification/m5-direction/logs/playmode-final.log",
+        "sha256": "cc81e719f63f2fcbcad4012b34eef1892012dea95d37b813daa78a838b12414d",
+        "diagnosticOverrideMention": false
+      },
+      {
+        "path": "../systems/tech-verification/m5-direction/logs/boot-final.log",
+        "sha256": "b8a17878d7da90f22a59477ca76df63fb7976f196e23e765aab96a7789615b1c",
+        "diagnosticOverrideMention": false
+      }
+    ],
+    "requiredFinal": "upstream2ece517 plus M5; expected36/54/1 integrated-final XML and ordinary build"
+  },
+  "integratedFinalEvidence": {
+    "receipt": "intro-gameplay-m5-integrated-final-review.json",
+    "inspectedAt": "2026-09-11T07:19:32Z",
+    "scope": "upstream2ece517 plus M5",
+    "editmode": 36,
+    "playmode": 54,
+    "m5Cases": 14,
+    "boot": 1,
+    "runtimeApproved": true,
+    "diagnosticOverride": false,
+    "ordinaryBuild": "PASS;316 app files and28 source hashes verified",
+    "normalLaunchNative": "PASS-bounded; final3 screenshots,54-command play save and57-command identical restart save verified"
+  }
+}

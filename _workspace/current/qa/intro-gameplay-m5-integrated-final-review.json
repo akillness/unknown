@@ -1,0 +1,607 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "intro-gameplay-m5-integrated-final-review",
+  "reviewedAt": "2026-09-11T07:34:02Z",
+  "status": "current",
+  "owner": "game-qa",
+  "authority": {
+    "scope": "upstream2ece517 plus M5 approved internal prototype",
+    "baselineSource": "upstream-integration.json, exact source hashes verified independently",
+    "profileSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b",
+    "runtimeApproved": true,
+    "diagnosticOverride": false,
+    "commercialEligible": false,
+    "canonicalSourceHashAudit": {
+      "files": 28,
+      "mismatches": []
+    }
+  },
+  "method": "Independent read-only XML/log inspection. QA did not run Unity. Code corrections and diagnostic screenshot inspection are documented in companion receipts.",
+  "suites": [
+    {
+      "path": "../systems/tech-verification/m5-direction/editmode-integrated-final.xml",
+      "sha256": "1973275b04f501c4c1025088097a9105013c4e9b63788858271b09455489c7f1",
+      "id": "2",
+      "testcasecount": "36",
+      "result": "Passed",
+      "total": "36",
+      "passed": "36",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:17:07Z",
+      "end-time": "2026-09-11 07:17:09Z",
+      "duration": "2.2286133",
+      "nonPassedCases": []
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/playmode-integrated-final.xml",
+      "sha256": "c33bbe3a546844daf89eb6d1fddde308a17c97af87a532f37f2757b8f961fbda",
+      "id": "2",
+      "testcasecount": "54",
+      "result": "Passed",
+      "total": "54",
+      "passed": "54",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:18:04Z",
+      "end-time": "2026-09-11 07:18:34Z",
+      "duration": "30.1364009",
+      "nonPassedCases": []
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/boot-integrated-final.xml",
+      "sha256": "f3852e5b05a16ce0c7e514867927656135fb6d121d39d43167ff0ea6556f196d",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:19:13Z",
+      "end-time": "2026-09-11 07:19:14Z",
+      "duration": "0.6289251",
+      "nonPassedCases": []
+    }
+  ],
+  "logs": [
+    {
+      "path": "../systems/tech-verification/m5-direction/logs/editmode-integrated-final.log",
+      "sha256": "44880b3e696863b77ecdf40de537524357e701988da7fee4f045254e6067ae94",
+      "diagnosticOverrideMention": false,
+      "projectPathSeen": true
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/logs/playmode-integrated-final.log",
+      "sha256": "20bf449813d3354b1b2a2277aae51a6280e5912061cf99aaaf740487d269e51b",
+      "diagnosticOverrideMention": false,
+      "projectPathSeen": true
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/logs/boot-integrated-final.log",
+      "sha256": "0438c38521b51c2fef2656827518dd1c012061c96c861e84ae583c7e9ea01018",
+      "diagnosticOverrideMention": false,
+      "projectPathSeen": true
+    }
+  ],
+  "targetedM5Cases": [
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.FirstObservationStillAllowsRiskTrialAndMaskPersists",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.FocusLossAndPauseStopIntroClock",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.FreshIntroUsesObservedCutAndTimeoutWithoutWrites",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.HeldSkipCannotActivateGameplayUntilFreshPress",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.MissingImageKeepsReadableInkFallbackAndSkip",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.PointerSettingsFromReduced150IntroOpensAndReturns",
+      "result": "Passed",
+      "output": "M5_POINTER_SCREEN 640x480\n"
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.RecordStatusCannotAcceptPendingFailedOrCancelledSave",
+      "result": "Passed",
+      "output": "T0 commit: M5 expected save failure\n"
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.ReplayFromToolKeepsKeyboardNavigationAndReturnContext",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.SelectedCategoryChangesWithoutRerenderOrJournalWrite",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro",
+      "result": "Passed",
+      "output": null
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.SettingsPauseAndReducedMotionShowAllLabelsAt150Percent",
+      "result": "Passed",
+      "output": "M5_150_LAYOUT screen=640x480 caption=410.8944 viewport=523.2525\n"
+    },
+    {
+      "name": "Tide.Tests.M5DirectionPlayModeTests.SkipFirstFrameAndEscapeConsumeInput",
+      "result": "Passed",
+      "output": null
+    }
+  ],
+  "addedUpstreamRegression": [
+    {
+      "name": "Tide.Tests.C1PlayModeTests.ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction",
+      "result": "Passed",
+      "output": null
+    }
+  ],
+  "sourceManifest": {
+    "path": "../systems/tech-verification/m5-direction/ownership-source-manifest.json",
+    "sha256": "bc20681f71cef2e19f09b146955795655eef1bb9f84dd81fba89ec54d077d74e",
+    "upstreamPath": "../systems/tech-verification/m5-direction/upstream-integration.json",
+    "upstreamSha256": "681439fc9307455a972405e358966a39b37e2dd3cd412c182d8de14c59dbd917",
+    "closurePath": "../systems/tech-verification/m5-direction/source-closure.json",
+    "closureSha256": "cdf48e3eed8eb7d203e7d9c54e44df66fa43d2468567ba2784d9ca14eb7ae099",
+    "audit": {
+      "owned": 25,
+      "upstream": 3,
+      "mismatches": [],
+      "profileSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b"
+    },
+    "closureAudit": {
+      "trackedActual": 8,
+      "trackedDeclared": 8,
+      "newActual": 17,
+      "newDeclared": 17,
+      "pathsEqualManifest": true
+    }
+  },
+  "ordinaryBuild": {
+    "status": "PASS: log and full file inventory verified",
+    "inventoryPath": "../systems/tech-verification/m5-direction/final-app-inventory.json",
+    "inventorySha256": "47f29e7974e211968a79fd658fb3d1993d150c3ff1193689a37d82ec02bad29f",
+    "appPath": "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown/Builds/M5-mac/Unknown.app",
+    "appAudit": {
+      "entries": 316,
+      "actualFiles": 316,
+      "bytes": 353421261,
+      "mismatches": [],
+      "unlisted": [],
+      "missing": [],
+      "declaredFingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736"
+    },
+    "buildLogPath": "../systems/tech-verification/m5-direction/logs/build-integrated-final.log",
+    "buildLog": {
+      "sha256": "5400cdfea6c3e3ad951f3efe8ead190e2fc39373c33ce88878e82c258c68060e",
+      "batchmodeSuccess": true,
+      "diagnosticOverrideMention": false,
+      "executeMethodLines": [
+        "Tide.EditorTools.M5DirectionProjectBuilder.BuildMac",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:53)",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:53)",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:53)",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:53)",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:53)",
+        "Tide.EditorTools.M5DirectionProjectBuilder:BuildMac () (at Assets/_Project/Editor/M5DirectionProjectBuilder.cs:54)",
+        "(Filename: Assets/_Project/Editor/M5DirectionProjectBuilder.cs Line: 54)"
+      ]
+    },
+    "canonicalAppAudit": {
+      "appPath": "/Users/jangyoung/orca/unknown/unity/Unknown/Builds/M5-mac/Unknown.app",
+      "files": 316,
+      "bytes": 353421261,
+      "mismatches": [],
+      "unlisted": [],
+      "missing": []
+    }
+  },
+  "nativeFinal": {
+    "status": "PASS-bounded-native-smoke",
+    "directorReceipt": {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-acceptance.json",
+      "sha256": "638834d2282e97c7d00b9af1a9bd379e291387c93f2f6bb4b6c5312c961e420e",
+      "finalSection": "finalOrdinaryBuild",
+      "declaredAppFingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736",
+      "runtimeApproved": true,
+      "diagnosticOverride": false
+    },
+    "method": "QA independently viewed the three final screenshots, verified their receipt hashes, parsed final saves, checked canonical app/source inventories and inspected final player logs. Native input and capture sequence was performed by the director.",
+    "screenshots": [
+      {
+        "path": "../systems/tech-verification/intro-gameplay-m5/native-final-fresh/intro-recording-frame.png",
+        "sha256": "89315bc49cde81ca980ede8d36ac548afa2756d95ad15d5825c1031d6a057357",
+        "bytes": 753277,
+        "pngDimensions": [
+          1280,
+          720
+        ],
+        "observed": [
+          "First intro heading/caption and observe/trial/record explanation visible",
+          "Skip/start and accessibility/settings actions visible",
+          "Generic duty-room art; no identity or explicit four-hour gap disclosed in this frame"
+        ]
+      },
+      {
+        "path": "../systems/tech-verification/intro-gameplay-m5/native-final-v2/saved-record.png",
+        "sha256": "19ede8feb539cfba642ec1dd204da25e757fac9cf7e8f342032ffb316c584485",
+        "bytes": 359114,
+        "pngDimensions": [
+          1280,
+          784
+        ],
+        "observed": [
+          "Observation2/2 and copies2/2",
+          "Record highlighted and save-completed text",
+          "Both copies retained; lower masked region explicitly unresolved",
+          "Confirmation status says saved"
+        ]
+      },
+      {
+        "path": "../systems/tech-verification/intro-gameplay-m5/native-final-v3/completed-record-restart.png",
+        "sha256": "414cbb85a5cdaac230a35149af7e692c5acc584000437bad1a77fabd9b557a6f",
+        "bytes": 358394,
+        "pngDimensions": [
+          1280,
+          784
+        ],
+        "observed": [
+          "Record saved and completed2/2 state restored",
+          "Both copies and lower mask retained",
+          "Restored saved-record status shown; lower region remains unresolved"
+        ]
+      }
+    ],
+    "receiptHashChecks": [
+      {
+        "id": "F01",
+        "hashMatch": true
+      },
+      {
+        "id": "F02",
+        "hashMatch": true
+      },
+      {
+        "id": "F03",
+        "hashMatch": true
+      }
+    ],
+    "fresh": {
+      "progressSaveAbsent": true,
+      "naturalSixSecondEntry": "Director-observed F01; integrated timer test separately passes. Single screenshot itself does not prove elapsed time."
+    },
+    "v2": {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-final-v2/save.json",
+      "sha256": "c1ca60aca948d8e2008165796f25b7c1978135a6de860b4eb12f18d292162433",
+      "schemaVersion": 3,
+      "headSeq": 54,
+      "commands": 54,
+      "confirmSignatureCount": 1,
+      "storyClock": "21:00",
+      "lastCommands": [
+        {
+          "seq": 43,
+          "commandId": "EnterSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 44,
+          "commandId": "ObserveSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-c1",
+            "value": null
+          }
+        },
+        {
+          "seq": 45,
+          "commandId": "ObserveSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-c2",
+            "value": null
+          }
+        },
+        {
+          "seq": 46,
+          "commandId": "SetSignatureHumidity",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "low",
+            "value": null
+          }
+        },
+        {
+          "seq": 47,
+          "commandId": "TrialSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 48,
+          "commandId": "SeparateSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 49,
+          "commandId": "CopySignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-copy-1",
+            "value": null
+          }
+        },
+        {
+          "seq": 50,
+          "commandId": "CopySignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-copy-2",
+            "value": null
+          }
+        },
+        {
+          "seq": 51,
+          "commandId": "MarkSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-region-lower",
+            "value": null
+          }
+        },
+        {
+          "seq": 52,
+          "commandId": "CompareSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-plate-zero-band",
+            "value": null
+          }
+        },
+        {
+          "seq": 53,
+          "commandId": "SelectSignatureProof",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-c1",
+            "value": "c1-b2-c2"
+          }
+        },
+        {
+          "seq": 54,
+          "commandId": "ConfirmSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-plate-zero-band",
+            "value": "c1-b2-region-lower"
+          }
+        }
+      ],
+      "interpretation": "Actual native completion after two observations, low-humidity trial, separate/copy/mask/compare/proof and exactly one ConfirmSignature; version3 output."
+    },
+    "v3": {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-final-v3/save.json",
+      "sha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+      "schemaVersion": 3,
+      "headSeq": 57,
+      "commands": 57,
+      "confirmSignatureCount": 1,
+      "storyClock": "21:00",
+      "lastCommands": [
+        {
+          "seq": 46,
+          "commandId": "SetSignatureHumidity",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "medium",
+            "value": null
+          }
+        },
+        {
+          "seq": 47,
+          "commandId": "TrialSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 48,
+          "commandId": "ResetSignatureTrial",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 49,
+          "commandId": "SetSignatureHumidity",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "low",
+            "value": null
+          }
+        },
+        {
+          "seq": 50,
+          "commandId": "TrialSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 51,
+          "commandId": "SeparateSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": null,
+            "value": null
+          }
+        },
+        {
+          "seq": 52,
+          "commandId": "CopySignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-copy-1",
+            "value": null
+          }
+        },
+        {
+          "seq": 53,
+          "commandId": "CopySignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-copy-2",
+            "value": null
+          }
+        },
+        {
+          "seq": 54,
+          "commandId": "MarkSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-region-lower",
+            "value": null
+          }
+        },
+        {
+          "seq": 55,
+          "commandId": "CompareSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-plate-zero-band",
+            "value": null
+          }
+        },
+        {
+          "seq": 56,
+          "commandId": "SelectSignatureProof",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-c1",
+            "value": "c1-b2-c2"
+          }
+        },
+        {
+          "seq": 57,
+          "commandId": "ConfirmSignature",
+          "payload": {
+            "otherValue": null,
+            "subjectId": "c1-b2-plate-zero-band",
+            "value": "c1-b2-region-lower"
+          }
+        }
+      ],
+      "matchesOriginalCompletedFixture": true,
+      "originalFixtureSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b"
+    },
+    "playerLogChecks": [
+      {
+        "path": "native-final-v3/player.log",
+        "sha256": "3eafee7248da377f9b98c5f68f00558f9ef3c91f4f74263057a8c7b1cdf52301",
+        "diagnosticOverrideMention": false,
+        "errorLines": []
+      },
+      {
+        "path": "native-final-v2/player.log",
+        "sha256": "29b78c565744a6e718976064f5910310ce7f41116fb69618ed19bd7bd66ff21d",
+        "diagnosticOverrideMention": false,
+        "errorLines": []
+      },
+      {
+        "path": "native-final-fresh/player.log",
+        "sha256": "ad6cdf2d75ba7f45472638fb40e8aa68fd6db00621aa9eecf2e5df0ab7af8ef2",
+        "diagnosticOverrideMention": false,
+        "errorLines": []
+      }
+    ],
+    "playerLogCheckScope": "No diagnostic override or NullReferenceException/MissingReferenceException/IndexOutOfRangeException/Error: strings in the three inspected final logs.",
+    "movies": "Root-owned native-intro.mp4/native-gameplay.mp4 encoding/gallery completion is outside this QA screenshot/hash pass. Generated movies remain separately labelled previz.",
+    "finalLogRefresh": {
+      "refreshedAt": "2026-09-11 07:37:36 UTC",
+      "reason": "Director closed canonical game app after native review; refresh final player logs only.",
+      "changed": [
+        {
+          "path": "native-final-v3/player.log",
+          "previousSha256": "c526d8acf6e5b3eb915fb91e3fecd058282e1b07875ca71b1061264fa4468785",
+          "sha256": "3eafee7248da377f9b98c5f68f00558f9ef3c91f4f74263057a8c7b1cdf52301"
+        }
+      ],
+      "scope": "Checked same diagnostic-override and exception/error patterns. App/source inventories, screenshots, saves and native-acceptance receipt were not re-audited."
+    }
+  },
+  "knownSourceFindings": {
+    "ids": [
+      "M5-C01",
+      "M5-C02",
+      "M5-C03",
+      "M5-C04",
+      "M5-C05"
+    ],
+    "status": "Fixed in reviewed source with integrated test evidence"
+  },
+  "limits": [
+    "14 M5 PlayMode cases are part of54 passes, not14 completed broad QA matrix criteria",
+    "Native action sequence performed by director; QA independently inspected screenshots/state/hashes, not by replaying inputs",
+    "Late skip, every save schema/aspect ratio, corrupt-profile load and every OS lifecycle combination are not separately certified",
+    "M5-O01 first pointer click after screenshot focus was not reproduced on active-app retry",
+    "Human archetype playtests, immersion/G4, performance/G5, audio and physical gamepad remain unmeasured",
+    "Generated movies remain previz; this review does not certify their visual contents, provider rights or final movie encoding"
+  ],
+  "conclusion": "PASS-bounded-internal-prototype"
+}

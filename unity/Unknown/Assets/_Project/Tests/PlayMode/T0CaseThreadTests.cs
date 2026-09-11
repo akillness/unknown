@@ -248,7 +248,7 @@ namespace Tide.Tests {
      .Select(p=>p+":"+Convert.ToBase64String(sha.ComputeHash(File.ReadAllBytes(p)))).ToArray()
     :Array.Empty<string>();
   }
-  void Click(string id){Assert.IsTrue(game.Interface.Activate(id),"Missing existing action "+id);if(checkDisclosure)AssertNoDisclosure();}
+  void Click(string id){Assert.IsTrue(game.Interface.Activate(id),"Missing existing action "+id);if(id=="start"&&game.OpeningActive)Assert.IsTrue(game.Interface.Activate("intro-skip"));if(checkDisclosure)AssertNoDisclosure();}
   IEnumerator Wait(Task task){while(!task.IsCompleted)yield return null;if(task.IsFaulted)throw task.Exception;}
   IEnumerator PressKey(Key key){
    InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;
@@ -258,6 +258,7 @@ namespace Tide.Tests {
    int steps=0;
    while(game.Interface.CurrentFocusId!=id){Assert.Less(steps++,100,"Keyboard cannot reach "+id);yield return PressKey(Key.Tab);}
    yield return PressKey(Key.Enter);
+   if(id=="start"&&game.OpeningActive)yield return KeyboardClick("intro-skip");
    if(checkDisclosure)AssertNoDisclosure();
   }
   IEnumerator PointerClick(string id){

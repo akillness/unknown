@@ -8,7 +8,7 @@ namespace Tide.UI
 {
     public sealed class ViewAction
     {
-        public string Id,Label,Detail;
+        public string Id,Label,Detail,SectionKey,SectionTitle,SectionDetail,DirectionCategory;
         public bool Enabled=true;
         public Action Activate;
         public float HoldSeconds;
@@ -24,6 +24,9 @@ namespace Tide.UI
         public Vector2[] AnchorTargets,AnchorOverlay;
         public string[] AnchorLabels;
         public SignaturePaperView SignaturePaper;
+        public Texture2D OpeningImage,SectionSurface;
+        public string OpeningHeading;
+        public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
     }
     public sealed partial class T0Interface:MonoBehaviour
@@ -60,9 +63,10 @@ namespace Tide.UI
             if(EventSystem.current?.currentSelectedGameObject!=null)
                 focusKey=EventSystem.current.currentSelectedGameObject.name;
             if(root!=null) { root.gameObject.SetActive(false); Destroy(root.gameObject); }
-            focus.Clear(); keyed.Clear();
+            focus.Clear(); keyed.Clear(); directionMarks.Clear();CurrentDirectionCategory=null;
             root=Rect("Screen",canvas.transform,new Vector2(.02f,.025f),new Vector2(.98f,.975f));
             CurrentTitle=model.Title; ActionIds=model.Actions.ConvertAll(x=>x.Id).AsReadOnly();
+            if(model.ShowOpening){RenderOpening(model);return;}
             var header=Panel("Header",root,new Vector2(0,.88f),new Vector2(1,1),new Color(.05f,.12f,.15f,.94f));
             Text("Title",header,model.Title,28,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.8f,.95f));
             Text("Subtitle",header,model.Subtitle,15,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.97f,.44f));
@@ -80,7 +84,9 @@ namespace Tide.UI
                 card.GetComponent<Image>().raycastTarget=false;
                 Text("CaseThread",card,model.CaseThread,20,paper,new Vector2(.025f,.04f),new Vector2(.975f,.96f));
                 card.Find("CaseThread").GetComponent<Text>().raycastTarget=false;
-                contentTop=.85f-height;
+                float directionHeight=model.ShowDirection ? .055f*Mathf.Max(1,scale) : 0;
+                if(model.ShowDirection)RenderDirectionStrip(.865f-height,directionHeight,model.SectionSurface);
+                contentTop=.85f-height-directionHeight;
             }
             var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
             var viewport=Rect("Viewport",contentPanel,new Vector2(.025f,.035f),new Vector2(.975f,.97f));
@@ -108,10 +114,12 @@ namespace Tide.UI
                 graphic.Targets=model.AnchorTargets; graphic.Overlay=model.AnchorOverlay; graphic.color=brass;
                 if(model.AnchorLabels!=null) FlowText(content,string.Join(" · ",model.AnchorLabels),15,ink);
             }
+            RectTransform actionParent=content;
             foreach(var action in model.Actions)
             {
-                if(!string.IsNullOrEmpty(action.Detail)) FlowText(content,action.Detail,17,ink);
-                Button(content,action);
+                if(!string.IsNullOrEmpty(action.SectionKey))actionParent=DirectionSection(content,action,model.SectionSurface);
+                if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,17,actionParent==content?ink:paper);
+                Button(actionParent,action);
             }
             if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,16,new Color(.38f,.18f,.07f));
             var bar=Panel("Toolbar",root,new Vector2(0,0),new Vector2(1,.105f),new Color(.05f,.12f,.15f,.96f));
@@ -144,12 +152,12 @@ namespace Tide.UI
             if(focus.Count==0 || EventSystem.current==null) return;
             focusIndex=Mathf.Clamp(focusIndex,0,focus.Count-1);
             var target=focus[focusIndex]; EventSystem.current.SetSelectedGameObject(target.gameObject); focusKey=target.name;
-            var activeScroll=target.transform.IsChildOf(navigationScroll.content)?navigationScroll:scroll;
+            var activeScroll=navigationScroll!=null&&target.transform.IsChildOf(navigationScroll.content)?navigationScroll:scroll;
             if(activeScroll!=null && target.transform.IsChildOf(activeScroll.content))
             {
                 Canvas.ForceUpdateCanvases();
                 var rect=(RectTransform)target.transform;
-                float y=-rect.anchoredPosition.y,extent=activeScroll.content.rect.height-activeScroll.viewport.rect.height;
+                float y=-activeScroll.content.InverseTransformPoint(rect.TransformPoint(rect.rect.center)).y,extent=activeScroll.content.rect.height-activeScroll.viewport.rect.height;
                 if(extent>0) activeScroll.verticalNormalizedPosition=1-Mathf.Clamp01((y-activeScroll.viewport.rect.height*.4f)/extent);
             }
         }
@@ -215,7 +223,7 @@ namespace Tide.UI
             if(action.Enabled) {
                 focus.Add(button); keyed[action.Id]=button;
                 var selection=r.gameObject.AddComponent<FocusSelection>();
-                selection.Selected=()=>{focusIndex=focus.IndexOf(button);focusKey=button.name;};
+                selection.Selected=()=>{focusIndex=focus.IndexOf(button);focusKey=button.name;UpdateDirectionSelection(action.DirectionCategory);};
             }
         }
     }

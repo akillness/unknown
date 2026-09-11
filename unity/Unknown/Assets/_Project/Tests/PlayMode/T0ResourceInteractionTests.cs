@@ -93,7 +93,7 @@ namespace Tide.Tests {
    Assert.AreEqual(2,meshes.Length,"Exercise both committed r03 meshes");
    yield return Click(DrawerFront());
    Assert.Contains("start",game.Interface.ActionIds.ToArray(),"World click must not dismiss the start screen");
-   Assert.IsTrue(game.Interface.Focus("start"));yield return Enter();AssertDesk();
+   Assert.IsTrue(game.Interface.Focus("start"));yield return Enter();if(game.OpeningActive){Assert.IsTrue(game.Interface.Focus("intro-skip"));yield return Enter();}AssertDesk();
    var state=game.Journal.State.StateHash;
    yield return Click(DrawerFront(),MouseButton.Right);AssertDesk();
    yield return Click(DrawerFront());

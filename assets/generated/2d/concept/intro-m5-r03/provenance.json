@@ -1,0 +1,37 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m5-hub-source-r03",
+  "generated_at": "2026-09-11T06:38:26.577215+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_0ff51fd2bb6faf72016aa3a1a9cc4087d0995c7d63b31726a7",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "d723933f560d9e1522746cd6c84251c153247bb9ed7da5dac43dcfda5c0aa286",
+  "requested_size": "2048x1152",
+  "actual_size": "1672x941",
+  "output_file": "image.png",
+  "output_sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2",
+  "bytes": 1551920,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r02/image.png",
+      "sha256": "998ff6406f6b53ee66d195acb4cb196c7d05ef7e11599f82491bfa957360707f"
+    }
+  ],
+  "runtimeEligible": true,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "review": "Native diagnostic visual/readability audit passed; bounded internal prototype use. See runtimePromotion and preserved pre-runtime provenance. Final approved-profile regression/build required.",
+  "runtimePromotion": {
+    "decision": "RFC-CX-007",
+    "reviewedAt": "2026-09-11T07:13:55.671Z",
+    "scope": "bounded internal prototype runtime only",
+    "nativeAppFingerprint": "18066f11cd0a556758916d9c654e7b293d44cfc7b26cb0e683783090ca92e629",
+    "nativeEvidence": "_workspace/current/systems/tech-verification/intro-gameplay-m5/native-acceptance.json",
+    "rightsReview": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+    "commercialReleaseEligible": false
+  }
+}

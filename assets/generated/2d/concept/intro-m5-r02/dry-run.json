@@ -1,0 +1,53 @@
+{
+  "mode": "dry-run",
+  "warnings": [],
+  "request": {
+    "url": "https://chatgpt.com/backend-api/codex/responses",
+    "headers": {
+      "Authorization": "[REDACTED]",
+      "ChatGPT-Account-ID": "[REDACTED]",
+      "Content-Type": "application/json",
+      "Accept": "text/event-stream",
+      "originator": "codex_cli_rs",
+      "session_id": "[REDACTED]"
+    },
+    "body": {
+      "model": "gpt-6-astra",
+      "instructions": "",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Edit the attached original game intro frame. Preserve the room, exact composition, camera, palette, closed ledger shape, lamp, handset, desk, window, empty tray and dark right third. Remove ONLY all text-like markings on the closed ledger cover: make the cover a plain aged matte warm-grey surface with quiet random wear, absolutely no letters, rows, words, symbols or numbers. Make telephone dial and background binder spines unlettered too while preserving their physical shapes. No new objects, no changed viewpoint, no people, no writing, no text, no signatures, no watermark or UI. Keep all other visual details and the sixteen-by-nine framing unchanged."
+            },
+            {
+              "type": "input_image",
+              "image_url": "[REDACTED_IMAGE_DATA]"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "image_generation",
+          "output_format": "png",
+          "size": "2048x1152"
+        }
+      ],
+      "tool_choice": "auto",
+      "parallel_tool_calls": false,
+      "reasoning": null,
+      "store": false,
+      "stream": true,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "client_metadata": {
+        "x-codex-installation-id": "[REDACTED_INSTALLATION_ID]"
+      }
+    }
+  }
+}

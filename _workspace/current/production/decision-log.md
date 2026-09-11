@@ -124,3 +124,28 @@ Successful resource:6 meshes, 2,092 triangles, four 1024-square maps totaling 1,
 - [OBSERVED] Original blank-paper candidate: `assets/generated/2d/texture/c1-signature-paper-gti-r01/`. Requested 1024×1024; actual 1254×1254, 2,017,998 bytes. SHA256 `5dd394fe188e287f1a81f73e8d5761d1807c6b9d5f711f15d93c0ef8b1c80cae`. Source and revised prompts, sanitized dry-run, execution and output receipts retained.
 - [OBSERVED] Independent visual review passed the blank-substrate criteria. Size differs from request. Keep `runtimeEligible:false`; native readability/import and rights review remain unmeasured. This RFC authorizes the provider and candidate generation, not runtime promotion.
 - Handoff: `production/image-provider-gti-20260911.md`.
+
+## RFC-CX-007 — Video-led intro and gameplay direction (2026-09-11)
+
+- Authority: user requested intro/gameplay videos, then direction/resource derivation and gameplay application. Images use GTI; video uses Higgsfield. This is a bounded M5 continuation, not full campaign completion.
+- [OBSERVED] Generated two Seedance2mini clips; each actual6.041667s/1280×720/24fps/noaudio. Intro job`5c8b8815-fece-4459-807d-c9cef3ba2959`; C1job`8254dc3e-b7cc-405c-9019-ee33f4205f4d`. Quotes15+15credits; account balance117.18→87.18(delta30), not an itemized transaction audit.
+- [OBSERVED] Intro measuredcut3.125s adopted as native3125+2875=6000ms two-context presentation. Use clean GTI hubr03 only. Reject generated postcut linedtraypaper/dialmarkings, and log horizonapprox25% versus requested40%.
+- [OBSERVED] C1 cuts2.083333/4.041667 informed observation/trial/record spatial orientation. Reject automaticpaper-clearing, inventedinventory, knobaction andcameradrift. Actual lower mask, evidence and receipt state stay authoritative.
+- [OBSERVED] New GTI UI surface was generated after the completed C1video, from its2.5s frame. Source video/frame/output hashes and execution timestamps are in `systems/tech-verification/intro-gameplay-m5/art-and-video-receipt.json`.
+- [APPROVED DESIGN] Fresh-onlyskippable intro with settings access; existing-save bypass; release latch; reduced-motion-static information;150%text; staticC1orientation reads actualselection/trial/acceptedrecord. No runtime movie dependency, animation-gatedprogress, camera travel or new solverorder.
+- [INTERNAL DIAGNOSTIC ONLY] Clean hubr03 and darkmetal surface may be imported into isolatedM5 for native inspection. `runtimeEligible:false` and profile runtimeApproved=false until native acceptance is recorded below. Rights review separates output ownership from GTI support/route and commercial clearance; no Steam-release clearance claimed.
+- Sources: `presentation/intro-gameplay-m5.json`, `presentation/intro-gameplay-m5-video-review.md`, `qa/intro-gameplay-m5-review.md`, `qa/intro-gameplay-m5-rights-review.md`.
+
+### RFC-CX-007 native prototype promotion — 2026-09-11T07:13:55.671Z
+
+[OBSERVED] Diagnostic native build fingerprint 18066f11cd0a556758916d9c654e7b293d44cfc7b26cb0e683783090ca92e629 passed fresh intro150%/reduced-motion readability and settings retry, v2 direct continuation/one-observation trial/mask retention, and v3 completed-save restart (57 commands; save hash unchanged). Automated diagnostic suites: EditMode36/36, PlayMode53/53, separate boot1/1.
+
+[DECISION] Promote only GTI hub source r03 (24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2) and video-derived UI surface (52c4b3cc65cc1432bd94c5e7207ea35a50cbd5d8507f98e9c27f760db590b414) for bounded internal prototype runtime. Preserve pre-runtime provenance; commercialReleaseEligible remains false. Generated films and other stills remain previz-only. The UI source1254² is imported with max1024; intro1672×941 retains source dimensions.
+
+[PENDING] Final runtimeApproved:true suites and ordinary native build/capture must pass before publication. No human-playtest or performance claim. Native evidence: systems/tech-verification/intro-gameplay-m5/native-acceptance.json; rights boundary: qa/intro-gameplay-m5-rights-review.md.
+
+### RFC-CX-007 final ordinary delivery
+
+[OBSERVED] Final ordinary build integrates upstream2ece517 with runtimeApproved:true. EditMode36/36, PlayMode54/54, serialized boot1/1 passed with no diagnostic override. App fingerprint484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736 (316files;353421261bytes). Fresh intro naturally completed without creating gameplay save; C1 recording reached one accepted confirmation (54commands); completed v3 restart preserved57commands and save bytes. Native films are window-only recordings, separately labelled from generated previz.
+
+The approved-profile requirement is fulfilled. Final native/video receipts retain diagnostic and ordinary build identities separately. Prototype-only source promotion remains bounded; generated footage is not gameplay evidence. Graphify updated; mex-agent unavailable remains [UNGRAPHED].

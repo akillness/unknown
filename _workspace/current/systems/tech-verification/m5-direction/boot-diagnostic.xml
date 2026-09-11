@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.0316241">
+  <test-suite type="TestSuite" id="1068" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="54" result="Failed" site="Child" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.031624" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1062" name="Tide.Tests.Play.dll" fullname="/private/tmp/unknown-m5-video-runtime-20260911/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="54" result="Failed" site="Child" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.023939" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="77897" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1063" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="54" result="Failed" site="Child" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.022926" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1064" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="54" result="Failed" site="Child" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.022187" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1034" name="T0BootSceneTests" fullname="Tide.Tests.T0BootSceneTests" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.020327" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1035" name="SerializedBootLoadsHubAndInitializesVisibleStartScreen" fullname="Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen" methodname="SerializedBootLoadsHubAndInitializesVisibleStartScreen" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" seed="1643287404" result="Failed" start-time="2026-09-11 07:11:53Z" end-time="2026-09-11 07:11:53Z" duration="0.013164" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Boot verification requires its task-specific temporary prefix.
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0BootSceneTests+<SerializedBootLoadsHubAndInitializesVisibleStartScreen>d__2.MoveNext () [0x0009c] in /private/tmp/unknown-m5-video-runtime-20260911/unity/Unknown/Assets/_Project/Tests/PlayMode/T0BootSceneTests.cs:21
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,32 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m5-direction-surface-r01",
+  "generated_at": "2026-09-11T06:45:09.228405+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_011c67df3c663da2016aa3a349cb9087d089b93353bb2c91ad",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "c61940d1e7743451db0879d24e2a21d564695249e56e097f548709b47581a01b",
+  "requested_size": "1024x1024",
+  "actual_size": "1254x1254",
+  "output_file": "image.png",
+  "output_sha256": "52c4b3cc65cc1432bd94c5e7207ea35a50cbd5d8507f98e9c27f760db590b414",
+  "bytes": 1460043,
+  "reference_inputs": [
+    {
+      "path": "reference-frame.png",
+      "sha256": "b34fa327235ddb7a5eeae3ad15d9a575976cf45aef4de9f4519e618cec3f52d3",
+      "source_video": "assets/generated/previz/intro-gameplay-m5/gameplay/clip.mp4",
+      "source_video_sha256": "f7dae4b3f4548011dcdd1c4757742ec5054c147d7bd834acbbe5be45bd509f72",
+      "source_time_seconds": 2.5,
+      "extraction": "ffmpeg source-frame extraction; original video unchanged"
+    }
+  ],
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "review": "Visual PASS for blank dark UI substrate; generated after video review. Native text contrast/import pending. No evidence/state baked into pixels."
+}

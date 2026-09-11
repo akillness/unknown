@@ -1,0 +1,28 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m5-workbench-source",
+  "generated_at": "2026-09-11T06:34:01.927227+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_0644b0eb98a09a3a016aa3a0a387c487d0ad8cb94cb2a10d19",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "6f96452033854aafc11eeaff90179da852e670878c1b9968922f0160e319ba94",
+  "requested_size": "2048x1152",
+  "actual_size": "1672x941",
+  "output_file": "image.png",
+  "output_sha256": "b242cde65e6472f43532ec8cf0f07cd86b87978143fd45e122ff19376b689141",
+  "bytes": 2037102,
+  "reference_inputs": [
+    {
+      "path": "docs/media/c1-signature-reader-native-r02.png",
+      "sha256": "e22f401da9e2a3751448056d23ad66eb31ec83959dc520be16435634da769c45"
+    }
+  ],
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "review": "Accepted only as C1 previz reference. Extra bowls/tools and hexagonal salt tray are not game mechanics/evidence. No literal UI/evidence promotion."
+}

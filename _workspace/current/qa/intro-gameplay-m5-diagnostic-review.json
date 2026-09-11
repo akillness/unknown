@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "intro-gameplay-m5-diagnostic-independent-evidence",
+  "reviewedAt": "2026-09-11T07:16:01Z",
+  "status": "current",
+  "owner": "game-qa",
+  "method": "Read-only XML parsing, PNG byte/hash checks, independent view_image inspection of three director-captured screenshots, targeted test-source review, fixture hash/command-log comparison and manifest-to-isolated-source comparison. QA did not launch Unity or perform the native input sequence.",
+  "diagnosticProfile": {
+    "runtimeApproved": false,
+    "sha256": "5d138fdeaf39380ac5061c61234239e22886653541957fd1d2fa7fc8ec51c6ac"
+  },
+  "suites": [
+    {
+      "path": "../systems/tech-verification/m5-direction/editmode-diagnostic.xml",
+      "sha256": "df9208567200347fc2995fb181ca39993ee22cd92d45d254e0e74978cc347049",
+      "id": "2",
+      "testcasecount": "36",
+      "result": "Passed",
+      "total": "36",
+      "passed": "36",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:10:56Z",
+      "end-time": "2026-09-11 07:10:58Z",
+      "duration": "2.2637054",
+      "nonPassedCases": []
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/playmode-full-diagnostic-2.xml",
+      "sha256": "154f442379f3581a84fdc7e91e0dcbb46cafa9c22b690d3d87b2cb77539760c3",
+      "id": "2",
+      "testcasecount": "53",
+      "result": "Passed",
+      "total": "53",
+      "passed": "53",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:09:40Z",
+      "end-time": "2026-09-11 07:10:13Z",
+      "duration": "33.151222",
+      "nonPassedCases": []
+    },
+    {
+      "path": "../systems/tech-verification/m5-direction/boot-diagnostic-2.xml",
+      "sha256": "eb422f1fe2295bd5000210834b910aa4f1471485ed19da931983dd9fe234a8fe",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-11 07:12:56Z",
+      "end-time": "2026-09-11 07:12:57Z",
+      "duration": "0.8590223",
+      "nonPassedCases": []
+    }
+  ],
+  "m5TargetedCases": [
+    {
+      "name": "FirstObservationStillAllowsRiskTrialAndMaskPersists",
+      "result": "Passed",
+      "duration": "0.153101"
+    },
+    {
+      "name": "FocusLossAndPauseStopIntroClock",
+      "result": "Passed",
+      "duration": "0.436545"
+    },
+    {
+      "name": "FreshIntroUsesObservedCutAndTimeoutWithoutWrites",
+      "result": "Passed",
+      "duration": "6.035147"
+    },
+    {
+      "name": "HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease",
+      "result": "Passed",
+      "duration": "6.061160"
+    },
+    {
+      "name": "HeldSkipCannotActivateGameplayUntilFreshPress",
+      "result": "Passed",
+      "duration": "0.069693"
+    },
+    {
+      "name": "LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext",
+      "result": "Passed",
+      "duration": "0.229653"
+    },
+    {
+      "name": "MissingImageKeepsReadableInkFallbackAndSkip",
+      "result": "Passed",
+      "duration": "0.057985"
+    },
+    {
+      "name": "PointerSettingsFromReduced150IntroOpensAndReturns",
+      "result": "Passed",
+      "duration": "0.309268"
+    },
+    {
+      "name": "RecordStatusCannotAcceptPendingFailedOrCancelledSave",
+      "result": "Passed",
+      "duration": "0.819296"
+    },
+    {
+      "name": "ReplayFromToolKeepsKeyboardNavigationAndReturnContext",
+      "result": "Passed",
+      "duration": "0.113543"
+    },
+    {
+      "name": "SelectedCategoryChangesWithoutRerenderOrJournalWrite",
+      "result": "Passed",
+      "duration": "0.106815"
+    },
+    {
+      "name": "SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro",
+      "result": "Passed",
+      "duration": "0.175725"
+    },
+    {
+      "name": "SettingsPauseAndReducedMotionShowAllLabelsAt150Percent",
+      "result": "Passed",
+      "duration": "0.653526"
+    },
+    {
+      "name": "SkipFirstFrameAndEscapeConsumeInput",
+      "result": "Passed",
+      "duration": "0.072748"
+    }
+  ],
+  "testSource": {
+    "path": "Assets/_Project/Tests/PlayMode/M5DirectionPlayModeTests.cs",
+    "sha256": "676f6013138f561834abaf2405839cd19b55bc911846b7b81a8ebe4b7cb5bef5",
+    "methods": 14
+  },
+  "measuredTestOutput": [
+    {
+      "name": "PointerSettingsFromReduced150IntroOpensAndReturns",
+      "output": "M5_POINTER_SCREEN 640x480\n"
+    },
+    {
+      "name": "RecordStatusCannotAcceptPendingFailedOrCancelledSave",
+      "output": "T0 commit: M5 expected save failure\n"
+    },
+    {
+      "name": "SettingsPauseAndReducedMotionShowAllLabelsAt150Percent",
+      "output": "M5_150_LAYOUT screen=640x480 caption=410.8944 viewport=523.2525\n"
+    }
+  ],
+  "sourceBinding": {
+    "manifestPath": "../systems/tech-verification/m5-direction/ownership-source-manifest.json",
+    "manifestSha256": "f132bf56ee6da0dece5dcfb3adb0275a1c7832f009fa2f3506a653eac2ea7021",
+    "files": 25,
+    "unchanged": 24,
+    "changes": [
+      {
+        "path": "unity/Unknown/Assets/_Project/Resources/M5Direction.asset",
+        "diagnosticSha256": "5d138fdeaf39380ac5061c61234239e22886653541957fd1d2fa7fc8ec51c6ac",
+        "currentSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b",
+        "match": false
+      }
+    ],
+    "interpretation": "24/25 diagnostic source hashes still match. The only change is the director-approved false-to-true profile promotion; diagnostic XML does not certify that new profile."
+  },
+  "screenshots": [
+    {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-fresh/intro-reduced-150.png",
+      "observed": [
+        "Entire reduced-motion heading and both caption phases are visible",
+        "Observe/trial/record explanation visible",
+        "Work start and accessibility/settings buttons visible",
+        "Generic empty duty-room art and fixed view; no names, case answer or explicit four-hour-gap disclosure visible"
+      ],
+      "limits": "Still frame proves visible layout, not button interaction or elapsed-time behavior.",
+      "sha256": "008c72051364c64ac4f4390a444519e971d85f9128efb2a90b4b2f21ad15a4cc",
+      "bytes": 1446192,
+      "pngDimensions": [
+        1504,
+        1008
+      ]
+    },
+    {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-v2/trial-after-one-observation.png",
+      "observed": [
+        "Observation 1/2 and copies 0/2",
+        "Humidity2 and ink-spread risk text",
+        "Trial row highlighted",
+        "Lower paper mask retained",
+        "Record status remains preparation"
+      ],
+      "limits": "Current frame alone does not prove which button sequence produced it.",
+      "sha256": "3804abdae4deb727a63dad8d3c9733d899997f9cff8b5fdea6b3affacc87862d",
+      "bytes": 589004,
+      "pngDimensions": [
+        1504,
+        1008
+      ]
+    },
+    {
+      "path": "../systems/tech-verification/intro-gameplay-m5/native-v3/completed-record-restart.png",
+      "observed": [
+        "Observation2/2 and copies2/2",
+        "Record saved text and Record row highlight",
+        "Both preserved copies and lower mask visible",
+        "Lower signature region explicitly remains unresolved"
+      ],
+      "limits": "Restart/bypass action sequence supplied by director; QA independently checks frame and preserved fixture bytes.",
+      "sha256": "807b59181397e6c03d7304256c79af0cded6084af65cf45345a45eb6300c2df7",
+      "bytes": 577963,
+      "pngDimensions": [
+        1504,
+        1008
+      ]
+    }
+  ],
+  "settingsEvidence": {
+    "path": "../systems/tech-verification/intro-gameplay-m5/native-fresh/settings.json",
+    "sha256": "01a391f92ba4ebbf4539c9e93780e1a9a4e05e0e075af53cae18b69c1072394e",
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "freshSaveAbsent": true
+  },
+  "saveEvidence": {
+    "v3": {
+      "inputSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+      "outputSha256": "214d770689fdbdbef495c59a5587f258b0e039f4d7dfb6190a2fdb5a6c7e6d6b",
+      "identical": true,
+      "schemaVersion": 3,
+      "commands": 57,
+      "headSeq": 57,
+      "storyClock": "21:00"
+    },
+    "v2": {
+      "inputSha256": "7ae0d63f3bbd1ac911b9d4b274725a9ef2a117bd34713402f1038638a5676733",
+      "outputSha256": "2c2f204ec877062ae7d2f16f687d0559dbf2692fcedc40dd9b0335a79103d2cd",
+      "inputVersion": 2,
+      "outputVersion": 3,
+      "inputHeadSeq": 42,
+      "outputHeadSeq": 47,
+      "storyClock": "21:00",
+      "addedCommands": [
+        {
+          "seq": 43,
+          "commandId": "EnterSignature",
+          "subjectId": null
+        },
+        {
+          "seq": 44,
+          "commandId": "ObserveSignature",
+          "subjectId": "c1-b2-c1"
+        },
+        {
+          "seq": 45,
+          "commandId": "SetSignatureHumidity",
+          "subjectId": "low"
+        },
+        {
+          "seq": 46,
+          "commandId": "SetSignatureHumidity",
+          "subjectId": "medium"
+        },
+        {
+          "seq": 47,
+          "commandId": "TrialSignature",
+          "subjectId": null
+        }
+      ],
+      "interpretation": "Save differs after version migration and five explicit native gameplay commands. This comparison is not a no-write replay test."
+    }
+  },
+  "directorReportedNative": {
+    "clientSize": "1280x720",
+    "checks": [
+      "100% and150% intro settings mouse open/back passed on active-app retry",
+      "v2 existing save bypassed intro then permitted trial after first observation",
+      "v3 completed save bypassed intro"
+    ],
+    "focusObservation": {
+      "id": "M5-O01",
+      "status": "NOT-REPRODUCED; observation only",
+      "detail": "Director reports the first click after shell screenshot capture was swallowed; subsequent active-app100%/150% attempts passed. No persistent click-target defect established."
+    }
+  },
+  "currentApprovedProfile": {
+    "approvedAtUtc": "2026-09-11T07:14:33.445Z",
+    "decision": "RFC-CX-007",
+    "scope": "internal-prototype-only",
+    "commercialEligible": false,
+    "runtimeApproved": true,
+    "profileSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b",
+    "profilePath": "unity/Unknown/Assets/_Project/Resources/M5Direction.asset",
+    "nativeReviewOwner": "game-production-director",
+    "embeddedCandidateProvenance": "none; original PNGs and meta only; source provenance owned by director"
+  },
+  "remaining": [
+    "Final runtimeApproved=true suites and ordinary build are not yet verified",
+    "Native screen captures reviewed here were taken from the diagnostic build",
+    "Physical gamepad, human archetype playtesting, immersion/G4, performance/G5 and audio remain unmeasured",
+    "Held input across synthetic focus/pause not directly asserted; test separately proves clock pause/resume",
+    "Generated movie content/costs are not independently audited by this receipt"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "mode": "dry-run",
+  "warnings": [],
+  "request": {
+    "url": "https://chatgpt.com/backend-api/codex/responses",
+    "headers": {
+      "Authorization": "[REDACTED]",
+      "ChatGPT-Account-ID": "[REDACTED]",
+      "Content-Type": "application/json",
+      "Accept": "text/event-stream",
+      "originator": "codex_cli_rs",
+      "session_id": "[REDACTED]"
+    },
+    "body": {
+      "model": "gpt-6-astra",
+      "instructions": "",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Create one unlettered sixteen-by-nine fixed workbench frame for an archival investigation game. Match the approved supplied reader reference: low circular worn blue-grey mechanical reader, physically connected swing arm and broad magnifier, shallow support, and a low steady ochre lamp. Do not invent or detach mechanical parts. Two blank rectangular sheets have offset corners and a salt-bound edge; an opaque irregular salt shadow spans the lower quarter of the upper sheet and hides no authored lettering. A plain unmarked adjustment knob sits beside the support. A separate blank rectangular note card rests in a metal holder on the right, unconfirmed and empty. A plain unlettered hexagonal salt plate remains visually distinct from rectangular papers. Keep all objects stable, and leave enough dark negative space above and to the right for accessible UI rendered separately. Locked thirty-five-millimetre equivalent lens, slightly downward view, level roll. Original matte worn surfaces and downward patina. Palette deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent. No paper separation, copies, identity, time-gap diagram, output receipt or answer. NEGATIVE: any text, letters, numbers, handwriting, signatures, logos, watermark, subtitles, HUD, buttons, values, clue marks, timelines, gap diagrams, named people, faces, revealed identity, solved puzzle, completed record, success stamp, holograms, neon, new technology, red warning lamps, weapons, floating or disconnected mechanism, camera motion, zoom, pan, tilted horizon."
+            },
+            {
+              "type": "input_image",
+              "image_url": "[REDACTED_IMAGE_DATA]"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "image_generation",
+          "output_format": "png",
+          "size": "2048x1152"
+        }
+      ],
+      "tool_choice": "auto",
+      "parallel_tool_calls": false,
+      "reasoning": null,
+      "store": false,
+      "stream": true,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "client_metadata": {
+        "x-codex-installation-id": "[REDACTED_INSTALLATION_ID]"
+      }
+    }
+  },
+  "publicationNote": "Auth/session headers redacted; large reference payload omitted from public dry-run; reference path/hash stored separately."
+}

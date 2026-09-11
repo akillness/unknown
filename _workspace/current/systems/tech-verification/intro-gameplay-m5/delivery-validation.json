@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-09-11T07:35:54.279Z",
+  "checks": {
+    "sourceFiles": 25,
+    "appFiles": 316,
+    "galleryLinks": 8,
+    "jsonFiles": 51
+  },
+  "upstreamBase": "2ece5174dde8a973752b38a1fd16598d6d27dfd5",
+  "appFingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736",
+  "scope": "Exact owned source, cloned final app, gallery links and parseable receipts; Unity suites separately bound.",
+  "whitespaceCheck": {
+    "scope": "staged .cs,.md,.json,.html,.asmdef,.asset",
+    "result": "PASS",
+    "preservedException": "Unity-generated .meta empty YAML values contain trailing spaces in4files. Preserved byte-for-byte to keep tested source/import hashes unchanged. Raw tool logs are evidence, not reformatted source."
+  }
+}

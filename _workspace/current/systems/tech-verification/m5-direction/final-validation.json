@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "upstreamIntegrationBase": "2ece5174dde8a973752b38a1fd16598d6d27dfd5",
+  "runtimeApproved": true,
+  "diagnosticFlagUsed": false,
+  "runtimeProfileSha256": "8e99a764023d958b3844a846832bbde556c5ad94618893039fe23b6c61a0c97b",
+  "runs": [
+    {
+      "name": "editmode",
+      "command": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "EditMode",
+        "-assemblyNames",
+        "Tide.Tests.Sim",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/editmode-integrated-final.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/logs/editmode-integrated-final.log"
+      ],
+      "result": "Passed",
+      "total": 36,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 2.2286133,
+      "xmlSha256": "1973275b04f501c4c1025088097a9105013c4e9b63788858271b09455489c7f1",
+      "resultPath": "m5-direction/editmode-integrated-final.xml"
+    },
+    {
+      "name": "playmode",
+      "command": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.C1PlayModeTests;Tide.Tests.C1SignaturePlayModeTests;Tide.Tests.T0CaseThreadTests;Tide.Tests.T0PlayModeTests;Tide.Tests.T0ResourceInteractionTests;Tide.Tests.M5DirectionPlayModeTests",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/playmode-integrated-final.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/logs/playmode-integrated-final.log"
+      ],
+      "result": "Passed",
+      "total": 54,
+      "passed": 54,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 30.1364009,
+      "xmlSha256": "c33bbe3a546844daf89eb6d1fddde308a17c97af87a532f37f2757b8f961fbda",
+      "resultPath": "m5-direction/playmode-integrated-final.xml"
+    },
+    {
+      "name": "boot",
+      "command": [
+        "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-testFilter",
+        "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+        "--t0-save-dir",
+        "/tmp/unknown-c1-m4-boot-m5-integrated-final-20260911",
+        "-testResults",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/boot-integrated-final.xml",
+        "-logFile",
+        "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/logs/boot-integrated-final.log"
+      ],
+      "result": "Passed",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 0.6289251,
+      "xmlSha256": "f3852e5b05a16ce0c7e514867927656135fb6d121d39d43167ff0ea6556f196d",
+      "resultPath": "m5-direction/boot-integrated-final.xml"
+    }
+  ],
+  "build": {
+    "command": [
+      "/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Contents/MacOS/Unity",
+      "-batchmode",
+      "-quit",
+      "-projectPath",
+      "/tmp/unknown-m5-video-runtime-20260911/unity/Unknown",
+      "-executeMethod",
+      "Tide.EditorTools.M5DirectionProjectBuilder.BuildMac",
+      "--m5-evidence-dir",
+      "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction",
+      "-logFile",
+      "/Users/jangyoung/orca/unknown/_workspace/current/systems/tech-verification/m5-direction/logs/build-integrated-final.log"
+    ],
+    "result": "Succeeded",
+    "bytes": 353421261,
+    "logSha256": "5400cdfea6c3e3ad951f3efe8ead190e2fc39373c33ce88878e82c258c68060e",
+    "inventory": "m5-direction/final-app-inventory.json"
+  },
+  "graph": {
+    "command": "graphify update .",
+    "cwd": "/tmp/unknown-m5-video-runtime-20260911",
+    "exitCode": 0,
+    "nodes": 10403,
+    "edges": 11110,
+    "communities": 1260,
+    "log": "m5-direction/logs/graphify-update-final.log"
+  },
+  "memory": {
+    "status": "UNGRAPHED",
+    "reason": "Known mex-agent paths absent; MEX_AGENT_BIN unset; PATH mex is TeX. Read-only resolver inspection found no real agent CLI."
+  }
+}

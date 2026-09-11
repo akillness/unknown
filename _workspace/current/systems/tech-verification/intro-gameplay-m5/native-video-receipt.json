@@ -1,0 +1,145 @@
+{
+  "schema": "unknown.m5.native-video.v1",
+  "recordedAt": "2026-09-11T07:34:11.267Z",
+  "appFingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736",
+  "runtimeApproved": true,
+  "diagnosticOverride": false,
+  "capture": {
+    "tool": "macOS screencapture",
+    "scope": "Explicit game-window IDs899/922 only; no desktop capture",
+    "audio": false
+  },
+  "processing": {
+    "intro": "Trim first5s of raw take; crop1280x720 at0,64 to remove titlebar; resample30fps; H264CRF20; no audio",
+    "gameplay": "Three actual window takes concatenated in chronological order; same crop/FPS/encode. Serial comparison click and final confirm click occur across take boundaries; this is an excerpt, not uninterrupted input evidence."
+  },
+  "sources": [
+    {
+      "file": "/tmp/unknown-m5-native-intro.mov",
+      "sha256": "c5480005266684de2834b219d41f67b9633fa8834c8400c8cf9aa03740552d8b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 784,
+            "r_frame_rate": "240/1"
+          }
+        ],
+        "format": {
+          "duration": "17.975000",
+          "size": "4261839"
+        }
+      }
+    },
+    {
+      "file": "/tmp/unknown-m5-native-gameplay.mov",
+      "sha256": "7e903318984130ade3f7268e3a348c1f9879871a29463d6fc0dcc06166c0a18c",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 784,
+            "r_frame_rate": "240/1"
+          }
+        ],
+        "format": {
+          "duration": "119.988333",
+          "size": "23247242"
+        }
+      }
+    },
+    {
+      "file": "/tmp/unknown-m5-native-record-confirmation.mov",
+      "sha256": "3011afa773ef3ec9ac469f97088f50a567e0a41a65301cc0936caf4c6f80758f",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 784,
+            "r_frame_rate": "600/1"
+          }
+        ],
+        "format": {
+          "duration": "35.006667",
+          "size": "5984442"
+        }
+      }
+    },
+    {
+      "file": "/tmp/unknown-m5-native-saved-record.mov",
+      "sha256": "8b3d47f60b0854c873310941a628ad826cbc960ad3101b15d67bf8653d55348a",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 784,
+            "r_frame_rate": "240/1"
+          }
+        ],
+        "format": {
+          "duration": "7.956667",
+          "size": "1432963"
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "path": "docs/media/intro-gameplay-m5/native-intro.mp4",
+      "sha256": "00b32434e857d161ed1c3f1ae44476c77973822cdf5edbbdde084665618b3bdf",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "12.966667",
+          "size": "225675"
+        }
+      }
+    },
+    {
+      "path": "docs/media/intro-gameplay-m5/native-gameplay.mp4",
+      "sha256": "f34fc96ef9c795d9bc1856f986859fd8dbc3f2684a2258e54e3c3c5989fc1f02",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "162.899999",
+          "size": "1816026"
+        }
+      }
+    }
+  ],
+  "evidence": "native-acceptance.json",
+  "limits": [
+    "Agent-operated development build footage. No human/performance claim.",
+    "No synthetic/generated frames in native recordings."
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "id": "intro-gameplay-m5",
+  "claim": "authored-presentation-target; generated video is previz; runtime evidence separate",
+  "sources": [
+    "synopsis/scenes-and-dialogue.md#s1",
+    "planning/campaign.json:t0-b1",
+    "planning/campaign.json:c1-b2",
+    "concept/style-guide.md",
+    "presentation/c1-signature-presentation.md",
+    "presentation/video-study.md",
+    "vfx/vfx-budget.md",
+    "animation/anim-list.md"
+  ],
+  "imageProvider": "god-tibo-imagen",
+  "videoProvider": "Higgsfield",
+  "defaultRuntimeEligible": false,
+  "scenes": [
+    {
+      "id": "m5-intro",
+      "canonBeat": "t0-b1",
+      "intent": "빈 작업대가 마지막 당직의 책임을 기다린다고 느끼게 한다.",
+      "durationMs": 6000,
+      "camera": {
+        "type": "locked-node-cuts",
+        "focalLengthEquivalentMm": 35,
+        "rollDegrees": 0,
+        "pitchDegrees": -18,
+        "movement": "none"
+      },
+      "audioCue": "none; no audio-only information",
+      "vfxRef": "rain_window visual vocabulary only; no runtime VFX commitment",
+      "animRef": "static-pose; authored clips not added",
+      "motionRef": "hard-cut-0ms",
+      "immersionTarget": 3,
+      "measurement": "not-measured",
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 2500,
+          "shot": "hub-wide",
+          "event": "낮은 창과 빈 작업대, 수평 물선, 수화기를 관찰한다."
+        },
+        {
+          "startMs": 2500,
+          "endMs": 6000,
+          "shot": "workbench-fixed",
+          "event": "같은 닫힌 장부·수화기·빈 트레이로 고정 컷한다. 판독기·염판·서명지는 없다."
+        }
+      ],
+      "provider": "Higgsfield",
+      "prompt": "Create a six-second, silent visual previsualization for a restrained fixed-view archival investigation game. This is concept previs, not gameplay footage. Two locked camera shots with one hard cut at 2.5 seconds, no camera movement. From 0 to 2.5 seconds show an unoccupied coastal duty room at night, low ceiling, low horizontal window, black water horizon at forty percent of frame height, worn blue-grey metal desk, an old telephone handset, a closed rectangular ledger and a blank paper tray. A small steady ochre work lamp is the only warm accent. From 2.5 to 6 seconds hard-cut to a fixed closer view of the same generic desk: the same closed ledger, old telephone handset and empty paper tray under the steady lamp. No reader, salt plate, signature sheets, experimental controls, case evidence or chapter-one equipment appears. Preserve object geometry and positions within each shot. The desk awaits inspection; no finding or ownership is established and nothing resolves itself. Weathered matte surfaces, fine salt rings at joins, downward corrosion streaks, quiet pressure, legible large silhouettes, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent of the frame. Thirty-five millimetre equivalent locked lens, level roll, slightly downward angle. Tiny rain trails on the distant window only; no changing water level. No text, letters, numerals, signatures, logos, watermarks, titles, subtitles, HUD, menus, readable documents, hidden names, named people, solved puzzles, success stamps, flashing lights, red warnings, combat, weapons, holograms, neon, camera movement, zoom, pan, shake, orbit, rack focus, dissolves, floating parts, or new objects appearing inside a shot.",
+      "referenceStillIds": [
+        "m5-hub-source"
+      ],
+      "referenceAssociation": "hub-wide only for start/reference; never use C1 workbench as end frame",
+      "disclosure": "pre-t0-b1; empty duty-room objects only"
+    },
+    {
+      "id": "m5-gameplay-previz",
+      "canonBeat": "c1-b2",
+      "intent": "관찰하고 가역 시험한 뒤 근거를 기록하는 절차를 이해하되 답은 직접 찾게 한다.",
+      "durationMs": 6000,
+      "camera": {
+        "type": "locked-node-cuts",
+        "focalLengthEquivalentMm": 35,
+        "rollDegrees": 0,
+        "movement": "none"
+      },
+      "audioCue": "none; no audio-only information",
+      "vfxRef": "none; opaque lower mask persists",
+      "animRef": "neutral-knob-previz-only; no new runtime clip",
+      "motionRef": "hard-cut-0ms",
+      "immersionTarget": 4,
+      "measurement": "not-measured",
+      "beats": [
+        {
+          "startMs": 0,
+          "endMs": 2000,
+          "shot": "observe",
+          "event": "붙은 두 장·가림을 먼저 본다."
+        },
+        {
+          "startMs": 2000,
+          "endMs": 4000,
+          "shot": "reversible-operation",
+          "event": "눈금 없는 손잡이를 조금 돌렸다 되돌린다. 종이 상태는 그대로다."
+        },
+        {
+          "startMs": 4000,
+          "endMs": 6000,
+          "shot": "unconfirmed-record",
+          "event": "빈 기록 자리와 서로 다른 매체 형태를 본다. 완료 표현은 없다."
+        }
+      ],
+      "provider": "Higgsfield",
+      "prompt": "Create a six-second, silent mechanics previsualization for a fixed-view archival investigation game. This is a staged concept of observation, reversible operation and recording, not captured gameplay and not a puzzle solution. Three locked views with hard cuts exactly at two and four seconds, with no camera movement or transition effects. Use the same weathered blue-grey circular reader, connected swing arm, shallow support and low ochre lamp throughout. From 0 to 2 seconds: a broad fixed workbench view, two blank rectangular paper sheets with offset corners and a salt-bound edge, an opaque irregular salt shadow across the lower quarter of the top paper; the shadow never clears. From 2 to 4 seconds: a fixed closer view of one unmarked mechanical adjustment knob beside that same shallow support; the knob turns a small neutral amount and returns to its original position, the papers stay overlapped and no setting or solution is disclosed. From 4 to 6 seconds: a locked workbench composition with the unchanged papers on the left and a separate empty rectangular note card in a metal holder on the right; an unlettered hexagonal plate remains visually distinct from the rectangular paper. The empty note card is an unconfirmed place to record, never a success receipt. No paper separation, copy creation, stamp or factual revelation occurs. Large stable silhouettes, tactile matte salt crystals and worn metal with downward patina, restrained archival atmosphere, deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent. No text, letters, numerals, signatures, logos, watermarks, titles, subtitles, HUD, menus, readable documents, hidden names, named people, solved puzzles, success stamps, flashing lights, red warnings, combat, weapons, holograms, neon, camera movement, zoom, pan, shake, orbit, rack focus, dissolves, floating parts, or new objects appearing inside a shot.",
+      "referenceStillIds": [
+        "m5-workbench-source"
+      ],
+      "referenceAssociation": "separate C1 c1-b2 preview at its own chronology, never spliced into fresh-game intro"
+    }
+  ],
+  "nativeApplication": {
+    "scope": "read-only-skippable-intro-plus-persistent-operation-orientation",
+    "autoAdvanceDurationMs": 6000,
+    "minimumHoldMs": 0,
+    "transitionMs": 0,
+    "skipAvailableFromMs": 0,
+    "skipInputs": [
+      "visible pointer button",
+      "Escape",
+      "existing back binding"
+    ],
+    "resumeBypassesIntro": true,
+    "replayExplicitOnly": true,
+    "defaultFocus": "skip-or-continue",
+    "reducedMotion": "one static frame, all three verb labels immediately visible, explicit continue, no timed wait",
+    "labels": [
+      "관찰",
+      "시험",
+      "기록"
+    ],
+    "simulationWrites": false,
+    "saveWrites": false,
+    "evidencePublication": false,
+    "videoPlaybackRequired": false,
+    "missingAssetFallback": "solid ink background with the same readable labels and controls",
+    "caption": "자료를 살피고, 조건을 시험하고, 근거를 기록하세요.",
+    "exclusions": [
+      "new puzzle rules",
+      "new clues or spoilers",
+      "forced cinematic on restore",
+      "timer-driven confirmation",
+      "production generated audio"
+    ],
+    "settingsReachable": true,
+    "introDisclosure": "pre-t0-b1; objects and atmosphere only, no four-hour gap, identities, reconstruction or values",
+    "persistentOrientation": {
+      "labels": [
+        "관찰",
+        "시험",
+        "기록"
+      ],
+      "renderTimingMs": 0,
+      "source": "existing visible selection and authoritative snapshot/status projections only",
+      "selectionRule": "highlight selected action category, never recommend an unobserved answer",
+      "stateRule": "show outcome only from currently visible authoritative status; completed/save-success wording only after accepted receipt",
+      "unselectedRule": "neutral three labels, no inferred answer or target highlight",
+      "examples": [
+        {
+          "selection": "readable document",
+          "active": "관찰",
+          "status": "existing observed/unobserved status only"
+        },
+        {
+          "selection": "reversible condition or test control",
+          "active": "시험",
+          "status": "existing current selection and last trial result only; no correct value"
+        },
+        {
+          "selection": "copy, comparison or confirmation control",
+          "active": "기록",
+          "status": "existing candidate/save-pending/failure/accepted status only"
+        }
+      ],
+      "noAnimation": true,
+      "noSimulationWrites": true,
+      "noNewPuzzlePredicate": true,
+      "inputFocusPreserved": true,
+      "scope": "existing C1 signature UI; intro has no C1 illustration"
+    },
+    "introImageStillId": "m5-hub-source",
+    "introContextPhases": {
+      "count": 2,
+      "cameraMovement": "none",
+      "movieImport": false,
+      "background": "assets/generated/2d/concept/intro-m5-r03/image.png",
+      "durationsMs": [
+        3125,
+        2875
+      ],
+      "totalDurationMs": 6000,
+      "captionSwitchMs": 3125,
+      "observedVideoCutMs": 3125,
+      "providerVideoDurationSeconds": 6.041667,
+      "originalVideoPromptCutMs": 2500,
+      "finalCutDecision": "Director adopted observed cut at 3125 ms; native total remains 6000 ms, second phase 2875 ms"
+    },
+    "assetBindings": [
+      {
+        "slot": "intro-background",
+        "sourcePath": "assets/generated/2d/concept/intro-m5-r03/image.png",
+        "sha256": "24a2e45c733fba2a43bffd602906358191479f47e183355001de36c691d7a5e2",
+        "visualReview": "pass; horizon deviation recorded",
+        "scope": "internal-prototype-only; provenance promotion separate"
+      },
+      {
+        "slot": "c1-operation-orientation-surface",
+        "sourcePath": "assets/generated/2d/ui/m5-direction-surface-r01/image.png",
+        "sha256": "52c4b3cc65cc1432bd94c5e7207ea35a50cbd5d8507f98e9c27f760db590b414",
+        "width": 1254,
+        "height": 1254,
+        "provider": "god-tibo-imagen",
+        "derivedFrom": {
+          "video": "assets/generated/previz/intro-gameplay-m5/gameplay/clip.mp4",
+          "videoSha256": "f7dae4b3f4548011dcdd1c4757742ec5054c147d7bd834acbbe5be45bd509f72",
+          "timeSeconds": 2.5,
+          "referenceFrame": "assets/generated/2d/ui/m5-direction-surface-r01/reference-frame.png",
+          "referenceFrameSha256": "b34fa327235ddb7a5eeae3ad15d9a575976cf45aef4de9f4519e618cec3f52d3"
+        },
+        "visualReview": "pass as quiet unlettered decorative surface; native composite contrast pending",
+        "scope": "internal-prototype-only; provenance promotion separate"
+      }
+    ]
+  },
+  "acceptance": [
+    {
+      "id": "M5-P01",
+      "requirement": "Both clips are measured 5–8 seconds and recorded with actual resolution, frame rate, model, prompt, reference hashes and costs; label generated previz."
+    },
+    {
+      "id": "M5-P02",
+      "requirement": "Intro stays inside t0-b1 public information; no signer or later chapter clue is visible."
+    },
+    {
+      "id": "M5-P03",
+      "requirement": "No generated letters/numbers/signatures or success marks; no answer exposed by the adjustment knob."
+    },
+    {
+      "id": "M5-P04",
+      "requirement": "Reader geometry is connected and stable; same palette and silhouettes across clips and approved still."
+    },
+    {
+      "id": "M5-P05",
+      "requirement": "Native skip works from the first displayed frame by pointer and keyboard; skip input is consumed without passing to gameplay."
+    },
+    {
+      "id": "M5-P06",
+      "requirement": "Reduced motion shows one static image and all guide labels with immediate continue, with no timed wait or movement."
+    },
+    {
+      "id": "M5-P07",
+      "requirement": "At 150 percent text size all guide copy, skip and continue are visible or scrollable; focus is visible."
+    },
+    {
+      "id": "M5-P08",
+      "requirement": "Before/after simulation snapshot and persisted-save bytes are identical across open, elapsed time, skip, replay and asset failure."
+    },
+    {
+      "id": "M5-P09",
+      "requirement": "Resume enters restored gameplay without mandatory intro and preserves checkpoint/evidence state."
+    },
+    {
+      "id": "M5-P10",
+      "requirement": "Any confirmation/status indication reads actual snapshot and accepted save receipt, never movie frame/timer events."
+    },
+    {
+      "id": "M5-P11",
+      "requirement": "No generated video is presented as native gameplay; native recording records actual input and app/build source."
+    },
+    {
+      "id": "M5-P12",
+      "requirement": "Video-to-runtime adoption table identifies exact observed frame/time and resource hash; human G4 and performance stay unmeasured unless actually tested."
+    },
+    {
+      "id": "M5-P13",
+      "requirement": "Persistent orientation follows actual selected command category and visible status without moving focus, changing state, recommending unknown values, or marking an unaccepted save complete; settings remain reachable during intro."
+    }
+  ],
+  "sourceStills": [
+    {
+      "id": "m5-hub-source",
+      "provider": "god-tibo-imagen",
+      "purpose": "video reference, not yet runtime resource",
+      "aspectRatio": "16:9",
+      "runtimeEligible": false,
+      "prompt": "Create one unlettered sixteen-by-nine establishing frame for a fixed-view archival investigation game. Use a locked thirty-five-millimetre equivalent lens, eye height one point five five metres, slight downward view, level roll. Show an unoccupied coastal duty room at night before the player investigates anything: low ceiling, low horizontal window, black water horizon at forty percent of frame height, worn blue-grey metal desk, an old telephone handset, one closed rectangular ledger and a blank paper tray. Nothing is yet understood or confirmed. Keep the right third low-detail dark shadow for separately rendered accessible game UI. A small steady ochre work lamp is the only warm accent. Original tactile matte surfaces, fine salt rings at joins, downward corrosion streaks, large stable silhouettes. Palette deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent. No readable rows, diagrams, elapsed-time gap, personal object ownership, or identity information. NEGATIVE: any text, letters, numbers, handwriting, signatures, logos, watermark, subtitles, HUD, buttons, values, clue marks, timelines, gap diagrams, named people, faces, revealed identity, solved puzzle, completed record, success stamp, holograms, neon, new technology, red warning lamps, weapons, floating or disconnected mechanism, camera motion, zoom, pan, tilted horizon.",
+      "useFor": [
+        "m5-intro"
+      ]
+    },
+    {
+      "id": "m5-workbench-source",
+      "provider": "god-tibo-imagen",
+      "purpose": "video reference, not yet runtime resource",
+      "aspectRatio": "16:9",
+      "runtimeEligible": false,
+      "prompt": "Create one unlettered sixteen-by-nine fixed workbench frame for an archival investigation game. Match the approved supplied reader reference: low circular worn blue-grey mechanical reader, physically connected swing arm and broad magnifier, shallow support, and a low steady ochre lamp. Do not invent or detach mechanical parts. Two blank rectangular sheets have offset corners and a salt-bound edge; an opaque irregular salt shadow spans the lower quarter of the upper sheet and hides no authored lettering. A plain unmarked adjustment knob sits beside the support. A separate blank rectangular note card rests in a metal holder on the right, unconfirmed and empty. A plain unlettered hexagonal salt plate remains visually distinct from rectangular papers. Keep all objects stable, and leave enough dark negative space above and to the right for accessible UI rendered separately. Locked thirty-five-millimetre equivalent lens, slightly downward view, level roll. Original matte worn surfaces and downward patina. Palette deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent. No paper separation, copies, identity, time-gap diagram, output receipt or answer. NEGATIVE: any text, letters, numbers, handwriting, signatures, logos, watermark, subtitles, HUD, buttons, values, clue marks, timelines, gap diagrams, named people, faces, revealed identity, solved puzzle, completed record, success stamp, holograms, neon, new technology, red warning lamps, weapons, floating or disconnected mechanism, camera motion, zoom, pan, tilted horizon.",
+      "useFor": [
+        "m5-gameplay-previz"
+      ],
+      "forbiddenUse": [
+        "fresh-game intro",
+        "intro end frame"
+      ]
+    }
+  ],
+  "observedVideoReview": {
+    "path": "presentation/intro-gameplay-m5-video-review.md",
+    "intro": {
+      "durationSeconds": 6.041667,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "cutSeconds": [
+        3.125
+      ],
+      "sha256": "fa311375aefa5ad99ea5d376ab1c188e4b3a48af07c6d9d26df55437dfafa298",
+      "adopt": "two context phases with clean hub r03 still only",
+      "reject": "generated lined tray paper and dial marks; no movie runtime import"
+    },
+    "gameplay": {
+      "durationSeconds": 6.041667,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "cutSeconds": [
+        2.083333,
+        4.041667
+      ],
+      "sha256": "f7dae4b3f4548011dcdd1c4757742ec5054c147d7bd834acbbe5be45bd509f72",
+      "adopt": "observation/trial-target/record-context orientation and dark matte metal palette",
+      "reject": "camera drift, auto cleaning, mask pixel changes, automatic manipulation"
+    },
+    "nativeVerification": "pending; no native pass claimed",
+    "postVideoResource": {
+      "path": "assets/generated/2d/ui/m5-direction-surface-r01/image.png",
+      "sha256": "52c4b3cc65cc1432bd94c5e7207ea35a50cbd5d8507f98e9c27f760db590b414",
+      "visualReview": "pass",
+      "nativeImportAcceptance": "pending-runtime-verification"
+    }
+  },
+  "approval": {
+    "status": "current-authored-contract",
+    "approvedBy": "game-production-director",
+    "scope": "internal-prototype presentation design; provenance promotion remains director-owned",
+    "nativeAcceptance": "pending-runtime-verification"
+  }
+}

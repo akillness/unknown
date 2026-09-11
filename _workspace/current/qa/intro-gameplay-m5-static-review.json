@@ -1,0 +1,177 @@
+{
+  "measuredAt": "2026-09-11T06:39:42.408540+00:00",
+  "method": "Read-only Python standard-library JSON, string, SHA-256 and PNG-IHDR checks; no Unity/runtime or visual checks",
+  "baseline": "6514f549ac7b2e71846005c75a4ff9227882c47c",
+  "checks": [
+    {
+      "id": "S01",
+      "check": "Two unique scene IDs and distinct t0-b1/c1-b2 chronology",
+      "result": "PASS"
+    },
+    {
+      "id": "S02",
+      "check": "Declared shot intervals cover each requested duration without gaps",
+      "result": "PASS"
+    },
+    {
+      "id": "S03",
+      "check": "Both cameras declare fixed node cuts and no movement",
+      "result": "PASS"
+    },
+    {
+      "id": "S04",
+      "check": "Exact JSON scene prompts occur in Markdown",
+      "result": "PASS"
+    },
+    {
+      "id": "S05",
+      "check": "Named source documents exist",
+      "result": "PASS"
+    },
+    {
+      "id": "S06",
+      "check": "Scene reference IDs resolve to authored stills",
+      "result": "PASS"
+    },
+    {
+      "id": "S07",
+      "check": "Intro references hub only and C1 still forbids intro use",
+      "result": "PASS"
+    },
+    {
+      "id": "S08",
+      "check": "Default and source still runtime eligibility remain false",
+      "result": "PASS"
+    },
+    {
+      "id": "S09",
+      "check": "Minimum hold/skip delay/transition declared zero",
+      "result": "PASS"
+    },
+    {
+      "id": "S10",
+      "check": "Pointer, Escape and existing back skip declared",
+      "result": "PASS"
+    },
+    {
+      "id": "S11",
+      "check": "Resume bypass, explicit replay and settings reachability declared",
+      "result": "PASS"
+    },
+    {
+      "id": "S12",
+      "check": "Reduced motion declares static explicit continuation without timed wait",
+      "result": "PASS"
+    },
+    {
+      "id": "S13",
+      "check": "Presentation declares no simulation/save/evidence writes or required video",
+      "result": "PASS"
+    },
+    {
+      "id": "S14",
+      "check": "Orientation declares no animation/new predicate/state writes and preserves focus",
+      "result": "PASS"
+    },
+    {
+      "id": "S15",
+      "check": "Gameplay provider prompt equals authored JSON prompt",
+      "result": "PASS"
+    },
+    {
+      "id": "S16",
+      "check": "Thirteen unique author acceptance declarations",
+      "result": "PASS"
+    },
+    {
+      "id": "S17",
+      "check": "Completed source still prompt/output hashes, bytes and actual sizes match provenance",
+      "result": "PASS"
+    },
+    {
+      "id": "S18",
+      "check": "C1 source reference hash matches approved reader capture",
+      "result": "PASS"
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0
+  },
+  "declarations": {
+    "presentation": 13,
+    "qaRegressions": 14,
+    "executedQaRegressions": 0
+  },
+  "sourceStills": [
+    {
+      "directory": "assets/generated/2d/concept/intro-m5-r01",
+      "assetId": "m5-hub-source",
+      "promptHashMatches": true,
+      "outputHashMatches": true,
+      "bytesMatch": true,
+      "requestedSize": "2048x1152",
+      "actualSize": "1672x941",
+      "actualSizeMatches": true,
+      "runtimeEligible": false,
+      "references": [],
+      "review": "NEEDS-REPAIR: faint generated cover lettering; retain rejected r01. Horizon is approx25% not requested40%."
+    },
+    {
+      "directory": "assets/generated/2d/concept/c1-playflow-m5-r01",
+      "assetId": "m5-workbench-source",
+      "promptHashMatches": true,
+      "outputHashMatches": true,
+      "bytesMatch": true,
+      "requestedSize": "2048x1152",
+      "actualSize": "1672x941",
+      "actualSizeMatches": true,
+      "runtimeEligible": false,
+      "references": [
+        {
+          "path": "docs/media/c1-signature-reader-native-r02.png",
+          "sha256Matches": true
+        }
+      ],
+      "review": "Accepted only as C1 previz reference. Extra bowls/tools and hexagonal salt tray are not game mechanics/evidence. No literal UI/evidence promotion."
+    }
+  ],
+  "inputHashes": [
+    {
+      "path": "_workspace/current/presentation/intro-gameplay-m5.json",
+      "sha256": "0c37defa8aa9b47468dbc1b3fa64ed70f1b31c77cac1d2679e99bfd087031353"
+    },
+    {
+      "path": "_workspace/current/presentation/intro-gameplay-m5.md",
+      "sha256": "ed6d216231987352f3dcab039dba0d6bfd32f9ca7fd72cd57351759d9ff125c0"
+    },
+    {
+      "path": "_workspace/current/presentation/intro-gameplay-m5.meta.md",
+      "sha256": "55c8167572febefdc893c175330789e1e87f4da5fde9a6c712dbc7e5f84c1951"
+    },
+    {
+      "path": "_workspace/current/production/intro-gameplay-m5-status.md",
+      "sha256": "d3ed17ea4aa8bb9ec1b6a6da4f51e14fd3126cda7a19858969da499cd4bae94e"
+    },
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r01/provenance.json",
+      "sha256": "62487d76d22bbc4962d849a27dc6e689607d643bc3d1147584e7fb7bd0975659"
+    },
+    {
+      "path": "assets/generated/2d/concept/c1-playflow-m5-r01/provenance.json",
+      "sha256": "0894fe56dd9c9c1737be17cd51511108d83c0c9792261b13d3993bc82784b9c9"
+    },
+    {
+      "path": "assets/generated/previz/intro-gameplay-m5/gameplay/prompt.txt",
+      "sha256": "a6fb948a4f229b0eefc69501437939975e2c73dc46b6a714b22bf29aaa85449f"
+    },
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r03/prompt.txt",
+      "sha256": "d723933f560d9e1522746cd6c84251c153247bb9ed7da5dac43dcfda5c0aa286"
+    }
+  ],
+  "commandSession": "Codex QA /root/c1_m4_qa; rtk proxy python3 -; 2026-09-11T06:39:42Z",
+  "status": "current",
+  "claimBoundary": "18 independent static declaration/source-association/hash checks only; 13 authored acceptance declarations and 14 QA regression targets are not executed tests. Runtime/native/video-frame review NOT-RUN."
+}

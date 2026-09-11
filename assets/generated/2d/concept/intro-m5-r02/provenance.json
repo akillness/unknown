@@ -1,0 +1,28 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m5-hub-source-r02",
+  "generated_at": "2026-09-11T06:36:45.865295+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "job_id": "resp_00bc04fbffef3ab7016aa3a1416dec87d0a4175c9a022158c2",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "48166670f232053d85767d5b595fa724bbdc2769c5cc6c89542cca86d56766a5",
+  "requested_size": "2048x1152",
+  "actual_size": "1672x941",
+  "output_file": "image.png",
+  "output_sha256": "998ff6406f6b53ee66d195acb4cb196c7d05ef7e11599f82491bfa957360707f",
+  "bytes": 1646648,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/intro-m5-r01/image.png",
+      "sha256": "65964b47a26f416f9e0a9d29b868408985ed564c7cdb9f3c23d6c39d771172cf"
+    }
+  ],
+  "runtimeEligible": false,
+  "commercialReleaseEligible": false,
+  "credits_actual": null,
+  "rights_review": "_workspace/current/qa/intro-gameplay-m5-rights-review.md",
+  "review": "REJECTED: dial cleanup improved but cover text-like marks remained."
+}

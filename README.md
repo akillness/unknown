@@ -156,6 +156,18 @@ open -a "$PWD/unity/Unknown/Builds/C1-M4-mac/Unknown.app"
 
 구현·검증 영수증은 [M4 보고서](_workspace/current/production/codex-c1-m4-status.md), 리소스 생성·수정·승격은 [작업자 검토](_workspace/current/production/c1-signature-operator-review.md)에 기록합니다. 범위는 `c1-b2`까지이며, C1 전체·설계 플레이시간·사람 플레이테스트·성능·G4/G5 완료를 뜻하지 않습니다. MuAPI 생성과 신규 음향의 청취 검수는 완료되지 않았습니다.
 
+## M5 — 영상에서 게임 연출로
+
+[인트로·플레이 영상과 실제 게임 녹화 보기](docs/media/intro-gameplay-m5/index.html)
+
+Higgsfield로 인트로와 C1 플레이 연출 영상을 각각 제작하고, 측정한 컷과 시선 흐름을 Unity에 적용했습니다. 신규 게임은 건너뛰기·설정이 가능한 6초 인트로로 시작하며, 기존 세이브는 바로 이어집니다. C1의 관찰·시험·기록 안내는 선택한 도구와 실제 기록 상태를 따릅니다.
+
+영상의 임의 손잡이 동작·카메라 이동·가림 영역 삭제는 채택하지 않았습니다. GTI로 제작한 당직실 배경과 완성된 플레이 영상의 프레임에서 파생한 UI 표면을 사용합니다. 생성 영상은 프리비즈이며 게임 실행에는 필요하지 않습니다.
+
+최종 통합 검증: **EditMode36/36 · PlayMode54/54 · 부팅1/1**. 실제 인트로·플레이 녹화와 완료 세이브 재시작을 확인했습니다.
+
+검증과 출처: [M5 실행·영상 기록](_workspace/current/production/intro-gameplay-m5-status.md), [연출 검토](_workspace/current/presentation/intro-gameplay-m5-video-review.md).
+
 ## 개발용 준비와 정본 재생성
 
 기획·구현 작업은 `CLAUDE.md` → `.mex/ROUTER.md` → `_workspace/current/handoff/README.md` 순서로 계약을 확인합니다. `Prepare`는 프로젝트에 포함된 테이블을 읽고 부모 작업 트리의 `_workspace/current/planning/campaign.json` SHA를 검증한 뒤 씬을 준비합니다. 저작 문서에서 테이블을 생성하는 명령이 아니며, 이 경로에는 부모 캠페인 파일이 필요합니다.

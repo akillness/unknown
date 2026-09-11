@@ -1,0 +1,50 @@
+{
+  "mode": "dry-run",
+  "warnings": [],
+  "request": {
+    "url": "https://chatgpt.com/backend-api/codex/responses",
+    "headers": {
+      "Authorization": "[REDACTED]",
+      "ChatGPT-Account-ID": "[REDACTED]",
+      "Content-Type": "application/json",
+      "Accept": "text/event-stream",
+      "originator": "codex_cli_rs",
+      "session_id": "[REDACTED]"
+    },
+    "body": {
+      "model": "gpt-6-astra",
+      "instructions": "",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Create one unlettered sixteen-by-nine establishing frame for a fixed-view archival investigation game. Use a locked thirty-five-millimetre equivalent lens, eye height one point five five metres, slight downward view, level roll. Show an unoccupied coastal duty room at night before the player investigates anything: low ceiling, low horizontal window, black water horizon at forty percent of frame height, worn blue-grey metal desk, an old telephone handset, one closed rectangular ledger and a blank paper tray. Nothing is yet understood or confirmed. Keep the right third low-detail dark shadow for separately rendered accessible game UI. A small steady ochre work lamp is the only warm accent. Original tactile matte surfaces, fine salt rings at joins, downward corrosion streaks, large stable silhouettes. Palette deep ink #0E1F26, wet metal #36565C, patina #4F7A6B, salt #C8D6D3, paper #E7E3D8, ochre #E2AF62 under eight percent. No readable rows, diagrams, elapsed-time gap, personal object ownership, or identity information. NEGATIVE: any text, letters, numbers, handwriting, signatures, logos, watermark, subtitles, HUD, buttons, values, clue marks, timelines, gap diagrams, named people, faces, revealed identity, solved puzzle, completed record, success stamp, holograms, neon, new technology, red warning lamps, weapons, floating or disconnected mechanism, camera motion, zoom, pan, tilted horizon."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "image_generation",
+          "output_format": "png",
+          "size": "2048x1152"
+        }
+      ],
+      "tool_choice": "auto",
+      "parallel_tool_calls": false,
+      "reasoning": null,
+      "store": false,
+      "stream": true,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "client_metadata": {
+        "x-codex-installation-id": "[REDACTED_INSTALLATION_ID]"
+      }
+    }
+  },
+  "publicationNote": "Auth/session headers redacted; large reference payload omitted from public dry-run; reference path/hash stored separately."
+}

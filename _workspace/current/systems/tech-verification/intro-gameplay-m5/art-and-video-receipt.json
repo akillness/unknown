@@ -1,0 +1,95 @@
+{
+  "schema": "m5-video-to-runtime-art/v1",
+  "recordedAt": "2026-09-11T06:47:30.465Z",
+  "baseline": "6514f549ac7b2e71846005c75a4ff9227882c47c",
+  "clips": [
+    {
+      "id": "intro",
+      "path": "assets/generated/previz/intro-gameplay-m5/intro/clip.mp4",
+      "sha256": "fa311375aefa5ad99ea5d376ab1c188e4b3a48af07c6d9d26df55437dfafa298",
+      "duration": 6.041667,
+      "cutSeconds": [
+        3.125
+      ],
+      "adopted": "Two context phases, fixed cuts, low-key contrast.",
+      "rejected": "Invented lined tray paper/dialmarks; no movie pixels imported."
+    },
+    {
+      "id": "c1-gameplay-previz",
+      "path": "assets/generated/previz/intro-gameplay-m5/gameplay/clip.mp4",
+      "sha256": "f7dae4b3f4548011dcdd1c4757742ec5054c147d7bd834acbbe5be45bd509f72",
+      "duration": 6.041667,
+      "cutSeconds": [
+        2.083333,
+        4.041667
+      ],
+      "adopted": "Static spatial orientation: observation surface, trial target, separate record context.",
+      "rejected": "Automatic paper clearing, knob action, camera drift, inventedinventory; no movie drives state."
+    }
+  ],
+  "nativePlan": {
+    "introBackground": "assets/generated/2d/concept/intro-m5-r03/image.png",
+    "introDurationsMs": [
+      3125,
+      2875
+    ],
+    "directionSurface": "assets/generated/2d/ui/m5-direction-surface-r01/image.png",
+    "orientation": "Reads actual selected controls, visible trial state and accepted commit receipt; never advances logic automatically.",
+    "accessibility": [
+      "skip",
+      "settings-before-play",
+      "reduced-motion-static-information",
+      "150-percent-text",
+      "release-latch"
+    ],
+    "movieDependency": false
+  },
+  "derivedResource": {
+    "provenance": "assets/generated/2d/ui/m5-direction-surface-r01/provenance.json",
+    "generatedAfterCompletedVideo": true,
+    "referenceFrameSeconds": 2.5,
+    "sha256": "52c4b3cc65cc1432bd94c5e7207ea35a50cbd5d8507f98e9c27f760db590b414"
+  },
+  "runtimeInspection": {
+    "status": "PASS-bounded-prototype",
+    "nativeReceipt": "native-acceptance.json",
+    "appFingerprint": "484ab029f0bf29b4af6ffdd2bb9587ca6e08a432e09dde979d3635517b84d736",
+    "integratedBase": "2ece5174dde8a973752b38a1fd16598d6d27dfd5",
+    "tests": {
+      "editMode": {
+        "file": "editmode-integrated-final.xml",
+        "sha256": "1973275b04f501c4c1025088097a9105013c4e9b63788858271b09455489c7f1",
+        "result": "Passed",
+        "total": 36,
+        "passed": 36,
+        "failed": 0,
+        "skipped": 0
+      },
+      "playMode": {
+        "file": "playmode-integrated-final.xml",
+        "sha256": "c33bbe3a546844daf89eb6d1fddde308a17c97af87a532f37f2757b8f961fbda",
+        "result": "Passed",
+        "total": 54,
+        "passed": 54,
+        "failed": 0,
+        "skipped": 0
+      },
+      "boot": {
+        "file": "boot-integrated-final.xml",
+        "sha256": "f3852e5b05a16ce0c7e514867927656135fb6d121d39d43167ff0ea6556f196d",
+        "result": "Passed",
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "sourcePromotion": "RFC-CX-007 (hubr03 and UI surface only)",
+    "nativeVideoReceipt": "native-video-receipt.json"
+  },
+  "billing": "assets/generated/previz/intro-gameplay-m5/billing-summary.json",
+  "limits": [
+    "Generated videos remain previz-only; native movies are separate real window recordings.",
+    "Commercial release clearance, human playtesting, performance and physical-pad measurements remain outside this delivery."
+  ]
+}

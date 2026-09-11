@@ -18,18 +18,32 @@ namespace Tide.App
         string SignatureValue(string key)=>C1SignatureDefinition.Get(Journal.State,key);
         public void ContinueToSignature(){signatureSurface=null;CloseTool();document=null;overlay=null;SubmitImmediate(new PuzzleCommand("EnterSignature"));}
         PuzzleCommand SignatureConfirmation()=>new PuzzleCommand("ConfirmSignature",Definition.Signature.ComparisonId,Definition.Signature.RegionId);
-        string SignatureCaseThread()=>"C1 · "+SignatureText("c1.signature.title")+"\n관찰"+" "+Definition.Signature.Observations.Count(id=>SignatureHas("observed:"+id))+" / 2 · 사본 "+Definition.Signature.Copies.Count(id=>SignatureHas("copy:"+id))+" / 2\n"+
-            (SignatureComplete?"번호대 연결 기록 · 아래쪽은 미해결":SignatureValue("humidity")!=null?SignatureText("c1.signature.humidity."+SignatureValue("humidity"))+" · "+(SignatureValue("trial")=="safe"?"가장자리 풀림":SignatureValue("trial")=="risk"?"잉크 번짐 위험":"시험 전"):SignatureHas("separated")?"두 사본과 판의 번호대를 확인한다.":"기록을 살펴보고 습도 시험을 선택한다.");
+        string SignatureCaseThread(){
+            string context=SignatureComplete?"번호대 연결 기록 · 아래쪽은 미해결":SignatureValue("humidity")!=null?SignatureText("c1.signature.humidity."+SignatureValue("humidity"))+" · "+(SignatureValue("trial")=="safe"?"가장자리 풀림":SignatureValue("trial")=="risk"?"잉크 번짐 위험":"시험 전"):SignatureHas("separated")?"두 사본과 판의 번호대를 확인한다.":"기록을 살펴보고 습도 시험을 선택한다.";
+            return "C1 · "+SignatureText("c1.signature.title")+"\n관찰 "+Definition.Signature.Observations.Count(id=>SignatureHas("observed:"+id))+" / 2 · 사본 "+Definition.Signature.Copies.Count(id=>SignatureHas("copy:"+id))+" / 2\n"+context+(DirectionEnabled?"\n"+SignatureRecordContext():"");
+        }
+        string SignatureDirectionCategory(string id){
+            if(id.StartsWith("c1-signature-open-")||id.StartsWith("c1-signature-observe-"))return "observe";
+            if(id.StartsWith("c1-signature-humidity-")||id=="c1-signature-trial"||id=="c1-signature-separate"||id=="c1-signature-reset")return "trial";
+            if(id.StartsWith("c1-signature-copy-")||id=="c1-signature-mark"||id=="c1-signature-compare"||id=="c1-signature-cite"||id=="c1-signature-confirm"||id=="c1-signature-review"||id=="preview-next"||id=="confirm-submit"||id=="retry-save")return "record";
+            return null;
+        }
+        string SignatureRecordContext()=>SignatureComplete?"기록 · 저장 완료":SavePending?"기록 · 저장 확인 중":overlay=="saveFailure"?"기록 · 저장 실패":Definition.Signature.Ready(Journal.State)?"기록 · 확정 준비":"기록 · 준비 중";
+        void SignatureSection(GameScreen screen,int first,string key,string title,string detail=null){
+            if(!DirectionEnabled||first>=screen.Actions.Count)return;
+            var action=screen.Actions[first];action.SectionKey=key;action.SectionTitle=title;action.SectionDetail=detail;
+        }
         string SignatureConfirmationText()=>"서명지 두 장의 사본, 가려진 영역 표시, 판 #0의 번호대 연결과 대조 근거를 함께 저장합니다.\n\n두 매체는 같은 사건을 가리키지만, 가려진 서명란은 미해결로 남습니다.";
         void SignatureScreen(GameScreen s)
         {
             PrepareSignatureSurface(s,document??"workspace");
             s.Title="C1 · "+SignatureText("c1.signature.title");
             var state=Journal.State;var def=Definition.Signature;
+            if(DirectionEnabled)s.SectionSurface=directionProfile.sectionSurface;
             if(SignatureComplete)
             {
                 s.Body=SignatureText("c1.signature.complete")+"\n\n가려진 서명란 아래쪽은 여전히 미해결입니다.\n현재 구현된 구간을 마쳤습니다.";
-                s.Actions.Add(A("c1-signature-review",L("evidence"),()=>OpenOverlay("evidence")));AttachSignaturePaper(s);return;
+                s.Actions.Add(A("c1-signature-review",L("evidence"),()=>OpenOverlay("evidence")));if(DirectionEnabled)SignatureSection(s,0,"record",directionProfile.recordTitle,SignatureRecordContext());AttachSignaturePaper(s);return;
             }
             if(document!=null)
             {
@@ -38,7 +52,7 @@ namespace Tide.App
                 {
                     var id=(string)observation["id"];s.Title=SignatureText((string)observation["labelKey"]);s.Body=(string)observation["description"];
                     s.Actions.Add(A("c1-signature-observe-"+id,(SignatureHas("observed:"+id)?"✓ ":"")+"관찰 기록 · 원형 사본 보존",()=>SubmitImmediate(new PuzzleCommand("ObserveSignature",id))));
-                    s.Actions.Add(A("c1-signature-close",L("back"),()=>{document=null;Render();}));AttachSignaturePaper(s);return;
+                    s.Actions.Add(A("c1-signature-close",L("back"),()=>{document=null;Render();}));if(DirectionEnabled)SignatureSection(s,0,"observe",directionProfile.observeTitle);AttachSignaturePaper(s);return;
                 }
             }
             s.Body=SignatureText("c1.signature.guidance.default");
@@ -49,17 +63,22 @@ namespace Tide.App
             {
                 var id=(string)item["id"];s.Actions.Add(A("c1-signature-open-"+id,(SignatureHas("observed:"+id)?"✓ ":"")+SignatureText((string)item["labelKey"]),()=>{document=id;Render();}));
             }
+            if(DirectionEnabled)SignatureSection(s,0,"observe",directionProfile.observeTitle);
+            int trialFirst=s.Actions.Count;
             foreach(var item in signaturePacket["humidity"]["levels"])
             {
                 var id=(string)item["id"];s.Actions.Add(A("c1-signature-humidity-"+id,(level==id?"● ":"")+SignatureText((string)item["labelKey"]),()=>SubmitImmediate(new PuzzleCommand("SetSignatureHumidity",id))));
             }
+            if(DirectionEnabled)SignatureSection(s,trialFirst,"trial",directionProfile.trialTitle,SignatureText("c1.signature.humidity."+(level??"unset")));
             SignatureAction(s,"trial","c1.signature.trial",new PuzzleCommand("TrialSignature"));
             SignatureAction(s,"separate","c1.signature.separate",new PuzzleCommand("SeparateSignature"));
+            s.Actions.Add(A("c1-signature-reset",SignatureText("c1.signature.reset"),()=>SubmitImmediate(new PuzzleCommand("ResetSignatureTrial"))));
+            int recordFirst=s.Actions.Count;
             for(int i=0;i<def.Copies.Count;i++){var id=def.Copies[i];SignatureAction(s,"copy-"+(i+1),"c1.signature.copy."+(i+1),new PuzzleCommand("CopySignature",id),SignatureHas("copy:"+id));}
+            if(DirectionEnabled)SignatureSection(s,recordFirst,"record",directionProfile.recordTitle,directionProfile.recordPreparation);
             SignatureAction(s,"mark","c1.signature.mark",new PuzzleCommand("MarkSignature",def.RegionId),SignatureHas("marked:"+def.RegionId));
             SignatureAction(s,"compare","c1.signature.compare",new PuzzleCommand("CompareSignature",def.ComparisonId),SignatureHas("compared:"+def.ComparisonId));
             SignatureAction(s,"cite","c1.signature.cite",new PuzzleCommand("SelectSignatureProof",def.LeftClue,def.RightClue),SignatureHas("proofSelected"));
-            s.Actions.Add(A("c1-signature-reset",SignatureText("c1.signature.reset"),()=>SubmitImmediate(new PuzzleCommand("ResetSignatureTrial"))));
             var confirm=SignatureConfirmation();s.Actions.Add(A("c1-signature-confirm","대조 기록 확정",()=>RequestConfirm(confirm),Simulation.Validate(state,confirm).IsValid,
                 Definition.Signature.Ready(state)?"사본·가림·번호대 연결을 함께 저장":"관찰, 사본, 가림 표시와 대조 근거를 확인하세요."));
             AttachSignaturePaper(s);
