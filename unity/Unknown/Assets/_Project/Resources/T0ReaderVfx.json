@@ -1,0 +1,8 @@
+{
+  "crank_forward_ms": 420,
+  "crank_hold_ms": 160,
+  "crank_return_ms": 520,
+  "crank_stroke_deg": 150,
+  "reduced_motion_ms": 0,
+  "note": "RFC-CX-013 ReaderStage. Forward->hold->return on Time.unscaledDeltaTime. stroke<=150deg because 180deg clips the bench (RFC-CX-009 articulation evidence). reduced_motion_ms 0 = snap to rest pose, no animation."
+}

@@ -22,7 +22,7 @@ namespace Tide.EditorTools {
    File.WriteAllText(output+"/viewport.json",new JObject{["viewport"]=new JArray(viewport.x,viewport.y,viewport.width,viewport.height),["horizontalFov"]=(float)pose["fovDeg"],["width"]=1280,["height"]=800,["graphicsDevice"]=SystemInfo.graphicsDeviceType.ToString(),["scope"]="Native scene + same T0Interface layout with diagnostic labels; director actual standalone smoke is separate"}.ToString());uiCamera.targetTexture=null;RenderTexture.ReleaseTemporary(rt);Debug.Log("T0_VIEWPORT_DIAGNOSTICS "+output);
   }
   static Vector3 Point(JToken p)=>new Vector3((float)p["x"],(float)p["z"],(float)p["y"]);
-  static void CaptureFrame(Camera scene,Camera ui,RenderTexture target,string path){
+  internal static void CaptureFrame(Camera scene,Camera ui,RenderTexture target,string path){
    var previous=RenderTexture.active;RenderTexture.active=target;GL.Clear(true,true,scene.backgroundColor);RenderTexture.active=previous;
    RenderPipeline.SubmitRenderRequest(scene,new UniversalRenderPipeline.SingleCameraRequest{destination=target});
    var uiTarget=RenderTexture.GetTemporary(target.width,target.height,24,RenderTextureFormat.ARGB32);ui.targetTexture=uiTarget;Canvas.ForceUpdateCanvases();RenderPipeline.SubmitRenderRequest(ui,new UniversalRenderPipeline.SingleCameraRequest{destination=uiTarget});

@@ -58,7 +58,7 @@ namespace Tide.App {
     var loaded=Store.Load(validate:doc=>JournalSave.Decode(doc,Simulation,SnapshotInterval));
     if(loaded.Document!=null){try{Journal=JournalSave.Decode(loaded.Document,Simulation,SnapshotInterval);RestoreHintLevels(loaded.Document);saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];if(loaded.Source!="save.json")status=L("recovered")+" "+loaded.Source;}catch(Exception e){status=L("recovery")+" "+e.Message;overlay="recovery";}}
     else if(loaded.Failure!=null){saveReadOnly=true;status=L("recovery")+" "+loaded.Failure;overlay="recovery";}
-    ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();lastActivity=Time.unscaledTime;Render();
+    ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();BindM7Hub();lastActivity=Time.unscaledTime;Render();
    }catch(Exception e){bootFailed=true;Debug.LogException(e);Interface.Render(new GameScreen{Title="T0 데이터 확인이 필요합니다",Body=e.Message,Footer="부팅이 중단되었습니다. 저장 파일은 변경하지 않았습니다."});}
   }
   // interaction-rules.md §1-1: two-step is the canonical default confirmation mode.
@@ -75,7 +75,9 @@ namespace Tide.App {
   string CurrentBeat=>BeatFor(Journal.State);
   ViewAction A(string id,string label,Action action,bool enabled=true,string detail=null,float hold=0)=>new ViewAction{Id=id,Label=label,Activate=()=>{lastActivity=Time.unscaledTime;action();},Enabled=enabled,Detail=detail,HoldSeconds=hold};
   void Update(){UpdateOpening();if(!bootFailed&&started)UpdateReviewNotesAvailability();if(!bootFailed&&started&&!OpeningActive&&overlay==null&&document==null&&Time.unscaledTime-lastActivity>float.Parse((string)tools["knobs"]["idleHintOfferSeconds"]["value"],CultureInfo.InvariantCulture)){status=L("hintOffer");lastActivity=Time.unscaledTime;Render();}}
-  public void StartGame(){CancelOpening();if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=SignatureActive?(SignatureComplete?"저장된 대조 기록을 복원했습니다.":"저장된 서명지 작업을 복원했습니다."):PatrolActive?"저장된 순찰 기록을 복원했습니다.":L("welcome");Render();}
+  // Resume status follows the actual state (D-M9-16): the t0-b1 welcome only fits a fresh or intake-stage save.
+  string ResumeStatus()=>SignatureActive?(SignatureComplete?"저장된 대조 기록을 복원했습니다.":"저장된 서명지 작업을 복원했습니다."):PatrolActive?"저장된 순찰 기록을 복원했습니다.":Simulation.IsComplete(Journal.State,"t0-b3")?L("caseReview"):Simulation.IsComplete(Journal.State,"t0-b1")?L("resumeInProgress"):L("welcome");
+  public void StartGame(){CancelOpening();if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=ResumeStatus();Render();}
   public void GoNode(string id){CloseTool();node=id;document=null;overlay=null;var camera=Camera.main;var target=zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==id);if(camera!=null){var pos=target["cameraPose"]["pos"];var look=target["cameraPose"]["lookAt"];camera.transform.position=Point(pos);camera.transform.LookAt(Point(look));cameraHorizontalFov=(float)target["cameraPose"]["fovDeg"];}Render();}
   Transform approvedDrawer;
   Renderer[] approvedDrawerRenderers;
@@ -175,7 +177,7 @@ namespace Tide.App {
    if(!PatrolActive&&Simulation.IsComplete(Journal.State,"t0-b3"))s.Subtitle+=" · "+L("complete");
    s.CaseThread=OpeningActive||overlay=="reviewNotes"?null:CaseThreadText();
    if(DirectionEnabled&&SignatureActive&&!OpeningActive){s.ShowDirection=true;s.SectionSurface=directionProfile.sectionSurface;foreach(var action in s.Actions.Concat(s.Toolbar))action.DirectionCategory=SignatureDirectionCategory(action.Id);}
-   Interface.Render(s);ApplyStagePresentation();ApplySceneViewport();
+   ApplyM7UiSkin(s);Interface.Render(s);ApplyStagePresentation();ApplySceneViewport();
   }
   // Projection only: required pins are progress, but the existing full predicate owns completion.
   string CaseThreadText(){
@@ -302,11 +304,11 @@ namespace Tide.App {
     foreach(var action in Watch.Actions.FindActionMap("Watch").actions)for(int i=0;i<action.bindings.Count;i++){if(action.bindings[i].isComposite)continue;var name=action.name;var binding=i;s.Actions.Add(A("rebind-"+name+"-"+i,L("action."+name)+" · "+action.GetBindingDisplayString(i),()=>{status=L("pressKey");Render();Watch.Rebind(name,json=>{settings["bindings"]=json;if(Watch.RebindError!=null)status=L(Watch.RebindError);SaveSettings();},binding);}));}
    }else if(overlay=="areaEvidence"){
     if(selectedArea==null)selectedArea=Definition.UncoveredAreas[0];s.Body=L("evidenceRequirement");
-    foreach(var r in Definition.Records.Values.Where(r=>r.VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))){var rid=r.Id;s.Actions.Add(A("attach-"+rid,(Journal.State.Has("evidence:"+selectedArea+":"+rid)?"✓ ":"")+Name(rid)+" · "+r.SourceType,()=>SubmitImmediate(new PuzzleCommand("AttachAreaEvidence",selectedArea,rid))));}
+    foreach(var r in Definition.Records.Values.Where(r=>r.VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))){var rid=r.Id;s.Actions.Add(A("attach-"+rid,(Journal.State.Has("evidence:"+selectedArea+":"+rid)?"✓ ":"")+Name(rid)+" · "+ReviewMediaName(r.SourceType),()=>SubmitImmediate(new PuzzleCommand("AttachAreaEvidence",selectedArea,rid))));}
    }else if(overlay=="readerEvidence"){
-    foreach(var r in Definition.Records.Values.Where(r=>r.Phases.Count>0&&r.VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))){var rid=r.Id;s.Actions.Add(A("choose-"+rid,Name(rid)+" · "+r.SourceType+" · "+r.StationId,()=>{overlay=null;SubmitImmediate(new PuzzleCommand("LoadRecord",rid));}));}
+    foreach(var r in Definition.Records.Values.Where(r=>r.Phases.Count>0&&r.VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))){var rid=r.Id;s.Actions.Add(A("choose-"+rid,Name(rid)+" · "+ReviewMediaName(r.SourceType),()=>{overlay=null;SubmitImmediate(new PuzzleCommand("LoadRecord",rid));}));}
    }else if(overlay=="evidence"||overlay=="hypothesis"){
-    s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+(string)observation["originId"];if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var id in Journal.State.AutoKeptClues)s.Body+="\n✓ "+id;
+    s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+ReviewMediaName((string)observation["sourceType"]);if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var id in Journal.State.AutoKeptClues)s.Body+="\n✓ "+id;
     foreach(var id in Definition.Records.Keys.Where(id=>Journal.State.Has("citation:"+id)))s.Body+="\n"+Name(id)+" · "+Journal.State.Get("citationStart:"+id)+" → "+Journal.State.Get("citationEnd:"+id);
    }else if(overlay=="hints"){
     var rows=(SignatureActive?new JArray(signaturePacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1SignatureDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):PatrolActive?new JArray(patrolPacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1PatrolDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):hints["rows"]).Where(h=>(string)h["beatId"]==CurrentBeat).OrderBy(h=>(int)h["level"]).ToArray();s.Body=L("hintFree");foreach(var row in rows.Where(h=>(int)h["level"]<=HintLevel))s.Body+="\n"+(string)row["sourceTextKo"];

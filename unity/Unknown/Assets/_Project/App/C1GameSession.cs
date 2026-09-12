@@ -59,8 +59,8 @@ namespace Tide.App
             {
                 var id=(string)observation["id"];
                 screen.Title=PatrolText((string)observation["labelKey"]);
-                screen.Body=(string)observation["description"]+"\n\n출처: "+(string)observation["originId"]+
-                    " · "+(string)observation["sourceType"]+"\n직접 기록 · 사본 계보 없음";
+                screen.Body=(string)observation["description"]+"\n\n매체: "+ReviewMediaName((string)observation["sourceType"])+
+                    "\n직접 기록 · 사본 계보 없음";
                 screen.Actions.Add(A("c1-observe-"+id,(Journal.State.Has("c1:observed:"+id)?"✓ ":"")+"관찰 기록",
                     ()=>SubmitImmediate(new PuzzleCommand("ObservePatrol",id))));
                 screen.Actions.Add(A("c1-close-observation",L("back"),()=>{document=null;Render();}));return;
@@ -92,7 +92,7 @@ namespace Tide.App
         void ApplyStagePresentation(bool forceHub=false)
         {
             var camera=Camera.main;if(camera==null)return;
-            string stage=forceHub||!started||!PatrolActive?"hub":SignatureActive?"signature":"patrol";
+            string stage=forceHub||!started?"hub":PatrolActive?(SignatureActive?"signature":"patrol"):M7ReaderStageEnabled?"reader":"hub";
             if(stage==shownStage){ApplySignatureVisualState();return;}
             if(shownStage!="hub")
             {
@@ -107,7 +107,8 @@ namespace Tide.App
             hiddenHubRoots=hub.IsValid()&&hub.isLoaded?hub.GetRootGameObjects().Where(g=>g.activeSelf&&g.GetComponentsInChildren<Renderer>().Length>0).ToArray():new GameObject[0];
             foreach(var item in hiddenHubRoots)item.SetActive(false);
             camera.clearFlags=CameraClearFlags.SolidColor;
-            if(stage=="signature")
+            if(stage=="reader"){ApplyM7ReaderStage(camera);}
+            else if(stage=="signature")
             {
                 var view=Resources.Load<C1SignatureViewSettings>("C1SignatureView");if(view==null){camera.backgroundColor=new Color(.035f,.065f,.075f);return;}
                 camera.transform.position=view.cameraPosition;camera.transform.LookAt(view.lookAt);camera.backgroundColor=view.background;cameraHorizontalFov=view.horizontalFov;

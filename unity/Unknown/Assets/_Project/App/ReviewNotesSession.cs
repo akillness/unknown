@@ -288,7 +288,8 @@ namespace Tide.App
                 Changed = value => { reviewDraft = value; reviewStatus = "보관하지 않은 초안"; },
                 CardTexture = ReviewDirectionEnabled ? ReviewProfile.cardPaper : null,
                 QuestionLabel = reviewShownQuestion == null ? null : staleQuestion ? "이전 질문 · 출처 연결이 바뀌었습니다. 검토 질문 보기를 다시 누르면 갱신합니다." : "검토 질문",
-                Question = reviewShownQuestion == null ? null : reviewShownSummary + "\n" + reviewShownQuestion };
+                Question = reviewShownQuestion == null ? null : reviewShownSummary + "\n" + reviewShownQuestion,
+                QuestionAnchorId = "review-note-question" };
             screen.Actions.Add(A("review-note-edit", "메모 편집", Interface.BeginReviewEditing));
             var canSave = CanPersistReviewNote;
             reviewCanSaveAtRender = canSave;
@@ -318,7 +319,7 @@ namespace Tide.App
             screen.Actions.Add(A("overlay-back", L("back"), CloseReviewNotes));
         }
 
-        static string ReviewMediaName(string sourceType)
+        internal static string ReviewMediaName(string sourceType)
         {
             switch (sourceType)
             {

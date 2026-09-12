@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26a9c2f1a05c47588c6cb0884054248, type: 3}
+  m_Name: M7Hub
+  m_EditorClassIdentifier: Tide.Presentation::Tide.Presentation.M7HubProfile
+  runtimeApproved: 0
+  floorAndWall: {fileID: 2100000, guid: 3b944a56ed26f41c5a1ffe6832a2beaf, type: 2}
+  workbench: {fileID: 2100000, guid: 5434961a15bd34582ade1cac26975416, type: 2}
+  plateShelf: {fileID: 2100000, guid: 4d0e74aed3e674c7cb7cb72be683fef8, type: 2}
+  ambient: {r: 0.212, g: 0.337, b: 0.361, a: 1}
+  lampColor: {r: 0.886, g: 0.686, b: 0.384, a: 1}
+  lampIntensity: 1.4
+  lampRange: 4
+  lampLocalPosition: {x: -0.7, y: 2.3, z: 1.1}
+  floorAndWallRoots:
+  - Authored room floor
+  - Authored back wall
+  workbenchRoots:
+  - Workbench left jamb
+  - Workbench right jamb
+  - Workbench above drawer
+  - Workbench below drawer
+  - Workbench behind drawer
+  plateShelfRoots:
+  - Authored plate shelf

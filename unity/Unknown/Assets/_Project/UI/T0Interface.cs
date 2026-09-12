@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Tide.Presentation;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -29,6 +30,8 @@ namespace Tide.UI
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
+        // RFC-CX-013 UiSkin: null = committed literals (T0GameSession.ApplyM7UiSkin fills it only behind runtimeApproved || --m7-ui-diagnostic).
+        public M7UiSkinProfile Skin;
     }
     public sealed partial class T0Interface:MonoBehaviour
     {
@@ -49,7 +52,11 @@ namespace Tide.UI
         public string CurrentTitle { get; private set; }
         public string CurrentFocusId=>EventSystem.current?.currentSelectedGameObject?.name;
         public IReadOnlyList<string> ActionIds { get; private set; }
-        private readonly Color ink=new Color(.1f,.18f,.2f),paper=new Color(.91f,.9f,.82f),brass=new Color(.73f,.56f,.28f);
+        private static readonly Color inkLiteral=new Color(.1f,.18f,.2f),paperLiteral=new Color(.91f,.9f,.82f),brassLiteral=new Color(.73f,.56f,.28f);
+        // Resolved once per Render: skin colours when GameScreen.Skin is set, otherwise the literals above (byte-identical committed look).
+        private Color ink=inkLiteral,paper=paperLiteral,brass=brassLiteral;
+        private M7UiSkinProfile skin;
+        private readonly List<TiledBacking> backings=new List<TiledBacking>();
         public void Initialize()
         {
             font=Font.CreateDynamicFontFromOSFont(new[]{"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR","Arial Unicode MS"},20);
@@ -66,14 +73,16 @@ namespace Tide.UI
                 focusKey=EventSystem.current.currentSelectedGameObject.name;
             if(root!=null) { root.gameObject.SetActive(false); Destroy(root.gameObject); }
             focus.Clear(); keyed.Clear(); directionMarks.Clear();CurrentDirectionCategory=null;
+            skin=model.Skin; ink=skin==null?inkLiteral:skin.ink; paper=skin==null?paperLiteral:skin.paper; brass=skin==null?brassLiteral:skin.brass; backings.Clear();
             root=Rect("Screen",canvas.transform,new Vector2(.02f,.025f),new Vector2(.98f,.975f));
             CurrentTitle=model.Title; ActionIds=model.Actions.ConvertAll(x=>x.Id).AsReadOnly();
             if(model.ShowOpening){RenderOpening(model);return;}
-            var header=Panel("Header",root,new Vector2(0,.88f),new Vector2(1,1),new Color(.05f,.12f,.15f,.94f));
+            var header=Panel("Header",root,new Vector2(0,.88f),new Vector2(1,1),skin==null?new Color(.05f,.12f,.15f,.94f):skin.header);
+            SkinBacking("M7 frame",header,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
             Text("Title",header,model.Title,28,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.8f,.95f));
             Text("Subtitle",header,model.Subtitle,15,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.97f,.44f));
             var sceneWindow=Rect("Scene viewport",root,new Vector2(0,.515f),new Vector2(.43f,.865f));
-            var left=Panel("Navigation",root,new Vector2(0,.12f),new Vector2(.43f,.5f),new Color(.08f,.17f,.2f,.92f));
+            var left=Panel("Navigation",root,new Vector2(0,.12f),new Vector2(.43f,.5f),skin==null?new Color(.08f,.17f,.2f,.92f):skin.navigation);
             var navigationViewport=Rect("Navigation Viewport",left,new Vector2(.025f,.02f),new Vector2(.975f,.98f));navigationViewport.gameObject.AddComponent<RectMask2D>();
             var leftFlow=Flow(navigationViewport,12);leftFlow.anchorMin=new Vector2(0,1);leftFlow.anchorMax=Vector2.one;leftFlow.pivot=new Vector2(.5f,1);leftFlow.offsetMin=leftFlow.offsetMax=Vector2.zero;leftFlow.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
             navigationScroll=left.gameObject.AddComponent<ScrollRect>();navigationScroll.viewport=navigationViewport;navigationScroll.content=leftFlow;navigationScroll.horizontal=false;navigationScroll.vertical=true;navigationScroll.scrollSensitivity=30;
@@ -91,6 +100,7 @@ namespace Tide.UI
                 contentTop=.85f-height-directionHeight;
             }
             var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
+            SkinBacking("M7 paper",contentPanel,skin?.paperPanel,skin==null?0:skin.paperTilesAcross,skin==null?Color.white:skin.workSurfaceTint);
             var viewport=Rect("Viewport",contentPanel,new Vector2(.025f,.035f),new Vector2(.975f,.97f));
             viewport.gameObject.AddComponent<RectMask2D>();
             var content=Rect("Content",viewport,Vector2.zero,Vector2.one);
@@ -123,9 +133,12 @@ namespace Tide.UI
                 if(!string.IsNullOrEmpty(action.SectionKey))actionParent=DirectionSection(content,action,model.SectionSurface);
                 if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,17,actionParent==content?ink:paper);
                 Button(actionParent,action);
+                // The review question answers the button above it; rendering it here keeps the answer in view after the focus scroll (D-M9-15).
+                if(model.ReviewNotes!=null&&action.Id==model.ReviewNotes.QuestionAnchorId) RenderReviewQuestion(actionParent,model.ReviewNotes);
             }
             if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,16,new Color(.38f,.18f,.07f));
-            var bar=Panel("Toolbar",root,new Vector2(0,0),new Vector2(1,.105f),new Color(.05f,.12f,.15f,.96f));
+            var bar=Panel("Toolbar",root,new Vector2(0,0),new Vector2(1,.105f),skin==null?new Color(.05f,.12f,.15f,.96f):skin.toolbar);
+            SkinBacking("M7 frame",bar,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
             var tools=Rect("Tools",bar,new Vector2(.01f,.34f),new Vector2(.99f,.96f));
             var horizontal=tools.gameObject.AddComponent<HorizontalLayoutGroup>(); horizontal.spacing=8;
             horizontal.childControlWidth=true; horizontal.childForceExpandWidth=true; horizontal.childControlHeight=true;
@@ -133,6 +146,7 @@ namespace Tide.UI
             Text("Footer",bar,model.Footer,13,new Color(.78f,.84f,.8f),new Vector2(.015f,0),new Vector2(.985f,.3f));
             footerText=bar.Find("Footer").GetComponent<Text>();
             Canvas.ForceUpdateCanvases();
+            foreach(var backing in backings) backing.Apply();
             var sceneCorners=new Vector3[4];sceneWindow.GetWorldCorners(sceneCorners);SceneViewport=new UnityEngine.Rect(sceneCorners[0].x/Screen.width,sceneCorners[0].y/Screen.height,(sceneCorners[2].x-sceneCorners[0].x)/Screen.width,(sceneCorners[2].y-sceneCorners[0].y)/Screen.height);
             focusIndex=0;
             if(focusKey!=null && keyed.TryGetValue(focusKey,out var selected)) focusIndex=focus.IndexOf(selected);
@@ -188,6 +202,25 @@ namespace Tide.UI
         }
         private RectTransform Panel(string name,Transform parent,Vector2 min,Vector2 max,Color c)
         { var r=Rect(name,parent,min,max); r.gameObject.AddComponent<Image>().color=c; return r; }
+        // RFC-CX-013 UiSkin: one non-raycast RawImage inserted as the panel's first child (behind every later child).
+        // uvRect is resolved in Apply() after Canvas.ForceUpdateCanvases so the tile count follows the panel's real aspect.
+        private void SkinBacking(string name,RectTransform panel,Texture2D texture,float tilesAcross,Color tint)
+        {
+            if(texture==null||tilesAcross<=0) return;
+            var r=Rect(name,panel,Vector2.zero,Vector2.one); r.SetAsFirstSibling();
+            var image=r.gameObject.AddComponent<RawImage>(); image.texture=texture; image.color=tint; image.raycastTarget=false;
+            backings.Add(new TiledBacking{Image=image,Panel=panel,TilesAcross=tilesAcross});
+        }
+        private sealed class TiledBacking
+        {
+            public RawImage Image; public RectTransform Panel; public float TilesAcross;
+            public void Apply()
+            {
+                if(Image==null||Panel==null) return;
+                var size=Panel.rect.size; var tilesDown=size.x>0?TilesAcross*size.y/size.x:TilesAcross;
+                Image.uvRect=new UnityEngine.Rect(0,0,TilesAcross,tilesDown);
+            }
+        }
         private RectTransform Flow(Transform parent,int padding)
         {
             var r=Rect("Flow",parent,new Vector2(.025f,.02f),new Vector2(.975f,.98f));
@@ -212,8 +245,8 @@ namespace Tide.UI
             var r=Panel(action.Id,parent,Vector2.zero,Vector2.one,ink);
             var item=r.gameObject.AddComponent<LayoutElement>(); item.minHeight=48*scale; item.preferredHeight=48*scale;
             var button=r.gameObject.AddComponent<Button>(); button.interactable=action.Enabled;
-            var colors=button.colors; colors.normalColor=Color.white; colors.highlightedColor=new Color(1,.85f,.55f);
-            colors.selectedColor=new Color(1,.85f,.55f); colors.disabledColor=new Color(.45f,.45f,.45f,.65f); button.colors=colors;
+            var colors=button.colors; colors.normalColor=Color.white; colors.highlightedColor=skin==null?new Color(1,.85f,.55f):skin.buttonHighlight;
+            colors.selectedColor=skin==null?new Color(1,.85f,.55f):skin.buttonHighlight; colors.disabledColor=new Color(.45f,.45f,.45f,.65f); button.colors=colors;
             Text("Label",r,action.Label,17,paper,new Vector2(.04f,.1f),new Vector2(.97f,.9f));
             var sizing=r.gameObject.AddComponent<WrappedButtonHeight>();sizing.Label=r.Find("Label").GetComponent<Text>();sizing.Item=item;sizing.Minimum=48*scale;
             button.onClick.AddListener(()=>{if(action.Enabled) action.Activate?.Invoke();});
