@@ -568,3 +568,10 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [DECISION·레거시 제거] 대체된 후보만 제거한다: `c1-signature-reader-r01`(r02가 대체), `drawer-r01.fbx`(r03이 대체), `hub-greybox.fbx`(M7 셸이 대체), 재생 경로가 없는 `stamp-confirm.wav`. **provenance와 아카이브 기록은 보존**하고 삭제 사유·대체 관계를 영수증에 남긴다. `assets/generated/` 원본 계보는 지우지 않는다 — Unity `Art/Candidates/`의 사본만 정리한다.
 - [DECISION·문서 충돌] 병행 세션과의 id 충돌 잔재를 정리한다: RFC는 013(병행 2건)·015(M9 네이티브)·016(본건)으로 확정하고, 매니페스트 마일스톤은 M10(TRACE-RPG)·M11(RFC-CX-012 이월)·M12(M9 네이티브)·M13(본건)로 확정한다. 이미 발행된 블록의 번호는 되돌리지 않는다(역사 보존).
 - [BOUNDARY] 승격은 **T0 stage-1 범위**다. 상업 출시 자격(`commercialReleaseEligible`)은 변경하지 않는다. 빌드·푸시는 사용자 지시에 따라 이 회차에서 수행한다.
+
+### RFC-CX-016 빌드 재현성 확인 - 2026-09-11
+
+- [OBSERVED] 푸시(`3a7d1e3`) 직후 같은 트리에서 macOS 빌드를 한 번 더 돌렸다: `T0_MAC_BUILD Succeeded bytes=403838356`(로그 `ui-promotion-m13/build-postpush.log`). 1차 빌드는 403,838,357B였다.
+- [OBSERVED] 두 빌드의 차이는 **1바이트**이고 두 빌드 사이에 추적 파일 내용 변경은 없었다(`git status` 깨끗). 1바이트 차는 Unity 빌드 비결정성이며 소스 변경이 아니다.
+- [OBSERVED] 재빌드를 돌린 이유: `Rendering/T0URP.asset`의 mtime이 1차 빌드보다 늦어 출하 산출물이 커밋된 소스보다 낡았을 가능성이 있었다. 내용은 동일했으나(git 깨끗) mtime만으로는 판정할 수 없어 실제로 다시 빌드해 확인했다. 출하 산출물은 푸시된 트리와 일치한다.
+- [CARRIED] 저장소 용량: 이번 커밋에 M12 원본 캡처 `.mov` 3개(약 60MB)가 들어갔다. provenance 계약이 sha256 재검증을 위해 원본 사본 보존을 요구하고 기존 previz 클립도 추적되는 선례가 있어 그대로 넣었다. Git LFS 미설정 상태이며 용량 정책은 product 레인 검토 항목으로 남긴다.
