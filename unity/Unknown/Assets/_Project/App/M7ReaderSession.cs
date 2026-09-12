@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using Tide.Presentation;
@@ -45,7 +46,22 @@ namespace Tide.App
             var pivot=m7ReaderVisual.GetComponentsInChildren<Transform>(true).FirstOrDefault(t=>t.name==profile.crankPivotName);
             var vfxAsset=Resources.Load<TextAsset>("T0ReaderVfx");JObject vfx=null;
             if(vfxAsset!=null)try{vfx=JObject.Parse(vfxAsset.text);}catch(Newtonsoft.Json.JsonException){vfx=null;}
-            m7ReaderVisual.AddComponent<M7ReaderStageVisual>().Initialize(()=>M7ReaderStageActive,()=>phasePage*2+(phaseStart?1:0),()=>ReducedMotion,pivot,vfx);
+            m7ReaderVisual.AddComponent<M7ReaderStageVisual>().Initialize(()=>M7ReaderStageActive,()=>phasePage*2+(phaseStart?1:0),()=>ReducedMotion,pivot,vfx,SuppressHubLights());
+        }
+        // RFC-CX-016: ApplyStagePresentation hides hub roots by "activeSelf && has a Renderer", so the committed
+        // "Watch room lamp" (a Light with no Renderer) kept lighting the reader stage. Measured: 5.5-5.7% of the scene
+        // viewport clipped to 255 on all channels, and lowering the stage lamp 2.2 -> 1.25 moved it only 0.18 points,
+        // because a directional light has no distance falloff for the profile lamp to compete with. The stage now owns
+        // its own light list; every foreign enabled light is disabled for the duration and restored by
+        // M7ReaderStageVisual.OnDestroy (the same hook that runs on self-destruct, re-entry and session teardown).
+        Light[] SuppressHubLights()
+        {
+            var hub=UnityEngine.SceneManagement.SceneManager.GetSceneByName("hub");
+            if(!hub.IsValid()||!hub.isLoaded)return new Light[0];
+            var foreign=hub.GetRootGameObjects().SelectMany(root=>root.GetComponentsInChildren<Light>(true))
+                .Where(light=>light.enabled&&!light.transform.IsChildOf(m7ReaderVisual.transform)).ToArray();
+            foreach(var light in foreign)light.enabled=false;
+            return foreign;
         }
         void M7ReaderLight(string lightName,Color color,float intensity,float range,Vector3 offset)
         {
@@ -64,15 +80,26 @@ namespace Tide.App
         Transform pivot;
         float forwardMs,holdMs,returnMs,strokeDeg,reducedMs;
         bool initialised;int lastKey;Coroutine stroke;float angle;
+        Light[] suppressed=new Light[0];
+        // Foreign hub lights the stage borrowed exclusivity from. Public so a test can assert the restore contract.
+        public IReadOnlyList<Light> SuppressedHubLights=>suppressed;
         public Transform CrankPivot=>pivot;
         public bool StrokePlaying=>stroke!=null;
         public float CrankAngleDeg=>angle;
-        public void Initialize(Func<bool> stillActive,Func<int> strokeKey,Func<bool> reducedMotion,Transform pivot,JObject vfx)
+        public void Initialize(Func<bool> stillActive,Func<int> strokeKey,Func<bool> reducedMotion,Transform pivot,JObject vfx,Light[] suppressedHubLights=null)
         {
             this.stillActive=stillActive;this.strokeKey=strokeKey;this.reducedMotion=reducedMotion;this.pivot=pivot;
+            suppressed=suppressedHubLights??new Light[0];
             forwardMs=Ms(vfx,"crank_forward_ms");holdMs=Ms(vfx,"crank_hold_ms");returnMs=Ms(vfx,"crank_return_ms");reducedMs=Ms(vfx,"reduced_motion_ms");
             strokeDeg=vfx==null?0:(float?)vfx["crank_stroke_deg"]??0;
             SetAngle(0);
+        }
+        // Runs on self-destruct (Update), on stage re-entry (ApplyM7ReaderStage destroys the old visual) and on
+        // session teardown, so a suppressed hub light can never outlive the stage that borrowed it.
+        void OnDestroy()
+        {
+            foreach(var light in suppressed)if(light!=null)light.enabled=true;
+            suppressed=new Light[0];
         }
         static float Ms(JObject vfx,string key)=>vfx==null?0:(float?)vfx[key]??0;
         void Update()

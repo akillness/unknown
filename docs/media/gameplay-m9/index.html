@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="빌드된 macOS 플레이어의 창을 그대로 녹화한 T0 코어루프와 게임플레이 통사. 생성·previz 영상이 아닙니다.">
+  <title>UNKNOWN · 창에서 그대로</title>
+  <style>
+    :root{--ink:#0e1f26;--deep:#071318;--panel:#142c32;--edge:#36565c;--paper:#e7e3d8;--soft:#b8c9c5;--teal:#93b9ad;--ochre:#e2af62}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:22px}body{margin:0;background:var(--deep);color:var(--paper);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:.26em}a:hover{color:var(--ochre)}a:focus-visible,summary:focus-visible,video:focus-visible{outline:3px solid var(--ochre);outline-offset:5px}.skip{position:absolute;z-index:3;top:-80px;left:18px;padding:10px 17px;background:var(--ochre);color:var(--deep)}.skip:focus{top:16px}
+    .wrap{width:min(100%,1352px);margin:auto;padding:0 52px}.masthead{display:flex;justify-content:space-between;align-items:center;gap:25px;border-bottom:1px solid var(--edge);padding:31px 0 27px}.brand{font-size:14px;font-weight:750;letter-spacing:.25em;text-decoration:none}.edition{color:var(--soft);font-size:11px;letter-spacing:.17em}.nav{display:flex;gap:24px;font-size:12px}.nav a{text-decoration:none}
+    .intro{display:grid;grid-template-columns:1.3fr 1fr;align-items:end;gap:70px;padding:65px 0 40px}.eyebrow{font-size:11px;color:var(--ochre);letter-spacing:.14em;font-weight:650;margin:0 0 20px}.intro h1{margin:0;font-family:"Iowan Old Style","AppleMyungjo","Nanum Myeongjo",serif;font-weight:500;font-size:clamp(41px,4.7vw,69px);line-height:1.2;letter-spacing:-.055em}.intro-copy{max-width:40ch;padding-bottom:3px}.intro-copy p{color:var(--soft);margin:0;font-size:14px;word-break:keep-all}.intro-copy:before{content:"";display:block;width:35px;height:2px;background:var(--ochre);margin-bottom:19px}.target-mark{display:block;color:var(--teal);font-size:12px;margin-top:14px}
+    .video-frame{border:1px solid var(--edge);background:#030a0d;overflow:hidden}video{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#030a0d}.caption{display:flex;justify-content:space-between;align-items:start;gap:25px;border-bottom:1px solid var(--edge);padding:18px 0 24px}.film-index{font-size:10px;letter-spacing:.16em;color:var(--ochre);font-weight:650}.caption h2{font-size:24px;font-weight:550;letter-spacing:-.04em;line-height:1.4;margin:3px 0 7px}.caption p{font-size:13px;color:var(--soft);margin:0 0 9px;max-width:75ch;word-break:keep-all}.caption p:last-of-type{margin-bottom:0}.duration{font-size:12px;color:var(--teal);border:1px solid var(--edge);padding:3px 10px;margin-top:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .chapters{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--edge)}.chapters li{padding:13px 15px;background:var(--panel);border-right:1px solid var(--edge);font-size:12px;color:var(--soft);word-break:keep-all}.chapters li:last-child{border-right:0}.chapters strong{display:block;color:var(--paper);font-weight:550;font-size:13px;margin-bottom:4px}.chapters time{display:block;color:var(--teal);font-size:10px;letter-spacing:.08em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+    .boundary{padding:36px 0 39px;border-top:1px solid var(--edge)}.section-top{display:flex;align-items:baseline;justify-content:space-between;gap:30px}.section-top h2{font-weight:550;font-size:22px;letter-spacing:-.035em;margin:0}.section-top p{font-size:12px;color:var(--soft);margin:0}.bound-list{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--edge)}.bound-list li{display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;padding:14px 0;border-bottom:1px solid var(--edge);font-size:13px;color:var(--soft);word-break:keep-all}.bound-list span{font-size:10px;letter-spacing:.1em;color:var(--ochre);font-weight:650;padding-top:3px}.bound-list strong{color:var(--paper);font-weight:500}
+    .source-note{display:grid;grid-template-columns:160px minmax(0,1fr);gap:38px;border-top:1px solid var(--edge);padding:28px 0}.source-note h2{font-size:12px;color:var(--ochre);font-weight:550;margin:0;letter-spacing:.04em}.source-note p{font-size:12px;color:var(--soft);margin:0 0 10px;max-width:102ch;word-break:keep-all}.source-note p:last-of-type{margin-bottom:0}details{margin-top:14px}summary{cursor:pointer;width:fit-content;color:var(--teal);font-size:12px}.original-links{display:flex;flex-wrap:wrap;gap:9px 25px;padding-top:12px;font-size:12px}.specs{font-size:11px;color:var(--teal);letter-spacing:.03em;font-variant-numeric:tabular-nums;margin-top:12px}
+    .footer{border-top:1px solid var(--edge);display:flex;justify-content:space-between;gap:20px;padding:20px 0 33px;font-size:10px;color:var(--soft);letter-spacing:.12em}
+    @media(max-width:1020px){.wrap{padding:0 30px}.intro{gap:35px}.chapters{grid-template-columns:repeat(2,minmax(0,1fr))}.chapters li:nth-child(2n){border-right:0}.chapters li:nth-child(-n+2){border-bottom:1px solid var(--edge)}.section-top{display:block}.section-top p{margin-top:10px}}
+    @media(max-width:720px){.wrap{padding:0 20px}.masthead{padding:23px 0 21px}.edition{display:none}.nav{gap:17px}.intro{display:block;padding:40px 0 29px}.intro h1{font-size:44px}.intro-copy{max-width:46ch;margin-top:23px}.intro-copy:before{display:none}.caption{display:block;padding-top:14px}.caption h2{font-size:21px}.caption p{font-size:12px}.duration{display:inline-block;margin-top:12px;font-size:11px}.chapters{grid-template-columns:minmax(0,1fr)}.chapters li{border-right:0;border-bottom:1px solid var(--edge)}.chapters li:last-child{border-bottom:0}.bound-list li{display:block}.bound-list span{display:block;margin-bottom:6px}.source-note{display:block}.source-note h2{margin-bottom:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<div class="wrap">
+  <header class="masthead"><a class="brand" href="#main" aria-label="UNKNOWN 네이티브 플레이 녹화 모음">UNKNOWN</a><span class="edition">EUNPO HARBOR · NATIVE PLAY CAPTURE</span><nav class="nav" aria-label="콘텐츠 탐색"><a href="#core-loop">코어루프</a><a href="#gameplay">게임플레이</a><a href="#boundary">경계</a></nav></header>
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">M9 / 빌드된 플레이어의 창에서</p><h1 id="page-title">창에서<br>그대로.</h1></div><div class="intro-copy"><p>두 편 모두 빌드된 macOS 플레이어의 창을 macOS <code>screencapture</code>로 녹화한 화면입니다. 연출을 위해 새로 만든 프레임은 한 장도 없습니다.</p><span class="target-mark">실제 빌드 창 녹화 · previz 아님 · 무음</span></div></section>
+
+    <section id="core-loop" aria-labelledby="core-loop-title">
+      <div class="video-frame"><video controls playsinline preload="metadata" poster="poster-core-loop.jpg" aria-label="T0 코어루프 네이티브 창 녹화, 1분 20초" aria-describedby="core-loop-description scope-description"><source src="core-loop.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없습니다. <a href="core-loop.mp4">코어루프 영상 열기</a></video></div>
+      <div class="caption"><div><span class="film-index">01 / CORE LOOP · NATIVE WINDOW</span><h2 id="core-loop-title">관찰하고, 옮기고, 되돌리기</h2>
+        <p id="core-loop-description">판독기의 조위 곡선과 잔여 조건 표시를 읽고(관찰), 시작·끝 <strong>±1 스텝</strong>으로 인용 시간창을 옮기고(조작), 갱신된 <strong>H−1:00 → H+5:56</strong>을 확인하고(확인), 툴바의 <strong>되돌림 · 다시</strong>로 상태를 되돌린 뒤 다시 적용합니다(되돌림). 이어서 자료를 매체명으로 교체해 <strong>기록국 조위대장</strong>을 다시 판독하고, <strong>판독 → 검증 사본 보관 → 시간창 인용</strong>의 두 단을 그대로 통과합니다.</p>
+        <p>여기 보이는 슬라이스는 T0 <code>t0-b3</code> 구간의 판독·대조 구현입니다. 화면의 자료 이름이 내부 id가 아니라 <strong>당직실 표준판 · 기록판</strong> / <strong>기록국 조위대장 · 장부</strong>로 읽히는 것이 RFC-CX-015의 D-M9-17 수리입니다.</p>
+      </div><span class="duration">01:20</span></div>
+    </section>
+
+    <section id="gameplay" aria-labelledby="gameplay-title">
+      <div class="video-frame"><video controls playsinline preload="metadata" poster="poster-gameplay.jpg" aria-label="T0 게임플레이 통사 네이티브 창 녹화, 3분 10초" aria-describedby="gameplay-description scope-description"><source src="gameplay.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없습니다. <a href="gameplay.mp4">게임플레이 영상 열기</a></video></div>
+      <div class="caption"><div><span class="film-index">02 / GAMEPLAY · CHRONOLOGICAL</span><h2 id="gameplay-title">당직 인수에서 인용까지</h2>
+        <p id="gameplay-description">같은 세션의 세 테이크를 시간순으로 이었습니다. 셸에서 M5 오프닝 2샷과 모토 문장이 지나가고, 당직실에서 인수 각서와 이관 목록을 열람해 판 #0을 결정합니다. <code>t0-b3</code>에서 시간 눈금을 끌어 내려 결손 구간의 끝 <strong>H−1:00</strong>을 고르고, 판독기를 열어 표준판을 판독합니다. 마지막으로 자료를 교체해 조위대장을 판독하고 인용을 고정합니다.</p>
+        <p>보이는 구현 슬라이스: M5 오프닝 연출 · 당직 인수 절차(각서·이관 목록·상시 슬롯) · 시간 눈금 선택기 · 판독기 안내 헤더와 잔여 조건 표시 · 인용 시간창 스텝 조정 · 자료 선택/교체 · 되돌림/다시.</p>
+        <ol class="chapters" aria-label="챕터 구성">
+          <li><time>00:00</time><strong>01 당직 인수</strong>각서와 목록을 열람하고 상시 슬롯을 준비합니다.</li>
+          <li><time>00:47</time><strong>02 시간 눈금</strong>눈금을 끌어 내려 결손 구간의 끝을 고릅니다.</li>
+          <li><time>01:00</time><strong>03 판독 · 대조</strong>표준판을 판독해 사본을 남기고 시간창을 굳힙니다.</li>
+          <li><time>01:42</time><strong>04 자료 교체</strong>매체명으로 자료를 바꿔 다시 판독하고 인용합니다.</li>
+        </ol>
+      </div><span class="duration">03:10</span></div>
+    </section>
+
+    <section class="boundary" id="boundary" aria-labelledby="boundary-title">
+      <div class="section-top"><h2 id="boundary-title">이 영상이 증명하는 것과 하지 않는 것</h2><p>RFC-CX-015 · 네이티브 실동작 플레이테스트</p></div>
+      <ul class="bound-list">
+        <li><span>증명함</span><div><strong>빌드된 플레이어의 창 녹화입니다.</strong> Unity 6000.5.6f1 개발 빌드를 1280×800 창으로 띄우고 macOS <code>screencapture</code>로 그 창만 녹화했습니다. 생성 영상도 previz도 아니며, 화면에 더한 픽셀은 직접 쓴 한국어 자막 카드와 그 판뿐입니다.</div></li>
+        <li><span>무음</span><div><strong>오디오 트랙이 없습니다.</strong> 원본 녹화가 무음이고 이번 회차에 새 사운드를 만들지 않았습니다. 자막은 전부 화면 텍스트이며, 음성·효과음은 한 곳도 쓰이지 않았습니다.</div></li>
+        <li><span>입력</span><div><strong>포인터 조작 기록입니다.</strong> 합성 키 이벤트가 Unity Input System에 닿지 않아 조작은 cliclick 포인터로만 했습니다. 키보드·컨트롤러 동등성은 PlayMode 자동 검증이 담당합니다.</div></li>
+        <li><span>발췌</span><div><strong>연속 입력 증거가 아니라 발췌입니다.</strong> 화면이 전혀 변하지 않는 구간(특히 시간 눈금 목록의 정지 구간)을 잘라내고 세 테이크를 단순 컷으로 이었습니다. 컷 지점은 모두 프레임을 뽑아 확인했습니다.</div></li>
+        <li><span>미측정</span><div><strong>사람 플레이테스트는 하지 않았습니다(n=0).</strong> 재미·몰입·25분 예산은 이 영상으로 판단할 수 없습니다. 녹화가 가변 프레임레이트여서 24fps로 정규화했으므로 <strong>성능·프레임레이트 주장도 담기지 않습니다.</strong></div></li>
+        <li><span>미포함</span><div><strong>회로 지도 정렬(−1/+1)·앵커·구획·근거</strong> 단계는 이 세 테이크가 시작되기 전에 끝나 화면에 없습니다. <strong>프리뷰(diff 문장 + 되돌림 고지) → 확정</strong> 화면도 이 테이크 안에는 없습니다. 두 항목의 통과 기록은 아래 영수증에 있습니다.</div></li>
+        <li><span>그레이박스</span><div><strong>좌상단 3D 뷰포트는 플레이스홀더입니다.</strong> 회로 지도·판독기 노드는 아직 그레이박스이며(M7 프리팹 재구성 이월), 자막 카드는 이 그레이박스 위에만 올립니다. 헤더·사건 흐름·목록 패널·툴바 같은 실제 UI는 한 곳도 가리지 않습니다.</div></li>
+      </ul>
+    </section>
+
+    <aside class="source-note" aria-labelledby="source-title"><h2 id="source-title">출처와 영수증</h2><div>
+      <p id="scope-description">두 편은 <strong>실제 게임 화면</strong>입니다. 컨셉 필름(<a href="../concept-first-m7/index.html">M7 · 컨셉에서</a>)과 달리 생성 프레임이 섞이지 않았습니다. 원본 3개 테이크는 사본으로 보존했고, 크롭·정규화·인코딩 파라미터와 컷 목록, 각 파일의 sha256은 provenance와 편집 타임라인에 그대로 적혀 있습니다.</p>
+      <p>편집 관례(24fps · H.264 CRF 20 · ASS 오버레이 번인 · 6초 챕터 카드 + 마지막 8초 정리 카드)는 <code>concept-first-m7</code>을 그대로 따랐습니다. 다만 해상도는 창 캔버스와 <strong>1:1</strong>인 <strong>1280×800(16:10)</strong>으로 냈습니다. M7의 720은 16:9 소스 기준이므로, 여기서 720에 맞추면 UI를 잘라내거나 10% 축소해 검은 띠를 붙여야 했습니다. 축소도 패딩도 없이 크롭만 적용했습니다.</p>
+      <details><summary>원본·영수증·편집 기록 열기</summary><div class="original-links">
+        <a href="../../../assets/generated/video/gameplay-m9/provenance.json">provenance.json</a>
+        <a href="edit-timeline.json">edit-timeline.json</a>
+        <a href="../../../assets/generated/video/gameplay-m9/source-seg-a.mov">원본 테이크 A (셸·오프닝·인수)</a>
+        <a href="../../../assets/generated/video/gameplay-m9/source-seg-b.mov">원본 테이크 B (시간 눈금·판독기)</a>
+        <a href="../../../assets/generated/video/gameplay-m9/source-seg-c.mov">원본 테이크 C (자료 교체·인용)</a>
+        <a href="../../../_workspace/current/systems/tech-verification/native-playtest-m9/verification.md">플레이테스트 영수증 (md)</a>
+        <a href="../../../_workspace/current/systems/tech-verification/native-playtest-m9/verification.json">플레이테스트 영수증 (json)</a>
+        <a href="../../../_workspace/current/production/decision-log.md">decision-log · RFC-CX-015</a>
+        <a href="../../../_workspace/current/systems/tech-verification/intro-gameplay-m5/native-video-receipt.json">M5 영상 선례</a>
+      </div></details>
+      <p class="specs">core-loop.mp4 · 1280×800 · 24fps · 1935 프레임 · 80.625s · H.264 CRF 20 · 무음<br>gameplay.mp4 · 1280×800 · 24fps · 4583 프레임 · 190.958s · H.264 CRF 20 · 무음</p>
+    </div></aside>
+  </main>
+  <footer class="footer"><span>UNKNOWN · EUNPO HARBOR</span><span>M9 / NATIVE WINDOW CAPTURE · RFC-CX-015</span></footer>
+</div>
+</body>
+</html>

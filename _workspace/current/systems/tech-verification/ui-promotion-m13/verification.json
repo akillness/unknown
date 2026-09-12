@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "rfc": "RFC-CX-016",
+  "milestone": "M13",
+  "owner": "game-qa",
+  "cycle": "20260909-preproduction-c7",
+  "scope": "Runtime promotion of four gated M7/M8 concept profiles, full re-verification, macOS player build and native smoke. T0 stage-1 only.",
+  "authority": {
+    "source": "root director instruction recorded by the director in production/decision-log.md",
+    "anchor": "_workspace/current/production/decision-log.md:562-570",
+    "promotionMenusAre": "director only",
+    "commercialReleaseEligibleChanged": false,
+    "visualCanonRemains": "original concept / M7 lineage (RFC-CX-009); the current runtime screen is not adopted as new art canon"
+  },
+  "executedBy": {
+    "promotionLane": "interrupted at 1h21m without writing its own receipt",
+    "reVerificationBuildSmoke": "Main",
+    "thisReceipt": "reconstructed by game-qa from lane artifacts and git diff; no Unity run, no git commit, no code edit"
+  },
+  "promotedProfiles": [
+    {
+      "id": "M7Hub",
+      "asset": "unity/Unknown/Assets/_Project/Resources/M7Hub.asset",
+      "before": false,
+      "after": true,
+      "referencesResolved": "floorAndWall=True workbench=True plateShelf=True",
+      "gateOffFallback": "committed hub scene left untouched",
+      "fallbackStillValid": true,
+      "fallbackEvidence": "Tide.Tests.M7HubPlayModeTests.GateOffLeavesCommittedHubShellUntouched Passed",
+      "note": "re-approved in a second pass: the hub material re-import reset runtimeApproved to false by design"
+    },
+    {
+      "id": "M7UiSkin",
+      "asset": "unity/Unknown/Assets/_Project/Resources/M7UiSkin.asset",
+      "before": false,
+      "after": true,
+      "referencesResolved": "paperPanel=True bronzeFrame=True",
+      "gateOffFallback": "committed literal colours retained byte-identical",
+      "fallbackStillValid": true,
+      "fallbackEvidence": "Tide.Tests.M7UiSkinPlayModeTests.GateOffKeepsCommittedLiteralsAndNoSkinBackings Passed"
+    },
+    {
+      "id": "M7ReaderStage",
+      "asset": "unity/Unknown/Assets/_Project/Resources/M7ReaderStage.asset",
+      "before": false,
+      "after": true,
+      "referencesResolved": "reader=True recordSet=True",
+      "gateOffFallback": "reader stage never constructed",
+      "fallbackStillValid": true,
+      "fallbackEvidence": "Tide.Tests.M7ReaderPlayModeTests.GateOffNeverEntersReaderStage Passed"
+    },
+    {
+      "id": "M8ReviewNotes",
+      "asset": "unity/Unknown/Assets/_Project/Resources/M8ReviewNotes.asset",
+      "before": false,
+      "after": true,
+      "referencesResolved": "cardPaper=True",
+      "gateOffFallback": "review card not inserted",
+      "fallbackStillValid": true,
+      "fallbackEvidence": "Tide.Tests.ReviewNotesPlayModeTests 15/15 Passed"
+    }
+  ],
+  "promotionAuditIntegrity": {
+    "trueBaselineAllFalse": "approve-all.log:485 (M7_GATES_BEFORE, all four false)",
+    "onDiskAuditIsSecondPass": true,
+    "onDiskAuditBeforeBlock": "m7-approval-audit.json:4-29 shows only M7Hub false because the file was overwritten by the second approval run",
+    "causalChain": [
+      "approve-all.log:485 all four false -> :557 all true",
+      "hub-reimport.log:582 M7_HUB_SHELL_IMPORTED ... runtimeApproved=false (importer forces false by design)",
+      "approve-all-2.log:376 M7Hub false only -> :448 all true"
+    ],
+    "gitCorroboration": "git diff shows '- runtimeApproved: 0' -> '+ runtimeApproved: 1' on all four assets against HEAD"
+  },
+  "runs": [
+    {
+      "check": "EditMode Tide.Tests.Sim",
+      "file": "editmode-final.xml",
+      "sha256": "8c33068761d40d291ef484758474bd67b7596b805ac80b04b626bef42bbbe06a",
+      "total": 53,
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0,
+      "result": "Passed"
+    },
+    {
+      "check": "PlayMode Tide.Tests.Play",
+      "file": "playmode-final.xml",
+      "sha256": "d64bee308ee6a033ab2d90a5f71157f18f45364bfcf2b36196dbd09cbbaa0f84",
+      "total": 83,
+      "passed": 82,
+      "failed": 0,
+      "skipped": 1,
+      "result": "Skipped:Ignored",
+      "onlySkipped": "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+      "skipIsDesignContract": true,
+      "skipContractAnchor": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0BootSceneTests.cs:19-22"
+    },
+    {
+      "check": "Isolated serialized boot",
+      "file": "boot-final.xml",
+      "sha256": "4cd85496193a4b4d1e5075c332b95b3d49f957c163fc047f88cc2cc4bbc09f6e",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "result": "Passed"
+    },
+    {
+      "check": "M7 profile reference probe #1",
+      "file": "m7-probe.xml",
+      "sha256": "ef636ce3c7a6a14e7580638df0281750cc9a266bc2fb29b0ab1147af3a9344e9",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "result": "Passed"
+    },
+    {
+      "check": "M7 profile reference probe #2",
+      "file": "m7-probe2.xml",
+      "sha256": "3ab2a060269ec26b88d71d248b307bd60d9b0e3cd91a361809211a9760b8e59e",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "result": "Passed"
+    },
+    {
+      "check": "Promotion gate audit (second pass)",
+      "file": "m7-approval-audit.json",
+      "sha256": "7a7e86e7435f6d7c62e71eea1b993a1488a97221cbe0edfddf1d165c19b15f8b",
+      "total": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "result": "M7_APPROVE_ALL_DONE"
+    },
+    {
+      "check": "Promotion gate audit log (first pass, true baseline)",
+      "file": "approve-all.log",
+      "sha256": "fff46ff86cb5d5792ae98f2330ffe97e29a1565f52db1d86f72c2eb92036e6b4",
+      "total": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "result": "M7_GATES_BEFORE all false"
+    },
+    {
+      "check": "Promotion gate audit log (second pass)",
+      "file": "approve-all-2.log",
+      "sha256": "a4bf976d464d8241eccb1057d6cd190e432830374c441dccb6cb3f6efc330105",
+      "total": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "result": "M7_GATES_AFTER all true"
+    },
+    {
+      "check": "Hub material re-import",
+      "file": "hub-reimport.log",
+      "sha256": "56a88f5b90d080ddd08c3a8a55ebed86477559e6b52b1b4103a4f7fede91e3ed",
+      "total": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "result": "M7_HUB_SHELL_IMPORTED textures=6 materials=3 runtimeApproved=false"
+    },
+    {
+      "check": "macOS player build",
+      "file": "build-final.log",
+      "sha256": "f4cbd7a593af59be636b69cfe0ade38d2581ec28888e72bf006c4566f19e4acd",
+      "total": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "result": "T0_MAC_BUILD Succeeded bytes=403838357"
+    }
+  ],
+  "bootRetries": [
+    {
+      "attempt": 1,
+      "argument": "-testFilter '*SerializedBootLoadsHub*'",
+      "failure": "NUnit parsed '*' as a regex quantifier -> ArgumentException; no results XML produced",
+      "attribution": "harness-error",
+      "productDefect": false
+    },
+    {
+      "attempt": 2,
+      "argument": "--t0-save-dir /tmp/unknown-m13-boot-$$",
+      "failure": "test asserts the prefix /tmp/unknown-c1-m4-boot- at T0BootSceneTests.cs:21; assertion failed as designed",
+      "attribution": "harness-error",
+      "productDefect": false
+    },
+    {
+      "attempt": 3,
+      "argument": "exact full test name + --t0-save-dir /tmp/unknown-c1-m4-boot-m13-19162",
+      "failure": null,
+      "attribution": null,
+      "productDefect": false,
+      "result": "Passed 1/1",
+      "evidence": "boot-final.log:24-25"
+    }
+  ],
+  "build": {
+    "marker": "T0_MAC_BUILD Succeeded bytes=403838357",
+    "log": "build-final.log:5987",
+    "bytes": 403838357,
+    "baselineBytes": 354247240,
+    "baselineSource": "_workspace/current/systems/tech-verification/native-playtest-m9/build-mac.log:6277",
+    "deltaBytes": 49591117,
+    "deltaMiB": 47.3,
+    "predictionUnderTest": "legacy-purge-m13 predicted the build would shrink below 354247240",
+    "predictionFalsified": false,
+    "confounded": true,
+    "confounders": [
+      {
+        "what": "m7-reader-r01 source art entered the build path via promotion",
+        "kilobytes": 49256
+      },
+      {
+        "what": "m7-hub-r01 source art entered the build path via promotion",
+        "kilobytes": 13720
+      },
+      {
+        "what": "m7-ui-r01 source art entered the build path via promotion",
+        "kilobytes": 6596
+      },
+      {
+        "what": "m8-review-card source art entered the build path via promotion",
+        "kilobytes": 3316
+      },
+      {
+        "what": "total promoted source art",
+        "kilobytes": 72888,
+        "approxMiB": 71.2
+      },
+      {
+        "what": "removed hub-greybox.fbx (HEAD blob, measured with git cat-file -s)",
+        "bytes": 51148,
+        "comparison": "promoted source art is ~1459x larger than the removed greybox"
+      },
+      {
+        "what": "purge deleted 34 files / 20845750 source bytes, but most (c1-signature-reader-r01) were unreferenced candidates never shipped in the player build",
+        "source": "legacy-purge-m13/purge-receipt.json"
+      }
+    ],
+    "purgeContributionIsolated": false,
+    "separationMethod": "run one control build with promotion intact and only the purge reverted, then compare T0_MAC_BUILD bytes against 403838357"
+  },
+  "nativeSmoke": {
+    "runner": "shipped macOS player, real window",
+    "inputTool": "cliclick pointer only; synthetic key events do not reach Unity Input System",
+    "exceptions": 0,
+    "bootMarkers": [
+      "ui-root-loaded",
+      "hub-loaded",
+      "session-initialized"
+    ],
+    "shots": 14,
+    "shotsPath": "_workspace/current/systems/tech-verification/ui-promotion-m13/smoke/",
+    "promotionLaneShots": 59,
+    "promotionLaneShotsPath": "_workspace/current/systems/tech-verification/ui-promotion-m13/shots/",
+    "logArchived": false,
+    "logProvenance": "Player.log was not copied into this lane (shipped-player logs live under ~/Library/Logs/). 'exceptions 0' and the three boot markers are Main's execution observation; the only re-openable receipt from that session is the 14 smoke screenshots.",
+    "exceptionsClaimReVerifiable": false
+  },
+  "baselineDelta": {
+    "baseline": "M12 — _workspace/current/systems/tech-verification/native-playtest-m9/",
+    "editMode": {
+      "before": {
+        "total": 53,
+        "passed": 53,
+        "skipped": 0
+      },
+      "after": {
+        "total": 53,
+        "passed": 53,
+        "skipped": 0
+      },
+      "change": "none"
+    },
+    "playMode": {
+      "before": {
+        "total": 79,
+        "passed": 73,
+        "skipped": 6
+      },
+      "after": {
+        "total": 83,
+        "passed": 82,
+        "skipped": 1
+      },
+      "totalDelta": 4,
+      "passedDelta": 9,
+      "skippedDelta": -5,
+      "removedTests": 0
+    },
+    "boot": {
+      "before": {
+        "total": 1,
+        "passed": 1
+      },
+      "after": {
+        "total": 1,
+        "passed": 1
+      },
+      "change": "none"
+    },
+    "buildBytes": {
+      "before": 354247240,
+      "after": 403838357,
+      "delta": 49591117
+    },
+    "totalIncreaseBreakdown": [
+      {
+        "source": "new — ScrollReachabilityTests (tick-picker reachability regressions)",
+        "count": 3,
+        "tests": [
+          "Tide.Tests.ScrollReachabilityTests.PointerWheelOverTheWorkSurfaceScrollsTheLongestList",
+          "Tide.Tests.ScrollReachabilityTests.RealMouseWheelReachesTheListThroughTheInputModule",
+          "Tide.Tests.ScrollReachabilityTests.KeyboardAloneReachesEveryTickRowWithTheScrollFollowing"
+        ]
+      },
+      {
+        "source": "new — M7 reader foreign-light restore contract",
+        "count": 1,
+        "tests": [
+          "Tide.Tests.M7ReaderPlayModeTests.GateOnSuppressesForeignHubLightsAndRestoresThemOnExit"
+        ]
+      }
+    ],
+    "skippedToPassed": {
+      "count": 5,
+      "cause": "M12 hit Assert.Ignore fallbacks because candidates were unimported and gates were off; promotion made the gate-on path executable, so these were measured for the first time rather than newly fixed",
+      "tests": [
+        "Tide.Tests.M7HubPlayModeTests.GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce",
+        "Tide.Tests.M7UiSkinPlayModeTests.GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable",
+        "Tide.Tests.M7UiSkinPlayModeTests.GateOnAtTextScale150RendersWithoutLayoutChange",
+        "Tide.Tests.M7ReaderPlayModeTests.GateOnBuildsStageWithTwoLightsAndTearsDownOnExit",
+        "Tide.Tests.M7ReaderPlayModeTests.GateOnReducedMotionKeepsCrankAtRest"
+      ]
+    },
+    "remainingSkip": {
+      "count": 1,
+      "test": "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+      "isDefect": false,
+      "reason": "design contract: the test Assert.Ignore's itself unless given an isolated --t0-save-dir, asserts a task-specific prefix and deletes that directory in teardown; satisfied separately by boot-final.xml 1/1 Passed. The same test was one of M12's six skips."
+    }
+  },
+  "conceptFlowAlignment": {
+    "source": "docs/media/gameplay-m9/gameplay.mp4 chapter cards (gameplay.ass:16,19,22,25; index.html:45-48)",
+    "screenEvidenceFrom": "smoke/ only (shipped player, post-promotion)",
+    "chapters": [
+      {
+        "chapter": "01 당직 인수",
+        "shots": [
+          "smoke/09-hub-nodes.png",
+          "smoke/11-hub-live.png"
+        ],
+        "covered": true,
+        "shows": "M5 opening original concept cut; then the live hub with M7 shell, rag-paper document panel, bronze toolbar and a readable status line on paper"
+      },
+      {
+        "chapter": "02 시간 눈금",
+        "shots": [],
+        "covered": false,
+        "gap": "this smoke run ended inside the t0-b1 intake sequence; the t0-b3 tick picker was never reached or photographed"
+      },
+      {
+        "chapter": "03 판독 · 대조",
+        "shots": [
+          "smoke/13-reader-node.png",
+          "smoke/14-reader-stage.png"
+        ],
+        "covered": true,
+        "shows": "reader node selection and viewpoint move; then the optical reader stage with magnifier arm, hex plate, record set and bronze columns, lit only by the two stage lights"
+      },
+      {
+        "chapter": "04 자료 교체",
+        "shots": [
+          "smoke/14-reader-stage.png"
+        ],
+        "covered": "partial",
+        "shows": "the 자료 선택 / 교체 panel header is present",
+        "gap": "no shot of a completed swap and re-read"
+      }
+    ],
+    "gapsAreCarriedNotBackfilled": true,
+    "backfillPolicy": "no new images generated; M12 shots of t0-b3 exist but are pre-promotion and cannot stand as post-promotion evidence"
+  },
+  "repairs": {
+    "method": "reverse-engineered from working-tree git diff; only what the diff shows is recorded",
+    "ownedByPromotionLane": [
+      {
+        "file": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+        "intent": "SuppressHubLights() disables foreign hub lights on stage entry; M7ReaderStageVisual.OnDestroy restores them. Comment records the cause: the committed 'Watch room lamp' is a Light with no Renderer, so renderer-based root hiding missed it and 5.5-5.7% of the viewport clipped to 255 on all channels.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Presentation/M7UiSkinProfile.cs",
+        "intent": "new statusOnPaper field (.18,.08,.03); comment records measured contrast 3.53:1 for the committed literal vs 4.83:1 for the new colour on rag paper.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+        "intent": "status line colour branches on skin presence; gate-off stays byte-identical to the committed literal.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Editor/M7HubProjectBuilder.cs",
+        "intent": "metallic/tiling correction: PerforatedSteel .85->.25 and 2->4, Bronze 1->.45 and 3->4. Comment records the cause (no reflection probe, no skybox, flat ambient only) and the pre-fix measurement 42.6/53.6/55.6 vs wall 75.0/84.6/86.0.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Art/Candidates/m7-hub-r01/MAT_M7_Hub_PerforatedSteel.mat",
+        "intent": "serialized result of the correction (_Metallic .85->.25, m_Scale 2->4).",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Art/Candidates/m7-hub-r01/MAT_M7_Hub_Bronze.mat",
+        "intent": "serialized result of the correction (_Metallic 1->.45, m_Scale 3->4).",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Editor/M7ProjectBuilder.cs",
+        "intent": "ApproveAll() calls the four existing director-only menus and audits gate state either side via both Resources.Load and AssetDatabase; -executeMethod entry point because menu items are unreachable in batchmode.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Tests/PlayMode/M7ReaderPlayModeTests.cs",
+        "intent": "new GateOnSuppressesForeignHubLightsAndRestoresThemOnExit asserting suppression, set equivalence with the previously enabled lights, the stage's own two lights staying enabled, and full restore on exit.",
+        "intentClear": true
+      },
+      {
+        "file": "unity/Unknown/Assets/_Project/Resources/M7ReaderStage.asset",
+        "intent": "runtimeApproved 0->1 plus lampIntensity 2.2->1.25 and fillIntensity 0.6->0.5; reads as part of the over-exposure work but the diff carries no justifying comment for those two values.",
+        "intentClear": false,
+        "uncertainty": "intent for the two light values not established from the diff"
+      },
+      {
+        "file": "unity/Unknown/ProjectSettings/URPProjectSettings.asset",
+        "intent": null,
+        "intentClear": false,
+        "uncertainty": "new untracked file (UniversalProjectSettings, m_LastMaterialVersion 10); reads as a URP material-upgrade byproduct but the diff cannot establish whether the lane added it deliberately"
+      }
+    ],
+    "notOwnedByPromotionLane": [
+      {
+        "files": [
+          "unity/Unknown/Assets/_Project/Editor/T0ProjectBuilder.cs",
+          "unity/Unknown/Assets/_Project/Scenes/hub.unity"
+        ],
+        "owner": "legacy-purge-m13",
+        "evidence": "code comment names 'RFC-CX-016 (M13 legacy purge)'; purge-receipt.json sceneEdit records hub.unity lines 403-496 removed"
+      },
+      {
+        "files": [
+          "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+          "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+          "unity/Unknown/Assets/_Project/Tests/PlayMode/ScrollReachabilityTests.cs"
+        ],
+        "owner": "remaining-m13",
+        "evidence": "remaining-m13/notes.md:81 declares exactly these as its changed files"
+      }
+    ]
+  },
+  "interruptedLane": {
+    "interruptedAt": "1h21m",
+    "wroteOwnReceipt": false,
+    "lastUtteranceItems": [
+      {
+        "item": "T0Interface status line and profile asset field",
+        "verdict": "complete",
+        "codeEvidence": "M7UiSkinProfile.cs statusOnPaper added; T0Interface.cs:139 branches on skin; M7UiSkin.asset:25 serializes {r:.18,g:.08,b:.03,a:1}",
+        "testEvidence": "M7UiSkinPlayModeTests 3/3 Passed including the gate-off literal-preservation contract",
+        "visualEvidence": "smoke/11-hub-live.png and smoke/13-reader-node.png show the status line legible on rag paper"
+      },
+      {
+        "item": "high-metallic materials in a scene with no reflection probe",
+        "verdict": "uncertain",
+        "codeEvidence": "builder candidates and both .mat files corrected; hub materials re-imported (hub-reimport.log:582)",
+        "testEvidence": "M7HubPlayModeTests 2/2 Passed, but those tests assert root swapping, one lamp and one flat-ambient write - they do not assert material legibility",
+        "visualEvidence": "NEGATIVE - in post-fix shots/fix-03-hub.png and smoke/11-hub-live.png the workbench still reads as a flat dark mass with no legible perforation, while the salt-concrete wall bands read clearly",
+        "whyNotClosed": "the pre-fix measurement (42.6/53.6/55.6 vs 75.0/84.6/86.0) has no post-fix counterpart in this lane's evidence; a full green suite proves nothing broke, not that the intended look was achieved",
+        "nextProbe": "re-measure workbench and wall mean channel values with the existing M7ProjectBuilder.Capture tool and compare against the two figures in the builder comment; if still flat the root cause is the missing reflection probe, which the builder comment already carries as out of lane"
+      },
+      {
+        "item": "M7ReaderStageVisual restore hook",
+        "verdict": "complete",
+        "codeEvidence": "SuppressHubLights() plus OnDestroy() restore; SuppressedHubLights exposed for assertion",
+        "testEvidence": "GateOnSuppressesForeignHubLightsAndRestoresThemOnExit Passed, asserting set equivalence with the previously enabled lights and full restore on exit",
+        "visualEvidence": "smoke/14-reader-stage.png shows a dark background with only the two stage lights active"
+      }
+    ]
+  },
+  "notMeasured": [
+    "human playtest (n=0) - no verdict on fun, immersion or difficulty",
+    "performance - frametime, memory and load time measured 0 times",
+    "25-minute session budget",
+    "8-hour full playthrough",
+    "G4/G7 runtime promotion - not claimed; promotion is T0 stage-1 and commercialReleaseEligible is unchanged",
+    "real-device mouse wheel, IME and controller review (n=0)",
+    "human operation of keyboard and wheel - this smoke was cliclick pointer only and synthetic key events do not reach Unity Input System"
+  ],
+  "wheelBoundary": {
+    "codeVerifiedThroughInputModule": true,
+    "evidence": "Tide.Tests.ScrollReachabilityTests.RealMouseWheelReachesTheListThroughTheInputModule Passed - asserts InputSystemUIInputModule exists, scrollWheel and scrollWheel.action are bound, and a real Mouse device state event moves the list",
+    "claimAllowed": "the wheel is code-verified as far as the input-module path",
+    "claimForbidden": "that a human turning a physical mouse wheel works; that remains n=0",
+    "inheritedFrom": "remaining-m13/notes.md:68"
+  },
+  "carried": [
+    {
+      "id": "C1",
+      "what": "concept-flow coverage gap: no post-promotion screen evidence for chapter '02 시간 눈금'; '04 자료 교체' confirmed only as far as the panel header",
+      "resolution": "reach t0-b3 in the next native run and photograph the tick picker, citation lock and post-swap re-read"
+    },
+    {
+      "id": "C2",
+      "what": "workbench perforation legibility unresolved after the metallic/tiling correction",
+      "resolution": "post-fix comparative capture via M7ProjectBuilder.Capture; if still flat, add a reflection probe to the hub scene (owned by T0ProjectBuilder.Prepare, not this lane)"
+    },
+    {
+      "id": "C3",
+      "what": "purge-only contribution to build size not isolated (confounded by promotion in the same build)",
+      "resolution": "one control build with promotion intact and only the purge reverted"
+    },
+    {
+      "id": "C4",
+      "what": "attribution of the new ProjectSettings/URPProjectSettings.asset is unestablished",
+      "resolution": "determine deliberate addition vs URP material-upgrade byproduct before committing"
+    },
+    {
+      "id": "C5",
+      "what": "intake handed over by remaining-m13/notes.md:83",
+      "resolution": "t0-b1 objective spoiler-free rewrite; evidence-box preserved-clue string assertion; terminology unification of 자동 사본 / 보존 단서"
+    },
+    {
+      "id": "C6",
+      "what": "native smoke Player.log was not archived, so 'exceptions 0' has no re-openable receipt",
+      "resolution": "copy the shipped-player log into the lane with its sha from the next native run onward"
+    }
+  ],
+  "executionBoundary": {
+    "unityRunsForThisReceipt": 0,
+    "gitCommitsOrPushes": 0,
+    "codeEdits": 0,
+    "filesCreated": [
+      "_workspace/current/systems/tech-verification/ui-promotion-m13/verification.md",
+      "_workspace/current/systems/tech-verification/ui-promotion-m13/verification.json"
+    ],
+    "readOnly": [
+      "production/*",
+      "qa/*",
+      "unity/**",
+      "other tech-verification folders"
+    ]
+  }
+}

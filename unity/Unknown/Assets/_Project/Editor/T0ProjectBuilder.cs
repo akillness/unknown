@@ -2,7 +2,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json.Linq;
 using Tide.App;
 using Tide.Data;
 using UnityEditor;
@@ -25,28 +24,18 @@ namespace Tide.EditorTools {
    var config=AssetDatabase.LoadAssetAtPath<T0RuntimeConfig>(Root+"Resources/T0Runtime.asset");if(config==null){config=ScriptableObject.CreateInstance<T0RuntimeConfig>();AssetDatabase.CreateAsset(config,Root+"Resources/T0Runtime.asset");}
    config.catalog=AssetDatabase.LoadAssetAtPath<T0CatalogAsset>(T0AssetImporter.CatalogPath);
    config.records=Text("Data/Tables/records.json");config.zones=Text("Data/Tables/zones.json");config.tools=Text("Data/Tables/tools.json");config.hints=Text("Data/Tables/hints.json");config.beats=Text("Data/Tables/beats.json");config.bindings=Text("Resources/WatchBindings.json");config.strings=Text("Resources/T0Strings.json");config.savePolicy=Text("Resources/SavePolicy.json");EditorUtility.SetDirty(config);
-   var repo=Path.GetFullPath(Path.Combine(Application.dataPath,"../../.."));
-   CopyCandidate(repo,"assets/generated/3d/hub-greybox.fbx","hub-greybox.fbx");
-   var drawerDir=Path.Combine(repo,"assets/generated/3d/hub-view-drawer-r01");var drawer=Directory.Exists(drawerDir)?Directory.GetFiles(drawerDir,"*.fbx").FirstOrDefault():null;
-   if(drawer!=null)File.Copy(drawer,Root+"Art/Candidates/drawer-r01.fbx",true);
-   var audio=Path.Combine(repo,"assets/generated/audio/higgsfield-stamp-r01/stamp-confirm.wav");if(File.Exists(audio))File.Copy(audio,Root+"Art/Candidates/stamp-confirm.wav",true);
-   AssetDatabase.Refresh();var audit=new JObject();
-   foreach(var fbx in new[]{"hub-greybox.fbx","drawer-r01.fbx"}){
-    var path=Root+"Art/Candidates/"+fbx;var asset=AssetDatabase.LoadAssetAtPath<GameObject>(path);if(asset==null)continue;
-    var instance=UnityEngine.Object.Instantiate(asset);var meshes=instance.GetComponentsInChildren<MeshFilter>();var renderers=instance.GetComponentsInChildren<Renderer>();var bounds=new Bounds();if(renderers.Length>0){bounds=renderers[0].bounds;foreach(var r in renderers.Skip(1))bounds.Encapsulate(r.bounds);}
-    audit[fbx]=new JObject{["meshCount"]=meshes.Length,["triangles"]=meshes.Sum(m=>m.sharedMesh.triangles.Length/3),["size"]=new JArray(bounds.size.x,bounds.size.y,bounds.size.z),["center"]=new JArray(bounds.center.x,bounds.center.y,bounds.center.z),["missingMesh"]=meshes.Any(m=>m.sharedMesh==null),["runtimeEligible"]=false};
-    UnityEngine.Object.DestroyImmediate(instance);
-   }
-   Directory.CreateDirectory("Builds");File.WriteAllText("Builds/t0-import-audit.json",audit.ToString());Debug.Log("T0_IMPORT_AUDIT "+audit.ToString(Newtonsoft.Json.Formatting.None));
+   // RFC-CX-016 (M13 legacy purge): every FBX candidate Prepare used to copy and audit is gone —
+   // drawer-r01 and stamp-confirm were unreferenced, hub-greybox is replaced by the M7 watchroom shell.
+   // Copies are removed rather than guarded: the assets/generated originals survive, so an existence
+   // guard would resurrect the purged copies on the next Prepare run. With no candidate left there is
+   // nothing left to audit, so Builds/t0-import-audit.json is no longer written.
+   // Receipt: _workspace/current/systems/tech-verification/legacy-purge-m13/.
+   AssetDatabase.Refresh();
    var boot=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);new GameObject("T0 Bootstrap",typeof(T0Entry));EditorSceneManager.SaveScene(boot,Root+"Scenes/boot.unity");
    var ui=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);new GameObject("UI Scene Root");EditorSceneManager.SaveScene(ui,Root+"Scenes/ui-root.unity");
    var hub=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
    var camera=new GameObject("Watch camera",typeof(Camera),typeof(AudioListener));camera.tag="MainCamera";camera.transform.position=new Vector3(0,1.55f,-2.164f);camera.transform.LookAt(new Vector3(0,.9f,1.2f));camera.GetComponent<Camera>().fieldOfView=Camera.HorizontalToVerticalFieldOfView(54,16f/9f);camera.GetComponent<Camera>().backgroundColor=new Color(.055f,.122f,.149f);
    var light=new GameObject("Watch room lamp",typeof(Light));light.GetComponent<Light>().type=LightType.Directional;light.GetComponent<Light>().intensity=1.2f;light.transform.rotation=Quaternion.Euler(48,-30,0);RenderSettings.ambientLight=new Color(.35f,.42f,.43f);
-   // Candidate imports remain isolated until the director's import/fit audit promotes them.
-   var candidates=new GameObject("Imported candidates — pending review");
-   var imported=AssetDatabase.LoadAssetAtPath<GameObject>(Root+"Art/Candidates/hub-greybox.fbx");if(imported!=null){var obj=(GameObject)PrefabUtility.InstantiatePrefab(imported);obj.transform.SetParent(candidates.transform,false);}
-   candidates.SetActive(false);
    MakeBox("Authored room floor",new Vector3(6,.12f,8),new Vector3(0,-.06f,0),new Color(.212f,.337f,.361f));
    MakeBox("Authored back wall",new Vector3(6,2.6f,.12f),new Vector3(0,1.3f,3.94f),new Color(.212f,.337f,.361f));
    MakeApprovedWorkbench();
@@ -65,7 +54,6 @@ namespace Tide.EditorTools {
    Debug.Log("T0_M9_BEATS_WIRED "+config.beats.name);
   }
   static TextAsset Text(string path)=>AssetDatabase.LoadAssetAtPath<TextAsset>(Root+path);
-  static void CopyCandidate(string repo,string source,string target){var file=Path.Combine(repo,source);if(File.Exists(file))File.Copy(file,Root+"Art/Candidates/"+target,true);}
   static void MakeBox(string name,Vector3 size,Vector3 pos,Color color){var go=GameObject.CreatePrimitive(PrimitiveType.Cube);go.name=name;go.transform.localScale=size;go.transform.position=pos;var material=new Material(Shader.Find("Universal Render Pipeline/Lit"));material.color=color;var path=Root+"Rendering/"+name.Replace(" ","-")+".mat";if(AssetDatabase.LoadAssetAtPath<Material>(path)!=null)AssetDatabase.DeleteAsset(path);AssetDatabase.CreateAsset(material,path);go.GetComponent<Renderer>().sharedMaterial=material;}
   // T0-only approval: r03 diagnostic prefab already retains FBX axis conversion plus yaw 180.
   static void MakeApprovedWorkbench(){

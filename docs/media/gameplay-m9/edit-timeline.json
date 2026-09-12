@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "fps": 24,
+  "sourceKind": "native window capture of built player",
+  "notPreviz": true,
+  "coreLoopSeconds": 80.625,
+  "gameplaySeconds": 190.958333,
+  "output": {
+    "resolution": "1280x800 (1:1, no scale, no pad)",
+    "width": 1280,
+    "height": 800,
+    "codec": "h264",
+    "crf": 20,
+    "preset": "slow",
+    "pixFmt": "yuv420p",
+    "audio": false,
+    "faststart": true,
+    "fps": 24
+  },
+  "composition": {
+    "capturedWindowContent": "1280x800",
+    "perSourceCrop": {
+      "a": {
+        "sourceSize": "1504x1088",
+        "windowRect": "x=112 y=76 w=1280 h=864",
+        "titlebarHeightPx": 64,
+        "crop": "1280:800:112:140"
+      },
+      "b": {
+        "sourceSize": "1416x1000",
+        "windowRect": "x=68 y=52 w=1280 h=864",
+        "titlebarHeightPx": 64,
+        "crop": "1280:800:68:116"
+      },
+      "c": {
+        "sourceSize": "1504x1088",
+        "windowRect": "x=112 y=76 w=1280 h=864",
+        "titlebarHeightPx": 64,
+        "crop": "1280:800:112:140"
+      }
+    },
+    "cropDerivation": "per-frame pixel scan of the capture: titlebar band = rows whose luminance>190 across >50% of the frame width; window left/right = first/last non-black column inside that band; window bottom = last non-black row inside the window columns. Stable on every sampled frame of all three sources.",
+    "output": "1280x800 (1:1, no scale, no pad)",
+    "outputRationale": "The game window canvas is 1280x800 (16:10). M7's 1280x720 came from 16:9 previz sources, so reusing 720 here would have required either cropping UI away or a 1152x720 downscale plus 64 px pillarbox bars - a 10% resolution loss and a non-full-bleed frame. Cropping to the window content and encoding it 1:1 is sharper and full-bleed, so only the crop is applied.",
+    "noScale": true,
+    "noPad": true,
+    "noNonuniformStretch": true,
+    "noContentCrop": true,
+    "framerateNormalisation": "variable-framerate capture (avg 47.6-51.1 fps) resampled with fps=24 per clip before concat"
+  },
+  "overlay": {
+    "tool": "libass via ffmpeg -vf ass",
+    "styleBlock": "[V4+ Styles] Base block reused verbatim from docs/media/concept-first-m7/gameplay-method.ass (NanumBarunGothic 34, PrimaryColour &H00DCE9EC, OutlineColour &H00161007, Outline 1.2, Alignment 7); only PlayResY was changed 720 -> 800 and the per-line \\pos()/\\fs overrides were rescaled by 1/0.9 for the taller 1:1 canvas.",
+    "font": "~/Library/Fonts/NanumBarunGothic.otf",
+    "cardPlacement": "greybox 3D viewport region, measured in content pixels: x 26-554, y 121-390. Scrim plate 528x269 at (26,121). Card title \\pos(58,147) fs50, description \\pos(62,251) fs34. The viewport is a documented greybox placeholder (RFC-CX-015), so no live UI evidence is covered.",
+    "burnedIn": true,
+    "captionSource": "locally authored Korean text; not generated typography",
+    "canvas": "PlayResX 1280 / PlayResY 800 (matches the output frame 1:1)",
+    "slug": "\\pos(596,24) fs20 in the empty right half of the header bar (header occupies y 20-110)",
+    "rangeLine": "\\pos(1248,24) fs20 \\an9, right-aligned inside the header right edge (x 1253)",
+    "summaryCard": "scrim 1280x576 at (0,116) - the band between the header bottom (110) and the toolbar top (700); head \\pos(76,142) fs50, body y 251/307/362 fs34, boundary lines y 464/516/567 fs30",
+    "measuredContentLayout": {
+      "headerBar": "x 26-1253, y 20-110",
+      "viewport": "x 26-553, y 123-388",
+      "nodeList": "x 26-553, y 400-688",
+      "rightTopPanel": "x 591-1253, y 123-262",
+      "rightMainPanel": "x 591-1253, y 275-688",
+      "toolbar": "y 700-779"
+    }
+  },
+  "films": {
+    "core-loop": {
+      "frames": 1935,
+      "seconds": 80.625,
+      "shotRangesSeconds": [
+        [
+          0.0,
+          18.0417
+        ],
+        [
+          18.0417,
+          30.5417
+        ],
+        [
+          30.5417,
+          33.5417
+        ],
+        [
+          33.5417,
+          40.5417
+        ],
+        [
+          40.5417,
+          50.5833
+        ],
+        [
+          50.5833,
+          61.125
+        ],
+        [
+          61.125,
+          72.625
+        ],
+        [
+          72.625,
+          80.625
+        ]
+      ],
+      "beatCardRangesSeconds": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          18.0417,
+          24.0417
+        ],
+        [
+          30.5417,
+          33.5417
+        ],
+        [
+          33.5417,
+          39.5417
+        ],
+        [
+          50.5833,
+          56.5833
+        ],
+        [
+          61.125,
+          67.125
+        ]
+      ],
+      "methodCardRangeSeconds": [
+        72.625,
+        80.625
+      ],
+      "clips": [
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 234.0,
+          "sourceOutSeconds": 252.0417,
+          "frames": 433,
+          "outInSeconds": 0.0,
+          "outOutSeconds": 18.0417,
+          "shows": "관측"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 295.5,
+          "sourceOutSeconds": 308.0,
+          "frames": 300,
+          "outInSeconds": 18.0417,
+          "outOutSeconds": 30.5417,
+          "shows": "조작"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 328.5,
+          "sourceOutSeconds": 331.5,
+          "frames": 72,
+          "outInSeconds": 30.5417,
+          "outOutSeconds": 33.5417,
+          "shows": "확인"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 0.0,
+          "sourceOutSeconds": 7.0,
+          "frames": 168,
+          "outInSeconds": 33.5417,
+          "outOutSeconds": 40.5417,
+          "shows": "되돌림"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 28.0,
+          "sourceOutSeconds": 38.0417,
+          "frames": 241,
+          "outInSeconds": 40.5417,
+          "outOutSeconds": 50.5833,
+          "shows": "되돌림"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 67.5,
+          "sourceOutSeconds": 78.0417,
+          "frames": 253,
+          "outInSeconds": 50.5833,
+          "outOutSeconds": 61.125,
+          "shows": "자료 교체"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 134.5,
+          "sourceOutSeconds": 146.0,
+          "frames": 276,
+          "outInSeconds": 61.125,
+          "outOutSeconds": 72.625,
+          "shows": "재-판독"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 186.0,
+          "sourceOutSeconds": 194.0,
+          "frames": 192,
+          "outInSeconds": 72.625,
+          "outOutSeconds": 80.625,
+          "shows": "인용 확정"
+        }
+      ],
+      "overlayFile": "core-loop.ass"
+    },
+    "gameplay": {
+      "frames": 4583,
+      "seconds": 190.958333,
+      "shotRangesSeconds": [
+        [
+          0.0,
+          12.0
+        ],
+        [
+          12.0,
+          47.75
+        ],
+        [
+          47.75,
+          54.25
+        ],
+        [
+          54.25,
+          60.75
+        ],
+        [
+          60.75,
+          82.75
+        ],
+        [
+          82.75,
+          99.25
+        ],
+        [
+          99.25,
+          102.25
+        ],
+        [
+          102.25,
+          109.25
+        ],
+        [
+          109.25,
+          120.25
+        ],
+        [
+          120.25,
+          133.7917
+        ],
+        [
+          133.7917,
+          141.2917
+        ],
+        [
+          141.2917,
+          158.8333
+        ],
+        [
+          158.8333,
+          167.375
+        ],
+        [
+          167.375,
+          177.4167
+        ],
+        [
+          177.4167,
+          190.9167
+        ]
+      ],
+      "chapterCardRangesSeconds": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          47.75,
+          53.75
+        ],
+        [
+          60.75,
+          66.75
+        ],
+        [
+          102.25,
+          108.25
+        ]
+      ],
+      "methodCardRangeSeconds": [
+        182.9167,
+        190.958333
+      ],
+      "clips": [
+        {
+          "segment": "source-seg-a.mov",
+          "sourceInSeconds": 8.0,
+          "sourceOutSeconds": 20.0,
+          "frames": 288,
+          "outInSeconds": 0.0,
+          "outOutSeconds": 12.0,
+          "shows": "셸 · M5 오프닝 2샷 · 셸 복귀"
+        },
+        {
+          "segment": "source-seg-a.mov",
+          "sourceInSeconds": 29.5,
+          "sourceOutSeconds": 65.25,
+          "frames": 858,
+          "outInSeconds": 12.0,
+          "outOutSeconds": 47.75,
+          "shows": "당직실 노드 선택 → 인수 각서 → 이관 목록 확인 4회 → 판 #0 결정"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 0.5,
+          "sourceOutSeconds": 7.0,
+          "frames": 156,
+          "outInSeconds": 47.75,
+          "outOutSeconds": 54.25,
+          "shows": "시간 눈금 선택 진입 (t0-b3)"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 200.5,
+          "sourceOutSeconds": 207.0,
+          "frames": 156,
+          "outInSeconds": 54.25,
+          "outOutSeconds": 60.75,
+          "shows": "눈금 선택기 드래그 스크롤"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 234.0,
+          "sourceOutSeconds": 256.0,
+          "frames": 528,
+          "outInSeconds": 60.75,
+          "outOutSeconds": 82.75,
+          "shows": "H−1:00 · 결손 확정 → 판독기 로드 → 안내·원본 절차 0/3·인용 시간창 H−1:00→H+5:56"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 295.5,
+          "sourceOutSeconds": 312.0,
+          "frames": 396,
+          "outInSeconds": 82.75,
+          "outOutSeconds": 99.25,
+          "shows": "판독기 액션: 시작/끝 시간 선택 · 시작·끝 ±1 스텝 · 가설판 인용"
+        },
+        {
+          "segment": "source-seg-b.mov",
+          "sourceInSeconds": 328.5,
+          "sourceOutSeconds": 331.5,
+          "frames": 72,
+          "outInSeconds": 99.25,
+          "outOutSeconds": 102.25,
+          "shows": "인용 시간창 표시 복귀"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 0.0,
+          "sourceOutSeconds": 7.0,
+          "frames": 168,
+          "outInSeconds": 102.25,
+          "outOutSeconds": 109.25,
+          "shows": "판독기 · 인용 1/2 · 되돌림/다시 툴바"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 28.0,
+          "sourceOutSeconds": 39.0,
+          "frames": 264,
+          "outInSeconds": 109.25,
+          "outOutSeconds": 120.25,
+          "shows": "\"다시 적용했습니다\" + 자료 선택 / 교체"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 67.5,
+          "sourceOutSeconds": 81.0417,
+          "frames": 325,
+          "outInSeconds": 120.25,
+          "outOutSeconds": 133.7917,
+          "shows": "원본·사본과 출처: 당직실 표준판 · 기록판 / 기록국 조위대장 · 장부"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 98.5,
+          "sourceOutSeconds": 106.0,
+          "frames": 180,
+          "outInSeconds": 133.7917,
+          "outOutSeconds": 141.2917,
+          "shows": "기록국 조위대장 행 선택"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 134.5,
+          "sourceOutSeconds": 152.0417,
+          "frames": 421,
+          "outInSeconds": 141.2917,
+          "outOutSeconds": 158.8333,
+          "shows": "조위대장 판독: 원본 절차 0/3 · 인용 시간창 H−6:00 → H+3:00"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 154.0,
+          "sourceOutSeconds": 162.5417,
+          "frames": 205,
+          "outInSeconds": 158.8333,
+          "outOutSeconds": 167.375,
+          "shows": "판독 액션 목록 스크롤"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 186.0,
+          "sourceOutSeconds": 196.0417,
+          "frames": 241,
+          "outInSeconds": 167.375,
+          "outOutSeconds": 177.4167,
+          "shows": "판독 · 검증 사본 보관 강조"
+        },
+        {
+          "segment": "source-seg-c.mov",
+          "sourceInSeconds": 238.5,
+          "sourceOutSeconds": 252.0,
+          "frames": 324,
+          "outInSeconds": 177.4167,
+          "outOutSeconds": 190.9167,
+          "shows": "원본에 추가 절차 / 시작 시간 선택 → 세션 말미"
+        }
+      ],
+      "overlayFile": "gameplay.ass"
+    }
+  },
+  "cutPolicy": "plain concat, no dissolves and no hold frames. Cut boundaries were placed by a 10 fps frame-difference scan of the cropped content; fully static stretches (seg-b 7-200 s and 207-234 s = time-scale list with pointer motion only) were excluded. Every boundary frame was rendered and visually confirmed to be live UI, not a black or mid-transition frame.",
+  "runtimeEligible": false
+}

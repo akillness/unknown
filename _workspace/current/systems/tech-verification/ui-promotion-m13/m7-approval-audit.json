@@ -1,0 +1,56 @@
+{
+  "scope": "RFC-CX-016 runtime promotion of the four gated concept profiles",
+  "approvalPath": "Tools/M7/Approve hub shell · Tools/M7/Approve UI skin · Tools/M7/Approve reader stage · Tools/M8/Approve review card",
+  "before": {
+    "M7Hub": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": false,
+      "references": "floorAndWall=True workbench=True plateShelf=True"
+    },
+    "M7UiSkin": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "paperPanel=True bronzeFrame=True"
+    },
+    "M7ReaderStage": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "reader=True recordSet=True"
+    },
+    "M8ReviewNotes": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "cardPaper=True"
+    }
+  },
+  "after": {
+    "M7Hub": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "floorAndWall=True workbench=True plateShelf=True"
+    },
+    "M7UiSkin": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "paperPanel=True bronzeFrame=True"
+    },
+    "M7ReaderStage": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "reader=True recordSet=True"
+    },
+    "M8ReviewNotes": {
+      "resourcesLoad": true,
+      "assetDatabaseLoad": true,
+      "runtimeApproved": true,
+      "references": "cardPaper=True"
+    }
+  }
+}

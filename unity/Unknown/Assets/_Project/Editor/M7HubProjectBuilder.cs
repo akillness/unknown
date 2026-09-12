@@ -20,10 +20,19 @@ namespace Tide.EditorTools {
             public string MaterialPath=>Folder+"/MAT_M7_Hub_"+Material+".mat";
             public string TexturePath(string map)=>TextureFolder+"/M7_Hub_"+Material+"_"+map+".png";
         }
+        // RFC-CX-016 metallic/tiling correction. The committed hub has no reflection probe and no skybox: with
+        // RenderSettings.ambientMode=Flat the only environment term UniversalFragmentPBR can sample is the flat
+        // ambient colour. A high metallic there folds the albedo into F0 and scales the diffuse term by (1-metallic),
+        // so the perforated-steel workbench measured 42.6/53.6/55.6 mean against the 75.0/84.6/86.0 salt-concrete
+        // wall in the same shot — a flat dark mass with no readable perforation (the defect RFC-CX-013 carried as
+        // "승격 전에 타일링·밝기 조정이 필요하다"). Metallic is lowered so the authored albedo reads, and tiling is
+        // raised for texel density on the 0.9-1.2 m workbench/shelf boxes (Unity cube UVs are 0..1 per face, so the
+        // old 2x repeat stretched the perforation past recognition). The alternative fix — adding a reflection probe
+        // to the hub scene — is carried: that scene is rebuilt by T0ProjectBuilder.Prepare and is not this lane's.
         static readonly Candidate[] Candidates={
             new Candidate{Material="SaltConcrete",SourceFolder="assets/generated/2d/texture/m7-salt-concrete-r01",Metallic=0f,Tiling=new Vector2(2,2)},
-            new Candidate{Material="PerforatedSteel",SourceFolder="assets/generated/2d/texture/m7-perforated-steel-r01",Metallic=.85f,Tiling=new Vector2(2,2)},
-            new Candidate{Material="Bronze",SourceFolder="assets/generated/2d/texture/m7-bronze-r01",Metallic=1f,Tiling=new Vector2(3,3)}
+            new Candidate{Material="PerforatedSteel",SourceFolder="assets/generated/2d/texture/m7-perforated-steel-r01",Metallic=.25f,Tiling=new Vector2(4,4)},
+            new Candidate{Material="Bronze",SourceFolder="assets/generated/2d/texture/m7-bronze-r01",Metallic=.45f,Tiling=new Vector2(4,4)}
         };
         static string Argument(string key,string fallback){var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,key);return i>=0&&i+1<args.Length?args[i+1]:fallback;}
         static string Hash(string path){using(var sha=SHA256.Create())using(var stream=File.OpenRead(path))return BitConverter.ToString(sha.ComputeHash(stream)).Replace("-","").ToLowerInvariant();}

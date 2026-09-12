@@ -476,7 +476,9 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [BOUNDARY] 이 판정은 G4(연출/몰입)·G7(코어루프 수용)의 **런타임 PASS가 아니다** — 사람 플레이 n=0, 창 수준 가독성 캡처 미완, 실기 IME/컨트롤러 미검. GTI 카드 `m8-review-card-r01`은 `runtimeApproved:false` 후보 유지(승격은 네이티브 창 검수 후 별도 감사). 커밋/푸시는 사용자 수행.
 - [CARRIED → 다음 인테이크] manifest M9 절 이월 목록(hintOfferCooldownSeconds 분리 · EN textKey · alignment 동사 · ReadOriginal 마모 undo 판정 · t0-b1/t0-b2 objective 재작성(planner) · 프리뷰 영향구역/근거2종 · 100ms 선택 윤곽 · 티칭 헤더 hint-system 등재 · 도구 열림 중 원문 열기 확장안 · D-M9-10 전용 테스트(QA G-1)).
 
-## RFC-CX-013 — M7 컨셉 리소스의 T0 스테이지1 런타임 반영: UI/UX·연출·GUI (2026-09-11)
+## RFC-CX-014 — M7 컨셉 리소스의 T0 스테이지1 런타임 반영: UI/UX·연출·GUI (2026-09-11)
+
+- [OBSERVED] id 정정(RFC-CX-016 회차): 이 블록은 최초 발행 시 `RFC-CX-013`으로 적혔으나 병행 세션의 이월-해소 블록과 3중 충돌했다. 매니페스트 M11이 이월-해소 쪽을 이미 `RFC-CX-013`으로 인용하고 있어, 인용이 없던 본 블록을 미사용 번호 `RFC-CX-014`로 옮겼다. 내용은 변경하지 않았다.
 
 - [OBSERVED] 사용자 지시(2026-09-11): "이어서 디벨롭까지 진행해보자. 코어루프 스테이지1, 리소스가 전혀 업데이트되지 않았네 ui/ux, 연출, gui, 모두야." RFC-CX-009 delivery(GTI 재질 5·블록아웃 4·FBX/GLB 후보)가 `assets/generated/`에만 있고 런타임에는 0건 반영된 상태를 지적.
 - [OBSERVED] 읽기 전용 정찰 2레인(씬/아트·UI/연출) 결과: 허브 = URP-Lit 단색 큐브 3(`Authored-*`)+`Workbench-*` 5+승인 r03 서랍, 창·판독기 3D·소금판·크랭크 **없음**(`Editor/T0ProjectBuilder.cs:43-54`); 판독기는 uGUI 파형 화면(`App/T0GameSession.cs:267-278`); UI는 매 Render마다 코드 생성, 배경 전부 `Image.color` 리터럴, 스킨/테마 객체 **없음**(`UI/T0Interface.cs:52,72,76,93,128,212-218`); 판독기 초점/확대경/조명 연출 **없음**; 애니메이션 **없음**. 게이트 정본 패턴 = `profile.runtimeApproved || args.Contains("--<x>-diagnostic")`(`App/T0OpeningSession.cs:16`, `App/ReviewNotesSession.cs:226`, `App/C1GameSession.cs:114`), 빌더는 `Resources/*.asset` 생성 시 `runtimeApproved=false` 강제(`Editor/M8ReviewNotesProjectBuilder.cs:31-34`). 감축 모션 계약 = `settings["reducedMotion"]` + `*Vfx.json` `reduced_motion_ms:0` + `Time.unscaledDeltaTime`(`App/ReviewNotesSession.cs:205-215`).
@@ -536,3 +538,33 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [BOUNDARY] M7 프로파일 3종 전부 `runtimeApproved:false`, 생성 에셋 전부 `runtimeEligible:false`. 게이트 = `runtimeApproved || --m7-{hub,ui,reader}-diagnostic`이며 게이트 off에서는 커밋된 허브 씬·UI 리터럴·스테이지 흐름이 무변경이다(GateOff 3테스트가 실증). **미검증**: 사람 플레이테스트(n=0), G4/G5/G6/G7 런타임 승격, 인엔진 타일 이음새/밉/텍셀 밀도 실측(타일링 QA는 엔진 진입 이전 수행), 라이선스(GTI 백엔드 `UNVERIFIED`), 메시 단위 충돌, 크랭크→판 기어 연동, 손 리그, 제3수문 런타임 사용. 승격은 `Tools/M7/Approve …(director only)` + decision-log 감사(asset-runbook §3.1 8항)를 거친다.
 - Sources: `systems/tech-verification/concept-first-m7/runtime/verification.md` · `systems/tech-verification/concept-first-m7/runtime/verification.json` · `unity/Unknown/Builds/m7-hub-import-audit.json` · `unity/Unknown/Builds/m7-ui-import-audit.json` · `unity/Unknown/Builds/m7-reader-import-audit.json` · `unity/Unknown/Builds/m7-diagnostics/m7-diagnostics.json`
 - decided_by: game-production-director(사용자 대행) · 영향 레인: modeling, presentation, systems, qa
+
+### RFC-CX-015 delivery evidence — 2026-09-11
+
+- [OBSERVED] 실동작 수리 3건을 **재빌드 후 같은 방식으로 재확인**했다: D-M9-15 → `검토 질문 보기`를 누르면 질문 패널이 버튼 바로 아래에 렌더되고 초점 스크롤 뒤에도 전문이 보인다(`rec-shots/u08-question-shown.png`). D-M9-16 → 1/2 인용 상태 재개 시 상태문이 `저장된 당직 작업을 복원했습니다. 사건 흐름의 다음 행동을 이어가세요.`로 표시된다(`u02-resumed.png`, 이전에는 t0-b1 환영문). D-M9-17 → 자료 선택이 `당직실 표준판 · 기록판` / `기록국 조위대장 · 장부`로, 구획 근거가 `인수 각서 · 문서 기록`으로 표시된다(`t03-picker.png`, `r29-check.png`).
+- [OBSERVED] 부수 실증: 설정 화면이 `확정 대화상자 (기본)`가 아니라 `프리뷰 후 확정 ✓`를 활성으로 표시(S-B two-step 기본, `u04-notes-open.png`). 유휴 180초 힌트 제안이 도구 화면에서 실제로 떴고 문서 열람 중에는 뜨지 않았다(S-G, `s10-find-cite.png`). 되돌림/다시로 headSeq 26→25→26 왕복(`s14/s15`).
+- [OBSERVED] **비정상 종료 복구**: 녹화 중 창 닫기 버튼을 눌러 플레이어가 즉시 종료됐다. 같은 저장 디렉터리로 재실행했을 때 `save.json` sha가 불변(`ecc688326de15adc`)이고 사건 흐름이 인용 1/2로 복원됐다(`u01-recovered.png`). 계획된 검사는 아니었으나 SV-F6 원자적 저장의 실사용 증거다.
+- [OBSERVED] 네이티브 녹화 소재 3세그먼트 확보(같은 빌드·같은 세션, 시간순): `seg-a-opening-intake` 65.3s / `seg-b-reader-window` 331.6s / `seg-c-commit-undo` 262.9s. 세그먼트 경계는 `screencapture` 백그라운드 프로세스가 부모 셸 종료와 함께 죽어 생겼고(`nohup`+`disown`으로 해결), 해상도 차(1504x1088 / 1416x1000)는 세션 중 창 이동 결과다. 편집·갤러리·provenance는 `docs/media/gameplay-m9/`와 `assets/generated/video/gameplay-m9/`.
+- [OBSERVED] 자동화 한계 기록: 포인터 클릭은 `Render()` 재구성 + 초점 스크롤과 경쟁해 좌표가 어긋나는 오클릭이 반복됐다(눈금 선택기·긴 액션 리스트에서 특히). 사람 손은 화면이 멈춘 뒤 누르므로 이 현상은 자동화 특유다 — 다만 **휠 스크롤이 리스트에 닿지 않는 것은 실제 UX 결함**이며 드래그로만 도달한다(이월).
+- [OBSERVED] 사용자가 편집 포맷 레퍼런스로 `docs/media/concept-first-m7/gameplay-method.mp4`를 지정했다(2026-09-11 추가 지시). 확인된 관례: 1280x720 · 24fps · H.264 · ASS 오버레이 번인(NanumBarunGothic 34, 슬러그 + 6초 챕터 카드 + 마지막 8초 정리 카드) · poster jpg · `edit-timeline.json` · `provenance.json`.
+- [DECISION] M9 영상은 그 **편집 관례를 따르되 문면은 반대로 쓴다**. M7은 컨셉 필름이라 "현재 게임 화면이나 완료된 해금을 증명하지 않는다"고 고지했지만, M9는 실제 빌드 창 녹화다 → 슬러그 `UNKNOWN / NATIVE PLAY CAPTURE`, 우상단 `실제 빌드 창 녹화 / previz 아님`, 정리 카드에 `관찰 → 조작 → 확인 → 되돌림` + 경계 3줄(빌드 버전 녹화임 · 포인터 조작이며 키보드·컨트롤러는 자동 테스트 담당 · 재미·몰입·성능·25분 예산 미측정). 오디오는 M7의 앰비언스를 재사용하지 않고 무음 유지(새 사운드 미제작, provenance에 사유 기재). previz 폴더와 파일·클레임이 섞이지 않게 `sourceKind: native window capture` + `notPreviz: true`를 명시한다.
+- [CARRIED] 영상은 목표 연출이 아니라 실제 조작 기록이지만, 재미·몰입·25분 예산·성능·사람 플레이는 여전히 미측정이다. G4/G7 런타임 PASS를 주장하지 않는다. 커밋/푸시는 사용자가 수행.
+
+### RFC-CX-015 영상 산출 — 2026-09-11
+
+- [OBSERVED] 사용자 지정 레퍼런스(`docs/media/concept-first-m7/gameplay-method.mp4`)의 편집 관례를 따라 두 편을 제작했다: `docs/media/gameplay-m9/core-loop.mp4`(80.625s, 1935프레임, sha d2aa92096514479b)와 `gameplay.mp4`(190.958s, 4583프레임, sha 5c77d6e7009bf6cf). 공통 규격 1280x800 · 24fps · H.264 · 무음 · ASS 번인 오버레이(NanumBarunGothic, 슬러그 + 6초 챕터 카드 4개 + 마지막 정리 카드) · poster jpg · `edit-timeline.json`.
+- [OBSERVED] 해상도 판정: M7은 16:9 소스라 1280x720이었지만 우리 소스는 플레이어 창 캔버스 1280x800(16:10)이다. 1차 인코딩이 `scale=1152:720`+`pad`로 좌우 검은 기둥을 만들고 해상도를 10% 깎았으므로, **스케일·패딩 없는 1:1 1280x800**으로 재인코딩했다(ASS PlayRes와 좌표도 800 기준 재배치). 왜곡 없음, full-bleed.
+- [OBSERVED] 크롭은 추측이 아니라 프레임 픽셀 스캔으로 도출했다(타이틀바 = 폭 50% 이상이 휘도>190인 행, 좌우 = 그 띠 안의 최초/최후 비검정 열): seg-a/c `1280:800:112:140`, seg-b `1280:800:68:116`. 세 소스의 모든 표본 프레임에서 안정적이었다.
+- [DECISION] 문면은 M7의 컨셉 고지를 반대로 뒤집었다 — 슬러그 `UNKNOWN / NATIVE PLAY CAPTURE`, 우상단 `실제 빌드 창 녹화 / previz 아님`, 정리 카드에 `관찰 → 조작 → 확인 → 되돌림` + 경계 3줄(빌드 버전 녹화 · 포인터 조작이며 키보드·컨트롤러는 자동 테스트 담당 · 재미·몰입·성능·25분 예산 미측정). provenance에 `sourceKind: native window capture of built player`, `notPreviz: true`, `audio: false`를 명시해 previz 계보와 섞이지 않게 했다.
+- [OBSERVED] 원본 3세그먼트는 `assets/generated/video/gameplay-m9/source-seg-{a,b,c}.mov`로 보존했고 provenance에 각 sha256·해상도·길이를 기록했다. 갤러리: `docs/media/gameplay-m9/index.html`.
+- [CARRIED] 영상에 담기지 않은 것: C1 순찰 확정과 검토 노트 구간은 스크린샷 증거로만 남았다(녹화 세그먼트 경계 밖). 사운드는 제작하지 않았다.
+
+## RFC-CX-016 — M7 컨셉 리소스 런타임 승격 · 남은 작업 마감 · 레거시 제거 (2026-09-11)
+
+- [OBSERVED] 사용자 지시(2026-09-11, 루트 디렉터): "충돌개선하고 영상 이미지 컨셉과 흐름대로 진행되도록 ui/ux 이미지 바꾸고, 동작하도록하자. 남은작업과 미측정부분완료하고, 최신화해서 깃 푸시하자. 빌드해서 최신화하고 이전 레거시들은 제거할꺼야."
+- [OBSERVED] 전제 상태: 병행 세션이 `7f3ba42`에서 M7 후보 3종(당직실 셸 재질 `M7Hub`, 넝마종이·청동 UI 스킨 `M7UiSkin`, 광학 판독기 스테이지 `M7ReaderStage`)을 **게이트 뒤로** 배선 완료했고 전부 `runtimeApproved:false`다. 내 M9 `M8ReviewNotes`(GTI 검토 카드)도 동일하게 false다. 게이트 오프 폴백은 레인별로 명시돼 있다(hub=씬 무변경, ui=기존 리터럴 색, reader=스테이지 미생성). 근거: `systems/tech-verification/concept-first-m7/runtime/verification.md`.
+- [DECISION·승격 권한] 각 레인의 승격 메뉴는 "director only"로 설계됐고, 루트 디렉터인 사용자가 위 지시로 **명시 승격을 요청**했다. 이를 승격 감사 기록으로 삼아 4개 프로파일(`M7Hub`·`M7UiSkin`·`M7ReaderStage`·`M8ReviewNotes`)을 `runtimeApproved:true`로 올린다. 승격 후 **네이티브 창에서 실제 조작**해 컨셉 영상의 흐름(당직의 시작 → 관찰·시험 → 대조·기록 → 다음 구역)과 대조하고, 깨지는 것은 고친다. 시각 원전은 여전히 원본 컨셉·M7 계보이며(RFC-CX-009), 현재 런타임 화면을 새 아트 기준으로 삼지 않는다.
+- [DECISION·미측정 마감] 승격으로 관측 가능해지는 항목을 닫는다: M7 3레인 PlayMode 6건(그간 자산 미임포트/게이트 오프로 `Assert.Ignore`)을 실제 실행 상태로 만들고, 게이트 온/오프 양쪽 계약을 검사한다. 사람 플레이테스트·재미·몰입·25분 예산·8시간 완주는 **여전히 미측정**이며 이 회차에서 측정했다고 적지 않는다.
+- [DECISION·레거시 제거] 대체된 후보만 제거한다: `c1-signature-reader-r01`(r02가 대체), `drawer-r01.fbx`(r03이 대체), `hub-greybox.fbx`(M7 셸이 대체), 재생 경로가 없는 `stamp-confirm.wav`. **provenance와 아카이브 기록은 보존**하고 삭제 사유·대체 관계를 영수증에 남긴다. `assets/generated/` 원본 계보는 지우지 않는다 — Unity `Art/Candidates/`의 사본만 정리한다.
+- [DECISION·문서 충돌] 병행 세션과의 id 충돌 잔재를 정리한다: RFC는 013(병행 2건)·015(M9 네이티브)·016(본건)으로 확정하고, 매니페스트 마일스톤은 M10(TRACE-RPG)·M11(RFC-CX-012 이월)·M12(M9 네이티브)·M13(본건)로 확정한다. 이미 발행된 블록의 번호는 되돌리지 않는다(역사 보존).
+- [BOUNDARY] 승격은 **T0 stage-1 범위**다. 상업 출시 자격(`commercialReleaseEligible`)은 변경하지 않는다. 빌드·푸시는 사용자 지시에 따라 이 회차에서 수행한다.

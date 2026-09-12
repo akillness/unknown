@@ -40,6 +40,7 @@ namespace Tide.Tests {
   void OpenReader(){Click("hub-view-reader");Click("open-reader");Assert.AreEqual("reader",game.Surface);}
   Transform FindVisual()=>game.transform.Cast<Transform>().FirstOrDefault(t=>t.name==T0GameSession.M7ReaderVisualName);
   GameObject[] ActiveHubRoots()=>hub.GetRootGameObjects().Where(g=>g.activeSelf&&g.GetComponentsInChildren<Renderer>().Length>0).ToArray();
+  Light[] HubLights()=>hub.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<Light>(true)).ToArray();
   static void AssertColor(Color expected,Color actual,string message){
    Assert.AreEqual(expected.r,actual.r,.001f,message+" (r)");Assert.AreEqual(expected.g,actual.g,.001f,message+" (g)");
    Assert.AreEqual(expected.b,actual.b,.001f,message+" (b)");Assert.AreEqual(expected.a,actual.a,.001f,message+" (a)");
@@ -106,6 +107,32 @@ namespace Tide.Tests {
     yield return null;
    }
    Assert.IsTrue(game.M7ReaderStageActive,"Reader stage stays shown while the crank rests");
+  }
+  // RFC-CX-016: the committed "Watch room lamp" is a Light with no Renderer, so ApplyStagePresentation's
+  // renderer-based root hiding left it lighting the reader stage and blew out 5.5-5.7% of the viewport to pure
+  // white. The stage now borrows exclusivity and must hand it back: every hub light is disabled while the stage
+  // is shown and enabled again on exit, so the hub is lit exactly as it was before the visit.
+  [UnityTest] public IEnumerator GateOnSuppressesForeignHubLightsAndRestoresThemOnExit(){
+   if(profile==null)Assert.Ignore("M7ReaderStage.asset not imported — run Tools/M7/Import reader stage candidates first");
+   if(profile.reader==null)Assert.Ignore("M7ReaderStage.asset reader prefab missing — rerun Tools/M7/Import reader stage candidates");
+   profile.runtimeApproved=true;
+   yield return Boot();
+   var hubLights=HubLights();
+   Assert.IsNotEmpty(hubLights,"The committed hub must ship at least one light for this contract to mean anything");
+   var enabledBefore=hubLights.Where(l=>l.enabled).ToArray();
+   Assert.IsNotEmpty(enabledBefore,"At least one committed hub light must be enabled before the stage is entered");
+   OpenReader();yield return null;yield return null;
+   var visual=FindVisual();Assert.IsNotNull(visual,"Gate on must build the M7 optical reader under the session");
+   foreach(var light in hubLights)Assert.IsFalse(light.enabled,light.name+" must be suppressed while the reader stage owns the frame");
+   var driver=visual.GetComponent<M7ReaderStageVisual>();
+   Assert.IsNotNull(driver,"The stage visual carries the restore hook");
+   CollectionAssert.AreEquivalent(enabledBefore,driver.SuppressedHubLights.ToArray(),"Exactly the previously enabled hub lights are the ones borrowed");
+   // The stage's own two lights are untouched by the suppression sweep.
+   Assert.AreEqual(2,visual.GetComponentsInChildren<Light>(true).Count(l=>l.enabled),"Both stage lights stay enabled");
+   game.Back();yield return null;yield return null;yield return null;
+   Assert.AreEqual("shell",game.Surface);
+   Assert.IsNull(FindVisual(),"Leaving the reader must tear down the M7 optical reader");
+   foreach(var light in enabledBefore)Assert.IsTrue(light.enabled,light.name+" must be lit again after leaving the reader stage");
   }
  }
 }

@@ -23,6 +23,44 @@ namespace Tide.EditorTools {
    AssetDatabase.Refresh();
    Debug.Log("M7_IMPORT_ALL_DONE");
   }
+  // RFC-CX-016 promotion: the director asked for all four lanes at once, so this only *calls* the four existing
+  // director-only approval menus (nothing here writes runtimeApproved itself) and records the gate state either side.
+  // -executeMethod entry point because the menu items are not reachable from batchmode.
+  [MenuItem("Tools/M7/Approve all lanes (director only)")]
+  public static void ApproveAll(){
+   var audit=new JObject{["scope"]="RFC-CX-016 runtime promotion of the four gated concept profiles",
+    ["approvalPath"]="Tools/M7/Approve hub shell · Tools/M7/Approve UI skin · Tools/M7/Approve reader stage · Tools/M8/Approve review card",
+    ["before"]=GateState()};
+   Debug.Log("M7_GATES_BEFORE "+audit["before"].ToString(Newtonsoft.Json.Formatting.None));
+   M7HubProjectBuilder.ApproveHubShell();
+   M7UiSkinProjectBuilder.ApproveUiSkin();
+   M7ReaderProjectBuilder.ApproveReaderStage();
+   M8ReviewNotesProjectBuilder.ApproveReviewCard();
+   AssetDatabase.SaveAssets();AssetDatabase.Refresh();
+   audit["after"]=GateState();
+   Debug.Log("M7_GATES_AFTER "+audit["after"].ToString(Newtonsoft.Json.Formatting.None));
+   var path=Argument("--m7-approval-audit","Builds/m7-approval-audit.json");
+   Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path)));
+   File.WriteAllText(path,audit.ToString());
+   Debug.Log("M7_APPROVE_ALL_DONE "+path);
+  }
+  static string Argument(string key,string fallback){var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,key);return i>=0&&i+1<args.Length?args[i+1]:fallback;}
+  // Both load routes are recorded: the runtime and the PlayMode fixtures use Resources.Load, the approval menus use AssetDatabase.
+  static JObject Lane<T>(string resource,string assetPath,Func<T,bool> approved,Func<T,string> refs) where T:ScriptableObject{
+   var viaResources=Resources.Load<T>(resource);var viaDatabase=AssetDatabase.LoadAssetAtPath<T>(assetPath);
+   var probe=viaResources??viaDatabase;
+   return new JObject{["resourcesLoad"]=viaResources!=null,["assetDatabaseLoad"]=viaDatabase!=null,
+    ["runtimeApproved"]=probe!=null&&approved(probe),["references"]=probe==null?"profile missing":refs(probe)};
+  }
+  static JObject GateState()=>new JObject{
+   ["M7Hub"]=Lane<M7HubProfile>("M7Hub","Assets/_Project/Resources/M7Hub.asset",p=>p.runtimeApproved,
+    p=>"floorAndWall="+(p.floorAndWall!=null)+" workbench="+(p.workbench!=null)+" plateShelf="+(p.plateShelf!=null)),
+   ["M7UiSkin"]=Lane<M7UiSkinProfile>("M7UiSkin","Assets/_Project/Resources/M7UiSkin.asset",p=>p.runtimeApproved,
+    p=>"paperPanel="+(p.paperPanel!=null)+" bronzeFrame="+(p.bronzeFrame!=null)),
+   ["M7ReaderStage"]=Lane<M7ReaderStageProfile>("M7ReaderStage","Assets/_Project/Resources/M7ReaderStage.asset",p=>p.runtimeApproved,
+    p=>"reader="+(p.reader!=null)+" recordSet="+(p.recordSet!=null)),
+   ["M8ReviewNotes"]=Lane<M8ReviewNotesProfile>("M8ReviewNotes","Assets/_Project/Resources/M8ReviewNotes.asset",p=>p.runtimeApproved,
+    p=>"cardPaper="+(p.cardPaper!=null))};
   // Cheap -nographics check that the saved profiles resolve their references (catches dangling prefab/material fileIDs).
   public static void Probe(){
    var hub=Resources.Load<M7HubProfile>("M7Hub");var ui=Resources.Load<M7UiSkinProfile>("M7UiSkin");var reader=Resources.Load<M7ReaderStageProfile>("M7ReaderStage");

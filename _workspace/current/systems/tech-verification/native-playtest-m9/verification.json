@@ -1,0 +1,335 @@
+{
+ "schemaVersion": 1,
+ "id": "native-playtest-m9",
+ "rfc": "RFC-CX-015",
+ "rfcIdNote": "Originally logged as RFC-CX-013; two parallel sessions took that id first, so this work was renumbered to RFC-CX-015 (decision-log.md:506). 014 held in reserve.",
+ "recordedAt": "2026-09-12T00:10:42.916985+00:00",
+ "owner": "game-qa",
+ "cycle": "20260909-preproduction-c7",
+ "unity": "6000.5.6f1",
+ "scope": "RFC-CX-015 M9 native hands-on playtest of the built player: full T0 plus C1 patrol, three play-only defects repaired and re-verified",
+ "operation": {
+  "mode": "native built player driven in a real window (not batch mode)",
+  "launch": "open -n Builds/T0-mac/Unknown.app --args --t0-save-dir <isolated> --m8-review-notes-diagnostic -screen-width 1280 -screen-height 800",
+  "window": "1280x800",
+  "input": "cliclick pointer only (coordinate clicks + UGUI ScrollRect drags)",
+  "inputLimitation": "synthetic key events never reached Unity Input System; keyboard and controller equivalence is delegated to PlayMode tests",
+  "inspection": "orca computer window state/slot read to derive click coordinates",
+  "monitoring": "Player.log watched (0 exceptions recorded in decision-log.md:508); save.json diffed live",
+  "saveDirPlaytest": "/tmp/unknown-m9-playtest-1789141632",
+  "saveDirRecording": "/tmp/unknown-m9-record-1789168879",
+  "diagnosticFlagReason": "ReviewNotesSession.cs:226 gates review-note direction on runtimeApproved || --m8-review-notes-diagnostic; Resources/M8ReviewNotes.asset is still runtimeApproved: 0"
+ },
+ "nativeRuns": [
+  {
+   "file": "editmode.xml",
+   "sha256": "c7b0d56803886445ebdcce45be6e0b66f37585e3932d61ceef477ef7e72f6b60",
+   "bytes": 39891,
+   "testcasecount": "53",
+   "result": "Passed",
+   "passed": "53",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "2.3803966",
+   "startTime": "2026-09-11 23:16:53Z",
+   "log": "editmode.log"
+  },
+  {
+   "file": "playmode.xml",
+   "sha256": "7d662ff0c41eae5b04b0662f205b63d9481a39e5bd6ad7fd50a2581521b06af0",
+   "bytes": 91449,
+   "testcasecount": "79",
+   "result": "Skipped:Ignored",
+   "passed": "73",
+   "failed": "0",
+   "skipped": "6",
+   "duration": "32.0894451",
+   "startTime": "2026-09-11 23:17:14Z",
+   "log": "playmode.log",
+   "skippedDetail": [
+    {
+     "test": "Tide.Tests.M7HubPlayModeTests.GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce",
+     "result": "Skipped",
+     "reason": "M7Hub.asset not imported — run Tools/M7/Import hub shell candidates first",
+     "owner": "parallel-m7-session"
+    },
+    {
+     "test": "Tide.Tests.M7ReaderPlayModeTests.GateOnBuildsStageWithTwoLightsAndTearsDownOnExit",
+     "result": "Skipped",
+     "reason": "M7ReaderStage.asset not imported — run Tools/M7/Import reader stage candidates first",
+     "owner": "parallel-m7-session"
+    },
+    {
+     "test": "Tide.Tests.M7ReaderPlayModeTests.GateOnReducedMotionKeepsCrankAtRest",
+     "result": "Skipped",
+     "reason": "M7ReaderStage.asset not imported — run Tools/M7/Import reader stage candidates first",
+     "owner": "parallel-m7-session"
+    },
+    {
+     "test": "Tide.Tests.M7UiSkinPlayModeTests.GateOnAtTextScale150RendersWithoutLayoutChange",
+     "result": "Skipped",
+     "reason": "M7UiSkin.asset not imported — run Tools/M7/Import UI skin candidates first",
+     "owner": "parallel-m7-session"
+    },
+    {
+     "test": "Tide.Tests.M7UiSkinPlayModeTests.GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable",
+     "result": "Skipped",
+     "reason": "M7UiSkin.asset not imported — run Tools/M7/Import UI skin candidates first",
+     "owner": "parallel-m7-session"
+    },
+    {
+     "test": "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+     "result": "Skipped",
+     "reason": "Run with an explicit isolated --t0-save-dir for serialized boot verification.",
+     "owner": "m9-covered-by-boot.xml"
+    }
+   ]
+  },
+  {
+   "file": "boot.xml",
+   "sha256": "ea0a0e967c9491cfeab76c83d83f2acc85a986170ab226d1a3fcc330e6b49672",
+   "bytes": 3433,
+   "testcasecount": "1",
+   "result": "Passed",
+   "passed": "1",
+   "failed": "0",
+   "skipped": "0",
+   "duration": "0.5867892",
+   "startTime": "2026-09-11 23:18:02Z",
+   "log": "boot.log"
+  }
+ ],
+ "build": {
+  "marker": "T0_MAC_BUILD Succeeded bytes=354247240",
+  "bytes": 354247240,
+  "log": "build-mac.log",
+  "logLine": 6277,
+  "options": "BuildOptions.Development",
+  "optionsSource": "unity/Unknown/Assets/_Project/Editor/T0ProjectBuilder.cs:85",
+  "isProductionBuild": false,
+  "watermark": "every screenshot carries Unity's 'Development Build' watermark"
+ },
+ "effectiveM9Result": "EditMode 53/53 + PlayMode 73/73 + boot 1/1, failed 0; the 6 PlayMode skips are gated ignores (5 owned by the parallel M7 session awaiting asset import, 1 the boot test covered separately by boot.xml)",
+ "saveState": {
+  "path": "/tmp/unknown-m9-playtest-1789141632/save.json",
+  "sha256": "ce1771599f024c728c3a645fe9a651ecacf5e8f0eed86e7eadbc6a19caf1f012",
+  "bytes": 10042,
+  "schemaVersion": 3,
+  "beatId": "c1-b1",
+  "stageId": "C1",
+  "hintLevelUsed": {
+   "t0-b1": 2
+  },
+  "commandLogHeadSeq": 38,
+  "headSeqNote": "final value after C1; the 31->30->31 sequence in decision-log.md:509 is the mid-session undo/redo observation, not the end state",
+  "siblingFiles": [
+   "checkpoint.pre-commit.json",
+   "checkpoint.pre-commit.json.bak",
+   "save.bak",
+   "save.json"
+  ]
+ },
+ "sliceVerdicts": [
+  {
+   "slice": "S-A",
+   "verdict": "PASS",
+   "evidence": [
+    "shots/17-hints.png",
+    "shots/22-hint-warning.png",
+    "shots/80-hints-b3-state.png",
+    "save.json progress.hintLevelUsed={'t0-b1':2}"
+   ]
+  },
+  {
+   "slice": "S-B",
+   "verdict": "PASS",
+   "evidence": [
+    "shots/60-preview.png",
+    "shots/61-next.png",
+    "shots/62-confirm.png",
+    "shots/89-patrol-preview.png",
+    "shots/90-next.png",
+    "shots/91-confirm.png"
+   ]
+  },
+  {
+   "slice": "S-C",
+   "verdict": "PASS",
+   "evidence": [
+    "shots/60-preview.png"
+   ]
+  },
+  {
+   "slice": "S-D",
+   "verdict": "PASS",
+   "evidence": [
+    "shots/28-b1-done.png",
+    "shots/30-circuit-tool.png",
+    "shots/60-preview.png",
+    "shots/84-detail1.png"
+   ]
+  },
+  {
+   "slice": "S-E",
+   "verdict": "PARTIAL — question display failed as D-M9-15 then repaired; button/original-open/focus-return/C1 gate pass",
+   "evidence": [
+    "shots/09-question-0links.png",
+    "shots/10-question-visible.png",
+    "shots/13-returned.png",
+    "shots/94-notes-c1-bottom.png"
+   ]
+  },
+  {
+   "slice": "S-F",
+   "verdict": "PASS (conditional — forced on by --m8-review-notes-diagnostic)",
+   "evidence": [
+    "shots/08-notes-settled.png",
+    "shots/94-notes-c1-bottom.png"
+   ]
+  },
+  {
+   "slice": "S-G",
+   "verdict": "PARTIAL [INFERENCE] — auto-copy observed; idle hint suppression during document reading NOT MEASURED",
+   "evidence": [
+    "shots/75-undo.png",
+    "shots/77-close.png",
+    "checkpoint.pre-commit.json"
+   ]
+  },
+  {
+   "slice": "S-H",
+   "verdict": "CANDIDATE — native legibility seen, promotion not performed (runtimeApproved: 0)",
+   "evidence": [
+    "shots/94-notes-c1-bottom.png",
+    "unity/Unknown/Assets/_Project/Resources/M8ReviewNotes.asset"
+   ]
+  }
+ ],
+ "defects": [
+  {
+   "id": "D-M9-15",
+   "severity": "S2",
+   "area": "UX",
+   "owner": [
+    "SYS-M8",
+    "SYS-CORE"
+   ],
+   "summary": "Review question panel renders above its trigger button; the 40% focus scroll pushes it off screen, so pressing the button produces no visible change and pointer wheel scroll cannot recover",
+   "status": "FIXED",
+   "fix": [
+    "unity/Unknown/Assets/_Project/UI/T0ReviewNotesInterface.cs:10 (QuestionAnchorId field)",
+    "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs:292 (QuestionAnchorId = review-note-question)",
+    "unity/Unknown/Assets/_Project/UI/T0Interface.cs:137 (render inside action loop, below anchor)",
+    "unity/Unknown/Assets/_Project/UI/T0ReviewNotesInterface.cs:65 (fallback when anchor empty)"
+   ],
+   "evidence": [
+    "shots/09-question-0links.png",
+    "shots/10-question-visible.png",
+    "shots/10b-scrolled.png"
+   ],
+   "directlyInspected": true
+  },
+  {
+   "id": "D-M9-16",
+   "severity": "S3",
+   "area": "resume status",
+   "owner": [
+    "SYS-CORE"
+   ],
+   "summary": "Resuming a save showed the t0-b1 welcome string even when T0 was already complete",
+   "status": "FIXED",
+   "fix": [
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs:79 (ResumeStatus())",
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs:80 (StartGame uses it)",
+    "unity/Unknown/Assets/_Project/Resources/T0Strings.json (new key resumeInProgress)"
+   ],
+   "evidence": [
+    "shots/78-relaunch-title.png",
+    "shots/79-continue.png",
+    "shots/79-resumed.png"
+   ],
+   "directlyInspected": true
+  },
+  {
+   "id": "D-M9-17",
+   "severity": "S3",
+   "area": "player-facing strings",
+   "owner": [
+    "SYS-CORE",
+    "C1"
+   ],
+   "summary": "Internal ids leaked as player strings in 4 places: reader record picker (station-bureau-standard), patrol observation detail (출처: watchlog-bureau · log), evidence box, area evidence (· log / · ledger)",
+   "status": "FIXED (partial carry)",
+   "fix": [
+    "unity/Unknown/Assets/_Project/App/C1GameSession.cs:62",
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs:307",
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs:309",
+    "unity/Unknown/Assets/_Project/App/T0GameSession.cs:311",
+    "mapping at unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs:322-330"
+   ],
+   "carried": "auto-kept clue ids (t0-b2-c1 etc.) have no display-name data — planner owns clue display names",
+   "evidence": [
+    "shots/84-detail1.png (defect, directly read)",
+    "shots/94-notes-c1-bottom.png (post-fix, directly read)"
+   ],
+   "directlyInspected": true
+  },
+  {
+   "id": "D-M9-11",
+   "severity": "S3",
+   "area": "content",
+   "owner": [
+    "planner"
+   ],
+   "summary": "t0-b2 objective's authoring instruction sentence ('안내 표시가 각 단계에 붙는다.') is shown verbatim in the case thread — first demonstrated on screen this session",
+   "status": "STILL-OPEN (out of M9 code scope; campaign.json under parallel edit)",
+   "evidence": [
+    "decision-log.md:514",
+    "qa/completeness-m9-review.md R3-2"
+   ],
+   "directlyInspected": false
+  }
+ ],
+ "nonDefectObservations": [
+  "Tick picker shows ~8 of 30 rows per page and wheel scroll misses it, but UGUI ScrollRect drag reaches every row (shots/49-drag-scroll.png); inertia-induced misclicks are an automation artifact, not a player-facing bug",
+  "3D viewports show only approved prefabs (drawer r03, C1 patrol panel r01); circuit map and reader nodes remain greybox (M7 prefab rebuild carried)",
+  "Beat subtitle prints raw beat ids (21:00 · t0-b1 / t0-b3 / c1-b1) — pre-existing, already ruled out of D-M9-05 scope by QA R2"
+ ],
+ "evidenceDirs": [
+  {
+   "dir": "shots/",
+   "files": 184,
+   "indexSpan": "00..94",
+   "note": "decision-log.md:509 says '94장' which is the prefix index count; most steps captured before/after so the file count is higher",
+   "stable": true,
+   "filesSnapshotAt": "2026-09-12T00:12:06+00:00"
+  },
+  {
+   "dir": "rec-shots/",
+   "files": 91,
+   "indexSpan": "r01-start.png .. t02-find-swap.png",
+   "note": "recording-session stills; NOT a settled artifact count — the parallel recording session is still writing here and this directory grew 64 -> 91 during verification. Treat as a point-in-time snapshot.",
+   "filesSnapshotAt": "2026-09-12T00:12:06+00:00",
+   "stable": false,
+   "series": {
+    "r": 63,
+    "s": 26,
+    "t": 2
+   }
+  }
+ ],
+ "notMeasured": [
+  "human playtest n=0 — the operator was a cliclick-driven pointer; fun, immersion, comprehension and frustration points are unmeasured",
+  "25-minute session budget actual elapsed time; 8-hour full-campaign budget",
+  "keyboard and controller equivalence (synthetic key events never reached Unity Input System) — delegated to PlayMode tests",
+  "on-device Korean IME behaviour in the review-note editor",
+  "3D dressing beyond approved prefabs — circuit map and reader nodes are greybox",
+  "review-card promotion: Resources/M8ReviewNotes.asset is runtimeApproved: 0; the render was forced by --m8-review-notes-diagnostic, so the default run path still has the direction off",
+  "release build configuration — this was BuildOptions.Development (Development Build watermark on every shot)",
+  "performance and framing: no frame time, GC, memory or resolution-scaling capture; only one 1280x800 window configuration observed",
+  "G4 / G7 runtime gates are NOT a PASS — this document proves operability and string integrity, not the human-play and performance requirements those gates ask for",
+  "shot-to-step binding for rows other than 09/10, 60-preview, 84-detail1 and 94-notes-c1-bottom — file existence and naming convention are OBSERVED, on-screen content is INFERENCE",
+  "OS-restart save.json sha invariance was recorded mid-session in decision-log.md:508 and was not reproduced here; the file read for this document is the post-session end state",
+  "gameplay video: docs/media/gameplay-m9/ does not exist at verification time; the two planned edits (core-loop, gameplay) in decision-log.md:517 are [TARGET]. rec-shots/ is still being written (64 -> 91 during this verification), so no final frame count or video artifact can be asserted."
+ ]
+}

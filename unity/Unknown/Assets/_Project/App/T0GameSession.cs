@@ -205,6 +205,23 @@ namespace Tide.App {
    if(string.IsNullOrEmpty(objective)||recordNames.Any(objective.Contains))return fallback;
    return objective;
   }
+  // D-M9-17 remainder: `kept:` facts carry internal clue ids. Every clue is preserved by a Read of the
+  // record that lists it (T0Simulation.Commit → RecordDefinition.ClueIds), so the owning record is a
+  // derivable display name and the evidence box names the record instead of leaking the id. One line per
+  // record, with the count when a record preserves more than one clue (rec-plate-standard-hub does).
+  // Grouping is keyed by record id, never by the rendered label, so an unowned clue stays unnamed.
+  IEnumerable<string> KeptClueLines(){
+   var order=new List<string>(); var counts=new Dictionary<string,int>(StringComparer.Ordinal);
+   foreach(var clue in Journal.State.AutoKeptClues){
+    var owner=Definition.Records.Values.FirstOrDefault(r=>r.ClueIds.Contains(clue));
+    var key=owner==null?"":owner.Id;
+    if(!counts.ContainsKey(key)){counts[key]=0;order.Add(key);}
+    counts[key]++;
+   }
+   return order.Select(key=>key.Length==0
+    ?(counts[key]==1?L("keptClueUnnamed"):string.Format(L("keptClueUnnamedCount"),counts[key]))
+    :(counts[key]==1?string.Format(L("keptClue"),Name(key)):string.Format(L("keptClueCount"),Name(key),counts[key])));
+  }
   string GuidedTeachingText(string toolId){
    if(SignatureActive||PatrolActive||beats==null)return null;
    var row=((JArray)tools["rows"]).OfType<JObject>().FirstOrDefault(r=>(string)r["toolId"]==toolId);
@@ -308,7 +325,7 @@ namespace Tide.App {
    }else if(overlay=="readerEvidence"){
     foreach(var r in Definition.Records.Values.Where(r=>r.Phases.Count>0&&r.VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))){var rid=r.Id;s.Actions.Add(A("choose-"+rid,Name(rid)+" · "+ReviewMediaName(r.SourceType),()=>{overlay=null;SubmitImmediate(new PuzzleCommand("LoadRecord",rid));}));}
    }else if(overlay=="evidence"||overlay=="hypothesis"){
-    s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+ReviewMediaName((string)observation["sourceType"]);if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var id in Journal.State.AutoKeptClues)s.Body+="\n✓ "+id;
+    s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+ReviewMediaName((string)observation["sourceType"]);if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var line in KeptClueLines())s.Body+="\n✓ "+line;
     foreach(var id in Definition.Records.Keys.Where(id=>Journal.State.Has("citation:"+id)))s.Body+="\n"+Name(id)+" · "+Journal.State.Get("citationStart:"+id)+" → "+Journal.State.Get("citationEnd:"+id);
    }else if(overlay=="hints"){
     var rows=(SignatureActive?new JArray(signaturePacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1SignatureDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):PatrolActive?new JArray(patrolPacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1PatrolDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):hints["rows"]).Where(h=>(string)h["beatId"]==CurrentBeat).OrderBy(h=>(int)h["level"]).ToArray();s.Body=L("hintFree");foreach(var row in rows.Where(h=>(int)h["level"]<=HintLevel))s.Body+="\n"+(string)row["sourceTextKo"];

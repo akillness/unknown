@@ -136,7 +136,9 @@ namespace Tide.UI
                 // The review question answers the button above it; rendering it here keeps the answer in view after the focus scroll (D-M9-15).
                 if(model.ReviewNotes!=null&&action.Id==model.ReviewNotes.QuestionAnchorId) RenderReviewQuestion(actionParent,model.ReviewNotes);
             }
-            if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,16,new Color(.38f,.18f,.07f));
+            // RFC-CX-016: the committed literal is authored for the dark Work Surface; with the skin on the same line sits
+            // on rag paper, so the skin supplies a deeper ochre. skin==null keeps the committed literal byte-identical.
+            if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,16,skin==null?new Color(.38f,.18f,.07f):skin.statusOnPaper);
             var bar=Panel("Toolbar",root,new Vector2(0,0),new Vector2(1,.105f),skin==null?new Color(.05f,.12f,.15f,.96f):skin.toolbar);
             SkinBacking("M7 frame",bar,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
             var tools=Rect("Tools",bar,new Vector2(.01f,.34f),new Vector2(.99f,.96f));

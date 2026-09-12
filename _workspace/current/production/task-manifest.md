@@ -126,3 +126,27 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | Independent QA + director re-run | qa, director | P4 | qa/rfc-cx-013-review.md | complete; 30 checks, S1 0 · S2 0 · S3 0 after fixes; 50/50 · --t0 5/5 (sha match) · EG 18/18 · freshness 0/602 |
 | **Re-intake (open, not S-graded)**: c6-b3 objective/completion/subtasks[2][4]/clues c3·c4 open the motive mechanism inside B26 — (A) redefine B26/B27 bound or (B) move motive sub-beats to c6-b4 (clues·pairs·EG re-derive) | director → planner, worldview | content-update intake | timeline.md §7, campaign.json c6-b3/c6-b4 | open — beat design change, not a carry fix |
 | Carried (non-blocking): continuity.md K10 row B26→B27, glossary §2 「정합기」 "공통 피크" abbreviation, consistency-audit §3 table re-run | synopsis, worldview | next | — | open |
+
+## M12 — 네이티브 실동작 플레이테스트·모니터링·게임플레이 영상 (2026-09-11, RFC-CX-015)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| 실빌드 플레이어 전구간 창 조작 + 런타임 모니터링(T0 b1→b3 완주·프리뷰→확정·되돌림/다시·OS 재시작 재개·C1 순찰·검토 노트) | director, qa | P4 | systems/tech-verification/native-playtest-m9/{shots,rec-shots}/, save-dir.txt, record-save-dir.txt | complete; 스크린샷 shots 184 + rec-shots 63+ [OBSERVED 작성 시각 66, 녹화 세션 진행중], Player.log 예외 0 · save.json 실시간 대조(`hintLevelUsed={"t0-b1":2}` 유지, headSeq 31→30→31, OS 재시작 후 sha 불변) |
+| 실동작 전용 결함 3건 수리 + D-M9-11 실증 (D-M9-15 질문 패널 앵커 아래 렌더 / D-M9-16 `ResumeStatus()` 3분기 / D-M9-17 내부 id 4개소 → `ReviewMediaName(sourceType)`) | systems | P3/P4 | App/ReviewNotesSession.cs, UI/T0ReviewNotesInterface.cs, UI/T0Interface.cs (RFC-CX-011 파일 집합 내 소형 수리) | complete; 재빌드 후 재검증 EditMode 53/53 · PlayMode 73/73 (+6 skipped, total 79) · serialized boot 1/1 · `T0_MAC_BUILD Succeeded bytes=354247240` |
+| 코어루프·게임플레이 영상 2편(`core-loop` 80.6s / `gameplay` 191.0s) — M7 `gameplay-method.mp4` 편집 관례(1280x800 1:1 · 24fps · ASS 챕터 카드 · poster · edit-timeline) | presentation, director | P3 | docs/media/gameplay-m9/, assets/generated/video/gameplay-m9/ | complete; 네이티브 창 녹화(previz 아님·무음), 원본 3세그먼트 sha 보존 |
+| 이월(비차단): 자동 보존 단서 id 표시명(`t0-b2-c1` 등 이름 데이터 부재) · t0-b2 objective 저작 지시문 노출(D-M9-11 유지) · 눈금 선택기 휠 스크롤 미도달(드래그로 도달 가능, 자동화 특유 오클릭) · M7 프리팹 재구성(회로 지도/판독기 노드 그레이박스) · 사람 플레이테스트 | planner, presentation, modeling, qa | next | — | open |
+
+[OBSERVED] 조작 방식의 경계: 본 회차 입력은 **cliclick 포인터 조작**이며 합성 키 이벤트는 Unity Input System에 닿지 않았다 → 키보드·컨트롤러 동등성은 PlayMode 테스트에 위임되고, 실기기 IME·컨트롤러 검수는 미완이다. 사람 플레이테스트·몰입·재미·8시간 완주는 **미측정**(n=0)이며, 본 절의 어떤 행도 G4/G7 런타임 PASS를 주장하지 않는다.
+
+## M13 — M7 컨셉 리소스 런타임 승격 · 남은 작업 마감 · 레거시 제거 (2026-09-11, RFC-CX-016)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| 문서 id 충돌 해소: RFC-CX-013 3중 충돌 → 014로 재번호(인용 없던 블록), 마일스톤 M10~M13 확정 | director | P4 | production/decision-log.md | 완료 · 실제 git 병합 충돌은 0건(단일 워크트리·마커 0) |
+| M7 3레인 + M8 카드 런타임 승격(`runtimeApproved` false→true ×4) | systems, presentation | P3 | Resources/{M7Hub,M7UiSkin,M7ReaderStage,M8ReviewNotes}.asset | 완료 · 근거 = 루트 디렉터 지시(RFC-CX-016) |
+| 승급 후 결함 수리(프로브 없는 씬의 고메탈 재질, T0Interface 상태줄·자산 필드, 리더 스테이지 복원 훅) | systems | P3 | M7ReaderSession.cs, T0Interface.cs, M7UiSkinProfile.cs, MAT_M7_Hub_*.mat, Editor/M7*.cs | 승급 레인이 1h21m에 중단 — 수리 분류는 ui-promotion-m13/verification.md 참조 |
+| 미측정 마감: M7 PlayMode 5건 skipped(자산 미임포트)→passed 전환 | systems, qa | P4 | playmode-final.xml | 완료 · 83총 82passed 1skipped(부트=설계상 격리) |
+| 이월 3건: 단서 id 노출 수리 · D-M9-11 오류 이월 종결 · 휠 스크롤 계측 한계 판정 + 회귀 3건 신설 | planner, systems | P3/P4 | remaining-m13/notes.md, planning/objective-copy-m13.md, ScrollReachabilityTests.cs | 완료 · 신규 3건 전부 통과 |
+| 레거시 제거 4건(34파일 20,845,750B) + hub.unity 씬 수술(95줄) + 배선 정리 | director | P3 | legacy-purge-m13/{purge-plan.md,purge-receipt.json} | 완료 · 끊긴 참조 0건(516파일×needle 11) · assets/generated 558→558 무삭제 |
+| 전수 재검증 + 빌드 + 네이티브 스모크 | director, qa | P4 | ui-promotion-m13/verification.md | EditMode53/53 · PlayMode82/83 · boot1/1 · build Succeeded 403,838,357B · 예외 0 |
+| 이월(비차단): t0-b1 objective 무스포일러 재작성(교정안 3안 대기) · 빌드 403MB 용량 검토 · 퍼지 단독 기여분 미분리 | planner, product | - | planning/objective-copy-m13.md | 열림 |

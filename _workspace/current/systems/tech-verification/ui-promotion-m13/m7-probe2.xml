@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:35Z" duration="1.3821814">
+  <test-suite type="TestSuite" id="1102" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:35Z" duration="1.382181" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1096" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:35Z" duration="1.376120" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="21501" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1097" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:35Z" duration="1.375295" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1098" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:35Z" duration="1.374691" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1036" name="M7HubPlayModeTests" fullname="Tide.Tests.M7HubPlayModeTests" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:34Z" duration="0.764087" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1037" name="GateOffLeavesCommittedHubShellUntouched" fullname="Tide.Tests.M7HubPlayModeTests.GateOffLeavesCommittedHubShellUntouched" methodname="GateOffLeavesCommittedHubShellUntouched" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" seed="1916565605" result="Passed" start-time="2026-09-12 02:28:33Z" end-time="2026-09-12 02:28:34Z" duration="0.702290" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" fullname="Tide.Tests.M7HubPlayModeTests.GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" methodname="GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" seed="851645938" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.054043" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1039" name="M7ReaderPlayModeTests" fullname="Tide.Tests.M7ReaderPlayModeTests" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.304364" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1040" name="GateOffNeverEntersReaderStage" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOffNeverEntersReaderStage" methodname="GateOffNeverEntersReaderStage" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="246657500" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.058296" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" methodname="GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="466155616" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.059581" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1042" name="GateOnReducedMotionKeepsCrankAtRest" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOnReducedMotionKeepsCrankAtRest" methodname="GateOnReducedMotionKeepsCrankAtRest" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1273405072" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.126242" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1043" name="GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" methodname="GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1340242573" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.058037" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1044" name="M7UiSkinPlayModeTests" fullname="Tide.Tests.M7UiSkinPlayModeTests" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:35Z" duration="0.299493" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1045" name="GateOffKeepsCommittedLiteralsAndNoSkinBackings" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOffKeepsCommittedLiteralsAndNoSkinBackings" methodname="GateOffKeepsCommittedLiteralsAndNoSkinBackings" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="304182609" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:34Z" duration="0.026248" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1047" name="GateOnAtTextScale150RendersWithoutLayoutChange" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOnAtTextScale150RendersWithoutLayoutChange" methodname="GateOnAtTextScale150RendersWithoutLayoutChange" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="1839268144" result="Passed" start-time="2026-09-12 02:28:34Z" end-time="2026-09-12 02:28:35Z" duration="0.221852" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1046" name="GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" methodname="GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="1979548430" result="Passed" start-time="2026-09-12 02:28:35Z" end-time="2026-09-12 02:28:35Z" duration="0.049802" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

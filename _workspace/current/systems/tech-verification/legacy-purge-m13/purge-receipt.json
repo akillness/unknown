@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "rfc": "RFC-CX-016",
+  "milestone": "M13",
+  "owner": "game-production-director",
+  "generated": "2026-09-12T10:19:00+09:00",
+  "scope": "unity/Unknown/Assets/_Project/Art/Candidates copies only; assets/generated lineage untouched",
+  "plan": "_workspace/current/systems/tech-verification/legacy-purge-m13/purge-plan.md",
+  "deletionMethod": "filesystem delete (not git rm); staging and commit are performed by Main",
+  "verdicts": [
+    {
+      "target": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01",
+      "guid": "c04f4ee61e71748f48dee06376074fd6",
+      "verdict": "deleted",
+      "liveReferences": [],
+      "replacedBy": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r02",
+      "replacementEvidence": "unity/Unknown/Assets/_Project/Resources/C1SignatureView.asset:15 reader -> guid c92f1b0b223404c0cb07bf1bf3869126 (r02 prefab); :16 paper -> guid 6362ff236cd624632b2ace3c50c2e802 (r02 paper); :21 runtimeApproved: 1",
+      "auditEvidence": "14 inner guids reverse-searched across unity/Unknown (Library and own folder excluded) -> 0 hits; Editor/C1SignatureProjectBuilder.cs:17 Destination targets r02",
+      "wiringChanged": false
+    },
+    {
+      "target": "unity/Unknown/Assets/_Project/Art/Candidates/drawer-r01.fbx",
+      "guid": "1f1becb186a7e40da9bf88441f3fba66",
+      "verdict": "deleted",
+      "liveReferences": [],
+      "replacedBy": "unity/Unknown/Assets/_Project/Art/Candidates/drawer-r03/DrawerDiagnostic.prefab",
+      "replacementEvidence": "Editor/T0ProjectBuilder.cs:72 loads drawer-r03 prefab; its guid cc0dedc970e924231afddddfd6a665f5 is referenced by Scenes/hub.unity",
+      "auditEvidence": "guid reverse-search -> own .meta only; Editor/T0ProjectBuilder.cs:30-31 (copy) and :34 (audit array) were the only references",
+      "wiringChanged": true
+    },
+    {
+      "target": "unity/Unknown/Assets/_Project/Art/Candidates/stamp-confirm.wav",
+      "guid": "eae9e501ce8814fddbbc9473b412ca78",
+      "verdict": "deleted",
+      "liveReferences": [],
+      "replacedBy": null,
+      "replacementEvidence": "no replacement; there is no playback contract. grep AudioClip|AudioSource across Tests/App/UI/Presentation/Sim/Data -> 0 hits (only an AudioListener at Editor/T0ProjectBuilder.cs:44)",
+      "auditEvidence": "guid reverse-search -> own .meta only; Editor/T0ProjectBuilder.cs:32 (copy) was the only reference",
+      "wiringChanged": true
+    },
+    {
+      "target": "unity/Unknown/Assets/_Project/Art/Candidates/hub-greybox.fbx",
+      "guid": "6b61a6ef877b6496cb6fdc8ca2e6a486",
+      "verdict": "deleted",
+      "liveReferences": [
+        "unity/Unknown/Assets/_Project/Scenes/hub.unity:459 m_SourcePrefab guid 6b61a6ef877b6496cb6fdc8ca2e6a486 (PrefabInstance &307389563)",
+        "unity/Unknown/Assets/_Project/Scenes/hub.unity:411-453 m_Modifications x11 targeting the same guid",
+        "unity/Unknown/Assets/_Project/Scenes/hub.unity:462 stripped Transform &307389564 m_CorrespondingSourceObject",
+        "unity/Unknown/Assets/_Project/Scenes/hub.unity:465-496 parent GameObject &410818389 'Imported candidates - pending review' (m_IsActive:0), Transform &410818390, m_Children [307389564]",
+        "unity/Unknown/Assets/_Project/Scenes/hub.unity:1364 SceneRoots.m_Roots entry 410818390",
+        "unity/Unknown/Assets/_Project/Editor/T0ProjectBuilder.cs:47-49 creates that node"
+      ],
+      "replacedBy": "unity/Unknown/Assets/_Project/Art/Candidates/m7-hub-r01 (gated, runtimeApproved false at audit time)",
+      "holdReason": null,
+      "releaseProcedure": "executed; see sceneEdit",
+      "wiringChanged": false,
+      "verdictHistory": [
+        {
+          "stage": "initial audit",
+          "verdict": "held",
+          "reason": "live prefab-instance reference in Scenes/hub.unity; scene edit was outside this batch's ownership"
+        },
+        {
+          "stage": "director release",
+          "verdict": "deleted",
+          "reason": "Main granted hub.unity edit rights and required the release this round (user instruction: remove prior legacy); the M7 watchroom shell replaces this initial blockout and an inactive node still ships in the build"
+        }
+      ],
+      "liveReferencesResolved": true
+    }
+  ],
+  "wiringEdits": [
+    {
+      "file": "unity/Unknown/Assets/_Project/Editor/T0ProjectBuilder.cs",
+      "changes": [
+        "removed the hub-view-drawer-r01 lookup and drawer-r01.fbx copy (was lines 30-31)",
+        "removed the stamp-confirm.wav copy (was line 32)",
+        "narrowed the import audit array from {hub-greybox.fbx, drawer-r01.fbx} to {hub-greybox.fbx} (was line 34)"
+      ],
+      "reason": "the existing File.Exists/Directory.Exists guards test the surviving assets/generated originals, so leaving the wiring would let the next Prepare run resurrect the deleted copies",
+      "sideEffect": "Builds/t0-import-audit.json now carries 1 key instead of 2; no test, script or document reads that file and Builds/ is gitignored (unity/Unknown/.gitignore:6)"
+    },
+    {
+      "file": "unity/Unknown/Assets/_Project/Editor/T0ProjectBuilder.cs",
+      "round": 2,
+      "ownershipNote": "Main reassigned this file to UiUxPromote; UiUxPromote was notified over irc before and after the edit and did not reply, and Main authorized proceeding",
+      "changes": [
+        "removed the repo path variable and the hub-greybox CopyCandidate call (was lines 28-29)",
+        "removed the whole import-audit apparatus: the JObject accumulator, the per-FBX measurement loop and the Builds/t0-import-audit.json write plus T0_IMPORT_AUDIT log (was lines 33-40)",
+        "removed the candidate-root block that instantiated hub-greybox into the hub scene and deactivated it (was lines 46-49)",
+        "removed the now-unreferenced CopyCandidate helper (was line 68)",
+        "removed the now-unused 'using Newtonsoft.Json.Linq;' (was line 5)"
+      ],
+      "reason": "with all three FBX candidates purged the audit array would have been empty; an empty C# array literal does not compile and a string[0] would only have kept a loop that writes an empty JSON object. Prepare now performs a plain AssetDatabase.Refresh() and no longer claims to audit candidates it does not have.",
+      "sideEffect": "Prepare no longer writes Builds/t0-import-audit.json and no longer logs T0_IMPORT_AUDIT. No test, script or document reads either; the only occurrences of that token are archived M2 run logs under _workspace/current/systems/tech-verification/t0-m2/logs/. Every other builder that writes under Builds/ calls Directory.CreateDirectory(\"Builds\") itself, so dropping Prepare's call breaks nothing.",
+      "restorePath": "git restore the three blocks if a future candidate import needs the audit apparatus"
+    }
+  ],
+  "preservation": {
+    "assetsGeneratedFileCountBefore": 558,
+    "assetsGeneratedFileCountAfter": 558,
+    "assetsGeneratedDeletions": 0,
+    "gitTrackedAssetsBefore": 449,
+    "note": "every deleted binary input is byte-identical to a preserved assets/generated original; .meta sidecars regenerate on reimport with fresh guids; .mat/*_MetallicSmoothness.asset/.prefab are editor-derivatives reproducible via Editor/C1SignatureProjectBuilder.cs",
+    "gitStatusAssetsOutput": [
+      "?? assets/generated/video/gameplay-m9/"
+    ],
+    "gitStatusAssetsNote": "the only entry is an untracked addition from the parallel RFC-CX-015 video lane (?? assets/generated/video/gameplay-m9/), not a deletion; zero D entries under assets/",
+    "gitTrackedAssetsAfter": 449
+  },
+  "deletedFileCount": 34,
+  "deletedBytes": 20845750,
+  "deletedFiles": [
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Casting.mat",
+      "sha256": "9b75388bb416f65131a96ab30e65b8575cb7d4a84a58a3712b083e4cc972af0f",
+      "bytes": 3900,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "0373c127588b64dfe8627a91ee4d5488"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Casting.mat.meta",
+      "sha256": "d3f8befea2debf6af2aaa3e6f7adfeab09b8151572c5ecf9e4feb122347e360f",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "0373c127588b64dfe8627a91ee4d5488"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Casting_MetallicSmoothness.asset",
+      "sha256": "663061285d13167e2fdee9c54cc21ce873289880320cad48393caa108d1a70ff",
+      "bytes": 8389633,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "15519da7ad4834e7091e85db0ca9818a"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Casting_MetallicSmoothness.asset.meta",
+      "sha256": "d8f3c164f49fb86314fa96f308ec374954daaabf49c3e09413ba39000eeedebb",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "15519da7ad4834e7091e85db0ca9818a"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Patina.mat",
+      "sha256": "d8318d9272302eeee87132b40de174964563eb858bd4ffc3cd3a1aa3e92f5821",
+      "bytes": 3991,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "35f91eb6be57c4066a9c4680a66a0aa3"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Patina.mat.meta",
+      "sha256": "76d8eed4c112a16c4bf0c47102e1ce5969c371eac861d25204d71b01090415d0",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "35f91eb6be57c4066a9c4680a66a0aa3"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Patina_MetallicSmoothness.asset",
+      "sha256": "663061285d13167e2fdee9c54cc21ce873289880320cad48393caa108d1a70ff",
+      "bytes": 8389633,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "a565b79598d8a4542b0af83be340dcec"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Patina_MetallicSmoothness.asset.meta",
+      "sha256": "79a2fbcf6360580a56ccc87090e14623b542b120842b5e8d7a10c17068ae014c",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "a565b79598d8a4542b0af83be340dcec"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Recess.mat",
+      "sha256": "c50dd990e07a9f4bbf39e0db1ef6dd4c3832984920282aca2649b5902f328a26",
+      "bytes": 3866,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "e55ef588a799f46b184264c5063037cb"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Recess.mat.meta",
+      "sha256": "a54d1b010e1087174fa5aa163ab3e62e98d2d1b40eb398b5f1cc3bf118f7a714",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "e55ef588a799f46b184264c5063037cb"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Salt.mat",
+      "sha256": "5d91b4ba936812c648901b5352a63e5be2685ac016d01bed2df37e46dd6d3554",
+      "bytes": 3863,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "8c40b630d344044449d5ad9e62350f7c"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/MAT_C1_Reader_Salt.mat.meta",
+      "sha256": "cb871f9cf53a4a3e9f1f4710ebc7196e33665c704c6ac8e0a889ae2e752548e8",
+      "bytes": 188,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "8c40b630d344044449d5ad9e62350f7c"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/Reader.fbx",
+      "sha256": "1316aee0e2dabbc276d49c7eb4c81a270308fcd2ac4adf3069509c1be9aa7f44",
+      "bytes": 126396,
+      "origin": "assets/generated/3d/c1-signature-reader-r01/SM_C1_Signature_Reader.fbx",
+      "originSha256": "1316aee0e2dabbc276d49c7eb4c81a270308fcd2ac4adf3069509c1be9aa7f44",
+      "originBytesIdentical": true,
+      "guid": "799d38599b39b47b98cb320df2409f70"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/Reader.fbx.meta",
+      "sha256": "5ee3d7bb865803c2e7eaa5e210b1be1ee2701a29770e0b2dc89d847d422832f5",
+      "bytes": 2993,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "799d38599b39b47b98cb320df2409f70"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/SignaturePaper.png",
+      "sha256": "0b35b75810e2bb052b580b4671541e06a92e68169e2c70ee3af3e66f02e66efe",
+      "bytes": 1752951,
+      "origin": "assets/generated/2d/texture/c1-signature-paper-r01/paper.png",
+      "originSha256": "0b35b75810e2bb052b580b4671541e06a92e68169e2c70ee3af3e66f02e66efe",
+      "originBytesIdentical": true,
+      "guid": "b943ee49a3d8640eb82673ac34c9f840"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/SignaturePaper.png.meta",
+      "sha256": "fcfd11e2eb689132ea11bf12566697493a55ce1a4f03a41fcfb7aee25c4b38c7",
+      "bytes": 3007,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "b943ee49a3d8640eb82673ac34c9f840"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/SignatureReader.prefab",
+      "sha256": "d8b843b07eb315cba8d866ced22f0dfe552ef9e3139e9349d1b8ae27c48fa040",
+      "bytes": 3212,
+      "origin": null,
+      "originKind": "editor-authored derivative (no assets/generated original); recipe = unity/Unknown/Assets/_Project/Editor/C1SignatureProjectBuilder.cs",
+      "guid": "7efc9d32cafc54082bee4c275726670b"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/SignatureReader.prefab.meta",
+      "sha256": "8bb62ec2666596deaa61e796d986729f10df4c841e494ea9654c6dc76f6170e9",
+      "bytes": 154,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "7efc9d32cafc54082bee4c275726670b"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_BaseColor.png",
+      "sha256": "26b8a5d82296b896942dcf145f2eb6c99c566cdb84e695690dca4fbdc98b07ee",
+      "bytes": 584029,
+      "origin": "assets/generated/3d/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_BaseColor.png",
+      "originSha256": "26b8a5d82296b896942dcf145f2eb6c99c566cdb84e695690dca4fbdc98b07ee",
+      "originBytesIdentical": true,
+      "guid": "140e92dafcf224a80a46dc453ebbbfc7"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_BaseColor.png.meta",
+      "sha256": "568f7b413e16d9700d7e27a48604069b015628842552a328ae0bdf831e3bf45c",
+      "bytes": 3007,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "140e92dafcf224a80a46dc453ebbbfc7"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_Roughness.png",
+      "sha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0",
+      "bytes": 284350,
+      "origin": "assets/generated/3d/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_Roughness.png",
+      "originSha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0",
+      "originBytesIdentical": true,
+      "guid": "b3c2b88d1245a49709d898428ce1e954"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Casting_Roughness.png.meta",
+      "sha256": "27f355fa249019f12a724942370cb8ceb8ebcf891b7d7b14e8808d748a258be7",
+      "bytes": 3007,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "b3c2b88d1245a49709d898428ce1e954"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_BaseColor.png",
+      "sha256": "1a3da4bead6f4526e5ccd27043e0e36f4984857465d1f9a7422a73e00c3bd814",
+      "bytes": 579911,
+      "origin": "assets/generated/3d/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_BaseColor.png",
+      "originSha256": "1a3da4bead6f4526e5ccd27043e0e36f4984857465d1f9a7422a73e00c3bd814",
+      "originBytesIdentical": true,
+      "guid": "cfe51f13322e8477f9fa3ec908b96b7f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_BaseColor.png.meta",
+      "sha256": "85ae7d2ea58d9fb1485c9c15151c0645bf90bda41dd7bb8be390668f9a6ae922",
+      "bytes": 3007,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "cfe51f13322e8477f9fa3ec908b96b7f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_Roughness.png",
+      "sha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0",
+      "bytes": 284350,
+      "origin": "assets/generated/3d/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_Roughness.png",
+      "originSha256": "05adb4ad4ba67f97c12220d3f4f6ceb1c0c31e7272c4e1aec3b81e1a63f644b0",
+      "originBytesIdentical": true,
+      "guid": "23ca1086c02c74cfab66f7dccac4a558"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures/MAT_C1_Reader_Patina_Roughness.png.meta",
+      "sha256": "b41965eddb6f274869cfdf097124efb713c47de300a6ecb9353fc71d56e4e656",
+      "bytes": 3007,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "23ca1086c02c74cfab66f7dccac4a558"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01/textures.meta",
+      "sha256": "b84bb081bb0a33265f53429192b194749a45c5a528e3f53beb59d8fdc6676719",
+      "bytes": 172,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "2f4e722fecb1e4370bdb493e22d3e363"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/c1-signature-reader-r01.meta",
+      "sha256": "14542dfc000819d0091900d890b44609d31419c9011bf9e18a6078f43db87c59",
+      "bytes": 172,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "c04f4ee61e71748f48dee06376074fd6"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/drawer-r01.fbx",
+      "sha256": "79f6d05e91a601d89d7cf11a8cb7939990c7b2453c3d50724d16536921d14a5d",
+      "bytes": 22348,
+      "origin": "assets/generated/3d/hub-view-drawer-r01/SM_Hub_Workbench_Drawer.fbx",
+      "originSha256": "79f6d05e91a601d89d7cf11a8cb7939990c7b2453c3d50724d16536921d14a5d",
+      "originBytesIdentical": true,
+      "guid": "1f1becb186a7e40da9bf88441f3fba66"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/drawer-r01.fbx.meta",
+      "sha256": "2232b3e93307be3310297ab38694eb7f2aed868aed4d14cc09972eaac9450501",
+      "bytes": 2993,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "1f1becb186a7e40da9bf88441f3fba66"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/stamp-confirm.wav",
+      "sha256": "78bea4a15c3f3c2ebf292407bdfbc8e8da6a1707a367decd9f104724ca081934",
+      "bytes": 336044,
+      "origin": "assets/generated/audio/higgsfield-stamp-r01/stamp-confirm.wav",
+      "originSha256": "78bea4a15c3f3c2ebf292407bdfbc8e8da6a1707a367decd9f104724ca081934",
+      "originBytesIdentical": true,
+      "guid": "eae9e501ce8814fddbbc9473b412ca78"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/stamp-confirm.wav.meta",
+      "sha256": "09ab54121419edf1f385b131a97eca1adba6c00c321921f248df6f0f3a66b920",
+      "bytes": 485,
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid",
+      "guid": "eae9e501ce8814fddbbc9473b412ca78"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/hub-greybox.fbx",
+      "sha256": "de3ccc10d859d220722947df4f7e5c4fa9f8d575406faa0d2bd1a1072f3fb931",
+      "bytes": 51148,
+      "guid": "6b61a6ef877b6496cb6fdc8ca2e6a486",
+      "origin": "assets/generated/3d/hub-greybox.fbx",
+      "originSha256": "de3ccc10d859d220722947df4f7e5c4fa9f8d575406faa0d2bd1a1072f3fb931",
+      "originBytesIdentical": true
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Art/Candidates/hub-greybox.fbx.meta",
+      "sha256": "402c89bd8e9697d87d2b87cb3bf3e02350d5e4f5354b93db8cc49ed6d9057b8c",
+      "bytes": 2993,
+      "guid": "6b61a6ef877b6496cb6fdc8ca2e6a486",
+      "origin": null,
+      "originKind": "editor-generated import sidecar; regenerated on reimport with a new guid"
+    }
+  ],
+  "verification": {
+    "unityRun": false,
+    "unityRunReason": "single-process Unity project lock; engine re-verification is performed by Main in one batch",
+    "checks": [
+      {
+        "check": "deleted paths absent",
+        "command": "test -e for each of the 32 deleted paths plus the two purged directories",
+        "result": "32/32 absent; c1-signature-reader-r01/ and its textures/ directories removed"
+      },
+      {
+        "check": "held target intact",
+        "command": "ls -l Art/Candidates/hub-greybox.fbx{,.meta}",
+        "result": "present, 51148 B and 2993 B"
+      },
+      {
+        "check": "no dangling guid references",
+        "command": "grep -rEl '<7 deleted guids>' unity/Unknown/Assets unity/Unknown/ProjectSettings",
+        "result": "0 files"
+      },
+      {
+        "check": "assets/generated untouched",
+        "command": "find assets/generated -type f | wc -l ; git status --porcelain assets ; git ls-files assets | wc -l",
+        "result": "558 before and 558 after; 0 D entries; 449 tracked before and after"
+      },
+      {
+        "check": "git deletion count",
+        "command": "git status --porcelain unity/.../Art/Candidates | grep -c '^ D'",
+        "result": "32"
+      },
+      {
+        "check": "C# syntax of the edited builder",
+        "command": "mcs -target:library -d:UNITY_EDITOR T0ProjectBuilder.cs  (also run against git show HEAD: version)",
+        "result": "identical error profile to the HEAD baseline: 11x CS0246 + 2x CS0234 (missing Unity reference assemblies, expected standalone), 0 warnings, 0 CS1xxx syntax errors. Proves the edit introduced no new compile class; it does not prove Unity compilation."
+      },
+      {
+        "check": "no leftover identifiers from removed statements",
+        "command": "grep -n 'drawerDir|drawer-r01|stamp-confirm|\\baudio\\b' T0ProjectBuilder.cs",
+        "result": "0 hits outside the new explanatory comment; brace and paren balance 0"
+      },
+      {
+        "check": "no dangling guid or fileID references after the full purge",
+        "command": "parsed 516 files under unity/Unknown/{Assets,ProjectSettings,Packages} for 7 purged guids and the 4 removed scene fileIDs",
+        "result": "0 occurrences of all 11 needles"
+      },
+      {
+        "check": "scene anchor integrity after surgery",
+        "command": "anchor/reference parser on the edited scene and on the HEAD baseline",
+        "result": "HEAD 57 objects / 12 roots / 0 dangling; after 53 objects / 11 roots / 0 dangling; removed exactly the 4 intended anchors, added none; trailing newline preserved"
+      },
+      {
+        "check": "C# syntax after the second builder edit",
+        "command": "mcs -target:library -d:UNITY_EDITOR T0ProjectBuilder.cs",
+        "result": "CS0246 x10 + CS0234 x2, 0 warnings, 0 CS1xxx. One fewer CS0246 than the first round, exactly matching the removed Newtonsoft.Json.Linq using. No File./Path. usage remains; Directory. x1 keeps System.IO needed, so no unused-using warning."
+      },
+      {
+        "check": "committed vs working tree scene",
+        "command": "git show HEAD:.../hub.unity | grep -c 6b61a6ef... ; grep -c on the working tree",
+        "result": "HEAD 13 occurrences, working tree 0 - proves the live reference existed and that this batch removed it"
+      }
+    ],
+    "notProven": [
+      "EditMode / PlayMode / serialization-boot / mac build after the purge (Main runs these; UiUxPromote holds the Unity lock)",
+      "that hub.unity still opens cleanly in the editor - anchor integrity was proven by parser, not by Unity",
+      "build byte delta. Prediction, now checkable: the mac build should come out SMALLER than the 354,247,240 B baseline, because hub-greybox.fbx was reachable from hub.unity and its mesh therefore shipped even while the node was inactive. The other three purged items were unreachable from any scene or Resources asset and contributed nothing.",
+      "human playtest, fun, immersion, 25-minute budget, 8-hour run - all still unmeasured"
+    ],
+    "parallelLaneNote": "git status also shows M unity/Unknown/Assets/_Project/Editor/M7ProjectBuilder.cs and ?? Art/Candidates/m8-review-card.meta; both belong to other lanes and were not touched by this batch"
+  },
+  "deletedFileClasses": {
+    "binaryInputsWithPreservedOrigin": 9,
+    "metaSidecars": 18,
+    "editorDerivatives": 7
+  },
+  "rfcAnchor": "production/decision-log.md RFC-CX-016 [DECISION·레거시 제거] bullet (cited by RFC id and bullet label, not line number: that file is append-only and Main is still writing it)",
+  "sceneEdit": {
+    "file": "unity/Unknown/Assets/_Project/Scenes/hub.unity",
+    "authority": "Main granted edit rights for this file after the initial hold report",
+    "method": "surgical YAML removal; full Prepare re-run was forbidden (T0ProjectBuilder.cs comment: a full Prepare rebuilds scenes owned by later milestone builders)",
+    "removedRanges": [
+      {
+        "originalLines": "403-496",
+        "count": 94,
+        "content": "PrefabInstance &307389563 (m_TransformParent 410818390, 11 m_Modifications on guid 6b61a6ef..., m_SourcePrefab), stripped Transform &307389564, GameObject &410818389 'Imported candidates - pending review' (m_IsActive:0, m_Component [410818390]), Transform &410818390 (m_GameObject 410818389, m_Children [307389564], m_Father 0)"
+      },
+      {
+        "originalLines": "1364",
+        "count": 1,
+        "content": "SceneRoots.m_Roots entry - {fileID: 410818390}"
+      }
+    ],
+    "removedLineTotal": 95,
+    "parentNodeJudgment": {
+      "decision": "removed the parent node as well",
+      "evidence": [
+        "Transform &410818390 m_Children held exactly one entry, {fileID: 307389564} (the hub-greybox instance) - hub.unity:493-494 before the edit",
+        "repo-wide grep for 'm_Father: {fileID: 410818390}' returned 0 hits, so no other object was parented under it",
+        "therefore the candidate root contained only hub-greybox and became an empty root once the instance was removed"
+      ],
+      "alternativeRejected": "clearing m_Children to [] and keeping an empty inactive root would have left a meaningless node in the shipped scene"
+    },
+    "before": {
+      "sha256": "3c8129416d75b1756ef668a10d32aabccbe9f054aeab4a1b070c9ca2b7e23346",
+      "bytes": 38956,
+      "lines": 1373,
+      "objects": 57,
+      "sceneRoots": 12
+    },
+    "after": {
+      "sha256": "5ae9824392ce89fc02c5dc7d6a8046884fc066f4aef16d3bac91cb5e5bbe37e0",
+      "bytes": 35423,
+      "lines": 1278,
+      "objects": 53,
+      "sceneRoots": 11
+    },
+    "anchorIntegrity": {
+      "method": "parsed every '--- !u!T &ID' anchor and every internal {fileID: N} reference (guid-qualified references are external, 0 is null); ran the same parser on the HEAD baseline to rule out parser false positives",
+      "headBaseline": "57 objects, 12 roots, 0 dangling internal references",
+      "afterPurge": "53 objects, 11 roots, 0 dangling internal references",
+      "removedAnchors": [
+        307389563,
+        307389564,
+        410818389,
+        410818390
+      ],
+      "addedAnchors": [],
+      "danglingReferences": 0,
+      "guidOccurrencesInScene": 0,
+      "trailingNewlinePreserved": true
+    }
+  },
+  "executionModel": {
+    "prepareRunThisRound": false,
+    "prepareRunReason": "UiUxPromote holds the Unity lock and deliberately did not run Prepare this round, because a full Prepare regenerates boot/ui-root/hub and would overwrite the committed scenes owned by later milestone builders",
+    "whatWasDoneHow": [
+      {
+        "layer": "Unity asset copies (Art/Candidates)",
+        "action": "deleted directly with a filesystem rm, not by re-running an importer",
+        "effective": "immediately"
+      },
+      {
+        "layer": "hub scene node",
+        "action": "surgical YAML removal of the four objects plus the SceneRoots entry",
+        "effective": "immediately"
+      },
+      {
+        "layer": "Editor/T0ProjectBuilder.cs code paths",
+        "action": "copy calls, import-audit apparatus and candidate-root instantiation removed",
+        "effective": "only on the next Prepare run; this round nothing re-executes them, so the code removal is a durability guarantee (it stops a future Prepare from resurrecting the purged copies and re-inserting the candidate node), not an observed runtime change"
+      }
+    ],
+    "crossCheckFromUiUxPromote": [
+      "Tests/ contains zero references to the four purge targets - independently confirmed",
+      "the working-tree hub.unity contains no hub-greybox or 'Imported candidates' reference - confirmed, and that is the post-edit state produced by this batch",
+      "correction on the record: the COMMITTED (HEAD) hub.unity still carries 13 occurrences of guid 6b61a6ef877b6496cb6fdc8ca2e6a486. The reference was real and the scene surgery was required; it disappears from HEAD only once Main commits."
+    ],
+    "m7PromotionByOtherLane": "M7Hub, M7UiSkin, M7ReaderStage and M8ReviewNotes are all runtimeApproved: 1 in Resources/*.asset as of this batch's final check - promoted by UiUxPromote, not by this batch"
+  }
+}
