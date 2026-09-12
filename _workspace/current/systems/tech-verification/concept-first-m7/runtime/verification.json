@@ -1,0 +1,285 @@
+{
+  "schema": "verification/v1",
+  "rfc": "RFC-CX-013",
+  "id": "concept-first-m7-runtime",
+  "scope": "M7 concept-first candidate resources wired into T0 stage-1 runtime behind default-off gates; scoped technical receipt, not a G4/G7 runtime pass",
+  "unity": {
+    "editor": "6000.5.6f1",
+    "renderPipeline": "URP 17.5.0",
+    "project": "unity/Unknown",
+    "batchFlags": "-batchmode -nographics --burst-disable-compilation",
+    "graphicsDevice": "Metal"
+  },
+  "commands": {
+    "import": "-batchmode -nographics --burst-disable-compilation -executeMethod Tide.EditorTools.M7ProjectBuilder.ImportAll",
+    "editMode": "-batchmode -nographics --burst-disable-compilation -runTests -testPlatform EditMode -assemblyNames Tide.Tests.Sim",
+    "playMode": "-batchmode -nographics --burst-disable-compilation -runTests -testPlatform PlayMode -testFilter Tide.Tests.T0PlayModeTests;Tide.Tests.T0CaseThreadTests;Tide.Tests.T0ResourceInteractionTests;Tide.Tests.C1PlayModeTests;Tide.Tests.C1SignaturePlayModeTests;Tide.Tests.M5DirectionPlayModeTests;Tide.Tests.ReviewNotesPlayModeTests;Tide.Tests.M7HubPlayModeTests;Tide.Tests.M7UiSkinPlayModeTests;Tide.Tests.M7ReaderPlayModeTests",
+    "capture": "-batchmode --burst-disable-compilation -executeMethod Tide.EditorTools.M7ProjectBuilder.Capture",
+    "captureNote": "Capture runs WITH graphics (no -nographics); candidates are applied in memory only and the hub scene is never saved",
+    "outputConvention": "Each test run uses -testResults <this evidence directory>/<run>.xml and -logFile <this evidence directory>/<run>.log; import and capture have log only. Import audits and capture shots are written by the builder under unity/Unknown/Builds/."
+  },
+  "exitCodes": {
+    "import": 0,
+    "editMode": 0,
+    "playMode": 0,
+    "capture": 0
+  },
+  "results": {
+    "editMode": {
+      "total": 53,
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0,
+      "results": "editmode.xml",
+      "log": "editmode.log"
+    },
+    "playMode": {
+      "total": 78,
+      "passed": 78,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "results": "playmode.xml",
+      "log": "playmode.log",
+      "perClass": {
+        "T0PlayModeTests": 15,
+        "M5DirectionPlayModeTests": 15,
+        "ReviewNotesPlayModeTests": 15,
+        "C1SignaturePlayModeTests": 10,
+        "C1PlayModeTests": 7,
+        "T0ResourceInteractionTests": 6,
+        "M7UiSkinPlayModeTests": 3,
+        "M7ReaderPlayModeTests": 3,
+        "M7HubPlayModeTests": 2,
+        "T0CaseThreadTests": 2
+      }
+    },
+    "m7Tests": [
+      {
+        "class": "M7HubPlayModeTests",
+        "name": "GateOffLeavesCommittedHubShellUntouched",
+        "result": "Passed"
+      },
+      {
+        "class": "M7HubPlayModeTests",
+        "name": "GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce",
+        "result": "Passed"
+      },
+      {
+        "class": "M7UiSkinPlayModeTests",
+        "name": "GateOffKeepsCommittedLiteralsAndNoSkinBackings",
+        "result": "Passed"
+      },
+      {
+        "class": "M7UiSkinPlayModeTests",
+        "name": "GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable",
+        "result": "Passed"
+      },
+      {
+        "class": "M7UiSkinPlayModeTests",
+        "name": "GateOnAtTextScale150RendersWithoutLayoutChange",
+        "result": "Passed"
+      },
+      {
+        "class": "M7ReaderPlayModeTests",
+        "name": "GateOffNeverEntersReaderStage",
+        "result": "Passed"
+      },
+      {
+        "class": "M7ReaderPlayModeTests",
+        "name": "GateOnBuildsStageWithTwoLightsAndTearsDownOnExit",
+        "result": "Passed"
+      },
+      {
+        "class": "M7ReaderPlayModeTests",
+        "name": "GateOnReducedMotionKeepsCrankAtRest",
+        "result": "Passed"
+      }
+    ],
+    "m7TestsContainedIn": "playmode.xml",
+    "skippedProvesNoIgnoreFallback": true
+  },
+  "gates": {
+    "expression": "profile.runtimeApproved || --m7-{hub,ui,reader}-diagnostic",
+    "flags": [
+      "--m7-hub-diagnostic",
+      "--m7-ui-diagnostic",
+      "--m7-reader-diagnostic"
+    ],
+    "defaultState": "off",
+    "gateOffBehaviour": "Committed hub scene, UI literals and stage flow untouched; proved by the three GateOff tests"
+  },
+  "capture": {
+    "outputDirectory": "unity/Unknown/Builds/m7-diagnostics",
+    "report": "unity/Unknown/Builds/m7-diagnostics/m7-diagnostics.json",
+    "log": "m7-capture.log",
+    "graphicsDevice": "Metal",
+    "resolution": "1280x800",
+    "shots": [
+      {
+        "file": "hub-before.png",
+        "proves": "Gate-off baseline of the committed hub"
+      },
+      {
+        "file": "hub-after-m7-shell.png",
+        "proves": "Shell materials only"
+      },
+      {
+        "file": "hub-after-m7-shell-and-ui-skin.png",
+        "proves": "Shell plus UI skin contrast and legibility"
+      },
+      {
+        "file": "hub-after-m7-viewport.png",
+        "proves": "Shell read in the actual play viewport framing"
+      },
+      {
+        "file": "reader-stage-rest.png",
+        "proves": "Reader stage rest pose composition"
+      },
+      {
+        "file": "reader-stage-viewport.png",
+        "proves": "Reader stage through the solved camera"
+      },
+      {
+        "file": "reader-stage-crank-150deg.png",
+        "proves": "Crank at the 150 degree stroke end"
+      }
+    ],
+    "shotCount": 7,
+    "crankPivotFound": true,
+    "crankStrokeDeg": 150.0,
+    "readerStageBounds": {
+      "size": [1.48191333, 0.6113224, 0.8704778],
+      "unit": "m"
+    },
+    "readerTriangles": 8028,
+    "runtimeApproved": {
+      "hub": false,
+      "ui": false,
+      "reader": false
+    },
+    "hubSceneSaved": false,
+    "candidatesAppliedInMemoryOnly": true
+  },
+  "readerCamera": {
+    "solvedFrom": "measured bounds of the imported instance",
+    "audit": "unity/Unknown/Builds/m7-reader-import-audit.json",
+    "lookAt": [0.0914999843, 0.195000052, -2.98023224e-08],
+    "cameraPosition": [-0.458500028, 0.615, 1.15],
+    "horizontalFov": 48
+  },
+  "imports": {
+    "log": "m7-import.log",
+    "doneMarker": "M7_IMPORT_ALL_DONE",
+    "hub": {
+      "line": "M7_HUB_SHELL_IMPORTED textures=6 materials=3 runtimeApproved=false",
+      "textures": 6,
+      "materials": 3,
+      "runtimeApproved": false,
+      "audit": "unity/Unknown/Builds/m7-hub-import-audit.json"
+    },
+    "ui": {
+      "line": "M7_UI_SKIN_IMPORTED textures=2 runtimeApproved=false",
+      "textures": 2,
+      "runtimeApproved": false,
+      "audit": "unity/Unknown/Builds/m7-ui-import-audit.json"
+    },
+    "reader": {
+      "line": "M7_READER_STAGE_IMPORTED fbx=2 textures=8 materials=7 runtimeApproved=false",
+      "fbx": 2,
+      "textures": 8,
+      "materials": 7,
+      "runtimeApproved": false,
+      "audit": "unity/Unknown/Builds/m7-reader-import-audit.json"
+    },
+    "audits": [
+      "unity/Unknown/Builds/m7-hub-import-audit.json",
+      "unity/Unknown/Builds/m7-ui-import-audit.json",
+      "unity/Unknown/Builds/m7-reader-import-audit.json"
+    ]
+  },
+  "fbx": {
+    "exporter": "scripts/blender/export_m7_fbx.py",
+    "blender": "5.1.2 headless",
+    "report": "assets/generated/3d/concept-first-m7/fbx/fbx-export-report.json",
+    "fileCount": 4,
+    "files": [
+      "SM_Env_Watchroom",
+      "SM_Prop_OpticalReader",
+      "SM_Prop_RecordSet",
+      "SM_Env_GateThree"
+    ],
+    "trisApprox": {
+      "SM_Env_Watchroom": 30818,
+      "SM_Prop_OpticalReader": 7824,
+      "SM_Prop_RecordSet": 204,
+      "SM_Env_GateThree": 34928
+    },
+    "sourceBlendShaUnchanged": true,
+    "texturesEmbedded": false,
+    "instantiatedAtRuntime": [
+      "SM_Prop_OpticalReader",
+      "SM_Prop_RecordSet"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Batchmode with graphics segfaults in the Burst background compiler",
+      "detail": "-batchmode WITH graphics segv'd in Burst.Compiler.IL... native stack, exit 139. All M7 batch runs now pass --burst-disable-compilation. Not caused by project code.",
+      "resolution": "--burst-disable-compilation on every M7 batch run"
+    },
+    {
+      "id": "F2",
+      "title": "Scene switching unloads managed-reference-only assets",
+      "detail": "EditorSceneManager.OpenScene/NewScene unload assets reachable only through managed references, which turned the loaded profiles' Material/GameObject fields null and made the first capture emit 1 shot instead of 5.",
+      "resolution": "Re-Resources.Load the three profiles after every scene switch (Editor/M7ProjectBuilder.cs Reload())"
+    },
+    {
+      "id": "F3",
+      "title": "FBX axis conversion mirrors X",
+      "detail": "FBX axis conversion mirrors X, so the reader stage camera side is measured from the imported instance instead of assumed from Blender space.",
+      "resolution": "Crank side from the pivot's world x, front from rd-thumbscrew z"
+    },
+    {
+      "id": "F4",
+      "title": "Perforated-steel workbench reads as a near-flat dark mass",
+      "detail": "hub-after-m7-viewport.png shows the perforated-steel workbench reading as a near-flat dark mass at the current tiling/lighting. Salt-concrete walls/floor and the tide band read correctly.",
+      "resolution": "Tiling/brightness tuning required before any promotion",
+      "blocksPromotion": true
+    },
+    {
+      "id": "F5",
+      "title": "Bronze frame backing tint lowered for text contrast",
+      "detail": "Bronze frame backing tint was lowered to (.5,.5,.5,.72) so header/toolbar text keeps contrast over the texture.",
+      "resolution": "Backing tint (.5,.5,.5,.72)"
+    }
+  ],
+  "notVerified": [
+    "Human playtest (n=0)",
+    "G4/G5/G6/G7 runtime promotion",
+    "In-engine tile-seam, mip and texel-density measurement; the tiling QA was pre-engine",
+    "Licence — GTI backend is UNVERIFIED",
+    "Mesh-level collision",
+    "Crank-to-plate gear linkage",
+    "Hand rig",
+    "Gate-three runtime use"
+  ],
+  "runtimeEligible": false,
+  "promotionPath": {
+    "requires": [
+      "Director-only approval menu per lane",
+      "RFC submitted to handoff/rfc-inbox/ with the asset-runbook 3.1 audit table filled",
+      "Director appends the decision to production/decision-log.md"
+    ],
+    "menuItems": [
+      "Tools/M7/Approve hub shell (director only)",
+      "Tools/M7/Approve UI skin (director only)",
+      "Tools/M7/Approve reader stage (director only)"
+    ],
+    "auditItems": 8,
+    "auditReference": "_workspace/current/handoff/asset-runbook.md#31",
+    "executorEditsDecisionLog": false,
+    "thisDocumentIsVerdict": false
+  }
+}

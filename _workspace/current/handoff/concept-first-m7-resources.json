@@ -122,5 +122,173 @@
     "new Unity prefabs",
     "hand rig",
     "game runtime implementation"
-  ]
+  ],
+  "execution20260911": {
+    "status": "runtime-candidates-wired-gate-off",
+    "note": "generatedThisTurn/notGeneratedThisTurn above describe the original 2026-09-11 video review turn and are preserved verbatim; this block records the follow-up resource execution turn",
+    "decisionLog": "production/decision-log.md#rfc-cx-009-delivery-evidence--gti-재질blender-블록아웃pre-runtime-qa-2026-09-11",
+    "textures": {
+      "folders": [
+        "assets/generated/2d/texture/m7-bronze-r01/",
+        "assets/generated/2d/texture/m7-perforated-steel-r01/",
+        "assets/generated/2d/texture/m7-salt-concrete-r01/",
+        "assets/generated/2d/texture/m7-salt-crystal-r01/",
+        "assets/generated/2d/texture/m7-rag-paper-r01/"
+      ],
+      "provider": "god-tibo-imagen gpt-6-astra, dry-run first; basecolor GTI, other channels derived-luminance candidates",
+      "tilingQa": "assets/generated/2d/texture/m7-tiling-qa-report.json"
+    },
+    "blockout": {
+      "blend": "assets/generated/3d/concept-first-m7/concept-first-m7.blend",
+      "buildScript": "scripts/blender/build_m7_assets.py",
+      "provenance": "assets/generated/3d/concept-first-m7/provenance.json",
+      "articulation": "assets/generated/3d/concept-first-m7/articulation/articulation-report.json",
+      "glbCandidates": "assets/generated/3d/concept-first-m7/glb-export-report.json"
+    },
+    "acceptanceProgress": "see provenance.json acceptanceProgress: tile-seam pre-check done (no material tileable unblended; salt-concrete horizontal-only by design), articulation forward-stop-return deviation 0.0 with 180deg-stroke bench clip finding, GLB round-trip 224/224; in-engine seam check, lighting-free basecolour sign-off, native verification still open",
+    "memorySync": {
+      "mexLog": "skipped — mex-agent not found / identity probe failed (PATH mex is TeX); receipt per CLAUDE.md §11",
+      "graphify": "graphify update . executed 2026-09-11 (code graph refreshed)"
+    },
+    "runtime": {
+      "status": "runtime-candidates-wired-gate-off",
+      "note": "RFC-CX-013 follow-up: the RFC-CX-009 candidates above are now imported into unity/Unknown and bound to the T0 stage-1 runtime behind per-lane diagnostic gates. Nothing is promoted; every profile ships runtimeApproved:false and the committed hub scene, UI literals and stage flow are untouched with the gate off.",
+      "decisionLog": "production/decision-log.md#rfc-cx-013-delivery-evidence--m7-컨셉-리소스-t0-스테이지1-런타임-배선-2026-09-11",
+      "engine": "Unity 6000.5.6f1, URP 17.5.0, project unity/Unknown; all batch runs -batchmode -nographics --burst-disable-compilation (capture runs with graphics)",
+      "lanes": {
+        "hubShell": {
+          "profileAsset": "unity/Unknown/Assets/_Project/Resources/M7Hub.asset",
+          "profileScript": "unity/Unknown/Assets/_Project/Presentation/M7HubProfile.cs",
+          "builderMenuItem": "Tools/M7/Import hub shell candidates (Editor/M7HubProjectBuilder.cs); approval Tools/M7/Approve hub shell (director only)",
+          "sessionPartial": "unity/Unknown/Assets/_Project/App/M7HubSession.cs (BindM7Hub)",
+          "candidateFolder": "unity/Unknown/Assets/_Project/Art/Candidates/m7-hub-r01/",
+          "gateFlag": "profile.runtimeApproved || --m7-hub-diagnostic",
+          "importReceipt": "M7_HUB_SHELL_IMPORTED textures=6 materials=3 runtimeApproved=false",
+          "importAudit": "unity/Unknown/Builds/m7-hub-import-audit.json"
+        },
+        "readerStage": {
+          "profileAsset": "unity/Unknown/Assets/_Project/Resources/M7ReaderStage.asset",
+          "profileScript": "unity/Unknown/Assets/_Project/Presentation/M7ReaderStageProfile.cs",
+          "builderMenuItem": "Tools/M7/Import reader stage candidates (Editor/M7ReaderProjectBuilder.cs); approval Tools/M7/Approve reader stage (director only)",
+          "sessionPartial": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs (M7ReaderStageEnabled)",
+          "candidateFolder": "unity/Unknown/Assets/_Project/Art/Candidates/m7-reader-r01/",
+          "gateFlag": "profile.runtimeApproved || --m7-reader-diagnostic",
+          "importReceipt": "M7_READER_STAGE_IMPORTED fbx=2 textures=8 materials=7 runtimeApproved=false",
+          "importAudit": "unity/Unknown/Builds/m7-reader-import-audit.json",
+          "cameraSolvedFromImportedBounds": {
+            "lookAt": [0.0914999843, 0.195000052, -2.98023224e-08],
+            "cameraPosition": [-0.458500028, 0.615, 1.15],
+            "horizontalFov": 48
+          }
+        },
+        "uiSkin": {
+          "profileAsset": "unity/Unknown/Assets/_Project/Resources/M7UiSkin.asset",
+          "profileScript": "unity/Unknown/Assets/_Project/Presentation/M7UiSkinProfile.cs",
+          "builderMenuItem": "Tools/M7/Import UI skin candidates (Editor/M7UiSkinProjectBuilder.cs); approval Tools/M7/Approve UI skin (director only)",
+          "sessionPartial": "unity/Unknown/Assets/_Project/App/M7UiSession.cs (ApplyM7UiSkin)",
+          "candidateFolder": "unity/Unknown/Assets/_Project/Art/Candidates/m7-ui-r01/",
+          "gateFlag": "profile.runtimeApproved || --m7-ui-diagnostic",
+          "importReceipt": "M7_UI_SKIN_IMPORTED textures=2 runtimeApproved=false",
+          "importAudit": "unity/Unknown/Builds/m7-ui-import-audit.json"
+        }
+      },
+      "verification": {
+        "receipts": [
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/verification.md",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/verification.json"
+        ],
+        "logs": [
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/m7-import.log",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/editmode.log",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/editmode.xml",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/playmode.log",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/playmode.xml",
+          "_workspace/current/systems/tech-verification/concept-first-m7/runtime/m7-capture.log"
+        ],
+        "importAll": "Tools/M7/Import all M7 candidates (Tide.EditorTools.M7ProjectBuilder.ImportAll), exit 0, M7_IMPORT_ALL_DONE",
+        "editMode": { "assembly": "Tide.Tests.Sim", "total": 53, "passed": 53, "failed": 0, "skipped": 0 },
+        "playMode": { "filteredClasses": 10, "total": 78, "passed": 78, "failed": 0, "skipped": 0, "inconclusive": 0 },
+        "playModePerClass": {
+          "T0PlayModeTests": 15,
+          "M5DirectionPlayModeTests": 15,
+          "ReviewNotesPlayModeTests": 15,
+          "C1SignaturePlayModeTests": 10,
+          "C1PlayModeTests": 7,
+          "T0ResourceInteractionTests": 6,
+          "M7UiSkinPlayModeTests": 3,
+          "M7ReaderPlayModeTests": 3,
+          "M7HubPlayModeTests": 2,
+          "T0CaseThreadTests": 2
+        },
+        "newM7Tests": [
+          "M7HubPlayModeTests.GateOffLeavesCommittedHubShellUntouched",
+          "M7HubPlayModeTests.GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce",
+          "M7ReaderPlayModeTests.GateOffNeverEntersReaderStage",
+          "M7ReaderPlayModeTests.GateOnBuildsStageWithTwoLightsAndTearsDownOnExit",
+          "M7ReaderPlayModeTests.GateOnReducedMotionKeepsCrankAtRest",
+          "M7UiSkinPlayModeTests.GateOffKeepsCommittedLiteralsAndNoSkinBackings",
+          "M7UiSkinPlayModeTests.GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable",
+          "M7UiSkinPlayModeTests.GateOnAtTextScale150RendersWithoutLayoutChange"
+        ],
+        "skippedZeroMeaning": "skipped=0 proves no Assert.Ignore fallback fired: the candidate assets existed and both the gate-off and gate-on paths ran for real"
+      },
+      "capture": {
+        "method": "Tide.EditorTools.M7ProjectBuilder.Capture, -batchmode WITH graphics, exit 0, graphicsDevice Metal; candidates are applied in memory only and the hub scene is never saved",
+        "folder": "unity/Unknown/Builds/m7-diagnostics/",
+        "report": "unity/Unknown/Builds/m7-diagnostics/m7-diagnostics.json",
+        "resolution": "1280x800",
+        "shots": [
+          "hub-before.png",
+          "hub-after-m7-shell.png",
+          "hub-after-m7-shell-and-ui-skin.png",
+          "hub-after-m7-viewport.png",
+          "reader-stage-rest.png",
+          "reader-stage-viewport.png",
+          "reader-stage-crank-150deg.png"
+        ],
+        "reportFields": {
+          "crankPivotFound": true,
+          "crankStrokeDeg": 150.0,
+          "readerStageBoundsSizeMeters": [1.48191333, 0.6113224, 0.8704778],
+          "readerTriangles": 8028,
+          "assetsRuntimeApproved": { "hub": false, "ui": false, "reader": false }
+        }
+      },
+      "fbxCandidates": {
+        "script": "scripts/blender/export_m7_fbx.py",
+        "engine": "Blender 5.1.2 headless",
+        "report": "assets/generated/3d/concept-first-m7/fbx/fbx-export-report.json",
+        "files": 4,
+        "approxTriangles": {
+          "SM_Env_Watchroom": 30818,
+          "SM_Prop_OpticalReader": 7824,
+          "SM_Prop_RecordSet": 204,
+          "SM_Env_GateThree": 34928
+        },
+        "sourceBlendShaUnchanged": true,
+        "texturesEmbedded": false
+      },
+      "findings": [
+        "-batchmode WITH graphics segfaults in the Burst background compiler (Burst.Compiler.IL... native stack, exit 139); all M7 batch runs now pass --burst-disable-compilation. Not caused by project code.",
+        "EditorSceneManager.OpenScene/NewScene unload assets that are only reachable through managed references, which nulled the loaded profiles' Material/GameObject fields and made the first capture emit 1 shot instead of 5. Fix: re-Resources.Load the three profiles after every scene switch (Editor/M7ProjectBuilder.cs Reload()).",
+        "FBX axis conversion mirrors X, so the reader stage camera side is now MEASURED from the imported instance (crank side from the pivot's world x, front from rd-thumbscrew z) instead of assuming Blender space.",
+        "hub-after-m7-viewport.png shows the perforated-steel workbench reading as a near-flat dark mass at the current tiling/lighting; tiling and brightness tuning is required before any promotion. Salt-concrete walls/floor and the tide band read correctly.",
+        "Bronze frame backing tint was lowered to (.5,.5,.5,.72) so header/toolbar text keeps contrast over the texture."
+      ],
+      "remainingBeforeApproval": [
+        "human playtest (n=0)",
+        "G4/G5/G6/G7 runtime promotion",
+        "in-engine tile-seam / mip / texel-density measurement (the existing tiling QA was pre-engine)",
+        "licence verification (GTI backend UNVERIFIED)",
+        "mesh-level collision",
+        "crank-to-plate gear linkage",
+        "hand rig",
+        "gate-three runtime use",
+        "perforated-steel tiling and brightness tuning (finding 4)",
+        "Tools/M7/Approve ... (director only) plus a decision-log audit per asset-runbook 3.1 (8 items)"
+      ],
+      "runtimeApproved": false
+    },
+    "runtimeEligible": false
+  }
 }
