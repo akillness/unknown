@@ -1,0 +1,68 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-bronze-r01",
+  "generated_at": "2026-09-11T10:52:46.677986+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "8d7d975e4b9e117964e27c07a3452712eb4e6e6cfbc71a4f256d7df814125b63",
+  "dry_run_validated": true,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    },
+    {
+      "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+      "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (concept-first-m7-resources.json forbiddenVisualParents)",
+  "direction_contract": {
+    "material": "M7-MAT-bronze (handoff/concept-first-m7-resources.json)",
+    "direction": "weathered bronze; directional verdigris in recesses, burnished ochre contact edges; no baked lamp glare"
+  },
+  "assets": [
+    {
+      "id": "m7-bronze-r01-basecolor",
+      "file": "basecolor.png",
+      "tool": "god-tibo-imagen(private-codex) cli 0.3.0",
+      "method": "gti image generation",
+      "model": "gpt-6-astra",
+      "requested_size": "1024x1024",
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "backend upscaled --size",
+      "sha256": "d20d6c7ed6687d07284f48abae33a12687af5709db1ba0c822abf8ac78fd0fab",
+      "bytes": 3672109,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-bronze-r01-roughness",
+      "file": "roughness.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "83a0a8702fdc27c902b3985b359732bbabef908b2a6ba0e258bf8be042535dd2",
+      "bytes": 1062969,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    }
+  ],
+  "runtimeEligible": false
+}

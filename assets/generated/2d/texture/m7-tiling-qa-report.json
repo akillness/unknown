@@ -1,0 +1,119 @@
+{
+  "lane": "texture-tiling-qa",
+  "status": "pass",
+  "observations": [
+    "[OBSERVED] bronze: seamDeltaX=16.49 seamDeltaY=18.93 repeatPeakPx=None (corr=0.0915) verdict=needs-edge-blend",
+    "[OBSERVED] bronze: all derived channels match 1254x1254",
+    "[OBSERVED] perforated-steel: seamDeltaX=10.63 seamDeltaY=12.71 repeatPeakPx=None (corr=0.0358) verdict=needs-edge-blend",
+    "[OBSERVED] perforated-steel: all derived channels match 1254x1254",
+    "[OBSERVED] salt-concrete: seamDeltaX=20.03 seamDeltaY=67.76 repeatPeakPx=418.0 (corr=0.3621) verdict=not-tileable",
+    "[OBSERVED] salt-concrete: all derived channels match 1254x1254",
+    "[OBSERVED] salt-crystal: seamDeltaX=10.51 seamDeltaY=10.1 repeatPeakPx=None (corr=0.1516) verdict=needs-edge-blend",
+    "[OBSERVED] salt-crystal: all derived channels match 1254x1254",
+    "[OBSERVED] rag-paper: seamDeltaX=8.53 seamDeltaY=10.57 repeatPeakPx=None (corr=0.0478) verdict=needs-edge-blend",
+    "[OBSERVED] rag-paper: all derived channels match 1254x1254"
+  ],
+  "artifacts": [
+    "assets/generated/2d/texture/m7-bronze-r01/qa/seam-x.png",
+    "assets/generated/2d/texture/m7-bronze-r01/qa/seam-y.png",
+    "assets/generated/2d/texture/m7-bronze-r01/qa/tiled-2x2.png",
+    "assets/generated/2d/texture/m7-perforated-steel-r01/qa/seam-x.png",
+    "assets/generated/2d/texture/m7-perforated-steel-r01/qa/seam-y.png",
+    "assets/generated/2d/texture/m7-perforated-steel-r01/qa/tiled-2x2.png",
+    "assets/generated/2d/texture/m7-salt-concrete-r01/qa/seam-x.png",
+    "assets/generated/2d/texture/m7-salt-concrete-r01/qa/seam-y.png",
+    "assets/generated/2d/texture/m7-salt-concrete-r01/qa/tiled-2x2.png",
+    "assets/generated/2d/texture/m7-salt-crystal-r01/qa/seam-x.png",
+    "assets/generated/2d/texture/m7-salt-crystal-r01/qa/seam-y.png",
+    "assets/generated/2d/texture/m7-salt-crystal-r01/qa/tiled-2x2.png",
+    "assets/generated/2d/texture/m7-rag-paper-r01/qa/seam-x.png",
+    "assets/generated/2d/texture/m7-rag-paper-r01/qa/seam-y.png",
+    "assets/generated/2d/texture/m7-rag-paper-r01/qa/tiled-2x2.png",
+    "assets/generated/2d/texture/m7-tiling-qa-report.json",
+    "assets/generated/2d/texture/m7-tiling-qa-report.md"
+  ],
+  "untested": [
+    "in-engine seam behaviour (Unity/runtime sampling)",
+    "mip/anisotropy behaviour under minification",
+    "normal-map generation (no normal maps exist or were derived)",
+    "roughness/height/microdetail visual correctness (dimensions only were checked)",
+    "physical tiling scale vs. real-world material dimensions"
+  ],
+  "materials": {
+    "bronze": {
+      "folder": "assets/generated/2d/texture/m7-bronze-r01",
+      "basecolorSize": [
+        1254,
+        1254
+      ],
+      "seamDeltaX": 16.49,
+      "seamDeltaY": 18.93,
+      "repeatPeakPx": null,
+      "repeatPeakCorrelation": 0.0915,
+      "derivedChannelMismatches": [],
+      "verdict": "needs-edge-blend",
+      "runtimeEligible": false
+    },
+    "perforated-steel": {
+      "folder": "assets/generated/2d/texture/m7-perforated-steel-r01",
+      "basecolorSize": [
+        1254,
+        1254
+      ],
+      "seamDeltaX": 10.63,
+      "seamDeltaY": 12.71,
+      "repeatPeakPx": null,
+      "repeatPeakCorrelation": 0.0358,
+      "derivedChannelMismatches": [],
+      "verdict": "needs-edge-blend",
+      "runtimeEligible": false
+    },
+    "salt-concrete": {
+      "folder": "assets/generated/2d/texture/m7-salt-concrete-r01",
+      "basecolorSize": [
+        1254,
+        1254
+      ],
+      "seamDeltaX": 20.03,
+      "seamDeltaY": 67.76,
+      "repeatPeakPx": 418.0,
+      "repeatPeakCorrelation": 0.3621,
+      "derivedChannelMismatches": [],
+      "verdict": "not-tileable",
+      "runtimeEligible": false
+    },
+    "salt-crystal": {
+      "folder": "assets/generated/2d/texture/m7-salt-crystal-r01",
+      "basecolorSize": [
+        1254,
+        1254
+      ],
+      "seamDeltaX": 10.51,
+      "seamDeltaY": 10.1,
+      "repeatPeakPx": null,
+      "repeatPeakCorrelation": 0.1516,
+      "derivedChannelMismatches": [],
+      "verdict": "needs-edge-blend",
+      "runtimeEligible": false
+    },
+    "rag-paper": {
+      "folder": "assets/generated/2d/texture/m7-rag-paper-r01",
+      "basecolorSize": [
+        1254,
+        1254
+      ],
+      "seamDeltaX": 8.53,
+      "seamDeltaY": 10.57,
+      "repeatPeakPx": null,
+      "repeatPeakCorrelation": 0.0478,
+      "derivedChannelMismatches": [],
+      "verdict": "needs-edge-blend",
+      "runtimeEligible": false
+    }
+  },
+  "verdictRubric": {
+    "tileable-candidate": "seamDelta <= 8 on both axes",
+    "needs-edge-blend": "seamDelta <= 20 on both axes",
+    "not-tileable": "seamDelta > 20 on either axis"
+  }
+}

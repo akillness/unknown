@@ -1,0 +1,68 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-rag-paper-r01",
+  "generated_at": "2026-09-11T10:52:46.677986+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "140cf34bed133bfa5b9f19dc836f00b6d502d3df736721dfba1f88ddc306f861",
+  "dry_run_validated": true,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/keyart/keyart-watchroom-wide.png",
+      "sha256": "e434eceecaac1987a4e7010c698e92950e527dc75452fa2c9b5e66a610f5f992",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    },
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (concept-first-m7-resources.json forbiddenVisualParents)",
+  "direction_contract": {
+    "material": "M7-MAT-rag-paper (handoff/concept-first-m7-resources.json)",
+    "direction": "layered fibres, blank writable content; readable evidence authored separately"
+  },
+  "assets": [
+    {
+      "id": "m7-rag-paper-r01-basecolor",
+      "file": "basecolor.png",
+      "tool": "god-tibo-imagen(private-codex) cli 0.3.0",
+      "method": "gti image generation",
+      "model": "gpt-6-astra",
+      "requested_size": "1024x1024",
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "backend upscaled --size",
+      "sha256": "dd88d35e937c165916f907c28810b39c3bf75b5bcdc94a2c35cf779a67df2275",
+      "bytes": 3062346,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-rag-paper-r01-roughness",
+      "file": "roughness.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "ef1b90c4547b973187717e3c50085f92afa193e3919d25ff55adb29b2f266f0f",
+      "bytes": 662939,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    }
+  ],
+  "runtimeEligible": false
+}

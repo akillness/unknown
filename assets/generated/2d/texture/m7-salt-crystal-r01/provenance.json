@@ -1,0 +1,86 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-salt-crystal-r01",
+  "generated_at": "2026-09-11T10:52:46.677986+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "22a3e6073c247dfc74d0afb88c54caeb3e17fc7c05928bf115ae7d69cb0a837e",
+  "dry_run_validated": true,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/tool-reader-hero.png",
+      "sha256": "ec8f6e4174db859ce3f831a93e2d0f68c87a17ad3a4748d15ddfad4f0cf9a5a8",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    },
+    {
+      "path": "assets/generated/2d/concept/m7-optical-workbench-r01/image.png",
+      "sha256": "8bdf991d3328ee9445ce2d6c4bb0dd6fe151db0f5cff6c2725fb0e05ca4c9628",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (concept-first-m7-resources.json forbiddenVisualParents)",
+  "direction_contract": {
+    "material": "M7-MAT-salt-crystal (handoff/concept-first-m7-resources.json)",
+    "direction": "non-emissive hexagonal salt crystals; no symbolic marks; no moving-video pattern drift"
+  },
+  "assets": [
+    {
+      "id": "m7-salt-crystal-r01-basecolor",
+      "file": "basecolor.png",
+      "tool": "god-tibo-imagen(private-codex) cli 0.3.0",
+      "method": "gti image generation",
+      "model": "gpt-6-astra",
+      "requested_size": "1024x1024",
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "backend upscaled --size",
+      "sha256": "0e3d608837bd22530f7a4756f8cddcbe31c5da574be6833ee1113a8ee1e03326",
+      "bytes": 2825629,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-salt-crystal-r01-microdetail",
+      "file": "microdetail.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "6d1bbb96ddfe18487c085f5f3b2263ce3912eec5b5f8ddf2339be575875c8197",
+      "bytes": 845006,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-salt-crystal-r01-roughness",
+      "file": "roughness.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "591d877d13ca14dded9ec98844c074cd1b53cb9af3cc781821259db886c847f6",
+      "bytes": 717894,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    }
+  ],
+  "runtimeEligible": false
+}

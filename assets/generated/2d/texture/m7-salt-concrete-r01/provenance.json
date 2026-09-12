@@ -1,0 +1,81 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-salt-concrete-r01",
+  "generated_at": "2026-09-11T10:52:46.677986+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "d2b189dbca04a79b810c1eb97092fea049d6cbd5f6cec3870d4d447b67574ce7",
+  "dry_run_validated": true,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/space-gate-three-mood.png",
+      "sha256": "65e28ab329de3776ceb6bc87dd00dc78b8d4b8b23aa0283881fd0c200c6e7013",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (concept-first-m7-resources.json forbiddenVisualParents)",
+  "direction_contract": {
+    "material": "M7-MAT-salt-concrete (handoff/concept-first-m7-resources.json)",
+    "direction": "dark damp concrete, coherent horizontal tide line, salt at joints and evaporation bands"
+  },
+  "assets": [
+    {
+      "id": "m7-salt-concrete-r01-basecolor",
+      "file": "basecolor.png",
+      "tool": "god-tibo-imagen(private-codex) cli 0.3.0",
+      "method": "gti image generation",
+      "model": "gpt-6-astra",
+      "requested_size": "1024x1024",
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "backend upscaled --size",
+      "sha256": "dda7aa2d78c0955ea64d141c16f763b108fe490aa7c82707afcbacf9fe2885df",
+      "bytes": 3850690,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-salt-concrete-r01-height",
+      "file": "height.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "ffeaef165b53d3a060c565325c625a9ee35af4f78b53cadbe7ccb4fbde313ffe",
+      "bytes": 1289643,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-salt-concrete-r01-roughness",
+      "file": "roughness.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "e485551aa5010c2fff4e3f25a70824adedace3231bc2dc0463f34bd47b503a33",
+      "bytes": 1150206,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    }
+  ],
+  "runtimeEligible": false
+}

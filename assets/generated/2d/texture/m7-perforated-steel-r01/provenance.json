@@ -1,0 +1,63 @@
+{
+  "schema": "provenance/v1",
+  "asset_id": "m7-perforated-steel-r01",
+  "generated_at": "2026-09-11T10:52:46.677986+00:00",
+  "provider": "god-tibo-imagen(private-codex)",
+  "cli_version": "0.3.0",
+  "model": "gpt-6-astra",
+  "model_scope": "requested orchestration model; actual image model unreported",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "224cd3374786a9052687d49353ef029f0c134c4d74c644dda36e985bd1524b6e",
+  "dry_run_validated": true,
+  "reference_inputs": [
+    {
+      "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+      "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+      "role": "material/style reference (concept-first-m7-sources allowlist)"
+    }
+  ],
+  "reference_policy": "Original preproduction concept allowlist only; no current runtime, prefab, 3D preview, native capture, M5/M6-derived media input (concept-first-m7-resources.json forbiddenVisualParents)",
+  "direction_contract": {
+    "material": "M7-MAT-perforated-steel (handoff/concept-first-m7-resources.json)",
+    "direction": "deep sea-teal iron; holes represented geometrically in mesh, not painted depth"
+  },
+  "assets": [
+    {
+      "id": "m7-perforated-steel-r01-basecolor",
+      "file": "basecolor.png",
+      "tool": "god-tibo-imagen(private-codex) cli 0.3.0",
+      "method": "gti image generation",
+      "model": "gpt-6-astra",
+      "requested_size": "1024x1024",
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "backend upscaled --size",
+      "sha256": "cf4d228cefa71ab6b42f68d3f9bfa88c8ce173ae1d6014e03fd82256b5d8a7ba",
+      "bytes": 3323903,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    },
+    {
+      "id": "m7-perforated-steel-r01-roughness",
+      "file": "roughness.png",
+      "tool": "Pillow luminance derivation",
+      "method": "derived candidate map from basecolor.png (remap/invert/high-pass); NOT GTI output, NOT physical PBR truth",
+      "model": null,
+      "requested_size": null,
+      "size": "1254x1254",
+      "actual_size": "1254x1254",
+      "size_note": "matches basecolor",
+      "sha256": "a31cbf1c60157a7308e686ada788fc1c1c2e9a4680ffa76e27aadb781b05635c",
+      "bytes": 915895,
+      "generated_at": "2026-09-11T10:52:46.677986+00:00",
+      "license": "original GTI derivation",
+      "runtimeEligible": false,
+      "promoted_by": null,
+      "claim": "[OBSERVED] file generated this cycle; texture candidate only, seams/scale/roughness/normals to be refined per handoff acceptance"
+    }
+  ],
+  "runtimeEligible": false
+}
