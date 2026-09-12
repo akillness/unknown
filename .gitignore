@@ -23,9 +23,23 @@ texput.log
 /Temp/
 /Logs/
 /UserSettings/
+/Packages/
+/ProjectSettings/
+/assets/**/*.meta
+unity/Unknown/mono_crash.*.json
 
 # local ingest mirror of the llm-wiki vault (authoritative copy: ~/vaults/llm-wiki)
 /llm-wiki/
 
 # python bytecode from asset build scripts
 __pycache__/
+
+# jeo session/agent local state (machine-local, same class as .omc/)
+.jeo/
+
+# M7 heavy authoring blobs: regenerable from scripts/blender/build_m7_assets.py (deterministic,
+# tracked) and redundant with the tracked FBX imports. Hashes stay recorded in
+# assets/generated/3d/concept-first-m7/provenance.json (RFC-CX-013 decision).
+assets/generated/3d/concept-first-m7/*.blend
+assets/generated/3d/concept-first-m7/*.blend1
+assets/generated/3d/concept-first-m7/*.glb

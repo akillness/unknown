@@ -1,0 +1,29 @@
+{
+  "lane": "glb-export",
+  "status": "pass",
+  "observations": [
+    "[OBSERVED] UVs are Smart-UV-Project generated (angle_limit 66deg, island_margin 0.02) for export only; the authoritative blend keeps its box-projection materials and was never saved.",
+    "[OBSERVED] Source materials use BOX projection on Object coordinates, which glTF cannot represent; materials were rewired in-memory (BOX->FLAT, TexCoord.Object->UV) before export, so box-projection visual parity is NOT guaranteed - tiling frequency and seam placement differ from the blend.",
+    "[OBSERVED] These GLBs are blockout handoff candidates (runtimeEligible:false), not final art.",
+    "[OBSERVED] source blend sha256 before=8c76350ab60546b58d0d5557c99f1f69385d99fa6c181e8b1a31014ed7887997 after=8c76350ab60546b58d0d5557c99f1f69385d99fa6c181e8b1a31014ed7887997 (byte-identical).",
+    "[OBSERVED] SM_Env_Watchroom.glb: 23206624 bytes, sourceObjects=97 (MESH:97), importedObjects=97, meshes=97, materials=8, images=10, objectCountMatch=True.",
+    "[OBSERVED] SM_Prop_OpticalReader.glb: 10546712 bytes, sourceObjects=31 (MESH:31), importedObjects=31, meshes=31, materials=4, images=5, objectCountMatch=True.",
+    "[OBSERVED] SM_Prop_RecordSet.glb: 14498048 bytes, sourceObjects=15 (MESH:15), importedObjects=15, meshes=15, materials=4, images=7, objectCountMatch=True.",
+    "[OBSERVED] SM_Env_GateThree.glb: 23139816 bytes, sourceObjects=81 (MESH:81), importedObjects=81, meshes=81, materials=8, images=10, objectCountMatch=True."
+  ],
+  "artifacts": [
+    "assets/generated/3d/concept-first-m7/SM_Env_Watchroom.glb",
+    "assets/generated/3d/concept-first-m7/SM_Prop_OpticalReader.glb",
+    "assets/generated/3d/concept-first-m7/SM_Prop_RecordSet.glb",
+    "assets/generated/3d/concept-first-m7/SM_Env_GateThree.glb",
+    "assets/generated/3d/concept-first-m7/glb-export-report.json"
+  ],
+  "untested": [
+    "Unity import",
+    "texel density",
+    "lightmap UVs",
+    "LODs",
+    "visual parity of rewired UV materials vs blend box projection",
+    "normal/bump channel fidelity (Bump node is not exportable to glTF)"
+  ]
+}

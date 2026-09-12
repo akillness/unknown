@@ -1,0 +1,30 @@
+{
+  "lane": "m7-articulation",
+  "status": "pass",
+  "observations": [
+    "[OBSERVED] frame-48 max world-matrix component deviation 0.000e+00 across 5 animated objects (tolerance 1e-04) \u2014 crank +180deg forward (f1-24), hold (f25-32), return (f33-48); mag -20deg swing (f1-16), hold, return by f48; return-to-origin holds",
+    "[OBSERVED] parenting with keep-transform preserved world matrices to 0.000e+00 max component deviation before animation",
+    "[OBSERVED] crank spin axis derived from rd-crank-axle matrix_world: (1.0000, 0.0000, -0.0000), pivot at (0.530, 0.350, 0.970); mag pivot at (0.275, 0.350, 1.250) swing axis world Y",
+    "[OBSERVED] frame 12: rd-crank-handle vs rd-base world-AABB clear, min gap 0.075 m (handle z-range [0.9557, 1.0048])",
+    "[OBSERVED] frame 12: rd-crank-handle vs wr-bench-top world-AABB clear, min gap 0.118 m (handle z-range [0.9557, 1.0048])",
+    "[OBSERVED] frame 24: rd-crank-handle vs rd-base world-AABB clear, min gap 0.084 m (handle z-range [0.797, 0.843])",
+    "[OBSERVED] frame 24: rd-crank-handle vs wr-bench-top world-AABB OVERLAP penetration 0.025 m (handle z-range [0.797, 0.843])",
+    "[OBSERVED] rendered 4 check frames at 640x360 Cycles 32 samples on GPU-METAL",
+    "[OBSERVED] source blend sha256 unchanged: True (8c76350ab60546b5...)"
+  ],
+  "artifacts": [
+    "assets/generated/3d/concept-first-m7/concept-first-m7-articulation.blend",
+    "assets/generated/3d/concept-first-m7/articulation/articulation-report.json",
+    "assets/generated/3d/concept-first-m7/articulation/frame-01.png",
+    "assets/generated/3d/concept-first-m7/articulation/frame-12.png",
+    "assets/generated/3d/concept-first-m7/articulation/frame-24.png",
+    "assets/generated/3d/concept-first-m7/articulation/frame-40.png"
+  ],
+  "untested": [
+    "load-bearing rig / skinned deformation for runtime",
+    "gear-ratio linkage between crank rotation and hex-plate rotation",
+    "runtime engine (Unity) animation playback and interpolation",
+    "mesh-level (non-AABB) collision between handle and bench/base",
+    "magnifier arm reachable range beyond the tested -20deg swing"
+  ]
+}

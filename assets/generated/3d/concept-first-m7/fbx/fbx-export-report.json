@@ -1,0 +1,106 @@
+{
+  "lane": "m7-fbx-export",
+  "status": "pass",
+  "sourceBlendSha256": {
+    "before": "8c76350ab60546b58d0d5557c99f1f69385d99fa6c181e8b1a31014ed7887997",
+    "after": "8c76350ab60546b58d0d5557c99f1f69385d99fa6c181e8b1a31014ed7887997",
+    "unchanged": true
+  },
+  "exportOperator": "bpy.ops.export_scene.fbx",
+  "exportArgsSource": "handoff/asset-runbook.md \u00a71.2",
+  "observations": [
+    "[OBSERVED] FBX is the Unity import-time candidate format matching existing Art/Candidates/*.fbx; GLB remains handoff canon",
+    "[OBSERVED] Smart-UV Project (66deg/0.02) replaces Blender box projection; visual parity NOT guaranteed",
+    "[OBSERVED] textures not embedded (embed_textures=False); Unity materials are authored in-editor from GTI PNGs"
+  ],
+  "untested": [
+    "Unity import success",
+    "axis/scale in Unity",
+    "tri/drawcall budget in-engine"
+  ],
+  "artifacts": [
+    "fbx/SM_Env_Watchroom.fbx",
+    "fbx/SM_Prop_OpticalReader.fbx",
+    "fbx/SM_Prop_RecordSet.fbx",
+    "fbx/SM_Env_GateThree.fbx"
+  ],
+  "targets": [
+    {
+      "collection": "M7-ENV-watchroom",
+      "fbx": "SM_Env_Watchroom.fbx",
+      "fileBytes": 813612,
+      "sha256": "d15b8e077fece3d4bb98f4072bf176fd8cc4c916003266ed91297311a67cc12b",
+      "meshObjects": 97,
+      "trisApprox": 30818,
+      "uvUnwrapped": 97,
+      "boxNodesRewired": 10,
+      "droppedKwargs": [],
+      "materials": [
+        "M7-bronze",
+        "M7-bulb",
+        "M7-dark-steel",
+        "M7-gauge-face",
+        "M7-glass",
+        "M7-perforated-steel",
+        "M7-salt-concrete",
+        "M7-salt-crystal"
+      ]
+    },
+    {
+      "collection": "M7-PROP-optical-reader",
+      "fbx": "SM_Prop_OpticalReader.fbx",
+      "fileBytes": 263804,
+      "sha256": "1a8db8aa39c2f14c50a1e080bdcecd4365ea492acbcf03b8bd78ec5961062d30",
+      "meshObjects": 31,
+      "trisApprox": 7824,
+      "uvUnwrapped": 31,
+      "boxNodesRewired": 5,
+      "droppedKwargs": [],
+      "materials": [
+        "M7-bronze",
+        "M7-glass",
+        "M7-salt-crystal",
+        "M7-wood-ochre"
+      ]
+    },
+    {
+      "collection": "M7-PROP-record-set",
+      "fbx": "SM_Prop_RecordSet.fbx",
+      "fileBytes": 72332,
+      "sha256": "8a063a6ec1e5f4229bf05673bf07cf054c0815ebff9d9ceba759362b0713c49d",
+      "meshObjects": 15,
+      "trisApprox": 204,
+      "uvUnwrapped": 15,
+      "boxNodesRewired": 7,
+      "droppedKwargs": [],
+      "materials": [
+        "M7-bronze",
+        "M7-dark-steel",
+        "M7-rag-paper",
+        "M7-salt-crystal"
+      ]
+    },
+    {
+      "collection": "M7-ENV-gate-three",
+      "fbx": "SM_Env_GateThree.fbx",
+      "fileBytes": 943436,
+      "sha256": "fd19468453558a0fee88d16cab11172f58630f45f06a917d2790a5976c1c9c35",
+      "meshObjects": 81,
+      "trisApprox": 34928,
+      "uvUnwrapped": 81,
+      "boxNodesRewired": 10,
+      "droppedKwargs": [],
+      "materials": [
+        "M7-bronze",
+        "M7-bulb",
+        "M7-dark-steel",
+        "M7-gauge-face",
+        "M7-perforated-steel",
+        "M7-salt-concrete",
+        "M7-salt-crystal",
+        "M7-water"
+      ]
+    }
+  ],
+  "errors": []
+}
