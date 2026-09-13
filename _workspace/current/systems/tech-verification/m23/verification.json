@@ -4,12 +4,12 @@
   "cycle": "20260909-preproduction-c7",
   "milestone": "M23",
   "scope": "R1/R2/R3/R4 correction/R5 isolated practice/R7; current T0 and C1-b2 developer slice, not complete campaign",
-  "sourceBaseCommit": "35ebdc5aaeee0b32656a9caa6482121151a035f4",
+  "sourceBaseCommit": "5d7b18cad0026b4acbe6f28b289f6786981b98e2",
   "sourceSnapshots": [
     {
       "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
-      "bytes": 48442,
-      "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
+      "bytes": 48474,
+      "sha256": "a88c3d46895941af5a2cfd086c926bd197d06ddb8c2391fab3153017e0bf2302"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
@@ -18,8 +18,8 @@
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
-      "bytes": 7456,
-      "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
+      "bytes": 7518,
+      "sha256": "52024de9e327d88f045f9ac651e756ab69ce7e5f9abb0f8f92fac579a07c7e7c"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
@@ -117,12 +117,16 @@
     "unity": "6000.5.6f1 (0e0577a1a2ac)",
     "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
     "result": "Succeeded",
-    "buildReportBytes": 410875885,
-    "inventoryBytes": 410875885,
+    "buildReportBytes": 410875921,
+    "inventoryBytes": 410875921,
     "inventoryFiles": 315,
-    "fingerprint": "6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e",
+    "fingerprint": "ba14f79e34fb87473660a4d6009c04796024d71825e1ea378f8f4c634e716161",
     "fingerprintAlgorithm": "SHA256 of UTF-8 JSON of the sorted file inventory, sort_keys=True, separators=(comma,colon); paths repository-relative",
-    "inventory": "build-inventory-correction.json",
+    "inventory": {
+      "path": "_workspace/current/systems/tech-verification/m23/build-inventory-off-reader.json",
+      "bytes": 71452,
+      "sha256": "d26b296d75203dc92b30b9c16fb90c09e2a88dbda5b40eb0e662d7d860c1972f"
+    },
     "assemblies": [
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.UI.dll",
@@ -152,7 +156,7 @@
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
         "bytes": 158720,
-        "sha256": "bdaf40b0c34151ae5d53cb8f6ffdb6ac6c5260e1a523294d5d33e3f8275c3ac4"
+        "sha256": "9c6bdf32d152c0a3b8680991fedd14ace709ed1ed588e03e080a557172e3946c"
       },
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Sim.dll",
@@ -165,10 +169,10 @@
     "enumeration": "333 entries independently enumerated with five untruncated glob partitions; 315 files exactly match the hashed inventory."
   },
   "tests": {
-    "uniqueUnityPassed": 186,
+    "uniqueUnityPassed": 187,
     "uniqueUnityFailed": 0,
     "editModePassed": 64,
-    "playModePassed": 121,
+    "playModePassed": 122,
     "playModeSkipped": 1,
     "skipReason": "serialized boot requires isolated --t0-save-dir and was separately exercised",
     "isolatedBootPassed": 1,
@@ -554,11 +558,96 @@
           "end-time": "2026-09-13 16:32:10Z",
           "duration": "1.0908002"
         }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-pin-red.xml",
+        "bytes": 5097,
+        "sha256": "b720220070df53b9ffb87de0dfb9dd5fea53fc0870b298766ee04db373d7dc34",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:55:04Z",
+          "end-time": "2026-09-13 16:55:06Z",
+          "duration": "1.7742044"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-playmode-final.xml",
+        "bytes": 127144,
+        "sha256": "d758c19498107f738a28b8837f9017b7e2c3036a455acda2d26d0ffa4cc787a9",
+        "run": {
+          "id": "2",
+          "testcasecount": "123",
+          "result": "Skipped:Ignored",
+          "total": "123",
+          "passed": "122",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:57:16Z",
+          "end-time": "2026-09-13 16:58:26Z",
+          "duration": "69.6586145"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-boot-isolated.xml",
+        "bytes": 3439,
+        "sha256": "93681177370cf95250a98e9caf1ecd2a23b2a62ba8b18b95c46d13142d72766b",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Passed",
+          "total": "1",
+          "passed": "1",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 17:00:37Z",
+          "end-time": "2026-09-13 17:00:38Z",
+          "duration": "0.8241197"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-boot-invocation-skipped.xml",
+        "bytes": 4196,
+        "sha256": "1b93aa0b532c20181c8cd325a38e3ff8ac614d6320e6c16925f245418fa427ef",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Skipped:Ignored",
+          "total": "1",
+          "passed": "0",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:58:40Z",
+          "end-time": "2026-09-13 16:58:40Z",
+          "duration": "0.0362223"
+        }
       }
     ],
-    "editModeCountingNote": "The correction EditMode XML has 65 passes: 64 Tide.Tests cases plus AddressableAssets.DocExampleCode.TestStub.RequiredTest. The vendor example is excluded from the 186 project cases.",
-    "newDistinctRegressionCases": 9,
-    "redTestExecutions": 12
+    "editModeCountingNote": "64 Tide.Tests EditMode cases are carried from correction-editmode.xml; its one vendor example is excluded. The current122 PlayMode +1 isolated boot bring the unique project union to187.",
+    "newDistinctRegressionCases": 10,
+    "redTestExecutions": 13,
+    "nonUnityScope": "Node/campaign/T0-table/evidence-graph results are carried from initial35ebdc5, not rerun for this render-lifetime fix."
   },
   "canonAudit": {
     "result": "blocked",
@@ -1316,5 +1405,747 @@
       "actualHumanEvaluation": false,
       "windowsPerformanceMeasured": false
     }
+  },
+  "offReaderLifetimeFollowUp": {
+    "canonicalFinding": "C7-F61 / M23-Q6 (expanded boundary, not another counted defect)",
+    "reportedAfterCommit": "5d7b18cad0026b4acbe6f28b289f6786981b98e2",
+    "previousCorrection": {
+      "commit": "5d7b18cad0026b4acbe6f28b289f6786981b98e2",
+      "tests": {
+        "uniqueUnityPassed": 186,
+        "uniqueUnityFailed": 0,
+        "editModePassed": 64,
+        "playModePassed": 121,
+        "playModeSkipped": 1,
+        "skipReason": "serialized boot requires isolated --t0-save-dir and was separately exercised",
+        "isolatedBootPassed": 1,
+        "nodePreservationRegressionPassed": 7,
+        "evidenceGraphChecksPassed": 18,
+        "campaignChecksPassed": 50,
+        "t0TableChecksPassedPerTarget": 5,
+        "xml": [
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/editmode.xml",
+            "bytes": 49027,
+            "sha256": "aea467e625d5850268029d2338af82945d89c8c22d1278fdaeb45272afc9b1cb",
+            "run": {
+              "id": "2",
+              "testcasecount": "64",
+              "result": "Passed",
+              "total": "64",
+              "passed": "64",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:06:19Z",
+              "end-time": "2026-09-13 14:06:22Z",
+              "duration": "2.4303861"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/playmode-release-final.xml",
+            "bytes": 119694,
+            "sha256": "8477623234a03fe8480ecb2827e116a0db4429872f32b64bcbb5c0937e537df1",
+            "run": {
+              "id": "2",
+              "testcasecount": "113",
+              "result": "Skipped:Ignored",
+              "total": "113",
+              "passed": "112",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:51:20Z",
+              "end-time": "2026-09-13 14:52:27Z",
+              "duration": "66.6235842"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/boot-release.xml",
+            "bytes": 3437,
+            "sha256": "8bc3c01e51ee532cff2ea18135a1c582ec486eef23905468994a34e3b1d51665",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Passed",
+              "total": "1",
+              "passed": "1",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:54:25Z",
+              "end-time": "2026-09-13 14:54:26Z",
+              "duration": "1.1368067"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/review-feedback-red.xml",
+            "bytes": 6077,
+            "sha256": "fbfe0b217180b92d67083505a806695057c88b451c7793f4a29078f3e9a16566",
+            "run": {
+              "id": "2",
+              "testcasecount": "2",
+              "result": "Failed(Child)",
+              "total": "2",
+              "passed": "0",
+              "failed": "2",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:11:36Z",
+              "end-time": "2026-09-13 14:11:38Z",
+              "duration": "2.0989149"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/review-boundary.xml",
+            "bytes": 6152,
+            "sha256": "9fc87d45759c6757e5932fa8a56dc7f4ee81c65d05c71921d82c703288dc57c6",
+            "run": {
+              "id": "2",
+              "testcasecount": "3",
+              "result": "Failed(Child)",
+              "total": "3",
+              "passed": "2",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:16:03Z",
+              "end-time": "2026-09-13 14:16:06Z",
+              "duration": "3.2318394"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/feedback-visibility-red.xml",
+            "bytes": 4644,
+            "sha256": "cc8369ba8e49b395dad0a2345b6c1ff5e1bc86f602500588083d8de18cae7c1d",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Failed(Child)",
+              "total": "1",
+              "passed": "0",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:46:13Z",
+              "end-time": "2026-09-13 14:46:15Z",
+              "duration": "2.0047348"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/playmode-release.xml",
+            "bytes": 120518,
+            "sha256": "339a55ce3a639e650f219470eb992317b37bc63c7b5ca5e6fbe40f054f972046",
+            "run": {
+              "id": "2",
+              "testcasecount": "113",
+              "result": "Failed(Child)",
+              "total": "113",
+              "passed": "111",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 14:48:11Z",
+              "end-time": "2026-09-13 14:49:17Z",
+              "duration": "65.5240686"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-boundary-red.xml",
+            "bytes": 17597,
+            "sha256": "5f32e6724ae01269764bc9fade8cbcb64b4e083a990d992b282956510992da13",
+            "run": {
+              "id": "2",
+              "testcasecount": "8",
+              "result": "Failed(Child)",
+              "total": "8",
+              "passed": "0",
+              "failed": "8",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 15:42:14Z",
+              "end-time": "2026-09-13 15:42:20Z",
+              "duration": "5.6442932"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-comparison-card-red.xml",
+            "bytes": 4811,
+            "sha256": "0914911c0a8df8bb92d280a00611ed71185f68267e9bc3cdb2fc3aefadf464e4",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Failed(Child)",
+              "total": "1",
+              "passed": "0",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 15:54:20Z",
+              "end-time": "2026-09-13 15:54:22Z",
+              "duration": "1.851483"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-comparison-case-thread-red.xml",
+            "bytes": 4811,
+            "sha256": "7b9bfcd08308f80c7cf353b5a349e2b425b22f1bf9d7c1aefdd1eb65427529a3",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Failed(Child)",
+              "total": "1",
+              "passed": "0",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 15:58:54Z",
+              "end-time": "2026-09-13 15:58:56Z",
+              "duration": "1.8236048"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-practice-timeline-red.xml",
+            "bytes": 4879,
+            "sha256": "20428901b4036e23188bd8825edbd2e6654db18e09189fecd11db8dbaa3b4c85",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Failed(Child)",
+              "total": "1",
+              "passed": "0",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:19:02Z",
+              "end-time": "2026-09-13 16:19:04Z",
+              "duration": "1.9811468"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-practice-peak-bounds-red.xml",
+            "bytes": 4883,
+            "sha256": "625568b7203fae54870b970cdcf898444263789a4b61a885a3572d081845919a",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Failed(Child)",
+              "total": "1",
+              "passed": "0",
+              "failed": "1",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:29:21Z",
+              "end-time": "2026-09-13 16:29:23Z",
+              "duration": "1.436706"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-boundary-green.xml",
+            "bytes": 125613,
+            "sha256": "3f50ecff87700eb688f136f8fad2278841a21c35028de62016a91fe8132e47ef",
+            "run": {
+              "id": "2",
+              "testcasecount": "121",
+              "result": "Skipped:Ignored",
+              "total": "121",
+              "passed": "120",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 15:43:38Z",
+              "end-time": "2026-09-13 15:44:47Z",
+              "duration": "69.0927457"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-editmode.xml",
+            "bytes": 51466,
+            "sha256": "ec23261192b41259b6fcaea3c815df3a425a5f88b40434b73dd45ebe1f5fef10",
+            "run": {
+              "id": "2",
+              "testcasecount": "65",
+              "result": "Passed",
+              "total": "65",
+              "passed": "65",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 15:45:41Z",
+              "end-time": "2026-09-13 15:45:44Z",
+              "duration": "2.6580768"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-reader-green.xml",
+            "bytes": 126383,
+            "sha256": "3849ff9f962af0e6386f9e877c3acf6cfef39d30277443b30f63830fe2629acb",
+            "run": {
+              "id": "2",
+              "testcasecount": "122",
+              "result": "Skipped:Ignored",
+              "total": "122",
+              "passed": "121",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:00:34Z",
+              "end-time": "2026-09-13 16:01:45Z",
+              "duration": "71.840602"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-practice-contrast-green.xml",
+            "bytes": 126382,
+            "sha256": "001992d8f551ed5eaf567366c68c7f501dbcd17b7abcf0dd833bcaf57aad399e",
+            "run": {
+              "id": "2",
+              "testcasecount": "122",
+              "result": "Skipped:Ignored",
+              "total": "122",
+              "passed": "121",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:21:44Z",
+              "end-time": "2026-09-13 16:22:54Z",
+              "duration": "69.7999168"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-playmode-final.xml",
+            "bytes": 126379,
+            "sha256": "a65e9eb1f89e0556c6142a7f5f41871d2fa896e7403e44fb8ffa4a17afe168ae",
+            "run": {
+              "id": "2",
+              "testcasecount": "122",
+              "result": "Skipped:Ignored",
+              "total": "122",
+              "passed": "121",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "1",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:30:34Z",
+              "end-time": "2026-09-13 16:31:42Z",
+              "duration": "68.7560909"
+            }
+          },
+          {
+            "path": "_workspace/current/systems/tech-verification/m23/correction-boot-final.xml",
+            "bytes": 3439,
+            "sha256": "c817f248ecbac2ba4e243c8b2d90632a552c0704fdfd76707c0832c357ef9464",
+            "run": {
+              "id": "2",
+              "testcasecount": "1",
+              "result": "Passed",
+              "total": "1",
+              "passed": "1",
+              "failed": "0",
+              "inconclusive": "0",
+              "skipped": "0",
+              "asserts": "0",
+              "engine-version": "3.5.0.0",
+              "clr-version": "4.0.30319.42000",
+              "start-time": "2026-09-13 16:32:09Z",
+              "end-time": "2026-09-13 16:32:10Z",
+              "duration": "1.0908002"
+            }
+          }
+        ],
+        "editModeCountingNote": "The correction EditMode XML has 65 passes: 64 Tide.Tests cases plus AddressableAssets.DocExampleCode.TestStub.RequiredTest. The vendor example is excluded from the 186 project cases.",
+        "newDistinctRegressionCases": 9,
+        "redTestExecutions": 12
+      },
+      "build": {
+        "platform": "macOS arm64",
+        "unity": "6000.5.6f1 (0e0577a1a2ac)",
+        "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+        "result": "Succeeded",
+        "buildReportBytes": 410875885,
+        "inventoryBytes": 410875885,
+        "inventoryFiles": 315,
+        "fingerprint": "6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e",
+        "fingerprintAlgorithm": "SHA256 of UTF-8 JSON of the sorted file inventory, sort_keys=True, separators=(comma,colon); paths repository-relative",
+        "inventory": "build-inventory-correction.json",
+        "assemblies": [
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.UI.dll",
+            "bytes": 46080,
+            "sha256": "2db17a6f216282a14004852a9b911e768fff6a575ecd38ee3b136c6190ab322d"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Data.dll",
+            "bytes": 17920,
+            "sha256": "8913a89b094988043ed240d33e91670a62f1663823168f1fd08310c1bf1cee4c"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Input.dll",
+            "bytes": 19456,
+            "sha256": "12fbb8b25b9bab245ab4a67cefc0dad7a3a1ad92fbd3fef856d4de36f0df91fa"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Save.dll",
+            "bytes": 24064,
+            "sha256": "1f8b2df3d505a0d26bb5fc0b9a0e70c5a46f11f471f5a59d8b721d1ebcaa0d06"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Presentation.dll",
+            "bytes": 14336,
+            "sha256": "bd59a288340eee104116f5c89c5fcd145ae50ed5b337fd0878cb8a8e26d4fadc"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+            "bytes": 158720,
+            "sha256": "bdaf40b0c34151ae5d53cb8f6ffdb6ac6c5260e1a523294d5d33e3f8275c3ac4"
+          },
+          {
+            "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Sim.dll",
+            "bytes": 67072,
+            "sha256": "b5628f06ca7b4a64776d823690d15937e3a3d879ba40ad6779535291c0dccfa0"
+          }
+        ],
+        "localApp": "unity/Unknown/Builds/T0-mac/Unknown.app",
+        "publishedBinary": false,
+        "enumeration": "333 entries independently enumerated with five untruncated glob partitions; 315 files exactly match the hashed inventory."
+      },
+      "sourceSnapshots": [
+        {
+          "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+          "bytes": 48442,
+          "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+          "bytes": 10495,
+          "sha256": "d68279315b6faf1df132a9015e241afbf8fca75df3443c85318c2d9e04d06a9e"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
+          "bytes": 7456,
+          "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+          "bytes": 15713,
+          "sha256": "e46f3d3d21d9ed383f75dbb70fab8cc47a286196dc1dddf9333ec031e327fe6b"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+          "bytes": 3219,
+          "sha256": "c4b870a38ce7ca4b47ceda398489b55c63952e78678adf69fcfc1bd8f0897c97"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
+          "bytes": 22172,
+          "sha256": "885320c41b96d134f5f42ac37337419030e52bc1f33898960979e4407cc604cb"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
+          "bytes": 11073,
+          "sha256": "f7daf019a76df7b08779893a6364d3b98ae7028c9e88fd7ab2b1fb5bb1f7c35d"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/T0ActionFeedbackSession.cs",
+          "bytes": 1362,
+          "sha256": "d4c4c246b7fa53a53aba95d6906d48f443c3f8de946863b21dd00885dec21596"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+          "bytes": 9569,
+          "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+          "bytes": 4089,
+          "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+          "bytes": 32583,
+          "sha256": "d8d6e37bcdcf53dd0e37f1cc1b66be0da6fb31c6282fab80f2e4c503dc9c7258"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
+          "bytes": 5243,
+          "sha256": "f1285b06091d1976d0fc2c05370cfff2b02656660f52306b091600ca59ba34f1"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
+          "bytes": 6766,
+          "sha256": "5593e0aea9cd298a1a903d604c681958172cd45d4dccc9a4dc43c60e86dc43b8"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+          "bytes": 7986,
+          "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Sim/AlignmentPractice.cs",
+          "bytes": 8547,
+          "sha256": "f93b36c9764734baf31abc5b9f8a6768968bdc5e73c7b72ff81c7aeffd350bf0"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+          "bytes": 9932,
+          "sha256": "d24a5cd450c456c044bde2e7be3bc74ea0a45728de556d9f4a6ed6efa336be0b"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Resources/M23AlignmentPractice.json",
+          "bytes": 1413,
+          "sha256": "3eb3a06a1c1340dd50c8d9d490fe380fed70ebbc7a67533b327e47d6f5c28a95"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Resources/M23Feedback.json",
+          "bytes": 700,
+          "sha256": "82d3d8d4dc246686d9458f851e35571fa307c1a56c95e022c536d6cb7aa9c7a0"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+          "bytes": 14558,
+          "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/UI/M21ReadingBackingInterface.cs",
+          "bytes": 5530,
+          "sha256": "3efac7422de95999bd2017c024b44c4b8b39e54544ea6cbe98dbea3b840ea547"
+        }
+      ]
+    },
+    "rootCause": "Pin visibility was checked only in ReaderComparisonScreen. Availability could be lost and restored while circuit remained active, leaving the transient pin alive.",
+    "change": "ClearUnavailableReaderPin runs once at T0GameSession.Render entry after the initialization guard, before choosing any surface; removed from the reader-specific projection.",
+    "reproduction": "Pin Ledger beside loaded Plate; switch to circuit; Undo until t0-b3 is unavailable; Redo while still on circuit; reopen reader. Published5d7b18c returned an extra Ledger graph; corrected build shows only Plate.",
+    "regression": "Tide.Tests.ReaderComparisonPlayModeTests.UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader",
+    "xml": [
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-pin-red.xml",
+        "bytes": 5097,
+        "sha256": "b720220070df53b9ffb87de0dfb9dd5fea53fc0870b298766ee04db373d7dc34",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:55:04Z",
+          "end-time": "2026-09-13 16:55:06Z",
+          "duration": "1.7742044"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-playmode-final.xml",
+        "bytes": 127144,
+        "sha256": "d758c19498107f738a28b8837f9017b7e2c3036a455acda2d26d0ffa4cc787a9",
+        "run": {
+          "id": "2",
+          "testcasecount": "123",
+          "result": "Skipped:Ignored",
+          "total": "123",
+          "passed": "122",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:57:16Z",
+          "end-time": "2026-09-13 16:58:26Z",
+          "duration": "69.6586145"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-boot-isolated.xml",
+        "bytes": 3439,
+        "sha256": "93681177370cf95250a98e9caf1ecd2a23b2a62ba8b18b95c46d13142d72766b",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Passed",
+          "total": "1",
+          "passed": "1",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 17:00:37Z",
+          "end-time": "2026-09-13 17:00:38Z",
+          "duration": "0.8241197"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/off-reader-boot-invocation-skipped.xml",
+        "bytes": 4196,
+        "sha256": "1b93aa0b532c20181c8cd325a38e3ff8ac614d6320e6c16925f245418fa427ef",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Skipped:Ignored",
+          "total": "1",
+          "passed": "0",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:58:40Z",
+          "end-time": "2026-09-13 16:58:40Z",
+          "duration": "0.0362223"
+        }
+      }
+    ],
+    "bootInvocationNote": "The first isolated-filter invocation omitted --t0-save-dir and was ignored. Retained as off-reader-boot-invocation-skipped.xml; not counted as a pass. Correct invocation used a newly owned /tmp/unknown-c1-m4-boot- prefixed directory and passed1/1.",
+    "buildFingerprint": "ba14f79e34fb87473660a4d6009c04796024d71825e1ea378f8f4c634e716161",
+    "inventory": {
+      "path": "_workspace/current/systems/tech-verification/m23/build-inventory-off-reader.json",
+      "bytes": 71452,
+      "sha256": "d26b296d75203dc92b30b9c16fb90c09e2a88dbda5b40eb0e662d7d860c1972f"
+    },
+    "testSource": {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/ReaderComparisonPlayModeTests.cs",
+      "bytes": 14744,
+      "sha256": "527c47c24ac040781737b383f1a840fa18c3b7e595e8e655d95af00c4569b214"
+    },
+    "native": {
+      "appPid": 23978,
+      "windowId": 7549,
+      "logicalWindow": [
+        640,
+        432
+      ],
+      "textScale": 1.5,
+      "flags": [
+        "--m23-alignment-practice",
+        "--m20-ui-surface-diagnostic"
+      ],
+      "fixture": "unity/Unknown/Builds/m23/off-reader-pin-native",
+      "captures": [
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/112-off-reader-pinned-pair.png",
+          "bytes": 727033,
+          "sha256": "e91232f363e3f1529df76eaed66f1e905acaacd206fedec07544db7bf3fe77f0"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/113-off-reader-circuit-before-undo.png",
+          "bytes": 683559,
+          "sha256": "7760cc10b64215819282f6ead6f3ba10a9dccfc5ca4fe02a75ab695b3818803a"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/114-off-reader-first-undo.png",
+          "bytes": 887139,
+          "sha256": "c2feb70da186429848a068130bc39ddf0cb71e816ccc6ca4aa15b19dbeb4aea8"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/115-off-reader-access-lost-t0-b2.png",
+          "bytes": 703795,
+          "sha256": "da93bcd8e18296763b08ae0422e0e42d826b04d1f295974b57626f64dd32dfb2"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/116-off-reader-redo-restores-access.png",
+          "bytes": 887091,
+          "sha256": "bb409048346729002b0dcde3ed02bf3ed16863afe66d3c33fc5f5ac9453d602b"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/117-off-reader-reopen-without-pin.png",
+          "bytes": 762464,
+          "sha256": "4a2a59094febedb16d325f38ba6f1cd58c9c60c8105a4852dc5918512ed23713"
+        }
+      ],
+      "actions": {
+        "path": "_workspace/current/systems/tech-verification/m23/native-off-reader-actions.json",
+        "bytes": 22433,
+        "sha256": "bea05ca029230fd244c2fd29603d8d1caa85863902db68f2ef66483e85e2d671"
+      },
+      "actionCount": 54,
+      "pinSaveBefore": {
+        "path": "unity/Unknown/Builds/m23/off-reader-pin-native/save.json",
+        "bytes": 8722,
+        "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+      },
+      "pinSaveAfter": {
+        "path": "unity/Unknown/Builds/m23/off-reader-pin-native/save.json",
+        "bytes": 8722,
+        "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+      },
+      "undoObserved": {
+        "beatId": "t0-b2",
+        "headSeq": 31
+      },
+      "redoObserved": {
+        "beatId": "t0-b3",
+        "headSeq": 32
+      },
+      "reopenObserved": {
+        "beatId": "t0-b3",
+        "headSeq": 35,
+        "parentSeq": 32,
+        "commandId": "CloseTool",
+        "current": "Plate",
+        "pinned": null
+      },
+      "projectedProgressUnchanged": true,
+      "processStopped": true,
+      "osRebooted": false,
+      "humanEvaluation": false
+    },
+    "cleanup": "No disposable producer or new production scaffold. Prior evidence remains tied to its original build. Current graph/index/wiki/freshness synchronization is recorded in verification.meta.md."
   }
 }

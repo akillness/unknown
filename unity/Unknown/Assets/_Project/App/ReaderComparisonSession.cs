@@ -30,7 +30,7 @@ namespace Tide.App
             comparisonResetScroll=true;
         }
 
-        void ReaderComparisonScreen(GameScreen screen)
+        void ClearUnavailableReaderPin()
         {
             if(pinnedReaderRange!=null&&
                 !Definition.Records[pinnedReaderRange.RecordId].VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))
@@ -38,6 +38,10 @@ namespace Tide.App
                 pinnedReaderRange=null;
                 comparisonResetScroll=true;
             }
+        }
+
+        void ReaderComparisonScreen(GameScreen screen)
+        {
             var loaded=Journal.State.LoadedRecordId;
             if(loaded==null)return;
             if(comparisonRecord==null||comparisonLoadedRecord!=loaded||

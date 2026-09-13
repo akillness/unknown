@@ -186,7 +186,7 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 
 | task | owner | phase | artifact | status |
 |---|---|---|---|---|
-| R1 현재/고정 두 기록 동시 비교 | systems, QA | P3/P4 | ReaderComparisonSession/View, m23/verification.json | done;150% 진단 대비·비교 저장 불변·Undo 비가시 출처 pin 해제/Redo 비복원 |
+| R1 현재/고정 두 기록 동시 비교 | systems, QA | P3/P4 | ReaderComparisonSession/View, m23/verification.json | done; 공통 Render 가시성으로 off-reader Undo/Redo 재진입 pin 비복원·native112–117 |
 | R2 공개 출처 수동 선택·후보와 기록 구분 | systems, QA | P3/P4 | C1SignatureGameSession/Data/Definition | done; 같은 루트 거부·명시 인용/확정·구 save replay/복구 |
 | R3 기존 M8 계보·요청형 질문 | systems, QA | P3/P4 | ReviewNotesSession | done; 사본2/원본1 표시·노트 재시작 바이트 보존; 기존 원문 복귀 경계 유지 |
 | R4 문구/감사 강도 정정과 생성물 동기 | canon, planner, systems | P3/P4 | m23-r4-canon-consistency.md, preservation-audit.json | correction done; campaign50/graph18/Node7; 강한 P1/P2 exit3 blocked |
@@ -196,5 +196,5 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | R8 재방문 생산 | planning, systems | P3 | Base production gate | blocked; 사람·개념·실제 노력·게이트 미충족 |
 | R9 증언/3제출 생산 | synopsis, systems | P3 | Base production gate | blocked; 준비 패널은 후반 생산 완료가 아님 |
 | R10 전체 완주/목표 장치 | QA, production | P4 | m23/verification.json | partial; 현재 슬라이스 복구/Mac만 검증. 전체450–540분·Windows 미측정 |
-| 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; 초기35ebdc5 후 Q6–Q11 교정, 프로젝트 Unity186·Mac410875885B·정확한 빌드별 native. 새 producer 없음·소유 플레이어 종료 |
+| 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; Q6–Q11 및 Q6 off-reader 경계 교정. 프로젝트 Unity187·Mac410875921B·epoch별 native. 새 producer 없음·소유 플레이어 종료 |
 | 소스 전달과 최종 개선 계획 | director | P5 | handoff/m23-results-and-improvement-plan.md | 최신 요청의 명시적 commit/normal push 승인; 기존 M22/Aside 보존. 실제 커밋/원격 결과는 Git 기록을 따름 |

@@ -692,3 +692,10 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [VERIFY] 후속 Q6–Q11 모두 closed(C7-F61..F66). 신규9사례의 RED12회와 최종121 PlayMode/64 프로젝트 EditMode/1 boot=186. Mac315파일/410875885B·6c88870f…; 정확한 소스/빌드 epoch와 native Undo/Redo·최종 연습 바이트 불변은 m23/verification.json에 기록한다.
 - [PRESERVE] pending 화면 Back은 쓰기를 계속하고 Esc/Undo는 취소한다. 원래 영상/17스틸/177사례를 새 빌드로 소급하지 않는다. 초기/중간/최종 목록을 따로 보존한다. 기존 로그53개·다른 작업·승인 자산을 삭제하지 않는다.
 - [GATE] 사람0·강한 P1/P2 blocked·실제 노력/Windows/전체 완주 미측정·Base/R8/R9 차단을 유지한다. 일반 push 승인은 이번 사용자 요청의 개발 소스 전달에 한정된다.
+
+### Q6 off-reader 수명 보강 · 5d7b18c 이후
+
+- [REPRO] 추가 리뷰 경로는 실제로 extra Ledger 차트를 남겼다. reader 내부 검사만으로는 다른 화면에서 일시적으로 상실된 접근을 관찰하지 못한다.
+- [DECISION] pin 가시성 소유권은 특정 UI가 아니라 세션 공통 Render에 둔다. 초기화 guard 뒤에서 한 번 검사하고 특정 화면의 중복 검사는 제거한다.
+- [VERIFY] off-reader RED1 → 최신 PlayMode122/0fail/1격리skip +boot1/1 +프로젝트 EditMode64=187. 최초 boot 인자 누락 skip은 별도 보존한다. Mac410875921B·ba14f79e…; native112–117에서 회로Undo/Redo 후 reader 단일 차트, 비교 save 불변·전체 progress 복원을 관찰했다.
+- [BOUNDARY] C7-F61 확장이며 새 결함으로 더하지 않는다. 원래186개/6c88870f… 증거를 새 빌드로 소급하지 않는다. 사람·Base·강한 보존·Windows·전체 캠페인 gate는 그대로다.

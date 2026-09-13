@@ -51,6 +51,6 @@ owner: game-qa
 
 ## 준비 경로의 실제 스모크
 
-[OBSERVED 2026-09-14] 초기35ebdc5의315파일/410875105B·d310c591…와 영상은 당시 기록이다. 후속 최종 앱은315파일/410875885B·`6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e`이며 `systems/tech-verification/m23/build-inventory-correction.json`이 전체 목록을 소유한다. 향후 사람 평가는 이 최신 후보에서 빌드·인자를 다시 동결해야 한다. boundary-reader는 개발 체크포인트이고 진단/연습 노출 실행을 초회 표본으로 재사용하지 않는다.
+[OBSERVED 2026-09-14] 초기35ebdc5 및5d7b18c의 앱/영상은 당시 기록이다. 현행은315파일/410875921B·`ba14f79e34fb87473660a4d6009c04796024d71825e1ea378f8f4c634e716161`, 목록은 `systems/tech-verification/m23/build-inventory-off-reader.json`이다. 향후 사람 평가는 이 최신 후보의 빌드·인자를 다시 동결해야 한다. boundary-reader/off-reader-pin-native는 개발 시편이며 진단/연습 노출을 초회 표본으로 재사용하지 않는다.
 
 `screencapture -v -l7213 -V8 -k -x <output>`로 당시 개발 앱 창 한 개를 실제 녹화했다.7.931667초·1664×1098·H264·오디오0개,4초 프레임을 확인했다. 영상은 `systems/tech-verification/m23/native/reader-window.mov`이며 Q5 이전 개발 빌드다. 전체 데스크톱/마이크가 아니고,45분 수집 안정성·전체 이벤트 producer·참가자 동의·사람 세션 실행의 증거도 아니다. 실제 n=0은 변하지 않았다.

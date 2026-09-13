@@ -10,7 +10,7 @@ owner: game-production-director
 
 ## 결론
 
-**R1/R2/R3/R5/R7을 현재 T0→C1-b2 범위에 구현하고, R4의 문구·감사 강도를 교정했다.** 초기 `35ebdc5`의 S2 다섯 건 이후, 경계 리뷰/실제 진단 화면에서 후속6건(S2 5·S3 1)을 추가 교정했다. 최종 Unity 고유186개 통과, macOS 빌드와 실제150% 네이티브 조작을 확인했다. 최초177개·Node7개 증거도 당시 빌드 기록으로 보존한다.
+**R1/R2/R3/R5/R7 구현과 R4 계약 교정을 마쳤다.** 초기35ebdc5의 S2 다섯 건과5d7b18c의 후속6건(S2 5·S3 1)에 더해, 같은 Q6의 판독기 밖 재발 경계도 교정했다. 최신 Unity 프로젝트 고유187개 통과와 macOS 네이티브를 확인했다.177/186개 및 이전 캡처는 각 빌드의 역사로 남긴다.
 
 **R6 실제 사람 평가, R8/R9 본 생산, R10 전체450–540분·목표 Windows 평가는 차단 상태다.** 사람0명·실제 노력 기록 없음·강한 보존 감사 blocked를 통과로 바꾸지 않았다. 이번 개발/Git 승인은 Base·상업·Steam 출시 승인이 아니다.
 
@@ -20,11 +20,11 @@ owner: game-production-director
 
 | 권고 | 결과 | 관찰한 인수 증거 / 남은 경계 |
 |---|---|---|
-| R1 두 자료 동시 비교 | 구현·검증 | 현재/고정 자료의 수치·단위·조위 시간·결손 동시 표시. 비교 선택/고정 전후 저장 해시 불변. Undo로 고정 출처의 접근이 없어지면 해제하고 Redo로 자동 복원하지 않음(스틸86/89/90/92). 진단 카드·CaseThread 대비 회귀 포함. 실제 LoadRecord/Read/Cite는 여전히 별도 게임 명령 |
+| R1 두 자료 동시 비교 | 구현·검증 | 현재/고정 자료의 수치·단위·조위 시간·결손 동시 표시, 비교 전후 저장 불변. 검사 위치를 공통 Render로 옮겨 회로 화면에서 접근 상실→Redo→판독기 재진입해도 pin이 복원되지 않음(native112–117). 실제 LoadRecord/Read/Cite는 별도 게임 명령 |
 | R2 직접 근거 선택 | 구현·검증 | 공개된 원문/생성 사본만 좌·우 선택. 같은 원본/매체 거부. 미기록 후보는 이전 proof를 지우지 않으면서 확정 차단. 명시 인용→미리보기→2단계 확정→프로세스 재시작 복구. 구 무표식 save/reducer/hash와 새 payload 분리 |
 | R3 출처 계보/M8 | 구현·검증 | 사본2개가 원본1개임을 기존 노트에서 보여준다. 질문은 버튼 요청 후만 노출. 노트239B가 재시작 후 동일. C1/도구 상태의 기존 원문 복귀 제한을 새 기능처럼 주장하지 않음 |
 | R4 정본/검사 정합 | 교정 완료·강한 증명 차단 | 폐국 고지/확정 기본 라벨/save 버전/대장 마지막 관측 힌트 정정. emitter→검증→기존 importer 실행, 증거 그래프 재발행. P1 대안2쌍/P2 양쪽 불파괴 약속은 유지. 강한 감사 exit3/blocked |
-| R5 조위정합 시편 | 구현·검증 | 수동3대응→제안→수동 적용/잠금, 겹침unknown·순서와 인과 구분은 보존. 직접 세션 API6개를 mutation 전에 차단. 최종150% 트랙/라벨/오차대/대응 설명·양 끝 피크·종료를 확인했고 save/save.bak/settings 3파일 바이트/목록 불변. Editor 또는 명시적 --m23-alignment-practice만 진입 |
+| R5 조위정합 시편 | 구현·검증 | 수동3대응→제안→수동 적용/잠금, 겹침unknown·순서와 인과 구분 보존. 직접 API6개 격리.5d7b18c의 실제150% 피크/라벨/오차대/설명/3파일 불변 증거를 보존하며 최신122 PlayMode에도 회귀 통과. Editor 또는 명시적 인자에서만 진입 |
 | R6 대표 사람 평가 | 준비만·blocked | 초회12명/5유형과 연습 노출 파일럿을 분리한 동결/채점/AFK 계약. 실제 창 한 개의 약8초 무음 녹화만 실행. 전체 연구 이벤트 producer 및45분 안정성은 구현/검증 완료가 아님 |
 | R7 수락/저장 피드백 | 구현·검증 | 수락·작업저장·미리보기·확정저장·실패 구별. 큐 sequence와 표시 revision의 소유권 분리. 늦은 실패, 취소 뒤 no-op, 화면 Back 처리. 저장 문구를 오른쪽 고정 영역에 두어 깊은 근거 초점에서도 유지 |
 | R8 재방문 질문 | gate-blocked | Base 네 조건 충족 전 후반 구역 생산을 시작하지 않음 |
@@ -49,23 +49,25 @@ ReaderCompare·SignatureSources·AlignmentPractice·CanonConsistency가 소유�
 
 초기 정적 리뷰의 “추가 입증 결함 없음”은 당시 담당 범위의 결과였고, 이후 Q6–Q11이 발견됐다. 후속 PracticeIsolationFix/PracticeContrastFix는 분리된 회귀 파일과 패치 제안을 맡았으며 Main이 RED·적용·전체 실행·네이티브를 수행했다. 실제 세션 API 경계 검증이지 Initialize/직접 Journal 객체 변조에 대한 sandbox 증명은 아니다. pending 화면 닫기는 쓰기를 계속하고 Esc/Undo는 취소하는 기존 구분을 유지한다.
 
+추가 Q6 반례: Ledger pin→회로 지도→접근 상실까지 Undo→회로에서 Redo→판독기 재진입 시 extra Ledger가 남았다. `ClearUnavailableReaderPin()`을 공통 `Render()`의 초기화 검사 직후로 옮겼다. 신규1사례 RED→GREEN과 native112–117을 확인했다. 같은 결함의 미포함 경계이므로 새 결함 id/개수를 만들지 않는다.
+
 ## 실행 증거
 
 | 실행 | 결과 |
 |---|---|
 | Unity6000.5.6f1 EditMode | 프로젝트64 통과. 교정 XML의65번째 외부 Addressables 예제 stub는 합계 제외 |
-| 최종 PlayMode |121 통과/0실패/격리 boot1 skip |
-| 별도 boot |1/1 통과; 위 skip과 중복 계상하지 않음 |
-| 고유 Unity 사례 |186 통과. 후속 신규9사례가 RED→GREEN; RED 실행12회/반복 실행을 고유 개수로 더하지 않음 |
+| 최종 PlayMode |122 통과/0실패/격리 boot1 skip |
+| 별도 boot |올바른 격리 인자로1/1. 첫 인자 누락 실행은 skip이며 성공으로 세지 않음 |
+| 고유 Unity 사례 |187 통과. 후속10사례 RED→GREEN; RED13회와 반복 실행/외부 예제는 중복 계상하지 않음 |
 | Node 보존 감사 회귀 |7/7 통과 |
 | 정본/발행 T0/파생 그래프 |campaign50/50; T0 각 출력5/5; 그래프18/18 |
 | 강한 P1/P2 감사 |exit3/blocked, 최소쌍17비트 통과와 별도 |
-| 최종 macOS 앱 |Succeeded,315파일·410,875,885B; 전체 파일 정렬 지문6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e |
-| 실제 native |기존17스틸 + 후속11스틸. 후속71/95는 대비 실패,99는 대비 수정 후 피크 잘림 증거다.86/89/90/92는 reader-contrast 빌드의 Undo/Redo,104/106/107/108은 최종 빌드의 reader/정합/설명/복귀. 빌드별 구분은 영수증 참조 |
+| 최종 macOS 앱 |Succeeded,315파일·410,875,921B; 전체 파일 정렬 지문ba14f79e34fb87473660a4d6009c04796024d71825e1ea378f8f4c634e716161 |
+| 실제 native |기존17 +첫 교정11 +마지막6스틸.112 두 차트,113/114 회로t0-b3,115 회로t0-b2,116 회로Redo t0-b3,117 판독기 단일 차트/고정 없음. 이전6c88870f… 정합 증거를 최신ba14f79e…로 소급하지 않음 |
 | 재시작 |앱 프로세스 종료/재시작. OS 재부팅은 수행하지 않음 |
 | 수동 녹화 경로 |창 한 개7.931667초,1664×1098 H264,무음. 인코딩 fps는 게임 성능이 아님 |
 
-앱은 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`에 있다. 대용량 앱·개발 체크포인트·전체 Unity 로그는 Git에 넣지 않는다. [build-inventory-correction.json](../systems/tech-verification/m23/build-inventory-correction.json)이 현행 전체 파일 지문이고, 원래 build-inventory.json 및 두 중간 비교/정합 목록은 역사 증거다. 같은 파일 크기나 App DLL 하나로 신구 빌드를 묶지 않는다. 후속 작업은 새 producer를 만들지 않았고 소유 플레이어를 모두 종료했다.
+현행 앱은 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`, 전체 목록은 [build-inventory-off-reader.json](../systems/tech-verification/m23/build-inventory-off-reader.json)이다. 나머지 네 build-inventory 목록은 이전 epoch다. 앱·체크포인트·전체 로그는 Git에 넣지 않는다. 마지막 시나리오는 별도 off-reader-pin-native에서 실행했고 원래 boundary-reader를 바꾸지 않았다. 새 producer 없음, 소유 플레이어 종료.
 
 ## 다음 개선 순서와 통과 조건
 

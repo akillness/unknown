@@ -21,7 +21,7 @@ owner: game-qa
 
 [EXCLUDED] 19번 매크로는 전이 후 도구막대 초점을 잘못 가정하여 연습장을 나갔다. 이후 본편 조작을 격리 검증으로 세지 않는다. 32–34번 포인터 스크롤/드래그는 관찰상 이동하지 않았으므로 가시성 증거로 쓰지 않는다. 신구 캡처를 App DLL 하나로 동일 빌드라 부르지 않는다.
 
-## 후속 교정 스틸의 정확한 역할
+## 5d7b18c 교정 스틸의 정확한 역할
 
 - 71: 이전410875709B 빌드의 진단 reader 대비 실패. 전체 지문 미보존의 중간 부정 증거이며 최종 판정 아님.
 - 86/89/90/92:11a42388… 빌드에서 서로 다른 자료 비교 → 첫 Undo에도 pin 유지 → t0-b2에서 Ledger pin 해제 → Redo t0-b3에서도 고정 없음.91은 실행 전 t0-b2의 Redo 초점이므로 대신 쓰지 않는다.
@@ -29,3 +29,9 @@ owner: game-qa
 - 104/106/107/108: 최종6c88870f…의 reader, 전체6피크/2라벨/오차대, 하단 대응 설명과1/I/H 격리, Escape 복귀. save/save.bak/settings 목록·바이트·해시가 전후 동일하다.
 - 새 입력 기록은 native-correction-actions.json의192이벤트다.3개 빌드 목록을 분리했고 크기가 같은35755c5c…와6c88870f…도 동일 빌드로 부르지 않는다. 모든 소유 앱을 종료했다. OS 재부팅/사람/Windows 측정 없음.
 - ledger-correction-slide-19.png: 후속 대장176행/C7 66·39을 기존 덱으로 생성한 브라우저 스틸.1440×900 logical·1800×1125 pixels에서63셀 대조/전체 표 가시성 확인.429428B·SHA256 `713d9742aeedc296fb3258b4668162e2456eb2037c4e73098f045135dfdf6d4d`. 새 native11스틸과 별도로 세며 게임 증거가 아니다.
+
+## 최신 off-reader pin-lifetime 증거
+
+- 112 두 자료/단위/창의 실제 pin.113/114 회로t0-b3,115 회로t0-b2,116 회로Redo t0-b3,117 reader 재진입의 단일 Plate/고정 없음. 모두 ba14f79e… 빌드다.
+- 별도 시편 off-reader-pin-native, PID23978/window7549·640×432logical·150%텍스트. 비교 구간 save 해시 동일, 최종 progress도 시편 시작과 동일하다. journal parent32→seq35는 새 CloseTool 분기이지 세 번의 새 입력이라는 뜻이 아니다.
+- native-off-reader-actions.json54이벤트, 선별 스틸6개.109–111 준비 프레임은 로컬에만 두었다. 소유 앱을 종료했으며 사람/OS재부팅/Windows 증거 없음.

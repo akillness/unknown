@@ -47,7 +47,7 @@ R4의 강한 P1/P2 보존 감사는 증거 부족 **exit3/blocked**다. 최소 �
 - RuntimeAcceptance는 Q1/Q2/Q4와 고정 피드백 배치를 정적으로 재검토하고 담당 범위의 추가 입증 결함 없음으로 종료했다. 네이티브 실행/테스트는 Main의 증거라고 명확히 분리했다.
 - 전이 후 도구막대 초점을 놓친 매크로19는 연습장을 나간 뒤 일반 게임을 조작했으므로 격리 증거에서 제외한다.32–34의 합성 포인터 스크롤/드래그도 실제 이동이 관찰되지 않았다. 도구의 `ok`/`synthetic_input:unverified`를 게임 행동 성공으로 세지 않는다.
 
-## 최초 전달 후 경계·진단 화면 교정
+## 35ebdc5→5d7b18c 경계·진단 화면 교정
 
 Main이 Q6를 추적한 뒤 PracticeIsolationFix와 PracticeContrastFix에 서로 다른 테스트 파일을 위임했다. 두 레인은 validation/프로덕션 편집 없이 회귀와 패치를 제안했고 Main이 실행·적용·빌드했다. Q9–Q11은 Main의 실제 창 관찰에서 발견됐다.
 
@@ -65,3 +65,11 @@ Main이 Q6를 추적한 뒤 PracticeIsolationFix와 PracticeContrastFix에 서�
 - 최종 native에서 모든 피크·A/B 라벨·오차대·하단 대응 설명을 직접 보았고1/I/H 후 연습장이 유지됐다. Escape는 원래 reader로 돌아갔으며 save/save.bak/settings의 목록·바이트·해시가 전후 동일했다. 직접 API6개는 PlayMode 증거이지 native에서 외부 API를 호출한 증거가 아니다.
 - frame87의 예상 Undo 파일명과 달리 실제 초점은 Cite였다. Enter를 보내지 않고 두 Tab 뒤 frame88의 Undo 초점을 확인했다.91은 t0-b2의 Redo 초점,92는 실제 Redo 후 t0-b3/고정 없음이다. 실패한 focus 복원/미이동 hotkey·scroll은 성공으로 세지 않았다.
 - 최초 회귀 작성의 누락된 Tide.UI import로 생긴 컴파일 오류는 테스트 RED로 세지 않았다. 실제 실패 XML 이후에만 원인 교정을 적용했다. renderer 소유 GetMesh() 반환값은 파괴하지 않는다.
+
+## 5d7b18c 이후 Q6 off-reader 경계 보강
+
+- 추가 리뷰의 경로를 실제 회귀로 재현했다. Ledger pin→회로→Undo로 t0-b3 상실→회로에서 Redo→reader 재진입 시 `rec-tide-ledger-bureau`가 extra graph로 남았다.5d7b18c는 이 경계를 해결한 버전이 아니다.
+- 비교 화면의 검사를 `ClearUnavailableReaderPin()`으로 분리해 공통 `T0GameSession.Render()`의 초기화 guard 다음에 호출한다. 특정 도구/오버레이가 보이는지와 무관하며 출처가 계속 접근 가능하면 pin은 보존한다.
+- 신규1사례의 실제 RED 후 전체122 PlayMode/0fail/boot1skip와 올바른 별도 boot1/1. 프로젝트 EditMode64를 합친 고유187이며 후속 고유 회귀는 총10이다. 인자를 누락한 첫 boot 호출의 skip은 별도 XML로 보존하고 성공으로 세지 않는다.
+- 최신 Mac315파일/410875921B·ba14f79e…에서112는 두 기록,113/114는 회로t0-b3,115는 회로t0-b2/head31,116은 회로t0-b3/head32,117은 reader 재진입/고정 없음이다. 재진입 CloseTool은 parent32/seq35의 새 분기이며 단순 연속 seq로 해석하지 않는다. 시작/최종 progress가 같고 비교만 수행한 구간은 save 해시가 같다.
+- 같은 C7-F61의 경계 확장이므로 결함을 중복 추가하지 않는다. Main이 테스트·빌드·실제 입력을 수행했고 소유 PID23978을 종료했다. 전체 인간/생산/Windows gate는 그대로다.

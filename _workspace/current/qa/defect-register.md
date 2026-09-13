@@ -640,11 +640,11 @@ R7d-1 로 재생성한 시점의 대장은 **이 동기화 이전 상태**다(C5
 | C7-F58 | S2 | systems / QA | M23-Q3: 글자150% 연습장의 하단 대응 설명에 키보드 경로 없음 | 페이지 위/아래의 실제 Enter 회귀와 최종 스틸61/62/63. 재렌더 없이 이동·초점/본편 저장 불변 | **closed** | game-systems-designer |
 | C7-F59 | S2 | systems | M23-Q4: commit 취소 뒤 tip Redo가 no-op이라 무효화된 작업 autosave를 대체하지 않음 | CancelPending 결과에 따른 변경본/현재본 재저장, 지연·실패·no-op 경계 회귀 최종 통과. 새 상황/새 commit의 소유권 별도 무효화 | **closed** | game-systems-designer |
 | C7-F60 | S2 | systems / QA | M23-Q5: 실제 깊은 C1 근거 초점에서 WorkSaved가 스크롤 밖으로 사라짐 | native37·feedback-visibility-red.xml 실패. 첫 Navigation 축소안의 Band comparison 실패도 보존. 오른쪽 고정 영역안의 최종112 pass 및 native49/50/51/54에서 가시성/실제 내구 확정 확인 | **closed** | game-systems-designer |
-| C7-F61 | S2 | systems / QA | M23-Q6: Plate가 loaded인 채 Undo로 Ledger 접근을 잃어도 고정 대장 차트 잔류 | correction-boundary-red 원재현. 렌더 가시성 검사 후 최종121 pass. native86/89/90/92에서 pin 유지→접근 상실 해제→Redo 비복원 | **closed** | game-systems-designer |
+| C7-F61 | S2 | systems / QA | M23-Q6: Undo로 접근을 잃은 pin 잔류; 판독기 밖 Undo/Redo는 첫 수정도 우회 | 최초 reader RED와 추가 off-reader-pin-red 모두 보존. 공통 Render 진입점에서 해제해122 PlayMode 통과. 최신 native112–117: 회로에서 접근 상실/복구 뒤 reader 재진입해도 pin 없음 | **closed** | game-systems-designer |
 | C7-F62 | S2 | systems / QA | M23-Q7: 연습 중 직접 세션 API6개가 작업면을 바꾸거나 설정/노트 파일을 씀 | legal T0/C1 fixture 포함 RED6건, mutation 전 guard 이후 표면/저널/파일 목록·바이트 불변과 정상 경로 통과. pending Back/취소 의미 보존 | **closed** | game-systems-designer |
 | C7-F63 | S2 | systems / QA | M23-Q8: 이름이 다른 연습 대응 설명이 M21 읽기 배경에서 빠짐 | 기본 Text 식별자 복원. 실제150% 문단 배경/흐름/대비 RED→GREEN 및 최종 native107/108 | **closed** | game-systems-designer |
-| C7-F64 | S2 | systems / QA | M23-Q9: 진단 배경의 비교 카드/CaseThread에 별도 읽기 바탕 없음 | native71과 카드/CaseThread RED. 비입력 부모 배경으로 원래 색/이름 보존, 최종121 pass 및 native86/104 | **closed** | game-systems-designer |
+| C7-F64 | S2 | systems / QA | M23-Q9: 진단 배경의 비교 카드/CaseThread에 별도 읽기 바탕 없음 | native71과 카드/CaseThread RED. 비입력 부모 배경으로 원래 색/이름 보존.5d7의121 pass/native86·104와 최신122 pass/native112·117 | **closed** | game-systems-designer |
 | C7-F65 | S2 | systems / QA | M23-Q10: 진단 연습 트랙·A/B 라벨이 어두운 표면과 같은 ink라 보이지 않음 | native95/실제 RED. 별도 부모 배경·실제 mesh 획/라벨 대비 검사, 최종 native106에서 가시성 확인. 미승인 프로필 상태 불변 | **closed** | game-systems-designer |
 | C7-F66 | S3 | systems / QA | M23-Q11: 가로2.5% 여백보다 넓은 끝 피크가 차트 밖으로 잘림 | native99 및 기본 모드 mesh 왼쪽4.48단위 초과 RED.4% 여백 후 양 모드 경계 회귀와 native106에서 전체 피크 확인 | **closed** | game-systems-designer |
 
-영수증 루트는 `systems/tech-verification/m23/`다. 초기5건+후속6건 모두 closed이며 사람 이해/전체 캠페인/Windows/강한 P1/P2 입증은 별개다. 후속 고유 회귀9건·최종 프로젝트 Unity186통과를 반복 실행 수로 부풀리지 않는다. Gate 조건을 통과로 올리지 않는다.
+영수증 루트는 `systems/tech-verification/m23/`다. 초기5건+후속6건 closed, Q6의 off-reader 반례도 추가 교정했다. 고유 후속 회귀10건·프로젝트 Unity187통과이며 같은 결함/반복 실행을 중복 계상하지 않는다. 사람 이해/전체 캠페인/Windows/강한 P1/P2 입증은 별개 미충족이다.

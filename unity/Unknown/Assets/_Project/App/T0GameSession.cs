@@ -213,6 +213,7 @@ namespace Tide.App {
   public void SetConfirmMode(string mode){if(AlignmentPracticeActive)return;settings[SignatureActive?"c1SignatureConfirmMode":PatrolActive?"c1ConfirmMode":"confirmMode"]=mode;SaveSettings();}
   public void Render(){
    if(bootFailed||strings==null)return;Interface.TextScale=(float?)settings["textScale"]??1f;
+   ClearUnavailableReaderPin();
    SyncHintContext(Time.unscaledTime,true);
    var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter(),ActionFeedback=AlignmentPracticeActive?null:ActionFeedbackText};
    Watch.ToolPanel=tool!=null&&!OpeningActive&&!AlignmentPracticeActive;Watch.OverlayActive=overlay!=null;

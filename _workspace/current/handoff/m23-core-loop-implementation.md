@@ -89,9 +89,13 @@ owner: game-production-director
 
 후속 경계 교정에서는 Main이 `PracticeIsolationFix`에 T0PlayModeTests의 회귀 작성, `PracticeContrastFix`에 T0ReadingBackingPlayModeTests의 회귀 작성을 명시 위임했다. 두 레인은 프로덕션 패치를 제안만 했고 Main이 RED 실행 뒤 적용·통합했다. ReaderComparison/CaseThread 대비의 실제 네이티브 발견과 교정도 Main 소유다. 화면의 pending 닫기는 쓰기를 계속하고 Esc/Undo는 취소하는 구분을 유지한다.
 
-## 최초35ebdc5 이후 교정
+## 35ebdc5→5d7b18c 첫 교정
 
 - Q6–Q11/C7-F61..F66을 추가로 닫았다. Undo로 비가시화된 pin을 해제하고 연습장 직접 세션 API6개는 mutation 전 반환한다. pending 화면 Back과 Esc/Undo 취소의 기존 구분은 바꾸지 않는다.
 - M21 Text 규칙과 이름 있는 CaseThread를 유지하면서 진단 카드/트랙의 부모 읽기 배경을 분리했다. 기본 색/상업 승인 상태는 그대로다. 실제 mesh 끝점 반례로 가로 피크 여백은 양 모드4%로 수정했다.
 - 분리 테스트 파일에 한해 PracticeIsolationFix/PracticeContrastFix가 회귀/패치 제안을 맡았고, validation과 프로덕션 통합은 Main이 전담했다. 최종 고유186(프로젝트 EditMode64 + PlayMode121 + boot1), 신규9사례 RED→GREEN이다. 외부 stub1/RED 반복12회를 중복 계상하지 않는다.
 - 최종 Mac315파일/410875885B·6c88870f…와 native104/106/107/108의 모든 피크/라벨/설명/복귀·3파일 바이트 불변을 확인했다. Undo/Redo native86/89/90/92는 중간11a42388…에서 얻은 별도 증거다. 전체 지문/소스/부정 증거는 `systems/tech-verification/m23/verification.json`을 따른다.
+
+## 5d7b18c 이후 Q6 경계 보강
+
+판독기 화면 내부 검사만으로는 다른 도구에서 접근 상실→복구가 일어난 사이를 놓쳤다. 공통 Render 진입점의 `ClearUnavailableReaderPin`으로 옮겼다. 새 off-reader 회귀 RED→GREEN,122 PlayMode/64 프로젝트 EditMode/1 boot=187통과, macOS410875921B·ba14f79e…와 native112–117로 회로 Undo/Redo 후 단일 차트 재진입을 확인했다. 기존 빌드/사람 gate를 소급 변경하지 않는다.

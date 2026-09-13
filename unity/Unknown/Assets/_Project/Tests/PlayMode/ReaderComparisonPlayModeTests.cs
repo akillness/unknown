@@ -105,6 +105,32 @@ namespace Tide.Tests
             Assert.AreEqual(1,Charts().Length,"Restoring access must not resurrect a cleared presentation pin");
         }
 
+        [UnityTest] public IEnumerator UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader()
+        {
+            game.OpenTool("circuit");
+            Click("begin-overlay");Click("offset-left");Click("offset-up");Click("anchor-overlay");
+            var area=game.Definition.UncoveredAreas[0];
+            Click("area-"+area);Click("area-"+area);
+            game.OpenTool("reader");Click("reader-compare-"+Ledger);Click("reader-compare-pin");
+            Click("reader-compare-"+Plate);
+            yield return null;
+            CollectionAssert.AreEqual(new[]{Plate,Ledger},Charts().Select(c=>c.Range.RecordId).ToArray());
+            game.OpenTool("circuit");
+            game.Undo(); // Open circuit.
+            game.Undo(); // Earlier close circuit.
+            game.Undo(); // Area mark that made Ledger available.
+            yield return null;
+            Assert.IsFalse(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Assert.AreEqual(Plate,game.Journal.State.LoadedRecordId);
+            Assert.AreEqual(0,Charts().Length,"Availability is lost while the reader is not rendered");
+            game.Redo();yield return null;
+            Assert.IsTrue(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Assert.AreEqual(0,Charts().Length,"Redo restores access without reopening the reader");
+            game.OpenTool("reader");yield return null;
+            CollectionAssert.AreEqual(new[]{Plate},Charts().Select(c=>c.Range.RecordId).ToArray(),
+                "A pin invalidated off-reader must not resurrect when that surface is reopened");
+        }
+
         [UnityTest] public IEnumerator FlatAndSingleSampleWindowsRenderButMissingWindowDoesNotInventSignal()
         {
             Window("H-4:20","H-3:52");yield return null;Canvas.ForceUpdateCanvases();

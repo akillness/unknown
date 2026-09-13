@@ -8,7 +8,7 @@ owner: game-qa
 
 # M23 · build-inventory.json
 
-[OBSERVED] 초기35ebdc5 전달의 macOS 앱315파일/410875105B 목록이다. “최종”은 당시 빌드를 뜻한다. 현행은 build-inventory-correction.json이며 중간 reader/practice-contrast 목록과도 구분한다. 앱 전체는 로컬 Builds에만 보관하며 이 목록은 다운로드 바이너리가 아니다.
+[OBSERVED] 초기35ebdc5의 macOS315파일/410875105B 목록이다. 현행은 build-inventory-off-reader.json이며 correction/reader-contrast/practice-contrast도 각각 이전 빌드다. 앱은 로컬 Builds에만 보관하고 목록을 다운로드 바이너리로 표현하지 않는다.
 
 | 파일 | bytes | SHA-256 |
 |---|---:|---|

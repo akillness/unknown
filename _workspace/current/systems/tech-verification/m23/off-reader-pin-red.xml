@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.7742044">
+  <test-suite type="TestSuite" id="1149" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="123" result="Failed" site="Child" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.774204" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1143" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="123" result="Failed" site="Child" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.767262" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="900" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1144" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="123" result="Failed" site="Child" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.765834" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1145" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="123" result="Failed" site="Child" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.764469" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1058" name="ReaderComparisonPlayModeTests" fullname="Tide.Tests.ReaderComparisonPlayModeTests" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.760459" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1062" name="UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" fullname="Tide.Tests.ReaderComparisonPlayModeTests.UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" methodname="UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1120956837" result="Failed" start-time="2026-09-13 16:55:04Z" end-time="2026-09-13 16:55:06Z" duration="1.751952" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A pin invalidated off-reader must not resurrect when that surface is reopened
+  Expected is <System.String[1]>, actual is <System.String[2]>
+  Values differ at index [1]
+  Extra:    < "rec-tide-ledger-bureau" >]]></message>
+                <stack-trace><![CDATA[at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable expected, System.Collections.IEnumerable actual, System.String message, System.Object[] args) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0
+at Tide.Tests.ReaderComparisonPlayModeTests+<UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader>d__14.MoveNext () [0x0033a] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/ReaderComparisonPlayModeTests.cs:130
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

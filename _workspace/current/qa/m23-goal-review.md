@@ -47,3 +47,5 @@ owner: game-qa
 [OBSERVED 2026-09-14] 이후 Main 실행과 RuntimeAcceptance/EvidenceAcceptance의 독립 정적 리뷰에서 Q1–Q5를 발견·수정했다. 원재현 RED와 중간 실패, 최종177개 고유 Unity 통과 및 실제150% 네이티브 증거는 `qa/m23-integration-review.md`와 `systems/tech-verification/m23/verification.json`을 따른다. 위 초기 TARGET/정적 검토를 실행 증거로 소급하지 않는다. R6/R8/R9/전체R10 및 강한 P1/P2 보존 입증은 계속 차단이다.
 
 [POST-PUBLICATION] 초기35ebdc5 뒤 후속 Q6–Q11의 가시성·직접 API·진단 대비·끝점 경계를 교정했다. 추가9개 고유 회귀를 포함한 최종 프로젝트 Unity186통과와 빌드별 native 증거는 위 영수증의 postPublicationCorrection을 따른다. PracticeIsolationFix/PracticeContrastFix는 분리 테스트/패치 제안을 했고 실제 검증은 Main 소유다. 초기 목표 합의·미측정 gate는 소급 변경하지 않는다.
+
+[FINAL FOLLOW-UP]5d7b18c 이후 같은 Q6의 off-reader Undo/Redo 재발을 실제 RED로 확인하고 공통 Render에서 해제하도록 보강했다. 최신187개 고유 프로젝트 통과 및 native112–117은 영수증의 offReaderLifetimeFollowUp에 있다. 위177/186개 및 이전 네이티브는 각 빌드의 역사다.

@@ -8,7 +8,7 @@ owner: game-qa
 
 # M23 · 실행 XML
 
-초기35ebdc5는 editmode.xml64 + playmode-release-final.xml112 + boot-release.xml1 =177개다. 아래 원본 RED·중간 실패·지문을 보존한다. 현행186개 교정 결과는 이 문서 후속 절을 따른다. Node/캠페인/그래프 수는 NUnit 개수와 합치지 않는다.
+초기35ebdc5는177, 첫 교정5d7b18c는186개이며 각 원본 XML/실패/지문을 보존한다. 현행은 마지막 절의187개다. Node/캠페인/그래프 수는 NUnit 개수와 합치지 않는다.
 
 | XML | pass | fail | skip | SHA-256 |
 |---|---:|---:|---:|---|
@@ -22,7 +22,7 @@ owner: game-qa
 
 [BOUNDARY] review-feedback-red는 Q1/Q2 원재현, review-boundary는 늦은 실패 경계, feedback-visibility-red는 Q5 원재현이다. playmode-release의 Band comparison clipping은 첫 고정 알림안이 Navigation을 줄인 실패이며 최종에서 오른쪽 작업면만 분리해 해결했다. 반복 실행을 고유 개수로 더하지 않는다.
 
-## 후속 교정 XML
+## 5d7b18c 첫 교정 XML
 
 최종은 correction-editmode.xml의 프로젝트64 + correction-playmode-final.xml121 + correction-boot-final.xml1 =186개다. EditMode65번째 `AddressableAssets.DocExampleCode.TestStub.RequiredTest`는 외부 예제로 제외한다. RED 실행12회는 신규9개 고유 사례의 반복/확장 실행이며, 이전177과 더하지 않는다.
 
@@ -39,3 +39,14 @@ owner: game-qa
 | `correction-practice-contrast-green.xml` | 121 | 0 | 1 | `001992d8f551ed5eaf567366c68c7f501dbcd17b7abcf0dd833bcaf57aad399e` |
 | `correction-playmode-final.xml` | 121 | 0 | 1 | `a65e9eb1f89e0556c6142a7f5f41871d2fa896e7403e44fb8ffa4a17afe168ae` |
 | `correction-boot-final.xml` | 1 | 0 | 0 | `c817f248ecbac2ba4e243c8b2d90632a552c0704fdfd76707c0832c357ef9464` |
+
+## 마지막 off-reader 수명 교정
+
+현행은 최신 PlayMode122 +올바른 격리 boot1 +기존 프로젝트 EditMode64 =187 고유 통과다. Q6의 추가1사례를 포함한 후속 고유 회귀10개가 모두 통과했다. 첫 boot의 인자 누락은 skip이며 성공으로 세지 않는다.
+
+| XML | pass | fail | skip | SHA-256 |
+|---|---:|---:|---:|---|
+| `off-reader-pin-red.xml` | 0 | 1 | 0 | `b720220070df53b9ffb87de0dfb9dd5fea53fc0870b298766ee04db373d7dc34` |
+| `off-reader-playmode-final.xml` | 122 | 0 | 1 | `d758c19498107f738a28b8837f9017b7e2c3036a455acda2d26d0ffa4cc787a9` |
+| `off-reader-boot-isolated.xml` | 1 | 0 | 0 | `93681177370cf95250a98e9caf1ecd2a23b2a62ba8b18b95c46d13142d72766b` |
+| `off-reader-boot-invocation-skipped.xml` | 0 | 0 | 1 | `1b93aa0b532c20181c8cd325a38e3ff8ac614d6320e6c16925f245418fa427ef` |
