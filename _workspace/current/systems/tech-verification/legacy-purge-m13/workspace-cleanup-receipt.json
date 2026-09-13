@@ -1,0 +1,117 @@
+{
+ "schemaVersion": 1,
+ "rfc": "RFC-CX-016",
+ "recordedAt": "2026-09-13T13:11:41.753260+00:00",
+ "scope": "gitignored on-disk build outputs; never part of any branch",
+ "removed": [
+  {
+   "path": "unity/Unknown/Builds/C1-M4-mac",
+   "kilobytes": 681260,
+   "mtime": "2026-09-11T13:32:56",
+   "reason": "superseded milestone build output; reproducible from source; receipts retain logs and byte counts"
+  },
+  {
+   "path": "unity/Unknown/Builds/M5-mac",
+   "kilobytes": 345760,
+   "mtime": "2026-09-11T16:50:26",
+   "reason": "superseded milestone build output; reproducible from source; receipts retain logs and byte counts"
+  },
+  {
+   "path": "unity/Unknown/Builds/T0-resource-integration-20260910-final",
+   "kilobytes": 307384,
+   "mtime": "2026-09-10T20:07:26",
+   "reason": "superseded milestone build output; reproducible from source; receipts retain logs and byte counts"
+  },
+  {
+   "path": "unity/Unknown/Builds/t0-diagnostics",
+   "kilobytes": 552,
+   "mtime": "2026-09-10T17:39:40",
+   "reason": "superseded milestone build output; reproducible from source; receipts retain logs and byte counts"
+  },
+  {
+   "path": "unity/Unknown/Builds/t0-viewport-diagnostics",
+   "kilobytes": 156,
+   "mtime": "2026-09-10T18:13:53",
+   "reason": "superseded milestone build output; reproducible from source; receipts retain logs and byte counts"
+  }
+ ],
+ "kept": [
+  {
+   "path": "unity/Unknown/Builds/T0-mac",
+   "kilobytes": 401832,
+   "mtime": "2026-09-12T09:14:16"
+  },
+  {
+   "path": "unity/Unknown/Builds/m22",
+   "kilobytes": 114408,
+   "mtime": "2026-09-13T21:51:41"
+  },
+  {
+   "path": "unity/Unknown/Builds/m22-verification",
+   "kilobytes": 644,
+   "mtime": "2026-09-13T15:58:51"
+  },
+  {
+   "path": "unity/Unknown/Builds/m7-diagnostics",
+   "kilobytes": 6916,
+   "mtime": "2026-09-12T09:03:09"
+  }
+ ],
+ "gitState": {
+  "worktrees": 1,
+  "worktreePath": "/Users/jangyoung/orca/unknown",
+  "branch": "main",
+  "head": "52ad551",
+  "remoteTracking": "origin/main",
+  "divergence": "0 behind / 0 ahead",
+  "staleWorktreeAdmin": 0,
+  "staleRemoteRefs": 0,
+  "stashes": 0,
+  "mergeConflictMarkers": 0,
+  "detached": false
+ },
+ "objectStore": {
+  "before": {
+   "looseCount": 4868,
+   "looseSize": "531.58 MiB",
+   "inPack": 3,
+   "packSize": "1.99 KiB"
+  },
+  "after": {
+   "looseCount": 0,
+   "looseSize": "0 bytes",
+   "inPack": 4871,
+   "packSize": "491.46 MiB"
+  },
+  "gitDirBefore": "535M",
+  "gitDirAfter": "509M",
+  "garbageTmpObjRemoved": 3,
+  "fsck": "clean (exit 0, no dangling check)",
+  "refsIdentical": "HEAD == main == origin/main",
+  "pruneNote": "gc packed but pruned nothing: default gc.pruneExpire=2.weeks.ago and this repo is days old, so no object was eligible. Safe against the three concurrent sessions."
+ },
+ "scratchCleared": {
+  "location": "/tmp",
+  "freedMegabytes": 122,
+  "preconditionVerified": "the three raw .mov capture sources were confirmed byte-identical (sha256) in the tracked repo at assets/generated/video/gameplay-m9/ before deleting /tmp/m9raw",
+  "remaining": {
+   "entries": 53,
+   "megabytes": 0.8,
+   "reason": "newest entries belong to the live parallel sessions (m16/m18/m21 captures); left untouched"
+  }
+ },
+ "currentBuildSmoke": {
+  "app": "unity/Unknown/Builds/T0-mac/Unknown.app",
+  "bundleMegabytes": 392,
+  "launch": "ok",
+  "playerLogExceptions": 0,
+  "bootMarker": "T0_BOOT entry-start",
+  "falseAlarm": "an initial executable-presence test reported BROKEN because the probe path used \"Unknown\" while the binary is \"Unknown T0\" (with a space). The bundle was intact; the probe was wrong."
+ },
+ "notTouched": {
+  "parallelSessionFiles": 138,
+  "detail": "three other claude processes are live; one wrote _workspace/current/planning/aside-core-loop-research-20260913.md at 22:05 and unity/Unknown/Builds/m22 at 21:51. Their uncommitted files and their build outputs (m22, m22-verification) were left alone.",
+  "sharedFileCheck": "they appended to production/decision-log.md, changelog.md and task-manifest.md after the M13 push (127 insertions, 1 deletion). The single deletion is a frontmatter date bump (updated: 2026-09-11 -> 2026-09-13). All M13 content verified present."
+ },
+ "reproducibility": "removed build outputs are gitignored and were never part of any branch. Their verification receipts under _workspace/current/ retain the build logs and byte counts, and each build is reproducible from source via Tide.EditorTools.*.BuildMac."
+}
