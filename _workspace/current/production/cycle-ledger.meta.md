@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-14
 cycle: 20260909-preproduction-c5
 status: draft
 supersedes: null
@@ -9,3 +9,5 @@ owner: game-production-director
 # Cycle ledger
 
 실제연속검토와수정상태. independent-review-running/draft는완료가아니다. 최종검증기에회차5개각리뷰/수정/시간논의/버전연결검사.
+
+[OBSERVED 2026-09-14 · M23] 기존 등록부의 C7-F56..F60(M23-Q1..Q5)을 모두 closed로 기록한 뒤 `python3 scripts/regen-cycle-ledger.py`로 재생성했다. parsed170/dropped0, C7 total60/closed33/openS1 0/openS2 0. 기존 덱 생성기로 HTML을 재발행하고 실제 브라우저 s19의7행×9칸=63개 셀이 JSON과 일치함을 확인했다. 등록부 openS1 합0은 Base/사람/전체 캠페인 PASS가 아니다. 증거: `systems/tech-verification/m23/native/ledger-slide-19.png`.

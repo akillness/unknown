@@ -56,6 +56,42 @@ namespace Tide.Tests
         {
             var j=Enter();Copies(j);Do(j,"ObserveSignature",data.Signature.RightClue);Assert.IsFalse(j.Submit(Confirm()).IsValid);Do(j,"CompareSignature",data.Signature.ComparisonId);Do(j,"SelectSignatureProof",data.Signature.LeftClue,data.Signature.RightClue);Assert.IsFalse(j.Submit(Confirm()).IsValid);Do(j,"MarkSignature",data.Signature.RegionId);Assert.IsTrue(sim.Validate(j.State,Confirm()).IsValid);
         }
+        [Test] public void CopyProofRequiresRevealedSourceAndCannotBypassComparison()
+        {
+            var j=Enter();var def=data.Signature;
+            var selection=new PuzzleCommand("SelectSignatureProof",def.Copies[0],def.RightClue,C1SignatureDefinition.SourceSelectionVersion);
+            Do(j,"ObserveSignature",def.LeftClue);Do(j,"ObserveSignature",def.RightClue);
+            Assert.IsFalse(def.ValidateProofSelection(j.State,def.Copies[0],def.RightClue).IsValid);
+            Copies(j);
+            Assert.IsTrue(def.ValidateProofSelection(j.State,def.Copies[0],def.RightClue).IsValid);
+            Assert.IsFalse(j.Submit(selection).IsValid,"Format alone cannot replace the observed comparison.");
+            Do(j,"CompareSignature",def.ComparisonId);
+            Assert.IsTrue(j.Submit(selection).IsValid);
+            Assert.IsFalse(j.Submit(Confirm()).IsValid,"Selecting proof cannot supply the unresolved-region mark.");
+            Do(j,"MarkSignature",def.RegionId);
+            Assert.IsTrue(j.Submit(Confirm()).IsValid);
+        }
+        [Test] public void RejectedPairsKeepRecordedEvidenceAndReversedCopyProofSurvivesUndoReplayAndFolding()
+        {
+            var j=Enter();Ready(j);var def=data.Signature;var old=j.State.StateHash;
+            Assert.AreEqual(def.LeftClue,def.RecordedProofLeft(j.State));
+            foreach(var pair in new[]{new[]{def.LeftClue,def.LeftClue},new[]{def.LeftClue,def.Copies[0]},new[]{def.Copies[0],def.Copies[1]}})
+            {
+                Assert.IsFalse(j.Submit(new PuzzleCommand("SelectSignatureProof",pair[0],pair[1],C1SignatureDefinition.SourceSelectionVersion)).IsValid);
+                Assert.AreEqual(old,j.State.StateHash);
+                Assert.IsTrue(sim.Validate(j.State,Confirm()).IsValid,"A rejected proposal cannot erase an earlier valid proof.");
+            }
+            Assert.IsTrue(j.Submit(new PuzzleCommand("SelectSignatureProof",def.RightClue,def.Copies[1],C1SignatureDefinition.SourceSelectionVersion)).IsValid);
+            var chosen=j.State.StateHash;
+            Assert.AreEqual(def.RightClue,def.RecordedProofLeft(j.State));Assert.AreEqual(def.Copies[1],def.RecordedProofRight(j.State));
+            Assert.IsTrue(j.Undo());Assert.AreEqual(old,j.State.StateHash);Assert.AreEqual(def.LeftClue,def.RecordedProofLeft(j.State));
+            Assert.IsTrue(j.Redo());Assert.AreEqual(chosen,j.State.StateHash);
+            while(j.FoldOldest()){}
+            var replay=JournalSave.Decode(JournalSave.Encode(j,"signature",20000,6291456),sim);
+            Assert.AreEqual(chosen,replay.State.StateHash);
+            Assert.AreEqual(def.RightClue,def.RecordedProofLeft(replay.State));Assert.AreEqual(def.Copies[1],def.RecordedProofRight(replay.State));
+            Assert.IsTrue(replay.Submit(Confirm()).IsValid);
+        }
         [Test] public void AtomicCompletionUndoRedoReplayAndResetPreserveUnresolvedRegion()
         {
             var j=Enter();Ready(j);Do(j,"ResetSignatureTrial");Assert.IsTrue(data.Signature.Ready(j.State));var priorHash=j.State.StateHash;Assert.IsTrue(j.Submit(Confirm()).IsValid);var complete=j.State.StateHash;Assert.IsTrue(sim.IsComplete(j.State,"c1-b2"));Assert.IsFalse(j.Submit(Confirm()).IsValid);

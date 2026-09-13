@@ -19,7 +19,7 @@ namespace Tide.App
             Require((string)left["sourceType"]=="log"&&(string)left["rootOriginId"]=="signature-annex"
                 &&(string)right["sourceType"]=="plate"&&(string)right["rootOriginId"]=="plate-zero"
                 &&observations.All(o=>(string)o["originId"]==(string)o["rootOriginId"]&&o["copiedFrom"]?.Type==JTokenType.Null)
-                &&copies.All(o=>(string)o["originId"]==(string)o["id"]&&(string)o["sourceType"]=="log"&&(string)o["rootOriginId"]=="signature-annex"&&(string)o["copiedFrom"]=="signature-annex"));
+                &&copies.All(o=>(string)o["originId"]==(string)o["id"]&&(string)o["sourceType"]=="log"&&(string)o["rootOriginId"]=="signature-annex"&&(string)o["copiedFrom"]=="signature-annex"&&(string)o["sourceClueId"]==(string)left["id"]));
             Require((bool?)packet["confirmation"]?["saveSuccessRequired"]==true&&(bool?)packet["confirmation"]?["atomic"]==true
                 &&(bool?)packet["confirmation"]?["immediateSubmissionMayCommit"]==false
                 &&(bool?)packet["obscuredRegion"]?["restoreTextAllowed"]==false
@@ -27,7 +27,9 @@ namespace Tide.App
                 &&(bool?)packet["proof"]?["sameRootPairAccepted"]==false&&(bool?)packet["proof"]?["sameTypePairAccepted"]==false);
             var signature=new C1SignatureDefinition(observations.Select(o=>(string)o["id"]),copies.Select(o=>(string)o["id"]),
                 packet["humidity"]["levels"].Select(h=>new SignatureHumidity((string)h["id"],(bool)h["safeSeparation"])),
-                (string)packet["obscuredRegion"]["id"],(string)packet["comparison"]["id"],(string)left["id"],(string)right["id"]);
+                (string)packet["obscuredRegion"]["id"],(string)packet["comparison"]["id"],(string)left["id"],(string)right["id"],
+                observations.Concat(copies).Select(o=>new SignatureProofSource((string)o["id"],(string)o["sourceType"],
+                    o["copiedFrom"]?.Type==JTokenType.Null?(string)o["originId"]:(string)observations.Single(original=>(string)original["originId"]==(string)o["copiedFrom"])["originId"])));
             var beat=new BeatDefinition(C1SignatureDefinition.BeatId,new[]{C1PatrolDefinition.BeatId},new[]{new CompletionRequirement("signatureFiled")});
             return new T0Definition(prior.Records.Values,prior.Beats.Concat(new[]{beat}),prior.UncoveredAreas,prior.SystemIds,
                 prior.StubToolIds,prior.ReadBudget,prior.ResolutionMinutes,prior.Overlay,prior.Patrol,signature);

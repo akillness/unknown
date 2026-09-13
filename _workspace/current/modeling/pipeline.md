@@ -145,11 +145,13 @@ Unity **6000.5.6f1** [OBSERVED `unity/Unknown/ProjectSettings/ProjectVersion.txt
 
 첫 임포트 시 반드시 측정할 것: 실제 tri/vert, drawcall(SRP Batcher 포함), 텍스처 상주. 그 전까지 G5는 `[TARGET]`이며 통과할 수 없다.
 
-## 8. Mixamo 리깅 규격 — 조건부이며 현재 미실행
+## 8. M22 직접 저작 Generic 리그 · 조건부 Mixamo 경로
 
-[OBSERVED] **현재 설계에 3D 휴머노이드는 0체다.** `concept/art-direction.md`는 "인물은 2D 초상", `animation/animation-contract.md`는 "캐릭터 locomotion 0 / 아바타·보행·NavMesh 없음", `modeling/asset-budget.md`는 초상 5×3을 "2D, 별도 리깅 없음"으로 못박는다. 따라서 Mixamo는 **지금 필요 없다**. 사용자 지시(리소스는 Mixamo로)를 이 설계와 충돌 없이 지키는 방법은 "휴머노이드가 생기면 Mixamo가 유일 경로"로 규격만 고정해 두는 것이다. 3D 인물을 만들지 않기로 한 결정을 모델러가 뒤집지 않는다 → **OPEN-M2**로 디렉터에 올린다.
+[DECISION 2026-09-13 · RFC-CX-018] 최신 사용자가 **Blender MCP로 주인공과 플레이 손·모션을 구현**하도록 요청했다. 한서린 1체와 좌/우 손은 Blender에서 직접 저작하는 Generic 리그로 제작한다. 기존 “3D 인물 0 / 손 off / 미래 인물은 Mixamo 단일 경로” 보류는 이번 명시적 범위에 적용하지 않는다. 다른 NPC의 2D 초상, 보행·NavMesh·루트모션 0은 그대로 유지한다. 규격과 상한은 `animation/rig-requirements.md` §3.1, 예산은 `modeling/asset-budget.md` M22 절이 소유한다.
 
-휴머노이드 5인이 승인될 경우의 납품 규격 [INFERENCE — 이번 세션에 Mixamo 접속·검증 0회]:
+[OBSERVED 2026-09-13] M22는 실제 Blender 5.1.2 MCP 저작 → 원본 Scene 보존 확인 → 전용 `.blend` 라이브러리·FBX·GLB·프리뷰 내보내기 → `M22EmbodimentProjectBuilder.Import` → Unity Generic 클립/프리팹/프로필 → 네이티브 화면 비교 순서로 실행했다. Unity는 이 자산군의 FBX를 사용하며 GLB 패키지나 Humanoid/Mixamo를 추가하지 않았다. 보정된 최종 FBX 해시·삼각형·본·클립은 M22 임포트 감사 영수증이 기록한다. 첫 임포트는 게이트를 닫고, 네이티브 해부학·접촉 검수 뒤에만 `M22Embodiment.asset.runtimeApproved`를 연다. 재임포트는 승인을 자동 계승하지 않는다.
+
+아래 표는 **외부 Humanoid/Mixamo가 별도로 승인될 때만** 적용하는 미사용 경로다 [INFERENCE — Mixamo 접속·검증 0회]. M22 직접 저작 Generic 리그에 Humanoid 변환이나 다운로드를 요구하지 않는다.
 
 | 항목 | 규격 |
 |---|---|

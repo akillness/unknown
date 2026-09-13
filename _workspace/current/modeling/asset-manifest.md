@@ -1,14 +1,14 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c4
 status: current
 supersedes: null
 owner: game-modeler
 ---
 
-# Asset Manifest — 47종
+# Asset Manifest — 기준선 47종 + M22 별도 증분 3종
 
-`modeling/asset-budget.md`(세션 P)의 수량 계약 **셸5 / 도구6 / 초상5 / 공용30 / UI1 = 47**을 행 단위로 편 정식 매니페스트다. 예산 총량은 `asset-budget.md`가 계속 소유하고 이 문서는 개별 자산의 신원·상태·경로를 소유한다. 파이프라인 규격은 `modeling/pipeline.md`.
+`modeling/asset-budget.md`(세션 P)의 수량 계약 **셸5 / 도구6 / 초상5 / 공용30 / UI1 = 47**을 행 단위로 편 정식 매니페스트다. 예산 총량은 `asset-budget.md`가 계속 소유하고 이 문서는 개별 자산의 신원·상태·경로를 소유한다. 파이프라인 규격은 `modeling/pipeline.md`. **M22 전신 1 + 양손 2는 RFC-CX-018에 따라 §10에 별도 증분으로 기록**하며 기존 초상 5행이나 기준선 47행을 대체하지 않는다.
 
 ## 0. 상태 표기와 게이트
 
@@ -17,7 +17,7 @@ owner: game-modeler
 | `greybox` | 실제 파일이 있고 눈으로 확인했다. 형상은 부피 대용물이며 최종 아트가 아니다 |
 | `pending` | 파일 0개. 이름·예산·경로만 정해져 있다 |
 
-- **모든 행의 `runtimeEligible`은 `false`다.** 승격은 `production/decision-log.md` 감사로만(CLAUDE.md §9).
+- 승격은 `production/decision-log.md` 감사로만(CLAUDE.md §9). §1–§6 기준선의 후보 상태와 §9/§10의 특정 런타임 승인 범위를 구분한다. 원본 생성 후보 플래그가 그대로인 경우 로컬 Unity 프로필 승인을 원본의 상업 승인으로 바꾸지 않는다.
 - [OBSERVED · 2026-09-10 R4 재측정] **컨셉 입력은 더 이상 0이 아니다.** 명령과 값:
   `find _workspace/current/concept/sheets -type f | wc -l` → **1** (`concept/sheets/README.md` 14.8 KB · `status: current` · 45장 시트 색인) ·
   `find assets/generated/2d -name '*.png' | wc -l` → **45** (카테고리별 concept 21 / previz 9 / readme 7 / ui 4 / capsule 2 / keyart 2) ·
@@ -157,7 +157,7 @@ owner: game-modeler
 | UI 프레임 | 1 | 1 | 0 | 1 |
 | **합계** | **47** | **47** | **7** | **40** |
 
-[OBSERVED] 오늘 실제로 존재하는 3D 메시는 12개(허브 셸 6 + 도구 6), 합계 **144 tris**. 파일 목록과 해시는 `assets/generated/3d/provenance.json`.
+[HISTORICAL · 2026-09-10] 당시 그레이박스 3D 메시 12개(허브 셸 6 + 도구 6), 합계 **144 tris**의 파일 목록과 해시는 `assets/generated/3d/provenance.json`이다. 이 수치는 이후 M7/M22 런타임이나 §10의 신체 자산 총량이 아니다.
 
 ## 7. 열린 항목
 
@@ -213,3 +213,15 @@ The preserved r01 construction recipe and target dimensions are `modeling/pipeli
 [OBSERVED 2026-09-10 — r03 receipt] Actual `hub-view-drawer-r03/` generation is verified: 2 meshes / 156 triangles, 2 GLB materials / 4 images, four 1024² sidecar PNGs totaling 787,100 bytes. All 9 output hashes and the executed recipe hash match provenance. `concept/t0-source-drawer-review.md` clears the four prior visual FIX items as a bounded **T0 visual candidate ACK**. Details are `modeling/pipeline.md` §16.6. The measured geometry matches r01; r01/r02 remain preserved. At this initial receipt, runtime eligibility was false pending Unity material/fit audit. The later exact T0 approval below supersedes that permission state; the original generation receipt and output hashes remain preserved.
 
 [OBSERVED 2026-09-10 — r03 T0 runtime approval] Director RFC-CX-003 addendum approves the exact r03 candidate for **T0 scene only**, after native Metal/Gamma material and fit audit plus three diagnostic captures. The audit verifies 2 meshes / 156 triangles; four 1024² maps with BaseColor sRGB and Roughness linear; both renderer map bindings and supported shaders. Approval requires the measured Unity yaw **180°**, position **(0, 0.32, 1.1)** and reviewed workbench-front AABB adaptation. Current source provenance is **runtimeEligible:true**, promoted by `game-production-director; RFC-CX-003 r03 T0 runtime scene approval`. The audit’s false flag is the preserved pre-approval snapshot; current permission comes from the later director decision/provenance. See `modeling/pipeline.md` §16.7. Standalone-player appearance, final G4/G5, frame budgets and performance remain unmeasured. No generated source files, earlier revision or historical receipt were changed in this owner update.
+
+## 10. M22 한서린·Generic 양손 (RFC-CX-018)
+
+[OBSERVED 2026-09-13] 이미 승인된 M22 증분의 개별 신원이 이 색인에서 누락되어 후속 대조에서 보완했다. 생성 이전 승인을 새로 주장하거나 과거 47행의 상태를 덮어쓰지 않는다. 정본 소스는 `assets/generated/3d/seorin-m22/r01/`, 재현 스크립트는 `scripts/blender/build-seorin-m22.py`, 리그 계약은 `animation/rig-requirements.md` §3.1이다.
+
+| id / 정확한 파일 stem | 소스 | Unity 실측 | 런타임 결합 | 승인 범위 |
+|---|---|---|---|---|
+| `Seorin_Character` | `.blend` / `.fbx` / `.glb` | 15,124 tri · 50본 | 시작 화면 `Seorin_Idle`; 고정 카메라, 루트 이동 없음 | M22 로컬 기본 빌드 |
+| `Seorin_LeftHand` | `.fbx` / `.glb` | 2,772 tri · 18본 | Rest/Insert/Align/Grip/Seal; 성공 장전 접촉·복귀 및 내구 저장 성공 반응 | M22 로컬 기본 빌드 |
+| `Seorin_RightHand` | `.fbx` / `.glb` | 2,772 tri · 18본 | 같은 5 take; 실제 크랭크 손잡이의 Contact 본 추적 | M22 로컬 기본 빌드 |
+
+원본 `runtimeEligible:false`는 보존한다. 로컬 적용은 Unity `Resources/M22Embodiment.asset`의 별도 `runtimeApproved`와 RFC-CX-018 네이티브 영수증이 소유하며 재임포트는 게이트를 다시 닫는다. 초상용 2D `PT_HanSeorin`을 3D 자산의 별칭으로 사용하지 않는다. 전체 캠페인·상업 사용권·사람 플레이·성능 승인은 이 증분에 포함하지 않는다.

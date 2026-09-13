@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using Tide.Presentation;
+using Tide.Sim;
 using UnityEngine;
 
 namespace Tide.App
@@ -19,6 +18,7 @@ namespace Tide.App
         M7ReaderStageProfile readerStageProfile;
         bool readerStageProfileLoaded;
         GameObject m7ReaderVisual;
+        bool readerPresentationListening;
         M7ReaderStageProfile ReaderStageProfile
         {
             get
@@ -46,14 +46,25 @@ namespace Tide.App
             var pivot=m7ReaderVisual.GetComponentsInChildren<Transform>(true).FirstOrDefault(t=>t.name==profile.crankPivotName);
             var vfxAsset=Resources.Load<TextAsset>("T0ReaderVfx");JObject vfx=null;
             if(vfxAsset!=null)try{vfx=JObject.Parse(vfxAsset.text);}catch(Newtonsoft.Json.JsonException){vfx=null;}
-            m7ReaderVisual.AddComponent<M7ReaderStageVisual>().Initialize(()=>M7ReaderStageActive,()=>phasePage*2+(phaseStart?1:0),()=>ReducedMotion,pivot,vfx,SuppressHubLights());
+            m7ReaderVisual.AddComponent<M7ReaderStageVisual>().Initialize(()=>started&&tool=="reader"&&!PatrolActive&&M7ReaderStageActive,()=>ReducedMotion,pivot,vfx,SuppressHubLights(),ClearM22Embodiment);
+            if(!readerPresentationListening){Interface.ScreenChanged+=RefreshM7ReaderPresentation;readerPresentationListening=true;}
+        }
+        // RFC-CX-017: only a successful deliberate read may move the crank; render/navigation is not an action.
+        private void PresentReaderAction(PuzzleCommand command)
+        {
+            if(command.CommandId!="Read"&&command.CommandId!="ReadOriginal")return;
+            if(m7ReaderVisual!=null)m7ReaderVisual.GetComponent<M7ReaderStageVisual>().PlayStroke();
+        }
+        void RefreshM7ReaderPresentation()
+        {
+            if(m7ReaderVisual!=null)m7ReaderVisual.GetComponent<M7ReaderStageVisual>().RefreshPresentation();
         }
         // RFC-CX-016: ApplyStagePresentation hides hub roots by "activeSelf && has a Renderer", so the committed
         // "Watch room lamp" (a Light with no Renderer) kept lighting the reader stage. Measured: 5.5-5.7% of the scene
         // viewport clipped to 255 on all channels, and lowering the stage lamp 2.2 -> 1.25 moved it only 0.18 points,
         // because a directional light has no distance falloff for the profile lamp to compete with. The stage now owns
         // its own light list; every foreign enabled light is disabled for the duration and restored by
-        // M7ReaderStageVisual.OnDestroy (the same hook that runs on self-destruct, re-entry and session teardown).
+        // M7ReaderStageVisual.OnDisable (before deferred destruction or same-frame re-entry).
         Light[] SuppressHubLights()
         {
             var hub=UnityEngine.SceneManagement.SceneManager.GetSceneByName("hub");
@@ -73,66 +84,74 @@ namespace Tide.App
 
     // Crank stroke driver on the "M7 optical reader" root. Self-destroys once the session leaves the reader stage.
     // Stroke = forward to crank_stroke_deg over crank_forward_ms, hold crank_hold_ms, return over crank_return_ms (Resources/T0ReaderVfx.json),
-    // on Time.unscaledDeltaTime. reducedMotion: every phase uses reduced_motion_ms; <=0 snaps to the rest pose without animating.
+    // on an unscaled monotonic clock anchored at the accepted action, not the preceding frame's duration.
     public sealed class M7ReaderStageVisual:MonoBehaviour
     {
-        Func<bool> stillActive;Func<int> strokeKey;Func<bool> reducedMotion;
+        Func<bool> stillActive,reducedMotion;
         Transform pivot;
-        float forwardMs,holdMs,returnMs,strokeDeg,reducedMs;
-        bool initialised;int lastKey;Coroutine stroke;float angle;
-        Light[] suppressed=new Light[0];
-        // Foreign hub lights the stage borrowed exclusivity from. Public so a test can assert the restore contract.
-        public IReadOnlyList<Light> SuppressedHubLights=>suppressed;
+        Quaternion restRotation;
+        float forwardMs,holdMs,returnMs,strokeDeg,elapsedMs,angle;
+        double strokeStartedAt;
+        bool strokePlaying;
+        bool applicationPaused,applicationFocused=true;
+        Light[] suppressed=Array.Empty<Light>();
+        Action stageDeparted;
         public Transform CrankPivot=>pivot;
-        public bool StrokePlaying=>stroke!=null;
+        public bool StrokePlaying=>strokePlaying;
         public float CrankAngleDeg=>angle;
-        public void Initialize(Func<bool> stillActive,Func<int> strokeKey,Func<bool> reducedMotion,Transform pivot,JObject vfx,Light[] suppressedHubLights=null)
+        public void Initialize(Func<bool> stillActive,Func<bool> reducedMotion,Transform pivot,JObject vfx,Light[] suppressedHubLights=null,Action stageDeparted=null)
         {
-            this.stillActive=stillActive;this.strokeKey=strokeKey;this.reducedMotion=reducedMotion;this.pivot=pivot;
-            suppressed=suppressedHubLights??new Light[0];
-            forwardMs=Ms(vfx,"crank_forward_ms");holdMs=Ms(vfx,"crank_hold_ms");returnMs=Ms(vfx,"crank_return_ms");reducedMs=Ms(vfx,"reduced_motion_ms");
+            this.stillActive=stillActive;this.reducedMotion=reducedMotion;this.pivot=pivot;
+            this.stageDeparted=stageDeparted;
+            restRotation=pivot==null?Quaternion.identity:pivot.localRotation;
+            suppressed=suppressedHubLights??Array.Empty<Light>();
+            forwardMs=Ms(vfx,"crank_forward_ms");holdMs=Ms(vfx,"crank_hold_ms");returnMs=Ms(vfx,"crank_return_ms");
             strokeDeg=vfx==null?0:(float?)vfx["crank_stroke_deg"]??0;
             SetAngle(0);
         }
-        // Runs on self-destruct (Update), on stage re-entry (ApplyM7ReaderStage destroys the old visual) and on
-        // session teardown, so a suppressed hub light can never outlive the stage that borrowed it.
-        void OnDestroy()
+        void OnApplicationPause(bool paused){applicationPaused=paused;if(paused)CancelStroke();}
+        void OnApplicationFocus(bool focused){applicationFocused=focused;if(!focused)CancelStroke();}
+        // Release synchronously: a replacement stage must not borrow lights until this owner returns them.
+        void OnDisable()
         {
+            CancelStroke();
             foreach(var light in suppressed)if(light!=null)light.enabled=true;
-            suppressed=new Light[0];
+            stageDeparted?.Invoke();stageDeparted=null;
+            suppressed=Array.Empty<Light>();
         }
-        static float Ms(JObject vfx,string key)=>vfx==null?0:(float?)vfx[key]??0;
+        static float Ms(JObject vfx,string key)=>vfx==null?0:Mathf.Max(0,(float?)vfx[key]??0);
+        public void RefreshPresentation()
+        {
+            if(!isActiveAndEnabled)return;
+            if(stillActive==null||!stillActive()){gameObject.SetActive(false);Destroy(gameObject);return;}
+            if(reducedMotion!=null&&reducedMotion())CancelStroke();
+        }
         void Update()
         {
-            if(stillActive==null||!stillActive()){gameObject.SetActive(false);Destroy(gameObject);return;}
-            var key=strokeKey==null?0:strokeKey();
-            if(!initialised){initialised=true;lastKey=key;PlayStroke();return;}
-            if(key==lastKey)return;
-            lastKey=key;PlayStroke();
+            RefreshPresentation();
+            if(!strokePlaying)return;
+            elapsedMs=(float)((Time.realtimeSinceStartupAsDouble-strokeStartedAt)*1000);
+            if(elapsedMs<forwardMs)SetAngle(strokeDeg*Ease(elapsedMs/forwardMs));
+            else if(elapsedMs<forwardMs+holdMs)SetAngle(strokeDeg);
+            else if(elapsedMs<forwardMs+holdMs+returnMs)SetAngle(strokeDeg*(1-Ease((elapsedMs-forwardMs-holdMs)/returnMs)));
+            else CancelStroke();
         }
-        void PlayStroke()
+        public void PlayStroke()
         {
-            if(stroke!=null){StopCoroutine(stroke);stroke=null;}
-            if(pivot==null)return;
-            bool reduced=reducedMotion!=null&&reducedMotion();
-            if(reduced&&reducedMs<=0){SetAngle(0);return;}
-            stroke=StartCoroutine(Stroke(reduced?reducedMs:forwardMs,reduced?reducedMs:holdMs,reduced?reducedMs:returnMs));
+            RefreshPresentation();
+            if(!isActiveAndEnabled||applicationPaused||!applicationFocused||pivot==null||reducedMotion!=null&&reducedMotion())return;
+            elapsedMs=0;strokeStartedAt=Time.realtimeSinceStartupAsDouble;strokePlaying=forwardMs+holdMs+returnMs>0;
+            SetAngle(0);
         }
-        IEnumerator Stroke(float forward,float hold,float back)
+        static float Ease(float value)=>value*value*(3-2*value);
+        void CancelStroke()
         {
-            float duration=forward/1000f,elapsed=0;
-            while(elapsed<duration){elapsed+=Time.unscaledDeltaTime;SetAngle(strokeDeg*Mathf.Clamp01(elapsed/duration));yield return null;}
-            SetAngle(strokeDeg);
-            duration=hold/1000f;elapsed=0;
-            while(elapsed<duration){elapsed+=Time.unscaledDeltaTime;yield return null;}
-            duration=back/1000f;elapsed=0;
-            while(elapsed<duration){elapsed+=Time.unscaledDeltaTime;SetAngle(strokeDeg*(1-Mathf.Clamp01(elapsed/duration)));yield return null;}
-            SetAngle(0);stroke=null;
+            strokePlaying=false;elapsedMs=0;SetAngle(0);
         }
         void SetAngle(float value)
         {
             angle=value;
-            if(pivot!=null)pivot.localRotation=value==0?Quaternion.identity:Quaternion.AngleAxis(value,Vector3.right);
+            if(pivot!=null)pivot.localRotation=restRotation*Quaternion.AngleAxis(value,Vector3.right);
         }
     }
 }

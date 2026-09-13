@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-14
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -628,3 +628,17 @@ R7d-1 로 재생성한 시점의 대장은 **이 동기화 이전 상태**다(C5
 | C7-F54 | S2 | systems | AtomicSaveStore.cs:79–81, :92. checksum 유효한 미등록/음수 schemaVersion primary와 정상 backup에서 버전 거부 예외가 복구 catch에 삼켜져 writable backup 로드·후속 primary 교체 가능. | [코드 리뷰 §6](t0-m2-code-review.md#6-editmode6-실행-증거에-따른-후속-판정). EditMode6 UnknownVersionsRefuseEvenWithValidBackup 및 VersionZeroMigratesWithBackupAndVersionTwoIsRefused Passed: null/-1/1.5/string1/v2 Refused와 primary 불변. 정수/범위 직접 반환 guard 확인; 유효 backup은 unknown loop 첫 사례에만 보장. | **closed** | game-systems-designer |
 
 | C7-F55 | S2 | systems | SaveCodec.Decode의 JObject.Parse가 ISO createdUtc 문자열을 날짜 값으로 자동 해석해 재정규화 표기와 checksum이 달라짐. 유효한 자체 생성 세이브 로드·backup·멱등성 대조 실패. systems 발견. | [코드 리뷰 §6 및 F55](t0-m2-code-review.md#6-editmode6-실행-증거에-따른-후속-판정). EditMode4 저장/멱등성/복구 실패 영수증과 원인 코드 대조; DateParseHandling.None 적용 후 EditMode6(18/18)에서 createdUtc Encode→Decode 동일 문자열 단언·저장 회귀 Passed. run4의 기존 Canonical 테스트 자체는 Passed였고 당시 왕복 단언은 없었음. | **closed** | game-systems-designer |
+
+## 16. M23 코어 루프 통합·네이티브 재검증 (2026-09-14)
+
+상태 정본은 아래 C7 id다. `M23-Q1..Q5`는 `qa/m23-integration-review.md`의 진단 참조이며 별도 결함으로 중복 계상하지 않는다. RuntimeAcceptance/EvidenceAcceptance는 정적으로 검토했고 Main이 실제 RED→교정→Unity/네이티브를 실행했다. 과거 집계는 당시 기록으로 보존하며 파생 대장/덱은 기존 생성기로 갱신한다.
+
+| id | severity | lane | repro (파일·절) | evidence | status | owner |
+|---|---|---|---|---|---|---|
+| C7-F56 | S2 | systems | M23-Q1: 같은 화면 revision의 autosave A/B에서 A 성공 뒤 최신 B 실패가 WorkSaved/Preview에 가려짐 | `m23/review-feedback-red.xml` 및 `review-boundary.xml` 실제 실패. 큐 sequence/표시 revision 분리 뒤 최종 PlayMode112 pass. [상세](m23-integration-review.md) | **closed** | game-systems-designer |
+| C7-F57 | S2 | systems | M23-Q2: 실제 화면 overlay-back으로 read-original preview를 닫아도 Preview 잔류 | 같은 RED2건 중 실제 재현. 공통 DismissOverlay는 Preview를 해제하되 나중 SaveFailed를 보존. 최종 PlayMode112 pass | **closed** | game-systems-designer |
+| C7-F58 | S2 | systems / QA | M23-Q3: 글자150% 연습장의 하단 대응 설명에 키보드 경로 없음 | 페이지 위/아래의 실제 Enter 회귀와 최종 스틸61/62/63. 재렌더 없이 이동·초점/본편 저장 불변 | **closed** | game-systems-designer |
+| C7-F59 | S2 | systems | M23-Q4: commit 취소 뒤 tip Redo가 no-op이라 무효화된 작업 autosave를 대체하지 않음 | CancelPending 결과에 따른 변경본/현재본 재저장, 지연·실패·no-op 경계 회귀 최종 통과. 새 상황/새 commit의 소유권 별도 무효화 | **closed** | game-systems-designer |
+| C7-F60 | S2 | systems / QA | M23-Q5: 실제 깊은 C1 근거 초점에서 WorkSaved가 스크롤 밖으로 사라짐 | native37·feedback-visibility-red.xml 실패. 첫 Navigation 축소안의 Band comparison 실패도 보존. 오른쪽 고정 영역안의 최종112 pass 및 native49/50/51/54에서 가시성/실제 내구 확정 확인 | **closed** | game-systems-designer |
+
+영수증 루트는 `systems/tech-verification/m23/`다. 신규5건 모두 closed이며 사람 이해/전체 캠페인/Windows/강한 P1/P2 입증은 결함 종결과 별개다. Gate 조건을 통과로 올리지 않는다.

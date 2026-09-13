@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.9714773">
+  <test-suite type="TestSuite" id="1114" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="89" result="Failed" site="Child" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.971477" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1108" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="89" result="Failed" site="Child" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.964210" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="99159" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1109" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="89" result="Failed" site="Child" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.962454" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1110" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="89" result="Failed" site="Child" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.960863" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1095" name="T0ReadingBackingPlayModeTests" fullname="Tide.Tests.T0ReadingBackingPlayModeTests" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.957877" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1096" name="M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" fullname="Tide.Tests.T0ReadingBackingPlayModeTests.M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" methodname="M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" seed="662327180" result="Failed" start-time="2026-09-13 06:51:48Z" end-time="2026-09-13 06:51:49Z" duration="0.950066" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  gate on: every work-surface paragraph must sit on a content-safe reading band, because the committed ink text is unreadable directly on the dark r02 ground (measured glyph:ground 1.11:1)
+  Expected: 3
+  But was:  0
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ReadingBackingPlayModeTests+<M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates>d__38.MoveNext () [0x005ed] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ReadingBackingPlayModeTests.cs:247
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

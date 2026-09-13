@@ -13,7 +13,7 @@ namespace Tide.App
 {
     public sealed class ReviewNoteSource
     {
-        public string Id, Label, Description, OriginId, SourceType;
+        public string Id, Label, Description, OriginId, SourceType, Lineage;
     }
 
     public sealed partial class T0GameSession
@@ -240,26 +240,54 @@ namespace Tide.App
                     if (Journal.State.Has("line:" + id + ":" + (string)line["lineId"])) excerpts.Add((string)line["text"]);
                 foreach (var row in record["rows"] as JArray ?? new JArray())
                     if (Journal.State.Has("row:" + id + ":" + (string)row["rowId"])) excerpts.Add((string)row["item"] + " · " + (string)row["note"]);
+                if (Journal.State.Has("copy:" + id)) excerpts.Add("첫 판독 사본 보존 · 원본 재판독 " + Journal.State.ReadCount(id) + "회");
                 if (Journal.State.Has("citation:" + id)) excerpts.Add("핀으로 보관한 구간: " + Journal.State.Get("citationStart:" + id) + " → " + Journal.State.Get("citationEnd:" + id));
                 if (excerpts.Count == 0) continue;
                 result.Add(new ReviewNoteSource { Id = "record:" + id, Label = (string)record["displayNameKo"],
-                    Description = string.Join("\n", excerpts), OriginId = Definition.ResolveRoot(id), SourceType = definition.SourceType });
+                    Description = string.Join("\n", excerpts), OriginId = Definition.ResolveRoot(id), SourceType = definition.SourceType,
+                    Lineage = string.IsNullOrEmpty(definition.CopiedFrom) ? "원문 출처" : "사본 · 원본 계보를 이어받음" });
             }
             foreach (var observation in patrolPacket["observations"])
             {
                 var id = (string)observation["id"];
                 if (!Journal.State.Has("c1:observed:" + id)) continue;
                 result.Add(new ReviewNoteSource { Id = "patrol:" + id, Label = PatrolText((string)observation["labelKey"]),
-                    Description = (string)observation["description"], OriginId = (string)observation["rootOriginId"] ?? (string)observation["originId"], SourceType = (string)observation["sourceType"] });
+                    Description = (string)observation["description"], OriginId = (string)observation["rootOriginId"] ?? (string)observation["originId"], SourceType = (string)observation["sourceType"], Lineage = "원문 출처 · 관찰 기록" });
             }
+            result.AddRange(ObservedSignatureSources());
+            return result;
+        }
+
+        IEnumerable<ReviewNoteSource> ObservedSignatureSources()
+        {
             foreach (var observation in signaturePacket["observations"])
             {
                 var id = (string)observation["id"];
-                if (!SignatureHas("observed:" + id)) continue;
-                result.Add(new ReviewNoteSource { Id = "signature:" + id, Label = SignatureText((string)observation["labelKey"]),
-                    Description = (string)observation["description"], OriginId = (string)observation["rootOriginId"] ?? (string)observation["originId"], SourceType = (string)observation["sourceType"] });
+                if (!Definition.Signature.ProofSourceObserved(Journal.State, id)) continue;
+                yield return new ReviewNoteSource { Id = "signature:" + id, Label = SignatureText((string)observation["labelKey"]),
+                    Description = (string)observation["description"], OriginId = Definition.Signature.ProofSources[id].RootOriginId, SourceType = Definition.Signature.ProofSources[id].SourceType,
+                    Lineage = "원문 출처 · 원형 사본 보존" };
             }
-            return result;
+            int sheet = 0;
+            foreach (var copy in signaturePacket["copies"]["records"])
+            {
+                sheet++;
+                var id = (string)copy["id"];
+                if (!Definition.Signature.ProofSourceObserved(Journal.State, id)) continue;
+                var original = signaturePacket["observations"].First(observation => (string)observation["id"] == (string)copy["sourceClueId"]);
+                var label = SignatureText((string)original["labelKey"]);
+                yield return new ReviewNoteSource { Id = "signature:" + id, Label = label + " · " + sheet + "번째 장 사본",
+                    Description = (string)original["description"], OriginId = Definition.Signature.ProofSources[id].RootOriginId, SourceType = Definition.Signature.ProofSources[id].SourceType,
+                    Lineage = "사본 · " + label + "에서 옮김 · 원본을 따로 늘려 세지 않음" };
+            }
+        }
+
+        static string ReviewSourceDetail(ReviewNoteSource source,IReadOnlyList<ReviewNoteSource> sources)
+        {
+            var sameRoot=sources.Where(other=>other.Id!=source.Id&&!string.IsNullOrEmpty(source.OriginId)&&other.OriginId==source.OriginId).Select(other=>other.Label).ToArray();
+            return source.Description+"\n"+source.Lineage+"\n매체: "+ReviewMediaName(source.SourceType)+
+                (sameRoot.Length==0?"":"\n같은 원본 계보: "+string.Join(" / ",sameRoot))+
+                "\n독립 근거의 형식은 원본과 매체가 모두 달라야 합니다. 해석의 정답 판정은 아닙니다.";
         }
 
         public static string ReviewQuestionFor(IReadOnlyList<ReviewNoteSource> sources)
@@ -306,8 +334,7 @@ namespace Tide.App
                 screen.Actions.Add(A("review-source-" + item.Id, (linked ? "연결 해제 · " : "출처 연결 · ") + item.Label,
                     () => { if (!reviewLinks.Remove(item.Id)) reviewLinks.Add(item.Id); reviewStatus = "보관하지 않은 초안"; Render(); },
                     linked || selected.Length < ReviewNotesStore.SourceLimit,
-                    item.Description + "\n매체: " + ReviewMediaName(item.SourceType) +
-                    (!string.IsNullOrEmpty(item.OriginId) && selected.Any(other => other.Id != item.Id && other.OriginId == item.OriginId) ? " · 연결한 다른 출처와 원본이 같습니다." : "")));
+                    ReviewSourceDetail(item, sources)));
                 if (ReviewSourceOriginalAvailable && item.Id.StartsWith("record:", StringComparison.Ordinal))
                 {
                     var recordId = item.Id.Substring("record:".Length);

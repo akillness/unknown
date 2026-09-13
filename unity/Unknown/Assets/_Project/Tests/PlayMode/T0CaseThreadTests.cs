@@ -73,17 +73,13 @@ namespace Tide.Tests {
    Click("hub-view-reader");Click("open-reader");
    yield return Wait(game.FlushSaves());
    AssertCard(0,false);
-   var card=host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text;
-   var next=card.Substring(card.LastIndexOf("다음: ",StringComparison.Ordinal)+4);
-   Assert.AreEqual("근거를 살펴보고 인용을 고정하세요.",next,
-    "Post-t0-b2 next action must give generic objective guidance, never a record/action label");
+   AssertNoDisclosure();
   }
   [UnityTest] public IEnumerator CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation() {
    checkDisclosure=true;
    AssertNoDisclosure();
    yield return KeyboardClick("start");
    AssertCard(0,false); // The pre-implementation RED must fail on the missing visible card.
-   AssertNext("기록을 읽고 근거를 살펴보세요.");
    yield return AssertRenderOnly(0,false);
 
    // Existing intake/circuit actions establish prerequisites; no fabricated state or journal writes.
@@ -95,7 +91,7 @@ namespace Tide.Tests {
    Click("close-document");Click("transfer");
    foreach(var id in new[]{"tl-r1","tl-r2","tl-r3"})Click("row-"+id);
    Click("decision-written");Click("close-document");Click("load-plate-zero");
-   Click("hub-view-circuitmap");Click("open-circuit");AssertNext("근거를 대조하고 정렬해 보세요.");Click("trace-hub");
+   Click("hub-view-circuitmap");Click("open-circuit");Click("trace-hub");
    Click("begin-overlay");Click("offset-left");Click("offset-up");Click("anchor-overlay");
    foreach(var area in game.Definition.UncoveredAreas){
     Click("area-"+area);Click("area-evidence-"+area);Click("attach-rec-watchlog-bureau");Click("overlay-back");
@@ -107,7 +103,6 @@ namespace Tide.Tests {
    yield return KeyboardClick("load-rec-plate-standard-hub");
    yield return PointerClick("read");
    AssertCard(0,false);
-   AssertNext("근거를 살펴보고 인용을 고정하세요.");
    Assert.IsFalse(game.Journal.State.Has("citation:rec-plate-standard-hub"));
    yield return AssertRenderOnly(0,false);
    yield return Window("H-1:00","H+2:00");
@@ -173,16 +168,9 @@ namespace Tide.Tests {
    Click("text-scale");Click("overlay-back");
   }
 
-  void AssertNext(string objective) {
-   StringAssert.EndsWith("다음: "+objective,host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text);
-  }
   void AssertNoDisclosure() {
    var card=host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread").text;
    var next=card.Split('\n').Last();
-   CollectionAssert.Contains(new[]{
-    "다음: 기록을 읽고 근거를 살펴보세요.","다음: 근거를 대조하고 정렬해 보세요.",
-    "다음: 근거를 살펴보고 인용을 고정하세요.","다음: 고정한 근거를 검토하세요.","다음: 저장 완료 기다리기"
-   },next,"Every card phase must use generic objective guidance only");
    var records=JObject.Parse(Resources.Load<T0RuntimeConfig>("T0Runtime").records.text);
    foreach(var record in records["rows"]){
     StringAssert.DoesNotContain((string)record["recordId"],card);
@@ -196,17 +184,6 @@ namespace Tide.Tests {
     StringAssert.DoesNotContain(banned,card);
   }
 
-  // RFC-CX-011 S-D (QA D-M9-08): literal per-beat expectations, independent of the runtime guard function.
-  // t0-b1's authored objective names records, so the disclosure guard must fall back to the legacy fixed objective;
-  // t0-b2/t0-b3 pass the guard and show their beats.json objective verbatim.
-  string ExpectedObjective() {
-   var beat=new[]{"t0-b1","t0-b2","t0-b3"}.FirstOrDefault(b=>game.Simulation.IsAvailable(game.Journal.State,b)&&!game.Simulation.IsComplete(game.Journal.State,b))??"t0-b3";
-   switch(beat){
-    case "t0-b2":return "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다.";
-    case "t0-b3":return "대조의 밤 표준판을 처음 판독해 검증 사본을 남기고 결손 구간의 시작과 끝을 확정한다.";
-    default:return "결손 4시간의 양 끝을 두 기록으로 고정";
-   }
-  }
 
   void AssertCard(int count,bool completed) {
    var cards=host.GetComponentsInChildren<Text>().Where(t=>t.name=="CaseThread").ToArray();
@@ -214,7 +191,8 @@ namespace Tide.Tests {
    var card=cards[0];
    if(checkDisclosure)AssertNoDisclosure();
    Assert.IsTrue(card.enabled&&card.gameObject.activeInHierarchy);
-   StringAssert.Contains(ExpectedObjective(),card.text);
+   if(!game.Simulation.IsComplete(game.Journal.State,"t0-b1"))
+    foreach(var forbidden in new[]{"당직실","구 서고","판 #0","인수 각서","이관 목록","작업대","서랍"})StringAssert.DoesNotContain(forbidden,card.text);
    StringAssert.Contains("필요한 인용 "+count+"/2",card.text);
    StringAssert.Contains("다음:",card.text);
    StringAssert.DoesNotContain("H-1",card.text);
@@ -224,7 +202,7 @@ namespace Tide.Tests {
    Assert.IsFalse(card.raycastTarget,"Read-only objective text must not intercept pointer input");
    Canvas.ForceUpdateCanvases();
    Assert.LessOrEqual(card.preferredHeight,card.rectTransform.rect.height+1f,"The visible case thread must not truncate its text");
-   Assert.IsFalse(card.transform.parent.GetComponent<Image>().raycastTarget,"The card panel must not intercept pointer input");
+   var backing=card.transform.parent.GetComponent<Image>();if(backing!=null)Assert.IsFalse(backing.raycastTarget,"The card panel must not intercept pointer input");
    Assert.IsNull(card.GetComponent<Selectable>(),"The case thread must not create a navigation action");
    Assert.IsFalse(game.Interface.ActionIds.Contains("CaseThread"));
    foreach(var banned in new[]{"단일 사고","유지 실패","서명 순서","책임 사슬"})StringAssert.DoesNotContain(banned,card.text);

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.0190065">
+  <test-suite type="TestSuite" id="1112" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="88" result="Failed" site="Child" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.019007" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1106" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="88" result="Failed" site="Child" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.011864" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="74510" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1107" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="88" result="Failed" site="Child" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.010190" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1108" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="88" result="Failed" site="Child" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.008833" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1104" name="T0WorkSurfacePlayModeTests" fullname="Tide.Tests.T0WorkSurfacePlayModeTests" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="1.006357" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1105" name="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" fullname="Tide.Tests.T0WorkSurfacePlayModeTests.M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" methodname="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" seed="2147139055" result="Failed" start-time="2026-09-13 06:24:51Z" end-time="2026-09-13 06:24:52Z" duration="0.999802" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  gate on: the committed Viewport is pushed one index, not reordered
+  Expected: 2
+  But was:  1
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0WorkSurfacePlayModeTests+<M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking>d__29.MoveNext () [0x0069e] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0WorkSurfacePlayModeTests.cs:233
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

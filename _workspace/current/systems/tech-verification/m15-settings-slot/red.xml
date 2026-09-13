@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.9821465">
+  <test-suite type="TestSuite" id="1104" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.982147" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1098" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.975993" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32813" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1099" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.974529" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1100" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.973095" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1096" name="T0SettingsSlotPersistenceTests" fullname="Tide.Tests.T0SettingsSlotPersistenceTests" classname="Tide.Tests.T0SettingsSlotPersistenceTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.970977" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1097" name="TextScaleChosenInARecoverySlotSurvivesRestart" fullname="Tide.Tests.T0SettingsSlotPersistenceTests.TextScaleChosenInARecoverySlotSurvivesRestart" methodname="TextScaleChosenInARecoverySlotSurvivesRestart" classname="Tide.Tests.T0SettingsSlotPersistenceTests" runstate="Runnable" seed="683034853" result="Failed" start-time="2026-09-12 22:45:09Z" end-time="2026-09-12 22:45:10Z" duration="0.964950" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Text scale chosen while a recovery slot is active must survive a restart
+  Expected: 1.5f
+  But was:  1.0f
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0SettingsSlotPersistenceTests+<TextScaleChosenInARecoverySlotSurvivesRestart>d__12.MoveNext () [0x00227] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs:48
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

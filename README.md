@@ -4,6 +4,43 @@
 >
 > 이 저장소는 Steam 프리미엄 Unity 신작의 **사전제작(preproduction)** 저장소입니다. 컨셉·프리비주얼라이제이션 이미지와 개발 빌드의 게임 내 UI 캡처를 구분해 표기합니다. 사람 플레이·성능·판매 실측은 아직 **n = 0** 입니다.
 
+## 최신 개발 빌드 · M23 (2026-09-14)
+
+두 기록의 **동시 비교**, 직접 고르는 **서명 근거와 출처 계보**, 본편과 격리된 **조위정합 연습장**, 스크롤해도 유지되는 **작업저장·미리보기·확정저장 피드백**을 구현했습니다. 미기록 후보는 확정을 막으며 이전에 기록한 근거는 보존합니다. 같은 원본의 사본을 독립 근거로 세지 않습니다.
+
+| 두 자료·시간창 동시 비교 · 150% | 확정 후 내구 저장 피드백 · 150% |
+|---|---|
+| ![M23 실제 macOS 두 기록 비교](_workspace/current/systems/tech-verification/m23/native/59-release-simultaneous-ledger-and-pinned-plate-150.png) | ![M23 실제 서명 확정과 저장 완료](_workspace/current/systems/tech-verification/m23/native/54-release-durable-signature-confirmation-150.png) |
+
+- **검증:** Unity 고유177개 통과(EditMode64 + PlayMode112 + 별도 boot1), Node7개·정본50개·증거 그래프18개 통과. macOS 앱315파일/410,875,105B를 빌드하고 실제 키보드·클릭·앱 재시작 복구를 확인했습니다. OS 재부팅·사람 이해·Windows 성능 증거는 아닙니다.
+- **실행:** 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`. 별도 연습장은 Editor 또는 네이티브 실행 인자 `--m23-alignment-practice`에서만 열립니다. 정식 초회 평가에는 이 인자를 쓰지 않습니다.
+- **경계:** 현재 범위는 T0→C1-b2입니다. 사람 n=0, 강한 P1/P2 보존 감사 blocked, R8/R9 Base gate와 전체450–540분·Windows 실측은 미충족입니다. M20 r02·미승인 아트/상업 상태를 승격하지 않았습니다.
+
+[구현 결과·리뷰·개선 계획](_workspace/current/handoff/m23-results-and-improvement-plan.md) · [정확한 실행 영수증](_workspace/current/systems/tech-verification/m23/verification.json) · [사람 평가 준비/미측정 경계](_workspace/current/qa/m23-human-evaluation.md)
+
+## 이전 기반 빌드 · M22 (2026-09-13)
+
+Blender MCP에서 직접 저작한 **한서린과 조작용 양손**을 기본 개발 빌드에 적용했습니다. 짧은 비대칭 머리, 말아 올린 소매와 작업 앞치마를 유지하고, 손의 엄지 방향·접촉 위치·화면 밖으로 이어지는 소매를 실제 Unity 화면에서 교정했습니다.
+
+| 시작 화면의 한서린 | 실제 판독 중 손잡이 접촉 |
+|---|---|
+| ![M22 기본 개발 빌드의 주인공 화면](docs/media/gameplay-m22/title.png) | ![M22 기본 개발 빌드의 판독 동작](docs/media/gameplay-m22/reader-contact.png) |
+
+[판 삽입·복귀 영상](docs/media/gameplay-m22/plate-insert.mp4) · [판독·크랭크 영상](docs/media/gameplay-m22/reader.mp4) · [모션 축소 영상](docs/media/gameplay-m22/reduced-read.mp4) · [문서 화면의 양손](docs/media/gameplay-m22/document-hands.png)
+
+- **플레이 리듬:** 무료 힌트의 대기·재제안 쿨다운은 각각 180초입니다. 제안의 보기·닫기는 키보드로 접근할 수 있고, Tab·포인터 이동 중 사라지지 않습니다. 문서 열람 중에는 방해하지 않으며 힌트 수준을 자동 공개하지 않습니다.
+- **조작 피드백:** 성공한 판독에서만 크랭크가 움직입니다. 오른손은 손잡이를 따라가고, 삽입·확정 후 왼손은 복귀합니다. 모션 축소·화면 이탈·앱 중단·창 포커스 상실에서 멈추며 복귀 후 밀린 동작을 재생하지 않습니다. 내구 저장 실패를 성공 동작으로 꾸미지 않습니다.
+- **검증:** EditMode **56**, PlayMode **100**, 별도 격리 부팅 **1**, 고유 **157건** 통과. 진단 플래그 없는 macOS 빌드를 실제로 조작했습니다. 영상의 30fps는 인코딩 규격이며 성능 실측이 아닙니다.
+- **네이티브 힌트 확인:** [150% 제안·키보드 초점](docs/media/gameplay-m22/hint-offer-150.png) · [Enter로 닫은 뒤 판독기 유지](docs/media/gameplay-m22/hint-dismiss-150.png) · [자동 공개 없는 도움 메뉴](docs/media/gameplay-m22/hint-help-unrevealed-150.png). 180초 설정을 단축하지 않은 실제 대기·재제안과 입력을 확인했습니다.
+
+실행 파일: `unity/Unknown/Builds/T0-mac/Unknown.app` · [정확한 검증 영수증](_workspace/current/systems/tech-verification/m22/verification.json) · [Blender 원본](assets/generated/3d/seorin-m22/r01/) · [비교작 조사와 적용 범위](_workspace/current/planning/t0-research-to-implementation-r01.md)
+
+기존 인물·삽입·판독 영상은 교정 전 M22 네이티브 빌드이며, 새 힌트 스틸은 입력·중단 계약 교정 후 빌드입니다. 두 빌드 지문과 캡처 범위는 각각 [모션 출처](docs/media/gameplay-m22/provenance.json)와 [힌트 UI 출처](docs/media/gameplay-m22/native-contract-provenance.json)에 분리했습니다.
+
+위 M22 단락의 영상·수치는 이전 빌드의 역사적 증거입니다. 최신 구현/소스 전달은 위 M23 기록을 따릅니다. M20 r02는 기본 적용 보류를 유지하며, 본 검증은 완성판·상업 라이선스·사람 플레이·480분 완주 승인이 아닙니다.
+
+## 기존 세계관 컨셉
+
 ![README hero — 은포항 야경 컨셉 (프리비즈, 게임플레이 아님)](docs/media/readme-hero.jpg)
 
 ## 원본 컨셉 기반 영상 · M7
@@ -42,7 +79,7 @@ Higgsfield **MCP**로 만든 4개 샷에 M5 Unity 실제 녹화, 한국어 안�
 
 ## 한 줄 소개
 
-폐국을 3주 앞둔 조수기록국의 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.
+3주 전에 폐국을 고지한 조수기록국의 이관 전 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.
 
 **장르** 작업대·공간 추리 어드벤처 (2.5D 고정 시점, 싱글플레이) · **엔진** Unity 6000.5.6f1 · **플랫폼 목표** PC (Steam) · **언어** 한국어 / 영어 · **전투·유료 재화·멀티플레이 없음**
 

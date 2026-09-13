@@ -1,0 +1,546 @@
+{
+ "scope": "M20 baseline snapshot taken before the first M20 write",
+ "head": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+ "porcelain_entries": 60,
+ "porcelain": [
+  " M _workspace/current/planning/campaign.json",
+  " M _workspace/current/systems/data/t0/beats.json",
+  " M _workspace/current/systems/data/t0/beats.meta.md",
+  " M _workspace/current/systems/data/t0/hints.json",
+  " M _workspace/current/systems/data/t0/hints.meta.md",
+  " M _workspace/current/systems/data/t0/records.json",
+  " M _workspace/current/systems/data/t0/records.meta.md",
+  " M _workspace/current/systems/data/t0/tables-receipt.json",
+  " M _workspace/current/systems/data/t0/tables-receipt.meta.md",
+  " M _workspace/current/systems/data/t0/tools.meta.md",
+  " M _workspace/current/systems/data/t0/zones.meta.md",
+  " M assets/generated/2d/ui/provenance.json",
+  " M graphify-out/.graphify_labels.json",
+  " M graphify-out/GRAPH_REPORT.md",
+  " M graphify-out/graph.json",
+  " M graphify-out/manifest.json",
+  " M unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+  " M unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+  " M unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-handover-brief.asset",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-plate-standard-hub.asset",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-tide-ledger-bureau.asset",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-transfer-list.asset",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-watchlog-bureau.asset",
+  " M unity/Unknown/Assets/_Project/Data/Authoring/T0Catalog.asset",
+  " M unity/Unknown/Assets/_Project/Data/Tables/beats.json",
+  " M unity/Unknown/Assets/_Project/Data/Tables/beats.meta.md",
+  " M unity/Unknown/Assets/_Project/Data/Tables/hints.json",
+  " M unity/Unknown/Assets/_Project/Data/Tables/hints.meta.md",
+  " M unity/Unknown/Assets/_Project/Data/Tables/records.json",
+  " M unity/Unknown/Assets/_Project/Data/Tables/records.meta.md",
+  " M unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.json",
+  " M unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.meta.md",
+  " M unity/Unknown/Assets/_Project/Data/Tables/tools.meta.md",
+  " M unity/Unknown/Assets/_Project/Data/Tables/zones.meta.md",
+  " M unity/Unknown/Assets/_Project/Tests/EditMode/M9CoreTests.cs",
+  " M unity/Unknown/Assets/_Project/Tests/PlayMode/T0CaseThreadTests.cs",
+  " M unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+  "?? _workspace/current/presentation/c1-interview-prep-m18.md",
+  "?? _workspace/current/presentation/t0-action-plate-m19.md",
+  "?? _workspace/current/systems/tech-verification/m14-objective/",
+  "?? _workspace/current/systems/tech-verification/m15-settings-slot/",
+  "?? _workspace/current/systems/tech-verification/m16-runtime-capture/",
+  "?? _workspace/current/systems/tech-verification/m17-unity-polish/",
+  "?? _workspace/current/systems/tech-verification/m18-interview-ui/",
+  "?? _workspace/current/systems/tech-verification/m19-ui-polish/",
+  "?? assets/generated/2d/ui/m19-interview-control-surface-r01.png",
+  "?? assets/generated/2d/ui/m19-interview-control-surface-r01.prompt.txt",
+  "?? assets/generated/2d/ui/m20-archival-work-surface-r02.png",
+  "?? assets/generated/2d/ui/m20-archival-work-surface-r02.prompt.txt",
+  "?? unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs",
+  "?? unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs.meta",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs.meta",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs.meta",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs.meta",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs",
+  "?? unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs.meta"
+ ],
+ "baselined_files": 119,
+ "files": {
+  "_workspace/current/planning/campaign.json": {
+   "sha256": "f00deef562e84d31603e278323b2291271f51776244364a7b5d1973ec8e9b751",
+   "bytes": 123922
+  },
+  "_workspace/current/presentation/c1-interview-prep-m18.md": {
+   "sha256": "1b29b29ef9e142724deffb97005cc88832617ce80b70875d589095d9b03a5964",
+   "bytes": 8543
+  },
+  "_workspace/current/presentation/t0-action-plate-m19.md": {
+   "sha256": "a1ab801e851e070702a94fbb5c9e698602d2902a18398a75aad6ee23365377a1",
+   "bytes": 12476
+  },
+  "_workspace/current/systems/data/t0/beats.json": {
+   "sha256": "625078df34dd0588c675c3dd6474e95b011cd0afa4c5cdd1c4e1e505097c7e54",
+   "bytes": 16191
+  },
+  "_workspace/current/systems/data/t0/beats.meta.md": {
+   "sha256": "71a71d8c7f9d50d6344dee4e817f404473d1c4fb749e25f8257ae434b4f0563b",
+   "bytes": 1976
+  },
+  "_workspace/current/systems/data/t0/hints.json": {
+   "sha256": "56b8b5e2a7b4207263af097898cc6880e827e12847aa8f5d73aed5e259c5e72d",
+   "bytes": 4032
+  },
+  "_workspace/current/systems/data/t0/hints.meta.md": {
+   "sha256": "ba90d159662536ae4e08cdfcb1ade67ae9f0d848fda55417251f84ea044d94ae",
+   "bytes": 1969
+  },
+  "_workspace/current/systems/data/t0/records.json": {
+   "sha256": "8e265358036779d08137abb45c3cf1369ba51a23d0129aa7e7c2701c3b2b1644",
+   "bytes": 70694
+  },
+  "_workspace/current/systems/data/t0/records.meta.md": {
+   "sha256": "4b12a5a5c54619c1f6f2eec03c35f82b6f0f1389c2c7fe428dc793a238471eee",
+   "bytes": 1985
+  },
+  "_workspace/current/systems/data/t0/tables-receipt.json": {
+   "sha256": "b4644f3136728d71f7d615ef38746481e37bfc316b7c54944dc6141da871a57d",
+   "bytes": 5461
+  },
+  "_workspace/current/systems/data/t0/tables-receipt.meta.md": {
+   "sha256": "4ed3184e243ec997c7e12acf54dad912126e3ed7be904d7e7dd52b63c8a6e963",
+   "bytes": 1993
+  },
+  "_workspace/current/systems/data/t0/tools.meta.md": {
+   "sha256": "041f5bfe5f56d4df10559cf170172fb66503db4677d9b2fdd26f8c44248ec626",
+   "bytes": 1977
+  },
+  "_workspace/current/systems/data/t0/zones.meta.md": {
+   "sha256": "20978a11046599b02747ad70cce4f6c7c358d1a01899cf8836044737a7364203",
+   "bytes": 1980
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/build-mac.log": {
+   "sha256": "fcc704a0b0048123713b1fb511c915cdb339ceda612a86dbc80b309bc3a4025f",
+   "bytes": 414883
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/editmode.log": {
+   "sha256": "dca1883518174769fcf4f331119c2f918906daaf48e61dd01a1cce716cb13b28",
+   "bytes": 35471
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/editmode.xml": {
+   "sha256": "ba624fdc0455f91b4c378baf43ddb39f9118702f3acdaa065da3f7beeebbb75b",
+   "bytes": 39893
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/green.log": {
+   "sha256": "81a7fc4ad73bba19283ee70f1c808547b8e3bf56590fa897259b766e709ec22c",
+   "bytes": 42883
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/green.xml": {
+   "sha256": "17e40074b71e7b925963c65d9b33ec20c4679e68a9436a1ce4db0e231397cb31",
+   "bytes": 3376
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/import.log": {
+   "sha256": "b96807ddc3d9f28cbcec143a6e2c2f17fb0bf3f47ef657cafe8dc514d505fc12",
+   "bytes": 33957
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/playmode.log": {
+   "sha256": "892d8a279b7221b8ffd0e33872e969c21a60d18ed94d44c9b0a4c5a96c874c45",
+   "bytes": 608413
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/playmode.xml": {
+   "sha256": "a109aab0c3b50fc6252447bfa594e9e21135f09e3882901a1878454ef60b544f",
+   "bytes": 93426
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/red.log": {
+   "sha256": "dc0cf2202e8eb1ded480fe22aa85de7f234c2246803ef6dc26bcd7afc90eb1bf",
+   "bytes": 46515
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/red.xml": {
+   "sha256": "b93f03321c3a24611148f3b08b51d1b832f6eaa64b4c0bab4d568aa9059e9c9e",
+   "bytes": 5439
+  },
+  "_workspace/current/systems/tech-verification/m14-objective/verification.md": {
+   "sha256": "6d491dd27028bb9d48978661b654456c9df3aebc921d2b2e358ad3f10810ddbe",
+   "bytes": 2050
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/editmode.log": {
+   "sha256": "7861d073db33518b515cd191d6e72d71bbe61bfc2f2c980cae813212ae8c083e",
+   "bytes": 35442
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/editmode.xml": {
+   "sha256": "59655b84dd1b9c83c74975db14d2b9ed69509ac08bbeea5779686782f2ce687b",
+   "bytes": 42337
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/green.log": {
+   "sha256": "79bd308cbdcb0c22c8a7dcc90728fe0ad6a8ad8f705e7997fc41a13a6cbdaf5b",
+   "bytes": 53462
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/green.xml": {
+   "sha256": "9cfb7f707106d12dba30e451defebc8af6cb109c9288f5be387678f2b17fe434",
+   "bytes": 3387
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/playmode.log": {
+   "sha256": "67a24e755f79b1803668818977fbe74f92f821feb6c237ade1191cf34afb45e2",
+   "bytes": 608401
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/playmode.xml": {
+   "sha256": "844ea8d4849a371afa35c547c0df8e0f889ac34ce0a70a5bc6e1455e6fe5cdd5",
+   "bytes": 94627
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/red.log": {
+   "sha256": "2f278e6c28aeb9ec3f755e613458cecf7f2375d6cff75f61b5966bc822883411",
+   "bytes": 61150
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/red.xml": {
+   "sha256": "f72313edc206076c6532345e2a4fff67ddda67329d44aed62a9c633bb3356efd",
+   "bytes": 4732
+  },
+  "_workspace/current/systems/tech-verification/m15-settings-slot/verification.md": {
+   "sha256": "9fa00f47d506652215356e1e2395c47a0cf0980c42e8a7c352a07adc931c566c",
+   "bytes": 7882
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/baseline-worktree.json": {
+   "sha256": "561dcea32ac8ab7d7d68d0e70a1dcdb8430bb47c365fa398b0dee0e77ebe3c8c",
+   "bytes": 12218
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/build-mac.log": {
+   "sha256": "04dbda5707a5d0c1c88769866e9890c42dd11a1f4620a16f4bae3e6a2a9f0ad9",
+   "bytes": 508572
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/logs/Player-prev.log": {
+   "sha256": "2d6bae510ad182bcb7c88c3be48315b1cabdb56cdf6765c7869d96de09ba6051",
+   "bytes": 6757
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/logs/Player.log": {
+   "sha256": "c1eaa9ac8c40ebcb2926dc1f5d71bb92b3d7d53ef1fec3aa43ccb5b512f3caf9",
+   "bytes": 6820
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/shots/00-title-focused.png": {
+   "sha256": "6c43b62d7f0672180b022ce9764ca0b41a9d8986ea7d96196ede119c3629004a",
+   "bytes": 898425
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/shots/01-title-stability.png": {
+   "sha256": "6c43b62d7f0672180b022ce9764ca0b41a9d8986ea7d96196ede119c3629004a",
+   "bytes": 898425
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/summary.json": {
+   "sha256": "ae484e884edf7e7e6d286213ce3a5b9c3c73b0db9e9a415a4ddb0589e7c01f5a",
+   "bytes": 7584
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/tools/listwindows": {
+   "sha256": "5da9dcf82e86685abda91b96834364a3aa697644746a9c47a53576d63b5a1c23",
+   "bytes": 56712
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/tools/listwindows.swift": {
+   "sha256": "a9b1baf5e949031aa76e71d2405b811ea1843383043c130342fd46b0914c80f1",
+   "bytes": 1384
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/verification.md": {
+   "sha256": "fc1460f7cee9199ecf013740299ce4fb10bd334f47fd049e862ccb5f8ecc5b57",
+   "bytes": 13775
+  },
+  "_workspace/current/systems/tech-verification/m16-runtime-capture/worktree-verification.json": {
+   "sha256": "a46f474b04339f3fefa740ee520aa7dfc0f199acd57f84eb4908e7812429c0d5",
+   "bytes": 157
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/build-mac.log": {
+   "sha256": "6ef366e7bb93ef631f730f07777c2017baeca59dd52c637198fda00c645e4853",
+   "bytes": 493293
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/editmode.log": {
+   "sha256": "b455084b55e4f06aa6ee6d7ebfd2ee232a705a9b8c28070430a5f2ac3fa32bfb",
+   "bytes": 35331
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/editmode.xml": {
+   "sha256": "9593b359a3a3bd30b98dbb60eb8db1d225267b5dbad71af2a6eb8dc0b8fe6dff",
+   "bytes": 42336
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/green.log": {
+   "sha256": "1f52e387073de6f0445b07dc31722358ff1da8d5bf20f3c8a7228e176392972a",
+   "bytes": 52102
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/green.xml": {
+   "sha256": "faf491a281745781f4a3a38a80e367e1e51a14fbde058482f839ba760d0f14ec",
+   "bytes": 3504
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/playmode.log": {
+   "sha256": "44d6d017ce328c605f3829ee18bf2d8d922aa25a0e7b98db52f68f363cf6005a",
+   "bytes": 608377
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/playmode.xml": {
+   "sha256": "482085eeae1808c0a3db05477edd515ae04cefcdfe81a2128da309297ecb7fa5",
+   "bytes": 95916
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/red.log": {
+   "sha256": "48c3c4cf2b53b54d52f5f7a61e4fc1a0c19358ca4ab19a5040999115b0d6c3dc",
+   "bytes": 61258
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/red.xml": {
+   "sha256": "4f8af3623712c466dc75298e1329bc99f012a42e58d7e361f714bf2e374ff0ed",
+   "bytes": 4886
+  },
+  "_workspace/current/systems/tech-verification/m17-unity-polish/verification.md": {
+   "sha256": "25506363c5a0cd48d03dbeb7999ee74762eadf2959c94c970591b9e6882c60cf",
+   "bytes": 18883
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/build-mac.log": {
+   "sha256": "5f94e64a7268a8bb7f16dbf4e8c161c1dd01e75aa676cee872ab1b09c7ae9d78",
+   "bytes": 494559
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/editmode.log": {
+   "sha256": "fee492e7e8d0a6ab5e4900cc6cf23f3ceb118fd14300aba5563ef7ecb1a6a715",
+   "bytes": 35428
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/editmode.xml": {
+   "sha256": "65e493572c6f65d0c300a8d48abab58fa6b495bdd101075270765b2269a9d64a",
+   "bytes": 42336
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/green.log": {
+   "sha256": "070304d31ec136f187d75d942be8649ec577bbf07520c54a34309d11737e205e",
+   "bytes": 46196
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/green.xml": {
+   "sha256": "9f7bb461e4e7532d1cc6f9fda2a94e87307aa41e2bf6c7cc7b602b8a3ba1e107",
+   "bytes": 3474
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/playmode.log": {
+   "sha256": "7e841078e09564d8696081c79a9ff4cc2b66df80302ea1d4124250d8a0c63fa5",
+   "bytes": 608432
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/playmode.xml": {
+   "sha256": "d3196b3c7c84f5c3ef2197d980ab2141d6798230bb8a360cc48cfa4a5078315b",
+   "bytes": 97191
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/red.log": {
+   "sha256": "8ba2080cd7c37b760515da27163ef8126de3953c4808a999ed32461c5a61e5cd",
+   "bytes": 47529
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/red.xml": {
+   "sha256": "df8f4b74e75c036aaf2abf6a76cf24a7b28e336f0c75fdc7d06fe95e86233643",
+   "bytes": 5117
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/shots/00-title-with-c1-save.png": {
+   "sha256": "36f3e2c74f8f95b44fa181ff35e53fd7daf7553ae8434e4af3b28657f8035773",
+   "bytes": 108195
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/shots/01-m18-build-title-c1-save.png": {
+   "sha256": "259512cb815507ab5b46ab44933a9c288091c2e9ae7b85f9b662c24932bdc936",
+   "bytes": 887883
+  },
+  "_workspace/current/systems/tech-verification/m18-interview-ui/verification.md": {
+   "sha256": "b05b22e27ca08dd03ea469e7ea615e1349f346c54379fe74f0bf2337ce2400bd",
+   "bytes": 19035
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/build-mac.log": {
+   "sha256": "574dd26c9d31d99bc28e97c331bfebb32e9b983e816b9aee7425df5742080379",
+   "bytes": 495252
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/editmode.log": {
+   "sha256": "113d07ab68e5079c824ba895552459377d17f7379d3e56ef9bb57f482608a1a9",
+   "bytes": 35194
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/editmode.xml": {
+   "sha256": "e69ebee44c9e93e2bf7b9abe302ed28cbb58fee3d5847bde2ef8f0c8616e480d",
+   "bytes": 42333
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/green.log": {
+   "sha256": "bb71121c01f43f92c29fae1fbf4d783ecf3a520ec1c0ed5e260faec0bc057efb",
+   "bytes": 55036
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/green.xml": {
+   "sha256": "49ce80e253c49283b652d9b3f3e24b44b831d53b1a8e0b97da7915d18247c4c9",
+   "bytes": 3547
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/logs/player-m19-pid92370.log": {
+   "sha256": "f48d4820db871a4a62ba7af9a213c3089876138080fcc175940dea64b447b9b5",
+   "bytes": 6757
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/playmode.log": {
+   "sha256": "6a166a09ea91680bd6d7700114224a6ebfdee7889a39c8b9927986bebae96c2f",
+   "bytes": 608212
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/playmode.xml": {
+   "sha256": "fb52028534e5ab2104d40ff77b1c7278451df3ca5f3ffea816894fe582f4b6b5",
+   "bytes": 98537
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/red.log": {
+   "sha256": "766ac756e34d22eb2f412821912aff062b965d90d3db127bd371d0e06f1be5e7",
+   "bytes": 47613
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/red.xml": {
+   "sha256": "867bd90cc5c4bcaf4e4b2436fe0bf4fed5fd0d32715b40c198898430cb9832fa",
+   "bytes": 5410
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/shots/00-m19-title-pid92370-window5296.png": {
+   "sha256": "1514dd0c1a1158a843e21f57af18e0958a2af9e887023cc315540d3ef219f7d0",
+   "bytes": 897798
+  },
+  "_workspace/current/systems/tech-verification/m19-ui-polish/verification.md": {
+   "sha256": "b2fdec8ffec31065a13c9b6f1b66dd779e623d578114a1bd0bb888d9424385c7",
+   "bytes": 26663
+  },
+  "assets/generated/2d/ui/m19-interview-control-surface-r01.png": {
+   "sha256": "7ab8c92a0f7d3aac4380a29aa7c54d69a903d0f4f9a1751b1683c2ab35866c27",
+   "bytes": 2681852
+  },
+  "assets/generated/2d/ui/m19-interview-control-surface-r01.prompt.txt": {
+   "sha256": "c43715d22d67df15a1624bfe88679287fdd69e36b69bee6884e04118c16ed26d",
+   "bytes": 657
+  },
+  "assets/generated/2d/ui/m20-archival-work-surface-r02.png": {
+   "sha256": "cc52db8a8950aa7fd0915e4cae92b04a5892f9d9130863d89b2b52cbf83d75a7",
+   "bytes": 2220940
+  },
+  "assets/generated/2d/ui/m20-archival-work-surface-r02.prompt.txt": {
+   "sha256": "5cacd03e3ca71483fbcb4a8242ca4c22951518d6b175cf9c95968535955cf356",
+   "bytes": 1292
+  },
+  "assets/generated/2d/ui/provenance.json": {
+   "sha256": "ad0889dd2f7b7cce1dc94b24b3b01979a5eab35bda55b200c9c73a721a2f4862",
+   "bytes": 6007
+  },
+  "graphify-out/.graphify_labels.json": {
+   "sha256": "5e7430aa7789099bc7ad72c9d34fc2a9472db1a84af933d9b1b2406b802e0162",
+   "bytes": 81167
+  },
+  "graphify-out/GRAPH_REPORT.md": {
+   "sha256": "ae27256e0af48f15f9ee7636a28a60e0161b153ce962a137b07b49ce01c8e2b0",
+   "bytes": 530229
+  },
+  "graphify-out/graph.json": {
+   "sha256": "a3620148bf2d991af3c5dde037802ac6bf5cdaa84662ac8897d5f2adf37f656a",
+   "bytes": 22750878
+  },
+  "graphify-out/manifest.json": {
+   "sha256": "d9d5b35c368679e484563965c430977ddfd4cb03bc33690eaac7d0b71aa2569a",
+   "bytes": 591451
+  },
+  "unity/Unknown/Assets/_Project/App/C1GameSession.cs": {
+   "sha256": "499a95456d01a6c18fea7d8a6ee6073c95b3fdbb0d70fb8be5a37868fc2b16a8",
+   "bytes": 10167
+  },
+  "unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs": {
+   "sha256": "894123f6b9d27a9a61ddfd7e4efb0cdc2a6d05f4d23a55ce554e2f9afeb4beec",
+   "bytes": 2221
+  },
+  "unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs.meta": {
+   "sha256": "d0c7e7ed0a3ac68fec3b1583fe19f57a1d62d1171c2be6d9e166886d90c7d349",
+   "bytes": 59
+  },
+  "unity/Unknown/Assets/_Project/App/T0GameSession.cs": {
+   "sha256": "a61290acc193df9bc79c6861b1dc9dded95b45c8cb4a9b2c06d68c1ce3da0c92",
+   "bytes": 43664
+  },
+  "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs": {
+   "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda",
+   "bytes": 4089
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-handover-brief.asset": {
+   "sha256": "c229fda554b4298d564ef65f11f4eb3bf76e6e1747c3b744149b922e77650ca3",
+   "bytes": 87766
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-plate-standard-hub.asset": {
+   "sha256": "ba155e4f4d41e3f2dbf2b8a6f53a93e13d9fc015a144f25ce932b58a02388617",
+   "bytes": 87774
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-tide-ledger-bureau.asset": {
+   "sha256": "7c83c19e53e7133a5e1dddc324caaa680748f1569b4a8028a9091e3684141125",
+   "bytes": 87774
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-transfer-list.asset": {
+   "sha256": "0cd5f3dd5a08de30e7e5fff08a1c25f51bbad68238d00c682f36c5355f7dbc3d",
+   "bytes": 87764
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-watchlog-bureau.asset": {
+   "sha256": "8c5b7aa326b0182a0cd32b70031a3b58d61b4c90d3d99185a34ac17af4b824ef",
+   "bytes": 87768
+  },
+  "unity/Unknown/Assets/_Project/Data/Authoring/T0Catalog.asset": {
+   "sha256": "a65843aeca3508bacffa37731de3699e9deec2657abb1830d502305941729847",
+   "bytes": 7756
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/beats.json": {
+   "sha256": "625078df34dd0588c675c3dd6474e95b011cd0afa4c5cdd1c4e1e505097c7e54",
+   "bytes": 16191
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/beats.meta.md": {
+   "sha256": "c2b001942e9cf2ec7c2b2ccb143c7c4f409ccaf29b181d6b655fb8b63423b32f",
+   "bytes": 2069
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/hints.json": {
+   "sha256": "56b8b5e2a7b4207263af097898cc6880e827e12847aa8f5d73aed5e259c5e72d",
+   "bytes": 4032
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/hints.meta.md": {
+   "sha256": "425b2e163b8b77fd52f6c39ab3efa0b002b13b38547a36aa8b70155e3a8badfe",
+   "bytes": 2062
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/records.json": {
+   "sha256": "8e265358036779d08137abb45c3cf1369ba51a23d0129aa7e7c2701c3b2b1644",
+   "bytes": 70694
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/records.meta.md": {
+   "sha256": "5fa85b59bdda23fdeda06f9d56d93fa43aaf1de19c128b994f5a3525cea09913",
+   "bytes": 2078
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.json": {
+   "sha256": "6708be1fc3eff8ed24c70ffb35dbe7a822f10354bc9e030f133949745a100fb5",
+   "bytes": 5461
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.meta.md": {
+   "sha256": "3f4e01cf3d2313368ee82b049027e26d82d149d8d32a3317654514f57b7614e0",
+   "bytes": 2086
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/tools.meta.md": {
+   "sha256": "79bd161800296444631fa409823e980bec317b9f39718832b05f0545deeb06c9",
+   "bytes": 2070
+  },
+  "unity/Unknown/Assets/_Project/Data/Tables/zones.meta.md": {
+   "sha256": "4ea0a75348bb6d9fdfd59a35afe7468ab11e03101d4299e0ea0cfe3e9dae04bd",
+   "bytes": 2073
+  },
+  "unity/Unknown/Assets/_Project/Tests/EditMode/M9CoreTests.cs": {
+   "sha256": "e7b922ccb1194b855fff6635b51020c9d60af3a5ce34c6bf076e16bf7ae11765",
+   "bytes": 5366
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs": {
+   "sha256": "07fca34133f2d40bf29ae94f87a073126587f3331bbad45efdd179bcd1821bf7",
+   "bytes": 8138
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs.meta": {
+   "sha256": "5a99681fcba981c4107b34ada3c4f746a39ba2596a9c0a635614d7a96201b87d",
+   "bytes": 59
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs": {
+   "sha256": "42f6e211539874f227489536b48e1d8c1432a8ea20bb5d19ddc1dc5ea7f121d0",
+   "bytes": 11372
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs.meta": {
+   "sha256": "ce7b4e9086eb0ec2cefd17b32664a0fd4f508a27494f94afabf55d0f74eb4057",
+   "bytes": 59
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0CaseThreadTests.cs": {
+   "sha256": "8e3c44fac32c3ede20fdb06c4c9c89d3fdae5d45348083f211cc51a1b50bf9f7",
+   "bytes": 17629
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs": {
+   "sha256": "ec2d9923a5a7e8f1ec099c881cc5689b80e535cd32319d5b357940d1838c9e3a",
+   "bytes": 4337
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs.meta": {
+   "sha256": "019c6a77068e2d7d9f476b8e50dde1d2e544ecde3e6391c0e5009dea3e43db40",
+   "bytes": 59
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs": {
+   "sha256": "dc6db7be6ccc06d5c764374866c7b7bdb3ee3b5cbda6748620f8a88924a0df2f",
+   "bytes": 3415
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs.meta": {
+   "sha256": "fd974d636d083adf30dd1db9a7a589d9717dfe4191519ac4a475b87ae42f8f08",
+   "bytes": 59
+  },
+  "unity/Unknown/Assets/_Project/UI/T0Interface.cs": {
+   "sha256": "f4468449c6f76f0196c1de7a6e3cecf285621a11df32f07ae4f32751ba3c414b",
+   "bytes": 25711
+  }
+ }
+}

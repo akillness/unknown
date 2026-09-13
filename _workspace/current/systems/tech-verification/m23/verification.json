@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "completedUtc": "2026-09-13T15:13:35Z",
+  "cycle": "20260909-preproduction-c7",
+  "milestone": "M23",
+  "scope": "R1/R2/R3/R4 correction/R5 isolated practice/R7; current T0 and C1-b2 developer slice, not complete campaign",
+  "sourceBaseCommit": "b2ae1fb8119be1b797f874c38441cbd433aa72d4",
+  "sourceSnapshots": [
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+      "bytes": 48374,
+      "sha256": "d0ff2f58af30bb32571df0db8e6a76ba55a20ff7bb4ae11b65a9c0d896b74d07"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+      "bytes": 10448,
+      "sha256": "08f6cb1780f7c7fd7f46b056c3c1866f6654d64873d27870dcb998c4cb9473b1"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
+      "bytes": 7182,
+      "sha256": "6470fefcb20b9b70591a66d67305583b91241f1cea20c67ba40794da34791620"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+      "bytes": 15679,
+      "sha256": "4f8d135b60864f73d150471284c78a30c13beb41da51cde360e79ffc77f33726"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+      "bytes": 3219,
+      "sha256": "c4b870a38ce7ca4b47ceda398489b55c63952e78678adf69fcfc1bd8f0897c97"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
+      "bytes": 22090,
+      "sha256": "27770778dc02e08505319e6d955c2e1badabf8431b01e083140f3fc4a353c836"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
+      "bytes": 11073,
+      "sha256": "f7daf019a76df7b08779893a6364d3b98ae7028c9e88fd7ab2b1fb5bb1f7c35d"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0ActionFeedbackSession.cs",
+      "bytes": 1362,
+      "sha256": "d4c4c246b7fa53a53aba95d6906d48f443c3f8de946863b21dd00885dec21596"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+      "bytes": 9569,
+      "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+      "bytes": 4089,
+      "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+      "bytes": 32179,
+      "sha256": "8cd9eeabe1731bd5347c5e2547ae678fc41997b4501f4a03c884079f7af89e70"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
+      "bytes": 4785,
+      "sha256": "8cfdbc8b3c54eb308f2be1111ae0e8f6ecf5c7eb2dc149aba8d26027aec0d6a5"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
+      "bytes": 6324,
+      "sha256": "c871853209fea2a6e97593794a4c2459e5a55331377c33a227a038b29a170857"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+      "bytes": 7986,
+      "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Sim/AlignmentPractice.cs",
+      "bytes": 8547,
+      "sha256": "f93b36c9764734baf31abc5b9f8a6768968bdc5e73c7b72ff81c7aeffd350bf0"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+      "bytes": 9932,
+      "sha256": "d24a5cd450c456c044bde2e7be3bc74ea0a45728de556d9f4a6ed6efa336be0b"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/M23AlignmentPractice.json",
+      "bytes": 1413,
+      "sha256": "3eb3a06a1c1340dd50c8d9d490fe380fed70ebbc7a67533b327e47d6f5c28a95"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/M23Feedback.json",
+      "bytes": 700,
+      "sha256": "82d3d8d4dc246686d9458f851e35571fa307c1a56c95e022c536d6cb7aa9c7a0"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+      "bytes": 14558,
+      "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+    }
+  ],
+  "campaign": {
+    "path": "_workspace/current/planning/campaign.json",
+    "bytes": 123944,
+    "sha256": "baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe"
+  },
+  "build": {
+    "platform": "macOS arm64",
+    "unity": "6000.5.6f1 (0e0577a1a2ac)",
+    "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+    "result": "Succeeded",
+    "buildReportBytes": 410875105,
+    "inventoryBytes": 410875105,
+    "inventoryFiles": 315,
+    "fingerprint": "d310c591fedfb8635efc543f21261ca2e5ee022a39eb75ead6ef0c2b86d26ad2",
+    "fingerprintAlgorithm": "SHA256 of UTF-8 JSON of the sorted file inventory, sort_keys=True, separators=(comma,colon); paths repository-relative",
+    "inventory": "build-inventory.json",
+    "assemblies": [
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.UI.dll",
+        "bytes": 46080,
+        "sha256": "2161b0ebe5b185c18b2841f946ea27795cd4339a6cff969c5cc901fa67b7abbf"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Data.dll",
+        "bytes": 17920,
+        "sha256": "8913a89b094988043ed240d33e91670a62f1663823168f1fd08310c1bf1cee4c"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Input.dll",
+        "bytes": 19456,
+        "sha256": "12fbb8b25b9bab245ab4a67cefc0dad7a3a1ad92fbd3fef856d4de36f0df91fa"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Save.dll",
+        "bytes": 24064,
+        "sha256": "1f8b2df3d505a0d26bb5fc0b9a0e70c5a46f11f471f5a59d8b721d1ebcaa0d06"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Presentation.dll",
+        "bytes": 14336,
+        "sha256": "bd59a288340eee104116f5c89c5fcd145ae50ed5b337fd0878cb8a8e26d4fadc"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+        "bytes": 158208,
+        "sha256": "bdc1fa14e98da02d3e38579871f08e519be1a1c33e66abb5467bd99d4da4ee35"
+      },
+      {
+        "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Sim.dll",
+        "bytes": 67072,
+        "sha256": "b5628f06ca7b4a64776d823690d15937e3a3d879ba40ad6779535291c0dccfa0"
+      }
+    ],
+    "localApp": "unity/Unknown/Builds/T0-mac/Unknown.app",
+    "publishedBinary": false
+  },
+  "tests": {
+    "uniqueUnityPassed": 177,
+    "uniqueUnityFailed": 0,
+    "editModePassed": 64,
+    "playModePassed": 112,
+    "playModeSkipped": 1,
+    "skipReason": "serialized boot requires isolated --t0-save-dir and was separately exercised",
+    "isolatedBootPassed": 1,
+    "nodePreservationRegressionPassed": 7,
+    "evidenceGraphChecksPassed": 18,
+    "campaignChecksPassed": 50,
+    "t0TableChecksPassedPerTarget": 5,
+    "xml": [
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/editmode.xml",
+        "bytes": 49027,
+        "sha256": "aea467e625d5850268029d2338af82945d89c8c22d1278fdaeb45272afc9b1cb",
+        "run": {
+          "id": "2",
+          "testcasecount": "64",
+          "result": "Passed",
+          "total": "64",
+          "passed": "64",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:06:19Z",
+          "end-time": "2026-09-13 14:06:22Z",
+          "duration": "2.4303861"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/playmode-release-final.xml",
+        "bytes": 119694,
+        "sha256": "8477623234a03fe8480ecb2827e116a0db4429872f32b64bcbb5c0937e537df1",
+        "run": {
+          "id": "2",
+          "testcasecount": "113",
+          "result": "Skipped:Ignored",
+          "total": "113",
+          "passed": "112",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:51:20Z",
+          "end-time": "2026-09-13 14:52:27Z",
+          "duration": "66.6235842"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/boot-release.xml",
+        "bytes": 3437,
+        "sha256": "8bc3c01e51ee532cff2ea18135a1c582ec486eef23905468994a34e3b1d51665",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Passed",
+          "total": "1",
+          "passed": "1",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:54:25Z",
+          "end-time": "2026-09-13 14:54:26Z",
+          "duration": "1.1368067"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/review-feedback-red.xml",
+        "bytes": 6077,
+        "sha256": "fbfe0b217180b92d67083505a806695057c88b451c7793f4a29078f3e9a16566",
+        "run": {
+          "id": "2",
+          "testcasecount": "2",
+          "result": "Failed(Child)",
+          "total": "2",
+          "passed": "0",
+          "failed": "2",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:11:36Z",
+          "end-time": "2026-09-13 14:11:38Z",
+          "duration": "2.0989149"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/review-boundary.xml",
+        "bytes": 6152,
+        "sha256": "9fc87d45759c6757e5932fa8a56dc7f4ee81c65d05c71921d82c703288dc57c6",
+        "run": {
+          "id": "2",
+          "testcasecount": "3",
+          "result": "Failed(Child)",
+          "total": "3",
+          "passed": "2",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:16:03Z",
+          "end-time": "2026-09-13 14:16:06Z",
+          "duration": "3.2318394"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/feedback-visibility-red.xml",
+        "bytes": 4644,
+        "sha256": "cc8369ba8e49b395dad0a2345b6c1ff5e1bc86f602500588083d8de18cae7c1d",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:46:13Z",
+          "end-time": "2026-09-13 14:46:15Z",
+          "duration": "2.0047348"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/playmode-release.xml",
+        "bytes": 120518,
+        "sha256": "339a55ce3a639e650f219470eb992317b37bc63c7b5ca5e6fbe40f054f972046",
+        "run": {
+          "id": "2",
+          "testcasecount": "113",
+          "result": "Failed(Child)",
+          "total": "113",
+          "passed": "111",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 14:48:11Z",
+          "end-time": "2026-09-13 14:49:17Z",
+          "duration": "65.5240686"
+        }
+      }
+    ]
+  },
+  "canonAudit": {
+    "result": "blocked",
+    "exitCode": 3,
+    "artifact": "preservation-audit.json",
+    "minimalIndependentPairBeats": 17,
+    "strongP1": "unknown: missing authored alternative claim/path and reachability mapping",
+    "strongP2": "unknown: missing both-member preservation/action coverage",
+    "promiseWeakened": false
+  },
+  "review": {
+    "initial": [
+      "ReaderCompare",
+      "SignatureSources",
+      "AlignmentPractice",
+      "CanonConsistency",
+      "GoalReview"
+    ],
+    "postImplementation": [
+      "RuntimeAcceptance",
+      "EvidenceAcceptance"
+    ],
+    "readOnlyReviewers": true,
+    "executionOwner": "Main",
+    "correctedFindings": [
+      "M23-Q1 autosave ordering",
+      "M23-Q2 visible Back preview dismissal",
+      "M23-Q3 keyboard practice viewport",
+      "M23-Q4 cancelled-commit working-save ownership",
+      "M23-Q5 scrolling feedback invisibility"
+    ],
+    "remainingProvenFindingsInAssignedReviewScope": 0,
+    "notAnEntireRepositorySecurityAudit": true
+  },
+  "native": {
+    "inputTool": "orca computer; synthetic input alone is unverified, screenshots are observed proof",
+    "textScale": 1.5,
+    "reducedMotion": true,
+    "developerCheckpoints": true,
+    "captures": [
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/18-transfer-locked-order-not-causality-150.png",
+        "bytes": 747052,
+        "sha256": "d762efdb2c37c220ba66f393d1e76e60bb182e99737764abcbe59ab5426b47db",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/22-default-locked-overlap-unknown-150.png",
+        "bytes": 829507,
+        "sha256": "257277b3446eb82ad46b8672065eb1eae9fdfba3a2086890dbac7c7fe2e81ea5",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/23-practice-reset-clears-baseline-150.png",
+        "bytes": 829656,
+        "sha256": "47b7ef31fcd90ef26f74c91cb64a308a5f79450789490a3e8780ebf720986c89",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/27-unflagged-practice-entry-absent-150.png",
+        "bytes": 649176,
+        "sha256": "4854c71fe01f8ca8e96e84eb06363280134bb17cc1522d9b4735ba39a2fb1682",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/31-copy-does-not-create-independent-evidence-150.png",
+        "bytes": 815754,
+        "sha256": "c043d8f4989e964ddcc3fdf901d2bbefe0f67226f8750e901f964e78b77ecd4f",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/37-citation-working-save-not-final-proof-150.png",
+        "bytes": 841958,
+        "sha256": "a1cdeaf758b2b8b87c05f0d4e29ffb7f6199cd09c452c536264f83ba347337a4",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/43-two-copies-one-origin-requested-question-150.png",
+        "bytes": 708764,
+        "sha256": "a99942c3a540d4388efe9c23859743698b727bfe6cc3ac12d397fb24892cf03b",
+        "build": "pre-Q5-layout"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/48-release-unrecorded-candidate-blocks-confirmation-150.png",
+        "bytes": 782193,
+        "sha256": "3db96f902ebcd951171010cd2f19249f73b8e16ecdc9a16e5545c41064301036",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/49-release-saved-feedback-outside-scrolled-evidence-150.png",
+        "bytes": 774686,
+        "sha256": "c7bb9f1fbf8d69c34b869985b8cfea04b8be201a2a9d3240fb1052d73c7efeb0",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/50-release-final-confirmation-control-150.png",
+        "bytes": 761291,
+        "sha256": "aaee748724ee9cea494776dacea7d2e406b6072928fdeff473f8d65ad0ad74f6",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/51-release-unapplied-preview-fixed-feedback-150.png",
+        "bytes": 835431,
+        "sha256": "b07da7eabf13a5bfcb925a5c8ce513232be595b6ca21cd224c92bc3c28587c66",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/54-release-durable-signature-confirmation-150.png",
+        "bytes": 773894,
+        "sha256": "03c2e9ba6af9282656c9801c4973882a583b2940b3b966694c2fc6564db6c38c",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/55-release-os-restart-restores-completion-150.png",
+        "bytes": 768968,
+        "sha256": "517840381780083da4995bf28309a5f7c797d79b3c19b41905069fa84692916b",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/59-release-simultaneous-ledger-and-pinned-plate-150.png",
+        "bytes": 720564,
+        "sha256": "83cdebea9d31d74e1ab1ae9e72c0617acd61e00db106c87d69a332bdf7551813",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/61-release-keyboard-practice-readout-150.png",
+        "bytes": 763310,
+        "sha256": "e677a5b90613cd94c84437d1219311307f89e211a54b5bc38a06d8806cd8c071",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/62-release-keyboard-practice-chart-return-150.png",
+        "bytes": 746825,
+        "sha256": "097c9e33fa3801ce9dcb70704135b1a1630e164bb54b6cce70a7cb0aae63a2d8",
+        "build": "release-fixed-feedback"
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/native/63-release-practice-exit-restores-reader-150.png",
+        "bytes": 716736,
+        "sha256": "7818e6d199da6c00175d12b537fe81c9b0b9b2a18923fc7f28073dec263d7125",
+        "build": "release-fixed-feedback"
+      }
+    ],
+    "actions": "native-actions.json",
+    "finalReaderSaveBefore": {
+      "path": "unity/Unknown/Builds/m23/fixture-reader/save.json",
+      "bytes": 6848,
+      "sha256": "79bf730425085e63dcbff77141b69521b59e3fdf5d067c8c1cab069d1770c9d1"
+    },
+    "finalReaderSaveAfter": {
+      "path": "unity/Unknown/Builds/m23/fixture-reader/save.json",
+      "bytes": 6848,
+      "sha256": "79bf730425085e63dcbff77141b69521b59e3fdf5d067c8c1cab069d1770c9d1"
+    },
+    "finalComparisonAndPracticeSavedBytesUnchanged": true,
+    "defaultPracticeBefore": {
+      "path": "unity/Unknown/Builds/m23/fixture-reader/save.json",
+      "bytes": 6848,
+      "sha256": "79bf730425085e63dcbff77141b69521b59e3fdf5d067c8c1cab069d1770c9d1"
+    },
+    "defaultPracticeAfter": {
+      "path": "unity/Unknown/Builds/m23/fixture-reader/save.json",
+      "bytes": 6848,
+      "sha256": "79bf730425085e63dcbff77141b69521b59e3fdf5d067c8c1cab069d1770c9d1"
+    },
+    "defaultPracticeSavedBytesUnchanged": true,
+    "completedSignature": {
+      "path": "unity/Unknown/Builds/m23/fixture-signature/save.json",
+      "bytes": 14157,
+      "sha256": "6b8271f99d2979973fc95e55bc0050b70014db463522fab91ff8c104fec4036d"
+    },
+    "restartedSignature": {
+      "path": "unity/Unknown/Builds/m23/fixture-signature/save.json",
+      "bytes": 14157,
+      "sha256": "6b8271f99d2979973fc95e55bc0050b70014db463522fab91ff8c104fec4036d"
+    },
+    "completedNote": {
+      "path": "unity/Unknown/Builds/m23/fixture-signature/review-notes-3312555a814deeda0a69f7cb55aa0650243cd7eed8f440a1340be2e187b04e83.json",
+      "bytes": 239,
+      "sha256": "f1301ff2f031895ba088c55f6ed861def3bd1de22a69a43adcb4699e33661f69"
+    },
+    "restartedNote": {
+      "path": "unity/Unknown/Builds/m23/fixture-signature/review-notes-3312555a814deeda0a69f7cb55aa0650243cd7eed8f440a1340be2e187b04e83.json",
+      "bytes": 239,
+      "sha256": "f1301ff2f031895ba088c55f6ed861def3bd1de22a69a43adcb4699e33661f69"
+    },
+    "actualProcessRestart": true,
+    "actualOperatingSystemReboot": false,
+    "previewSavedBytesUnchanged": true,
+    "candidateSavedBytesUnchanged": true,
+    "negativeEvidence": {
+      "capture37": "Q5: WorkSaved was outside viewport; not a native save-feedback pass",
+      "capture19": "unverified macro left practice after Transfer retained toolbar focus, then operated the normal game; excluded from isolation proof",
+      "captures32through34": "pointer scroll/drag did not visibly scroll; not verified diagnostic visibility",
+      "preQ5": "captures below 45 predate final UI placement; App DLL unchanged but UI DLL changed, so App hash alone is not build identity",
+      "capture55": "filename says os-restart; performed process restart, not reboot"
+    },
+    "video": {
+      "path": "_workspace/current/systems/tech-verification/m23/native/reader-window.mov",
+      "bytes": 5932965,
+      "sha256": "c58df55200a817a579a620b6392b62639fdffe026be08a471650708d25ac60ec",
+      "command": "screencapture -v -l7213 -V8 -k -x <output>",
+      "width": 1664,
+      "height": 1098,
+      "durationSeconds": 7.931667,
+      "codec": "h264",
+      "audioStreams": 0,
+      "averageCaptureFrameRate": "8300/159",
+      "boundary": "8-second bounded window-only capture; not game performance or 45-minute session stability"
+    }
+  },
+  "externalGates": {
+    "actualHumanParticipants": 0,
+    "H1MedianSeconds": null,
+    "H2ExplainedOutOf12": null,
+    "H3BlockedOutOf12": null,
+    "alignmentConceptHumanResult": null,
+    "actualEffortOverOriginalEstimate": null,
+    "afkAdjustedHumanMinutes": null,
+    "R6": "blocked: consented 12 participants/5 types and observations absent",
+    "R8": "blocked: unwaived Base gate",
+    "R9": "blocked: unwaived Base gate",
+    "R10": "partial current-slice recovery only; full 450–540-minute campaign and Windows target unmeasured",
+    "windowsInstalled": false,
+    "installedTargetModules": [
+      "MacStandaloneSupport",
+      "WebGLSupport"
+    ],
+    "commercialReleaseApproved": false
+  },
+  "cleanup": {
+    "disposableEditorProducer": "M23SmokeSnapshots.cs and .meta removed after native proof; editor-only, no shipped runtime assembly changes",
+    "ownedNativeProcessesStopped": [
+      "m23-native",
+      "m23-signature",
+      "m23-release",
+      "m23-reader-release"
+    ],
+    "rawUnityLogs": "local ignored Builds/m23 only; license/session diagnostic lines not published",
+    "preexistingM22AndAsideWork": "preserved; explicit publication scope audit required, no blanket staging"
+  }
+}

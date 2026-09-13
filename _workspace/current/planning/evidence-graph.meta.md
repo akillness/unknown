@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-11
+updated: 2026-09-14
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -30,3 +30,5 @@ owner: game-planner
 검산: 9+33+73+31+6 = 152. 33+73+73+2+42+42+12 = 277. source 31 = glossary §7 자료 카탈로그 31종과 일치(EG-KNOW-02가 기계 검사).
 
 [TARGET] draft 사유: QA 독립 재실행 전. `overlay` 블록(반전 씨앗/회수)은 저작물인 `evidence-graph-overlay.json`에서 그대로 옮겨진다 — 캐논 정본은 `worldview/timeline.md` §4·§7·§8.
+
+[OBSERVED 2026-09-14 · M23] 대장 끝점 힌트 정정 후 같은 생성기로 재발행하고18/18을 통과했다. 현재 입력 campaign SHA는 `baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe`이며152노드/277간선은 그대로다. P1/P2 전수 보존 감사는 별개이며 blocked다.

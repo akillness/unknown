@@ -27,7 +27,11 @@ namespace Tide.App {
         }
         void BeginOpening(){
             OpeningActive=true;openingElapsed=0;openingCaption=0;
-            if(ReducedMotion){FinishOpening();return;}
+            // Reduced motion starts a *fresh* watch immediately (verified M5 behaviour). An explicit replay is a
+            // player request to re-read the guidance, so it must present the one static frame with its explicit
+            // continue instead of returning silently — presentation/intro-gameplay-m5.json `reducedMotion` +
+            // `replayExplicitOnly`. UpdateOpening still never runs the clock under reduced motion.
+            if(ReducedMotion&&!openingReplay){FinishOpening();return;}
             overlay=null;Render();
         }
         void ReplayOpening(){if(!DirectionEnabled||SavePending)return;openingReplay=true;openingReturnOverlay=overlay;BeginOpening();}

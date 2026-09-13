@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-11
+updated: 2026-09-14
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -150,3 +150,51 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | 레거시 제거 4건(34파일 20,845,750B) + hub.unity 씬 수술(95줄) + 배선 정리 | director | P3 | legacy-purge-m13/{purge-plan.md,purge-receipt.json} | 완료 · 끊긴 참조 0건(516파일×needle 11) · assets/generated 558→558 무삭제 |
 | 전수 재검증 + 빌드 + 네이티브 스모크 | director, qa | P4 | ui-promotion-m13/verification.md | EditMode53/53 · PlayMode82/83 · boot1/1 · build Succeeded 403,838,357B · 예외 0 |
 | 이월(비차단): t0-b1 objective 무스포일러 재작성(교정안 3안 대기) · 빌드 403MB 용량 검토 · 퍼지 단독 기여분 미분리 | planner, product | - | planning/objective-copy-m13.md | 열림 |
+
+## M22 — 힌트 리듬·판독 연출·작업면 리소스 통합 (2026-09-13, RFC-CX-017)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| M14~M21 기준선 보존·게임 요소 분석 | director | P1 | intake/production-brief.md, decision-log.md RFC-CX-017 | complete; main 작업 1개, 기존 미커밋 변경 보존 |
+| 무료 힌트 제안/쿨다운과 입력 경로 동등성 | systems, balance | P3 | T0GameSession, WatchInput, T0Interface, tools 스키마·발행 테이블 | complete; 180/180 유지, 접근 가능한 보기·닫기와 150% 레이아웃/도구 보존/세션 내 닫기 계수 회귀 통과; 강제 힌트 공개/소모 변경 없음 |
+| 실제 판독 성공 기반 크랭크·모션 축소 즉시 반영 | presentation, motion, systems | P3 | M7ReaderSession, M22EmbodimentVisual, T0ReaderVfx | complete; 수락 시점 monotonic 시계 유지, 앱 중단/포커스 상실 취소·백그라운드 요청 차단·복귀 후 미재생 회귀 통과 |
+| 기존 승인 작업면 개선; r02 기본 적용 보류 | concept, presentation, director | P3/P4 | M7UiSkin, M20WorkSurface 진단 경계 | complete; 승인 표면 alpha 0.30, M20 r02 미승격 유지 |
+| 통합 네이티브 검증·main 최신화·워크트리 정리 | director, qa | P4/P5 | systems/tech-verification/m22/verification.json, docs/media/gameplay-m22/ | 로컬 검증 완료: 56 EditMode + 100 PlayMode + 1 격리 부팅(고유 157); main 작업트리 1개/삭제 0; commit/push 사용자 전용 |
+| 유사작 5종의 플레이 원리와 독자적 적용 | director, planning | P1/P2 | planning/t0-research-to-implementation-r01.md M22 확장 | complete; 관찰·대조·의도적 조작만 적용, 원작 서사/캐릭터/고유 자산 복제 없음 |
+| Blender MCP 한서린·양손·Generic 리그·원본 모션 | modeler, motion | P3 | scripts/blender/build-seorin-m22.py, assets/generated/3d/seorin-m22 | complete; 실제 MCP 45회, 6종 의미 동작/11 FBX take, 원본 보존 범위는 QA 영수증 참조 |
+| 실제 조작과 손 접촉·확정 모션의 런타임 결합 | systems, presentation, motion | P3/P4 | M22EmbodimentProfile/Visual/ProjectBuilder, 세션 훅 | complete; 기본 빌드 적용과 접촉/복귀/취소 검증; 판정·저장 불변, 상업/사람 플레이 승격 아님 |
+
+## Aside scoped immersion follow-up (2026-09-13)
+
+| task | owner | phase | artifact | gate | status | beat |
+|---|---|---|---|---|---|---|
+| 개발자 출처 기반 서사·밸런스·연출 연구 및 적용/보류 판정 | director, synopsis, worldview, balance, presentation | P2 | presentation/aside-immersion-20260913/ | scoped source review | done, independent QA ACK | t0-b1 |
+| 마지막 당직 오프닝 4문구와 안전 objective fallback | systems | P3/P4 | handoff/aside-immersion-20260913.md | source 17/17; campaign 50/50 | source verified; native blocked (license198) | t0-b1/b2 |
+| GTI 2회 생성과 실제 파일·프롬프트·비용 unknown 기록 | concept | P3 | assets/generated/2d/{concept,texture}/aside-immersion-20260913/ | source pixels/parent visual | 1 revision-required + 1 reviewed candidate; both runtime false | candidate only |
+| Unity 네이티브 4케이스 + 기존 오프닝 회귀 | QA, OMP launcher | P4 | systems/tech-verification/aside-immersion-20260913/ | Native | blocked: license unavailable before tests; no XML | T0 |
+| OMP 통합 결과 1회 후속 확인 | director | P4 | heartbeat WcMNqf5Pe5Ia7THL | read-only evidence | scheduled 2026-09-13 16:50 KST | follow-through |
+
+## Aside rules/core-loop research (2026-09-13, RFC-CX-ASIDE-CORE-20260913)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| 정본·현재 구현·사람 검증 범위 지정 후 Aside ultrabrowse 조사 | director, planner | P1/P2 | handoff/aside-core-loop-research-20260913.md, planning/aside-core-loop-research-20260913.md | done; 원문 12건·권고 10개·실험 3개, deep credit 실패 후 기본 프로필 완료 |
+| 원문·Reader/Signature 코드 대조 및 개발 우선순위 판정 | director | P2 | handoff/aside-core-loop-results-20260913.md | done; 첫 후보 T0 두 자료 비교, 정본/런타임 구현 승인 아님 |
+| 독립 출처 이해의 단일 변수·반증·첫 노출 분리 계약 | planner, systems, QA | P2 | planning/core-loop-research-20260913/game-design-hypothesis.json | 구조/self-test PASS; 프로토타입·사람 실행 없음 |
+
+## M23 — Aside 권고 구현·디버깅·소스 전달 (2026-09-14)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| R1 현재/고정 두 기록 동시 비교 | systems, QA | P3/P4 | ReaderComparisonSession/View, m23/verification.json | done;150% 실제 차트·비교 저장 불변 |
+| R2 공개 출처 수동 선택·후보와 기록 구분 | systems, QA | P3/P4 | C1SignatureGameSession/Data/Definition | done; 같은 루트 거부·명시 인용/확정·구 save replay/복구 |
+| R3 기존 M8 계보·요청형 질문 | systems, QA | P3/P4 | ReviewNotesSession | done; 사본2/원본1 표시·노트 재시작 바이트 보존; 기존 원문 복귀 경계 유지 |
+| R4 문구/감사 강도 정정과 생성물 동기 | canon, planner, systems | P3/P4 | m23-r4-canon-consistency.md, preservation-audit.json | correction done; campaign50/graph18/Node7; 강한 P1/P2 exit3 blocked |
+| R5 별도 정합 시편·150% 키보드·저장 격리 | systems, QA | P3/P4 | AlignmentPractice/Session/View | done; 수동 적용/잠금·겹침unknown·비인과 전이; 사람 이해 아님 |
+| R6 한 빌드 실제12명/5유형 평가 | QA, operations | P4 | qa/m23-human-evaluation.md | blocked; n=0, 수동 창 녹화 약8초만 확인, 전체 producer/45분 미검증 |
+| R7 저장 큐/취소/미리보기/고정 가시성 | systems, QA | P3/P4 | T0ActionFeedbackSession, T0GameSession, T0Interface | done; Q1–Q5 RED→교정→최종112 PlayMode 및 실제 스크롤/내구 확정 |
+| R8 재방문 생산 | planning, systems | P3 | Base production gate | blocked; 사람·개념·실제 노력·게이트 미충족 |
+| R9 증언/3제출 생산 | synopsis, systems | P3 | Base production gate | blocked; 준비 패널은 후반 생산 완료가 아님 |
+| R10 전체 완주/목표 장치 | QA, production | P4 | m23/verification.json | partial; 현재 슬라이스 복구/Mac만 검증. 전체450–540분·Windows 미측정 |
+| 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; Unity177·Mac410875105B·실제 native; 임시 producer/.meta 제거 |
+| 소스 전달과 최종 개선 계획 | director | P5 | handoff/m23-results-and-improvement-plan.md | 최신 요청의 명시적 commit/normal push 승인; 기존 M22/Aside 보존. 실제 커밋/원격 결과는 Git 기록을 따름 |

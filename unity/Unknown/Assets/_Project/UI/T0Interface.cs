@@ -17,6 +17,9 @@ namespace Tide.UI
     public sealed class GameScreen
     {
         public string Title,Subtitle,Body,Status,Footer,CaseThread;
+        public string ActionFeedback;
+        public ReaderComparisonView ReaderComparison;
+        public AlignmentPracticeView AlignmentPractice;
         public readonly List<ViewAction> Navigation=new List<ViewAction>();
         public readonly List<ViewAction> Actions=new List<ViewAction>();
         public readonly List<ViewAction> Toolbar=new List<ViewAction>();
@@ -30,8 +33,12 @@ namespace Tide.UI
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
+        public bool ResetWorkScroll;
         // RFC-CX-013 UiSkin: null = committed literals (T0GameSession.ApplyM7UiSkin fills it only behind runtimeApproved || --m7-ui-diagnostic).
         public M7UiSkinProfile Skin;
+        // M20 WorkSurface: null = committed M7 work-surface path untouched. T0GameSession.ApplyM20WorkSurface
+        // fills it only behind runtimeApproved || diagnosticOverride || --m20-ui-surface-diagnostic.
+        public M20WorkSurfaceProfile WorkSurface;
     }
     public sealed partial class T0Interface:MonoBehaviour
     {
@@ -43,7 +50,55 @@ namespace Tide.UI
         private int focusIndex;
         private ScrollRect scroll;
         private ScrollRect navigationScroll; private Text footerText;
+        private Text actionFeedbackText;
+        private RectTransform hintOfferHost,hintOfferPanel;
+        private Selectable hintOfferOpen,hintOfferDismiss;
+        private string hintReturnFocusKey;
+        public void SetHintOffer(ViewAction open,ViewAction dismiss)
+        {
+            if(open==null||dismiss==null)
+            {
+                if(hintOfferPanel==null||!hintOfferPanel.gameObject.activeSelf)return;
+                var selected=EventSystem.current?.currentSelectedGameObject;
+                bool restore=selected!=null&&selected.transform.IsChildOf(hintOfferPanel);
+                focus.Remove(hintOfferOpen);focus.Remove(hintOfferDismiss);
+                keyed.Remove(hintOfferOpen.name);keyed.Remove(hintOfferDismiss.name);
+                hintOfferPanel.gameObject.SetActive(false);
+                if(restore)
+                {
+                    if(hintReturnFocusKey!=null&&Focus(hintReturnFocusKey))return;
+                    if(focus.Count>0){focusIndex=Mathf.Clamp(focusIndex,0,focus.Count-1);SelectFocus();}
+                    else EventSystem.current?.SetSelectedGameObject(null);
+                }
+                return;
+            }
+            if(hintOfferHost==null||hintOfferPanel!=null&&hintOfferPanel.gameObject.activeSelf)return;
+            hintReturnFocusKey=CurrentFocusId;
+            if(hintOfferPanel==null)
+            {
+                hintOfferPanel=Panel("Hint offer",hintOfferHost,new Vector2(.64f,.08f),new Vector2(.985f,.92f),paper);
+                hintOfferPanel.GetComponent<Image>().raycastTarget=false;
+                var row=hintOfferPanel.gameObject.AddComponent<HorizontalLayoutGroup>();
+                row.padding=new RectOffset(8,8,6,6);row.spacing=8;
+                row.childControlWidth=row.childControlHeight=true;
+                row.childForceExpandWidth=row.childForceExpandHeight=true;
+                Button(hintOfferPanel,open);Button(hintOfferPanel,dismiss);
+                hintOfferOpen=keyed[open.Id];hintOfferDismiss=keyed[dismiss.Id];
+            }
+            else
+            {
+                focus.Add(hintOfferOpen);focus.Add(hintOfferDismiss);
+                keyed[hintOfferOpen.name]=hintOfferOpen;keyed[hintOfferDismiss.name]=hintOfferDismiss;
+                hintOfferPanel.gameObject.SetActive(true);
+            }
+        }
         public void SetFooter(string value){if(footerText!=null)footerText.text=value;}
+        public void SetActionFeedback(string value)
+        {
+            if(actionFeedbackText==null)return;
+            actionFeedbackText.text=value??"";
+            actionFeedbackText.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(value));
+        }
         public UnityEngine.Rect SceneViewport {get;private set;}
         private string focusKey;
         private float scale=1;
@@ -56,6 +111,8 @@ namespace Tide.UI
         // Resolved once per Render: skin colours when GameScreen.Skin is set, otherwise the literals above (byte-identical committed look).
         private Color ink=inkLiteral,paper=paperLiteral,brass=brassLiteral;
         private M7UiSkinProfile skin;
+        // Resolved once per Render alongside `skin`; null keeps the committed M7 work-surface path.
+        private M20WorkSurfaceProfile surface;
         private readonly List<TiledBacking> backings=new List<TiledBacking>();
         public void Initialize()
         {
@@ -72,15 +129,25 @@ namespace Tide.UI
             if(EventSystem.current?.currentSelectedGameObject!=null)
                 focusKey=EventSystem.current.currentSelectedGameObject.name;
             if(root!=null) { root.gameObject.SetActive(false); Destroy(root.gameObject); }
+            hintOfferHost=null;hintOfferPanel=null;hintOfferOpen=null;hintOfferDismiss=null;hintReturnFocusKey=null;
+            actionFeedbackText=null;
             focus.Clear(); keyed.Clear(); directionMarks.Clear();CurrentDirectionCategory=null;
             skin=model.Skin; ink=skin==null?inkLiteral:skin.ink; paper=skin==null?paperLiteral:skin.paper; brass=skin==null?brassLiteral:skin.brass; backings.Clear();
+            surface=model.WorkSurface;
             root=Rect("Screen",canvas.transform,new Vector2(.02f,.025f),new Vector2(.98f,.975f));
             CurrentTitle=model.Title; ActionIds=model.Actions.ConvertAll(x=>x.Id).AsReadOnly();
             if(model.ShowOpening){RenderOpening(model);return;}
             var header=Panel("Header",root,new Vector2(0,.88f),new Vector2(1,1),skin==null?new Color(.05f,.12f,.15f,.94f):skin.header);
             SkinBacking("M7 frame",header,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
-            Text("Title",header,model.Title,28,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.8f,.95f));
-            Text("Subtitle",header,model.Subtitle,15,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.97f,.44f));
+            Text("Title",header,model.Title,28,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.62f,.95f));
+            Text("Subtitle",header,model.Subtitle,15,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.62f,.44f));
+            hintOfferHost=header;
+            float feedbackHeight=model.AlignmentPractice==null ? .055f*scale : 0;
+            var feedbackRow=Panel("Action feedback surface",root,new Vector2(.46f,.115f),new Vector2(1,.115f+feedbackHeight),ink);
+            feedbackRow.GetComponent<Image>().raycastTarget=false;
+            Text("Action feedback",feedbackRow,"",16,paper,new Vector2(.015f,.05f),new Vector2(.985f,.95f));
+            actionFeedbackText=feedbackRow.Find("Action feedback").GetComponent<Text>();actionFeedbackText.raycastTarget=false;
+            SetActionFeedback(model.ActionFeedback);
             var sceneWindow=Rect("Scene viewport",root,new Vector2(0,.515f),new Vector2(.43f,.865f));
             var left=Panel("Navigation",root,new Vector2(0,.12f),new Vector2(.43f,.5f),skin==null?new Color(.08f,.17f,.2f,.92f):skin.navigation);
             var navigationViewport=Rect("Navigation Viewport",left,new Vector2(.025f,.02f),new Vector2(.975f,.98f));navigationViewport.gameObject.AddComponent<RectMask2D>();
@@ -89,7 +156,7 @@ namespace Tide.UI
             foreach(var a in model.Navigation) Button(leftFlow,a);
             float contentTop=.865f;
             if(model.SignaturePaper!=null)RenderSignaturePaper(leftFlow,model.SignaturePaper);
-            if(!string.IsNullOrEmpty(model.CaseThread)) {
+            if(!string.IsNullOrEmpty(model.CaseThread)&&model.ReaderComparison==null) {
                 float height=.185f*scale;
                 var card=Panel("Case thread",root,new Vector2(.46f,.865f-height),new Vector2(1,.865f),ink);
                 card.GetComponent<Image>().raycastTarget=false;
@@ -99,8 +166,12 @@ namespace Tide.UI
                 if(model.ShowDirection)RenderDirectionStrip(.865f-height,directionHeight,model.SectionSurface);
                 contentTop=.85f-height-directionHeight;
             }
-            var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
-            SkinBacking("M7 paper",contentPanel,skin?.paperPanel,skin==null?0:skin.paperTilesAcross,skin==null?Color.white:skin.workSurfaceTint);
+            var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f+feedbackHeight),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
+            // M20: the diagnostic candidate is ONE full-bleed, non-tiled backing and therefore REPLACES the tiled
+            // M7 paper backing on this panel instead of stacking over it (t0-work-surface-m20.md §2 T1/T3/T5).
+            // Gate closed -> this line is the committed M7 call, unchanged.
+            if(surface!=null) FullBleedBacking("M20 work surface",contentPanel,surface.workSurface,surface.tint);
+            else SkinBacking("M7 paper",contentPanel,skin?.paperPanel,skin==null?0:skin.paperTilesAcross,skin==null?Color.white:skin.workSurfaceTint);
             var viewport=Rect("Viewport",contentPanel,new Vector2(.025f,.035f),new Vector2(.975f,.97f));
             viewport.gameObject.AddComponent<RectMask2D>();
             var content=Rect("Content",viewport,Vector2.zero,Vector2.one);
@@ -110,6 +181,14 @@ namespace Tide.UI
             var fitter=content.gameObject.AddComponent<ContentSizeFitter>(); fitter.verticalFit=ContentSizeFitter.FitMode.PreferredSize;
             scroll=contentPanel.gameObject.AddComponent<ScrollRect>(); scroll.viewport=viewport; scroll.content=content;
             scroll.horizontal=false; scroll.vertical=true; scroll.scrollSensitivity=30;
+            RenderReaderComparison(content,model.ReaderComparison);
+            RenderAlignmentPractice(content,model.AlignmentPractice);
+            if(model.ReaderComparison!=null&&!string.IsNullOrEmpty(model.CaseThread))
+            {
+                FlowText(content,model.CaseThread,16,ink);
+                var note=content.GetChild(content.childCount-1).GetComponent<Text>();
+                note.name="CaseThread";note.raycastTarget=false;
+            }
             FlowText(content,model.Body,20,ink);
    RenderReviewNotes(content,model.ReviewNotes);
             if(model.Chart!=null)
@@ -131,7 +210,9 @@ namespace Tide.UI
             foreach(var action in model.Actions)
             {
                 if(!string.IsNullOrEmpty(action.SectionKey))actionParent=DirectionSection(content,action,model.SectionSurface);
-                if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,17,actionParent==content?ink:paper);
+                // M19: helper text steps down a size and tones toward the surface so it cannot be
+                // mistaken for the action label above it (presentation/t0-action-plate-m19.md §1.1).
+                if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,16,actionParent==content?Muted(ink,paper):Muted(paper,ink));
                 Button(actionParent,action);
                 // The review question answers the button above it; rendering it here keeps the answer in view after the focus scroll (D-M9-15).
                 if(model.ReviewNotes!=null&&action.Id==model.ReviewNotes.QuestionAnchorId) RenderReviewQuestion(actionParent,model.ReviewNotes);
@@ -149,11 +230,15 @@ namespace Tide.UI
             footerText=bar.Find("Footer").GetComponent<Text>();
             Canvas.ForceUpdateCanvases();
             foreach(var backing in backings) backing.Apply();
+            // M21: the r02 ground is dark, so the committed ink paragraphs on this surface need a reading
+            // ground. Gate closed -> `surface` is null and this call creates nothing (M21ReadingBackingInterface.cs).
+            ApplyM21ReadingBacking(content);
             var sceneCorners=new Vector3[4];sceneWindow.GetWorldCorners(sceneCorners);SceneViewport=new UnityEngine.Rect(sceneCorners[0].x/Screen.width,sceneCorners[0].y/Screen.height,(sceneCorners[2].x-sceneCorners[0].x)/Screen.width,(sceneCorners[2].y-sceneCorners[0].y)/Screen.height);
             focusIndex=0;
             if(focusKey!=null && keyed.TryGetValue(focusKey,out var selected)) focusIndex=focus.IndexOf(selected);
             SelectFocus();
             if(model.ResetScroll){scroll.verticalNormalizedPosition=1;navigationScroll.verticalNormalizedPosition=1;}
+            else if(model.ResetWorkScroll)scroll.verticalNormalizedPosition=1;
             ScreenChanged?.Invoke();
         }
         public void Navigate(int delta)
@@ -165,6 +250,13 @@ namespace Tide.UI
         {
             if(!keyed.TryGetValue(id,out var target)||!target.interactable)return false;
             focusIndex=focus.IndexOf(target); SelectFocus(); return true;
+        }
+        public void ScrollWork(float pages)
+        {
+            if(scroll==null)return;
+            Canvas.ForceUpdateCanvases();
+            float extent=scroll.content.rect.height-scroll.viewport.rect.height;
+            if(extent>0)scroll.verticalNormalizedPosition=Mathf.Clamp01(scroll.verticalNormalizedPosition-pages*scroll.viewport.rect.height*.85f/extent);
         }
         private void SelectFocus()
         {
@@ -213,6 +305,15 @@ namespace Tide.UI
             var image=r.gameObject.AddComponent<RawImage>(); image.texture=texture; image.color=tint; image.raycastTarget=false;
             backings.Add(new TiledBacking{Image=image,Panel=panel,TilesAcross=tilesAcross});
         }
+        // M20 WorkSurface: same placement and input rules as SkinBacking — non-raycast, first child, so text and
+        // buttons draw over it — but deliberately NOT registered in `backings`, so uvRect stays the default
+        // (0,0,1,1). That is the non-tile rule: a single 1672x941 composition must never repeat.
+        private void FullBleedBacking(string name,RectTransform panel,Texture2D texture,Color tint)
+        {
+            if(texture==null) return;
+            var r=Rect(name,panel,Vector2.zero,Vector2.one); r.SetAsFirstSibling();
+            var image=r.gameObject.AddComponent<RawImage>(); image.texture=texture; image.color=tint; image.raycastTarget=false;
+        }
         private sealed class TiledBacking
         {
             public RawImage Image; public RectTransform Panel; public float TilesAcross;
@@ -234,23 +335,40 @@ namespace Tide.UI
             var r=Rect(name,parent,min,max); var text=r.gameObject.AddComponent<Text>(); text.font=font;text.text=value??"";
             text.fontSize=Mathf.RoundToInt(size*scale); text.color=c; text.horizontalOverflow=HorizontalWrapMode.Wrap;
         }
-        private void FlowText(Transform parent,string value,int size,Color c)
+        private void FlowText(Transform parent,string value,int size,Color c,string name="Text")
         {
             if(string.IsNullOrEmpty(value)) return;
-            var r=Rect("Text",parent,Vector2.zero,Vector2.one); var text=r.gameObject.AddComponent<Text>();
+            var r=Rect(name,parent,Vector2.zero,Vector2.one); var text=r.gameObject.AddComponent<Text>();
             text.font=font;text.text=value;text.fontSize=Mathf.RoundToInt(size*scale);text.color=c;
             text.horizontalOverflow=HorizontalWrapMode.Wrap; text.verticalOverflow=VerticalWrapMode.Overflow;
             r.gameObject.AddComponent<LayoutElement>().minHeight=size*scale*1.7f;
         }
+        // M19 plate ornament: a non-raycast child drawn from the colours Render() already resolved
+        // (same rule as SkinBacking — ornament never intercepts input, never adds an asset).
+        private Image Ornament(string name,Transform parent,Vector2 min,Vector2 max,Color c)
+        {
+            var r=Rect(name,parent,min,max); var image=r.gameObject.AddComponent<Image>();
+            image.color=c; image.raycastTarget=false; return image;
+        }
+        // Subordinate tone: pull the foreground a third of the way toward its own background.
+        private static Color Muted(Color fore,Color back)=>Color.Lerp(fore,back,.32f);
         private void Button(Transform parent,ViewAction action)
         {
             var r=Panel(action.Id,parent,Vector2.zero,Vector2.one,ink);
             var item=r.gameObject.AddComponent<LayoutElement>(); item.minHeight=48*scale; item.preferredHeight=48*scale;
             var button=r.gameObject.AddComponent<Button>(); button.interactable=action.Enabled;
             var colors=button.colors; colors.normalColor=Color.white; colors.highlightedColor=skin==null?new Color(1,.85f,.55f):skin.buttonHighlight;
-            colors.selectedColor=skin==null?new Color(1,.85f,.55f):skin.buttonHighlight; colors.disabledColor=new Color(.45f,.45f,.45f,.65f); button.colors=colors;
-            Text("Label",r,action.Label,17,paper,new Vector2(.04f,.1f),new Vector2(.97f,.9f));
-            var sizing=r.gameObject.AddComponent<WrappedButtonHeight>();sizing.Label=r.Find("Label").GetComponent<Text>();sizing.Item=item;sizing.Minimum=48*scale;
+            // M19: focus now inverts the plate below, so the selected tint must stop multiplying the ink
+            // plate *darker*. Vertex colours clamp at 1, so a multiply can never brighten it back.
+            colors.selectedColor=Color.white; colors.disabledColor=new Color(.45f,.45f,.45f,.65f); colors.fadeDuration=0; button.colors=colors;
+            // The plate: a lit top edge plus a brass action rule, so a control is not a flat rectangle.
+            // The rule is the "pressable" marker and is therefore absent while the action is disabled.
+            Ornament("Bevel",r,new Vector2(0,.965f),new Vector2(1,1),new Color(brass.r,brass.g,brass.b,.32f));
+            var rule=Ornament("Rule",r,new Vector2(.010f,.2f),new Vector2(.024f,.8f),brass);
+            rule.gameObject.SetActive(action.Enabled);
+            Text("Label",r,action.Label,18,paper,new Vector2(.075f,.1f),new Vector2(.97f,.9f));
+            var labelText=r.Find("Label").GetComponent<Text>(); labelText.fontStyle=FontStyle.Bold;
+            var sizing=r.gameObject.AddComponent<WrappedButtonHeight>();sizing.Label=labelText;sizing.Item=item;sizing.Minimum=48*scale;
             button.onClick.AddListener(()=>{if(action.Enabled) action.Activate?.Invoke();});
             if(action.HoldSeconds>0)
             {
@@ -260,15 +378,21 @@ namespace Tide.UI
             }
             if(action.Enabled) {
                 focus.Add(button); keyed[action.Id]=button;
+                var plate=r.GetComponent<Image>();
                 var selection=r.gameObject.AddComponent<FocusSelection>();
-                selection.Selected=()=>{focusIndex=focus.IndexOf(button);focusKey=button.name;UpdateDirectionSelection(action.DirectionCategory);};
+                // Focused plate inverts: brass face, ink label and ink rule. Deselect restores the face.
+                selection.Selected=()=>{focusIndex=focus.IndexOf(button);focusKey=button.name;UpdateDirectionSelection(action.DirectionCategory);
+                    if(hintOfferPanel!=null&&!r.IsChildOf(hintOfferPanel))hintReturnFocusKey=button.name;
+                    plate.color=brass;labelText.color=ink;rule.color=ink;};
+                selection.Deselected=()=>{plate.color=ink;labelText.color=paper;rule.color=brass;};
             }
         }
     }
-    public sealed class FocusSelection:MonoBehaviour,ISelectHandler
+    public sealed class FocusSelection:MonoBehaviour,ISelectHandler,IDeselectHandler
     {
-        public Action Selected;
+        public Action Selected,Deselected;
         public void OnSelect(BaseEventData data)=>Selected?.Invoke();
+        public void OnDeselect(BaseEventData data)=>Deselected?.Invoke();
     }
     public sealed class HoldButton:MonoBehaviour,IPointerDownHandler,IPointerUpHandler,IPointerExitHandler
     {

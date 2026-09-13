@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.8266969">
+  <test-suite type="TestSuite" id="1110" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="87" result="Failed" site="Child" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.826697" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1104" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="87" result="Failed" site="Child" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.821023" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="68413" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1105" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="87" result="Failed" site="Child" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.819793" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1106" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="87" result="Failed" site="Child" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.818910" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1070" name="T0ActionPlatePlayModeTests" fullname="Tide.Tests.T0ActionPlatePlayModeTests" classname="Tide.Tests.T0ActionPlatePlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.816608" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1071" name="CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" fullname="Tide.Tests.T0ActionPlatePlayModeTests.CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" methodname="CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" classname="Tide.Tests.T0ActionPlatePlayModeTests" runstate="Runnable" seed="1690132458" result="Failed" start-time="2026-09-13 06:00:14Z" end-time="2026-09-13 06:00:14Z" duration="0.809982" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  continue-c1-signature must carry a 'Bevel' plate ornament so the action reads as an instrument plate, not a flat dark rectangle
+  Expected: not null
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ActionPlatePlayModeTests.Ornament (System.String buttonId, System.String child) [0x00014] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs:85
+at Tide.Tests.T0ActionPlatePlayModeTests.AssertPlateAffordance () [0x0005e] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs:100
+at Tide.Tests.T0ActionPlatePlayModeTests+<CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow>d__22.MoveNext () [0x00296] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs:149
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

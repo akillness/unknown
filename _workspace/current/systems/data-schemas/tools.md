@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -95,6 +95,7 @@ owner: game-systems-designer
 | `routeCorrosionCost[*]` | lowland 7 · dock 8 · dock-express 12 | economy | `routing` 선택지 비용 |
 | `systemLimits[*]` | `null` | economy | **표시 라벨 전용**, 차단하지 않음 (RFC-P3-009) |
 | `idleHintOfferSeconds` | 180 | balance | `hint-system` |
+| `hintOfferCooldownSeconds` | 180 | balance | `hint-system` H-R10 · 제안 무시/소멸 후 재제안 대기, idle 임계와 독립 |
 | `hintCost` | 0 | economy | **0 고정**. 0이 아닌 값은 임포트 실패 |
 
 ## 5. 불변식 (임포트 검증, fail-closed)
@@ -132,5 +133,6 @@ owner: game-systems-designer
 | 날짜 | 회차 | 결함 | 바뀐 절 | 내용 |
 |---|---|---|---|---|
 | 2026-09-10 | **R7 종료 수정** | **C7-F1**(S1) · **C7-F8** · C7-F14 | 머리글 · §1 `reader` 행 + 정정 문단 · §5 `T-I8`·`T-I9` 신설 · 이 절 신설 | `reader` 의 「확정 있음」을 **예(인용 고정)** 로 정정(RFC-C7-001 (1)). T0 인스턴스 값 경로(`systems/data/t0/tools.json`)를 머리글에 등재. 확정 조건 보유(`T-I8`)와 `ReasonCode` 집합 일치(`T-I9`)를 불변식으로 세웠다 |
+| 2026-09-13 | M22 · RFC-CX-017 | H-R10 런타임 연결 | §4 | 기존 180초 제안 임계와 별개인 180초 쿨다운을 데이터 노브로 명시. 수치 재튜닝 없음. `emit-tables.mjs`가 두 테이블 사본을 생성하고 런타임은 초기화에서만 파싱한다. |
 
 - `cycle` 값 불변(RFC-Q2). **새로 측정된 런타임 값 0건** — 도구 전환 시간·조작감은 여전히 n=0(§6).

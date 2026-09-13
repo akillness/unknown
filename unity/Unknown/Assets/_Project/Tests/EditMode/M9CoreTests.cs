@@ -54,8 +54,10 @@ namespace Tide.Tests {
    var names=records["rows"].Select(r=>(string)r["displayNameKo"]).ToArray();
    var authored=(string)beats["rows"].First(r=>(string)r["id"]=="t0-b2")["objective"];
    Assert.AreEqual(authored,T0GameSession.CaseObjective(beats,"t0-b2",names,"fallback"),"A disclosure-clean authored objective is shown verbatim");
-   StringAssert.Contains("인수 각서",(string)beats["rows"].First(r=>(string)r["id"]=="t0-b1")["objective"],"Guard precondition: the t0-b1 objective names records");
-   Assert.AreEqual("fallback",T0GameSession.CaseObjective(beats,"t0-b1",names,"fallback"),"Objectives naming records fall back (CaseThread disclosure contract)");
+   var t0b1=(string)beats["rows"].First(r=>(string)r["id"]=="t0-b1")["objective"];
+   Assert.AreEqual(t0b1,T0GameSession.CaseObjective(beats,"t0-b1",names,"fallback"),"A disclosure-clean t0-b1 objective is shown verbatim");
+   var leaky=JObject.Parse("{\"rows\":[{\"id\":\"leaky\",\"objective\":\"인수 각서\"}]}");
+   Assert.AreEqual("fallback",T0GameSession.CaseObjective(leaky,"leaky",names,"fallback"),"Objectives naming records still fall back (CaseThread disclosure contract)");
    Assert.AreEqual("fallback",T0GameSession.CaseObjective(null,"t0-b2",names,"fallback"),"An unwired beats table preserves the legacy objective");
    Assert.AreEqual("fallback",T0GameSession.CaseObjective(beats,"no-such-beat",names,"fallback"));
   }

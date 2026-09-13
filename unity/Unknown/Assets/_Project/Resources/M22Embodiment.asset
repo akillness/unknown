@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7cba508369514e9fb57fc7c9b52515c, type: 3}
+  m_Name: M22Embodiment
+  m_EditorClassIdentifier: Tide.Presentation::Tide.Presentation.M22EmbodimentProfile
+  runtimeApproved: 1
+  character: {fileID: 7707839884835806543, guid: de6e0e5028a304979ad4e2cda78d3789, type: 3}
+  idle: {fileID: 8367038001506491017, guid: d8601815437064673b3f7a7aa3ba2010, type: 3}
+  left:
+    prefab: {fileID: 1588329364827459048, guid: 2ecb41c3cb5ca43d9b43082fe0e7b603, type: 3}
+    rest: {fileID: -7284482198171015979, guid: 2b4df877be09d4301b7100b69b292baa, type: 3}
+    insert: {fileID: -8059181204530239933, guid: 2b4df877be09d4301b7100b69b292baa, type: 3}
+    align: {fileID: -1435794201583772931, guid: 2b4df877be09d4301b7100b69b292baa, type: 3}
+    grip: {fileID: 3770545451451053023, guid: 2b4df877be09d4301b7100b69b292baa, type: 3}
+    seal: {fileID: 7456393802522642502, guid: 2b4df877be09d4301b7100b69b292baa, type: 3}
+    contactBone: Contact
+    contactPoint: {x: 0, y: 0, z: 0}
+    gripPoseTime: 0.4
+  right:
+    prefab: {fileID: 4794936172817377115, guid: 84cac5ad3eb5a435483d8d90851784a6, type: 3}
+    rest: {fileID: -7284482198171015979, guid: 6e87ae6e5d7834daba74e94f1402da5d, type: 3}
+    insert: {fileID: -8059181204530239933, guid: 6e87ae6e5d7834daba74e94f1402da5d, type: 3}
+    align: {fileID: -1435794201583772931, guid: 6e87ae6e5d7834daba74e94f1402da5d, type: 3}
+    grip: {fileID: 3770545451451053023, guid: 6e87ae6e5d7834daba74e94f1402da5d, type: 3}
+    seal: {fileID: 7456393802522642502, guid: 6e87ae6e5d7834daba74e94f1402da5d, type: 3}
+    contactBone: Contact
+    contactPoint: {x: 0, y: 0, z: 0}
+    gripPoseTime: 0.4
+  characterPosition: {x: 0, y: -0.023, z: 0.038605}
+  characterEuler: {x: 0, y: 180, z: 0}
+  cameraPosition: {x: 0, y: 1.4, z: -1.65}
+  lookAt: {x: 0, y: 1.32, z: 0}
+  horizontalFov: 50
+  background: {r: 0.055, g: 0.12, b: 0.15, a: 1}
+  readerLeftScale: 1
+  readerRightScale: 1
+  foregroundLeft:
+    position: {x: -0.24, y: -0.23, z: 0.7}
+    euler: {x: -65, y: 0, z: -20}
+    scale: 1
+  foregroundRight:
+    position: {x: 0.24, y: -0.23, z: 0.7}
+    euler: {x: -65, y: 0, z: 20}
+    scale: 1
+  readerGripEuler: {x: 0, y: 0, z: 345}
+  readerGripOffset: {x: 0, y: 0, z: 0}
+  rotateGripWithHandle: 0
+  crankHandlePrefix: rd-crank-handle
+  readerSupportPrefix: rd-hex-plate
+  readerSupportOffset: {x: 0, y: 0, z: 0}
+  readerSupportEuler: {x: 0, y: 0, z: 334.44}
+  readerLeftRestOffset: {x: -0.08, y: -0.06, z: -0.25}
+  handRecoveryMs: 150
+  insertMs: 250
+  insertContactMs: 200
+  sealMs: 300
+  sealContactMs: 150
+  alignMs: 200.00002
+  showReaderHands: 1
+  showCircuitHands: 1
+  showRecordHands: 1

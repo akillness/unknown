@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-11
+updated: 2026-09-14
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -93,3 +93,46 @@ owner: game-production-director
 - Resolved a three-way RFC id collision left by parallel sessions: the M7-runtime block was renumbered `RFC-CX-013` → `RFC-CX-014` (it had no manifest citation, unlike the carry-over block). No real git merge conflict existed — single worktree, zero conflict markers.
 - Build grew to 403,838,357 B (+49,591,117 B). The purge lane had predicted a shrink; that prediction is **confounded, not refuted** — promotion pulled roughly 73 MB of source art into the build path while the removed greybox was 50 KB. Isolating the purge's own contribution needs a control build with the purge alone reverted, which was not run.
 - Not measured: human playtests remain n=0. Fun, immersion, performance, the 25-minute budget, 8-hour completion, and real-device mouse wheel / IME / controller are unverified. Pointer input this pass was `cliclick` only; synthetic key events still never reach the Unity Input System. No G4/G7 runtime PASS is claimed.
+
+## 2026-09-13 Aside immersion source update (uncommitted)
+
+- 서사: 일반 조작 안내였던 M5 오프닝을 마지막 당직과 목록/서랍 대조로 변경, serialized asset/C# 기본값 동기화. 초반 목표 fallback은 일반 문구로 방어 강화(현재 정상 objective 경로는 변화 없음).
+- 리서치/밸런스: 개발자 원문을 비교하고 2매체 검증·발견 보상은 유지. 근거 없는 난이도/시간 변경과 소비 코드 없는 near-miss 노브는 보류.
+- 리소스: GTI 두 후보를 원본·실제 revisedPrompt·해시와 함께 추가. 오프닝 후보는 수정 필요, 정적 패널은 종이색 대비만 원본 픽셀 기준 통과. 모두 런타임/상업 승격 없음.
+- 검증: 정적17/17·campaign50/50·독립 source QA. Unity는 license exit198로 테스트 전 차단. 신규4케이스/기존M5 native 실행 증거 없음. G4/G5/G6/G7 승격하지 않음; graphify/zg 동기 상태도 별도 부분 실패로 기록.
+- 근거: RFC-CX-ASIDE-20260913 및 handoff/aside-immersion-20260913.md. OMP 소유 힌트·크랭크·Blender 변경은 이 항목의 성과로 집계하지 않는다.
+
+## 2026-09-13 · M22 로컬 개발 빌드 검증 (uncommitted, RFC-CX-017/018)
+
+- Blender MCP로 한서린 전신 및 좌/우 손을 직접 저작하고 Generic 6종 의미 동작/11개 FBX take를 임포트했다. 최종 실측은 전신 15,124 tri/50본, 양손 합 5,544 tri/각 18본이다. 시작 화면 구도, 엄지 방향, 소매 끝 노출, 실제 손잡이 접촉을 교정하고 기본 개발 빌드에 적용했다.
+- 힌트의 idle 180초와 재제안 cooldown 180초를 독립 노브로 두고 입력 활동·문서/메뉴/저장 대기 문맥을 반영한다. 무료·선택적 힌트, 원본 읽기 예산, 증거·저장·해금 규칙은 유지했다. M20 r02 기본 적용은 계속 보류한다.
+- 크랭크는 성공한 사용자 판독에서만 재생하며 내구 저장 실패는 성공 동작을 내지 않는다. 새 동작이 이전 프레임 시간 때문에 접촉 전에 끝나던 문제를 수락 시점 기준 unscaled 시계로 수정했다. 모션 축소/취소/화면 이탈은 정지·복귀하고 자동 재생하지 않는다.
+- EditMode 56/56, PlayMode 97 통과/실패 0/격리 부팅 1 skip, 별도 부팅 1/1 통과. 문구·기본값 고정 테스트 1개와 fallback 문구 고정값을 제거한 뒤 EditMode를 다시 실행했으며 초반 스포일러 차단·목표 선택 3건은 통과했다. 이전 57/57 영수증과 수정 전 PlayMode 4실패 XML도 보존했다. 기본 macOS 빌드와 실제 마우스 판독·삽입·복귀·모션 축소, content focus 후 Tab 이동을 확인했다. 키보드 주입의 초기 무반응 시도와 실제 성공 매크로는 영수증에서 구분하며 물리 패드/IME 동등성을 주장하지 않는다.
+- 증거: `systems/tech-verification/m22/verification.json`, `docs/media/gameplay-m22/`. 영상은 실제 개발 빌드의 창 장식만 제거한 30fps 인코딩이며 성능 수치가 아니다. main 작업트리 하나에 통합했으며 삭제할 완료 worktree는 없었다. commit/push, 상업 라이선스, 사람 플레이 n=0, 480분·G4/G7 미측정 경계 유지.
+
+## 2026-09-13 · M22 입력·중단·저작 계약 보완 (uncommitted)
+
+- 힌트 제안을 실제 보기·닫기 버튼으로 바꾸고 키보드 초점 목록에 연결했다. Tab·포인터 활동은 idle을 갱신하되 이미 뜬 제안을 숨기지 않으며, 유효 게임 조작은 제안을 소비한다. 닫기는 세션 내 계수만 올리고 작업 중인 도구를 보존한다. 도움 열기는 힌트 수준을 자동 공개하지 않는다.
+- 제목·부제목과 겹치지 않는 헤더 영역을 확보하고 150% 글자를 검증했다. 원래 180/180초를 유지한 기본 macOS 빌드에서 문서 열람 중 억제, 판독기 제안, Tab/Shift+Tab 접근, Enter 닫기, 재제안의 포인터 도움 열기, Esc로 판독기 복귀를 실제 확인했다.
+- 손/크랭크의 수락 시점 `realtimeSinceStartupAsDouble` 시계를 유지하면서 앱 pause/포커스 상실에 취소하고 중단 중 새 요청을 차단했다. 복귀 후 밀린 동작은 재생하지 않는다. Unity 앱 콜백 회귀이며 Editor pause API 동등성을 주장하지 않는다.
+- 작업면 C# 기본 알파를 승인 asset과 같은 0.3으로 맞췄다. 임시 Editor 재생성 스모크에서 오프닝 문구·샷 시간·리소스와 표면 기본값 일치를 확인한 뒤 임시 소스/.meta를 제거했다. 문구 고정 테스트는 복원하지 않고 보호 기록명 fallback 차단과 저작 목표 우선순위 3건을 유지·강화했다.
+- 손 미적용으로 남아 있던 리그 문서의 과거 상태를 명시적으로 구분하고 manifest §10에 실제 전신·좌손·우손 파일명을 정리했다. 새 Blender 제작이나 재임포트로 로컬 승인 상태를 덮어쓰지 않았다.
+- 최종 EditMode 56/56, PlayMode 100 pass/0 fail/격리 부팅 1 skip, 별도 boot 1/1: 고유 157건. 기본 macOS 빌드 410,816,644B 생성과 네이티브 로그 오류 검색 0건. 새 영수증은 `*-contract-corrections.xml`, `profile-recreation.json`, `native-contract-actions.json`; 이전 154건 영수증과 모션 캡처의 이전 assembly 지문은 별도 보존했다.
+- 입력 이벤트 순서 추가 확인: `Watch.Activity`는 이미 idle만 갱신하는 `NoteInputActivity`에 연결돼 있으므로 선행 버튼 이벤트가 제안을 숨기지 않는다. 기존 InputSystem Enter/Esc/패드 B 회귀에 ScreenChanged 0·surface 보존·Journal.HeadSeq 불변 단정을 추가하고 해당 3건을 다시 통과했다. 런타임/네이티브 빌드 변경 없음, 고유 157건에 중복 가산 없음. 증거: `hint-input-ordering.xml`.
+- 초점 복귀 추가 확인: 이전 일반 초점을 기억한 뒤 닫기 버튼에 초점을 두고 실제 InputSystem Enter로 닫는 기존 사례 1/1을 통과했다. CurrentFocusId 복귀·무재구축·저널 불변을 함께 확인했으며, 네이티브 시각적 복귀 증거로 확대하지 않는다. 증거: `hint-focus-restoration.xml`; 고유 합계 157 및 런타임/빌드 변경 없음.
+
+## 2026-09-13 · Aside 규칙·코어 루프 조사 (연구만, uncommitted)
+
+- 실제 Aside ultrabrowse 실행으로 정본·현재 코드와 공개 원문 12건을 조사했다. 전체 보고서의 10개 권고·3개 실험과 Main 교차 확인은 `handoff/aside-core-loop-results-20260913.md`에서 시작한다.
+- 다음 후보는 T0 두 자료/시간창의 동시 비교, 기존 M8를 재사용하는 출처 계보, 조위정합 회색상자다. 현재 C1 고정 근거 ID와 정본/검증 범위 차이를 구별하고 새 보드·전체 캠페인 확대부터 하지 않는다.
+- 단일 변수 실험 JSON 및 검증기 self-test 통과. 파일럿의 사전 노출을 정식 한 빌드의 12명/5유형 T0 평가에 섞지 않는다. 실제 사람 n=0이며 구조 PASS는 재미/학습 증명이 아니다.
+- 명시적 deep 모델은 크레딧 부족으로 실패 후 기본 프로필로 조사를 마쳤다. 독립 Deep Research SaaS/전용 모델 성공을 주장하지 않으며 이번 권고의 런타임 구현·정본 수정·유료 생성·생산/출시 승격은 없다.
+
+## 2026-09-14 · M23 코어 루프 구현·독립 리뷰·실행 검증
+
+- R1 두 자료/시간창 동시 비교, R2 명시적 출처 선택·미기록 후보 확정 차단, R3 기존 M8 사본 계보와 요청형 질문, R5 격리 정합 연습장, R7 수락/작업저장/미리보기/내구 확정 피드백을 구현했다. 이전 M22/Aside 기반과 미승인 아트 경계를 보존한다.
+- 서브에이전트 목표 합의와 독립 구현 리뷰 후 Q1–Q5를 수정했다. 늦은 자동저장 실패·화면 Back·확정 취소 뒤 no-op 저장·키보드 연습 설명·깊은 스크롤의 저장 알림을 검증한다. RED와 첫 Navigation 축소안의 실패도 보존했다.
+- Unity64 EditMode +112 PlayMode +1격리 boot=고유177통과. Node7, campaign50, 파생 그래프18통과. macOS315파일/410875105B 빌드와150% 실제 비교·명시 인용/확정·프로세스 재시작 복구를 확인했다. OS 재부팅이나 Windows/사람 증거가 아니다.
+- R4 문구/감사 강도 교정, 생성 테이블과 authoring receipt/증거 그래프 동기. 강한 P1/P2 감사는 exit3/blocked이며 약속을 완화하지 않았다.
+- 임시 Editor 시편 생성기/.meta 제거. 정확한 지문·선별 스틸·원재현 XML은 `systems/tech-verification/m23/`; 결과/개선 계획은 `handoff/m23-results-and-improvement-plan.md`.
+- 사용자 최신 지시는 이번 범위의 commit/일반 push를 승인한다. 위 uncommitted/사용자 전용 표기는 각 과거 기록의 상태다. 사람0명·Base·실제 노력150% STOP·후반R8/R9·전체450–540분·Windows 목표 성능·상업/출시는 여전히 미충족이다.

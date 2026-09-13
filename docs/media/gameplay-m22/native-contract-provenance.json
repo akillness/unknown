@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-09-13T10:32:05Z",
+  "kind": "actual-native-ui-contract-smoke",
+  "buildAssembly": {
+    "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+    "bytes": 132096,
+    "sha256": "9ba36071f8114044ed85741102ab3a949e76b27822175df6cc9384f83285864b"
+  },
+  "actionReceipt": {
+    "path": "_workspace/current/systems/tech-verification/m22/native-contract-actions.json",
+    "bytes": 57845,
+    "sha256": "707e56cbf1609c70bd21fa4ee03529f80b814bb2cdd7b1cc84309c5004f8ee35"
+  },
+  "textScale": 1.5,
+  "nativeRequestedViewport": [
+    1280,
+    800
+  ],
+  "diagnosticFlags": [],
+  "processing": "Decode actual Orca window capture to PNG and remove window chrome only. No synthetic frames, compositing, retiming, or additional image resizing.",
+  "frames": [
+    {
+      "source": {
+        "path": "unity/Unknown/Builds/m22/native-contract/13-offer-dismiss-focused-150.png",
+        "bytes": 817534,
+        "sha256": "a689f9850ad334607f02784992fe1413232102e501dfb74c1141833fc18d75ce"
+      },
+      "output": {
+        "path": "docs/media/gameplay-m22/hint-offer-150.png",
+        "bytes": 809131,
+        "sha256": "713adaedd530cd3f5c8e106f8cc8fadc23a434ba96f3e035ba1c51751da020e3"
+      },
+      "sourceDimensions": [
+        1280,
+        864
+      ],
+      "crop": [
+        0,
+        64,
+        1280,
+        800
+      ],
+      "observation": "180초 설정을 단축하지 않은 판독기 제안에서 Tab/Shift+Tab으로 닫기 버튼에 실제 키보드 초점이 도달했다. 제목·부제목과 겹치지 않는다."
+    },
+    {
+      "source": {
+        "path": "unity/Unknown/Builds/m22/native-contract/14-offer-dismissed-reader-retained-150.png",
+        "bytes": 616794,
+        "sha256": "3da9b118b61afd3a7a45972ac4963043b13f97211d18689efec9ad1ddc40524e"
+      },
+      "output": {
+        "path": "docs/media/gameplay-m22/hint-dismiss-150.png",
+        "bytes": 609099,
+        "sha256": "e28f4c236792e6cea47e21c33db4b464870c98c0549822b26f5295d4532ab0e8"
+      },
+      "sourceDimensions": [
+        1088,
+        734
+      ],
+      "crop": [
+        0,
+        54,
+        1088,
+        680
+      ],
+      "observation": "Enter 활성화 후 제안만 사라지고 판독기 화면·진행 상태는 유지됐다. 직전 배경 클릭으로 선택 표시가 해제되었으므로 이 캡처 자체를 시각적 초점 복원 증거로 사용하지 않는다."
+    },
+    {
+      "source": {
+        "path": "unity/Unknown/Builds/m22/native-contract/17-help-opened-without-reveal-150.png",
+        "bytes": 757357,
+        "sha256": "0a7b62af3b6b445aabe27548ad91e63486431bbb8469fcb3c05030ba816316a4"
+      },
+      "output": {
+        "path": "docs/media/gameplay-m22/hint-help-unrevealed-150.png",
+        "bytes": 749970,
+        "sha256": "121c2b348c5339aa0653053f6b4c5f0c409842dd9640e40cd58969b8ba9b5524"
+      },
+      "sourceDimensions": [
+        1280,
+        864
+      ],
+      "crop": [
+        0,
+        64,
+        1280,
+        800
+      ],
+      "observation": "재제안의 도움 보기 버튼을 실제 포인터로 눌러 무료 힌트 메뉴만 열었다. 다음 단계 힌트는 별도 요청으로 남고 힌트 본문을 자동 공개하지 않았다."
+    }
+  ],
+  "earlierMotionMedia": {
+    "provenance": "docs/media/gameplay-m22/provenance.json",
+    "buildAssembly": {
+      "path": "_workspace/current/systems/tech-verification/m22/Tide.App.before-contract-corrections.dll",
+      "bytes": 131072,
+      "sha256": "35a616807a465359e36320f0a242ec6df71aeb904984782fbaa40102b581ec31"
+    },
+    "scope": "Earlier body/hand motion proof, not the corrected hint UI build."
+  },
+  "boundaries": [
+    "human playtest",
+    "performance benchmark",
+    "physical controller or IME verification",
+    "Editor pause API equivalence",
+    "full campaign or commercial approval"
+  ]
+}

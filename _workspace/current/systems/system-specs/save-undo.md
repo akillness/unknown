@@ -1,6 +1,6 @@
 ---
-updated: 2026-09-10
-cycle: 20260909-preproduction-c3
+updated: 2026-09-13
+cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
 owner: game-systems-designer
@@ -8,7 +8,7 @@ owner: game-systems-designer
 
 # 시스템 스펙 — save-undo (세이브·체크포인트·무제한 되돌림·손상 복구)
 
-전부 `[TARGET]`. **이 스펙의 위반은 플레이어 데이터 손실로 직결된다**(CLAUDE.md §9 불변식). 실측 0건.
+아래는 `[TARGET]` 설계 계약이다. **이 스펙의 위반은 플레이어 데이터 손실로 직결된다**(CLAUDE.md §9 불변식). 초기 v1 설계와 달리 현재 T0/C1 런타임 저장 버전은 v3이며, v1/v2 원본 보존·이전 검증은 README의 M3/M4 역사 영수증을 참조한다. 이 문서 갱신은 새 실행·성능 측정이 아니다.
 
 | 항목 | 값 |
 |---|---|
@@ -16,7 +16,7 @@ owner: game-systems-designer
 | 자동 저장 시점 | 장 경계, 구역 이동, **모든 확정 직전** |
 | 되돌림 | **무제한**, 무료, 페널티 0 (명령 로그 포인터 이동). 상한 상수 없음 — 프로토타입 `model.mjs`의 `maxUndo: 32`는 탐색 편의값이며 사양이 아니다 (RFC-P3-015 F23) |
 | 되돌림 최후 수단 | **체크포인트 재로드는 상시 가능**하다. 이력 입도가 낮아져도 진행이 막히지 않는다 |
-| 스키마 버전 | `schemaVersion: 1` (신규) |
+| 스키마 버전 | 현재 `schemaVersion: 3` (`Save/AtomicSaveStore.cs`); 초기 설계 v1, M3 v2 이력은 보존 |
 | 이야기 시계 | 하룻밤 21:00 → 05:00 단일 야간 [OBSERVED: worldview/timeline.md] |
 
 ## 0. 병행 초안과의 차이 (RFC-S3)
@@ -65,9 +65,9 @@ owner: game-systems-designer
 | 현재 | 이벤트 | 다음 | 부작용 |
 |---|---|---|---|
 | `Idle` | `LoadSlot` | `ReadingPrimary` | `save.json` 읽기 |
-| `ReadingPrimary` | 체크섬 OK, `schemaVersion == 1` | `Replaying` | 스냅샷 + 로그 재생 |
-| `ReadingPrimary` | 체크섬 OK, `schemaVersion < 1` | `Migrating` | `save.v0.bak` 보존 후 마이그레이터 체인 |
-| `ReadingPrimary` | `schemaVersion > 1` 또는 미등록 | `Refused` | **파일 바이트 무변경**, 복구 패널 |
+| `ReadingPrimary` | 체크섬 OK, `schemaVersion == 현재 버전(3)` | `Replaying` | 스냅샷 + 로그 재생 |
+| `ReadingPrimary` | 체크섬 OK, 지원하는 구버전 `schemaVersion=0/1/2` | `Migrating` | `save.json.v{old}.bak` 원본 보존 후 v3 이전 |
+| `ReadingPrimary` | `schemaVersion > 현재 버전(3)` 또는 미등록 | `Refused` | **파일 바이트 무변경**, 복구 패널 |
 | `ReadingPrimary` | 체크섬 실패 | `ReadingBackup` | `save.bak` 시도 |
 | `ReadingBackup` | 성공 | `Replaying` | "백업에서 복구됨" 고지 |
 | `ReadingBackup` | 실패 | `ReadingCheckpoint` | 마지막 자동 체크포인트 |
@@ -172,11 +172,13 @@ owner: game-systems-designer
 | id | 기준 | 방법 |
 |---|---|---|
 | B-SV1 | 부분 기록 세이브 주입 시 `.bak`으로 복구하고 정본 바이트 불변 | PlayMode + 파일 해시 |
-| B-SV2 | `schemaVersion=0` 세이브가 마이그레이션 후 v1 만족 | 픽스처 테스트 |
-| B-SV3 | `schemaVersion=2` 세이브 거부 + 바이트 불변 | 픽스처 테스트 |
+| B-SV2 | 지원하는 구버전 `schemaVersion=0/1/2`를 현재 v3로 이전하고 원본 버전 백업·기존 명령을 보존 | 픽스처 테스트 |
+| B-SV3 | `schemaVersion > 현재 버전(3)` 세이브 거부 + 바이트 불변 | 픽스처 테스트 |
 | B-SV4 | 되돌림 포인터를 0까지 내린 뒤 재적용 시 원래 해시 복귀 | 결정론 테스트 |
 | B-SV5 | 쓰기 중 프로세스 강제 종료 100회 후 정본 손상 0건 | 반복 킬 테스트 |
 | B-SV6 | 세이브 쓰기가 메인 스레드를 4 ms 이상 막지 않음 | 프레임타임 캡처 |
 | **B-SV7** | 같은 `commitIdempotencyKey`로 두 번 성공해도 명령이 한 번만 적용됨 | 주입 테스트(`T-17`·`T-19`) |
 | **B-SV8** | `payload` 직렬화 왕복 후 재생 상태 해시가 원본과 동일하고 **세이브 파일에 이벤트 0건** | 결정론 테스트(`S-I11`) |
 | **B-SV9** | 실제 평균 엔트리 바이트를 재어 `entryCap`을 재파생 | `save_file_bytes / entries_count` · `command_count` (현재 **n = 0**) |
+
+초기 v1 인수표의 B-SV2 “0 → v1”, B-SV3 “v2 거부”는 **v1 당시의 역사 기준**이다. 현재 런타임에서 v2를 거부하라는 요구가 아니며, v1/v2 호환을 회귀시키지 않는다.

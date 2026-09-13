@@ -1,0 +1,1040 @@
+{
+  "diagnostic": true,
+  "build": "native-build-03.log",
+  "frames": [
+    {
+      "verb": "verified-native-pointer",
+      "label": "01-title",
+      "x": 250,
+      "y": 70,
+      "frontmost": {
+        "pid": 73621,
+        "id": 6230,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      },
+      "timeUnix": 1789288464.219313
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "01-title",
+      "startedUnix": 1789288464.219328,
+      "finishedUnix": 1789288465.389032,
+      "response": {
+        "id": "2974a559-2a41-4af8-98b4-1e7ac29287a7",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "height": 734,
+            "scale": 1.7,
+            "width": 1088,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/2974a559-2a41-4af8-98b4-1e7ac29287a7-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:34:25.378Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          },
+          "snapshot": {
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "window": {
+              "height": 432,
+              "id": 6230,
+              "width": 640,
+              "y": 50,
+              "isMinimized": false,
+              "platform": {
+                "layer": 0
+              },
+              "isOffscreen": false,
+              "x": 957,
+              "title": "Unknown T0",
+              "screenIndex": 0
+            },
+            "id": "A397CD69-A4C9-4E00-A04B-077014C6D1ED",
+            "coordinateSpace": "window",
+            "focusedElementId": 0,
+            "app": {
+              "name": "Unknown T0",
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "pid": 73621
+            },
+            "elementCount": 5
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/01-title.png"
+    },
+    {
+      "verb": "verified-native-pointer",
+      "label": "02-continue-duty",
+      "x": 443,
+      "y": 205,
+      "frontmost": {
+        "id": 6230,
+        "pid": 73621,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      },
+      "timeUnix": 1789288496.565462
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "02-continue-duty",
+      "startedUnix": 1789288496.565502,
+      "finishedUnix": 1789288497.575907,
+      "response": {
+        "id": "dbf0d74b-2f40-438a-8608-1be4c171ec18",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "format": "png",
+            "height": 734,
+            "width": 1088,
+            "scale": 1.7,
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/dbf0d74b-2f40-438a-8608-1be4c171ec18-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:34:57.564Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "engine": "screenCaptureKit",
+              "windowId": 6230
+            }
+          },
+          "snapshot": {
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "focusedElementId": 0,
+            "truncation": {
+              "truncated": false,
+              "maxNodes": 1200,
+              "maxDepth": 64,
+              "maxDepthReached": false
+            },
+            "coordinateSpace": "window",
+            "window": {
+              "y": 50,
+              "isMinimized": false,
+              "screenIndex": 0,
+              "id": 6230,
+              "x": 957,
+              "width": 640,
+              "height": 432,
+              "title": "Unknown T0",
+              "isOffscreen": false,
+              "platform": {
+                "layer": 0
+              }
+            },
+            "id": "A6053F47-2E98-4840-9DC9-D8B5EDB58566",
+            "app": {
+              "pid": 73621,
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "name": "Unknown T0"
+            },
+            "elementCount": 5
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/02-continue-duty.png"
+    },
+    {
+      "verb": "verified-native-pointer",
+      "label": "03-document-hand-anatomy",
+      "x": 443,
+      "y": 208,
+      "frontmost": {
+        "pid": 73621,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "id": 6230
+      },
+      "timeUnix": 1789288498.048863
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "03-document-hand-anatomy",
+      "startedUnix": 1789288498.048884,
+      "finishedUnix": 1789288498.959541,
+      "response": {
+        "id": "58c9be48-a952-4ebe-87b0-e3a9de423321",
+        "ok": true,
+        "result": {
+          "snapshot": {
+            "elementCount": 5,
+            "focusedElementId": 0,
+            "window": {
+              "height": 432,
+              "id": 6230,
+              "width": 640,
+              "y": 50,
+              "isMinimized": false,
+              "platform": {
+                "layer": 0
+              },
+              "isOffscreen": false,
+              "x": 957,
+              "title": "Unknown T0",
+              "screenIndex": 0
+            },
+            "id": "5696CCCC-6EB7-4238-8ADD-6A16A1E033C1",
+            "app": {
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "name": "Unknown T0",
+              "pid": 73621
+            },
+            "coordinateSpace": "window",
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            }
+          },
+          "screenshot": {
+            "height": 734,
+            "scale": 1.7,
+            "width": 1088,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/58c9be48-a952-4ebe-87b0-e3a9de423321-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:34:58.945Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/03-document-hand-anatomy.png"
+    },
+    {
+      "verb": "verified-native-pointer",
+      "label": "04-close-document",
+      "x": 568,
+      "y": 394,
+      "frontmost": {
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "pid": 73621,
+        "id": 6230
+      },
+      "timeUnix": 1789288518.300559
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "04-close-document",
+      "startedUnix": 1789288518.300656,
+      "finishedUnix": 1789288519.2933109,
+      "response": {
+        "id": "2631a25d-ba46-47f8-848d-714ee476e604",
+        "ok": true,
+        "result": {
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          },
+          "snapshot": {
+            "app": {
+              "name": "Unknown T0",
+              "pid": 73621,
+              "bundleId": "com.TideRegistry.Unknown-T0"
+            },
+            "coordinateSpace": "window",
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "window": {
+              "width": 640,
+              "isOffscreen": false,
+              "x": 957,
+              "platform": {
+                "layer": 0
+              },
+              "screenIndex": 0,
+              "isMinimized": false,
+              "title": "Unknown T0",
+              "height": 432,
+              "id": 6230,
+              "y": 50
+            },
+            "elementCount": 5,
+            "id": "26A3DE21-6D2B-40C9-BB3F-A97252AF7A1B",
+            "focusedElementId": 0,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            }
+          },
+          "screenshot": {
+            "width": 1088,
+            "height": 734,
+            "scale": 1.7,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/2631a25d-ba46-47f8-848d-714ee476e604-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:35:19.280Z"
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/04-close-document.png"
+    },
+    {
+      "verb": "verified-native-pointer",
+      "label": "05-reader-node",
+      "x": 120,
+      "y": 296,
+      "frontmost": {
+        "id": 6230,
+        "pid": 73621,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      },
+      "timeUnix": 1789288519.774333
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "05-reader-node",
+      "startedUnix": 1789288519.774356,
+      "finishedUnix": 1789288520.684333,
+      "response": {
+        "id": "15b67385-9333-4b7c-9b30-72743225cf70",
+        "ok": true,
+        "result": {
+          "screenshotStatus": {
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            },
+            "state": "captured"
+          },
+          "snapshot": {
+            "id": "EE1ADD36-7A46-4FA5-9BEA-4AA44A0EB928",
+            "elementCount": 5,
+            "app": {
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "pid": 73621,
+              "name": "Unknown T0"
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "focusedElementId": 0,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "window": {
+              "isOffscreen": false,
+              "isMinimized": false,
+              "width": 640,
+              "screenIndex": 0,
+              "x": 957,
+              "height": 432,
+              "y": 50,
+              "id": 6230,
+              "platform": {
+                "layer": 0
+              },
+              "title": "Unknown T0"
+            },
+            "coordinateSpace": "window"
+          },
+          "screenshot": {
+            "width": 1088,
+            "height": 734,
+            "scale": 1.7,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/15b67385-9333-4b7c-9b30-72743225cf70-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:35:20.674Z"
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/05-reader-node.png"
+    },
+    {
+      "verb": "verified-native-pointer",
+      "label": "06-reader-final-ready",
+      "x": 443,
+      "y": 208,
+      "frontmost": {
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "pid": 73621,
+        "id": 6230
+      },
+      "timeUnix": 1789288521.1305852
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "06-reader-final-ready",
+      "startedUnix": 1789288521.1306062,
+      "finishedUnix": 1789288522.040125,
+      "response": {
+        "id": "97900c3e-8c1e-45b2-a3bf-29f057802927",
+        "ok": true,
+        "result": {
+          "snapshot": {
+            "app": {
+              "name": "Unknown T0",
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "pid": 73621
+            },
+            "coordinateSpace": "window",
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "window": {
+              "screenIndex": 0,
+              "x": 957,
+              "title": "Unknown T0",
+              "isMinimized": false,
+              "y": 50,
+              "height": 432,
+              "isOffscreen": false,
+              "width": 640,
+              "id": 6230,
+              "platform": {
+                "layer": 0
+              }
+            },
+            "elementCount": 5,
+            "id": "4D6AF937-C265-4FB9-A746-D2C6993ED364",
+            "focusedElementId": 0,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            }
+          },
+          "screenshot": {
+            "width": 1088,
+            "height": 734,
+            "scale": 1.7,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/97900c3e-8c1e-45b2-a3bf-29f057802927-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:35:22.027Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/06-reader-final-ready.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "07-successful-first-read",
+      "at": 1789288643.631377,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        443,
+        345
+      ],
+      "screenPoint": [
+        1400,
+        395
+      ],
+      "topmostAtPoint": {
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "pid": 73621,
+        "id": 6230
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "07-successful-first-read",
+      "startedUnix": 1789288643.73485,
+      "finishedUnix": 1789288644.763563,
+      "response": {
+        "id": "f9a00b8a-cf50-4df1-b70d-5cfaac5616d4",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "width": 1280,
+            "height": 864,
+            "scale": 2,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/f9a00b8a-cf50-4df1-b70d-5cfaac5616d4-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:37:24.752Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "engine": "screenCaptureKit",
+              "windowId": 6230
+            }
+          },
+          "snapshot": {
+            "id": "8B125BC2-57A5-4BED-85B5-107D6B7F6603",
+            "elementCount": 2,
+            "app": {
+              "name": "Unknown T0",
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "pid": 73621
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Window\", App: Unknown T0.\n\n0 dialog Window\n\t1 button WindowSharingSessionButton\n\nNo UI element is currently focused.",
+            "focusedElementId": null,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "window": {
+              "isOffscreen": false,
+              "isMinimized": false,
+              "width": 640,
+              "screenIndex": 0,
+              "x": 957,
+              "height": 432,
+              "y": 50,
+              "id": 6230,
+              "platform": {
+                "layer": 0
+              },
+              "title": "Window"
+            },
+            "coordinateSpace": "window"
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/07-successful-first-read.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "08-preserved-copy-read",
+      "at": 1789288664.21796,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        443,
+        253
+      ],
+      "screenPoint": [
+        1400,
+        303
+      ],
+      "topmostAtPoint": {
+        "pid": 73621,
+        "id": 6230,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "08-preserved-copy-read",
+      "startedUnix": 1789288664.312883,
+      "finishedUnix": 1789288665.2331562,
+      "response": {
+        "id": "8bc2896b-29f4-4d15-86ae-294e8faa9302",
+        "ok": true,
+        "result": {
+          "snapshot": {
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "elementCount": 5,
+            "coordinateSpace": "window",
+            "window": {
+              "platform": {
+                "layer": 0
+              },
+              "height": 432,
+              "isMinimized": false,
+              "y": 50,
+              "title": "Unknown T0",
+              "isOffscreen": false,
+              "id": 6230,
+              "width": 640,
+              "x": 957,
+              "screenIndex": 0
+            },
+            "focusedElementId": 0,
+            "id": "A55971A6-616E-4A72-887A-61F6639933A4",
+            "app": {
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "name": "Unknown T0",
+              "pid": 73621
+            }
+          },
+          "screenshot": {
+            "format": "png",
+            "height": 864,
+            "width": 1280,
+            "scale": 2,
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/8bc2896b-29f4-4d15-86ae-294e8faa9302-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:37:45.217Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "engine": "screenCaptureKit",
+              "windowId": 6230
+            }
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/08-preserved-copy-read.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "09-accessibility-settings",
+      "at": 1789288711.156068,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        447,
+        394
+      ],
+      "screenPoint": [
+        1404,
+        444
+      ],
+      "topmostAtPoint": {
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "pid": 73621,
+        "id": 6230
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "09-accessibility-settings",
+      "startedUnix": 1789288711.246903,
+      "finishedUnix": 1789288712.172838,
+      "response": {
+        "id": "67945c41-634f-45e7-b746-b335fff4dae0",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "height": 864,
+            "scale": 2,
+            "width": 1280,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/67945c41-634f-45e7-b746-b335fff4dae0-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:38:32.162Z"
+          },
+          "screenshotStatus": {
+            "metadata": {
+              "engine": "screenCaptureKit",
+              "windowId": 6230
+            },
+            "state": "captured"
+          },
+          "snapshot": {
+            "id": "127F09F0-B150-4F14-857D-244BB6E4DF47",
+            "elementCount": 5,
+            "app": {
+              "pid": 73621,
+              "name": "Unknown T0",
+              "bundleId": "com.TideRegistry.Unknown-T0"
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "focusedElementId": 0,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "window": {
+              "platform": {
+                "layer": 0
+              },
+              "title": "Unknown T0",
+              "y": 50,
+              "id": 6230,
+              "height": 432,
+              "isMinimized": false,
+              "isOffscreen": false,
+              "screenIndex": 0,
+              "width": 640,
+              "x": 957
+            },
+            "coordinateSpace": "window"
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/09-accessibility-settings.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "10-reduced-motion-enabled",
+      "at": 1789288801.8925672,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        447,
+        288
+      ],
+      "screenPoint": [
+        1404,
+        338
+      ],
+      "topmostAtPoint": {
+        "id": 6230,
+        "pid": 73621,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "10-reduced-motion-enabled",
+      "startedUnix": 1789288801.986431,
+      "finishedUnix": 1789288802.921865,
+      "response": {
+        "id": "15b2dacc-304c-466a-9d5d-a24c50223222",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "width": 1280,
+            "height": 864,
+            "scale": 2,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/15b2dacc-304c-466a-9d5d-a24c50223222-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:40:02.913Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          },
+          "snapshot": {
+            "elementCount": 5,
+            "app": {
+              "name": "Unknown T0",
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "pid": 73621
+            },
+            "window": {
+              "height": 432,
+              "isOffscreen": false,
+              "id": 6230,
+              "title": "Unknown T0",
+              "x": 957,
+              "y": 50,
+              "width": 640,
+              "platform": {
+                "layer": 0
+              },
+              "isMinimized": false,
+              "screenIndex": 0
+            },
+            "focusedElementId": 0,
+            "truncation": {
+              "truncated": false,
+              "maxNodes": 1200,
+              "maxDepth": 64,
+              "maxDepthReached": false
+            },
+            "id": "371E8FAD-74C1-44A7-BD25-04EF5F1BCD9C",
+            "coordinateSpace": "window",
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0."
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/10-reduced-motion-enabled.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "11-return-with-reduced-motion",
+      "at": 1789288803.310237,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        568,
+        394
+      ],
+      "screenPoint": [
+        1525,
+        444
+      ],
+      "topmostAtPoint": {
+        "id": 6230,
+        "pid": 73621,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        }
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "11-return-with-reduced-motion",
+      "startedUnix": 1789288803.401064,
+      "finishedUnix": 1789288804.31483,
+      "response": {
+        "id": "3a9daeee-5397-4ba2-a8fa-068003377b4a",
+        "ok": true,
+        "result": {
+          "screenshot": {
+            "format": "png",
+            "height": 734,
+            "width": 1088,
+            "scale": 1.7,
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/3a9daeee-5397-4ba2-a8fa-068003377b4a-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:40:04.300Z"
+          },
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          },
+          "snapshot": {
+            "window": {
+              "x": 957,
+              "title": "Unknown T0",
+              "isMinimized": false,
+              "id": 6230,
+              "y": 50,
+              "screenIndex": 0,
+              "width": 640,
+              "height": 432,
+              "isOffscreen": false,
+              "platform": {
+                "layer": 0
+              }
+            },
+            "elementCount": 5,
+            "app": {
+              "name": "Unknown T0",
+              "pid": 73621,
+              "bundleId": "com.TideRegistry.Unknown-T0"
+            },
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Unknown T0\", App: Unknown T0.\n\n0 standard window Unknown T0\n\t1 close button\n\t2 full screen button, Secondary Actions: zoom the window\n\t3 minimize button\n\t4 text Unknown T0\n\nThe focused UI element is 0 standard window Unknown T0.",
+            "focusedElementId": 0,
+            "id": "C17AE0B3-5EC9-4FA8-97AD-3AAF302C3E9F",
+            "coordinateSpace": "window",
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            }
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/11-return-with-reduced-motion.png"
+    },
+    {
+      "kind": "verified-native-pointer",
+      "label": "12-reduced-motion-read",
+      "at": 1789288841.479321,
+      "pid": 73621,
+      "windowId": 6230,
+      "windowPoint": [
+        443,
+        345
+      ],
+      "screenPoint": [
+        1400,
+        395
+      ],
+      "topmostAtPoint": {
+        "id": 6230,
+        "bounds": {
+          "X": 957,
+          "Height": 432,
+          "Y": 50,
+          "Width": 640
+        },
+        "pid": 73621
+      }
+    },
+    {
+      "verb": "get-app-state",
+      "args": [],
+      "label": "12-reduced-motion-read",
+      "startedUnix": 1789288841.583436,
+      "finishedUnix": 1789288842.5655181,
+      "response": {
+        "id": "4bd12d77-1ef2-4bbf-9d7c-1515642c7c41",
+        "ok": true,
+        "result": {
+          "screenshotStatus": {
+            "state": "captured",
+            "metadata": {
+              "windowId": 6230,
+              "engine": "screenCaptureKit"
+            }
+          },
+          "screenshot": {
+            "width": 1280,
+            "height": 864,
+            "scale": 2,
+            "format": "png",
+            "path": "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/orca-computer-use/4bd12d77-1ef2-4bbf-9d7c-1515642c7c41-screenshot.png",
+            "dataOmitted": true,
+            "expiresAt": "2026-09-14T08:40:42.550Z"
+          },
+          "snapshot": {
+            "elementCount": 2,
+            "app": {
+              "bundleId": "com.TideRegistry.Unknown-T0",
+              "name": "Unknown T0",
+              "pid": 73621
+            },
+            "window": {
+              "height": 432,
+              "isOffscreen": false,
+              "id": 6230,
+              "title": "Window",
+              "x": 957,
+              "y": 50,
+              "width": 640,
+              "platform": {
+                "layer": 0
+              },
+              "isMinimized": false,
+              "screenIndex": 0
+            },
+            "focusedElementId": null,
+            "truncation": {
+              "maxDepth": 64,
+              "truncated": false,
+              "maxDepthReached": false,
+              "maxNodes": 1200
+            },
+            "id": "EB635BA7-327D-4E73-9B25-31703F7A5053",
+            "coordinateSpace": "window",
+            "treeText": "App=com.TideRegistry.Unknown-T0 (pid 73621)\nWindow: \"Window\", App: Unknown T0.\n\n0 dialog Window\n\t1 button WindowSharingSessionButton\n\nNo UI element is currently focused."
+          }
+        },
+        "_meta": {
+          "runtimeId": "082fb4e5-76bc-475a-ad8f-e4492873afb9"
+        }
+      },
+      "evidence": "unity/Unknown/Builds/m22/native-pass-03/12-reduced-motion-read.png"
+    }
+  ],
+  "guard": "verified process and topmost window at each pointer coordinate",
+  "humanPlay": false
+}

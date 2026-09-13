@@ -1,0 +1,57 @@
+{
+  "schema": "provenance/v1",
+  "assets": [
+    {
+      "id": "quiet-watchroom-opening",
+      "file": "quiet-watchroom-opening.png",
+      "category": "concept",
+      "tool": "god-tibo-imagen(gti)",
+      "toolVersion": "0.3.0",
+      "provider": "private-codex",
+      "backend": "codex private backend (chatgpt.com)",
+      "modelRequested": "gpt-6-astra",
+      "modelActual": null,
+      "modelActualNote": "CLI returned no independently verifiable model identity",
+      "requested_size": "2048x1152",
+      "actual_size": "1672x941",
+      "bytes": 2350612,
+      "output_sha256": "69767ef48410496d3eedc0e5f0d1581dc5daa80c335898586e5e78e9a7cdb174",
+      "prompt_file": "quiet-watchroom-opening.prompt.txt",
+      "prompt_sha256": "8cbb5dfd9a5633696a67846b74ec76f09874505085f28f029edcd744a9aafe46",
+      "referenceImages": [
+        {
+          "path": "assets/generated/2d/concept/space-hub-watchroom-mood.png",
+          "sha256": "a90bc9ca404b93602ea2a799acbe43add6fff8861cffe18e6179cfcd3768a79c",
+          "authority": "original concept allowlist"
+        }
+      ],
+      "textAuthorities": [
+        "_workspace/current/concept/style-guide.md",
+        "_workspace/current/presentation/aside-immersion-20260913/decision-and-implementation.md"
+      ],
+      "responseId": "resp_071e6cd39b779d9f016aa649fa0c6487d0a404975a9e956d35",
+      "providerSessionId": "f9474cff-27f2-4441-9f6b-2274d684d2bf",
+      "httpStatus": 200,
+      "actualRevisedPrompt": "Revise the just-generated watchroom illustration. Remove entirely the small round clock / gauge on the rear wall near the right end of the windows, including its dial and mount: replace it with plain worn blue-gray wall and unadorned pipe. Absolutely no clocks, gauges or calibrated instruments anywhere. Remove the extra optical gadgets, lantern, rolled papers and box from the rear windowsill, leaving a clean quiet sill. Make the lower-left floor much more matte, deep ink and low-detail without shiny highlights, retaining subtle large spatial shapes. All other composition, right-side closed blank books and folded sleeve, optical reader and lamp, repaired chair and drawers remain. Shift the visible distant clean harbor horizon downward to around 40 percent of image height by lowering the distant harbor breakwaters/horizon within the existing window view; keep calm dark water and sky. Maintain wide 16:9 fine painterly realism. No text or markings of any kind.",
+      "generatedFileMtime": "2026-09-13T07:02:02.752Z",
+      "cliGenerationRequests": 1,
+      "internalImageGenerationCalls": null,
+      "cost": {
+        "credits": null,
+        "currency": null,
+        "amount": null,
+        "note": "Not exposed by CLI response; not asserted free"
+      },
+      "license": "UNVERIFIED (generated; commercial use rights not established)",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "promoted_by": null,
+      "review": {
+        "status": "revision-required",
+        "reviewer": "Aside parent visual inspection",
+        "note": "Requested new composition, closed blank notebooks and protected reading field were not achieved; fine incidental patterns remain on open paper. Preserve for audit, do not use as evidence or final runtime art."
+      },
+      "claim": "Generated candidate, not gameplay. No default runtime integration."
+    }
+  ]
+}

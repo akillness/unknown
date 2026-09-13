@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-09-13T12:53:51Z",
+  "scope": "M22 local development integration; RFC-CX-017 and RFC-CX-018",
+  "verdict": "verified-local-uncommitted",
+  "engine": "Unity 6000.5.6f1",
+  "platform": "macOS arm64 / Apple M2 Pro / Metal",
+  "cleanup": {
+    "ownedProcessesStopped": [
+      {
+        "name": "unknown-m22-player",
+        "supervisorStopExit": 1
+      },
+      {
+        "name": "unknown-m22-blender-mcp",
+        "supervisorStopExit": 143
+      },
+      {
+        "name": "unknown-m22-player",
+        "revision": "contract-corrections",
+        "pid": 54666,
+        "supervisorStopExit": 143
+      }
+    ],
+    "stopExitCodesAreBuildResults": false,
+    "removed": [
+      "unity/Unknown/Builds/m22/window-probe",
+      "unity/Unknown/Builds/m22/window-probe.swift",
+      "unity/Unknown/Builds/m22/game-crop-check.png",
+      "session-temporary/blender_bridge.py",
+      "unity/Unknown/Assets/_Project/Editor/M22ContractProfileSmoke.cs",
+      "unity/Unknown/Assets/_Project/Editor/M22ContractProfileSmoke.cs.meta"
+    ],
+    "temporaryPoseCaptureTestRemoved": true,
+    "baselineBackupPreserved": true,
+    "originalBlenderAndUnownedPlayersStoppedByThisSession": false,
+    "windowIdentityProbe": "Reused previously verified Swift source through swift -e; no new probe file was created."
+  },
+  "tests": [
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/playmode-contract-corrections.xml",
+      "id": "2",
+      "testcasecount": "101",
+      "result": "Skipped:Ignored",
+      "total": "101",
+      "passed": "100",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "1",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 10:00:17Z",
+      "end-time": "2026-09-13 10:01:11Z",
+      "duration": "54.4548217"
+    },
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/editmode-contract-corrections.xml",
+      "id": "2",
+      "testcasecount": "56",
+      "result": "Passed",
+      "total": "56",
+      "passed": "56",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 10:07:02Z",
+      "end-time": "2026-09-13 10:07:04Z",
+      "duration": "2.5314982"
+    },
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/boot-contract-corrections.xml",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 10:07:12Z",
+      "end-time": "2026-09-13 10:07:13Z",
+      "duration": "1.0552414"
+    }
+  ],
+  "uniquePassedCases": 157,
+  "testNotes": [
+    "The full PlayMode suite intentionally skipped the serialized boot case; that same case passed separately with an explicit isolated save directory.",
+    "Before repair: 98 PlayMode cases, 93 passed, 4 failed, 1 intentionally skipped. Full pre-fix XML is preserved.",
+    "Hand/crank action time is now anchored at the accepted action with an unscaled monotonic clock, excluding prior frame work.",
+    "The hint boundary fixture now uses an exactly representable synthetic clock origin; no runtime timing tolerance or gameplay rule was relaxed.",
+    "The authored-rest fixture waits for observable movement instead of assuming two frames. The drawer fixture no longer projects a hidden hub drawer on the protagonist title screen.",
+    "Final assertion cleanup removed one opening-copy/default snapshot test and a hard-coded fallback-copy expectation without changing game code or authored copy. All three opening safety/precedence cases passed in the final 56-case EditMode run. The earlier 57-case receipt is preserved as editmode-before-assertion-cleanup.xml.",
+    "Focused corrections then passed 100 PlayMode + 56 EditMode + 1 isolated serialized-boot case. The real profile recreation smoke passed, its temporary source was removed before the final EditMode/boot/build, and protected record-name fallback invariants were strengthened.",
+    "A later event-ordering advisory was checked with real InputSystem events. Three existing cases passed again after adding explicit no-rebuild/no-gameplay assertions for Enter/Escape/controller cancel. Runtime sources and native assembly are unchanged; the full-suite XML predates only these assertion additions.",
+    "The prior ordinary-focus restoration invariant was then checked explicitly with real Enter input in one existing PlayMode case (1/1). Its new XML is supplemental; the 157 unique total and native-build scope are unchanged."
+  ],
+  "validators": [
+    {
+      "command": "node _workspace/current/planning/validate-campaign.mjs",
+      "checks": 50,
+      "passed": 50,
+      "failed": 0,
+      "scope": "document consistency, not played duration"
+    },
+    {
+      "command": "node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/systems/data/t0",
+      "checks": 5,
+      "passed": 5,
+      "failed": 0,
+      "scope": "T0 canonical table consistency"
+    }
+  ],
+  "build": {
+    "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+    "exitCode": 0,
+    "application": "unity/Unknown/Builds/T0-mac/Unknown.app",
+    "burstCompilation": "disabled using --burst-disable-compilation after an earlier compiler crash; no source workaround",
+    "log": {
+      "path": "unity/Unknown/Builds/m22/native-build-contract-corrections.log",
+      "bytes": 500486,
+      "sha256": "c3e84959ee2157d9a4a85cfd676715f86a74611be40499c2286b92038af4f3e2"
+    },
+    "assembly": {
+      "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+      "bytes": 132096,
+      "sha256": "9ba36071f8114044ed85741102ab3a949e76b27822175df6cc9384f83285864b"
+    },
+    "editorWarnings": "An access-token update warning was followed by successful entitlement resolution. The build exited successfully; this is not a warning-free-build claim.",
+    "reportedBytes": 410816644
+  },
+  "blender": {
+    "version": "5.1.2",
+    "transport": "actual Blender MCP through a session-local protocol adapter to the existing addon; addon/config unchanged",
+    "sourceRecipe": {
+      "path": "scripts/blender/build-seorin-m22.py",
+      "bytes": 47362,
+      "sha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0"
+    },
+    "productionCalls": 45,
+    "executed": 45,
+    "originalSceneChecks": {
+      "passed": 45,
+      "failed": 0
+    },
+    "detailedStructureChecks": {
+      "passed": 36,
+      "failed": 0,
+      "notRecorded": 9
+    },
+    "lastExportRpc": 53,
+    "dirtyStatePreservedClaim": false,
+    "receipt": "_workspace/current/systems/tech-verification/m22/blender-mcp-session.json"
+  },
+  "assets": {
+    "characterTriangles": 15124,
+    "characterBones": 50,
+    "trianglesPerHand": 2772,
+    "bonesPerHand": 18,
+    "combinedHandTriangles": 5544,
+    "maximumBlenderWeightsPerVertex": 2,
+    "semanticActions": 6,
+    "fbxTakes": 11,
+    "rootMotion": false,
+    "rawRuntimeEligible": false,
+    "localRuntimeApproved": true,
+    "m20R02Promoted": false,
+    "commercialLicenseApproved": false
+  },
+  "sourceIdentity": [
+    {
+      "path": "scripts/blender/build-seorin-m22.py",
+      "bytes": 47362,
+      "sha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M22EmbodimentVisual.cs",
+      "bytes": 11256,
+      "sha256": "2054a39a190f842ec2be85d3fdb6905ae767d9375c1554e93ee3baccc5525ac6"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M22SeorinSession.cs",
+      "bytes": 5348,
+      "sha256": "d012ae622106d06c8f772ce02ca78f36bd9953617edcb5baf71d9900b40e6d02"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+      "bytes": 9569,
+      "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+      "bytes": 45873,
+      "sha256": "3e0f295b42ef67ce74142877fa8eeb9b590041ffd9bd700bb5672ce874deb6de"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+      "bytes": 7986,
+      "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/M22Embodiment.asset",
+      "bytes": 2923,
+      "sha256": "ffff7ebe4da34881bcceb0d74d408bc802cb5b0a4abdaae351e654357b0f2e6e"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+      "bytes": 30099,
+      "sha256": "77ee69856c652744029ea26d74097b4233875abf1b8f6141c378d662da6e827f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Presentation/M7UiSkinProfile.cs",
+      "bytes": 1912,
+      "sha256": "580a98ff3d54bc8ab376e5566571cfe4ee21e2ab86e954db3114c7d0e919df51"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+      "bytes": 14577,
+      "sha256": "1d147328e9972ea1b45be3f8c1b22b4eb33ab62ab3a4bfaa426c1e521302caa7"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/M7UiSkin.asset",
+      "bytes": 1286,
+      "sha256": "2d9af719c229c2ba3499c13e1ed85bf6b776b3137aa6d08eb6f5e37b799348f9"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs",
+      "bytes": 29730,
+      "sha256": "39fd06d37f17a87a454bc2dd6d0f2141781bedc5a864238f0861d2f364dab465"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/M7ReaderPlayModeTests.cs",
+      "bytes": 21049,
+      "sha256": "16f0baff0d22dbf5eec6c93986340a467cee0a15ee0ac05fe1d36a7446ebda23"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Tests/EditMode/AsideImmersionContractTests.cs",
+      "bytes": 1998,
+      "sha256": "8e85ee896ff5e4db8844c5c5d2937f53c411242aa6166d08ebae5f79fe016234"
+    }
+  ],
+  "git": {
+    "branch": "main",
+    "head": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+    "workingTreeIntegration": "all implemented changes are in the existing main worktree; user/Aside changes preserved",
+    "worktreesObserved": 1,
+    "worktreesRemoved": 0,
+    "committed": false,
+    "pushed": false,
+    "boundary": "CLAUDE.md section 10 line 128 reserves commit/push for the user"
+  },
+  "notMeasured": [
+    "human playtests (n=0)",
+    "fun, immersion and comfort",
+    "full 480-minute campaign completion",
+    "frame-time, draw-call and resident-texture performance budgets",
+    "Steam/commercial release readiness"
+  ],
+  "knowledgeSync": {
+    "graphify": {
+      "command": "graphify update .",
+      "result": "refreshed-structural-only",
+      "files": 2189,
+      "nodes": 38389,
+      "edges": 42412,
+      "communities": 4080,
+      "wallSeconds": 34.05,
+      "newModelTokens": 0,
+      "scope": "Corrected runtime and strengthened input-ordering tests; AST extraction completed for all 2189 reported files.",
+      "limitations": [
+        "Changed documents/images were not semantically re-extracted; no API keys or paid model calls were used.",
+        "graph.html was skipped above the 5000-node limit; no HTML visualization completion claim."
+      ]
+    },
+    "mex": {
+      "result": "skipped",
+      "reason": "The session-start identity probe found TeX Live mex, not an available mex-agent. The wrong binary was not invoked for graph/check/log.",
+      "manualHandoffUpdated": [
+        ".mex/ROUTER.md",
+        "_workspace/current/production/decision-log.md"
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/playmode.xml",
+      "bytes": 107731,
+      "sha256": "75135882391383a4c4d9f070dafb592bd43c3a01bc95496b5005374d07420618"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/editmode.xml",
+      "bytes": 43006,
+      "sha256": "14c18141560e57e531130694252adba023712980c5707bf29233402983214f84"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/editmode-before-assertion-cleanup.xml",
+      "bytes": 43640,
+      "sha256": "67da8d035510ee4a18b629682a3d9deaedce53b650f9a7a307e2583433b90812"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/boot.xml",
+      "bytes": 3434,
+      "sha256": "fd70447744f4898ab93e68d03ab2102f86266c7e1df08a8a4fd08b1c3f25960e"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/playmode-before-fix.xml",
+      "bytes": 110964,
+      "sha256": "0691e750cd560cd03d211e1266cc36b0f7f8095c61ba91ceaa7f38451ee10246"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/import-audit.json",
+      "bytes": 2366,
+      "sha256": "448f3c4cabd5bde23f3cf83bda5a7f8f1c43c8364d50ffc446c59430a0c395ce"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/blender-mcp-session.json",
+      "bytes": 132323,
+      "sha256": "82f8bcefa996ae66226fb3bbc73048374175ee5f629f39d700b49b4bec9112f9"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-default-actions.json",
+      "bytes": 60409,
+      "sha256": "260e48dab77f070e63c99e07a2e6908799721dd976aa10293f8ab2b85b9a838f"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-diagnostic-actions.json",
+      "bytes": 32495,
+      "sha256": "86ed3ae642acb7c7c772fe85ae31e9d3df27f47e28b9875a7e50f46e8fb794d5"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-playthrough-actions.json",
+      "bytes": 100811,
+      "sha256": "01b6c88e2963ed5202805639293fd11be8a258fb5c36a03855bd0c9b9299e99b"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/playmode-contract-corrections.xml",
+      "bytes": 110022,
+      "sha256": "24f178904ac1022fed416e36ed0bf427bf2d13c1fed44f37d84bc9073ba6b1f6"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/editmode-contract-corrections.xml",
+      "bytes": 42996,
+      "sha256": "9f872d38cfd889a9db560131d5d0fe1149e434e7e7e5b31410ba5f91d863d45b"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/boot-contract-corrections.xml",
+      "bytes": 3439,
+      "sha256": "195c45a26961ac6711dcb0c32dcdd2fc3b415bea38f07ecede4f14c9b1f5631c"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/profile-recreation.json",
+      "bytes": 462,
+      "sha256": "efa0b350dcac849d6964a35d5e81a61eaae0f52b65a5393f75ea4c0f66a330d2"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/verification-before-contract-corrections.json",
+      "bytes": 12331,
+      "sha256": "08e389bfebfee2cc65efc771a25b26f213b3da69dcea72d866c07941ba16401e"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/Tide.App.before-contract-corrections.dll",
+      "bytes": 131072,
+      "sha256": "35a616807a465359e36320f0a242ec6df71aeb904984782fbaa40102b581ec31"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-contract-actions.json",
+      "bytes": 57845,
+      "sha256": "707e56cbf1609c70bd21fa4ee03529f80b814bb2cdd7b1cc84309c5004f8ee35"
+    },
+    {
+      "path": "docs/media/gameplay-m22/native-contract-provenance.json",
+      "bytes": 3904,
+      "sha256": "c814eb94e3744dafc52d89086881feb1974c852ebc40b7da202467e2d485647a"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/hint-input-ordering.xml",
+      "bytes": 4904,
+      "sha256": "87fc169e7c76e1d2c55bd282404910c567ba245520269c2195005e438f88c87e"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/hint-focus-restoration.xml",
+      "bytes": 3379,
+      "sha256": "e53ad52a4b121de423df9196a265d585daa71174b74a71bdc4110f475113a948"
+    }
+  ],
+  "earlierNativeMotionProof": {
+    "diagnosticFlags": [],
+    "pid": 65711,
+    "windowId": 6298,
+    "saveScope": "isolated agent-played T0-b3 continuation; no fixture-seeded native progression",
+    "confirmed": [
+      "default protagonist title framing",
+      "document hands with inward thumbs and text clearance",
+      "plate insertion reaches forward and returns",
+      "right grip follows the crank during a deliberate successful read",
+      "return to authored rest",
+      "reduced-motion read keeps hands and crank static while UI responds",
+      "Tab navigation to off-screen plate selection after verified native content focus",
+      "reader overlay removes hands; closing restores the appropriate context",
+      "normal-motion setting restored after the smoke test"
+    ],
+    "inputBoundary": "PID/window and pointer hit target checked before native clicks. Keyboard proof used a single cliclick macro after content focus; earlier separate-process Tab attempts did not change focus. Physical controller/IME not observed.",
+    "runtimeLogScan": "No Exception/Error/Failed matches in the captured supervised player log; editor licensing warnings are separate.",
+    "evidence": "docs/media/gameplay-m22/provenance.json",
+    "buildAssembly": {
+      "path": "_workspace/current/systems/tech-verification/m22/Tide.App.before-contract-corrections.dll",
+      "bytes": 131072,
+      "sha256": "35a616807a465359e36320f0a242ec6df71aeb904984782fbaa40102b581ec31"
+    },
+    "scope": "Earlier native asset/motion captures, before the focused hint/pause/default corrections. Not evidence for the new offer controls."
+  },
+  "contractCorrections": {
+    "hintOffer": {
+      "idleSeconds": 180,
+      "cooldownSeconds": 180,
+      "controls": [
+        "hint-offer-open",
+        "hint-offer-dismiss"
+      ],
+      "shownWithoutStealingFocus": true,
+      "navigationAndPointerActivity": "reset idle but preserve an already visible offer so its controls remain reachable",
+      "gameplayActions": "consume the offer and start cooldown",
+      "dismissal": "button/Enter or Escape/controller B; session-only dismissal count; underlying tool retained",
+      "opening": "help overlay only, no automatic hint-level disclosure",
+      "layout": "dedicated header region disjoint from title and subtitle at 150% text"
+    },
+    "motionSuspension": {
+      "acceptedActionClock": "Time.realtimeSinceStartupAsDouble",
+      "unityCallbacks": [
+        "OnApplicationPause",
+        "OnApplicationFocus"
+      ],
+      "behavior": "cancel active gestures and reject new gestures while suspended or unfocused; no deferred replay on resume",
+      "editorPauseApiEquivalenceClaimed": false
+    },
+    "authoredDefaults": {
+      "workSurfaceAlpha": 0.3,
+      "openingCopyDurationAndResourceParity": "verified by disposable Editor recreation smoke",
+      "permanentSnapshotTestRestored": false,
+      "protectedFallbackRecordNames": [
+        "인수 각서",
+        "이관 목록"
+      ],
+      "safeAuthoredObjectivePrecedence": "retained"
+    },
+    "inventory": "rig §7/§8 now explicitly separates the historical no-hands state from the M22 Generic-hand approval; manifest §10 lists the exact three source stems",
+    "newRegressionCases": [
+      "Tide.Tests.M7ReaderPlayModeTests.ApplicationSuspensionCancelsHandsAndCrankWithoutDeferredReplay",
+      "Tide.Tests.T0PlayModeTests.LargeTextHintOfferStaysOutsideHeadingsAndCancelDoesNotLeaveTheTool",
+      "Tide.Tests.T0PlayModeTests.OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation"
+    ]
+  },
+  "native": {
+    "diagnosticFlags": [],
+    "pid": 54666,
+    "windowId": 6420,
+    "saveScope": "Fresh isolated native-contract-save; no fixture-seeded progression; settings and T0 reader intake context only.",
+    "textScale": 1.5,
+    "confirmed": [
+      "Default native launch and actual 150% text setting; no diagnostic or shortened timing flags.",
+      "Document reading suppresses offers after more than 180 seconds without harness-issued input.",
+      "Reader offer appears after a real 183.07-second no-input wait; capture at 193.44 seconds. This is not an exact firing-frame measurement.",
+      "The 150% header offer is visually disjoint from title/subtitle and does not steal existing keyboard focus.",
+      "Tab preserves the visible offer; Shift+Tab reaches the new dismiss button.",
+      "Enter dismisses the offer while retaining the reader tool and displayed progress.",
+      "The offer reappears after the unchanged 180-second dismissal cooldown; second observation 198 seconds after dismissal completion.",
+      "A real pointer click on the offered View help button opens only the free-hint menu; no hint body is revealed.",
+      "Escape closes the help overlay and returns to the same reader context."
+    ],
+    "inputBoundary": "Targeted native mouse and keyboard macros with same-call topmost PID/window verification; exact tool/failed-attempt/focus and controller boundaries are in native-contract-actions.json.",
+    "runtimeLogScan": "No case-insensitive Exception|Error|Failed matches in the stopped corrected player log.",
+    "evidence": "docs/media/gameplay-m22/native-contract-provenance.json",
+    "actionReceipt": {
+      "path": "_workspace/current/systems/tech-verification/m22/native-contract-actions.json",
+      "bytes": 57845,
+      "sha256": "707e56cbf1609c70bd21fa4ee03529f80b814bb2cdd7b1cc84309c5004f8ee35"
+    }
+  },
+  "inputOrderingProof": {
+    "runtimeChanged": false,
+    "activityHandler": "Watch.Activity -> NoteInputActivity resets idle only; onAnyButtonPress cannot hide the offer before Cancel/Interact.",
+    "inputPath": "InputSystem.QueueStateEvent(KeyboardState) press/release and GamepadState; InputClick traverses with queued Tab and activates with queued Enter.",
+    "observedInvariants": [
+      "ScreenChanged count remains zero on dismissal",
+      "surface remains shell/reader as appropriate",
+      "Journal.HeadSeq is unchanged",
+      "offer dismissal count increments exactly once per requested dismissal"
+    ],
+    "run": {
+      "file": "_workspace/current/systems/tech-verification/m22/hint-input-ordering.xml",
+      "id": "2",
+      "testcasecount": "3",
+      "result": "Passed",
+      "total": "3",
+      "passed": "3",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 10:43:28Z",
+      "end-time": "2026-09-13 10:43:29Z",
+      "duration": "1.2108466"
+    },
+    "passedCases": [
+      "Tide.Tests.T0PlayModeTests.KeyboardControllerAndPointerActivityResetIdleWithoutRebuildingScreen",
+      "Tide.Tests.T0PlayModeTests.LargeTextHintOfferStaysOutsideHeadingsAndCancelDoesNotLeaveTheTool",
+      "Tide.Tests.T0PlayModeTests.OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation"
+    ],
+    "wholeSuiteTestSourceSha256BeforeAdditionalAssertions": "2b44f03ce69f63e92296c627f41193ee2889373ee459f80cb3c440b18cf479bc",
+    "currentTestSource": {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs",
+      "bytes": 29730,
+      "sha256": "39fd06d37f17a87a454bc2dd6d0f2141781bedc5a864238f0861d2f364dab465"
+    },
+    "counting": "These are three previously counted cases with stronger assertions, not three new cases. Unique total remains 157.",
+    "testSourceSha256AtRun": "6a01ae1c77fcd0deee512a4129f591652558c91700ec91853b4ae0ad59246bbf"
+  },
+  "focusRestorationProof": {
+    "runtimeChanged": false,
+    "setup": "Capture ordinary handover focus, display the offer without focus theft, then focus hint-offer-dismiss directly so traversal does not change the remembered ordinary focus.",
+    "inputPath": "InputSystem.QueueStateEvent(KeyboardState) Enter press and release; no direct Back or Activate dismissal.",
+    "observedInvariants": [
+      "Previous ordinary CurrentFocusId is restored after dismissal",
+      "ScreenChanged remains zero",
+      "Journal.HeadSeq is unchanged",
+      "Shell surface is retained",
+      "Hidden offer controls leave the focus ring"
+    ],
+    "run": {
+      "file": "_workspace/current/systems/tech-verification/m22/hint-focus-restoration.xml",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 12:51:40Z",
+      "end-time": "2026-09-13 12:51:41Z",
+      "duration": "1.2200813"
+    },
+    "passedCases": [
+      "Tide.Tests.T0PlayModeTests.OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation"
+    ],
+    "testSourceSha256BeforeFocusAssertion": "6a01ae1c77fcd0deee512a4129f591652558c91700ec91853b4ae0ad59246bbf",
+    "currentTestSource": {
+      "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs",
+      "bytes": 29730,
+      "sha256": "39fd06d37f17a87a454bc2dd6d0f2141781bedc5a864238f0861d2f364dab465"
+    },
+    "counting": "One previously counted case with an additional focus invariant. Unique passed total remains 157.",
+    "boundary": "InputSystem PlayMode evidence, not native visual-focus or physical-controller evidence. Runtime code and the native build were not changed."
+  }
+}

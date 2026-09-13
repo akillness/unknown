@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -41,7 +41,7 @@ owner: game-systems-designer
 
 ## 2. 상태기계
 
-상태 변수: `currentBeatId`, `revealedLevel[beatId] ∈ {0,1,2,3}`, `idleSeconds`, `offerShown`.
+상태 변수: `currentBeatId`, `revealedLevel[beatId] ∈ {0,1,2,3}`, `idleSeconds`, `offerShown`, `cooldownUntil`. 제안 상태·타이머는 세션 전용이며 기존 `hintLevelUsed` 저장 스키마는 변경하지 않는다.
 
 | 현재 | 이벤트 | 다음 | 부작용 |
 |---|---|---|---|
@@ -50,14 +50,19 @@ owner: game-systems-designer
 | `Level1` | `RevealHint(2)` | `Level2` | 2단 텍스트 |
 | `Level2` | `RevealHint(3)` | `Level3` | **명확한 경고 후** 해답 표시 |
 | `LevelN` | `Close` | `Closed` | 상태 보존 |
-| `Closed` | `idleSeconds ≥ 180` (유효 조작 없음) | `Offered` | 비강제 토스트 "도움 보기" |
-| `Offered` | 유효 조작 발생 | `Closed` | 토스트 자동 소멸, `idleSeconds = 0` |
-| `Offered` | `Dismiss` | `Closed` | 다음 제안까지 180초 쿨다운. **`revealedLevel`은 변하지 않는다** |
+| `Closed` | `idleSeconds ≥ idleHintOfferSeconds` 및 쿨다운 종료 | `Offered` | 비강제 "도움 보기" 제안. 포커스/입력 컨텍스트 변경 없음 |
+| `Offered` | 유효 게임 조작 발생(액션 실행·도구 조정·조회·분리 등) | `Closed` | 제안 소멸, `idleSeconds = 0`, `hintOfferCooldownSeconds` 재제안 대기 |
+| `Offered` | `Dismiss` | `Closed` | 다음 제안까지 `hintOfferCooldownSeconds` 대기. **`revealedLevel`은 변하지 않는다** |
+| `Offered` | 단순 포커스 탐색·포인터 이동/스크롤 | `Offered` | `idleSeconds = 0`; 토스트 자체에 도달할 수 있도록 제안·입력 컨텍스트 유지 |
 | any | `BeatChanged` | `Closed` | 단계는 비트별로 독립 유지 |
 
 **중요**: `idleSeconds`는 *입력 없음*을 세지, *생각 중*을 실패로 세지 않는다. 60초 이상 무입력 구간은 `afk_gap` **후보**로 텔레메트리에 별도 기록되며, 자리비움 여부는 회고로만 판별한다 (`ops/telemetry-contract.md` §5 AF7) — **자동 제외하지 않는다**.
 
 **단계 자동 승격 없음 [RFC-P3-015 (F20)]**: 이 상태기계에는 `Offered → Level1` 전이도, 누적 시간·오확정 횟수로 `revealedLevel`을 올리는 전이도 **없다**. 자동으로 일어나는 일은 `Closed → Offered` 하나뿐이며 그것도 토스트 노출까지다. 1·2·3단은 **플레이어가 `RevealHint`로 순서대로 연다**. 따라서 "T1 180초 / T2 누적 420초 + 오확정 2회 / T3 누적 900초 + 오확정 4회"식의 3단 자동 승격 모델은 이 스펙에 존재하지 않으며, `balance/balance-sheet.md` §6의 해당 표는 폐기됐다(RFC-P3-015). balance가 소유하는 것은 **제안 임계 180초와 쿨다운 180초 두 개의 숫자**이지 승격 규칙이 아니다.
+
+**M22 · RFC-CX-017 구현 계약:** 두 노브는 `data-schemas/tools.md` §4 → `emit-tables.mjs` → `tools.json`에서 각각 읽고 초기화 시 캐시한다. 문서·오버레이·도입 연출·내구 저장 확정 중에는 제안을 숨기고 무입력 시간을 축적하지 않는다. 해당 표면에서 돌아오거나 비트가 바뀌면 새 무입력 구간으로 시작하므로 오래 읽고 돌아왔다고 즉시 제안하지 않는다. 키보드/패드 버튼, 지속 탐색/조정, 포인터 이동·스크롤·클릭 및 실제 UI 액션은 활동이다. 활동 알림과 제안 표시/해제는 화면 전체 재렌더나 `ScreenChanged`를 발생시키지 않는다. 단계는 여전히 사용자가 무료로 열며 타이머가 `hintLevelUsed`를 쓰지 않는다. 이 항목은 구현 계약이며 사람 플레이 측정값이 아니다.
+
+**M22 접근성 보완:** 입력 활동은 중앙 훅에서 무입력 시간을 갱신하되, `Tab`/방향 탐색과 포인터 이동만으로 이미 뜬 제안을 없애지 않는다. 그렇지 않으면 §1-A의 토스트 초점·클릭 경로 자체가 사라진다. 실제 게임 액션은 제안을 소비하고, `도움 보기`는 단계 공개 없이 힌트 패널을 연다. 닫기 버튼의 `Enter`/패드 `A`, 전역 `Esc`/`B`는 제안만 닫고 세션 전용 `HintOfferDismissedCount`를 1 증가시킨다. 숨겨진 버튼은 포커스 순회에서 제거하며 이전 일반 초점으로 복귀한다. 제목·부제목과 제안 버튼은 헤더에서 서로 겹치지 않는 영역을 사용한다. 저장 스키마·외부 텔레메트리 전송은 추가하지 않는다.
 
 ## 3. 규칙
 

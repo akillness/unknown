@@ -166,3 +166,9 @@ PASS / FIX(≤2) / REDO. 열린 S1 결함, 측정 누락, 숫자 자리의 `[TAR
 - 참조 허용 목록과 해시는 `_workspace/current/concept/concept-first-m7-sources.json`이 관리한다. 새 GTI 파생 이미지의 영상 입력 승인은 별도 출처 검토로 연결하며 런타임 승격과 구분한다.
 - 영상은 목표 연출이다. 생성된 손/기계 움직임, 변형된 결정 패턴, 문 개방·저장·해금은 구현/물리 검증 증거가 아니다. 모델 형태와 표면 상세는 원본 및 검토된 GTI 키프레임을 함께 대조해 재구성한다.
 - 신규 텍스처·2D 리소스 생성은 GTI를 사용한다. 기존 런타임 리소스를 입력으로 재생성하지 않는다. 후속 제작 계약은 `_workspace/current/handoff/concept-first-m7-resources.json`을 따른다.
+
+## M23 구현·빌드·Git 후속 승인 (2026-09-13)
+
+- 사용자가 Aside 계획의 구현·서브에이전트 기준 논의·디버깅·빌드·Git push·최종 개선 계획을 명시 요청했다. 이 작업의 검증된 변경은 명시적 pathspec으로 stage/commit/일반 push한다. §10의 기획 요청 당시 사용자 전용 Git 경계는 이번 명시 승인에는 적용하지 않는다.
+- force push, 타인의 변경 되돌림, 유료 생성/구매, Steam 공개·실명/금융 작업은 승인하지 않는다. Base의 실제 사람 검증·생산 착수 조건은 유지한다.
+- 실행 범위와 소유권·인수 기준: `_workspace/current/handoff/m23-core-loop-implementation.md`. 실제 참가자/목표 장치가 없으면 미측정과 외부 차단을 기록하고, 실행 가능한 구현·네이티브 검증·빌드·리뷰는 끝까지 수행한다.

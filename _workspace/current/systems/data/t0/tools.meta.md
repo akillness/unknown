@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-11
+updated: 2026-09-13
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -18,13 +18,13 @@ generated: true
 node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/current/systems/data/t0
 ```
 
-## 2. 이번 출력 [OBSERVED 2026-09-11]
+## 2. 이번 출력 [OBSERVED 2026-09-13]
 
 | 항목 | 값 |
 |---|---|
 | 파생 | `schema-projection` |
-| sha256 | `1cfa4654173b0de4143035a51b36aa487e8ec0d60c399a37344225ef9eb265d9` |
-| 바이트 (`wc -c`) | 10324 |
+| sha256 | `9356ba85a9670e1928e4045d59aa920b3fa9712414fff404c113c6c145113ac7` |
+| 바이트 (`wc -c`) | 10412 |
 | 행 수 | 2 |
 | 검증기 판정 | `verdict PASS · checks 50 · fail 0` (exit 0) |
 
@@ -34,17 +34,17 @@ node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/curren
 
 | 파일 | sha256(앞 12) |
 |---|---|
-| `planning/campaign.json` | `044780ef4349…` |
-| `synopsis/t0-records.md` | `d586adf86cd1…` |
-| `systems/data-schemas/tools.md` | `f7ee4e1b854f…` |
+| `planning/campaign.json` | `baa3ef6d3729…` |
+| `synopsis/t0-records.md` | `3b0f508faab2…` |
+| `systems/data-schemas/tools.md` | `bee25c972a69…` |
 | `systems/data-schemas/zones.md` | `0c166c80b9b5…` |
 | `concept/style-guide.md` | `a70e3dc79292…` |
 | `modeling/specs/hub-watchroom.md` | `d2e08e4e119f…` |
-| `modeling/asset-manifest.md` | `b1e8654f4fcf…` |
+| `modeling/asset-manifest.md` | `5410b0bbcda8…` |
 | `worldview/worldview-bible.md` | `87a9617ec9fe…` |
 | `systems/system-specs/wiring-trace.md` | `60d6f2b15844…` |
 | `systems/system-specs/plate-readout.md` | `55f502a63cbf…` |
-| `systems/interaction-rules.md` | `8e28c2bfe584…` |
+| `systems/interaction-rules.md` | `ae1b28c8e821…` |
 | `planning/t0-circuit-overlay.json` | `2e3ea0a1aead…` |
 
 ## 4. runtime 관측

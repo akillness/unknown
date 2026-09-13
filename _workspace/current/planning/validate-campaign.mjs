@@ -303,8 +303,8 @@ check('C-04', 'originId → copiedFrom 지도 모순 없음', copyConflict.lengt
 check('C-05', 'copiedFrom 계보에 순환 없음', copyCycle.length === 0, 0, copyCycle);
 check('C-06', `모든 비트 매체 종류 ≥ ${EXPECT.minMediaKinds}`, mediaShort.length === 0, 0,
   mediaShort.map((m) => `${m.id}(${m.kinds.join('/')})`));
-check('C-07', 'proofRequired 비트의 독립 쌍 (루트 originId 상이 AND sourceType 상이)',
-  proofFail.length === 0, 0, proofFail.map((b) => b.id), `proofRequired 비트 ${proofBeats.length}건`);
+check('C-07', 'proofRequired 비트의 최소 독립 쌍 (루트 originId 상이 AND sourceType 상이)',
+  proofFail.length === 0, 0, proofFail.map((b) => b.id), `proofRequired 비트 ${proofBeats.length}건; P1 대체 2경로/P2 양쪽 불파괴 증명은 별도 audit-campaign-preservation.mjs`);
 
 // ── 7. 도구 · 학습 이벤트 ─────────────────────────────────────────────
 const toolCounts = EXPECT.toolIds.reduce((o, t) => { o[t] = beats.filter((b) => (b.tools ?? []).includes(t)).length; return o; }, {});
@@ -413,7 +413,7 @@ const zoneRunSeq = beats.reduce((acc, b) => {
 }, []);
 const zoneRuns = EXPECT.zoneIds.reduce((o, z) => { o[z] = zoneRunSeq.filter((r) => r.zone === z).length; return o; }, {});
 
-// ── 11. --pairs (A37 / C3-F12 불파괴 자료쌍 파생) ─────────────────────
+// ── 11. --pairs (A37 / C3-F12 최소 독립 자료쌍 파생; 불파괴 증명 아님) ──
 if (WANT_PAIRS) {
   const clueInfo = (b, cid) => {
     const c = (b.clues ?? []).find((x) => x.id === cid);
@@ -443,7 +443,7 @@ if (WANT_PAIRS) {
     zoneRunSequence: zoneRunSeq.map((r) => `${r.zone}:${r.from}→${r.to}(${r.beats})`),
     beatsWithoutPair: missing,
     pairs,
-    notMeasured: ['쌍의 존재는 문서 정합이며 플레이어가 실제로 그 쌍을 찾아내는지는 미측정(n=0)'],
+    notMeasured: ['비트별 최소쌍 존재는 P1 명제별 대체 2경로 또는 P2 양쪽 불파괴 증명이 아님; audit-campaign-preservation.mjs 참조', '플레이어가 실제로 그 쌍을 찾아내는지는 미측정(n=0)'],
   }, null, 2) + '\n');
   process.exit(missing.length === 0 ? 0 : 1);
 }

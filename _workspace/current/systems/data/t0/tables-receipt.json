@@ -1,14 +1,14 @@
 {
   "emitter": "systems/pipeline/emit-tables.mjs",
   "emitterOwner": "game-systems-designer",
-  "emittedUtc": "2026-09-11T15:43:08.118Z",
+  "emittedUtc": "2026-09-13T13:52:26.560Z",
   "scope": "t0",
   "scopeSource": "--scope",
   "dryRun": false,
   "source": {
     "path": "planning/campaign.json",
-    "sha256": "044780ef4349f86f9618768de34b179187cee740f371bbe5a52fb3a62c3d59ab",
-    "bytes": 124221
+    "sha256": "baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe",
+    "bytes": 123944
   },
   "validator": {
     "path": "planning/validate-campaign.mjs",
@@ -50,22 +50,22 @@
     {
       "file": "beats.json",
       "derivation": "subset+predicate",
-      "sha256": "d2d1af05c99f60ae6b1263e24fd6532df679a5c1a9cf3c118cca1af01b5cd74d",
-      "bytes": 16490,
+      "sha256": "356eeceee93f3ae997ff55a7ebd94e3f553d0f0aa0cfd36b91b96ff62e025fe9",
+      "bytes": 16213,
       "rows": 3
     },
     {
       "file": "hints.json",
       "derivation": "projection",
-      "sha256": "d35ada6fd327f85ddd106eff3f2285f99f85b8222eebdd4bab67597507bedcba",
-      "bytes": 4032,
+      "sha256": "168146a8cbd1f5e636dbc6e4b693098a90b1ac3a9ced1cd95d10a4bf7ce9a7c7",
+      "bytes": 4054,
       "rows": 9
     },
     {
       "file": "tools.json",
       "derivation": "schema-projection",
-      "sha256": "1cfa4654173b0de4143035a51b36aa487e8ec0d60c399a37344225ef9eb265d9",
-      "bytes": 10324,
+      "sha256": "9356ba85a9670e1928e4045d59aa920b3fa9712414fff404c113c6c145113ac7",
+      "bytes": 10412,
       "rows": 2
     },
     {
@@ -78,7 +78,7 @@
     {
       "file": "records.json",
       "derivation": "markdown-parse+rule",
-      "sha256": "2bb67911e6e4e2720c75dd456058f34c2072a63a4b64780e1fbc28b0c7a63683",
+      "sha256": "f5263d036f14bdb2b687aa68ccfa837a9dd6750ea21a9ac7388bb3632f83e9b6",
       "bytes": 70694,
       "rows": 5
     }
@@ -111,11 +111,11 @@
   "authoringSources": {
     "records": {
       "path": "synopsis/t0-records.md",
-      "sha256": "d586adf86cd15db26b6f283ef595390f750d2f10b6ccbd097d30fb6dfc7f0419"
+      "sha256": "3b0f508faab26568ed05e53043b7ae27d94ecaaf445baaa31963452db5b0ea2b"
     },
     "toolsSchema": {
       "path": "systems/data-schemas/tools.md",
-      "sha256": "f7ee4e1b854f8a8708c3879dc4489730fe18064484f49e8ec1cee45200fa6c2e"
+      "sha256": "bee25c972a69c9b02dbc144fa1244ab0a05cd16325b1c18b2d3d6d84a31f2d23"
     },
     "zonesSchema": {
       "path": "systems/data-schemas/zones.md",
@@ -131,7 +131,7 @@
     },
     "manifest": {
       "path": "modeling/asset-manifest.md",
-      "sha256": "b1e8654f4fcf80daae05eb2b9a2f60828325adaba55b94136f370fe3db87987f"
+      "sha256": "5410b0bbcda86d96c3de5f09c113da5639b92194e6e5d29292e7e12eaa614d88"
     },
     "bible": {
       "path": "worldview/worldview-bible.md",
@@ -147,7 +147,7 @@
     },
     "interaction": {
       "path": "systems/interaction-rules.md",
-      "sha256": "8e28c2bfe58448abce6401e8d982834750930fecaa93ed53bc44105183f4fdff"
+      "sha256": "ae1b28c8e821c354355684c2ad383d883f0b4245505eb1ecd4acc801c29da6b9"
     },
     "circuitOverlay": {
       "path": "planning/t0-circuit-overlay.json",

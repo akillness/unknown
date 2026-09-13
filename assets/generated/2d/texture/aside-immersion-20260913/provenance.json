@@ -1,0 +1,58 @@
+{
+  "schema": "provenance/v1",
+  "assets": [
+    {
+      "id": "nav-quiet-field-r01",
+      "file": "nav-quiet-field-candidate.png",
+      "category": "texture",
+      "tool": "god-tibo-imagen(gti)",
+      "toolVersion": "0.3.0",
+      "provider": "private-codex",
+      "backend": "codex private backend (chatgpt.com)",
+      "modelRequested": "gpt-6-astra",
+      "modelActual": null,
+      "modelActualNote": "CLI returned no independently verifiable model identity",
+      "requested_size": "1024x1536",
+      "actual_size": "1024x1536",
+      "bytes": 1988820,
+      "output_sha256": "73c15977e6b88e74ddb19612e871be627ec91ab97872037c16ab08760c96fd85",
+      "prompt_file": "nav-quiet-field.prompt.txt",
+      "prompt_sha256": "8374b3ea5f7f907695d9478699d10823d0e8ec0f61bb61f9d0198263c981a2c7",
+      "referenceImages": [],
+      "textAuthorities": [
+        "_workspace/current/concept/style-guide.md",
+        "_workspace/current/presentation/aside-immersion-20260913/decision-and-implementation.md"
+      ],
+      "responseId": "resp_0a390682e8a16db8016aa64bfaf93487d0bfc08daa2bb8185a",
+      "providerSessionId": "33c7986f-1584-429a-ab67-1123cbc288e4",
+      "httpStatus": 200,
+      "actualRevisedPrompt": "Generate an original flat 2D material texture, portrait aspect ratio 2:3, full bleed, non-tiling. One uniform continuous front-facing surface of extremely dark matte blue-green enamel over old metal, deep ink color #0E1F26. NOT a scene, not a photograph of an object, no mockup. Central 84 percent is visually quiet and almost perfectly solid #0E1F26, with only extremely low-contrast fine natural grain. Maintain uniform darkness and flatness throughout this reading area: no highlights, shadows, gradients, stains or features inside it. Subtle restrained tactile patina only. Very small sparse irregular rubbed dark bronze and muted verdigris #4F7A6B areas exclusively inside the outermost 5 percent edge margin; these are understated partial edge wear, NOT a continuous frame or outline. Almost no warm color. A few tiny matte off-white salt crystals confined to two outer corners only, asymmetrically placed. Flat orthographic material field with no perspective, no visible lighting direction, no cast shadow, no artificial blur. A grounded coastal archival navigation-panel enamel material intended as a readable background behind separately rendered Korean text, but render absolutely NO text here. Static restrained original surface, no encoded meaning or puzzle. No enclosing decorative frame, no button-like symmetry. NEGATIVE: text, letters, numbers, symbols, glyphs, logo, watermark, labels, handwriting-like marks, grid, diagram, clues, paper, documents, clock, gauge, HUD, icons, buttons, nested panels, glowing outline, pulsation, animation, glass, room, objects, people, ghosts, weapons, red warning, neon, bloom, lens flare, glossy CGI, copied game art. The image itself is solely the uninterrupted dark material surface.",
+      "generatedFileMtime": "2026-09-13T07:09:18.683Z",
+      "cliGenerationRequests": 1,
+      "internalImageGenerationCalls": null,
+      "cost": {
+        "credits": null,
+        "currency": null,
+        "amount": null,
+        "note": "Not exposed by CLI response; not asserted free"
+      },
+      "license": "UNVERIFIED (generated; commercial use rights not established)",
+      "runtimeEligible": false,
+      "commercialReleaseEligible": false,
+      "promoted_by": null,
+      "review": {
+        "status": "visual-candidate-reviewed",
+        "reviewer": "Aside parent visual inspection",
+        "note": "Parent visually inspected: static continuous dark field, restrained outer patina, no visible text or clue. Pixel and in-engine legibility checks remain separate.",
+        "usageRestrictions": [
+          "No default runtime use; original license/application choice remains unresolved",
+          "Only paper #E7E3D8 text inside central84% passed source-pixel contrast check",
+          "Muted #A4AAA5 text fails worst-case4.5:1 source check without a tested opaque backing",
+          "Clamp; do not tile; no animation; texture encodes no gameplay state"
+        ]
+      },
+      "claim": "Generated candidate, not gameplay. No default runtime integration.",
+      "sourcePixelMetrics": "_workspace/current/systems/tech-verification/aside-immersion-20260913/source-image-metrics.json"
+    }
+  ]
+}

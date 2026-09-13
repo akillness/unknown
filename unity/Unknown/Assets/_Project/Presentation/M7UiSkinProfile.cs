@@ -14,7 +14,7 @@ namespace Tide.Presentation {
         public Color header=new Color(14/255f,31/255f,38/255f,.94f);
         public Color navigation=new Color(23/255f,50/255f,56/255f,.92f);
         public Color toolbar=new Color(14/255f,31/255f,38/255f,.96f);
-        public Color workSurfaceTint=new Color(1,1,1,.97f);
+        public Color workSurfaceTint=new Color(1,1,1,.3f);
         public Color buttonHighlight=new Color(226/255f,175/255f,98/255f);
         // RFC-CX-016: the committed status literal (.38,.18,.07) was authored against dark panels. With the skin on, the
         // status line lands on the rag-paper Work Surface, where measured glyph-scale contrast against the darkest paper

@@ -24,14 +24,15 @@ MonoBehaviour:
     {\n      \"value\": \"lowland 7 \xB7 dock 8 \xB7 dock-express 12\",\n      \"owner\":
     \"economy\"\n    },\n    \"systemLimits[*]\": {\n      \"value\": \"null\",\n     
     \"owner\": \"economy\"\n    },\n    \"idleHintOfferSeconds\": {\n      \"value\":
-    \"180\",\n      \"owner\": \"balance\"\n    },\n    \"hintCost\": {\n      \"value\":
-    \"0\",\n      \"owner\": \"economy\"\n    }\n  },\n  \"invariantsChecked\": {\n   
-    \"T-I1\": \"toolId \uC911\uBCF5 0 \xB7 6\uC885 \uB4F1\uB85D(\uAD6C\uD604 2 +
-    \uC2A4\uD141 4)\",\n    \"T-I3\": \"PASS\",\n    \"T-I4\": \"PASS\",\n    \"T-I7\":
-    \"PASS\"\n  },\n  \"notMeasured\": [\n    \"\uB3C4\uAD6C \uC804\uD658 \uC2DC\uAC04
-    \xB7 \uD328\uB110 \uC5F4\uAE30 \uC9C0\uC5F0 \xB7 \uC870\uC791\uAC10 n=0 (tools.md
-    \xA76)\"\n  ],\n  \"rows\": [\n    {\n      \"toolId\": \"circuit\",\n      \"lawId\":
-    1,\n      \"displayNameKey\": \"tool.circuit.name\",\n      \"panelPrefab\":
+    \"180\",\n      \"owner\": \"balance\"\n    },\n    \"hintOfferCooldownSeconds\":
+    {\n      \"value\": \"180\",\n      \"owner\": \"balance\"\n    },\n    \"hintCost\":
+    {\n      \"value\": \"0\",\n      \"owner\": \"economy\"\n    }\n  },\n  \"invariantsChecked\":
+    {\n    \"T-I1\": \"toolId \uC911\uBCF5 0 \xB7 6\uC885 \uB4F1\uB85D(\uAD6C\uD604
+    2 + \uC2A4\uD141 4)\",\n    \"T-I3\": \"PASS\",\n    \"T-I4\": \"PASS\",\n   
+    \"T-I7\": \"PASS\"\n  },\n  \"notMeasured\": [\n    \"\uB3C4\uAD6C \uC804\uD658
+    \uC2DC\uAC04 \xB7 \uD328\uB110 \uC5F4\uAE30 \uC9C0\uC5F0 \xB7 \uC870\uC791\uAC10
+    n=0 (tools.md \xA76)\"\n  ],\n  \"rows\": [\n    {\n      \"toolId\": \"circuit\",\n     
+    \"lawId\": 1,\n      \"displayNameKey\": \"tool.circuit.name\",\n      \"panelPrefab\":
     \"ToolPanel_Circuit\",\n      \"hasCommit\": false,\n      \"requiresPreview\":
     false,\n      \"commitHoldSeconds\": 0.4,\n      \"introBeatId\": \"t0-b2\",\n     
     \"unguidedBeatId\": \"c6-b2\",\n      \"undoable\": true,\n      \"consumesBudget\":

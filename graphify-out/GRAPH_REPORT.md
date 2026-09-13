@@ -1,16 +1,16 @@
-# Graph Report - unknown  (2026-09-12)
+# Graph Report - unknown  (2026-09-14)
 
 ## Corpus Check
-- 1637 files · ~16,382,222 words
+- 2226 files · ~28,454,185 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 27069 nodes · 27937 edges · 2981 communities (2371 shown, 610 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 124 edges (avg confidence: 0.8)
+- 39063 nodes · 43237 edges · 4143 communities (3183 shown, 960 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 361 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0ed2d2a4`
+- Built from commit: `b2ae1fb8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -2843,6 +2843,1165 @@
 - [[_COMMUNITY_Community 2978|Community 2978]]
 - [[_COMMUNITY_Community 2979|Community 2979]]
 - [[_COMMUNITY_Community 2980|Community 2980]]
+- [[_COMMUNITY_Community 2981|Community 2981]]
+- [[_COMMUNITY_Community 2982|Community 2982]]
+- [[_COMMUNITY_Community 2983|Community 2983]]
+- [[_COMMUNITY_Community 2984|Community 2984]]
+- [[_COMMUNITY_Community 2985|Community 2985]]
+- [[_COMMUNITY_Community 2986|Community 2986]]
+- [[_COMMUNITY_Community 2987|Community 2987]]
+- [[_COMMUNITY_Community 2988|Community 2988]]
+- [[_COMMUNITY_Community 2989|Community 2989]]
+- [[_COMMUNITY_Community 2990|Community 2990]]
+- [[_COMMUNITY_Community 2991|Community 2991]]
+- [[_COMMUNITY_Community 2992|Community 2992]]
+- [[_COMMUNITY_Community 2993|Community 2993]]
+- [[_COMMUNITY_Community 2994|Community 2994]]
+- [[_COMMUNITY_Community 2995|Community 2995]]
+- [[_COMMUNITY_Community 2996|Community 2996]]
+- [[_COMMUNITY_Community 2997|Community 2997]]
+- [[_COMMUNITY_Community 2998|Community 2998]]
+- [[_COMMUNITY_Community 2999|Community 2999]]
+- [[_COMMUNITY_Community 3000|Community 3000]]
+- [[_COMMUNITY_Community 3001|Community 3001]]
+- [[_COMMUNITY_Community 3002|Community 3002]]
+- [[_COMMUNITY_Community 3003|Community 3003]]
+- [[_COMMUNITY_Community 3004|Community 3004]]
+- [[_COMMUNITY_Community 3005|Community 3005]]
+- [[_COMMUNITY_Community 3006|Community 3006]]
+- [[_COMMUNITY_Community 3007|Community 3007]]
+- [[_COMMUNITY_Community 3008|Community 3008]]
+- [[_COMMUNITY_Community 3009|Community 3009]]
+- [[_COMMUNITY_Community 3010|Community 3010]]
+- [[_COMMUNITY_Community 3011|Community 3011]]
+- [[_COMMUNITY_Community 3012|Community 3012]]
+- [[_COMMUNITY_Community 3013|Community 3013]]
+- [[_COMMUNITY_Community 3014|Community 3014]]
+- [[_COMMUNITY_Community 3015|Community 3015]]
+- [[_COMMUNITY_Community 3016|Community 3016]]
+- [[_COMMUNITY_Community 3017|Community 3017]]
+- [[_COMMUNITY_Community 3018|Community 3018]]
+- [[_COMMUNITY_Community 3019|Community 3019]]
+- [[_COMMUNITY_Community 3020|Community 3020]]
+- [[_COMMUNITY_Community 3021|Community 3021]]
+- [[_COMMUNITY_Community 3022|Community 3022]]
+- [[_COMMUNITY_Community 3023|Community 3023]]
+- [[_COMMUNITY_Community 3024|Community 3024]]
+- [[_COMMUNITY_Community 3025|Community 3025]]
+- [[_COMMUNITY_Community 3026|Community 3026]]
+- [[_COMMUNITY_Community 3027|Community 3027]]
+- [[_COMMUNITY_Community 3028|Community 3028]]
+- [[_COMMUNITY_Community 3029|Community 3029]]
+- [[_COMMUNITY_Community 3030|Community 3030]]
+- [[_COMMUNITY_Community 3031|Community 3031]]
+- [[_COMMUNITY_Community 3032|Community 3032]]
+- [[_COMMUNITY_Community 3033|Community 3033]]
+- [[_COMMUNITY_Community 3034|Community 3034]]
+- [[_COMMUNITY_Community 3035|Community 3035]]
+- [[_COMMUNITY_Community 3036|Community 3036]]
+- [[_COMMUNITY_Community 3037|Community 3037]]
+- [[_COMMUNITY_Community 3038|Community 3038]]
+- [[_COMMUNITY_Community 3039|Community 3039]]
+- [[_COMMUNITY_Community 3040|Community 3040]]
+- [[_COMMUNITY_Community 3041|Community 3041]]
+- [[_COMMUNITY_Community 3042|Community 3042]]
+- [[_COMMUNITY_Community 3043|Community 3043]]
+- [[_COMMUNITY_Community 3044|Community 3044]]
+- [[_COMMUNITY_Community 3045|Community 3045]]
+- [[_COMMUNITY_Community 3046|Community 3046]]
+- [[_COMMUNITY_Community 3047|Community 3047]]
+- [[_COMMUNITY_Community 3048|Community 3048]]
+- [[_COMMUNITY_Community 3049|Community 3049]]
+- [[_COMMUNITY_Community 3050|Community 3050]]
+- [[_COMMUNITY_Community 3051|Community 3051]]
+- [[_COMMUNITY_Community 3052|Community 3052]]
+- [[_COMMUNITY_Community 3053|Community 3053]]
+- [[_COMMUNITY_Community 3054|Community 3054]]
+- [[_COMMUNITY_Community 3055|Community 3055]]
+- [[_COMMUNITY_Community 3056|Community 3056]]
+- [[_COMMUNITY_Community 3057|Community 3057]]
+- [[_COMMUNITY_Community 3058|Community 3058]]
+- [[_COMMUNITY_Community 3059|Community 3059]]
+- [[_COMMUNITY_Community 3060|Community 3060]]
+- [[_COMMUNITY_Community 3061|Community 3061]]
+- [[_COMMUNITY_Community 3062|Community 3062]]
+- [[_COMMUNITY_Community 3063|Community 3063]]
+- [[_COMMUNITY_Community 3064|Community 3064]]
+- [[_COMMUNITY_Community 3065|Community 3065]]
+- [[_COMMUNITY_Community 3066|Community 3066]]
+- [[_COMMUNITY_Community 3067|Community 3067]]
+- [[_COMMUNITY_Community 3068|Community 3068]]
+- [[_COMMUNITY_Community 3069|Community 3069]]
+- [[_COMMUNITY_Community 3070|Community 3070]]
+- [[_COMMUNITY_Community 3071|Community 3071]]
+- [[_COMMUNITY_Community 3072|Community 3072]]
+- [[_COMMUNITY_Community 3073|Community 3073]]
+- [[_COMMUNITY_Community 3074|Community 3074]]
+- [[_COMMUNITY_Community 3075|Community 3075]]
+- [[_COMMUNITY_Community 3076|Community 3076]]
+- [[_COMMUNITY_Community 3077|Community 3077]]
+- [[_COMMUNITY_Community 3078|Community 3078]]
+- [[_COMMUNITY_Community 3079|Community 3079]]
+- [[_COMMUNITY_Community 3080|Community 3080]]
+- [[_COMMUNITY_Community 3081|Community 3081]]
+- [[_COMMUNITY_Community 3082|Community 3082]]
+- [[_COMMUNITY_Community 3083|Community 3083]]
+- [[_COMMUNITY_Community 3084|Community 3084]]
+- [[_COMMUNITY_Community 3085|Community 3085]]
+- [[_COMMUNITY_Community 3086|Community 3086]]
+- [[_COMMUNITY_Community 3087|Community 3087]]
+- [[_COMMUNITY_Community 3088|Community 3088]]
+- [[_COMMUNITY_Community 3089|Community 3089]]
+- [[_COMMUNITY_Community 3090|Community 3090]]
+- [[_COMMUNITY_Community 3091|Community 3091]]
+- [[_COMMUNITY_Community 3092|Community 3092]]
+- [[_COMMUNITY_Community 3093|Community 3093]]
+- [[_COMMUNITY_Community 3094|Community 3094]]
+- [[_COMMUNITY_Community 3095|Community 3095]]
+- [[_COMMUNITY_Community 3096|Community 3096]]
+- [[_COMMUNITY_Community 3097|Community 3097]]
+- [[_COMMUNITY_Community 3098|Community 3098]]
+- [[_COMMUNITY_Community 3099|Community 3099]]
+- [[_COMMUNITY_Community 3100|Community 3100]]
+- [[_COMMUNITY_Community 3101|Community 3101]]
+- [[_COMMUNITY_Community 3102|Community 3102]]
+- [[_COMMUNITY_Community 3103|Community 3103]]
+- [[_COMMUNITY_Community 3104|Community 3104]]
+- [[_COMMUNITY_Community 3105|Community 3105]]
+- [[_COMMUNITY_Community 3106|Community 3106]]
+- [[_COMMUNITY_Community 3107|Community 3107]]
+- [[_COMMUNITY_Community 3108|Community 3108]]
+- [[_COMMUNITY_Community 3109|Community 3109]]
+- [[_COMMUNITY_Community 3110|Community 3110]]
+- [[_COMMUNITY_Community 3111|Community 3111]]
+- [[_COMMUNITY_Community 3112|Community 3112]]
+- [[_COMMUNITY_Community 3113|Community 3113]]
+- [[_COMMUNITY_Community 3114|Community 3114]]
+- [[_COMMUNITY_Community 3115|Community 3115]]
+- [[_COMMUNITY_Community 3116|Community 3116]]
+- [[_COMMUNITY_Community 3117|Community 3117]]
+- [[_COMMUNITY_Community 3118|Community 3118]]
+- [[_COMMUNITY_Community 3119|Community 3119]]
+- [[_COMMUNITY_Community 3120|Community 3120]]
+- [[_COMMUNITY_Community 3121|Community 3121]]
+- [[_COMMUNITY_Community 3122|Community 3122]]
+- [[_COMMUNITY_Community 3123|Community 3123]]
+- [[_COMMUNITY_Community 3124|Community 3124]]
+- [[_COMMUNITY_Community 3125|Community 3125]]
+- [[_COMMUNITY_Community 3126|Community 3126]]
+- [[_COMMUNITY_Community 3127|Community 3127]]
+- [[_COMMUNITY_Community 3128|Community 3128]]
+- [[_COMMUNITY_Community 3129|Community 3129]]
+- [[_COMMUNITY_Community 3130|Community 3130]]
+- [[_COMMUNITY_Community 3131|Community 3131]]
+- [[_COMMUNITY_Community 3132|Community 3132]]
+- [[_COMMUNITY_Community 3133|Community 3133]]
+- [[_COMMUNITY_Community 3134|Community 3134]]
+- [[_COMMUNITY_Community 3135|Community 3135]]
+- [[_COMMUNITY_Community 3136|Community 3136]]
+- [[_COMMUNITY_Community 3137|Community 3137]]
+- [[_COMMUNITY_Community 3138|Community 3138]]
+- [[_COMMUNITY_Community 3139|Community 3139]]
+- [[_COMMUNITY_Community 3140|Community 3140]]
+- [[_COMMUNITY_Community 3141|Community 3141]]
+- [[_COMMUNITY_Community 3142|Community 3142]]
+- [[_COMMUNITY_Community 3143|Community 3143]]
+- [[_COMMUNITY_Community 3144|Community 3144]]
+- [[_COMMUNITY_Community 3145|Community 3145]]
+- [[_COMMUNITY_Community 3146|Community 3146]]
+- [[_COMMUNITY_Community 3147|Community 3147]]
+- [[_COMMUNITY_Community 3148|Community 3148]]
+- [[_COMMUNITY_Community 3149|Community 3149]]
+- [[_COMMUNITY_Community 3150|Community 3150]]
+- [[_COMMUNITY_Community 3151|Community 3151]]
+- [[_COMMUNITY_Community 3152|Community 3152]]
+- [[_COMMUNITY_Community 3153|Community 3153]]
+- [[_COMMUNITY_Community 3154|Community 3154]]
+- [[_COMMUNITY_Community 3155|Community 3155]]
+- [[_COMMUNITY_Community 3156|Community 3156]]
+- [[_COMMUNITY_Community 3157|Community 3157]]
+- [[_COMMUNITY_Community 3158|Community 3158]]
+- [[_COMMUNITY_Community 3159|Community 3159]]
+- [[_COMMUNITY_Community 3160|Community 3160]]
+- [[_COMMUNITY_Community 3161|Community 3161]]
+- [[_COMMUNITY_Community 3162|Community 3162]]
+- [[_COMMUNITY_Community 3163|Community 3163]]
+- [[_COMMUNITY_Community 3164|Community 3164]]
+- [[_COMMUNITY_Community 3165|Community 3165]]
+- [[_COMMUNITY_Community 3166|Community 3166]]
+- [[_COMMUNITY_Community 3167|Community 3167]]
+- [[_COMMUNITY_Community 3168|Community 3168]]
+- [[_COMMUNITY_Community 3169|Community 3169]]
+- [[_COMMUNITY_Community 3170|Community 3170]]
+- [[_COMMUNITY_Community 3171|Community 3171]]
+- [[_COMMUNITY_Community 3172|Community 3172]]
+- [[_COMMUNITY_Community 3173|Community 3173]]
+- [[_COMMUNITY_Community 3174|Community 3174]]
+- [[_COMMUNITY_Community 3175|Community 3175]]
+- [[_COMMUNITY_Community 3176|Community 3176]]
+- [[_COMMUNITY_Community 3177|Community 3177]]
+- [[_COMMUNITY_Community 3178|Community 3178]]
+- [[_COMMUNITY_Community 3179|Community 3179]]
+- [[_COMMUNITY_Community 3180|Community 3180]]
+- [[_COMMUNITY_Community 3181|Community 3181]]
+- [[_COMMUNITY_Community 3182|Community 3182]]
+- [[_COMMUNITY_Community 3183|Community 3183]]
+- [[_COMMUNITY_Community 3184|Community 3184]]
+- [[_COMMUNITY_Community 3185|Community 3185]]
+- [[_COMMUNITY_Community 3186|Community 3186]]
+- [[_COMMUNITY_Community 3187|Community 3187]]
+- [[_COMMUNITY_Community 3188|Community 3188]]
+- [[_COMMUNITY_Community 3189|Community 3189]]
+- [[_COMMUNITY_Community 3190|Community 3190]]
+- [[_COMMUNITY_Community 3191|Community 3191]]
+- [[_COMMUNITY_Community 3192|Community 3192]]
+- [[_COMMUNITY_Community 3193|Community 3193]]
+- [[_COMMUNITY_Community 3194|Community 3194]]
+- [[_COMMUNITY_Community 3195|Community 3195]]
+- [[_COMMUNITY_Community 3196|Community 3196]]
+- [[_COMMUNITY_Community 3197|Community 3197]]
+- [[_COMMUNITY_Community 3198|Community 3198]]
+- [[_COMMUNITY_Community 3199|Community 3199]]
+- [[_COMMUNITY_Community 3200|Community 3200]]
+- [[_COMMUNITY_Community 3201|Community 3201]]
+- [[_COMMUNITY_Community 3202|Community 3202]]
+- [[_COMMUNITY_Community 3203|Community 3203]]
+- [[_COMMUNITY_Community 3204|Community 3204]]
+- [[_COMMUNITY_Community 3205|Community 3205]]
+- [[_COMMUNITY_Community 3206|Community 3206]]
+- [[_COMMUNITY_Community 3207|Community 3207]]
+- [[_COMMUNITY_Community 3208|Community 3208]]
+- [[_COMMUNITY_Community 3209|Community 3209]]
+- [[_COMMUNITY_Community 3210|Community 3210]]
+- [[_COMMUNITY_Community 3211|Community 3211]]
+- [[_COMMUNITY_Community 3212|Community 3212]]
+- [[_COMMUNITY_Community 3213|Community 3213]]
+- [[_COMMUNITY_Community 3214|Community 3214]]
+- [[_COMMUNITY_Community 3215|Community 3215]]
+- [[_COMMUNITY_Community 3216|Community 3216]]
+- [[_COMMUNITY_Community 3217|Community 3217]]
+- [[_COMMUNITY_Community 3218|Community 3218]]
+- [[_COMMUNITY_Community 3219|Community 3219]]
+- [[_COMMUNITY_Community 3220|Community 3220]]
+- [[_COMMUNITY_Community 3221|Community 3221]]
+- [[_COMMUNITY_Community 3222|Community 3222]]
+- [[_COMMUNITY_Community 3223|Community 3223]]
+- [[_COMMUNITY_Community 3224|Community 3224]]
+- [[_COMMUNITY_Community 3225|Community 3225]]
+- [[_COMMUNITY_Community 3226|Community 3226]]
+- [[_COMMUNITY_Community 3227|Community 3227]]
+- [[_COMMUNITY_Community 3228|Community 3228]]
+- [[_COMMUNITY_Community 3229|Community 3229]]
+- [[_COMMUNITY_Community 3230|Community 3230]]
+- [[_COMMUNITY_Community 3231|Community 3231]]
+- [[_COMMUNITY_Community 3232|Community 3232]]
+- [[_COMMUNITY_Community 3233|Community 3233]]
+- [[_COMMUNITY_Community 3234|Community 3234]]
+- [[_COMMUNITY_Community 3235|Community 3235]]
+- [[_COMMUNITY_Community 3236|Community 3236]]
+- [[_COMMUNITY_Community 3237|Community 3237]]
+- [[_COMMUNITY_Community 3238|Community 3238]]
+- [[_COMMUNITY_Community 3239|Community 3239]]
+- [[_COMMUNITY_Community 3240|Community 3240]]
+- [[_COMMUNITY_Community 3241|Community 3241]]
+- [[_COMMUNITY_Community 3242|Community 3242]]
+- [[_COMMUNITY_Community 3243|Community 3243]]
+- [[_COMMUNITY_Community 3244|Community 3244]]
+- [[_COMMUNITY_Community 3245|Community 3245]]
+- [[_COMMUNITY_Community 3246|Community 3246]]
+- [[_COMMUNITY_Community 3247|Community 3247]]
+- [[_COMMUNITY_Community 3248|Community 3248]]
+- [[_COMMUNITY_Community 3249|Community 3249]]
+- [[_COMMUNITY_Community 3250|Community 3250]]
+- [[_COMMUNITY_Community 3251|Community 3251]]
+- [[_COMMUNITY_Community 3252|Community 3252]]
+- [[_COMMUNITY_Community 3253|Community 3253]]
+- [[_COMMUNITY_Community 3254|Community 3254]]
+- [[_COMMUNITY_Community 3255|Community 3255]]
+- [[_COMMUNITY_Community 3256|Community 3256]]
+- [[_COMMUNITY_Community 3257|Community 3257]]
+- [[_COMMUNITY_Community 3258|Community 3258]]
+- [[_COMMUNITY_Community 3259|Community 3259]]
+- [[_COMMUNITY_Community 3260|Community 3260]]
+- [[_COMMUNITY_Community 3261|Community 3261]]
+- [[_COMMUNITY_Community 3262|Community 3262]]
+- [[_COMMUNITY_Community 3263|Community 3263]]
+- [[_COMMUNITY_Community 3264|Community 3264]]
+- [[_COMMUNITY_Community 3265|Community 3265]]
+- [[_COMMUNITY_Community 3266|Community 3266]]
+- [[_COMMUNITY_Community 3267|Community 3267]]
+- [[_COMMUNITY_Community 3268|Community 3268]]
+- [[_COMMUNITY_Community 3269|Community 3269]]
+- [[_COMMUNITY_Community 3270|Community 3270]]
+- [[_COMMUNITY_Community 3271|Community 3271]]
+- [[_COMMUNITY_Community 3272|Community 3272]]
+- [[_COMMUNITY_Community 3273|Community 3273]]
+- [[_COMMUNITY_Community 3274|Community 3274]]
+- [[_COMMUNITY_Community 3275|Community 3275]]
+- [[_COMMUNITY_Community 3276|Community 3276]]
+- [[_COMMUNITY_Community 3277|Community 3277]]
+- [[_COMMUNITY_Community 3278|Community 3278]]
+- [[_COMMUNITY_Community 3279|Community 3279]]
+- [[_COMMUNITY_Community 3280|Community 3280]]
+- [[_COMMUNITY_Community 3281|Community 3281]]
+- [[_COMMUNITY_Community 3282|Community 3282]]
+- [[_COMMUNITY_Community 3283|Community 3283]]
+- [[_COMMUNITY_Community 3284|Community 3284]]
+- [[_COMMUNITY_Community 3285|Community 3285]]
+- [[_COMMUNITY_Community 3286|Community 3286]]
+- [[_COMMUNITY_Community 3287|Community 3287]]
+- [[_COMMUNITY_Community 3288|Community 3288]]
+- [[_COMMUNITY_Community 3289|Community 3289]]
+- [[_COMMUNITY_Community 3290|Community 3290]]
+- [[_COMMUNITY_Community 3291|Community 3291]]
+- [[_COMMUNITY_Community 3292|Community 3292]]
+- [[_COMMUNITY_Community 3293|Community 3293]]
+- [[_COMMUNITY_Community 3294|Community 3294]]
+- [[_COMMUNITY_Community 3295|Community 3295]]
+- [[_COMMUNITY_Community 3296|Community 3296]]
+- [[_COMMUNITY_Community 3297|Community 3297]]
+- [[_COMMUNITY_Community 3298|Community 3298]]
+- [[_COMMUNITY_Community 3299|Community 3299]]
+- [[_COMMUNITY_Community 3300|Community 3300]]
+- [[_COMMUNITY_Community 3301|Community 3301]]
+- [[_COMMUNITY_Community 3302|Community 3302]]
+- [[_COMMUNITY_Community 3303|Community 3303]]
+- [[_COMMUNITY_Community 3304|Community 3304]]
+- [[_COMMUNITY_Community 3305|Community 3305]]
+- [[_COMMUNITY_Community 3306|Community 3306]]
+- [[_COMMUNITY_Community 3307|Community 3307]]
+- [[_COMMUNITY_Community 3308|Community 3308]]
+- [[_COMMUNITY_Community 3309|Community 3309]]
+- [[_COMMUNITY_Community 3310|Community 3310]]
+- [[_COMMUNITY_Community 3311|Community 3311]]
+- [[_COMMUNITY_Community 3312|Community 3312]]
+- [[_COMMUNITY_Community 3313|Community 3313]]
+- [[_COMMUNITY_Community 3314|Community 3314]]
+- [[_COMMUNITY_Community 3315|Community 3315]]
+- [[_COMMUNITY_Community 3316|Community 3316]]
+- [[_COMMUNITY_Community 3317|Community 3317]]
+- [[_COMMUNITY_Community 3318|Community 3318]]
+- [[_COMMUNITY_Community 3319|Community 3319]]
+- [[_COMMUNITY_Community 3320|Community 3320]]
+- [[_COMMUNITY_Community 3321|Community 3321]]
+- [[_COMMUNITY_Community 3322|Community 3322]]
+- [[_COMMUNITY_Community 3323|Community 3323]]
+- [[_COMMUNITY_Community 3324|Community 3324]]
+- [[_COMMUNITY_Community 3325|Community 3325]]
+- [[_COMMUNITY_Community 3326|Community 3326]]
+- [[_COMMUNITY_Community 3327|Community 3327]]
+- [[_COMMUNITY_Community 3328|Community 3328]]
+- [[_COMMUNITY_Community 3329|Community 3329]]
+- [[_COMMUNITY_Community 3330|Community 3330]]
+- [[_COMMUNITY_Community 3331|Community 3331]]
+- [[_COMMUNITY_Community 3332|Community 3332]]
+- [[_COMMUNITY_Community 3333|Community 3333]]
+- [[_COMMUNITY_Community 3334|Community 3334]]
+- [[_COMMUNITY_Community 3335|Community 3335]]
+- [[_COMMUNITY_Community 3336|Community 3336]]
+- [[_COMMUNITY_Community 3337|Community 3337]]
+- [[_COMMUNITY_Community 3338|Community 3338]]
+- [[_COMMUNITY_Community 3339|Community 3339]]
+- [[_COMMUNITY_Community 3340|Community 3340]]
+- [[_COMMUNITY_Community 3341|Community 3341]]
+- [[_COMMUNITY_Community 3342|Community 3342]]
+- [[_COMMUNITY_Community 3343|Community 3343]]
+- [[_COMMUNITY_Community 3344|Community 3344]]
+- [[_COMMUNITY_Community 3345|Community 3345]]
+- [[_COMMUNITY_Community 3346|Community 3346]]
+- [[_COMMUNITY_Community 3347|Community 3347]]
+- [[_COMMUNITY_Community 3348|Community 3348]]
+- [[_COMMUNITY_Community 3349|Community 3349]]
+- [[_COMMUNITY_Community 3350|Community 3350]]
+- [[_COMMUNITY_Community 3351|Community 3351]]
+- [[_COMMUNITY_Community 3352|Community 3352]]
+- [[_COMMUNITY_Community 3353|Community 3353]]
+- [[_COMMUNITY_Community 3354|Community 3354]]
+- [[_COMMUNITY_Community 3355|Community 3355]]
+- [[_COMMUNITY_Community 3356|Community 3356]]
+- [[_COMMUNITY_Community 3357|Community 3357]]
+- [[_COMMUNITY_Community 3358|Community 3358]]
+- [[_COMMUNITY_Community 3359|Community 3359]]
+- [[_COMMUNITY_Community 3360|Community 3360]]
+- [[_COMMUNITY_Community 3361|Community 3361]]
+- [[_COMMUNITY_Community 3362|Community 3362]]
+- [[_COMMUNITY_Community 3363|Community 3363]]
+- [[_COMMUNITY_Community 3364|Community 3364]]
+- [[_COMMUNITY_Community 3365|Community 3365]]
+- [[_COMMUNITY_Community 3366|Community 3366]]
+- [[_COMMUNITY_Community 3367|Community 3367]]
+- [[_COMMUNITY_Community 3368|Community 3368]]
+- [[_COMMUNITY_Community 3369|Community 3369]]
+- [[_COMMUNITY_Community 3370|Community 3370]]
+- [[_COMMUNITY_Community 3371|Community 3371]]
+- [[_COMMUNITY_Community 3372|Community 3372]]
+- [[_COMMUNITY_Community 3373|Community 3373]]
+- [[_COMMUNITY_Community 3374|Community 3374]]
+- [[_COMMUNITY_Community 3375|Community 3375]]
+- [[_COMMUNITY_Community 3376|Community 3376]]
+- [[_COMMUNITY_Community 3377|Community 3377]]
+- [[_COMMUNITY_Community 3378|Community 3378]]
+- [[_COMMUNITY_Community 3379|Community 3379]]
+- [[_COMMUNITY_Community 3380|Community 3380]]
+- [[_COMMUNITY_Community 3381|Community 3381]]
+- [[_COMMUNITY_Community 3382|Community 3382]]
+- [[_COMMUNITY_Community 3383|Community 3383]]
+- [[_COMMUNITY_Community 3384|Community 3384]]
+- [[_COMMUNITY_Community 3385|Community 3385]]
+- [[_COMMUNITY_Community 3386|Community 3386]]
+- [[_COMMUNITY_Community 3387|Community 3387]]
+- [[_COMMUNITY_Community 3388|Community 3388]]
+- [[_COMMUNITY_Community 3389|Community 3389]]
+- [[_COMMUNITY_Community 3390|Community 3390]]
+- [[_COMMUNITY_Community 3391|Community 3391]]
+- [[_COMMUNITY_Community 3392|Community 3392]]
+- [[_COMMUNITY_Community 3393|Community 3393]]
+- [[_COMMUNITY_Community 3394|Community 3394]]
+- [[_COMMUNITY_Community 3395|Community 3395]]
+- [[_COMMUNITY_Community 3396|Community 3396]]
+- [[_COMMUNITY_Community 3397|Community 3397]]
+- [[_COMMUNITY_Community 3398|Community 3398]]
+- [[_COMMUNITY_Community 3399|Community 3399]]
+- [[_COMMUNITY_Community 3400|Community 3400]]
+- [[_COMMUNITY_Community 3401|Community 3401]]
+- [[_COMMUNITY_Community 3402|Community 3402]]
+- [[_COMMUNITY_Community 3403|Community 3403]]
+- [[_COMMUNITY_Community 3404|Community 3404]]
+- [[_COMMUNITY_Community 3405|Community 3405]]
+- [[_COMMUNITY_Community 3406|Community 3406]]
+- [[_COMMUNITY_Community 3407|Community 3407]]
+- [[_COMMUNITY_Community 3408|Community 3408]]
+- [[_COMMUNITY_Community 3409|Community 3409]]
+- [[_COMMUNITY_Community 3410|Community 3410]]
+- [[_COMMUNITY_Community 3411|Community 3411]]
+- [[_COMMUNITY_Community 3412|Community 3412]]
+- [[_COMMUNITY_Community 3413|Community 3413]]
+- [[_COMMUNITY_Community 3414|Community 3414]]
+- [[_COMMUNITY_Community 3415|Community 3415]]
+- [[_COMMUNITY_Community 3416|Community 3416]]
+- [[_COMMUNITY_Community 3417|Community 3417]]
+- [[_COMMUNITY_Community 3418|Community 3418]]
+- [[_COMMUNITY_Community 3419|Community 3419]]
+- [[_COMMUNITY_Community 3420|Community 3420]]
+- [[_COMMUNITY_Community 3421|Community 3421]]
+- [[_COMMUNITY_Community 3422|Community 3422]]
+- [[_COMMUNITY_Community 3423|Community 3423]]
+- [[_COMMUNITY_Community 3424|Community 3424]]
+- [[_COMMUNITY_Community 3425|Community 3425]]
+- [[_COMMUNITY_Community 3426|Community 3426]]
+- [[_COMMUNITY_Community 3427|Community 3427]]
+- [[_COMMUNITY_Community 3428|Community 3428]]
+- [[_COMMUNITY_Community 3429|Community 3429]]
+- [[_COMMUNITY_Community 3430|Community 3430]]
+- [[_COMMUNITY_Community 3431|Community 3431]]
+- [[_COMMUNITY_Community 3432|Community 3432]]
+- [[_COMMUNITY_Community 3433|Community 3433]]
+- [[_COMMUNITY_Community 3434|Community 3434]]
+- [[_COMMUNITY_Community 3435|Community 3435]]
+- [[_COMMUNITY_Community 3436|Community 3436]]
+- [[_COMMUNITY_Community 3437|Community 3437]]
+- [[_COMMUNITY_Community 3438|Community 3438]]
+- [[_COMMUNITY_Community 3439|Community 3439]]
+- [[_COMMUNITY_Community 3440|Community 3440]]
+- [[_COMMUNITY_Community 3441|Community 3441]]
+- [[_COMMUNITY_Community 3442|Community 3442]]
+- [[_COMMUNITY_Community 3443|Community 3443]]
+- [[_COMMUNITY_Community 3444|Community 3444]]
+- [[_COMMUNITY_Community 3445|Community 3445]]
+- [[_COMMUNITY_Community 3446|Community 3446]]
+- [[_COMMUNITY_Community 3447|Community 3447]]
+- [[_COMMUNITY_Community 3448|Community 3448]]
+- [[_COMMUNITY_Community 3449|Community 3449]]
+- [[_COMMUNITY_Community 3450|Community 3450]]
+- [[_COMMUNITY_Community 3451|Community 3451]]
+- [[_COMMUNITY_Community 3452|Community 3452]]
+- [[_COMMUNITY_Community 3453|Community 3453]]
+- [[_COMMUNITY_Community 3454|Community 3454]]
+- [[_COMMUNITY_Community 3455|Community 3455]]
+- [[_COMMUNITY_Community 3456|Community 3456]]
+- [[_COMMUNITY_Community 3457|Community 3457]]
+- [[_COMMUNITY_Community 3458|Community 3458]]
+- [[_COMMUNITY_Community 3459|Community 3459]]
+- [[_COMMUNITY_Community 3460|Community 3460]]
+- [[_COMMUNITY_Community 3461|Community 3461]]
+- [[_COMMUNITY_Community 3462|Community 3462]]
+- [[_COMMUNITY_Community 3463|Community 3463]]
+- [[_COMMUNITY_Community 3464|Community 3464]]
+- [[_COMMUNITY_Community 3465|Community 3465]]
+- [[_COMMUNITY_Community 3466|Community 3466]]
+- [[_COMMUNITY_Community 3467|Community 3467]]
+- [[_COMMUNITY_Community 3468|Community 3468]]
+- [[_COMMUNITY_Community 3469|Community 3469]]
+- [[_COMMUNITY_Community 3470|Community 3470]]
+- [[_COMMUNITY_Community 3471|Community 3471]]
+- [[_COMMUNITY_Community 3472|Community 3472]]
+- [[_COMMUNITY_Community 3473|Community 3473]]
+- [[_COMMUNITY_Community 3474|Community 3474]]
+- [[_COMMUNITY_Community 3475|Community 3475]]
+- [[_COMMUNITY_Community 3476|Community 3476]]
+- [[_COMMUNITY_Community 3477|Community 3477]]
+- [[_COMMUNITY_Community 3478|Community 3478]]
+- [[_COMMUNITY_Community 3479|Community 3479]]
+- [[_COMMUNITY_Community 3480|Community 3480]]
+- [[_COMMUNITY_Community 3481|Community 3481]]
+- [[_COMMUNITY_Community 3482|Community 3482]]
+- [[_COMMUNITY_Community 3483|Community 3483]]
+- [[_COMMUNITY_Community 3484|Community 3484]]
+- [[_COMMUNITY_Community 3485|Community 3485]]
+- [[_COMMUNITY_Community 3486|Community 3486]]
+- [[_COMMUNITY_Community 3487|Community 3487]]
+- [[_COMMUNITY_Community 3488|Community 3488]]
+- [[_COMMUNITY_Community 3489|Community 3489]]
+- [[_COMMUNITY_Community 3490|Community 3490]]
+- [[_COMMUNITY_Community 3491|Community 3491]]
+- [[_COMMUNITY_Community 3492|Community 3492]]
+- [[_COMMUNITY_Community 3493|Community 3493]]
+- [[_COMMUNITY_Community 3494|Community 3494]]
+- [[_COMMUNITY_Community 3495|Community 3495]]
+- [[_COMMUNITY_Community 3496|Community 3496]]
+- [[_COMMUNITY_Community 3497|Community 3497]]
+- [[_COMMUNITY_Community 3498|Community 3498]]
+- [[_COMMUNITY_Community 3499|Community 3499]]
+- [[_COMMUNITY_Community 3500|Community 3500]]
+- [[_COMMUNITY_Community 3501|Community 3501]]
+- [[_COMMUNITY_Community 3502|Community 3502]]
+- [[_COMMUNITY_Community 3503|Community 3503]]
+- [[_COMMUNITY_Community 3504|Community 3504]]
+- [[_COMMUNITY_Community 3505|Community 3505]]
+- [[_COMMUNITY_Community 3506|Community 3506]]
+- [[_COMMUNITY_Community 3507|Community 3507]]
+- [[_COMMUNITY_Community 3508|Community 3508]]
+- [[_COMMUNITY_Community 3509|Community 3509]]
+- [[_COMMUNITY_Community 3510|Community 3510]]
+- [[_COMMUNITY_Community 3511|Community 3511]]
+- [[_COMMUNITY_Community 3512|Community 3512]]
+- [[_COMMUNITY_Community 3513|Community 3513]]
+- [[_COMMUNITY_Community 3514|Community 3514]]
+- [[_COMMUNITY_Community 3515|Community 3515]]
+- [[_COMMUNITY_Community 3516|Community 3516]]
+- [[_COMMUNITY_Community 3517|Community 3517]]
+- [[_COMMUNITY_Community 3518|Community 3518]]
+- [[_COMMUNITY_Community 3519|Community 3519]]
+- [[_COMMUNITY_Community 3520|Community 3520]]
+- [[_COMMUNITY_Community 3521|Community 3521]]
+- [[_COMMUNITY_Community 3522|Community 3522]]
+- [[_COMMUNITY_Community 3523|Community 3523]]
+- [[_COMMUNITY_Community 3524|Community 3524]]
+- [[_COMMUNITY_Community 3525|Community 3525]]
+- [[_COMMUNITY_Community 3526|Community 3526]]
+- [[_COMMUNITY_Community 3527|Community 3527]]
+- [[_COMMUNITY_Community 3528|Community 3528]]
+- [[_COMMUNITY_Community 3529|Community 3529]]
+- [[_COMMUNITY_Community 3530|Community 3530]]
+- [[_COMMUNITY_Community 3531|Community 3531]]
+- [[_COMMUNITY_Community 3532|Community 3532]]
+- [[_COMMUNITY_Community 3533|Community 3533]]
+- [[_COMMUNITY_Community 3534|Community 3534]]
+- [[_COMMUNITY_Community 3535|Community 3535]]
+- [[_COMMUNITY_Community 3536|Community 3536]]
+- [[_COMMUNITY_Community 3537|Community 3537]]
+- [[_COMMUNITY_Community 3538|Community 3538]]
+- [[_COMMUNITY_Community 3539|Community 3539]]
+- [[_COMMUNITY_Community 3540|Community 3540]]
+- [[_COMMUNITY_Community 3541|Community 3541]]
+- [[_COMMUNITY_Community 3542|Community 3542]]
+- [[_COMMUNITY_Community 3543|Community 3543]]
+- [[_COMMUNITY_Community 3544|Community 3544]]
+- [[_COMMUNITY_Community 3545|Community 3545]]
+- [[_COMMUNITY_Community 3546|Community 3546]]
+- [[_COMMUNITY_Community 3547|Community 3547]]
+- [[_COMMUNITY_Community 3548|Community 3548]]
+- [[_COMMUNITY_Community 3549|Community 3549]]
+- [[_COMMUNITY_Community 3550|Community 3550]]
+- [[_COMMUNITY_Community 3551|Community 3551]]
+- [[_COMMUNITY_Community 3552|Community 3552]]
+- [[_COMMUNITY_Community 3553|Community 3553]]
+- [[_COMMUNITY_Community 3554|Community 3554]]
+- [[_COMMUNITY_Community 3555|Community 3555]]
+- [[_COMMUNITY_Community 3556|Community 3556]]
+- [[_COMMUNITY_Community 3557|Community 3557]]
+- [[_COMMUNITY_Community 3558|Community 3558]]
+- [[_COMMUNITY_Community 3559|Community 3559]]
+- [[_COMMUNITY_Community 3560|Community 3560]]
+- [[_COMMUNITY_Community 3561|Community 3561]]
+- [[_COMMUNITY_Community 3562|Community 3562]]
+- [[_COMMUNITY_Community 3563|Community 3563]]
+- [[_COMMUNITY_Community 3564|Community 3564]]
+- [[_COMMUNITY_Community 3565|Community 3565]]
+- [[_COMMUNITY_Community 3566|Community 3566]]
+- [[_COMMUNITY_Community 3567|Community 3567]]
+- [[_COMMUNITY_Community 3568|Community 3568]]
+- [[_COMMUNITY_Community 3569|Community 3569]]
+- [[_COMMUNITY_Community 3570|Community 3570]]
+- [[_COMMUNITY_Community 3571|Community 3571]]
+- [[_COMMUNITY_Community 3572|Community 3572]]
+- [[_COMMUNITY_Community 3573|Community 3573]]
+- [[_COMMUNITY_Community 3574|Community 3574]]
+- [[_COMMUNITY_Community 3575|Community 3575]]
+- [[_COMMUNITY_Community 3576|Community 3576]]
+- [[_COMMUNITY_Community 3577|Community 3577]]
+- [[_COMMUNITY_Community 3578|Community 3578]]
+- [[_COMMUNITY_Community 3579|Community 3579]]
+- [[_COMMUNITY_Community 3580|Community 3580]]
+- [[_COMMUNITY_Community 3581|Community 3581]]
+- [[_COMMUNITY_Community 3582|Community 3582]]
+- [[_COMMUNITY_Community 3583|Community 3583]]
+- [[_COMMUNITY_Community 3584|Community 3584]]
+- [[_COMMUNITY_Community 3585|Community 3585]]
+- [[_COMMUNITY_Community 3586|Community 3586]]
+- [[_COMMUNITY_Community 3587|Community 3587]]
+- [[_COMMUNITY_Community 3588|Community 3588]]
+- [[_COMMUNITY_Community 3589|Community 3589]]
+- [[_COMMUNITY_Community 3590|Community 3590]]
+- [[_COMMUNITY_Community 3591|Community 3591]]
+- [[_COMMUNITY_Community 3592|Community 3592]]
+- [[_COMMUNITY_Community 3593|Community 3593]]
+- [[_COMMUNITY_Community 3594|Community 3594]]
+- [[_COMMUNITY_Community 3595|Community 3595]]
+- [[_COMMUNITY_Community 3596|Community 3596]]
+- [[_COMMUNITY_Community 3597|Community 3597]]
+- [[_COMMUNITY_Community 3598|Community 3598]]
+- [[_COMMUNITY_Community 3599|Community 3599]]
+- [[_COMMUNITY_Community 3600|Community 3600]]
+- [[_COMMUNITY_Community 3601|Community 3601]]
+- [[_COMMUNITY_Community 3602|Community 3602]]
+- [[_COMMUNITY_Community 3603|Community 3603]]
+- [[_COMMUNITY_Community 3604|Community 3604]]
+- [[_COMMUNITY_Community 3605|Community 3605]]
+- [[_COMMUNITY_Community 3606|Community 3606]]
+- [[_COMMUNITY_Community 3607|Community 3607]]
+- [[_COMMUNITY_Community 3608|Community 3608]]
+- [[_COMMUNITY_Community 3609|Community 3609]]
+- [[_COMMUNITY_Community 3610|Community 3610]]
+- [[_COMMUNITY_Community 3611|Community 3611]]
+- [[_COMMUNITY_Community 3612|Community 3612]]
+- [[_COMMUNITY_Community 3613|Community 3613]]
+- [[_COMMUNITY_Community 3614|Community 3614]]
+- [[_COMMUNITY_Community 3615|Community 3615]]
+- [[_COMMUNITY_Community 3616|Community 3616]]
+- [[_COMMUNITY_Community 3617|Community 3617]]
+- [[_COMMUNITY_Community 3618|Community 3618]]
+- [[_COMMUNITY_Community 3619|Community 3619]]
+- [[_COMMUNITY_Community 3620|Community 3620]]
+- [[_COMMUNITY_Community 3621|Community 3621]]
+- [[_COMMUNITY_Community 3622|Community 3622]]
+- [[_COMMUNITY_Community 3623|Community 3623]]
+- [[_COMMUNITY_Community 3624|Community 3624]]
+- [[_COMMUNITY_Community 3625|Community 3625]]
+- [[_COMMUNITY_Community 3626|Community 3626]]
+- [[_COMMUNITY_Community 3627|Community 3627]]
+- [[_COMMUNITY_Community 3628|Community 3628]]
+- [[_COMMUNITY_Community 3629|Community 3629]]
+- [[_COMMUNITY_Community 3630|Community 3630]]
+- [[_COMMUNITY_Community 3631|Community 3631]]
+- [[_COMMUNITY_Community 3632|Community 3632]]
+- [[_COMMUNITY_Community 3633|Community 3633]]
+- [[_COMMUNITY_Community 3634|Community 3634]]
+- [[_COMMUNITY_Community 3635|Community 3635]]
+- [[_COMMUNITY_Community 3636|Community 3636]]
+- [[_COMMUNITY_Community 3637|Community 3637]]
+- [[_COMMUNITY_Community 3638|Community 3638]]
+- [[_COMMUNITY_Community 3639|Community 3639]]
+- [[_COMMUNITY_Community 3640|Community 3640]]
+- [[_COMMUNITY_Community 3641|Community 3641]]
+- [[_COMMUNITY_Community 3642|Community 3642]]
+- [[_COMMUNITY_Community 3643|Community 3643]]
+- [[_COMMUNITY_Community 3644|Community 3644]]
+- [[_COMMUNITY_Community 3645|Community 3645]]
+- [[_COMMUNITY_Community 3646|Community 3646]]
+- [[_COMMUNITY_Community 3647|Community 3647]]
+- [[_COMMUNITY_Community 3648|Community 3648]]
+- [[_COMMUNITY_Community 3649|Community 3649]]
+- [[_COMMUNITY_Community 3650|Community 3650]]
+- [[_COMMUNITY_Community 3651|Community 3651]]
+- [[_COMMUNITY_Community 3652|Community 3652]]
+- [[_COMMUNITY_Community 3653|Community 3653]]
+- [[_COMMUNITY_Community 3654|Community 3654]]
+- [[_COMMUNITY_Community 3655|Community 3655]]
+- [[_COMMUNITY_Community 3656|Community 3656]]
+- [[_COMMUNITY_Community 3657|Community 3657]]
+- [[_COMMUNITY_Community 3658|Community 3658]]
+- [[_COMMUNITY_Community 3659|Community 3659]]
+- [[_COMMUNITY_Community 3660|Community 3660]]
+- [[_COMMUNITY_Community 3661|Community 3661]]
+- [[_COMMUNITY_Community 3662|Community 3662]]
+- [[_COMMUNITY_Community 3663|Community 3663]]
+- [[_COMMUNITY_Community 3664|Community 3664]]
+- [[_COMMUNITY_Community 3665|Community 3665]]
+- [[_COMMUNITY_Community 3666|Community 3666]]
+- [[_COMMUNITY_Community 3667|Community 3667]]
+- [[_COMMUNITY_Community 3668|Community 3668]]
+- [[_COMMUNITY_Community 3669|Community 3669]]
+- [[_COMMUNITY_Community 3670|Community 3670]]
+- [[_COMMUNITY_Community 3671|Community 3671]]
+- [[_COMMUNITY_Community 3672|Community 3672]]
+- [[_COMMUNITY_Community 3673|Community 3673]]
+- [[_COMMUNITY_Community 3674|Community 3674]]
+- [[_COMMUNITY_Community 3675|Community 3675]]
+- [[_COMMUNITY_Community 3676|Community 3676]]
+- [[_COMMUNITY_Community 3677|Community 3677]]
+- [[_COMMUNITY_Community 3678|Community 3678]]
+- [[_COMMUNITY_Community 3679|Community 3679]]
+- [[_COMMUNITY_Community 3680|Community 3680]]
+- [[_COMMUNITY_Community 3681|Community 3681]]
+- [[_COMMUNITY_Community 3682|Community 3682]]
+- [[_COMMUNITY_Community 3683|Community 3683]]
+- [[_COMMUNITY_Community 3684|Community 3684]]
+- [[_COMMUNITY_Community 3685|Community 3685]]
+- [[_COMMUNITY_Community 3686|Community 3686]]
+- [[_COMMUNITY_Community 3687|Community 3687]]
+- [[_COMMUNITY_Community 3688|Community 3688]]
+- [[_COMMUNITY_Community 3689|Community 3689]]
+- [[_COMMUNITY_Community 3690|Community 3690]]
+- [[_COMMUNITY_Community 3691|Community 3691]]
+- [[_COMMUNITY_Community 3692|Community 3692]]
+- [[_COMMUNITY_Community 3693|Community 3693]]
+- [[_COMMUNITY_Community 3694|Community 3694]]
+- [[_COMMUNITY_Community 3695|Community 3695]]
+- [[_COMMUNITY_Community 3696|Community 3696]]
+- [[_COMMUNITY_Community 3697|Community 3697]]
+- [[_COMMUNITY_Community 3698|Community 3698]]
+- [[_COMMUNITY_Community 3699|Community 3699]]
+- [[_COMMUNITY_Community 3700|Community 3700]]
+- [[_COMMUNITY_Community 3701|Community 3701]]
+- [[_COMMUNITY_Community 3702|Community 3702]]
+- [[_COMMUNITY_Community 3703|Community 3703]]
+- [[_COMMUNITY_Community 3704|Community 3704]]
+- [[_COMMUNITY_Community 3705|Community 3705]]
+- [[_COMMUNITY_Community 3706|Community 3706]]
+- [[_COMMUNITY_Community 3707|Community 3707]]
+- [[_COMMUNITY_Community 3708|Community 3708]]
+- [[_COMMUNITY_Community 3709|Community 3709]]
+- [[_COMMUNITY_Community 3710|Community 3710]]
+- [[_COMMUNITY_Community 3711|Community 3711]]
+- [[_COMMUNITY_Community 3712|Community 3712]]
+- [[_COMMUNITY_Community 3713|Community 3713]]
+- [[_COMMUNITY_Community 3714|Community 3714]]
+- [[_COMMUNITY_Community 3715|Community 3715]]
+- [[_COMMUNITY_Community 3716|Community 3716]]
+- [[_COMMUNITY_Community 3717|Community 3717]]
+- [[_COMMUNITY_Community 3718|Community 3718]]
+- [[_COMMUNITY_Community 3719|Community 3719]]
+- [[_COMMUNITY_Community 3720|Community 3720]]
+- [[_COMMUNITY_Community 3721|Community 3721]]
+- [[_COMMUNITY_Community 3722|Community 3722]]
+- [[_COMMUNITY_Community 3723|Community 3723]]
+- [[_COMMUNITY_Community 3724|Community 3724]]
+- [[_COMMUNITY_Community 3725|Community 3725]]
+- [[_COMMUNITY_Community 3726|Community 3726]]
+- [[_COMMUNITY_Community 3727|Community 3727]]
+- [[_COMMUNITY_Community 3728|Community 3728]]
+- [[_COMMUNITY_Community 3729|Community 3729]]
+- [[_COMMUNITY_Community 3730|Community 3730]]
+- [[_COMMUNITY_Community 3731|Community 3731]]
+- [[_COMMUNITY_Community 3732|Community 3732]]
+- [[_COMMUNITY_Community 3733|Community 3733]]
+- [[_COMMUNITY_Community 3734|Community 3734]]
+- [[_COMMUNITY_Community 3735|Community 3735]]
+- [[_COMMUNITY_Community 3736|Community 3736]]
+- [[_COMMUNITY_Community 3737|Community 3737]]
+- [[_COMMUNITY_Community 3738|Community 3738]]
+- [[_COMMUNITY_Community 3739|Community 3739]]
+- [[_COMMUNITY_Community 3740|Community 3740]]
+- [[_COMMUNITY_Community 3741|Community 3741]]
+- [[_COMMUNITY_Community 3742|Community 3742]]
+- [[_COMMUNITY_Community 3743|Community 3743]]
+- [[_COMMUNITY_Community 3744|Community 3744]]
+- [[_COMMUNITY_Community 3745|Community 3745]]
+- [[_COMMUNITY_Community 3746|Community 3746]]
+- [[_COMMUNITY_Community 3747|Community 3747]]
+- [[_COMMUNITY_Community 3748|Community 3748]]
+- [[_COMMUNITY_Community 3749|Community 3749]]
+- [[_COMMUNITY_Community 3750|Community 3750]]
+- [[_COMMUNITY_Community 3751|Community 3751]]
+- [[_COMMUNITY_Community 3752|Community 3752]]
+- [[_COMMUNITY_Community 3753|Community 3753]]
+- [[_COMMUNITY_Community 3754|Community 3754]]
+- [[_COMMUNITY_Community 3755|Community 3755]]
+- [[_COMMUNITY_Community 3756|Community 3756]]
+- [[_COMMUNITY_Community 3757|Community 3757]]
+- [[_COMMUNITY_Community 3758|Community 3758]]
+- [[_COMMUNITY_Community 3759|Community 3759]]
+- [[_COMMUNITY_Community 3760|Community 3760]]
+- [[_COMMUNITY_Community 3761|Community 3761]]
+- [[_COMMUNITY_Community 3762|Community 3762]]
+- [[_COMMUNITY_Community 3763|Community 3763]]
+- [[_COMMUNITY_Community 3764|Community 3764]]
+- [[_COMMUNITY_Community 3765|Community 3765]]
+- [[_COMMUNITY_Community 3766|Community 3766]]
+- [[_COMMUNITY_Community 3767|Community 3767]]
+- [[_COMMUNITY_Community 3768|Community 3768]]
+- [[_COMMUNITY_Community 3769|Community 3769]]
+- [[_COMMUNITY_Community 3770|Community 3770]]
+- [[_COMMUNITY_Community 3771|Community 3771]]
+- [[_COMMUNITY_Community 3772|Community 3772]]
+- [[_COMMUNITY_Community 3773|Community 3773]]
+- [[_COMMUNITY_Community 3774|Community 3774]]
+- [[_COMMUNITY_Community 3775|Community 3775]]
+- [[_COMMUNITY_Community 3776|Community 3776]]
+- [[_COMMUNITY_Community 3777|Community 3777]]
+- [[_COMMUNITY_Community 3778|Community 3778]]
+- [[_COMMUNITY_Community 3779|Community 3779]]
+- [[_COMMUNITY_Community 3780|Community 3780]]
+- [[_COMMUNITY_Community 3781|Community 3781]]
+- [[_COMMUNITY_Community 3782|Community 3782]]
+- [[_COMMUNITY_Community 3783|Community 3783]]
+- [[_COMMUNITY_Community 3784|Community 3784]]
+- [[_COMMUNITY_Community 3785|Community 3785]]
+- [[_COMMUNITY_Community 3786|Community 3786]]
+- [[_COMMUNITY_Community 3787|Community 3787]]
+- [[_COMMUNITY_Community 3788|Community 3788]]
+- [[_COMMUNITY_Community 3789|Community 3789]]
+- [[_COMMUNITY_Community 3790|Community 3790]]
+- [[_COMMUNITY_Community 3791|Community 3791]]
+- [[_COMMUNITY_Community 3792|Community 3792]]
+- [[_COMMUNITY_Community 3793|Community 3793]]
+- [[_COMMUNITY_Community 3794|Community 3794]]
+- [[_COMMUNITY_Community 3795|Community 3795]]
+- [[_COMMUNITY_Community 3796|Community 3796]]
+- [[_COMMUNITY_Community 3797|Community 3797]]
+- [[_COMMUNITY_Community 3798|Community 3798]]
+- [[_COMMUNITY_Community 3799|Community 3799]]
+- [[_COMMUNITY_Community 3800|Community 3800]]
+- [[_COMMUNITY_Community 3801|Community 3801]]
+- [[_COMMUNITY_Community 3802|Community 3802]]
+- [[_COMMUNITY_Community 3803|Community 3803]]
+- [[_COMMUNITY_Community 3804|Community 3804]]
+- [[_COMMUNITY_Community 3805|Community 3805]]
+- [[_COMMUNITY_Community 3806|Community 3806]]
+- [[_COMMUNITY_Community 3807|Community 3807]]
+- [[_COMMUNITY_Community 3808|Community 3808]]
+- [[_COMMUNITY_Community 3809|Community 3809]]
+- [[_COMMUNITY_Community 3810|Community 3810]]
+- [[_COMMUNITY_Community 3811|Community 3811]]
+- [[_COMMUNITY_Community 3812|Community 3812]]
+- [[_COMMUNITY_Community 3813|Community 3813]]
+- [[_COMMUNITY_Community 3814|Community 3814]]
+- [[_COMMUNITY_Community 3815|Community 3815]]
+- [[_COMMUNITY_Community 3816|Community 3816]]
+- [[_COMMUNITY_Community 3817|Community 3817]]
+- [[_COMMUNITY_Community 3818|Community 3818]]
+- [[_COMMUNITY_Community 3819|Community 3819]]
+- [[_COMMUNITY_Community 3820|Community 3820]]
+- [[_COMMUNITY_Community 3821|Community 3821]]
+- [[_COMMUNITY_Community 3822|Community 3822]]
+- [[_COMMUNITY_Community 3823|Community 3823]]
+- [[_COMMUNITY_Community 3824|Community 3824]]
+- [[_COMMUNITY_Community 3825|Community 3825]]
+- [[_COMMUNITY_Community 3826|Community 3826]]
+- [[_COMMUNITY_Community 3827|Community 3827]]
+- [[_COMMUNITY_Community 3828|Community 3828]]
+- [[_COMMUNITY_Community 3829|Community 3829]]
+- [[_COMMUNITY_Community 3830|Community 3830]]
+- [[_COMMUNITY_Community 3831|Community 3831]]
+- [[_COMMUNITY_Community 3832|Community 3832]]
+- [[_COMMUNITY_Community 3833|Community 3833]]
+- [[_COMMUNITY_Community 3834|Community 3834]]
+- [[_COMMUNITY_Community 3835|Community 3835]]
+- [[_COMMUNITY_Community 3836|Community 3836]]
+- [[_COMMUNITY_Community 3837|Community 3837]]
+- [[_COMMUNITY_Community 3838|Community 3838]]
+- [[_COMMUNITY_Community 3839|Community 3839]]
+- [[_COMMUNITY_Community 3840|Community 3840]]
+- [[_COMMUNITY_Community 3841|Community 3841]]
+- [[_COMMUNITY_Community 3842|Community 3842]]
+- [[_COMMUNITY_Community 3843|Community 3843]]
+- [[_COMMUNITY_Community 3844|Community 3844]]
+- [[_COMMUNITY_Community 3845|Community 3845]]
+- [[_COMMUNITY_Community 3846|Community 3846]]
+- [[_COMMUNITY_Community 3847|Community 3847]]
+- [[_COMMUNITY_Community 3848|Community 3848]]
+- [[_COMMUNITY_Community 3849|Community 3849]]
+- [[_COMMUNITY_Community 3850|Community 3850]]
+- [[_COMMUNITY_Community 3851|Community 3851]]
+- [[_COMMUNITY_Community 3852|Community 3852]]
+- [[_COMMUNITY_Community 3853|Community 3853]]
+- [[_COMMUNITY_Community 3854|Community 3854]]
+- [[_COMMUNITY_Community 3855|Community 3855]]
+- [[_COMMUNITY_Community 3856|Community 3856]]
+- [[_COMMUNITY_Community 3857|Community 3857]]
+- [[_COMMUNITY_Community 3858|Community 3858]]
+- [[_COMMUNITY_Community 3859|Community 3859]]
+- [[_COMMUNITY_Community 3860|Community 3860]]
+- [[_COMMUNITY_Community 3861|Community 3861]]
+- [[_COMMUNITY_Community 3862|Community 3862]]
+- [[_COMMUNITY_Community 3863|Community 3863]]
+- [[_COMMUNITY_Community 3864|Community 3864]]
+- [[_COMMUNITY_Community 3865|Community 3865]]
+- [[_COMMUNITY_Community 3866|Community 3866]]
+- [[_COMMUNITY_Community 3867|Community 3867]]
+- [[_COMMUNITY_Community 3868|Community 3868]]
+- [[_COMMUNITY_Community 3869|Community 3869]]
+- [[_COMMUNITY_Community 3870|Community 3870]]
+- [[_COMMUNITY_Community 3871|Community 3871]]
+- [[_COMMUNITY_Community 3872|Community 3872]]
+- [[_COMMUNITY_Community 3873|Community 3873]]
+- [[_COMMUNITY_Community 3874|Community 3874]]
+- [[_COMMUNITY_Community 3875|Community 3875]]
+- [[_COMMUNITY_Community 3876|Community 3876]]
+- [[_COMMUNITY_Community 3877|Community 3877]]
+- [[_COMMUNITY_Community 3878|Community 3878]]
+- [[_COMMUNITY_Community 3879|Community 3879]]
+- [[_COMMUNITY_Community 3880|Community 3880]]
+- [[_COMMUNITY_Community 3881|Community 3881]]
+- [[_COMMUNITY_Community 3882|Community 3882]]
+- [[_COMMUNITY_Community 3883|Community 3883]]
+- [[_COMMUNITY_Community 3884|Community 3884]]
+- [[_COMMUNITY_Community 3885|Community 3885]]
+- [[_COMMUNITY_Community 3886|Community 3886]]
+- [[_COMMUNITY_Community 3887|Community 3887]]
+- [[_COMMUNITY_Community 3888|Community 3888]]
+- [[_COMMUNITY_Community 3889|Community 3889]]
+- [[_COMMUNITY_Community 3890|Community 3890]]
+- [[_COMMUNITY_Community 3891|Community 3891]]
+- [[_COMMUNITY_Community 3892|Community 3892]]
+- [[_COMMUNITY_Community 3893|Community 3893]]
+- [[_COMMUNITY_Community 3894|Community 3894]]
+- [[_COMMUNITY_Community 3895|Community 3895]]
+- [[_COMMUNITY_Community 3896|Community 3896]]
+- [[_COMMUNITY_Community 3897|Community 3897]]
+- [[_COMMUNITY_Community 3898|Community 3898]]
+- [[_COMMUNITY_Community 3899|Community 3899]]
+- [[_COMMUNITY_Community 3900|Community 3900]]
+- [[_COMMUNITY_Community 3901|Community 3901]]
+- [[_COMMUNITY_Community 3902|Community 3902]]
+- [[_COMMUNITY_Community 3903|Community 3903]]
+- [[_COMMUNITY_Community 3904|Community 3904]]
+- [[_COMMUNITY_Community 3905|Community 3905]]
+- [[_COMMUNITY_Community 3906|Community 3906]]
+- [[_COMMUNITY_Community 3907|Community 3907]]
+- [[_COMMUNITY_Community 3908|Community 3908]]
+- [[_COMMUNITY_Community 3909|Community 3909]]
+- [[_COMMUNITY_Community 3910|Community 3910]]
+- [[_COMMUNITY_Community 3911|Community 3911]]
+- [[_COMMUNITY_Community 3912|Community 3912]]
+- [[_COMMUNITY_Community 3913|Community 3913]]
+- [[_COMMUNITY_Community 3914|Community 3914]]
+- [[_COMMUNITY_Community 3915|Community 3915]]
+- [[_COMMUNITY_Community 3916|Community 3916]]
+- [[_COMMUNITY_Community 3917|Community 3917]]
+- [[_COMMUNITY_Community 3918|Community 3918]]
+- [[_COMMUNITY_Community 3919|Community 3919]]
+- [[_COMMUNITY_Community 3920|Community 3920]]
+- [[_COMMUNITY_Community 3921|Community 3921]]
+- [[_COMMUNITY_Community 3922|Community 3922]]
+- [[_COMMUNITY_Community 3923|Community 3923]]
+- [[_COMMUNITY_Community 3924|Community 3924]]
+- [[_COMMUNITY_Community 3925|Community 3925]]
+- [[_COMMUNITY_Community 3926|Community 3926]]
+- [[_COMMUNITY_Community 3927|Community 3927]]
+- [[_COMMUNITY_Community 3928|Community 3928]]
+- [[_COMMUNITY_Community 3929|Community 3929]]
+- [[_COMMUNITY_Community 3930|Community 3930]]
+- [[_COMMUNITY_Community 3931|Community 3931]]
+- [[_COMMUNITY_Community 3932|Community 3932]]
+- [[_COMMUNITY_Community 3933|Community 3933]]
+- [[_COMMUNITY_Community 3934|Community 3934]]
+- [[_COMMUNITY_Community 3935|Community 3935]]
+- [[_COMMUNITY_Community 3936|Community 3936]]
+- [[_COMMUNITY_Community 3937|Community 3937]]
+- [[_COMMUNITY_Community 3938|Community 3938]]
+- [[_COMMUNITY_Community 3939|Community 3939]]
+- [[_COMMUNITY_Community 3940|Community 3940]]
+- [[_COMMUNITY_Community 3941|Community 3941]]
+- [[_COMMUNITY_Community 3942|Community 3942]]
+- [[_COMMUNITY_Community 3943|Community 3943]]
+- [[_COMMUNITY_Community 3944|Community 3944]]
+- [[_COMMUNITY_Community 3945|Community 3945]]
+- [[_COMMUNITY_Community 3946|Community 3946]]
+- [[_COMMUNITY_Community 3947|Community 3947]]
+- [[_COMMUNITY_Community 3948|Community 3948]]
+- [[_COMMUNITY_Community 3949|Community 3949]]
+- [[_COMMUNITY_Community 3950|Community 3950]]
+- [[_COMMUNITY_Community 3951|Community 3951]]
+- [[_COMMUNITY_Community 3952|Community 3952]]
+- [[_COMMUNITY_Community 3953|Community 3953]]
+- [[_COMMUNITY_Community 3954|Community 3954]]
+- [[_COMMUNITY_Community 3955|Community 3955]]
+- [[_COMMUNITY_Community 3956|Community 3956]]
+- [[_COMMUNITY_Community 3957|Community 3957]]
+- [[_COMMUNITY_Community 3958|Community 3958]]
+- [[_COMMUNITY_Community 3959|Community 3959]]
+- [[_COMMUNITY_Community 3960|Community 3960]]
+- [[_COMMUNITY_Community 3961|Community 3961]]
+- [[_COMMUNITY_Community 3962|Community 3962]]
+- [[_COMMUNITY_Community 3963|Community 3963]]
+- [[_COMMUNITY_Community 3964|Community 3964]]
+- [[_COMMUNITY_Community 3965|Community 3965]]
+- [[_COMMUNITY_Community 3966|Community 3966]]
+- [[_COMMUNITY_Community 3967|Community 3967]]
+- [[_COMMUNITY_Community 3968|Community 3968]]
+- [[_COMMUNITY_Community 3969|Community 3969]]
+- [[_COMMUNITY_Community 3970|Community 3970]]
+- [[_COMMUNITY_Community 3971|Community 3971]]
+- [[_COMMUNITY_Community 3972|Community 3972]]
+- [[_COMMUNITY_Community 3973|Community 3973]]
+- [[_COMMUNITY_Community 3974|Community 3974]]
+- [[_COMMUNITY_Community 3975|Community 3975]]
+- [[_COMMUNITY_Community 3976|Community 3976]]
+- [[_COMMUNITY_Community 3977|Community 3977]]
+- [[_COMMUNITY_Community 3978|Community 3978]]
+- [[_COMMUNITY_Community 3979|Community 3979]]
+- [[_COMMUNITY_Community 3980|Community 3980]]
+- [[_COMMUNITY_Community 3981|Community 3981]]
+- [[_COMMUNITY_Community 3982|Community 3982]]
+- [[_COMMUNITY_Community 3983|Community 3983]]
+- [[_COMMUNITY_Community 3984|Community 3984]]
+- [[_COMMUNITY_Community 3985|Community 3985]]
+- [[_COMMUNITY_Community 3986|Community 3986]]
+- [[_COMMUNITY_Community 3987|Community 3987]]
+- [[_COMMUNITY_Community 3988|Community 3988]]
+- [[_COMMUNITY_Community 3989|Community 3989]]
+- [[_COMMUNITY_Community 3990|Community 3990]]
+- [[_COMMUNITY_Community 3991|Community 3991]]
+- [[_COMMUNITY_Community 3992|Community 3992]]
+- [[_COMMUNITY_Community 3993|Community 3993]]
+- [[_COMMUNITY_Community 3994|Community 3994]]
+- [[_COMMUNITY_Community 3995|Community 3995]]
+- [[_COMMUNITY_Community 3996|Community 3996]]
+- [[_COMMUNITY_Community 3997|Community 3997]]
+- [[_COMMUNITY_Community 3998|Community 3998]]
+- [[_COMMUNITY_Community 3999|Community 3999]]
+- [[_COMMUNITY_Community 4000|Community 4000]]
+- [[_COMMUNITY_Community 4001|Community 4001]]
+- [[_COMMUNITY_Community 4002|Community 4002]]
+- [[_COMMUNITY_Community 4003|Community 4003]]
+- [[_COMMUNITY_Community 4004|Community 4004]]
+- [[_COMMUNITY_Community 4005|Community 4005]]
+- [[_COMMUNITY_Community 4006|Community 4006]]
+- [[_COMMUNITY_Community 4007|Community 4007]]
+- [[_COMMUNITY_Community 4008|Community 4008]]
+- [[_COMMUNITY_Community 4009|Community 4009]]
+- [[_COMMUNITY_Community 4010|Community 4010]]
+- [[_COMMUNITY_Community 4011|Community 4011]]
+- [[_COMMUNITY_Community 4012|Community 4012]]
+- [[_COMMUNITY_Community 4013|Community 4013]]
+- [[_COMMUNITY_Community 4014|Community 4014]]
+- [[_COMMUNITY_Community 4015|Community 4015]]
+- [[_COMMUNITY_Community 4016|Community 4016]]
+- [[_COMMUNITY_Community 4017|Community 4017]]
+- [[_COMMUNITY_Community 4018|Community 4018]]
+- [[_COMMUNITY_Community 4019|Community 4019]]
+- [[_COMMUNITY_Community 4020|Community 4020]]
+- [[_COMMUNITY_Community 4021|Community 4021]]
+- [[_COMMUNITY_Community 4022|Community 4022]]
+- [[_COMMUNITY_Community 4023|Community 4023]]
+- [[_COMMUNITY_Community 4024|Community 4024]]
+- [[_COMMUNITY_Community 4025|Community 4025]]
+- [[_COMMUNITY_Community 4026|Community 4026]]
+- [[_COMMUNITY_Community 4027|Community 4027]]
+- [[_COMMUNITY_Community 4028|Community 4028]]
+- [[_COMMUNITY_Community 4029|Community 4029]]
+- [[_COMMUNITY_Community 4030|Community 4030]]
+- [[_COMMUNITY_Community 4031|Community 4031]]
+- [[_COMMUNITY_Community 4032|Community 4032]]
+- [[_COMMUNITY_Community 4033|Community 4033]]
+- [[_COMMUNITY_Community 4034|Community 4034]]
+- [[_COMMUNITY_Community 4035|Community 4035]]
+- [[_COMMUNITY_Community 4036|Community 4036]]
+- [[_COMMUNITY_Community 4039|Community 4039]]
+- [[_COMMUNITY_Community 4040|Community 4040]]
+- [[_COMMUNITY_Community 4041|Community 4041]]
+- [[_COMMUNITY_Community 4042|Community 4042]]
+- [[_COMMUNITY_Community 4043|Community 4043]]
+- [[_COMMUNITY_Community 4044|Community 4044]]
+- [[_COMMUNITY_Community 4045|Community 4045]]
+- [[_COMMUNITY_Community 4046|Community 4046]]
+- [[_COMMUNITY_Community 4047|Community 4047]]
+- [[_COMMUNITY_Community 4048|Community 4048]]
+- [[_COMMUNITY_Community 4049|Community 4049]]
+- [[_COMMUNITY_Community 4050|Community 4050]]
+- [[_COMMUNITY_Community 4051|Community 4051]]
+- [[_COMMUNITY_Community 4052|Community 4052]]
+- [[_COMMUNITY_Community 4053|Community 4053]]
+- [[_COMMUNITY_Community 4054|Community 4054]]
+- [[_COMMUNITY_Community 4055|Community 4055]]
+- [[_COMMUNITY_Community 4056|Community 4056]]
+- [[_COMMUNITY_Community 4057|Community 4057]]
+- [[_COMMUNITY_Community 4058|Community 4058]]
+- [[_COMMUNITY_Community 4059|Community 4059]]
+- [[_COMMUNITY_Community 4060|Community 4060]]
+- [[_COMMUNITY_Community 4061|Community 4061]]
+- [[_COMMUNITY_Community 4062|Community 4062]]
+- [[_COMMUNITY_Community 4063|Community 4063]]
+- [[_COMMUNITY_Community 4064|Community 4064]]
+- [[_COMMUNITY_Community 4065|Community 4065]]
+- [[_COMMUNITY_Community 4066|Community 4066]]
+- [[_COMMUNITY_Community 4067|Community 4067]]
+- [[_COMMUNITY_Community 4068|Community 4068]]
+- [[_COMMUNITY_Community 4069|Community 4069]]
+- [[_COMMUNITY_Community 4070|Community 4070]]
+- [[_COMMUNITY_Community 4071|Community 4071]]
+- [[_COMMUNITY_Community 4072|Community 4072]]
+- [[_COMMUNITY_Community 4073|Community 4073]]
+- [[_COMMUNITY_Community 4074|Community 4074]]
+- [[_COMMUNITY_Community 4075|Community 4075]]
+- [[_COMMUNITY_Community 4076|Community 4076]]
+- [[_COMMUNITY_Community 4077|Community 4077]]
+- [[_COMMUNITY_Community 4078|Community 4078]]
+- [[_COMMUNITY_Community 4079|Community 4079]]
+- [[_COMMUNITY_Community 4080|Community 4080]]
+- [[_COMMUNITY_Community 4081|Community 4081]]
+- [[_COMMUNITY_Community 4082|Community 4082]]
+- [[_COMMUNITY_Community 4083|Community 4083]]
+- [[_COMMUNITY_Community 4084|Community 4084]]
+- [[_COMMUNITY_Community 4085|Community 4085]]
+- [[_COMMUNITY_Community 4086|Community 4086]]
+- [[_COMMUNITY_Community 4087|Community 4087]]
+- [[_COMMUNITY_Community 4088|Community 4088]]
+- [[_COMMUNITY_Community 4089|Community 4089]]
+- [[_COMMUNITY_Community 4090|Community 4090]]
+- [[_COMMUNITY_Community 4091|Community 4091]]
+- [[_COMMUNITY_Community 4092|Community 4092]]
+- [[_COMMUNITY_Community 4093|Community 4093]]
+- [[_COMMUNITY_Community 4094|Community 4094]]
+- [[_COMMUNITY_Community 4095|Community 4095]]
+- [[_COMMUNITY_Community 4096|Community 4096]]
+- [[_COMMUNITY_Community 4097|Community 4097]]
+- [[_COMMUNITY_Community 4098|Community 4098]]
+- [[_COMMUNITY_Community 4099|Community 4099]]
+- [[_COMMUNITY_Community 4100|Community 4100]]
+- [[_COMMUNITY_Community 4101|Community 4101]]
+- [[_COMMUNITY_Community 4102|Community 4102]]
+- [[_COMMUNITY_Community 4103|Community 4103]]
+- [[_COMMUNITY_Community 4104|Community 4104]]
+- [[_COMMUNITY_Community 4105|Community 4105]]
+- [[_COMMUNITY_Community 4106|Community 4106]]
+- [[_COMMUNITY_Community 4107|Community 4107]]
+- [[_COMMUNITY_Community 4108|Community 4108]]
+- [[_COMMUNITY_Community 4109|Community 4109]]
+- [[_COMMUNITY_Community 4110|Community 4110]]
+- [[_COMMUNITY_Community 4111|Community 4111]]
+- [[_COMMUNITY_Community 4112|Community 4112]]
+- [[_COMMUNITY_Community 4113|Community 4113]]
+- [[_COMMUNITY_Community 4114|Community 4114]]
+- [[_COMMUNITY_Community 4115|Community 4115]]
+- [[_COMMUNITY_Community 4116|Community 4116]]
+- [[_COMMUNITY_Community 4117|Community 4117]]
+- [[_COMMUNITY_Community 4118|Community 4118]]
+- [[_COMMUNITY_Community 4119|Community 4119]]
+- [[_COMMUNITY_Community 4120|Community 4120]]
+- [[_COMMUNITY_Community 4121|Community 4121]]
+- [[_COMMUNITY_Community 4122|Community 4122]]
+- [[_COMMUNITY_Community 4123|Community 4123]]
+- [[_COMMUNITY_Community 4124|Community 4124]]
+- [[_COMMUNITY_Community 4125|Community 4125]]
+- [[_COMMUNITY_Community 4126|Community 4126]]
+- [[_COMMUNITY_Community 4127|Community 4127]]
+- [[_COMMUNITY_Community 4128|Community 4128]]
+- [[_COMMUNITY_Community 4129|Community 4129]]
+- [[_COMMUNITY_Community 4130|Community 4130]]
+- [[_COMMUNITY_Community 4131|Community 4131]]
+- [[_COMMUNITY_Community 4132|Community 4132]]
+- [[_COMMUNITY_Community 4133|Community 4133]]
+- [[_COMMUNITY_Community 4134|Community 4134]]
+- [[_COMMUNITY_Community 4135|Community 4135]]
+- [[_COMMUNITY_Community 4136|Community 4136]]
+- [[_COMMUNITY_Community 4137|Community 4137]]
+- [[_COMMUNITY_Community 4138|Community 4138]]
+- [[_COMMUNITY_Community 4139|Community 4139]]
+- [[_COMMUNITY_Community 4140|Community 4140]]
+- [[_COMMUNITY_Community 4141|Community 4141]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `files` - 498 edges
@@ -2865,10 +4024,10 @@
   unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs → unity/Unknown/Assets/_Project/Editor/T0AssetImporter.cs
 - `CaseResult` --references--> `string`  [EXTRACTED]
   unity/Unknown/Assets/_Project/Editor/T0Verification.cs → unity/Unknown/Assets/_Project/Editor/T0AssetImporter.cs
-- `T0GameSession` --references--> `Task`  [EXTRACTED]
-  unity/Unknown/Assets/_Project/App/T0GameSession.cs → unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs
+- `M22EmbodimentVisual` --references--> `M22EmbodimentProfile`  [EXTRACTED]
+  unity/Unknown/Assets/_Project/App/M22EmbodimentVisual.cs → unity/Unknown/Assets/_Project/App/M22SeorinSession.cs
 
-## Communities (2981 total, 610 thin omitted)
+## Communities (4143 total, 960 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.20
@@ -2948,7 +4107,7 @@ Nodes (9): code:bash (npm i -g mex-agent && pip install graphifyy          # mex
 
 ### Community 19 - "Community 19"
 Cohesion: 0.10
-Nodes (19): 0. 세션 시작 (모든 세션, 예외 없음), 10.1 2026-09-10 재도출 (세션 병합 · Unity in-repo · 리소스 파이프라인), 10.2 2026-09-10 사용자 후속 지시 — 리소스 제공자, 10. Steam 프리미엄 신작 사전제작 (2026-09-09 추가), 11. 검증 도구의 실제 경계, 1. 역할 (13 + 디렉터) — 파일 기반 에이전트만 사용, 1. 역할 (14 + 디렉터) — 파일 기반 에이전트만 사용, 2. 워크스페이스: 하나의 live 폴더, 하나의 아카이브 (최신화 계약) (+11 more)
+Nodes (20): 0. 세션 시작 (모든 세션, 예외 없음), 10.1 2026-09-10 재도출 (세션 병합 · Unity in-repo · 리소스 파이프라인), 10.2 2026-09-10 사용자 후속 지시 — 리소스 제공자, 10. Steam 프리미엄 신작 사전제작 (2026-09-09 추가), 11. 검증 도구의 실제 경계, 1. 역할 (13 + 디렉터) — 파일 기반 에이전트만 사용, 1. 역할 (14 + 디렉터) — 파일 기반 에이전트만 사용, 2. 워크스페이스: 하나의 live 폴더, 하나의 아카이브 (최신화 계약) (+12 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.20
@@ -3147,28 +4306,28 @@ Cohesion: 0.60
 Nodes (4): canon(), finding(), fm(), fmval()
 
 ### Community 73 - "Community 73"
-Cohesion: 0.40
-Nodes (4): code:yaml (cycle_type: preproduction      # hotfix | balance-patch | co), Production Brief, 사용자 요청 원문 요약, 정지선
+Cohesion: 0.25
+Nodes (7): code:yaml (cycle_type: preproduction      # hotfix | balance-patch | co), M22 — 기존 플레이 슬라이스 개선과 main 통합, M22 확장 — 유사작 조사와 주인공·손 동작, Production Brief, 사용자 요청 원문 요약, 정지선, 추가 품질 지시
 
 ### Community 77 - "Community 77"
 Cohesion: 0.67
 Nodes (3): model, display_name, id
 
 ### Community 82 - "Community 82"
-Cohesion: 0.07
-Nodes (30): C1 M3 구현과 검증, C1 M4 — 겹쳐 붙은 서명지, code:block1 (CLAUDE.md                      저장소 운영 규칙 (13역할 + PM 하네스, 게이트), code:bash (UNITY_EDITOR="/Applications/Unity/Hub/Editor/6000.5.6f1/Unit), code:bash ("$UNITY_EDITOR" -batchmode -nographics -quit \), code:bash (node _workspace/current/planning/validate-campaign.mjs), M5 — 영상에서 게임 연출로, M6 이전 구현 비교 기록 (+22 more)
+Cohesion: 0.06
+Nodes (34): C1 M3 구현과 검증, C1 M4 — 겹쳐 붙은 서명지, code:block1 (CLAUDE.md                      저장소 운영 규칙 (13역할 + PM 하네스, 게이트), code:bash (UNITY_EDITOR="/Applications/Unity/Hub/Editor/6000.5.6f1/Unit), code:bash ("$UNITY_EDITOR" -batchmode -nographics -quit \), code:bash (node _workspace/current/planning/validate-campaign.mjs), M5 — 영상에서 게임 연출로, M6 이전 구현 비교 기록 (+26 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.11
-Nodes (18): 2026-09-11 · M12 native playtest, monitoring and gameplay video (RFC-CX-015), 2026-09-11 · M6 cinematic video delivery, 2026-09-11 · M7 original-concept art target, 2026-09-11 · M8 source-informed review notes, 2026-09-11 · M9 completeness hop (RFC-CX-011), assets / docs / unity / scripts, balance / economy, Changelog (+10 more)
+Cohesion: 0.08
+Nodes (23): 2026-09-11 · M12 native playtest, monitoring and gameplay video (RFC-CX-015), 2026-09-11 · M6 cinematic video delivery, 2026-09-11 · M7 original-concept art target, 2026-09-11 · M8 source-informed review notes, 2026-09-11 · M9 completeness hop (RFC-CX-011), 2026-09-13 Aside immersion source update (uncommitted), 2026-09-13 · Aside 규칙·코어 루프 조사 (연구만, uncommitted), 2026-09-13 · M22 로컬 개발 빌드 검증 (uncommitted, RFC-CX-017/018) (+15 more)
 
 ### Community 85 - "Community 85"
 Cohesion: 0.12
 Nodes (17): C4-F11 · README 삽화 손글씨, C4-F7 / C4-F12 / C4-F20 / C6-F12 / C6-F1 / C6-F3 / C6-F4 / C6-F16 / C6-F17 / C6-F6 / C6-F8 · 레인 배정 (R7), C6/C7 디렉터 판정 묶음 (2026-09-10 09:10 KST) — 판정단 5렌즈 · 반박 3렌즈 · QA c6-review 이후, C6-F11 / PRE-1 / C7-F14 / C7-F12 / C7-F3 · T0 착수 전 결정 4건 + 실행자 규칙, C6-F2 · 상품 약속 문구, C6-F5 · 조작 밀도(표·칸 21/33), C6-F9 · 본 생산 승인 조건 통합, RFC-B6 · 밸런스 문서의 sha 문자열 (+9 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.12
-Nodes (16): C1 M3 continuation (2026-09-11), C1 M4 continuation (2026-09-11), M10 — TRACE-RPG methodology: evidence-graph contract, terminology, narrative bridges (2026-09-11), M11 — RFC-CX-012 carry-over resolution (2026-09-11, RFC-CX-013), M12 — 네이티브 실동작 플레이테스트·모니터링·게임플레이 영상 (2026-09-11, RFC-CX-015), M13 — M7 컨셉 리소스 런타임 승격 · 남은 작업 마감 · 레거시 제거 (2026-09-11, RFC-CX-016), M5 intro and gameplay direction continuation — 2026-09-11, M6 — cinematic and gameplay-method video delivery (2026-09-11) (+8 more)
+Cohesion: 0.10
+Nodes (20): Aside rules/core-loop research (2026-09-13, RFC-CX-ASIDE-CORE-20260913), Aside scoped immersion follow-up (2026-09-13), C1 M3 continuation (2026-09-11), C1 M4 continuation (2026-09-11), M10 — TRACE-RPG methodology: evidence-graph contract, terminology, narrative bridges (2026-09-11), M11 — RFC-CX-012 carry-over resolution (2026-09-11, RFC-CX-013), M12 — 네이티브 실동작 플레이테스트·모니터링·게임플레이 영상 (2026-09-11, RFC-CX-015), M13 — M7 컨셉 리소스 런타임 승격 · 남은 작업 마감 · 레거시 제거 (2026-09-11, RFC-CX-016) (+12 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.25
@@ -3196,7 +4355,7 @@ Nodes (123): abBad, activitySums, ARGS, badZone, basisBad, beatById, beats, beat
 
 ### Community 94 - "Community 94"
 Cohesion: 0.03
-Nodes (58): ACCEPT_TESTS, add(), allBeats, allTools, allZones, artDays, beatCount, cam (+50 more)
+Nodes (48): ACCEPT_TESTS, allBeats, allTools, allZones, artDays, beatCount, cam, campaignMinutes (+40 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.13
@@ -3220,7 +4379,7 @@ Nodes (42): 0.1 재집계 영수증 [OBSERVED · 2026-09-10], 0. 이 문서의 �
 
 ### Community 100 - "Community 100"
 Cohesion: 0.05
-Nodes (41): 0. 전역 불변식, 1-1. 확정 방식 옵션 `R1`, 1-2. 컨트롤러 바인딩 무충돌 규칙 `R1` `[C4-F5]`, 1-3.1 표면은 셋이고 동시에 활성인 표면은 하나다, 1-3.2 표면별로 의미가 갈리는 키 — 전수, 1-3.3 `reader`의 `Space` 예외 명문화, 1-3.4 키보드 파생 규칙 D-1 ~ D-7 `[C4-F21]`, 1-3. 표면 스코프 우선순위와 키보드 파생 규칙 `[C4-F16]` `[C4-F21]` (+33 more)
+Nodes (42): 0. 전역 불변식, 1-1. 확정 방식 옵션 `R1`, 1-2. 컨트롤러 바인딩 무충돌 규칙 `R1` `[C4-F5]`, 1-3.1 표면은 셋이고 동시에 활성인 표면은 하나다, 1-3.2 표면별로 의미가 갈리는 키 — 전수, 1-3.3 `reader`의 `Space` 예외 명문화, 1-3.4 키보드 파생 규칙 D-1 ~ D-7 `[C4-F21]`, 1-3. 표면 스코프 우선순위와 키보드 파생 규칙 `[C4-F16]` `[C4-F21]` (+34 more)
 
 ### Community 101 - "Community 101"
 Cohesion: 0.05
@@ -3235,8 +4394,8 @@ Cohesion: 0.05
 Nodes (41): dependencies, com.unity.inputsystem, com.unity.localization, com.unity.modules.accessibility, com.unity.modules.adaptiveperformance, com.unity.modules.ai, com.unity.modules.androidjni, com.unity.modules.animation (+33 more)
 
 ### Community 104 - "Community 104"
-Cohesion: 0.05
-Nodes (43): circuitOverlay, anchors, fineGridStep, gridStep, initialOffset, owner, value, owner (+35 more)
+Cohesion: 0.04
+Nodes (46): circuitOverlay, anchors, fineGridStep, gridStep, initialOffset, owner, value, owner (+38 more)
 
 ### Community 106 - "Community 106"
 Cohesion: 0.09
@@ -3256,7 +4415,7 @@ Nodes (43): view(), actionAlphabet(), autoFitOffset(), AUTOSAVE_BEFORE, canonica
 
 ### Community 110 - "Community 110"
 Cohesion: 0.04
-Nodes (44): 10. 콜리전 · LOD · 텍스처 예산, 11. Higgsfield 이미지→3D (선택 경로, 승인 전 미실행), 12. Provenance 규칙, 13. 검증 체크리스트 (내보내기 전 매번), 14.1 무엇이 깨져 있었는가 [OBSERVED · 2026-09-10 재현], 14.2 아카이브 레이아웃, 14.3 절차 A — 2D 재생성 (오늘 실행 가능 · 스크립트 수정 불필요), 14.4 절차 B — 3D 씬 재빌드 (`build_hub_greybox.py` 재실행 전) (+36 more)
+Nodes (45): 10. 콜리전 · LOD · 텍스처 예산, 11. Higgsfield 이미지→3D (선택 경로, 승인 전 미실행), 12. Provenance 규칙, 13. 검증 체크리스트 (내보내기 전 매번), 14.1 무엇이 깨져 있었는가 [OBSERVED · 2026-09-10 재현], 14.2 아카이브 레이아웃, 14.3 절차 A — 2D 재생성 (오늘 실행 가능 · 스크립트 수정 불필요), 14.4 절차 B — 3D 씬 재빌드 (`build_hub_greybox.py` 재실행 전) (+37 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.04
@@ -3355,8 +4514,8 @@ Cohesion: 0.09
 Nodes (21): 0.1 개정 이력 [OBSERVED], 0. 이 문서의 지위, 1. 구역 5개 [OBSERVED], 2. 구역 상태 — 총 22종 [TARGET], 3.1 표 A(`chapter-beats.md`)와의 차이 — R4 시점 [OBSERVED], 3. 사건 매트릭스 — 33건 [OBSERVED] · **`campaign.json` `zoneId`에서 파생**, 4.1 동사 × 사건, 4.2 자료 조합 × 사건 — 단일 매체 0건 (2026-09-10 수정 후) [OBSERVED] (+13 more)
 
 ### Community 138 - "Community 138"
-Cohesion: 0.10
-Nodes (20): 0. 이 문서의 지위 · 실측 상태, 10. 변경 로그 (RFC-Q2 — 같은 사이클 제자리 갱신 = 개정), 1. 설계 전제 — 리그가 **요구하지 않는** 것, 2.1 공통 규격 (6종 전부), 2.2 프롭별 가동부 · 회전축 · keyframe 슬롯, 2.3 zone 프롭(공용 키트) 리그, 2. (A) 도구 6종 프롭 리그 규격, 3. (B) 손 표현 — **결정: 기본값 "손 없음", 필요 시 2D 오버레이. 3D 손은 별도 RFC** (+12 more)
+Cohesion: 0.09
+Nodes (22): 0. 이 문서의 지위 · 실측 상태, 10. 변경 로그 (RFC-Q2 — 같은 사이클 제자리 갱신 = 개정), 1. 설계 전제 — 리그가 **요구하지 않는** 것, 2.1 공통 규격 (6종 전부), 2.2 프롭별 가동부 · 회전축 · keyframe 슬롯, 2.3 zone 프롭(공용 키트) 리그, 2. (A) 도구 6종 프롭 리그 규격, 3.1 RFC-CX-018 한서린·양손 납품 및 런타임 경계 (+14 more)
 
 ### Community 139 - "Community 139"
 Cohesion: 0.10
@@ -3367,8 +4526,8 @@ Cohesion: 0.10
 Nodes (20): 0. 배정과 처리, 1.1 저작 원본 검증기 (규칙의 단일 출처), 1.2 신설 생성기 — 드라이런 · 실제 생성 · fail-closed 픽스처, 1.3 UI 계약 스키마 검증, 1.4 편집 후 해시 [OBSERVED 2026-09-10 R7], 1. 실행한 명령과 관측 결과 [OBSERVED 2026-09-10], 2.1 C6-F13 — 파이프라인·이름 두 벌, 2.2 C7-F2 — 패키지 0/4 (+12 more)
 
 ### Community 141 - "Community 141"
-Cohesion: 0.09
-Nodes (21): 0. 표기 규약 (6개 스키마 공통), 1. 루트, 2.1 부식 저장 필드 없음 — 부식은 구성안 시험의 파생값 [RFC-P3-009 · C3-F27(c) · 2026-09-10], 2. Progress, 3.0 재생 단위는 **명령** 하나다 `[C7-F7 · 2026-09-10 R7]`, 3.1 재생 절차 (`T-13` · `S-I7`의 대상), 3.2 상한 재산정 `[C7-F7]`, 3.3 T0 M2 Snapshot 내부 형식 — RFC-CX-003 director 승인 (+13 more)
+Cohesion: 0.13
+Nodes (22): 0. 표기 규약 (6개 스키마 공통), 1. 루트, 2.1 부식 저장 필드 없음 — 부식은 구성안 시험의 파생값 [RFC-P3-009 · C3-F27(c) · 2026-09-10], 2. Progress, 3.0 재생 단위는 **명령** 하나다 `[C7-F7 · 2026-09-10 R7]`, 3.1 재생 절차 (`T-13` · `S-I7`의 대상), 3.2 상한 재산정 `[C7-F7]`, 3.3 T0 M2 Snapshot 내부 형식 — RFC-CX-003 director 승인 (+14 more)
 
 ### Community 142 - "Community 142"
 Cohesion: 0.10
@@ -3407,8 +4566,8 @@ Cohesion: 0.13
 Nodes (17): code:block1 ($ cd _workspace/current/systems), code:block2 ($ git diff -U1 -- _workspace/current/systems/game-ui-contrac), code:block3 ($ cd _workspace/current/systems), code:block4 ($ python3 <skill>/game-ui-ux/scripts/validate-game-ui.py --s), code:block5 (python3 /Users/jangyoung/.aside/u/0/skills/user/game-ui-ux/s), game-ui-contract.json 메타, game-ui-contract.json 메타 (C5 — C4 검토 대응본), 검증 실행 `[OBSERVED]` (+9 more)
 
 ### Community 156 - "Community 156"
-Cohesion: 0.04
-Nodes (53): CommitReceipt, Tide.App, AtomicSaveStore, AnchorJson, BeatJson, KnobJson, KnobsJson, LineJson (+45 more)
+Cohesion: 0.03
+Nodes (65): AlignmentPeak, T0GameSession, Tide.App, CommitReceipt, Tide.App, AtomicSaveStore, RecordAsset, Tide.Data (+57 more)
 
 ### Community 159 - "Community 159"
 Cohesion: 0.12
@@ -3455,8 +4614,8 @@ Cohesion: 0.12
 Nodes (15): 0. 배정과 처리, 1.1 결함이 주장한 재현 실패의 재현 (선행 상태), 1.2 편집 후 재측정, 1.3 계약 JSON 재파싱·스키마 검증, 1.4 해시 재측정, 1. 실행한 명령과 관측 결과 [OBSERVED 2026-09-10 R8], 2. 「네 곳이 한 문장인가」 대조 `[C7-F35 required_fix]`, 3. 채택안과 기각안 (+7 more)
 
 ### Community 174 - "Community 174"
-Cohesion: 0.13
-Nodes (14): 0. 지위 · 정본 관계 · 실측 상태, 10. 변경 로그 (RFC-Q2 — 같은 사이클 제자리 갱신 = 개정), 1. 시간 기준 (timebase) — ms 가 정본, 프레임은 파생, 2. 클립 목록 10종, 3. 키 이벤트 표 — vfx·motion·QA 가 읽는 공유 진실, 4. 대상 자산이 없는 클립 2건 — `[BLOCKED:rig]`, 5. 저장 영수증 게이트 — `stamp_down` 전용 안전 규칙, 6. 저감모션(reduce motion) 대체 표 (+6 more)
+Cohesion: 0.20
+Nodes (16): 0. 지위 · 정본 관계 · 실측 상태, 10. 변경 로그 (RFC-Q2 — 같은 사이클 제자리 갱신 = 개정), 11. M22 — Blender MCP 직접 저작 클립 (RFC-CX-018), 1. 시간 기준 (timebase) — ms 가 정본, 프레임은 파생, 2. 클립 목록 10종, 3. 키 이벤트 표 — vfx·motion·QA 가 읽는 공유 진실, 4. 대상 자산이 없는 클립 2건 — `[BLOCKED:rig]`, 5. 저장 영수증 게이트 — `stamp_down` 전용 안전 규칙 (+8 more)
 
 ### Community 175 - "Community 175"
 Cohesion: 0.13
@@ -3471,8 +4630,8 @@ Cohesion: 0.07
 Nodes (30): dependencies, depth, source, version, dependencies, depth, source, version (+22 more)
 
 ### Community 181 - "Community 181"
-Cohesion: 0.07
-Nodes (11): T0GameSession, Tide.App, T0GameSession, CameraClearFlags, CancellationTokenSource, JObject, PuzzleCommand, Quaternion (+3 more)
+Cohesion: 0.05
+Nodes (14): T0GameSession, Tide.App, T0GameSession, Tide.App, T0GameSession, T0GameSession, Tide.App, CameraClearFlags (+6 more)
 
 ### Community 182 - "Community 182"
 Cohesion: 0.13
@@ -3591,12 +4750,12 @@ Cohesion: 0.15
 Nodes (12): crossChecks, clueIdOriginMedium, ledgerAnchors, plateAnchors, dryRun, emittedUtc, emitter, emitterOwner (+4 more)
 
 ### Community 214 - "Community 214"
-Cohesion: 0.07
-Nodes (20): Action, T0Entry, Tide.App, Event, Func, HoldProgressRing, IDeselectHandler, InputField (+12 more)
+Cohesion: 0.05
+Nodes (28): Action, M7ReaderStageVisual, T0GameSession, Tide.App, T0Entry, Tide.App, Coroutine, Event (+20 more)
 
 ### Community 216 - "Community 216"
-Cohesion: 0.15
-Nodes (12): 0.1 컨셉 입력 ↔ 매니페스트 대응과 행별 착수 판정 (C4-F10 재판정) [OBSERVED], 0. 상태 표기와 게이트, 1. 공간 셸 5, 2. 영웅 도구 6 — toolId는 캐논, 신규 생성 금지, 3. 인물 초상 5 (2D — 이 레인이 만들지 않는다), 4. 공용 소품 30 — 전역 공유 모듈 키트, 5. UI 아트 프레임 1 (2D), 6. 합계와 대조 (+4 more)
+Cohesion: 0.23
+Nodes (14): 0.1 컨셉 입력 ↔ 매니페스트 대응과 행별 착수 판정 (C4-F10 재판정) [OBSERVED], 0. 상태 표기와 게이트, 10. M22 한서린·Generic 양손 (RFC-CX-018), 1. 공간 셸 5, 2. 영웅 도구 6 — toolId는 캐논, 신규 생성 금지, 3. 인물 초상 5 (2D — 이 레인이 만들지 않는다), 4. 공용 소품 30 — 전역 공유 모듈 키트, 5. UI 아트 프레임 1 (2D) (+6 more)
 
 ### Community 218 - "Community 218"
 Cohesion: 0.11
@@ -3935,32 +5094,32 @@ Cohesion: 0.29
 Nodes (7): layout, anchors, aspect_families, reflow, safe_area, scrolling, text_scaling
 
 ### Community 365 - "Community 365"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, `beats.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1), code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, `beats.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1) (+1 more)
 
 ### Community 366 - "Community 366"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `hints.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 367 - "Community 367"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `records.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 368 - "Community 368"
 Cohesion: 0.29
 Nodes (7): toolBeatCounts, alignment, circuit, corrosion, reader, routing, seal
 
 ### Community 369 - "Community 369"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `tables-receipt.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 370 - "Community 370"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `tools.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 371 - "Community 371"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `zones.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 372 - "Community 372"
 Cohesion: 0.04
@@ -4003,8 +5162,8 @@ Cohesion: 0.33
 Nodes (6): ④-1 매핑표, ④-2 임포터 — 규칙을 재구현하지 **않는다**. 영수증을 대조한다 `[C6-F13 재작성 2026-09-10 R7]`, ④-3 `autoKeptClueIds`(필수 단서 자동 보존), ④ 데이터 — 스키마 6종 → Unity 표현 매핑과 임포터, code:block4 (planning/campaign.json ─▶ planning/validate-campaign.mjs   ←), code:block5 ($ node _workspace/current/planning/validate-campaign.mjs    )
 
 ### Community 383 - "Community 383"
-Cohesion: 0.33
-Nodes (5): C4 첫 실측 (2026-09-10) — 이 파일이 G5의 poly-budget 역할을 겸한다, G5가 아직 통과할 수 없는 이유, Modeling and Reuse Budget, 단계별 신규 자산, 수입 게이트
+Cohesion: 0.29
+Nodes (6): C4 첫 실측 (2026-09-10) — 이 파일이 G5의 poly-budget 역할을 겸한다, G5가 아직 통과할 수 없는 이유, M22 — 한서린과 조작 손의 명시적 범위 추가, Modeling and Reuse Budget, 단계별 신규 자산, 수입 게이트
 
 ### Community 384 - "Community 384"
 Cohesion: 0.04
@@ -4073,10 +5232,6 @@ Nodes (4): C2, C2~C4 결정 / 액션, C3, C4
 ### Community 400 - "Community 400"
 Cohesion: 0.06
 Nodes (31): beatId, checksum, commandLog, branchId, byteCap, entries, entryCap, headSeq (+23 more)
-
-### Community 401 - "Community 401"
-Cohesion: 0.06
-Nodes (11): byte, C1PatrolTests, Tide.Tests, C1SignatureTests, Tide.Tests, M9CoreTests, Tide.Tests, T0M2Tests (+3 more)
 
 ### Community 402 - "Community 402"
 Cohesion: 0.40
@@ -4234,6 +5389,10 @@ Nodes (3): plateReadout, path, sha256
 Cohesion: 0.25
 Nodes (8): code:block2 ($ bash .claude/skills/game-ops-harness/scripts/freshness-che), 재검증 6.1 명령과 출력 [OBSERVED], 재검증 6.2 판정, 재검증 6.3 동기화 결과 — 전 회차 최종 집계 [OBSERVED 2026-09-10 · 재검증 6 기준], 재검증 6.4 결함으로 올리지 않은 관측 (동기화 전용 회차), 재검증 6.5 이 회차가 바꾸지 않은 것, 재검증 6.6 `freshness-check.sh` 원문 [OBSERVED 2026-09-10 R7d · exit 0], 재검증 6 (R7d, 최종 동기화) — 2026-09-10
 
+### Community 451 - "Community 451"
+Cohesion: 0.12
+Nodes (4): BindingFlags, T0PlayModeTests, Tide.Tests, T0RuntimeConfig
+
 ### Community 454 - "Community 454"
 Cohesion: 0.21
 Nodes (26): payload, payload, cwd, hook_event_name, reason, session_id, transcript_path, agents_completed (+18 more)
@@ -4267,8 +5426,8 @@ Cohesion: 0.09
 Nodes (23): bytes, sha256, bytes, sha256, bytes, sha256, bytes, sha256 (+15 more)
 
 ### Community 478 - "Community 478"
-Cohesion: 0.24
-Nodes (12): aabb_relation(), action_fcurves(), key_spin(), main(), make_pivot(), parent_keep_transform(), M7 optical-reader articulation test (shot S02: forward -> stop -> return).  Head, keys: list of (frame, degrees offset about local X). (+4 more)
+Cohesion: 0.16
+Nodes (14): aabb_relation(), action_fcurves(), key_spin(), main(), make_pivot(), parent_keep_transform(), M7 optical-reader articulation test (shot S02: forward -> stop -> return).  Head, keys: list of (frame, degrees offset about local X). (+6 more)
 
 ### Community 479 - "Community 479"
 Cohesion: 0.10
@@ -4327,20 +5486,20 @@ Cohesion: 0.12
 Nodes (15): Answer, Bad examples, Evidence and Citations, Examples, Generic suggestions, # Overview, Overview, Planning or auditing instead of immediate action (+7 more)
 
 ### Community 499 - "Community 499"
-Cohesion: 0.14
-Nodes (8): T0Bootstrap, Tide.App, T0RuntimeConfig, Tide.App, T0CatalogAsset, Tide.Data, T0CatalogAsset, TextAsset
+Cohesion: 0.05
+Nodes (36): causal_chain, context, build, decision, evidence, player_context, contract_version, decisions (+28 more)
 
 ### Community 500 - "Community 500"
 Cohesion: 0.12
-Nodes (16): bytes, sha256, bytes, sha256, files, build-inputs.json, build-native.py.txt, native-1/prepared-0-of-2.png (+8 more)
+Nodes (16): bytes, sha256, files, build-native.py.txt, native-1-save/checkpoint.pre-commit.json.meta.md, native-2/first-confirm-still-0-of-2.png, native-2-save/checkpoint.pre-commit.json, native-2-save/save.bak.meta.md (+8 more)
 
 ### Community 501 - "Community 501"
 Cohesion: 0.12
 Nodes (15): bestEffortDeadlineAt, completion, completedAt, terminalDigest, terminalRevision, createdAt, jobId, owner (+7 more)
 
 ### Community 502 - "Community 502"
-Cohesion: 0.05
-Nodes (43): circuitOverlay, anchors, fineGridStep, gridStep, initialOffset, owner, value, owner (+35 more)
+Cohesion: 0.04
+Nodes (46): circuitOverlay, anchors, fineGridStep, gridStep, initialOffset, owner, value, owner (+38 more)
 
 ### Community 503 - "Community 503"
 Cohesion: 0.12
@@ -4367,8 +5526,8 @@ Cohesion: 0.12
 Nodes (15): canonicalGraphs, command, cwd, exitCode, finishedUtc, inputs, App/T0GameSession.cs, Input/WatchInput.cs (+7 more)
 
 ### Community 509 - "Community 509"
-Cohesion: 0.10
-Nodes (14): Canvas, Dictionary, Font, RawImage, Rect, RectTransform, ScrollRect, T0Interface (+6 more)
+Cohesion: 0.07
+Nodes (21): Bounds, Canvas, Dictionary, ImportedRig, Font, RawImage, Rect, RectTransform (+13 more)
 
 ### Community 510 - "Community 510"
 Cohesion: 0.12
@@ -4467,8 +5626,8 @@ Cohesion: 0.17
 Nodes (12): lightingEnabled, readerEnabled, preview, combinations, conditionAcknowledgementIsCandidateOnly, conditionAcknowledgementRequired, initialConfiguration, requiredObservedClueIds (+4 more)
 
 ### Community 552 - "Community 552"
-Cohesion: 0.08
-Nodes (11): HashSet, InkMark, InkMark, T0CommitFeedback, Tide.Presentation, CommandResult, PuzzleCommand, PuzzleEvent (+3 more)
+Cohesion: 0.06
+Nodes (15): HashSet, InkMark, InkMark, T0CommitFeedback, Tide.Presentation, CommandJournal, JournalEntry, JournalSnapshot (+7 more)
 
 ### Community 553 - "Community 553"
 Cohesion: 0.24
@@ -4692,7 +5851,7 @@ Nodes (11): intentKey, payloadDigest, sealedAt, sealedBy, state, producers, core
 
 ### Community 636 - "Community 636"
 Cohesion: 0.12
-Nodes (16): authoringSources, circuitOverlay, hubModel, interaction, records, zonesSchema, path, sha256 (+8 more)
+Nodes (16): authoringSources, bible, circuitOverlay, interaction, toolsSchema, zonesSchema, path, sha256 (+8 more)
 
 ### Community 637 - "Community 637"
 Cohesion: 0.18
@@ -4751,8 +5910,8 @@ Cohesion: 0.20
 Nodes (10): journalCondition, actorDisplayName, clueSourceRefs, id, inferenceForbidden, journalOriginId, labelKey, recordingBoundary (+2 more)
 
 ### Community 659 - "Community 659"
-Cohesion: 0.20
-Nodes (9): 1. 플레이어 약속, 2. 첫 60초의 비파괴적 루프, 3. 이번 구현 범위, T0 재리서치 → 구현 브리프 R01, T0의 설계 판정, 결론, 성공 조건, 외부 리서치 — 관찰과 한계 (+1 more)
+Cohesion: 0.14
+Nodes (13): 1. 플레이어 약속, 2. 첫 60초의 비파괴적 루프, 3. 이번 구현 범위, M22 — 관찰·도구 조작·대조·확정의 플레이 구성 (2026-09-13), T0 재리서치 → 구현 브리프 R01, T0의 설계 판정, 결론, 성공 조건 (+5 more)
 
 ### Community 660 - "Community 660"
 Cohesion: 0.07
@@ -4863,8 +6022,8 @@ Cohesion: 0.20
 Nodes (10): openclaw, attempts, budgetMs, claimedAt, class, completedAt, idempotencyKey, lastOutcomeCode (+2 more)
 
 ### Community 698 - "Community 698"
-Cohesion: 0.18
-Nodes (5): IDisposable, Tide.Input, WatchInput, Keyboard, RebindingOperation
+Cohesion: 0.04
+Nodes (45): bundleId, name, pid, id, _meta, runtimeId, engine, windowId (+37 more)
 
 ### Community 699 - "Community 699"
 Cohesion: 0.20
@@ -5216,7 +6375,7 @@ Nodes (6): agents_completed, agents_spawned, ended_at, modes_used, reason, sessi
 
 ### Community 813 - "Community 813"
 Cohesion: 0.08
-Nodes (24): Decision Log (append-only; RFC-n ids unique), RFC-CX-002 · 신규 리소스 제공자 MuAPI / Higgsfield, RFC-CX-002 연결 확인 후속 · 2026-09-10, RFC-CX-006 — Image generation uses god-tibo-imagen (2026-09-11), RFC-CX-008 — Higgsfield MCP cinematic and play-method films (2026-09-11), RFC-CX-009 — Original-concept-first films and GTI resource rebuild direction (2026-09-11), RFC-CX-010 delivery evidence — 2026-09-11, RFC-CX-010 — Source-informed offline review notes (2026-09-11) (+16 more)
+Nodes (25): Decision Log (append-only; RFC-n ids unique), RFC-CX-006 — Image generation uses god-tibo-imagen (2026-09-11), RFC-CX-008 — Higgsfield MCP cinematic and play-method films (2026-09-11), RFC-CX-009 — Original-concept-first films and GTI resource rebuild direction (2026-09-11), RFC-CX-011 — M9 완성도 hop: 코어루프·튜토리얼·리소스 반영 연출·밸런스 (2026-09-11), RFC-CX-013 — M7 컨셉 리소스의 T0 스테이지1 런타임 반영: UI/UX·연출·GUI (2026-09-11), RFC-CX-013 — RFC-CX-012 이월 해소: 저작 주석 정합·훈련→연습·R3 회수 위치 K-07·Unity 테이블 재동기 (2026-09-11, decided_by: game-production-director), RFC-CX-014 — M7 컨셉 리소스의 T0 스테이지1 런타임 반영: UI/UX·연출·GUI (2026-09-11) (+17 more)
 
 ### Community 814 - "Community 814"
 Cohesion: 0.29
@@ -5427,32 +6586,32 @@ Cohesion: 0.33
 Nodes (5): runner, pid, processStartIdentity, state, stoppedAt
 
 ### Community 879 - "Community 879"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, `beats.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1), code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, `beats.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1) (+1 more)
 
 ### Community 880 - "Community 880"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `hints.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 881 - "Community 881"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `records.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 882 - "Community 882"
 Cohesion: 0.29
 Nodes (7): toolBeatCounts, alignment, circuit, corrosion, reader, routing, seal
 
 ### Community 883 - "Community 883"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `tables-receipt.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 884 - "Community 884"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `tools.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 885 - "Community 885"
-Cohesion: 0.25
-Nodes (7): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o), `zones.json` 메타 — T0 인스턴스 데이터 (RFC-C7-001 · C7-F1)
+Cohesion: 0.20
+Nodes (9): 1. 생성 명령, 2. 이번 출력 [OBSERVED 2026-09-10], 2. 이번 출력 [OBSERVED 2026-09-11], 2. 이번 출력 [OBSERVED 2026-09-12], 2. 이번 출력 [OBSERVED 2026-09-13], 3. 저작 출처 (이번 실행이 읽은 파일), 4. runtime 관측, code:block1 (node _workspace/current/systems/pipeline/emit-tables.mjs --o) (+1 more)
 
 ### Community 887 - "Community 887"
 Cohesion: 0.33
@@ -6835,8 +7994,8 @@ Cohesion: 0.67
 Nodes (3): bytes, sha256, diagnostic-T0GameSession.cs.txt.meta.md
 
 ### Community 1295 - "Community 1295"
-Cohesion: 0.05
-Nodes (42): C1SignatureViewSettings, Tide.App, C1ViewSettings, Tide.App, T0GameSession, Tide.App, bool, Color (+34 more)
+Cohesion: 0.06
+Nodes (48): AlignmentPracticeView, AnimationClip, C1SignatureViewSettings, Tide.App, C1ViewSettings, Tide.App, T0GameSession, Tide.App (+40 more)
 
 ### Community 1296 - "Community 1296"
 Cohesion: 0.67
@@ -7019,8 +8178,8 @@ Cohesion: 0.67
 Nodes (3): native-1/intake-document-0-of-2.png, bytes, sha256
 
 ### Community 1341 - "Community 1341"
-Cohesion: 0.27
-Nodes (3): C1SignatureDefinition, SignatureHumidity, Tide.Sim
+Cohesion: 0.21
+Nodes (4): C1SignatureDefinition, SignatureHumidity, SignatureProofSource, Tide.Sim
 
 ### Community 1342 - "Community 1342"
 Cohesion: 0.12
@@ -7186,6 +8345,10 @@ Nodes (5): runner, pid, processStartIdentity, state, stoppedAt
 Cohesion: 0.33
 Nodes (5): code:yaml (review:), T0 회로 좌표 패킷 경제 검토, 검토 입력과 경계, 유지하는 정본 계약, 판정과 미측정 항목
 
+### Community 1384 - "Community 1384"
+Cohesion: 0.10
+Nodes (21): actionReceipt, bytes, path, sha256, boundaries, buildAssembly, bytes, path (+13 more)
+
 ### Community 1385 - "Community 1385"
 Cohesion: 0.33
 Nodes (5): runner, pid, processStartIdentity, state, stoppedAt
@@ -7223,8 +8386,8 @@ Cohesion: 0.40
 Nodes (4): cwd, pid, session_id, started_at
 
 ### Community 1394 - "Community 1394"
-Cohesion: 0.13
-Nodes (7): AmbientMode, T0GameSession, Tide.App, M7HubProfile, M7HubPlayModeTests, Tide.Tests, Scene
+Cohesion: 0.14
+Nodes (6): AmbientMode, T0GameSession, Tide.App, M7HubProfile, M7HubPlayModeTests, Tide.Tests
 
 ### Community 1395 - "Community 1395"
 Cohesion: 0.15
@@ -7243,8 +8406,8 @@ Cohesion: 0.40
 Nodes (4): Answer, $ecc make the game based on workspace and develop resource with blender, heiggs…, Evidence and Citations, Question
 
 ### Community 1399 - "Community 1399"
-Cohesion: 0.67
-Nodes (3): native-1-player.log.meta.md, bytes, sha256
+Cohesion: 0.07
+Nodes (28): 1. 결론: 가장 먼저 개발·검증할 다섯 가지, 2.1 현재 상태, 2.2 정본 충돌·표현 위험·검증 공백, 2. 현황표: 완료된 기술과 아직 증명하지 못한 경험, 3.1 규칙 → 행동 → 피드백 → 실패·회복, 3.2 벌칙 없이도 긴장·책임·발견을 만드는 방법, 3.3 결과 프리뷰와 정답 누설의 경계, 3. 유지해야 할 핵심 규칙과 플레이어 신뢰 (+20 more)
 
 ### Community 1400 - "Community 1400"
 Cohesion: 0.67
@@ -7659,8 +8822,8 @@ Cohesion: 0.67
 Nodes (3): outdoorArea, en, ko
 
 ### Community 1523 - "Community 1523"
-Cohesion: 0.22
-Nodes (3): Mouse, ScrollReachabilityTests, Tide.Tests
+Cohesion: 0.21
+Nodes (3): byte, C1PatrolTests, Tide.Tests
 
 ### Community 1524 - "Community 1524"
 Cohesion: 0.67
@@ -7707,8 +8870,8 @@ Cohesion: 0.67
 Nodes (3): previousPage, en, ko
 
 ### Community 1535 - "Community 1535"
-Cohesion: 0.17
-Nodes (6): ReviewNoteSource, T0GameSession, Tide.App, M8ReviewNotesProfile, ReviewNotesStore, Task
+Cohesion: 0.10
+Nodes (8): T0GameSession, Tide.App, ReviewNoteSource, T0GameSession, Tide.App, M8ReviewNotesProfile, ReviewNotesStore, Task
 
 ### Community 1536 - "Community 1536"
 Cohesion: 0.67
@@ -7883,8 +9046,8 @@ Cohesion: 0.67
 Nodes (3): native-1/reader-post-b2-0-of-2.png.meta.md, bytes, sha256
 
 ### Community 1582 - "Community 1582"
-Cohesion: 0.67
-Nodes (3): native-1-save/checkpoint.pre-commit.json.meta.md, bytes, sha256
+Cohesion: 0.11
+Nodes (18): Accepted, en, ko, CommitSaved, en, ko, CommitSaving, en (+10 more)
 
 ### Community 1583 - "Community 1583"
 Cohesion: 0.06
@@ -7903,8 +9066,8 @@ Cohesion: 0.67
 Nodes (3): native-1-save/save.json, bytes, sha256
 
 ### Community 1587 - "Community 1587"
-Cohesion: 0.67
-Nodes (3): native-1-save/save.json.meta.md, bytes, sha256
+Cohesion: 0.04
+Nodes (45): bundleId, name, pid, id, _meta, runtimeId, engine, windowId (+37 more)
 
 ### Community 1588 - "Community 1588"
 Cohesion: 0.67
@@ -7913,6 +9076,10 @@ Nodes (3): native-1/start-0-of-2.png, bytes, sha256
 ### Community 1597 - "Community 1597"
 Cohesion: 0.18
 Nodes (10): attempt, baseCommit, claim, excludedDirtyPaths, overlay, project, protectedHashes, unity/Unknown/Assets/_Project/App/T0OpeningSession.cs (+2 more)
+
+### Community 1623 - "Community 1623"
+Cohesion: 0.14
+Nodes (8): T0Bootstrap, Tide.App, T0RuntimeConfig, Tide.App, T0CatalogAsset, Tide.Data, T0CatalogAsset, TextAsset
 
 ### Community 1624 - "Community 1624"
 Cohesion: 0.29
@@ -8043,8 +9210,8 @@ Cohesion: 0.67
 Nodes (3): native-2-save/save.bak, bytes, sha256
 
 ### Community 1671 - "Community 1671"
-Cohesion: 0.67
-Nodes (3): native-2-save/save.bak.meta.md, bytes, sha256
+Cohesion: 0.11
+Nodes (17): blockers, claimCoverage, duplicateClaims, missingClaims, source, status, claims, inputs (+9 more)
 
 ### Community 1672 - "Community 1672"
 Cohesion: 0.67
@@ -8872,19 +10039,19 @@ Nodes (17): blender_version, outputs, measurements.json, preview.png, prompt.txt
 
 ### Community 2138 - "Community 2138"
 Cohesion: 0.19
-Nodes (14): adopt(), box(), cylinder(), cylinder_x(), linear_hex(), make_surface(), mix(), plain_material() (+6 more)
+Nodes (15): adopt(), box(), cylinder(), cylinder_x(), linear_hex(), make_surface(), mesh_measure(), mix() (+7 more)
 
 ### Community 2139 - "Community 2139"
 Cohesion: 0.19
-Nodes (14): adopt(), box(), cylinder(), cylinder_x(), linear_hex(), make_surface(), mix(), plain_material() (+6 more)
+Nodes (15): adopt(), box(), cylinder(), cylinder_x(), linear_hex(), make_surface(), mesh_measure(), mix() (+7 more)
 
 ### Community 2141 - "Community 2141"
 Cohesion: 0.26
 Nodes (3): Gamepad, C1PlayModeTests, Tide.Tests
 
 ### Community 2142 - "Community 2142"
-Cohesion: 0.29
-Nodes (3): BackgroundBehavior, T0ResourceInteractionTests, Tide.Tests
+Cohesion: 0.05
+Nodes (17): BackgroundBehavior, IDisposable, Tide.Input, WatchInput, Keyboard, Mouse, ScrollReachabilityTests, Tide.Tests (+9 more)
 
 ### Community 2143 - "Community 2143"
 Cohesion: 0.12
@@ -8929,6 +10096,10 @@ Nodes (15): comparison, absoluteEndTime, absoluteStartTime, derivesSignerIdentit
 ### Community 2153 - "Community 2153"
 Cohesion: 0.13
 Nodes (15): comparison, absoluteEndTime, absoluteStartTime, derivesSignerIdentity, explicitActionRequired, id, numericCurveSamples, plateOriginId (+7 more)
+
+### Community 2154 - "Community 2154"
+Cohesion: 0.04
+Nodes (45): bundleId, name, pid, id, _meta, runtimeId, engine, windowId (+37 more)
 
 ### Community 2155 - "Community 2155"
 Cohesion: 0.14
@@ -9027,8 +10198,8 @@ Cohesion: 0.20
 Nodes (10): callback, attempts, budgetMs, claimedAt, class, completedAt, idempotencyKey, lastOutcomeCode (+2 more)
 
 ### Community 2179 - "Community 2179"
-Cohesion: 0.20
-Nodes (10): notification, attempts, budgetMs, claimedAt, class, completedAt, idempotencyKey, lastOutcomeCode (+2 more)
+Cohesion: 0.22
+Nodes (9): foreground-cleanup, attempts, budgetMs, class, completedAt, idempotencyKey, lastOutcomeCode, phase (+1 more)
 
 ### Community 2180 - "Community 2180"
 Cohesion: 0.20
@@ -9202,6 +10373,10 @@ Nodes (5): runner, pid, processStartIdentity, state, stoppedAt
 Cohesion: 0.33
 Nodes (6): entry, autoCompletesOnEntry, blockedReasonKey, explicitContinueRequired, requiredCompletedBeatIds, requiresT0Complete
 
+### Community 2224 - "Community 2224"
+Cohesion: 0.19
+Nodes (3): T0Simulation, Tide.Sim, T0Definition
+
 ### Community 2225 - "Community 2225"
 Cohesion: 0.22
 Nodes (8): Acceptance-critical findings, C1 M4 independent review — c1-b2 only, Delivery source and test closure, Gate boundaries, Native route, interaction and restart, Startup and 150% layout follow-up, Static acceptance and evidence history, Static acceptance evidence
@@ -9308,7 +10483,7 @@ Nodes (29): actual_duration_seconds, asset_id, audio_note, audio_streams, billin
 
 ### Community 2258 - "Community 2258"
 Cohesion: 0.12
-Nodes (15): bootRetries, carried, cycle, executedBy, promotionLane, reVerificationBuildSmoke, thisReceipt, milestone (+7 more)
+Nodes (15): bootRetries, carried, cycle, milestone, notMeasured, owner, promotedProfiles, repairs (+7 more)
 
 ### Community 2259 - "Community 2259"
 Cohesion: 0.50
@@ -9422,6 +10597,10 @@ Nodes (29): actual_size, asset_id, bytes, cli_version, commercialReleaseEligible
 Cohesion: 0.07
 Nodes (29): actual_size, asset_id, bytes, cli_version, commercialReleaseEligible, credits_actual, generated_at, job_id (+21 more)
 
+### Community 2312 - "Community 2312"
+Cohesion: 0.10
+Nodes (5): M5DirectionProfile, M5DirectionPlayModeTests, Tide.Tests, T0IntroReplayReducedMotionTests, Tide.Tests
+
 ### Community 2313 - "Community 2313"
 Cohesion: 0.07
 Nodes (27): actual_duration_seconds, asset_id, audio_streams, billing_note, bytes, claim, cli_version_for_token_bootstrap, commercialReleaseEligible (+19 more)
@@ -9431,8 +10610,8 @@ Cohesion: 0.08
 Nodes (25): client_metadata, include, input, instructions, model, parallel_tool_calls, reasoning, store (+17 more)
 
 ### Community 2315 - "Community 2315"
-Cohesion: 0.20
-Nodes (4): M7ReaderProjectBuilder, MaterialSpec, TextureSet, Tide.EditorTools
+Cohesion: 0.22
+Nodes (3): M7ReaderProjectBuilder, TextureSet, Tide.EditorTools
 
 ### Community 2318 - "Community 2318"
 Cohesion: 0.08
@@ -9991,8 +11170,8 @@ Cohesion: 0.13
 Nodes (14): artReview, commercialReleaseEligible, currentRuntimeVisualInputs, futureResources, id, limitations, schemaVersion, scope (+6 more)
 
 ### Community 2458 - "Community 2458"
-Cohesion: 0.50
-Nodes (4): bytes, path, sha256, editTimeline
+Cohesion: 0.11
+Nodes (18): command, communities, coveredSourceFiles, edges, files, limitations, newModelTokens, nodes (+10 more)
 
 ### Community 2459 - "Community 2459"
 Cohesion: 0.07
@@ -10303,8 +11482,8 @@ Cohesion: 0.40
 Nodes (5): audio_review, audition_status, decision, included_in_final_films, raw_generated_audio_preserved
 
 ### Community 2593 - "Community 2593"
-Cohesion: 0.40
-Nodes (5): playmode-final.xml, failed, passed, skipped, total
+Cohesion: 0.22
+Nodes (8): 0. What this increment is, 1. Defect found (P2 — persistence + accessibility), 2. Change (exact paths), 3. TDD evidence, 4. Full regression, 5. M14 preservation, 6. Limits (explicitly not claimed), M15 player settings survive a recovery-slot switch
 
 ### Community 2594 - "Community 2594"
 Cohesion: 0.50
@@ -10899,8 +12078,8 @@ Cohesion: 0.50
 Nodes (3): code:text (기존의 세계관과 컨셉이미지를 바탕으로 일관성을 유지하고, 현재 게임플레이 프랩이나 리소스는 참고하지마, 프로), Prompt, 기존의 세계관과 컨셉이미지를 바탕으로 일관성을 유지하고, 현재 게임플레이 프랩이나 리소스는 참고하지마, 프로젝트의 프랩과 리소스를 영상에 맞춰…
 
 ### Community 2746 - "Community 2746"
-Cohesion: 0.22
-Nodes (9): foreground-cleanup, attempts, budgetMs, class, completedAt, idempotencyKey, lastOutcomeCode, phase (+1 more)
+Cohesion: 0.04
+Nodes (45): bundleId, name, pid, id, _meta, runtimeId, engine, windowId (+37 more)
 
 ### Community 2747 - "Community 2747"
 Cohesion: 0.50
@@ -10911,8 +12090,8 @@ Cohesion: 0.50
 Nodes (4): originalReaderFinding, comparisonWithCurrent, originalOnlyConclusion, promptSubject
 
 ### Community 2749 - "Community 2749"
-Cohesion: 0.33
-Nodes (3): T0BootSceneTests, Tide.Tests, T0GameSession
+Cohesion: 0.29
+Nodes (7): reproducibilityCheck, bytes, deltaBytes, firstBuildBytes, interpretation, log, note
 
 ### Community 2750 - "Community 2750"
 Cohesion: 0.50
@@ -10935,8 +12114,8 @@ Cohesion: 0.50
 Nodes (4): delivery_deviations, aspect_ratio, audio, duration
 
 ### Community 2756 - "Community 2756"
-Cohesion: 0.50
-Nodes (4): upload_receipt, bytes, path, sha256
+Cohesion: 0.04
+Nodes (45): bundleId, name, pid, id, _meta, runtimeId, engine, windowId (+37 more)
 
 ### Community 2757 - "Community 2757"
 Cohesion: 0.50
@@ -10994,10 +12173,6 @@ Nodes (3): actual_size, height, width
 Cohesion: 0.67
 Nodes (3): actual_size, height, width
 
-### Community 2771 - "Community 2771"
-Cohesion: 0.67
-Nodes (3): native-1-save/checkpoint.pre-commit.json, bytes, sha256
-
 ### Community 2772 - "Community 2772"
 Cohesion: 0.67
 Nodes (3): native-2/first-confirm-still-0-of-2.png.meta.md, bytes, sha256
@@ -11051,8 +12226,8 @@ Cohesion: 0.22
 Nodes (8): code:yaml (scene: m8-reflection-note), GTI 미래 자원 연결, M8 연출 — 검토 노트에서 다음 관측으로, 검수 관점, 구현 대조와 연출 목표 구분, 단계 공개 규칙, 타이밍과 감각, 화면 구조와 입력
 
 ### Community 2791 - "Community 2791"
-Cohesion: 0.67
-Nodes (3): native-2/first-confirm-still-0-of-2.png, bytes, sha256
+Cohesion: 0.22
+Nodes (17): run, run, asserts, clr-version, duration, end-time, engine-version, failed (+9 more)
 
 ### Community 2792 - "Community 2792"
 Cohesion: 0.67
@@ -11083,12 +12258,12 @@ Cohesion: 0.67
 Nodes (3): native-1/prepared-0-of-2.png.meta.md, bytes, sha256
 
 ### Community 2799 - "Community 2799"
-Cohesion: 0.22
-Nodes (4): CommandJournal, JournalEntry, JournalSnapshot, Tide.Sim
+Cohesion: 0.05
+Nodes (43): artifacts, boundaries, capture, createdUtc, diagnosticFlags, editing, audio, screenshots (+35 more)
 
 ### Community 2800 - "Community 2800"
-Cohesion: 0.50
-Nodes (4): productionReceipt, bytes, path, sha256
+Cohesion: 0.33
+Nodes (5): Change, Evidence, Limits, M14 T0 b1 spoiler-free objective, Scope
 
 ### Community 2801 - "Community 2801"
 Cohesion: 0.11
@@ -11115,8 +12290,8 @@ Cohesion: 0.20
 Nodes (11): box(), cam(), coll(), cone(), cyl(), _finish(), light(), link_to() (+3 more)
 
 ### Community 2810 - "Community 2810"
-Cohesion: 0.50
-Nodes (4): 8.4 신규 결함 — C3-F34 ~ C3-F36, C3-F34 · S2 · worldview — 정합 감사가 이미 닫힌 위반을 "2차 재측정" 표제 아래 현행 `[OBSERVED]`로 유지한다 · open, C3-F35 · S2 · planner / economy — 원본 상태 카운터의 이름이 세 벌이고, 기획서가 **철회된 필드명**을 "채택안"으로 인용한다 · open, C3-F36 · S3 · systems — 프로토타입이 순서 앵커 쌍을 **폐기된 두 이름**으로 라벨링한다 · open
+Cohesion: 0.12
+Nodes (15): actions, automationBoundaries, confirmed, cooldownSeconds, diagnosticFlags, idleSeconds, launchArguments, notClaimed (+7 more)
 
 ### Community 2812 - "Community 2812"
 Cohesion: 0.50
@@ -11125,10 +12300,6 @@ Nodes (3): M9 완성도 hop — SYS-M8 구현 보고 (RFC-CX-011 S-E·S-F), 계�
 ### Community 2813 - "Community 2813"
 Cohesion: 0.15
 Nodes (12): baseCommit, id, independentCodeReview, file, sha256, limits, nativeRuns, priorAttempts (+4 more)
-
-### Community 2814 - "Community 2814"
-Cohesion: 0.25
-Nodes (3): T0GameSession, Tide.App, M5DirectionProfile
 
 ### Community 2815 - "Community 2815"
 Cohesion: 0.13
@@ -11195,8 +12366,8 @@ Cohesion: 0.33
 Nodes (6): command, exitCode, findings, markdownArtifacts, scope, freshness
 
 ### Community 2831 - "Community 2831"
-Cohesion: 0.67
-Nodes (3): native-1-launch.json, bytes, sha256
+Cohesion: 0.07
+Nodes (42): body_band, M19_baseline, M20_gate_on, M21_gate_on, body_band_rect_xyxy, capture_size, control_rect_xyxy, empty_surface_control (+34 more)
 
 ### Community 2832 - "Community 2832"
 Cohesion: 0.40
@@ -11211,8 +12382,8 @@ Cohesion: 0.40
 Nodes (5): nativeSmoke, exactTextPreserved, file, gameplaySaveByteUnchanged, physicalImeCompositionTested
 
 ### Community 2835 - "Community 2835"
-Cohesion: 0.67
-Nodes (3): native-1/first-confirm-still-0-of-2.png, bytes, sha256
+Cohesion: 0.13
+Nodes (14): freshWorkSurfaceAlpha, openingRecreationParity, firstCaption, firstShotSeconds, firstTitle, secondCaption, secondShotSeconds, secondTitle (+6 more)
 
 ### Community 2836 - "Community 2836"
 Cohesion: 0.50
@@ -11251,8 +12422,8 @@ Cohesion: 0.67
 Nodes (3): native-2/reader-post-b2-0-of-2.png.meta.md, bytes, sha256
 
 ### Community 2846 - "Community 2846"
-Cohesion: 0.17
-Nodes (7): M7ReaderStageVisual, T0GameSession, Tide.App, Coroutine, Light, M7ReaderStageProfile, Transform
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2847 - "Community 2847"
 Cohesion: 0.67
@@ -11323,8 +12494,8 @@ Cohesion: 0.67
 Nodes (3): two-step, en, ko
 
 ### Community 2864 - "Community 2864"
-Cohesion: 0.67
-Nodes (3): native-2/drawer-visible-pointer.png.meta.md, bytes, sha256
+Cohesion: 0.13
+Nodes (15): blender, dirtyStatePreservedClaim, executed, lastExportRpc, originalSceneChecks, productionCalls, receipt, sourceRecipe (+7 more)
 
 ### Community 2865 - "Community 2865"
 Cohesion: 0.67
@@ -11355,8 +12526,8 @@ Cohesion: 0.14
 Nodes (14): fbx, blender, exporter, fileCount, files, instantiatedAtRuntime, report, sourceBlendShaUnchanged (+6 more)
 
 ### Community 2876 - "Community 2876"
-Cohesion: 0.67
-Nodes (3): completedAt, removedTransientFiles, foregroundResult
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2877 - "Community 2877"
 Cohesion: 0.15
@@ -11367,16 +12538,16 @@ Cohesion: 0.67
 Nodes (3): records, path, sha256
 
 ### Community 2879 - "Community 2879"
-Cohesion: 0.67
-Nodes (3): toolsSchema, path, sha256
+Cohesion: 0.50
+Nodes (4): executedBy, promotionLane, reVerificationBuildSmoke, thisReceipt
 
 ### Community 2880 - "Community 2880"
 Cohesion: 0.67
 Nodes (3): manifest, path, sha256
 
 ### Community 2881 - "Community 2881"
-Cohesion: 0.67
-Nodes (3): wiring, path, sha256
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2883 - "Community 2883"
 Cohesion: 0.15
@@ -11395,8 +12566,8 @@ Cohesion: 0.17
 Nodes (11): code:block1 (UNITY=/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Co), code:block2 (M7_HUB_SHELL_IMPORTED textures=6 materials=3 runtimeApproved), M7 신규 8개 — 전부 Passed, M7 원본 컨셉 우선 리소스 — T0 stage-1 런타임 배선 검증 (RFC-CX-013), 결과, 경계와 후속 작업, 네이티브 캡처, 실제 배선 (+3 more)
 
 ### Community 2887 - "Community 2887"
-Cohesion: 0.31
-Nodes (3): Candidate, M7HubProjectBuilder, Tide.EditorTools
+Cohesion: 0.08
+Nodes (15): Candidate, M7HubProjectBuilder, Tide.EditorTools, Graphic, MaskableGraphic, AlignmentPracticeChart, Tide.UI, ReadingBandFollow (+7 more)
 
 ### Community 2889 - "Community 2889"
 Cohesion: 0.18
@@ -11415,8 +12586,8 @@ Cohesion: 0.20
 Nodes (10): builderMenuItem, candidateFolder, gateFlag, importAudit, importReceipt, profileAsset, profileScript, sessionPartial (+2 more)
 
 ### Community 2893 - "Community 2893"
-Cohesion: 0.33
-Nodes (3): Candidate, M7UiSkinProjectBuilder, Tide.EditorTools
+Cohesion: 0.16
+Nodes (14): bytes, path, sha256, focusRestorationProof, boundary, counting, currentTestSource, inputPath (+6 more)
 
 ### Community 2894 - "Community 2894"
 Cohesion: 0.22
@@ -11479,8 +12650,8 @@ Cohesion: 0.33
 Nodes (6): unity, batchFlags, editor, graphicsDevice, project, renderPipeline
 
 ### Community 2909 - "Community 2909"
-Cohesion: 0.40
-Nodes (5): dependencies, depth, source, version, com.unity.modules.umbra
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2910 - "Community 2910"
 Cohesion: 0.40
@@ -11504,7 +12675,7 @@ Nodes (3): native-2/drawer-renderer-only-blocked.png.meta.md, bytes, sha256
 
 ### Community 2915 - "Community 2915"
 Cohesion: 0.67
-Nodes (3): native-2-save/checkpoint.pre-commit.json.bak.meta.md, bytes, sha256
+Nodes (3): hubModel, path, sha256
 
 ### Community 2916 - "Community 2916"
 Cohesion: 0.50
@@ -11618,6 +12789,10 @@ Nodes (7): headerBar, nodeList, rightMainPanel, rightTopPanel, toolbar, viewport
 Cohesion: 0.29
 Nodes (6): 1. 자동 보존 단서 id 노출 — **수리** (D-M9-17 잔여), 2. t0-b2 objective 저작 지시문 노출 — **오류 이월 · 종결** (D-M9-11), 3. 눈금 선택기 휠 스크롤 미도달 — **차단 지점 없음 · 계측 한계로 판정** (+ 회귀 3건 추가), code:block1 (✓ 인수 각서의 보존 단서), RFC-CX-016 남은 작업 마감 (M13) — 이월 3건 판정, 경계
 
+### Community 2948 - "Community 2948"
+Cohesion: 0.23
+Nodes (3): M9CoreTests, Tide.Tests, T0Simulation
+
 ### Community 2949 - "Community 2949"
 Cohesion: 0.33
 Nodes (6): evidence, decisionLog, editFormatReference, m5VideoPrecedent, playtestReceipt, playtestReceiptJson
@@ -11675,8 +12850,8 @@ Cohesion: 0.50
 Nodes (4): interruptedLane, interruptedAt, lastUtteranceItems, wroteOwnReceipt
 
 ### Community 2963 - "Community 2963"
-Cohesion: 0.50
-Nodes (4): repairs, method, notOwnedByPromotionLane, ownedByPromotionLane
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2964 - "Community 2964"
 Cohesion: 0.67
@@ -11687,12 +12862,12 @@ Cohesion: 0.67
 Nodes (3): native-2/completed-2-of-2.png, bytes, sha256
 
 ### Community 2966 - "Community 2966"
-Cohesion: 0.67
-Nodes (3): native-2-save/checkpoint.pre-commit.json.bak, bytes, sha256
+Cohesion: 0.14
+Nodes (14): openingCopyDurationAndResourceParity, permanentSnapshotTestRestored, protectedFallbackRecordNames, safeAuthoredObjectivePrecedence, workSurfaceAlpha, contractCorrections, authoredDefaults, inventory (+6 more)
 
 ### Community 2967 - "Community 2967"
-Cohesion: 0.67
-Nodes (3): native-2/start-0-of-2.png.meta.md, bytes, sha256
+Cohesion: 0.22
+Nodes (9): inputOrderingProof, activityHandler, counting, inputPath, observedInvariants, passedCases, runtimeChanged, testSourceSha256AtRun (+1 more)
 
 ### Community 2968 - "Community 2968"
 Cohesion: 0.67
@@ -11735,29 +12910,3249 @@ Cohesion: 0.67
 Nodes (3): toolWheel, en, ko
 
 ### Community 2978 - "Community 2978"
-Cohesion: 0.67
-Nodes (3): bible, path, sha256
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
 
 ### Community 2979 - "Community 2979"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2980 - "Community 2980"
+Cohesion: 0.14
+Nodes (14): bytes, path, sha256, build, application, assembly, burstCompilation, editorWarnings (+6 more)
+
+### Community 2981 - "Community 2981"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2982 - "Community 2982"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2983 - "Community 2983"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2984 - "Community 2984"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2985 - "Community 2985"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2986 - "Community 2986"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2987 - "Community 2987"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2988 - "Community 2988"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2989 - "Community 2989"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2990 - "Community 2990"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2991 - "Community 2991"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2992 - "Community 2992"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2993 - "Community 2993"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2994 - "Community 2994"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2995 - "Community 2995"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2996 - "Community 2996"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2997 - "Community 2997"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2998 - "Community 2998"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 2999 - "Community 2999"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 3000 - "Community 3000"
+Cohesion: 0.14
+Nodes (31): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+23 more)
+
+### Community 3001 - "Community 3001"
+Cohesion: 0.05
+Nodes (39): assets_generated_changed, baselined_files, byte_identical, changed, git_commands_not_run, graphify_out_changed, head_before, head_now (+31 more)
+
+### Community 3002 - "Community 3002"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3003 - "Community 3003"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3004 - "Community 3004"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3005 - "Community 3005"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3006 - "Community 3006"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3007 - "Community 3007"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3008 - "Community 3008"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3009 - "Community 3009"
+Cohesion: 0.14
+Nodes (30): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+22 more)
+
+### Community 3010 - "Community 3010"
+Cohesion: 0.14
+Nodes (29): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+21 more)
+
+### Community 3011 - "Community 3011"
+Cohesion: 0.14
+Nodes (29): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+21 more)
+
+### Community 3012 - "Community 3012"
+Cohesion: 0.14
+Nodes (29): aim(), archive(), baseline(), build_character(), collection(), fbx_info(), glb_info(), hand() (+21 more)
+
+### Community 3013 - "Community 3013"
+Cohesion: 0.06
+Nodes (35): 0. 결론 — 실측, 10. 한계 — 주장하지 않는 것, 1.1 프로덕션 변경 (최소), 1. 고친 결함과 고친 방법, 2. 승인 상태 — 이번 세션이 건드리지 않은 것, 3.1 픽스처와 단언 방식, 3.2 게이트를 `runtimeApproved`로 흔들지 않았다, 3.3 RED은 부재 단언에서 실패했다 (+27 more)
+
+### Community 3014 - "Community 3014"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3015 - "Community 3015"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3016 - "Community 3016"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3017 - "Community 3017"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3018 - "Community 3018"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3019 - "Community 3019"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3020 - "Community 3020"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3021 - "Community 3021"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3022 - "Community 3022"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3023 - "Community 3023"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3024 - "Community 3024"
+Cohesion: 0.06
+Nodes (33): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+25 more)
+
+### Community 3025 - "Community 3025"
+Cohesion: 0.06
+Nodes (32): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+24 more)
+
+### Community 3026 - "Community 3026"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3027 - "Community 3027"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3028 - "Community 3028"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3029 - "Community 3029"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3030 - "Community 3030"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3031 - "Community 3031"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3032 - "Community 3032"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3033 - "Community 3033"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3034 - "Community 3034"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3035 - "Community 3035"
+Cohesion: 0.06
+Nodes (31): files, manifest.json, manifest.meta.md, preview-character.meta.md, preview-character.png, preview-face.meta.md, preview-face.png, preview-hands-align.meta.md (+23 more)
+
+### Community 3036 - "Community 3036"
+Cohesion: 0.06
+Nodes (31): 0. 결론 — 실제 캡처 결과, 1.1 입력 (부모 소유 · 읽기 전용), 1.2 임포트 (가장 작은 프로젝트 관례 경로), 1. 에셋: r02 입력 실측과 임포트, 2.1 신규 파일 (전부 M20 소유), 2.2 기존 파일 편집 — 정확히 2곳, 전부 가산적, 2.3 정확히 무엇이 달라졌는가, 2. 변경 (정확한 경로와 해시) (+23 more)
+
+### Community 3037 - "Community 3037"
+Cohesion: 0.12
+Nodes (8): AnimationClipPlayable, AnimationMixerPlayable, M22EmbodimentVisual, Rig, Tide.App, PlayableGraph, Rig, Transform
+
+### Community 3038 - "Community 3038"
+Cohesion: 0.07
+Nodes (29): 0. 이 문서의 지위와 한계, 1. 1차 출처 5건 (URL + 짧은 인용), 2. [DERIVED] 팔레트 대비 계산표 — 지금 바로 쓸 수 있는 유일한 정량 축, 3. 채택 / 보류 / 기각, 4. [DERIVED] 이번 조사가 새로 발견한 결함 후보 2건 (사용자/부모 판단 필요), 5. GTI로 새로 만들 최적 자산 — **최대 2개**, 6. 검증 기준 (전부 오프라인·무유료·자동 판정 가능 형태), 7. 부모가 바로 쓸 수 있는 좌표 요약 (+21 more)
+
+### Community 3039 - "Community 3039"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3040 - "Community 3040"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3041 - "Community 3041"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3042 - "Community 3042"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3043 - "Community 3043"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3044 - "Community 3044"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3045 - "Community 3045"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3046 - "Community 3046"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3047 - "Community 3047"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3048 - "Community 3048"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3049 - "Community 3049"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3050 - "Community 3050"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3051 - "Community 3051"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3052 - "Community 3052"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3053 - "Community 3053"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3054 - "Community 3054"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3055 - "Community 3055"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3056 - "Community 3056"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3057 - "Community 3057"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3058 - "Community 3058"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3059 - "Community 3059"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3060 - "Community 3060"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3061 - "Community 3061"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3062 - "Community 3062"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3063 - "Community 3063"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3064 - "Community 3064"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3065 - "Community 3065"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3066 - "Community 3066"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3067 - "Community 3067"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3068 - "Community 3068"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3069 - "Community 3069"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3070 - "Community 3070"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3071 - "Community 3071"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3072 - "Community 3072"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3073 - "Community 3073"
+Cohesion: 0.07
+Nodes (26): 0. 결론, 1.1 정확히 무엇이 달라졌는가, 1.2 불변식 유지 [OBSERVED], 1.3 RFC 판정, 1. 변경 (정확한 경로), 2.1 왜 완료된 C1 순찰 화면인가, 2.2 RED은 설정 오류가 아니라 부재 단언에서 실패했다, 2.3 테스트가 단언하는 플레이어 관측 사실 (+18 more)
+
+### Community 3074 - "Community 3074"
+Cohesion: 0.07
+Nodes (26): authoredClips, blenderAxes, forward, up, blenderVersion, conceptRef, conceptSha256, files (+18 more)
+
+### Community 3076 - "Community 3076"
+Cohesion: 0.09
+Nodes (22): authoredClips, blenderVersion, conceptRef, conceptSha256, files, fps, generatedAt, geometry (+14 more)
+
+### Community 3077 - "Community 3077"
+Cohesion: 0.09
+Nodes (22): authoredClips, blenderVersion, conceptRef, conceptSha256, files, fps, generatedAt, geometry (+14 more)
+
+### Community 3078 - "Community 3078"
+Cohesion: 0.09
+Nodes (22): authoredClips, blenderVersion, conceptRef, conceptSha256, files, fps, generatedAt, geometry (+14 more)
+
+### Community 3079 - "Community 3079"
+Cohesion: 0.09
+Nodes (22): authoredClips, blenderVersion, conceptRef, conceptSha256, files, fps, generatedAt, geometry (+14 more)
+
+### Community 3080 - "Community 3080"
+Cohesion: 0.09
+Nodes (21): 0. Conclusion, 10. Deviations from CLAUDE.md, stated honestly, 11. Artifacts, 1.1 The authored contract, 1.2 The code path, 1.3 Player-visible symptom and reachability, 1. Defect found (P2 — onboarding/disclosure + settings accessibility), 2. Checked and closed in the same review (NOT defects) (+13 more)
+
+### Community 3081 - "Community 3081"
+Cohesion: 0.10
+Nodes (20): central, maxLuminance, meanLuminance, minLuminance, nonOpaquePixels, p95Luminance, sampleCount, stdDevLuminance (+12 more)
+
+### Community 3082 - "Community 3082"
+Cohesion: 0.14
+Nodes (14): assets, bonesPerHand, characterBones, characterTriangles, combinedHandTriangles, commercialLicenseApproved, fbxTakes, localRuntimeApproved (+6 more)
+
+### Community 3085 - "Community 3085"
+Cohesion: 0.10
+Nodes (19): 0. 읽은 캐논 (좌표), 1. 1차 출처 5건, 2. 현 오프닝의 실측 상태 (판정 근거), 3. 적용 원칙 (출처 → 현 프로젝트 번역), 4. 현 자료의 gap (사용자/소유 레인 판단 필요), 5. 바로 쓸 수 있는 문구 (캐논 무훼손, 기존 작품 고유 장치 미복제), 6. 채택 / 보류 / 기각, 7. 테스트 (스포일러 누출 포함) (+11 more)
+
+### Community 3086 - "Community 3086"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3087 - "Community 3087"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3088 - "Community 3088"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3089 - "Community 3089"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3090 - "Community 3090"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3091 - "Community 3091"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3092 - "Community 3092"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3093 - "Community 3093"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3094 - "Community 3094"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3095 - "Community 3095"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3096 - "Community 3096"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3097 - "Community 3097"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3098 - "Community 3098"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3099 - "Community 3099"
+Cohesion: 0.10
+Nodes (19): files, manifest.json, preview-character.png, preview-face.png, preview-hands-align.png, preview-hands-grip.png, preview-hands-insert.png, preview-hands-rest.png (+11 more)
+
+### Community 3100 - "Community 3100"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3101 - "Community 3101"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3102 - "Community 3102"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3103 - "Community 3103"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3104 - "Community 3104"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3105 - "Community 3105"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3106 - "Community 3106"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3107 - "Community 3107"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3108 - "Community 3108"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3109 - "Community 3109"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3110 - "Community 3110"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3111 - "Community 3111"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3112 - "Community 3112"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3113 - "Community 3113"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3114 - "Community 3114"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3115 - "Community 3115"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3116 - "Community 3116"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3117 - "Community 3117"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3118 - "Community 3118"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3119 - "Community 3119"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3120 - "Community 3120"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3121 - "Community 3121"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3122 - "Community 3122"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3123 - "Community 3123"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3124 - "Community 3124"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3125 - "Community 3125"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3126 - "Community 3126"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3127 - "Community 3127"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3128 - "Community 3128"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3129 - "Community 3129"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3130 - "Community 3130"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3131 - "Community 3131"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3132 - "Community 3132"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3133 - "Community 3133"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3134 - "Community 3134"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3135 - "Community 3135"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3136 - "Community 3136"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3137 - "Community 3137"
+Cohesion: 0.14
+Nodes (13): engine, evidence, notMeasured, platform, recordedUtc, schemaVersion, scope, sourceIdentity (+5 more)
+
+### Community 3138 - "Community 3138"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3139 - "Community 3139"
+Cohesion: 0.10
+Nodes (20): palette, Apron, ApronEdge, Boot, Brass, Cuff, EyeWhite, Hair (+12 more)
+
+### Community 3140 - "Community 3140"
+Cohesion: 0.11
+Nodes (13): asset, baseline, checks, currentFallbackBeats, expected, here, m, names (+5 more)
+
+### Community 3141 - "Community 3141"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3142 - "Community 3142"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3143 - "Community 3143"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3144 - "Community 3144"
+Cohesion: 0.11
+Nodes (18): 0. 결론, 10. 한계 — 주장하지 않는 것, 1.1 RFC 판정, 1. 변경 (정확한 경로), 2. 게이트 (언제 보이는가), 3. TDD 증거, 4. 공개 배제 검증 (연출 계약 §2), 5. 전체 회귀 (+10 more)
+
+### Community 3145 - "Community 3145"
+Cohesion: 0.11
+Nodes (19): bytes, sha256, files, assets/generated/2d/ui/m20-archival-work-surface-r02.prompt.txt, unity/Unknown/Assets/_Project/App/T0GameSession.cs, _workspace/current/presentation/t0-action-plate-m19.md, _workspace/current/systems/data/t0/beats.meta.md, _workspace/current/systems/tech-verification/m19-ui-polish/playmode.xml (+11 more)
+
+### Community 3146 - "Community 3146"
+Cohesion: 0.12
+Nodes (17): filepath, scenes, hidden, matrix, renderHidden, type, Light, filepath (+9 more)
+
+### Community 3147 - "Community 3147"
+Cohesion: 0.12
+Nodes (17): filepath, scenes, hidden, matrix, renderHidden, type, Light, filepath (+9 more)
+
+### Community 3148 - "Community 3148"
+Cohesion: 0.12
+Nodes (17): filepath, scenes, hidden, matrix, renderHidden, type, Cube, filepath (+9 more)
+
+### Community 3149 - "Community 3149"
+Cohesion: 0.12
+Nodes (17): filepath, scenes, hidden, matrix, renderHidden, type, Light, filepath (+9 more)
+
+### Community 3150 - "Community 3150"
+Cohesion: 0.12
+Nodes (16): artifact, blocking_limit, evidence, not_caused_by, summary, unblock, build_log, path (+8 more)
+
+### Community 3151 - "Community 3151"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3152 - "Community 3152"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3153 - "Community 3153"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3154 - "Community 3154"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3155 - "Community 3155"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3156 - "Community 3156"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3157 - "Community 3157"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3158 - "Community 3158"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3159 - "Community 3159"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3160 - "Community 3160"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3161 - "Community 3161"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3162 - "Community 3162"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3163 - "Community 3163"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3164 - "Community 3164"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3165 - "Community 3165"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3166 - "Community 3166"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3167 - "Community 3167"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3168 - "Community 3168"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3169 - "Community 3169"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3170 - "Community 3170"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3171 - "Community 3171"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3172 - "Community 3172"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3173 - "Community 3173"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3174 - "Community 3174"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3175 - "Community 3175"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3176 - "Community 3176"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3177 - "Community 3177"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3178 - "Community 3178"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3179 - "Community 3179"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3180 - "Community 3180"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3181 - "Community 3181"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3182 - "Community 3182"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3183 - "Community 3183"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3184 - "Community 3184"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3185 - "Community 3185"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3186 - "Community 3186"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3187 - "Community 3187"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3188 - "Community 3188"
+Cohesion: 0.12
+Nodes (15): conceptRef, conceptSha256, files, generatedAt, license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded (+7 more)
+
+### Community 3189 - "Community 3189"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3190 - "Community 3190"
+Cohesion: 0.33
+Nodes (9): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, fbx, fbx (+1 more)
+
+### Community 3191 - "Community 3191"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3192 - "Community 3192"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3193 - "Community 3193"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3194 - "Community 3194"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3195 - "Community 3195"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3196 - "Community 3196"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3197 - "Community 3197"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3198 - "Community 3198"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3199 - "Community 3199"
+Cohesion: 0.25
+Nodes (8): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged
+
+### Community 3200 - "Community 3200"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3201 - "Community 3201"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3202 - "Community 3202"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3203 - "Community 3203"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3204 - "Community 3204"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3205 - "Community 3205"
+Cohesion: 0.25
+Nodes (8): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged
+
+### Community 3206 - "Community 3206"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3207 - "Community 3207"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3208 - "Community 3208"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3209 - "Community 3209"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3210 - "Community 3210"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3211 - "Community 3211"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3212 - "Community 3212"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3213 - "Community 3213"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3214 - "Community 3214"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3215 - "Community 3215"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3216 - "Community 3216"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3217 - "Community 3217"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3218 - "Community 3218"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3219 - "Community 3219"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3220 - "Community 3220"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3221 - "Community 3221"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3222 - "Community 3222"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3223 - "Community 3223"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3224 - "Community 3224"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3225 - "Community 3225"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3226 - "Community 3226"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3227 - "Community 3227"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3228 - "Community 3228"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3229 - "Community 3229"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3230 - "Community 3230"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3231 - "Community 3231"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3232 - "Community 3232"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3233 - "Community 3233"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3234 - "Community 3234"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3235 - "Community 3235"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3236 - "Community 3236"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3237 - "Community 3237"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3238 - "Community 3238"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3239 - "Community 3239"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3240 - "Community 3240"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3241 - "Community 3241"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3242 - "Community 3242"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3243 - "Community 3243"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3244 - "Community 3244"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3245 - "Community 3245"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3246 - "Community 3246"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3247 - "Community 3247"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3248 - "Community 3248"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3249 - "Community 3249"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3250 - "Community 3250"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3251 - "Community 3251"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3252 - "Community 3252"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3253 - "Community 3253"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3254 - "Community 3254"
+Cohesion: 0.12
+Nodes (16): launch, argv, clean_exit, pid, save_root, save_root_empty, save_root_files_after_run, window_pixels_equivalent (+8 more)
+
+### Community 3255 - "Community 3255"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3256 - "Community 3256"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3257 - "Community 3257"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3258 - "Community 3258"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3259 - "Community 3259"
+Cohesion: 0.24
+Nodes (3): T0GameSession, Tide.App, M22EmbodimentProfile
+
+### Community 3260 - "Community 3260"
+Cohesion: 0.13
+Nodes (14): 0. 결론 요약, 1. 사전 측정 (빌드 게이트), 2. 빌드, 3.1 진입 전 화면에서 실제로 보이는 M7 요소, 3. 실행과 실제 관측된 화면, 4.1 M8 검토 노트 — 도달 가능성은 확인했으나 미촬영, 4. 차단 사유 — macOS TCC 보조 접근 거부, 5. 모니터링 — Player.log (+6 more)
+
+### Community 3261 - "Community 3261"
+Cohesion: 0.11
+Nodes (19): blender, detailedStructureChecks, dirtyStatePreservedClaim, executed, lastExportRpc, originalSceneChecks, productionCalls, receipt (+11 more)
+
+### Community 3262 - "Community 3262"
+Cohesion: 0.14
+Nodes (14): aggregates, beats, clues, deliberateMinutesSum, fastMinutesSum, mediaKindsPerBeatMin, originCatalogSize, proofRequiredBeats (+6 more)
+
+### Community 3263 - "Community 3263"
+Cohesion: 0.14
+Nodes (13): 1) 원문 출처 URL · 짧은 인용, 2) 본 프로젝트 관찰 (파일·라인 증거), 3) 채택 / 보류 / 기각, 4) 현재 구현 가능한 데이터-only 개선 **1개**, 5) 다른 레인 의존성, Acceptance tests, CHG-B-01 · 근접 실패대 상한을 knobs 테이블에 미러한다, S1. Lucas Pope 개발 로그 — Return of the Obra Dinn, "Fate Validation" (+5 more)
+
+### Community 3264 - "Community 3264"
+Cohesion: 0.14
+Nodes (14): bytes, path, sha256, earlierNativeMotionProof, buildAssembly, confirmed, diagnosticFlags, evidence (+6 more)
+
+### Community 3265 - "Community 3265"
+Cohesion: 0.13
+Nodes (15): bytes, path, sha256, build, application, assembly, burstCompilation, editorWarnings (+7 more)
+
+### Community 3266 - "Community 3266"
+Cohesion: 0.14
+Nodes (14): assets, bonesPerHand, characterBones, characterTriangles, combinedHandTriangles, commercialLicenseApproved, fbxTakes, localRuntimeApproved (+6 more)
+
+### Community 3267 - "Community 3267"
+Cohesion: 0.14
+Nodes (13): engine, evidence, notMeasured, platform, recordedUtc, schemaVersion, scope, sourceIdentity (+5 more)
+
+### Community 3268 - "Community 3268"
+Cohesion: 0.15
+Nodes (12): bytes, checks, contract, file, notMeasured, sha256, summary, checks (+4 more)
+
+### Community 3269 - "Community 3269"
+Cohesion: 0.15
+Nodes (12): files, manifest.json, provenance.json, Seorin_Character.blend, Seorin_Character.fbx, Seorin_Character.glb, Seorin_LeftHand.fbx, Seorin_LeftHand.glb (+4 more)
+
+### Community 3270 - "Community 3270"
+Cohesion: 0.15
+Nodes (13): captured, partial_evidence, reason_not_captured, captured, reason_not_captured, captured, reachability_analysis, reachable_without_changing_puzzle_state (+5 more)
+
+### Community 3271 - "Community 3271"
+Cohesion: 0.18
+Nodes (12): baseline, id, jsonrpc, result, readonlyProbe, id, jsonrpc, result (+4 more)
+
+### Community 3272 - "Community 3272"
+Cohesion: 0.15
+Nodes (12): 0. status: draft 인 이유 (게이트 규칙 준수), 1.1 시각 검수 결과 (육안, 이번 세션 판정 전제), 1. 에셋 출처와 실측 (provenance), 2. 비-타일 규칙 (the non-tile rule) — 이 계약의 핵심 제약, 3. UI 위계 호환성 (텍스트는 전경에 남는다), 4. 진단 게이트 (정확한 사양), 5. 불변 목록 (no-copy-change / no-disclosure / no-promotion), 6. 구현 경계 (+4 more)
+
+### Community 3273 - "Community 3273"
+Cohesion: 0.17
+Nodes (12): build, build_method, build_options, bundle_id, bundle_manifest_sha256, file_count, globalgamemanagers_sha256, main_binary_bytes (+4 more)
+
+### Community 3274 - "Community 3274"
+Cohesion: 0.17
+Nodes (12): scope_compliance, added_outside_evidence_dir, baseline_entries, content_changed, files_written, git_head_unchanged, m14_m15_entries_tracked, m14_m15_preserved_exactly (+4 more)
+
+### Community 3275 - "Community 3275"
+Cohesion: 0.17
+Nodes (11): 0. status: draft 인 이유 (게이트 규칙 준수), 1.1 텍스트 역할 표 (P4의 정확한 값), 1.2 근거가 되는 실측 결함 [OBSERVED], 1. 시각 약속 (the exact visual promise), 2. 리소스 재사용 (새 에셋 0건), 3. 불변 목록 (no-copy-change / no-disclosure), 4. 구현 경계 (한 개의 전역 슬라이스), 5. 수용 기준 (자동 검사 가능한 형태) (+3 more)
+
+### Community 3276 - "Community 3276"
+Cohesion: 0.18
+Nodes (10): checks, copyLengths, firstCaption, firstTitle, secondCaption, secondTitle, failed, passed (+2 more)
+
+### Community 3277 - "Community 3277"
+Cohesion: 0.18
+Nodes (10): checks, copyLengths, firstCaption, firstTitle, secondCaption, secondTitle, failed, passed (+2 more)
+
+### Community 3278 - "Community 3278"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3279 - "Community 3279"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3280 - "Community 3280"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3281 - "Community 3281"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3282 - "Community 3282"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3283 - "Community 3283"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3284 - "Community 3284"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3285 - "Community 3285"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3286 - "Community 3286"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3287 - "Community 3287"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3288 - "Community 3288"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3289 - "Community 3289"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3290 - "Community 3290"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3291 - "Community 3291"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3292 - "Community 3292"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3293 - "Community 3293"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3294 - "Community 3294"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3295 - "Community 3295"
+Cohesion: 0.11
+Nodes (19): filepath, scenes, filepath, scenes, camera, frame, objects, world (+11 more)
+
+### Community 3296 - "Community 3296"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3297 - "Community 3297"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3298 - "Community 3298"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3299 - "Community 3299"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3300 - "Community 3300"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3301 - "Community 3301"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3302 - "Community 3302"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3303 - "Community 3303"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3304 - "Community 3304"
+Cohesion: 0.11
+Nodes (19): filepath, scenes, filepath, scenes, camera, frame, objects, world (+11 more)
+
+### Community 3305 - "Community 3305"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3306 - "Community 3306"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3307 - "Community 3307"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3308 - "Community 3308"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3309 - "Community 3309"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3310 - "Community 3310"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3311 - "Community 3311"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3312 - "Community 3312"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3313 - "Community 3313"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3314 - "Community 3314"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3315 - "Community 3315"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3316 - "Community 3316"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3317 - "Community 3317"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3318 - "Community 3318"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3319 - "Community 3319"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3320 - "Community 3320"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3321 - "Community 3321"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3322 - "Community 3322"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3323 - "Community 3323"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3324 - "Community 3324"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3325 - "Community 3325"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3326 - "Community 3326"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3327 - "Community 3327"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3328 - "Community 3328"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3329 - "Community 3329"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3330 - "Community 3330"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3331 - "Community 3331"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3332 - "Community 3332"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3333 - "Community 3333"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3334 - "Community 3334"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3335 - "Community 3335"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3336 - "Community 3336"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3337 - "Community 3337"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3338 - "Community 3338"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3339 - "Community 3339"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3340 - "Community 3340"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3341 - "Community 3341"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3342 - "Community 3342"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3343 - "Community 3343"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3344 - "Community 3344"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3345 - "Community 3345"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3346 - "Community 3346"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3347 - "Community 3347"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3348 - "Community 3348"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3349 - "Community 3349"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3350 - "Community 3350"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3351 - "Community 3351"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3352 - "Community 3352"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3353 - "Community 3353"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3354 - "Community 3354"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3355 - "Community 3355"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3356 - "Community 3356"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3357 - "Community 3357"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3358 - "Community 3358"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3359 - "Community 3359"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3360 - "Community 3360"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3361 - "Community 3361"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3362 - "Community 3362"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3363 - "Community 3363"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3364 - "Community 3364"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3365 - "Community 3365"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3366 - "Community 3366"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3367 - "Community 3367"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3368 - "Community 3368"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3369 - "Community 3369"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3370 - "Community 3370"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3371 - "Community 3371"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3372 - "Community 3372"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3373 - "Community 3373"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3374 - "Community 3374"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3375 - "Community 3375"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3376 - "Community 3376"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3377 - "Community 3377"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3378 - "Community 3378"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3379 - "Community 3379"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3380 - "Community 3380"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3381 - "Community 3381"
+Cohesion: 0.18
+Nodes (10): 0. status: draft 인 이유 (게이트 규칙 준수), 1. 고치는 결함 (정확히 하나), 2. 시각 약속 (the exact visual promise), 3.1 α = 0.82 의 근거, 3. 정확한 사양, 4. 불변 목록 (no-copy-change / no-recolor / no-promotion), 5. 수용 기준 (자동 검사 가능한 형태), 6. 구현 경계 (+2 more)
+
+### Community 3382 - "Community 3382"
+Cohesion: 0.18
+Nodes (11): filepath, scenes, filepath, scenes, structuralPreservation, afterFinalProduction, baselineScope, beforeFinalProduction (+3 more)
+
+### Community 3383 - "Community 3383"
+Cohesion: 0.18
+Nodes (11): clipEnd, clipStart, dataName, hidden, lens, materials, matrix, renderHidden (+3 more)
+
+### Community 3384 - "Community 3384"
+Cohesion: 0.18
+Nodes (11): fbxSettings, add_leaf_bones, axis_forward, axis_up, bake_anim, bake_anim_simplify_factor, bake_anim_use_all_actions, bake_anim_use_nla_strips (+3 more)
+
+### Community 3385 - "Community 3385"
+Cohesion: 0.20
+Nodes (9): immutableDuringOurWrite, observedAt, scope, sources, strings, beforeSha, oldFallback, path (+1 more)
+
+### Community 3386 - "Community 3386"
+Cohesion: 0.20
+Nodes (9): 1. Scope containment — PASS, 2. Spoiler boundary — PASS, 3. Spec / default alignment — PASS, 4. Native verification — evidence gap, honestly documented, 5. New test — compile reasoning and honesty, Findings, Independent read-only QA — Aside immersion pass (aside-immersion-20260913), Reporting constraints for the parent (+1 more)
+
+### Community 3387 - "Community 3387"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3388 - "Community 3388"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3389 - "Community 3389"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3390 - "Community 3390"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3391 - "Community 3391"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3392 - "Community 3392"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3393 - "Community 3393"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3394 - "Community 3394"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3395 - "Community 3395"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3396 - "Community 3396"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3397 - "Community 3397"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3398 - "Community 3398"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3399 - "Community 3399"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3400 - "Community 3400"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3401 - "Community 3401"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3402 - "Community 3402"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3403 - "Community 3403"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3404 - "Community 3404"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3405 - "Community 3405"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3406 - "Community 3406"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3407 - "Community 3407"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3408 - "Community 3408"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3409 - "Community 3409"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3410 - "Community 3410"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3411 - "Community 3411"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3412 - "Community 3412"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3413 - "Community 3413"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3414 - "Community 3414"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3415 - "Community 3415"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3416 - "Community 3416"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3417 - "Community 3417"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3418 - "Community 3418"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3419 - "Community 3419"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3420 - "Community 3420"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3421 - "Community 3421"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3422 - "Community 3422"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3423 - "Community 3423"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3424 - "Community 3424"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3425 - "Community 3425"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3426 - "Community 3426"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3427 - "Community 3427"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3428 - "Community 3428"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3429 - "Community 3429"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3430 - "Community 3430"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3431 - "Community 3431"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3432 - "Community 3432"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3433 - "Community 3433"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3434 - "Community 3434"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3435 - "Community 3435"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3436 - "Community 3436"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3437 - "Community 3437"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3438 - "Community 3438"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3439 - "Community 3439"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3440 - "Community 3440"
+Cohesion: 0.20
+Nodes (9): code:bash (node _workspace/current/systems/tech-verification/aside-imme), code:bash (U=/Applications/Unity/Hub/Editor/6000.5.6f1/Unity.app/Conten), Completion boundary, Done and ownership, OMP 인수: 리서치·오프닝·GTI 후보 업데이트, QA follow-through, Research applied, not blindly copied, Resource update (+1 more)
+
+### Community 3441 - "Community 3441"
+Cohesion: 0.20
+Nodes (10): capture, desktop_wide_capture_used, distinct_visual_states_captured, explicit_window_capture, files, method, screenshot_px, screenshot_scale (+2 more)
+
+### Community 3442 - "Community 3442"
+Cohesion: 0.20
+Nodes (9): alignment, gate, handsCombinedTriangles, manifestSha256, profile, rfc, rigs, runtimeApproved (+1 more)
+
+### Community 3443 - "Community 3443"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3444 - "Community 3444"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3445 - "Community 3445"
+Cohesion: 0.20
+Nodes (9): 0. status: draft 인 이유 (게이트 규칙 준수), 1. 플레이어 약속 (intended player promise), 2. 공개 배제 목록 (exact disclosure exclusions), 3. C1 게이트 (언제 보이는가), 4. 리소스 재사용 (새 에셋 0건), 5. 입력과 복귀 (input / return behavior), 6. 수용 기준 (자동 검사 가능한 형태), 7. 비목표 (explicit non-goals) (+1 more)
+
+### Community 3446 - "Community 3446"
+Cohesion: 0.20
+Nodes (10): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, firstPersonSleeveExtentBlenderY, forearmTowardElbowBlender, gripAxisRestBlender (+2 more)
+
+### Community 3447 - "Community 3447"
+Cohesion: 0.20
+Nodes (10): color, dataName, energy, hidden, lightType, materials, matrix, renderHidden (+2 more)
+
+### Community 3448 - "Community 3448"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3449 - "Community 3449"
+Cohesion: 0.23
+Nodes (16): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, clips, meshes (+8 more)
+
+### Community 3450 - "Community 3450"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3451 - "Community 3451"
+Cohesion: 0.33
+Nodes (9): exports, Seorin_Character, Seorin_LeftHand, Seorin_RightHand, clips, version, fbx, fbx (+1 more)
+
+### Community 3452 - "Community 3452"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3453 - "Community 3453"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3454 - "Community 3454"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3455 - "Community 3455"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3456 - "Community 3456"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3457 - "Community 3457"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3458 - "Community 3458"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3459 - "Community 3459"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3460 - "Community 3460"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3461 - "Community 3461"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3462 - "Community 3462"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3463 - "Community 3463"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3464 - "Community 3464"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3465 - "Community 3465"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3466 - "Community 3466"
+Cohesion: 0.22
+Nodes (9): handFrames, contactBone, contactCenterRestBlender, dorsalBlender, fingersBlender, forearmTowardElbowBlender, gripAxisRestBlender, note (+1 more)
+
+### Community 3467 - "Community 3467"
+Cohesion: 0.22
+Nodes (9): git, boundary, branch, committed, head, pushed, workingTreeIntegration, worktreesObserved (+1 more)
+
+### Community 3468 - "Community 3468"
+Cohesion: 0.14
+Nodes (14): bytes, path, sha256, native, actionReceipt, confirmed, diagnosticFlags, evidence (+6 more)
+
+### Community 3469 - "Community 3469"
+Cohesion: 0.18
+Nodes (11): command, communities, coveredSourceFiles, edges, files, limitations, newModelTokens, nodes (+3 more)
+
+### Community 3470 - "Community 3470"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3471 - "Community 3471"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3472 - "Community 3472"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3473 - "Community 3473"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3474 - "Community 3474"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3475 - "Community 3475"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3476 - "Community 3476"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3477 - "Community 3477"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3478 - "Community 3478"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3479 - "Community 3479"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3480 - "Community 3480"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3481 - "Community 3481"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3482 - "Community 3482"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3483 - "Community 3483"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3484 - "Community 3484"
+Cohesion: 0.13
+Nodes (16): filepath, scenes, filepath, scenes, preservation, baseline, observedAfter, unchanged (+8 more)
+
+### Community 3485 - "Community 3485"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3486 - "Community 3486"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3487 - "Community 3487"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3488 - "Community 3488"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3489 - "Community 3489"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3490 - "Community 3490"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3491 - "Community 3491"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3492 - "Community 3492"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3493 - "Community 3493"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3494 - "Community 3494"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3495 - "Community 3495"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3496 - "Community 3496"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3497 - "Community 3497"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3498 - "Community 3498"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3499 - "Community 3499"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3500 - "Community 3500"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3501 - "Community 3501"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3502 - "Community 3502"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3503 - "Community 3503"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3504 - "Community 3504"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3505 - "Community 3505"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3506 - "Community 3506"
+Cohesion: 0.25
+Nodes (8): preflight, build_gate_passed, disk_gate_passed, disk_gate_threshold_gib, free_gib_after, free_gib_before, unity_editor_running, unity_lockfile_present
+
+### Community 3507 - "Community 3507"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3508 - "Community 3508"
+Cohesion: 0.25
+Nodes (8): dataName, geometrySha256, hidden, materials, matrix, renderHidden, type, Cube
+
+### Community 3509 - "Community 3509"
+Cohesion: 0.29
+Nodes (7): toolBeatCounts, alignment, circuit, corrosion, reader, routing, seal
+
+### Community 3510 - "Community 3510"
+Cohesion: 0.29
+Nodes (7): toolBeatMinutes, alignment, circuit, corrosion, reader, routing, seal
+
+### Community 3511 - "Community 3511"
+Cohesion: 0.29
+Nodes (6): Applied copy contract, Evidence and adoption, Rejected proposals and corrections, Runtime and rights boundary, Scope, 콘셉트 기반 몰입 개선: 조사 → 판정 → 반영
+
+### Community 3512 - "Community 3512"
+Cohesion: 0.17
+Nodes (12): launcher, argvPrefix, binary, effortFlagObservedByMain, elapsedSeconds, exitCode, outputArtifact, requestContract (+4 more)
+
+### Community 3513 - "Community 3513"
+Cohesion: 0.17
+Nodes (11): A. 주요 규칙과 플레이어 신뢰, Aside · 주요 규칙·코어 루프·상세 게임 구성 조사, B. 코어 루프와 첫 플레이 검증, C. 상세 게임 구성과 생산 우선순위, 결과 형식과 완료 기준, 먼저 읽을 프로젝트 근거, 외부 근거와 비교 대상, 요청과 실행 모드 (+3 more)
+
+### Community 3514 - "Community 3514"
+Cohesion: 0.29
+Nodes (7): classification, claims_all_resources_visually_perfect, is_g4_g7_certification, is_human_playtest, is_performance_proof, is_physical_input_proof, kind
+
+### Community 3515 - "Community 3515"
+Cohesion: 0.29
+Nodes (7): player_log, boot_failed, boot_markers, bytes, exception_count, path, scan_pattern
+
+### Community 3516 - "Community 3516"
+Cohesion: 0.29
+Nodes (7): runtime_profiles_observed_approved, M7Hub, M7ReaderStage, M7UiSkin, M8ReviewNotes, note, source
+
+### Community 3517 - "Community 3517"
+Cohesion: 0.29
+Nodes (6): added_outside_evidence, baseline_entries, content_changed, head_unchanged, preserved_exactly, removed
+
+### Community 3518 - "Community 3518"
+Cohesion: 0.25
+Nodes (8): cleanup, baselineBackupPreserved, originalBlenderAndUnownedPlayersStoppedByThisSession, ownedProcessesStopped, removed, stopExitCodesAreBuildResults, temporaryPoseCaptureTestRemoved, windowIdentityProbe
+
+### Community 3519 - "Community 3519"
+Cohesion: 0.17
+Nodes (12): gitState, branch, detached, divergence, head, mergeConflictMarkers, remoteTracking, staleRemoteRefs (+4 more)
+
+### Community 3520 - "Community 3520"
+Cohesion: 0.33
+Nodes (6): dialogue, exploration, manipulation, payoff, reasoning, activityBudgetSums
+
+### Community 3521 - "Community 3521"
+Cohesion: 0.33
+Nodes (6): zoneBeatCounts, dock, gate, hub, lowland, pump
+
+### Community 3522 - "Community 3522"
+Cohesion: 0.33
+Nodes (6): zoneBeatMinutes, dock, gate, hub, lowland, pump
+
+### Community 3523 - "Community 3523"
+Cohesion: 0.33
+Nodes (6): zoneRuns, dock, gate, hub, lowland, pump
+
+### Community 3524 - "Community 3524"
+Cohesion: 0.33
+Nodes (6): zoneStageSpan, dock, gate, hub, lowland, pump
+
+### Community 3526 - "Community 3526"
+Cohesion: 0.33
+Nodes (5): baselined_files, head, porcelain, porcelain_entries, scope
+
+### Community 3527 - "Community 3527"
+Cohesion: 0.33
+Nodes (5): build, diagnostic, frames, guard, humanPlay
+
+### Community 3528 - "Community 3528"
+Cohesion: 0.40
+Nodes (5): kindCounts, dialogue, exploration, payoff, puzzle
+
+### Community 3529 - "Community 3529"
+Cohesion: 0.40
+Nodes (4): changed, scope, sharedFilesUnchangedDuringThisWrite, timestamp
+
+### Community 3530 - "Community 3530"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Camera
+
+### Community 3531 - "Community 3531"
+Cohesion: 0.20
+Nodes (10): mainReview, acceptance, additionalPrimaryGuidance, codeSections, results, sourceDateLimit, sourceLedgerEntriesCrossChecked, bytes (+2 more)
+
+### Community 3532 - "Community 3532"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Camera
+
+### Community 3533 - "Community 3533"
+Cohesion: 0.20
+Nodes (10): hintOffer, controls, cooldownSeconds, dismissal, gameplayActions, idleSeconds, layout, navigationAndPointerActivity (+2 more)
+
+### Community 3534 - "Community 3534"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Camera
+
+### Community 3535 - "Community 3535"
+Cohesion: 0.22
+Nodes (9): git, boundary, branch, committed, head, pushed, workingTreeIntegration, worktreesObserved (+1 more)
+
+### Community 3536 - "Community 3536"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Camera
+
+### Community 3537 - "Community 3537"
+Cohesion: 0.22
+Nodes (9): native, confirmed, diagnosticFlags, evidence, inputBoundary, pid, runtimeLogScan, saveScope (+1 more)
+
+### Community 3538 - "Community 3538"
+Cohesion: 0.40
+Nodes (4): branch, entries, entry_count, head
+
+### Community 3539 - "Community 3539"
+Cohesion: 0.40
+Nodes (5): inputs_used, in_game_activations_delivered, key_events_delivered, pointer_clicks_delivered, successful
+
+### Community 3540 - "Community 3540"
+Cohesion: 0.40
+Nodes (4): build, diagnostic, frames, limitations
+
+### Community 3541 - "Community 3541"
+Cohesion: 0.40
+Nodes (4): 07:16 UTC 현재 반영 알림, Aside → OMP: 딥리서치 및 GTI 리소스 협업 경계, 예정 산출물, 충돌 회피
+
+### Community 3542 - "Community 3542"
+Cohesion: 0.20
+Nodes (10): notification, attempts, budgetMs, claimedAt, class, completedAt, idempotencyKey, lastOutcomeCode (+2 more)
+
+### Community 3543 - "Community 3543"
+Cohesion: 0.50
+Nodes (4): sourceTypeDist, ledger, log, plate
+
+### Community 3544 - "Community 3544"
+Cohesion: 0.50
+Nodes (4): timeConfidenceCounts, high, low, medium
+
+### Community 3546 - "Community 3546"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3547 - "Community 3547"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3548 - "Community 3548"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3549 - "Community 3549"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3550 - "Community 3550"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3551 - "Community 3551"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3552 - "Community 3552"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3553 - "Community 3553"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3554 - "Community 3554"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3555 - "Community 3555"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3556 - "Community 3556"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3557 - "Community 3557"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3558 - "Community 3558"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3559 - "Community 3559"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3560 - "Community 3560"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3561 - "Community 3561"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3562 - "Community 3562"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3563 - "Community 3563"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3564 - "Community 3564"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3565 - "Community 3565"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3566 - "Community 3566"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3567 - "Community 3567"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3568 - "Community 3568"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3569 - "Community 3569"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3570 - "Community 3570"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3571 - "Community 3571"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3572 - "Community 3572"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3573 - "Community 3573"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3574 - "Community 3574"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3575 - "Community 3575"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3576 - "Community 3576"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3577 - "Community 3577"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3578 - "Community 3578"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3579 - "Community 3579"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3580 - "Community 3580"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3581 - "Community 3581"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3582 - "Community 3582"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3583 - "Community 3583"
+Cohesion: 0.12
+Nodes (5): AlignmentArrangement, AlignmentPeak, AlignmentPractice, AlignmentPracticeDefinition, Tide.Sim
+
+### Community 3584 - "Community 3584"
+Cohesion: 0.22
+Nodes (9): closedPublicTabs, methodBoundaries, advancedWebSearchAndOriginalTextFetchReportedByAside, browserCleanupObservedInOutput, browserPagesReportedByAside, deepResearchSkillProcedureReportedByAside, independentDeepResearchSaasJobClaimed, paymentOrAccountConfigurationChanged (+1 more)
+
+### Community 3585 - "Community 3585"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3586 - "Community 3586"
+Cohesion: 0.29
+Nodes (7): documentSuppression, elapsedWithoutInputSeconds, observed, recordedUtc, waitCommand, waitExitCode, waitWallSeconds
+
+### Community 3587 - "Community 3587"
+Cohesion: 0.29
+Nodes (7): cleanup, baselineBackupPreserved, originalBlenderAndUnownedPlayersStoppedByThisSession, ownedProcessesStopped, removed, stopExitCodesAreBuildResults, temporaryPoseCaptureTestRemoved
+
+### Community 3589 - "Community 3589"
+Cohesion: 0.50
+Nodes (4): license, authorship, externalLicenseClearance, thirdPartyAssetsEmbedded
+
+### Community 3590 - "Community 3590"
+Cohesion: 0.50
+Nodes (3): Aside immersion pass close, Follow-through, Memory sync
+
+### Community 3591 - "Community 3591"
+Cohesion: 0.83
+Nodes (3): lum(), main(), stats()
+
+### Community 3593 - "Community 3593"
+Cohesion: 0.67
+Nodes (3): blenderAxes, forward, up
+
+### Community 3594 - "Community 3594"
+Cohesion: 0.67
+Nodes (3): blenderAxes, forward, up
+
+### Community 3595 - "Community 3595"
+Cohesion: 0.67
+Nodes (3): blenderAxes, forward, up
+
+### Community 3596 - "Community 3596"
+Cohesion: 0.67
+Nodes (3): blenderAxes, forward, up
+
+### Community 3597 - "Community 3597"
+Cohesion: 0.67
+Nodes (3): bytes, sha256, assets/generated/2d/ui/m19-interview-control-surface-r01.png
+
+### Community 3598 - "Community 3598"
+Cohesion: 0.67
+Nodes (3): bytes, sha256, assets/generated/2d/ui/m19-interview-control-surface-r01.prompt.txt
+
+### Community 3599 - "Community 3599"
+Cohesion: 0.67
+Nodes (3): bytes, sha256, assets/generated/2d/ui/provenance.json
+
+### Community 3600 - "Community 3600"
+Cohesion: 0.67
+Nodes (3): graphify-out/graph.json, bytes, sha256
+
+### Community 3601 - "Community 3601"
+Cohesion: 0.67
+Nodes (3): graphify-out/GRAPH_REPORT.md, bytes, sha256
+
+### Community 3602 - "Community 3602"
+Cohesion: 0.67
+Nodes (3): graphify-out/manifest.json, bytes, sha256
+
+### Community 3603 - "Community 3603"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/App/C1GameSession.cs, bytes, sha256
+
+### Community 3604 - "Community 3604"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs, bytes, sha256
+
+### Community 3605 - "Community 3605"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/App/C1InterviewPrepSession.cs.meta, bytes, sha256
+
+### Community 3606 - "Community 3606"
+Cohesion: 0.12
+Nodes (16): campaign, bytes, path, sha256, cleanup, disposableEditorProducer, ownedNativeProcessesStopped, preexistingM22AndAsideWork (+8 more)
+
+### Community 3607 - "Community 3607"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/App/T0OpeningSession.cs, bytes, sha256
+
+### Community 3608 - "Community 3608"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-handover-brief.asset, bytes, sha256
+
+### Community 3609 - "Community 3609"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-plate-standard-hub.asset, bytes, sha256
+
+### Community 3610 - "Community 3610"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-tide-ledger-bureau.asset, bytes, sha256
+
+### Community 3611 - "Community 3611"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-transfer-list.asset, bytes, sha256
+
+### Community 3612 - "Community 3612"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/Records/rec-watchlog-bureau.asset, bytes, sha256
+
+### Community 3613 - "Community 3613"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Authoring/T0Catalog.asset, bytes, sha256
+
+### Community 3614 - "Community 3614"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/beats.json, bytes, sha256
+
+### Community 3615 - "Community 3615"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/beats.meta.md, bytes, sha256
+
+### Community 3616 - "Community 3616"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/hints.json, bytes, sha256
+
+### Community 3617 - "Community 3617"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/hints.meta.md, bytes, sha256
+
+### Community 3618 - "Community 3618"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/records.json, bytes, sha256
+
+### Community 3619 - "Community 3619"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/records.meta.md, bytes, sha256
+
+### Community 3620 - "Community 3620"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.json, bytes, sha256
+
+### Community 3621 - "Community 3621"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/tables-receipt.meta.md, bytes, sha256
+
+### Community 3622 - "Community 3622"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/tools.meta.md, bytes, sha256
+
+### Community 3623 - "Community 3623"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Data/Tables/zones.meta.md, bytes, sha256
+
+### Community 3624 - "Community 3624"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/EditMode/M9CoreTests.cs, bytes, sha256
+
+### Community 3625 - "Community 3625"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs, bytes, sha256
+
+### Community 3626 - "Community 3626"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/C1InterviewPrepPlayModeTests.cs.meta, bytes, sha256
+
+### Community 3627 - "Community 3627"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs, bytes, sha256
+
+### Community 3628 - "Community 3628"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0ActionPlatePlayModeTests.cs.meta, bytes, sha256
+
+### Community 3629 - "Community 3629"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0CaseThreadTests.cs, bytes, sha256
+
+### Community 3630 - "Community 3630"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs, bytes, sha256
+
+### Community 3631 - "Community 3631"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0IntroReplayReducedMotionTests.cs.meta, bytes, sha256
+
+### Community 3632 - "Community 3632"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs, bytes, sha256
+
+### Community 3633 - "Community 3633"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/Tests/PlayMode/T0SettingsSlotPersistenceTests.cs.meta, bytes, sha256
+
+### Community 3634 - "Community 3634"
+Cohesion: 0.67
+Nodes (3): unity/Unknown/Assets/_Project/UI/T0Interface.cs, bytes, sha256
+
+### Community 3635 - "Community 3635"
+Cohesion: 0.67
+Nodes (3): _workspace/current/planning/campaign.json, bytes, sha256
+
+### Community 3636 - "Community 3636"
+Cohesion: 0.12
+Nodes (17): bytes, path, sha256, native, actions, actualOperatingSystemReboot, actualProcessRestart, candidateSavedBytesUnchanged (+9 more)
+
+### Community 3637 - "Community 3637"
+Cohesion: 0.23
+Nodes (4): AlignmentPractice, AlignmentPracticeData, T0GameSession, Tide.App
+
+### Community 3638 - "Community 3638"
+Cohesion: 0.13
+Nodes (15): externalGates, actualEffortOverOriginalEstimate, actualHumanParticipants, afkAdjustedHumanMinutes, alignmentConceptHumanResult, commercialReleaseApproved, H1MedianSeconds, H2ExplainedOutOf12 (+7 more)
+
+### Community 3639 - "Community 3639"
+Cohesion: 0.33
+Nodes (6): readerIdleOffer, elapsedWithoutInputSeconds, recordedUtc, waitCommand, waitExitCode, waitWallSeconds
+
+### Community 3640 - "Community 3640"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/records.json, bytes, sha256
+
+### Community 3641 - "Community 3641"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/records.meta.md, bytes, sha256
+
+### Community 3642 - "Community 3642"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/tables-receipt.json, bytes, sha256
+
+### Community 3643 - "Community 3643"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/tables-receipt.meta.md, bytes, sha256
+
+### Community 3644 - "Community 3644"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/tools.meta.md, bytes, sha256
+
+### Community 3645 - "Community 3645"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/zones.meta.md, bytes, sha256
+
+### Community 3646 - "Community 3646"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/build-mac.log, bytes, sha256
+
+### Community 3647 - "Community 3647"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/editmode.log, bytes, sha256
+
+### Community 3648 - "Community 3648"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/editmode.xml, bytes, sha256
+
+### Community 3649 - "Community 3649"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/green.log, bytes, sha256
+
+### Community 3650 - "Community 3650"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/green.xml, bytes, sha256
+
+### Community 3651 - "Community 3651"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/import.log, bytes, sha256
+
+### Community 3652 - "Community 3652"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/playmode.log, bytes, sha256
+
+### Community 3653 - "Community 3653"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/playmode.xml, bytes, sha256
+
+### Community 3654 - "Community 3654"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/red.log, bytes, sha256
+
+### Community 3655 - "Community 3655"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/red.xml, bytes, sha256
+
+### Community 3656 - "Community 3656"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m14-objective/verification.md, bytes, sha256
+
+### Community 3657 - "Community 3657"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/editmode.log, bytes, sha256
+
+### Community 3658 - "Community 3658"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/editmode.xml, bytes, sha256
+
+### Community 3659 - "Community 3659"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/green.log, bytes, sha256
+
+### Community 3660 - "Community 3660"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/green.xml, bytes, sha256
+
+### Community 3661 - "Community 3661"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/playmode.log, bytes, sha256
+
+### Community 3662 - "Community 3662"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/playmode.xml, bytes, sha256
+
+### Community 3663 - "Community 3663"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/red.log, bytes, sha256
+
+### Community 3664 - "Community 3664"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/red.xml, bytes, sha256
+
+### Community 3665 - "Community 3665"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m15-settings-slot/verification.md, bytes, sha256
+
+### Community 3666 - "Community 3666"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/baseline-worktree.json, bytes, sha256
+
+### Community 3667 - "Community 3667"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/build-mac.log, bytes, sha256
+
+### Community 3668 - "Community 3668"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/logs/Player.log, bytes, sha256
+
+### Community 3669 - "Community 3669"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/logs/Player-prev.log, bytes, sha256
+
+### Community 3670 - "Community 3670"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/shots/00-title-focused.png, bytes, sha256
+
+### Community 3671 - "Community 3671"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/shots/01-title-stability.png, bytes, sha256
+
+### Community 3672 - "Community 3672"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/summary.json, bytes, sha256
+
+### Community 3673 - "Community 3673"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/tools/listwindows, bytes, sha256
+
+### Community 3674 - "Community 3674"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/tools/listwindows.swift, bytes, sha256
+
+### Community 3675 - "Community 3675"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/verification.md, bytes, sha256
+
+### Community 3676 - "Community 3676"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m16-runtime-capture/worktree-verification.json, bytes, sha256
+
+### Community 3677 - "Community 3677"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/build-mac.log, bytes, sha256
+
+### Community 3678 - "Community 3678"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/editmode.log, bytes, sha256
+
+### Community 3679 - "Community 3679"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/editmode.xml, bytes, sha256
+
+### Community 3680 - "Community 3680"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/green.log, bytes, sha256
+
+### Community 3681 - "Community 3681"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/green.xml, bytes, sha256
+
+### Community 3682 - "Community 3682"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/playmode.log, bytes, sha256
+
+### Community 3683 - "Community 3683"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/playmode.xml, bytes, sha256
+
+### Community 3684 - "Community 3684"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/red.log, bytes, sha256
+
+### Community 3685 - "Community 3685"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/red.xml, bytes, sha256
+
+### Community 3686 - "Community 3686"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m17-unity-polish/verification.md, bytes, sha256
+
+### Community 3687 - "Community 3687"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/build-mac.log, bytes, sha256
+
+### Community 3688 - "Community 3688"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/editmode.log, bytes, sha256
+
+### Community 3689 - "Community 3689"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/editmode.xml, bytes, sha256
+
+### Community 3690 - "Community 3690"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/green.log, bytes, sha256
+
+### Community 3691 - "Community 3691"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/green.xml, bytes, sha256
+
+### Community 3692 - "Community 3692"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/playmode.log, bytes, sha256
+
+### Community 3693 - "Community 3693"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/playmode.xml, bytes, sha256
+
+### Community 3694 - "Community 3694"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/red.log, bytes, sha256
+
+### Community 3695 - "Community 3695"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/red.xml, bytes, sha256
+
+### Community 3696 - "Community 3696"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/shots/00-title-with-c1-save.png, bytes, sha256
+
+### Community 3697 - "Community 3697"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/shots/01-m18-build-title-c1-save.png, bytes, sha256
+
+### Community 3698 - "Community 3698"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m18-interview-ui/verification.md, bytes, sha256
+
+### Community 3699 - "Community 3699"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/build-mac.log, bytes, sha256
+
+### Community 3700 - "Community 3700"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/editmode.log, bytes, sha256
+
+### Community 3701 - "Community 3701"
+Cohesion: 0.15
+Nodes (9): auditPreservation(), here, inputs, nonempty(), paths, report, sourceTypes, cases (+1 more)
+
+### Community 3702 - "Community 3702"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/green.log, bytes, sha256
+
+### Community 3703 - "Community 3703"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/green.xml, bytes, sha256
+
+### Community 3704 - "Community 3704"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Cube
+
+### Community 3705 - "Community 3705"
+Cohesion: 0.22
+Nodes (9): experimentContract, corrections, effectVerdict, exitCode, humanParticipants, prototypeExecuted, selfTestCases, selfTestExitCode (+1 more)
+
+### Community 3706 - "Community 3706"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/red.log, bytes, sha256
+
+### Community 3707 - "Community 3707"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/red.xml, bytes, sha256
+
+### Community 3708 - "Community 3708"
+Cohesion: 0.19
+Nodes (6): T0GameSession, Tide.App, ReaderComparisonRange, ReaderComparisonChart, ReaderComparisonView, Tide.UI
+
+### Community 3709 - "Community 3709"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/verification.md, bytes, sha256
+
+### Community 3710 - "Community 3710"
+Cohesion: 0.24
+Nodes (10): bytes, path, sha256, artifact, separatePriorRegression, artifact, nativeVisualFocusRestorationClaimed, passedExistingCases (+2 more)
+
+### Community 3711 - "Community 3711"
+Cohesion: 0.67
+Nodes (3): native-2/first-1-of-2.png.meta.md, bytes, sha256
+
+### Community 3712 - "Community 3712"
+Cohesion: 0.22
+Nodes (9): bytes, path, sha256, researchResult, experiments, publicSourceEntries, recommendations, report (+1 more)
+
+### Community 3713 - "Community 3713"
+Cohesion: 0.22
+Nodes (8): Aside 조사 결과 · 다음 개발의 기준, Main이 대조한 핵심 근거, 개발 순서 · 본 생산 전후, 개발할 세 층 루프, 결론과 범위, 외부 원문 교차 확인, 유지할 규칙, 이번 작업이 한 것과 하지 않은 것
+
+### Community 3714 - "Community 3714"
+Cohesion: 0.40
+Nodes (5): dependencies, depth, source, version, com.unity.modules.ai
+
+### Community 3715 - "Community 3715"
+Cohesion: 0.40
+Nodes (5): ownedProcessStop, buildResult, exitCode, name, pid
+
+### Community 4031 - "Community 4031"
+Cohesion: 0.40
+Nodes (5): reoffer, dismissalCompletedUtc, elapsedSeconds, observedAgainUtc, preciseFiringFrameMeasured
+
+### Community 4032 - "Community 4032"
+Cohesion: 0.40
+Nodes (5): knowledgeSync, mex, manualHandoffUpdated, reason, result
+
+### Community 4033 - "Community 4033"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, editTimeline
+
+### Community 4034 - "Community 4034"
+Cohesion: 0.14
+Nodes (14): repositoryStateAtClose, branch, commitActor, commitSubject, commitTimestamp, head, integration, mode (+6 more)
+
+### Community 4039 - "Community 4039"
+Cohesion: 0.50
+Nodes (4): main(), parseArgs(), renderPage(), selfCheck()
+
+### Community 4040 - "Community 4040"
+Cohesion: 0.50
+Nodes (4): buildAssembly, bytes, path, sha256
+
+### Community 4041 - "Community 4041"
+Cohesion: 0.50
+Nodes (4): playerLog, bytes, path, sha256
+
+### Community 4042 - "Community 4042"
+Cohesion: 0.50
+Nodes (4): runtimeLogScan, caseInsensitive, matches, pattern
+
+### Community 4043 - "Community 4043"
+Cohesion: 0.50
+Nodes (4): detailedStructureChecks, failed, notRecorded, passed
+
+### Community 4044 - "Community 4044"
+Cohesion: 0.50
+Nodes (4): upload_receipt, bytes, path, sha256
+
+### Community 4045 - "Community 4045"
+Cohesion: 0.67
+Nodes (3): graphify-out/.graphify_labels.json, bytes, sha256
+
+### Community 4046 - "Community 4046"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/beats.json, bytes, sha256
+
+### Community 4047 - "Community 4047"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/hints.json, bytes, sha256
+
+### Community 4048 - "Community 4048"
+Cohesion: 0.67
+Nodes (3): bytes, sha256, build-inputs.json
+
+### Community 4049 - "Community 4049"
+Cohesion: 0.67
+Nodes (3): native-1-launch.json, bytes, sha256
+
+### Community 4050 - "Community 4050"
+Cohesion: 0.67
+Nodes (3): native-1-save/save.json.meta.md, bytes, sha256
+
+### Community 4051 - "Community 4051"
+Cohesion: 0.67
+Nodes (3): native-2-save/checkpoint.pre-commit.json.bak.meta.md, bytes, sha256
+
+### Community 4052 - "Community 4052"
+Cohesion: 0.50
+Nodes (4): 8.4 신규 결함 — C3-F34 ~ C3-F36, C3-F34 · S2 · worldview — 정합 감사가 이미 닫힌 위반을 "2차 재측정" 표제 아래 현행 `[OBSERVED]`로 유지한다 · open, C3-F35 · S2 · planner / economy — 원본 상태 카운터의 이름이 세 벌이고, 기획서가 **철회된 필드명**을 "채택안"으로 인용한다 · open, C3-F36 · S3 · systems — 프로토타입이 순서 앵커 쌍을 **폐기된 두 이름**으로 라벨링한다 · open
+
+### Community 4053 - "Community 4053"
+Cohesion: 0.25
+Nodes (7): kept, recordedAt, removed, reproducibility, rfc, schemaVersion, scope
+
+### Community 4067 - "Community 4067"
+Cohesion: 0.25
+Nodes (8): entries, megabytes, reason, scratchCleared, freedMegabytes, location, preconditionVerified, remaining
+
+### Community 4068 - "Community 4068"
+Cohesion: 0.67
+Nodes (3): native-1/first-confirm-still-0-of-2.png, bytes, sha256
+
+### Community 4069 - "Community 4069"
+Cohesion: 0.67
+Nodes (3): native-1-player.log.meta.md, bytes, sha256
+
+### Community 4070 - "Community 4070"
+Cohesion: 0.67
+Nodes (3): native-2/drawer-visible-pointer.png.meta.md, bytes, sha256
+
+### Community 4071 - "Community 4071"
+Cohesion: 0.67
+Nodes (3): native-2-save/checkpoint.pre-commit.json.bak, bytes, sha256
+
+### Community 4072 - "Community 4072"
 Cohesion: 0.67
 Nodes (3): bible, path, sha256
 
+### Community 4073 - "Community 4073"
+Cohesion: 0.57
+Nodes (7): clips, meshes, skinJointCounts, skins, glb, glb, glb
+
+### Community 4074 - "Community 4074"
+Cohesion: 0.25
+Nodes (8): deliveryBoundaries, canonChanged, commitOrPushPerformed, commitOrPushPerformedByThisSession, humanRecruitmentOrPlayExecuted, newAssetsGenerated, newGameplayImplemented, productionOrCommercialGatePromoted
+
+### Community 4079 - "Community 4079"
+Cohesion: 0.29
+Nodes (7): currentBuildSmoke, app, bootMarker, bundleMegabytes, falseAlarm, launch, playerLogExceptions
+
+### Community 4080 - "Community 4080"
+Cohesion: 0.29
+Nodes (7): objectStore, fsck, garbageTmpObjRemoved, gitDirAfter, gitDirBefore, pruneNote, refsIdentical
+
+### Community 4081 - "Community 4081"
+Cohesion: 0.33
+Nodes (6): failedRetry, failedTasks, fallback, message, status, explicitDeepModelFailuresReportedByAside
+
+### Community 4082 - "Community 4082"
+Cohesion: 0.14
+Nodes (14): build, assemblies, buildReportBytes, fingerprint, fingerprintAlgorithm, inventory, inventoryBytes, inventoryFiles (+6 more)
+
+### Community 4083 - "Community 4083"
+Cohesion: 0.15
+Nodes (12): AlignmentPractice 소유 (R5), CanonConsistency 소유 (R4), GoalReview 소유 (QA 독립 검토), M23 · Aside 권고 구현·검증 계약, ReaderCompare 소유 (R1), SignatureSources 소유 (R2/R3), 검증·리뷰 루프, 공유 코드 계약과 소유권 (+4 more)
+
+### Community 4084 - "Community 4084"
+Cohesion: 0.15
+Nodes (13): tests, campaignChecksPassed, editModePassed, evidenceGraphChecksPassed, isolatedBootPassed, nodePreservationRegressionPassed, playModePassed, playModeSkipped (+5 more)
+
+### Community 4085 - "Community 4085"
+Cohesion: 0.40
+Nodes (5): inPack, looseCount, looseSize, packSize, after
+
+### Community 4086 - "Community 4086"
+Cohesion: 0.40
+Nodes (5): inPack, looseCount, looseSize, packSize, before
+
+### Community 4089 - "Community 4089"
+Cohesion: 0.50
+Nodes (4): productionReceipt, bytes, path, sha256
+
+### Community 4090 - "Community 4090"
+Cohesion: 0.33
+Nodes (5): Aside 코어 루프 조사 실행 영수증, 동시 작업의 Git 상태, 실행·출처, 증거의 한계, 지식 갱신 범위
+
+### Community 4091 - "Community 4091"
+Cohesion: 0.50
+Nodes (3): 구조 검증과 평가 오염 방지, 근거, 독립 근거 이해 · 단일 변수 실험 제안
+
+### Community 4092 - "Community 4092"
+Cohesion: 0.50
+Nodes (4): notTouched, detail, parallelSessionFiles, sharedFileCheck
+
+### Community 4093 - "Community 4093"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/editmode.xml, bytes, sha256
+
+### Community 4094 - "Community 4094"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/logs/player-m19-pid92370.log, bytes, sha256
+
+### Community 4095 - "Community 4095"
+Cohesion: 0.67
+Nodes (3): native-1-save/checkpoint.pre-commit.json, bytes, sha256
+
+### Community 4096 - "Community 4096"
+Cohesion: 0.17
+Nodes (12): video, audioStreams, averageCaptureFrameRate, boundary, bytes, codec, command, durationSeconds (+4 more)
+
+### Community 4098 - "Community 4098"
+Cohesion: 0.67
+Nodes (3): records, path, sha256
+
+### Community 4102 - "Community 4102"
+Cohesion: 0.18
+Nodes (10): actions, curatedCapturePaths, negativeEvidence, capture19, capture37, capture55, captures32through34, preQ5 (+2 more)
+
+### Community 4103 - "Community 4103"
+Cohesion: 0.18
+Nodes (10): arrangements, limits, initialOffsetMinutes, maxOffsetMinutes, minOffsetMinutes, rawErrorMinutes, residualLimitMinutes, stepMinutes (+2 more)
+
+### Community 4104 - "Community 4104"
+Cohesion: 0.20
+Nodes (9): AFK, H-1 동결 정의, H-2/H-3·이탈, M23 · 사람 평가 실행 패킷과 측정 경계, 동결과 두 표본의 격리, 실제 수집기 부재와 수동 관찰 경로, 조위정합 개념 검증 질문, 준비 경로의 실제 스모크 (+1 more)
+
+### Community 4105 - "Community 4105"
+Cohesion: 0.20
+Nodes (9): code:sh (node --test _workspace/current/planning/audit-campaign-prese), code:sh (node _workspace/current/systems/pipeline/emit-tables.mjs --s), M23 R4 — 정본 문구와 보존 감사 강도 영수증, Main 통합 실행 영수증, 남은 생산/정본 게이트, 범위·권한, 별도 감사의 측정 범위, 실행 상태 및 Main 명령 (+1 more)
+
+### Community 4106 - "Community 4106"
+Cohesion: 0.25
+Nodes (7): M23 · 구현 결과, 독립 리뷰, 다음 개선 계획, 결론, 권고별 실제 달성 범위, 다음 개선 순서와 통과 조건, 디버깅과 리뷰 결과, 소스 전달 경계, 실행 증거
+
+### Community 4107 - "Community 4107"
+Cohesion: 0.25
+Nodes (8): canonAudit, artifact, exitCode, minimalIndependentPairBeats, promiseWeakened, result, strongP1, strongP2
+
+### Community 4108 - "Community 4108"
+Cohesion: 0.25
+Nodes (8): review, correctedFindings, executionOwner, initial, notAnEntireRepositorySecurityAudit, postImplementation, readOnlyReviewers, remainingProvenFindingsInAssignedReviewScope
+
+### Community 4109 - "Community 4109"
+Cohesion: 0.57
+Nodes (7): clips, meshes, skinJointCounts, skins, glb, glb, glb
+
+### Community 4110 - "Community 4110"
+Cohesion: 0.29
+Nodes (6): M23 · 구현 후 독립 리뷰와 수정 기록, 미충족을 결함 통과로 바꾸지 않은 항목, 실제 발견과 수정, 실행으로 드러난 통합 문제, 역할과 판정 경계, 최종 수정안의 실행과 독립 재검토
+
+### Community 4112 - "Community 4112"
+Cohesion: 0.33
+Nodes (6): statusSnapshot, rawOutputArtifact, scope, staged, unstaged, untracked
+
+### Community 4113 - "Community 4113"
+Cohesion: 0.33
+Nodes (6): negativeEvidence, capture19, capture37, capture55, captures32through34, preQ5
+
+### Community 4114 - "Community 4114"
+Cohesion: 0.33
+Nodes (5): Base 판정, M23 · 독립 목표 검토와 합의, 검토 정정과 범위, 구현 후 종결 증거, 우선순위·소스 색인과 노출 경계
+
+### Community 4115 - "Community 4115"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Cube
+
+### Community 4116 - "Community 4116"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Light
+
+### Community 4117 - "Community 4117"
+Cohesion: 0.40
+Nodes (5): hidden, matrix, renderHidden, type, Cube
+
+### Community 4118 - "Community 4118"
+Cohesion: 0.40
+Nodes (5): playmode-final.xml, failed, passed, skipped, total
+
+### Community 4119 - "Community 4119"
+Cohesion: 0.50
+Nodes (3): recordedAtUtc, schemaVersion, sessionId
+
+### Community 4120 - "Community 4120"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, completedNote
+
+### Community 4121 - "Community 4121"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, completedSignature
+
+### Community 4122 - "Community 4122"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, defaultPracticeBefore
+
+### Community 4123 - "Community 4123"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, finalReaderSaveAfter
+
+### Community 4124 - "Community 4124"
+Cohesion: 0.50
+Nodes (4): bytes, path, sha256, finalReaderSaveBefore
+
+### Community 4125 - "Community 4125"
+Cohesion: 0.50
+Nodes (4): restartedNote, bytes, path, sha256
+
+### Community 4126 - "Community 4126"
+Cohesion: 0.50
+Nodes (4): restartedSignature, bytes, path, sha256
+
+### Community 4127 - "Community 4127"
+Cohesion: 0.67
+Nodes (3): bytes, sha256, assets/generated/2d/ui/m20-archival-work-surface-r02.png
+
+### Community 4128 - "Community 4128"
+Cohesion: 0.67
+Nodes (3): _workspace/current/presentation/c1-interview-prep-m18.md, bytes, sha256
+
+### Community 4129 - "Community 4129"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/data/t0/hints.meta.md, bytes, sha256
+
+### Community 4130 - "Community 4130"
+Cohesion: 0.67
+Nodes (3): _workspace/current/systems/tech-verification/m19-ui-polish/playmode.log, bytes, sha256
+
+### Community 4131 - "Community 4131"
+Cohesion: 0.67
+Nodes (3): native-1/prepared-0-of-2.png, bytes, sha256
+
+### Community 4132 - "Community 4132"
+Cohesion: 0.67
+Nodes (3): native-2/start-0-of-2.png.meta.md, bytes, sha256
+
+### Community 4133 - "Community 4133"
+Cohesion: 0.67
+Nodes (3): completedAt, removedTransientFiles, foregroundResult
+
+### Community 4134 - "Community 4134"
+Cohesion: 0.67
+Nodes (3): wiring, path, sha256
+
 ## Knowledge Gaps
-- **20595 isolated node(s):** `protocol_version`, `version`, `tlc`, `sigsgev`, `notifications` (+20590 more)
+- **28194 isolated node(s):** `protocol_version`, `version`, `tlc`, `sigsgev`, `notifications` (+28189 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **610 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **960 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `string` connect `Community 156` to `Community 2312`, `Community 2315`, `Community 1295`, `Community 401`, `Community 2846`, `Community 1569`, `Community 2209`, `Community 553`, `Community 1580`, `Community 1581`, `Community 181`, `Community 2749`, `Community 1341`, `Community 2751`, `Community 451`, `Community 2887`, `Community 2888`, `Community 2377`, `Community 2893`, `Community 214`, `Community 2134`, `Community 1625`, `Community 2779`, `Community 2140`, `Community 2141`, `Community 2142`, `Community 1384`, `Community 2154`, `Community 622`, `Community 1394`, `Community 1523`, `Community 499`, `Community 761`, `Community 509`, `Community 2814`, `Community 1535`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `reduce()` connect `Community 668` to `Community 107`, `Community 109`?**
+- **Why does `string` connect `Community 156` to `Community 3075`, `Community 3588`, `Community 2312`, `Community 3083`, `Community 3084`, `Community 2315`, `Community 1295`, `Community 401`, `Community 1569`, `Community 2209`, `Community 553`, `Community 1580`, `Community 1581`, `Community 181`, `Community 3259`, `Community 1341`, `Community 2751`, `Community 451`, `Community 2887`, `Community 2888`, `Community 2377`, `Community 2771`, `Community 214`, `Community 2134`, `Community 1623`, `Community 1625`, `Community 2779`, `Community 2140`, `Community 2141`, `Community 2142`, `Community 478`, `Community 622`, `Community 1394`, `Community 1523`, `Community 4087`, `Community 761`, `Community 3708`, `Community 509`, `Community 2814`, `Community 1535`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `M22EmbodimentProjectBuilder` connect `Community 478` to `Community 156`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `done` connect `Community 668` to `Community 1486`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `T0Interface` connect `Community 509` to `Community 2887`, `Community 622`, `Community 1295`, `Community 214`, `Community 156`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `protocol_version`, `version`, `tlc` to the rest of the system?**
-  _20625 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _28376 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

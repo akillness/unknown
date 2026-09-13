@@ -9,6 +9,7 @@ namespace Tide.Input {
   public event Action ToolWheel;
   public event Action BeginInteract,EndInteract,Preview,Undo,Redo,Query,Disconnect,Cancel;
   public event Action<string> Overlay; public event Action<int> Tool;
+  public event Action Activity;
   public bool ToolPanel {get;set;} public bool OverlayActive {get;set;}
   public InputActionAsset Actions {get;private set;}
   public int ContextGeneration {get;private set;}
@@ -29,7 +30,7 @@ namespace Tide.Input {
   void NoteDevice(InputDevice device){bool isPad=device is Gamepad;if(isPad!=LastDeviceIsGamepad){LastDeviceIsGamepad=isPad;DeviceChanged?.Invoke(isPad);}}
   InputActionRebindingExtensions.RebindingOperation rebinding;
   public void Initialize(string json,string overrides=null){
-   deviceListener=InputSystem.onAnyButtonPress.Call(control=>NoteDevice(control.device));
+   deviceListener=InputSystem.onAnyButtonPress.Call(control=>{NoteDevice(control.device);Activity?.Invoke();});
    Actions=InputActionAsset.FromJson(json);if(!string.IsNullOrEmpty(overrides))Actions.LoadBindingOverridesFromJson(overrides);
    var map=Actions.FindActionMap("Watch",true);
    map.actionTriggered+=c=>{if(c.phase!=InputActionPhase.Started&&c.phase!=InputActionPhase.Performed)return;NoteDevice(c.control.device);};
@@ -47,6 +48,7 @@ namespace Tide.Input {
   }
   void Update(){
    if(Actions==null||rebinding!=null)return;
+   if(Mouse.current!=null&&(Mouse.current.delta.ReadValue()!=Vector2.zero||Mouse.current.scroll.ReadValue()!=Vector2.zero))Activity?.Invoke();
    if(imeKeyboard!=Keyboard.current){if(imeKeyboard!=null)imeKeyboard.onIMECompositionChange-=OnComposition;imeKeyboard=Keyboard.current;if(imeKeyboard!=null)imeKeyboard.onIMECompositionChange+=OnComposition;}
    if(TextEntryActive){
     if(!imeComposing&&Time.frameCount>compositionChangedFrame+1&&((Keyboard.current?.tabKey.wasPressedThisFrame??false)||(Keyboard.current?.escapeKey.wasPressedThisFrame??false)))TextEntryExitRequested?.Invoke();
@@ -59,7 +61,7 @@ namespace Tide.Input {
    if(Keyboard.current?.tabKey.wasPressedThisFrame??false)Navigate?.Invoke(Keyboard.current.shiftKey.isPressed?-1:1);
    var move=Actions.FindAction("Navigate").ReadValue<Vector2>();if(move.sqrMagnitude>.25f&&Time.unscaledTime>=nextNavigation)Move(move);
   }
-  void Move(Vector2 value){if(value.sqrMagnitude<.25f)return;nextNavigation=Time.unscaledTime+.2f;
+  void Move(Vector2 value){if(value.sqrMagnitude<.25f)return;Activity?.Invoke();nextNavigation=Time.unscaledTime+.2f;
    bool fine=(Keyboard.current?.shiftKey.isPressed??false)||(Gamepad.current?.leftTrigger.isPressed??false);
    if(ToolPanel&&!OverlayActive&&!navigationStick)Adjust?.Invoke(value,fine);else Navigate?.Invoke(value.y>0||value.x<0?-1:1);
   }

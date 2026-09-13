@@ -1,0 +1,994 @@
+{
+  "validator": "planning/audit-campaign-preservation.mjs",
+  "inputs": [
+    {
+      "path": "/Users/jangyoung/orca/unknown/_workspace/current/planning/campaign.json",
+      "bytes": 123944,
+      "sha256": "baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe"
+    },
+    {
+      "path": "/Users/jangyoung/orca/unknown/_workspace/current/synopsis/continuity.md",
+      "bytes": 47524,
+      "sha256": "933b09a623d11eba28b77c7a8a43ad126ec67f9506bc8c9615761e1866e46b84"
+    }
+  ],
+  "verdict": "blocked",
+  "minimalPairScope": "C-07 rule only: one independent pair per proofRequired beat; not P1/P2",
+  "minimalPairs": [
+    {
+      "beatId": "t0-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "t0-b3-c1",
+            "t0-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "tide-ledger-bureau"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c1-b2",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c1-b2-c1",
+            "c1-b2-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c1-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c1-b3-c1",
+            "c1-b3-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "brine-log-gate3"
+          ]
+        },
+        {
+          "clueIds": [
+            "c1-b3-c1",
+            "c1-b3-c3"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c2-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c2-b3-c1",
+            "c2-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "tide-ledger-bureau"
+          ]
+        },
+        {
+          "clueIds": [
+            "c2-b3-c1",
+            "c2-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "log"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "watchlog-archive-t12"
+          ]
+        },
+        {
+          "clueIds": [
+            "c2-b3-c2",
+            "c2-b3-c3"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "tide-ledger-bureau",
+            "watchlog-archive-t12"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c2-b4",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c2-b4-c1",
+            "c2-b4-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "duty-roster",
+            "brine-log-gate3"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c3-b1",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c3-b1-c1",
+            "c3-b1-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "tide-ledger-seongchan",
+            "brine-log-dock"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c3-b2",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c3-b2-c1",
+            "c3-b2-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "plate"
+          ],
+          "roots": [
+            "tide-ledger-seongchan",
+            "plate-standard-hub"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c3-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c3-b3-c1",
+            "c3-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "tide-ledger-bureau"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c4-b1",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c4-b1-c1",
+            "c4-b1-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "tide-ledger-bureau",
+            "council-custody-log"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c4-b2",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c4-b2-c1",
+            "c4-b2-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c4-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c4-b3-c1",
+            "c4-b3-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "ledger"
+          ],
+          "roots": [
+            "regulation-dual-seal",
+            "family-allowance-ledger"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c5-b1",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c5-b1-c1",
+            "c5-b1-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "forecast-table"
+          ]
+        },
+        {
+          "clueIds": [
+            "c5-b1-c1",
+            "c5-b1-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "log"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "evac-report"
+          ]
+        },
+        {
+          "clueIds": [
+            "c5-b1-c2",
+            "c5-b1-c3"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "forecast-table",
+            "evac-report"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c5-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c5-b3-c1",
+            "c5-b3-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "council-custody-log",
+            "brine-log-hub"
+          ]
+        },
+        {
+          "clueIds": [
+            "c5-b3-c1",
+            "c5-b3-c3"
+          ],
+          "sourceTypes": [
+            "log",
+            "ledger"
+          ],
+          "roots": [
+            "council-custody-log",
+            "tide-ledger-bureau"
+          ]
+        },
+        {
+          "clueIds": [
+            "c5-b3-c2",
+            "c5-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-hub",
+            "tide-ledger-bureau"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c6-b1",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c6-b1-c1",
+            "c6-b1-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "pump-maintenance-ledger"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c6-b2",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c6-b2-c1",
+            "c6-b2-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "sensor-install-ledger"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c6-b3",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c6-b3-c1",
+            "c6-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "pump-maintenance-ledger"
+          ]
+        },
+        {
+          "clueIds": [
+            "c6-b3-c1",
+            "c6-b3-c4"
+          ],
+          "sourceTypes": [
+            "plate",
+            "log"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "expansion-approval-file"
+          ]
+        },
+        {
+          "clueIds": [
+            "c6-b3-c2",
+            "c6-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-zero",
+            "pump-maintenance-ledger"
+          ]
+        },
+        {
+          "clueIds": [
+            "c6-b3-c2",
+            "c6-b3-c4"
+          ],
+          "sourceTypes": [
+            "plate",
+            "log"
+          ],
+          "roots": [
+            "plate-zero",
+            "expansion-approval-file"
+          ]
+        },
+        {
+          "clueIds": [
+            "c6-b3-c3",
+            "c6-b3-c4"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "pump-maintenance-ledger",
+            "expansion-approval-file"
+          ]
+        }
+      ]
+    },
+    {
+      "beatId": "c7-b2",
+      "status": "PASS",
+      "candidates": [
+        {
+          "clueIds": [
+            "c7-b2-c1",
+            "c7-b2-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "plate"
+          ],
+          "roots": [
+            "tide-ledger-bureau",
+            "brine-log-gate3"
+          ]
+        }
+      ]
+    }
+  ],
+  "lineageIssues": [],
+  "claimCoverage": {
+    "source": "synopsis/continuity.md §5.1 K1–K10",
+    "missingClaims": [],
+    "duplicateClaims": [],
+    "status": "enumerated-only"
+  },
+  "claims": [
+    {
+      "id": "K1",
+      "claim": "결손 4시간의 존재",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "t0-b3-c1",
+            "t0-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "tide-ledger-bureau"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c2-b3-c1",
+            "c2-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "tide-ledger-bureau"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 1,
+      "repeatedRootPair": true,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "첫 판독 자동 사본(`t0-b3` 결과)",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K2",
+      "claim": "판 #0 곡선의 **명령 대기 구간**",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c1-b2-c1",
+            "c1-b2-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c4-b2-c1",
+            "c4-b2-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 1,
+      "repeatedRootPair": true,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "판 #0은 서린 소유·잠금 보관, 원본 무소모(`c4-b2.recovery`)",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K3",
+      "claim": "두 서명의 필압·잉크 차이",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c1-b3-c1",
+            "c1-b3-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "brine-log-gate3"
+          ]
+        },
+        {
+          "status": "unknown",
+          "clueIds": [],
+          "reason": "No explicit two-clue mapping; beat-only references are not substituted"
+        }
+      ],
+      "distinctCandidateRootPairs": 1,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "분리 후 사본, 원본 손상 없음(`c1-b2.recovery`)",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K4",
+      "claim": "부식 패턴 ≠ 정전 (R1)",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c2-b3-c1",
+            "c2-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "plate-standard-hub",
+            "tide-ledger-bureau"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c2-b4-c1",
+            "c2-b4-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "duty-roster",
+            "brine-log-gate3"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "서사 부식은 읽기 전용(P4)",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K5",
+      "claim": "정합 잔차 ≤4분 · 총 오차폭 8분 · unknown 규칙",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c3-b2-c1",
+            "c3-b2-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "plate"
+          ],
+          "roots": [
+            "tide-ledger-seongchan",
+            "plate-standard-hub"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c3-b3-c1",
+            "c3-b3-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "tide-ledger-bureau"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "`c3-b1`의 첫 판독 자동 사본이 증거함에 남는다",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K6",
+      "claim": "**밸브 개폐(H-1:24)가 봉인 완료 접점(H-1:04)보다 20분 앞섰다**",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c6-b3-c1",
+            "c6-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "pump-maintenance-ledger"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c7-b2-c1",
+            "c7-b2-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "plate"
+          ],
+          "roots": [
+            "tide-ledger-bureau",
+            "brine-log-gate3"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "두 각인 모두 기계 각인, 자료 소모 없음(`c6-b3.recovery`)",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K7",
+      "claim": "두 번째 서명란의 이름과 필자 (R2)",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c4-b2-c1",
+            "c4-b2-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "plate"
+          ],
+          "roots": [
+            "signature-annex",
+            "plate-zero"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c4-b3-c1",
+            "c4-b3-c2"
+          ],
+          "sourceTypes": [
+            "log",
+            "ledger"
+          ],
+          "roots": [
+            "regulation-dual-seal",
+            "family-allowance-ledger"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "원본 잠금 보관, 사본 무제한 재생",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K8",
+      "claim": "통화 개시 시각·계통 (내용은 남지 않는다)",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c3-b1-c1",
+            "c3-b1-c2"
+          ],
+          "sourceTypes": [
+            "ledger",
+            "log"
+          ],
+          "roots": [
+            "tide-ledger-seongchan",
+            "brine-log-dock"
+          ]
+        },
+        {
+          "status": "unknown",
+          "clueIds": [],
+          "reason": "No explicit two-clue mapping; beat-only references are not substituted"
+        }
+      ],
+      "distinctCandidateRootPairs": 1,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "첫 판독 자동 사본이 증거함에 보존",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K9",
+      "claim": "증설 승인 ↔ 임시운전·센서 설치 서류 불일치",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c6-b2-c1",
+            "c6-b2-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "sensor-install-ledger"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c6-b1-c1",
+            "c6-b1-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "pump-maintenance-ledger"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "서류 원본은 타 기관 보관, 플레이어 행동으로 소실되지 않는다",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    },
+    {
+      "id": "K10",
+      "claim": "고장 은폐가 실제 동기 (R3)",
+      "candidatePaths": [
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c6-b3-c1",
+            "c6-b3-c3"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-gate3",
+            "pump-maintenance-ledger"
+          ]
+        },
+        {
+          "status": "candidate",
+          "clueIds": [
+            "c6-b2-c1",
+            "c6-b2-c2"
+          ],
+          "sourceTypes": [
+            "plate",
+            "ledger"
+          ],
+          "roots": [
+            "brine-log-pump1",
+            "sensor-install-ledger"
+          ]
+        }
+      ],
+      "distinctCandidateRootPairs": 2,
+      "repeatedRootPair": false,
+      "p1": {
+        "status": "unknown",
+        "reason": "Candidate pairs do not prove two alternative paths to this same claim; complete authored claim/path conditions and reachability evidence are missing"
+      },
+      "p2": {
+        "status": "unknown",
+        "authoredPreservationNote": "위와 같음",
+        "reason": "No per-member proof of a fully indestructible pair across all player actions, including access before first read; a copy or one surviving member is insufficient"
+      }
+    }
+  ],
+  "blockers": [
+    "P1: complete authored alternative-path/claim attribution and reachability evidence absent",
+    "P2: both-member preservation/action coverage evidence absent"
+  ],
+  "owners": {
+    "p1": [
+      "game-worldview-architect",
+      "game-planner",
+      "game-synopsis-writer"
+    ],
+    "p2": [
+      "game-worldview-architect",
+      "game-systems-designer",
+      "game-qa"
+    ]
+  },
+  "notMeasured": [
+    "Full G1",
+    "Runtime preservation/reachability",
+    "Human discovery/comprehension",
+    "Production gate"
+  ]
+}

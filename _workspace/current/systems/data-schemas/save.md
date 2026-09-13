@@ -1,15 +1,17 @@
 ---
-updated: 2026-09-10
-cycle: 20260909-preproduction-c3
+updated: 2026-09-13
+cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
 owner: game-systems-designer
 ---
 
-# 데이터 스키마 — save (세이브 v1)
+# 데이터 스키마 — save (현재 런타임 v3 · 초기 v1 설계 계보)
 
 파일 위치: `%USERPROFILE%/AppData/LocalLow/<company>/<product>/saves/slot{n}.json` [TARGET]
 관련 스펙: `systems/system-specs/save-undo.md`, 절차 불변식은 `systems/architecture-contract.md` §8.
+
+현재 버전의 근거는 `unity/Unknown/Assets/_Project/Save/AtomicSaveStore.cs`의 지원 범위 0~3 및 v3 이전이다. 아래 v1 확정 시점·M2 기록·개명 금지 계보는 역사로 보존한다. v1/v2 저장은 원본 버전 백업과 명령을 보존해 읽으며 상위 버전은 거부한다. README M3/M4 영수증을 참조하며, 이번 문구 정정은 새 마이그레이터나 전체 스키마 구현 완료 주장이 아니다.
 
 > **이 스키마의 필드 개명은 플레이어 세이브를 고아로 만든다.** 마이그레이터 없이는 거부한다(CLAUDE.md §9).
 
@@ -31,7 +33,7 @@ owner: game-systems-designer
 
 | 필드 | 타입 | tunable | 설명 |
 |---|---|---|---|
-| `schemaVersion` | int | no | 1. 정수 단조 증가 |
+| `schemaVersion` | int | no | 현재 런타임 3. 초기 설계값 1에서 단조 증가; v1/v2 이전 지원 |
 | `saveId` | string (uuid) | no | 슬롯 간 유일 |
 | `createdUtc` / `updatedUtc` | string (ISO8601, UTC) | no | 문화권 의존 포맷 금지 |
 | `appVersion` | string | no | 진단용. 로드 판정에는 쓰지 않는다 |

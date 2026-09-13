@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c5
 status: draft
 supersedes: null
@@ -16,7 +16,7 @@ owner: game-animator
 - `production/premium-preproduction-contract.md` Asset pipeline 표(휴머노이드 리깅·모션 행): "`animation/rig-requirements.md`가 Mixamo 호환 규격을 명시".
 - 재측정: `grep -rn "OPEN-M5" _workspace/current/` → **0 hit**. 즉 OPEN-M5 라는 **id 자체는 아직 어느 파일에도 등재되어 있지 않다**(등재는 modeling 레인 소유). 이 문서는 위 세 인용이 가리키는 **부재**를 해소한다.
 
-**실측 [OBSERVED]**: 리깅 0건 · Unity Animator Controller 0개 · `.anim` 클립 파일 0개 · Mixamo 접속 0회 · 재생 프레임 캡처 0장 · 손 자산 0개. 이 문서의 모든 시간·본 수·각도는 **[TARGET]** 이며, 자산의 존재/치수/피벗만 타 레인 문서 인용의 [OBSERVED] 다.
+**기준선 실측 [OBSERVED 2026-09-10]**: 당시 리깅 0건 · Unity Animator Controller 0개 · `.anim` 클립 파일 0개 · Mixamo 접속 0회 · 재생 프레임 캡처 0장 · 손 자산 0개. **M22 제작 착수 이후의 현황으로 재사용하지 않는다.** RFC-CX-018의 새 범위는 §3.1에 명시하며, 납품 전 수치와 시간은 여전히 [TARGET]이다.
 
 **frontmatter 근거**: 신설 파일이므로 대체가 아니다(`supersedes: null`). `cycle` 은 이 레인의 live 문서 `animation/animation-contract.md` 와 같은 `20260909-preproduction-c5` 를 쓴다. `status: draft` 는 C3-F33("R4/R5 에서 QA 가 검증한 문서를 소유 레인이 같은 cycle 값 그대로 current 로 올린다")에 따라 **검증 전 자기 승격을 하지 않기** 위함이다.
 
@@ -26,14 +26,14 @@ owner: game-animator
 
 | 항목 | 수량 | 근거 [OBSERVED 인용] |
 |---|---:|---|
-| 3D 휴머노이드 | **0** | `modeling/pipeline.md` §8 · RFC-P4-001 |
+| 3D 인물 | **M22: Generic 캐릭터 1** [TARGET] | 최신 사용자 지시 · RFC-CX-018 · §3.1. 타 NPC는 기존 2D 초상 유지 |
 | locomotion / 보행 / NavMesh | **0** | `animation/animation-contract.md` (C4/C5 검증 대기) · `systems/unity-implementation.md` §8 (C4/C5 검증 대기) |
 | 립싱크 · 눈 깜빡임 루프 | **0** | `concept/art-direction.md` "걷는 주인공/전투/립싱크를 만들지 않는다" |
 | 블렌드셰이프 · 2D 스켈레톤(PSD Importer/Anima2D) | **0** | `modeling/asset-budget.md` "초상 5×3 — 2D, 별도 리깅 없음" |
-| 스킨 메시 | **0** (프롭은 부모-자식 계층) | 본 문서 §2 |
+| 스킨 메시 | **M22: 캐릭터 1 + 좌/우 손 2** [TARGET] | §3.1. 기존 강체 프롭은 계속 부모-자식 계층 |
 | 루트 모션 | **0** | 고정 2.5D 노드 카메라, 프롭은 제자리 |
 
-→ 이 프로젝트가 실제로 요구하는 리그는 **세 종류뿐**이다: **(A) 도구·소품 프롭 리그**, **(B) 조건부 손 표현**, **(C) 2D 초상 시트(리그 아님)**. 그 밖에 (D) 휴머노이드 규격은 **RFC 가 열릴 때만** 발동하는 잠금 규격이다.
+→ 기존 (A) 도구·소품 프롭 리그와 (C) 2D 초상 시트는 유지한다. (B) 조건부 손 표현은 **M22에서 3D Generic 양손으로 개방**하며, 한서린 전신도 Generic으로 저작한다. (D)의 외부 Humanoid/Mixamo 리타게팅은 이번 범위에 포함하지 않는다.
 
 ## 2. (A) 도구 6종 프롭 리그 규격
 
@@ -83,9 +83,9 @@ owner: game-animator
 | `SM_Kit_Crank` | `JNT_crank_axle` | 로컬 Z 연속 회전(loop 1회전 = 360°) | rotation.z |
 | `SM_Kit_Panel_Hatch` | `JNT_hatch_leaf` | 로컬 X 힌지 0 → +85° | rotation.x |
 
-## 3. (B) 손 표현 — **결정: 기본값 "손 없음", 필요 시 2D 오버레이. 3D 손은 별도 RFC**
+## 3. (B) 손 표현 — M22에서 3D Generic 양손 채택
 
-**결정 [TARGET · 애니메이션 레인 소유, 디렉터 확인 요청 = RFC-A1]**
+**아래 표는 M22 이전 RFC-A1 결정 기록이다.** 2026-09-13 사용자 후속 지시와 RFC-CX-018이 옵션 B를 명시적으로 개방했다. 이전 보류를 현재 금지로 적용하지 않는다.
 
 | 안 | 내용 | 판정 |
 |---|---|---|
@@ -95,9 +95,18 @@ owner: game-animator
 
 근거 [OBSERVED]: `modeling/asset-manifest.md` 47행 어디에도 손 자산 행이 없고, `modeling/asset-budget.md` 수량 계약(셸5/도구6/초상5/공용30/UI1)에도 손 항목이 없다. RFC-P4-001 은 "3D 인물 도입은 C4 이후 별도 RFC" 로 못박았다. 손은 인물의 일부이므로 **예산과 판정을 애니메이터가 혼자 열 수 없다.**
 
-**따라서 `modeling/pipeline.md` §8 의 조건부 항목이 닫힌다**: "손가락 — 확대뷰에 손이 나오면 finger joints on, 아니면 off" → **off 확정**(옵션 B가 승인되기 전까지). 이 값은 Mixamo 규격 §5 에도 그대로 반영한다.
+**M22 현재 결정**: `modeling/pipeline.md` §8의 확대뷰 손가락 조건은 **on**이다. 좌/우 손목과 손가락의 실제 리그·키프레임을 납품한다. 외부 Humanoid/Mixamo 경로의 finger-off 규격은 그 미사용 경로에만 남는다.
 
 옵션 A 가 승인될 경우의 납품 규격 [TARGET, 미착수]: PNG 알파, 도구당 2컷, 시트 폭 2048, 앵커 = 도구 원점의 화면 투영점, 색은 `concept/style-guide.md` 팔레트 안, 저감모션에서는 **접촉 정지컷 1장만** 표시, 클립 아님(UI 이미지 스왑).
+
+### 3.1 RFC-CX-018 한서린·양손 납품 및 런타임 경계
+
+- [OBSERVED 2026-09-13] `assets/generated/3d/seorin-m22/r01/`에 원본 .blend, 캐릭터 및 좌/우 손 GLB/FBX, manifest, Blender 렌더 프리뷰를 생성했다. `scripts/blender/build-seorin-m22.py`를 실제 Blender MCP에서 실행했다. 원본 Scene 비교는 45/45 통과, 메시·재질·월드·카메라 상세 구조 비교는 필드가 기록된 36/36 통과이며 초기 9건에는 상세 필드가 없다. 마지막 export RPC 53에서 두 보존 검사를 확인했다. 새 데이터가 생겼으므로 Blender 세션의 dirty 불변은 주장하지 않는다.
+- [TARGET → OBSERVED] 상한은 한서린 20k triangle/65본, 양손 합 12k triangle/각 22본/정점당 최대 4본이다. 실제 Unity 임포트는 한서린 15,124 tri/50본, 양손 각각 2,772 tri/18본이며 Blender 웨이트 최대 2본이다. 소매 연장과 엄지 방향 교정 뒤의 수치다.
+- [OBSERVED] 전신 `Seorin_Idle`, 양손 각각 `Hands_Rest`, `Hands_Insert`, `Hands_Align`, `Hands_Grip`, `Hands_Seal`을 Generic FBX take로 임포트했다(의미 동작 6개/실제 take 11개). 정확한 이름/길이/본 경로/실측은 생성 manifest가 기록한다. 보행·전투·립싱크·루트모션은 범위 밖이다.
+- [DECISION] 손 삽입 250ms/접촉 200ms, 확정 300ms/접촉 150ms는 기존 `anim-list.md`를 따른다. 왼손은 접촉 유지 후 150ms에 카메라 기준 대기 위치로 복귀한다. 크랭크는 `T0ReaderVfx.json`의 420/160/520ms·150도를 계속 소유하며 오른손의 닫힌 grip이 실제 손잡이를 따라간다. 고정 `rd-hex-plate` 하드웨어는 움직이지 않고, 판정·저장을 모션 완료까지 미루지 않는다.
+- [DECISION] 최초 입장/페이지 이동/렌더/undo/redo는 성공 모션이 아니다. `ReadOriginal`·인용 확정은 내구 저장 성공 및 현재 context인 경우만 재생한다. 모션 축소·화면 이탈·disable·앱 일시중단·포커스 상실은 즉시 정지·복귀한다. 중단 중 새 연출 요청도 재생하지 않으며 복귀 시 예약 재생하지 않는다.
+- [BOUNDARY] 신체 표현은 고정 관찰점의 시작 화면/1인칭 조작에만 적용한다. 출시 승인, 외부 이미지 사용권, 사람 몰입/편안함 검증을 이 리그 계약이 대체하지 않는다. 구현/네이티브 검증 상태는 M22 task-manifest와 QA 영수증에서 추적한다.
 
 ## 4. (C) 인물 초상 15컷 (5인 × 3표정) 납품 규격 — **리그 없음**
 
@@ -209,7 +218,7 @@ State: PascalCase 동사       Idle · Insert · Held · Retract · Snap · Snap
 1. §2.1 공통 규격 6항(피벗·단위·축·개별파일 리그 포함·가동부 상한 8·명명) — ack / counter
 2. §2.2 프롭 6종의 **가동부 이름·축·범위** — 특히 로컬축 방향(부호 반전 시 클립이 거울로 재생)
 3. §2.3 zone 프롭 4종(`Wheel_Valve`·`Lever_*`·`Crank`·`Panel_Hatch`)의 가동부
-4. §3 손 = "없음" 기본값 채택 → **pipeline §8 finger joints = off** 반영
+4. §3.1 M22은 RFC-CX-018에 따라 **Generic 양손·손가락 on**이다. `modeling/asset-manifest.md` §10의 전신/좌손/우손 신원과 생성 manifest의 실제 본·클립 경로를 대조한다. 기존 Mixamo 미사용 경로의 finger-off 규격과 혼동하지 않는다.
 5. §5 델타 D1~D4 를 pipeline §8 에 편차로 기록
 6. §4 초상 3컷의 **눈높이·어깨선 공통 y** 요구를 concept 레인에 전달(모델러는 2D 초상을 만들지 않으므로 경유만)
 
@@ -219,7 +228,7 @@ State: PascalCase 동사       Idle · Insert · Held · Retract · Snap · Snap
 
 | id | 대상 레인 | 질문 | 제안 |
 |---|---|---|---|
-| **RFC-A1** | director, modeling, concept | 확대뷰에 손을 넣는가 | **넣지 않는다(기본)**. 옵션 A(2D 12컷)는 `asset-budget.md` 47종 계약 개정을 동반, 옵션 B(3D 손)는 RFC-P4-001 뒤집기 |
+| **RFC-A1** | director, modeling, concept | 확대뷰에 손을 넣는가 | **M22에서 RFC-CX-018로 해소**: 전신 1 + Generic 양손 2를 별도 증분으로 채택. §3.1 및 asset-manifest §10이 현재 계약이며 다른 인물 3D화·Humanoid·보행은 미개방 |
 | **RFC-A2** | motion | 초상 표정 교체 시간의 소유자와 값 | 애니메이션 제안 120 ms / 저감 0 ms. motion 이 정본을 주면 교체 |
 | **RFC-A3** | systems | §6.2 파라미터 8종을 렌더 스냅샷에 어떤 필드명으로 노출하는가 | `bSavePending`·`tCommitReceipt` 두 개만이라도 이름을 확정해 주면 Animator 골격이 선다 |
 | **RFC-A4** | modeling, vfx | `drawer_open`·`water_level` 의 **대상 자산이 매니페스트 47종에 없다** (재측정: `grep -in "drawer\|서랍\|수면\|water" asset-manifest.md` → **0 hit**) | `drawer_open` = UI 기록 서랍(motion 180 ms)인지 3D 서랍 프롭인지 판정 · `water_level` 은 vfx `water_rise`(수면 1장) 소유로 이관 후보 |
@@ -227,7 +236,7 @@ State: PascalCase 동사       Idle · Insert · Held · Retract · Snap · Snap
 
 ## 9. 이 문서가 증명하지 않는 것 [OBSERVED]
 
-리깅 0건 · Unity 프로젝트 임포트 0건 · Animator Controller 0개 · `.anim` 0개 · Mixamo 접속 0회 · 손 자산 0개 · 초상 15컷 중 10컷 미생성 · 재생 프레임 캡처 0장 · 사람 플레이 n=0. 이 문서는 **납품 규격**이며 리그가 존재한다는 주장이 아니다. G4(연출/몰입)·G5(에셋 예산) 어느 것도 이 문서로 PASS 하지 않는다.
+[HISTORICAL · 2026-09-10, M22 이전] 리깅·Unity 임포트·손 자산·재생 캡처 0건은 당시 기준선이다. **현재 M22 결과는 §3.1의 실제 .blend/Generic FBX 11 take/Unity 임포트/네이티브 증거로 대체**한다. 독립 `.anim`이나 Animator Controller를 만들지 않은 것을 모션 부재로 해석하지 않는다. 사람 플레이 n=0이며 G4(연출/몰입)·G5(실측 예산)를 이 문서만으로 PASS 하지 않는다.
 
 ## 10. 변경 로그 (RFC-Q2 — 같은 사이클 제자리 갱신 = 개정)
 

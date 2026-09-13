@@ -1,0 +1,110 @@
+{
+  "note": "flat sRGB pixel arithmetic over one native window capture each; NOT an accessibility measurement, no standard claimed",
+  "capture_size": [
+    1088,
+    734
+  ],
+  "work_surface_rows": [
+    287,
+    640
+  ],
+  "m19_m20_changed_runs": [
+    [
+      287,
+      334
+    ],
+    [
+      368,
+      378
+    ],
+    [
+      411,
+      640
+    ]
+  ],
+  "plate_rows_identical_in_m19_and_m20": [
+    [
+      334,
+      368
+    ],
+    [
+      378,
+      411
+    ]
+  ],
+  "body_band_rect_xyxy": [
+    522,
+    302,
+    1044,
+    315
+  ],
+  "control_rect_xyxy": [
+    522,
+    456,
+    1044,
+    594
+  ],
+  "sources": {
+    "M19_baseline": "00-m19-title-pid92370-window5296.png",
+    "M20_gate_on": "00-m20-gate-on-pid87336-window5311.png",
+    "M21_gate_on": "00-m21-gate-on-pid81512-window5976.png"
+  },
+  "sha256": {
+    "M19_baseline": "1514dd0c1a1158a843e21f57af18e0958a2af9e887023cc315540d3ef219f7d0",
+    "M20_gate_on": "9cbe76c2829a7165b2adcda0384558f8b43d5d208db0872100dd4072724e5ffc",
+    "M21_gate_on": "05b1852d24800f096b2037fcb2db263fc983f83858f4c4119b5a955c05ce835f"
+  },
+  "body_band": {
+    "M19_baseline": {
+      "pixels": 6786,
+      "mean_luminance": 0.4665,
+      "stdev_glyph_signal": 0.161,
+      "glyph_core_luminance": 0.0923,
+      "ground_luminance": 0.6191,
+      "glyph_ground_ratio": 4.7
+    },
+    "M20_gate_on": {
+      "pixels": 6786,
+      "mean_luminance": 0.0254,
+      "stdev_glyph_signal": 0.003,
+      "glyph_core_luminance": 0.0188,
+      "ground_luminance": 0.0294,
+      "glyph_ground_ratio": 1.15
+    },
+    "M21_gate_on": {
+      "pixels": 6786,
+      "mean_luminance": 0.4314,
+      "stdev_glyph_signal": 0.1432,
+      "glyph_core_luminance": 0.0893,
+      "ground_luminance": 0.5394,
+      "glyph_ground_ratio": 4.23
+    }
+  },
+  "empty_surface_control": {
+    "M19_baseline": {
+      "pixels": 72036,
+      "mean_luminance": 0.5842,
+      "stdev_glyph_signal": 0.0364,
+      "glyph_core_luminance": 0.4793,
+      "ground_luminance": 0.6316,
+      "glyph_ground_ratio": 1.29
+    },
+    "M20_gate_on": {
+      "pixels": 72036,
+      "mean_luminance": 0.0254,
+      "stdev_glyph_signal": 0.0023,
+      "glyph_core_luminance": 0.0204,
+      "ground_luminance": 0.0287,
+      "glyph_ground_ratio": 1.12
+    },
+    "M21_gate_on": {
+      "pixels": 72036,
+      "mean_luminance": 0.0254,
+      "stdev_glyph_signal": 0.0023,
+      "glyph_core_luminance": 0.0204,
+      "ground_luminance": 0.0287,
+      "glyph_ground_ratio": 1.12
+    }
+  },
+  "r02_preserved_outside_the_band": true
+}

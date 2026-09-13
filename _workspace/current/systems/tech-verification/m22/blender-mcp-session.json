@@ -1,0 +1,796 @@
+{
+  "transport": "session-local MCP adapter to installed Blender MCP addon",
+  "baseline": {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"name\": \"Scene\",\n  \"object_count\": 3,\n  \"objects\": [\n    {\n      \"name\": \"Cube\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"Light\",\n      \"type\": \"LIGHT\",\n      \"location\": [\n        4.08,\n        1.01,\n        5.9\n      ]\n    },\n    {\n      \"name\": \"Camera\",\n      \"type\": \"CAMERA\",\n      \"location\": [\n        7.36,\n        -6.93,\n        4.96\n      ]\n    }\n  ],\n  \"materials_count\": 2\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "readonlyProbe": {
+    "jsonrpc": "2.0",
+    "id": 6,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"version\\\": \\\"5.1.2\\\", \\\"filepath\\\": \\\"\\\", \\\"dirty\\\": false, \\\"scene\\\": \\\"Scene\\\", \\\"objects\\\": [\\\"Cube\\\", \\\"Light\\\", \\\"Camera\\\"]}\\n\"\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "stages": [
+    {
+      "stage": "setup",
+      "recipeSha256": "843ad0b10f19ad9b5bc9544de62e0c6289970681ef81fa262f43d0988bc59f37",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"setup\\\", \\\"result\\\": {\\\"scene\\\": \\\"M22_Seorin_Production\\\", \\\"blenderVersion\\\": \\\"5.1.2\\\", \\\"baseline\\\": {\\\"filepath\\\": \\\"\\\", \\\"scenes\\\": {\\\"Scene\\\": {\\\"objects\\\": {\\\"Cube\\\": {\\\"type\\\": \\\"MESH\\\", \\\"matrix\\\": [[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]], \\\"hidden\\\": false, \\\"renderHidden\\\": false}, \\\"Light\\\": {\\\"type\\\": \\\"LIGHT\\\", \\\"matrix\\\": [[-0.29086464643478394, -0.7711008191108704, 0.5663931965827942, 4.076245307922363], [0.9551711678504944, -0.1998833566904068, 0.21839119493961334, 1.0054539442062378], [-0.05518905818462372, 0.6045247316360474, 0.7946722507476807, 5.903861999511719], [0.0, 0.0, 0.0, 1.0]], \\\"hidden\\\": false, \\\"renderHidden\\\": false}, \\\"Camera\\\": {\\\"type\\\": \\\"CAMERA\\\", \\\"matrix\\\": [[0.6859206557273865, -0.32401347160339355, 0.6515582203865051, 7.358891487121582], [0.7276763319969177, 0.305420845746994, -0.6141703724861145, -6.925790786743164], [0.0, 0.8953956365585327, 0.44527140259742737, 4.958309173583984], [0.0, 0.0, 0.0, 1.0]], \\\"hidden\\\": false, \\\"renderHidden\\\": false}}, \\\"frame\\\": 1, \\\"camera\\\": \\\"Camera\\\"}}}}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "model",
+      "recipeSha256": "843ad0b10f19ad9b5bc9544de62e0c6289970681ef81fa262f43d0988bc59f37",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"model\\\", \\\"result\\\": {\\\"meshes\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7460, \\\"triangles\\\": 14248, \\\"polygons\\\": 6236, \\\"boundsBlenderXYZ\\\": [[-0.34871700406074524, 0.34871700406074524], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.7155920267105103]], \\\"weightedVertices\\\": 7460, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1388, \\\"triangles\\\": 2680, \\\"polygons\\\": 1190, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1388, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_SkinShade\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1388, \\\"triangles\\\": 2680, \\\"polygons\\\": 1190, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1388, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_SkinShade\\\"]}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "rig",
+      "recipeSha256": "843ad0b10f19ad9b5bc9544de62e0c6289970681ef81fa262f43d0988bc59f37",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 9,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"rig\\\", \\\"result\\\": {\\\"rigs\\\": [{\\\"name\\\": \\\"M22_Seorin_Character_Rig\\\", \\\"bones\\\": 50, \\\"names\\\": [\\\"Root\\\", \\\"Hips\\\", \\\"Spine\\\", \\\"Chest\\\", \\\"Neck\\\", \\\"Head\\\", \\\"RightUpperArm\\\", \\\"RightForearm\\\", \\\"RightWrist\\\", \\\"RightIndex01\\\", \\\"RightIndex02\\\", \\\"RightIndex03\\\", \\\"RightMiddle01\\\", \\\"RightMiddle02\\\", \\\"RightMiddle03\\\", \\\"RightRing01\\\", \\\"RightRing02\\\", \\\"RightRing03\\\", \\\"RightLittle01\\\", \\\"RightLittle02\\\", \\\"RightLittle03\\\", \\\"RightThumb01\\\", \\\"RightThumb02\\\", \\\"RightThumb03\\\", \\\"RightContact\\\", \\\"LeftUpperArm\\\", \\\"LeftForearm\\\", \\\"LeftWrist\\\", \\\"LeftIndex01\\\", \\\"LeftIndex02\\\", \\\"LeftIndex03\\\", \\\"LeftMiddle01\\\", \\\"LeftMiddle02\\\", \\\"LeftMiddle03\\\", \\\"LeftRing01\\\", \\\"LeftRing02\\\", \\\"LeftRing03\\\", \\\"LeftLittle01\\\", \\\"LeftLittle02\\\", \\\"LeftLittle03\\\", \\\"LeftThumb01\\\", \\\"LeftThumb02\\\", \\\"LeftThumb03\\\", \\\"LeftContact\\\", \\\"RightThigh\\\", \\\"RightShin\\\", \\\"RightFoot\\\", \\\"LeftThigh\\\", \\\"LeftShin\\\", \\\"LeftFoot\\\"]}, {\\\"name\\\": \\\"M22_Seorin_LeftHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}, {\\\"name\\\": \\\"M22_Seorin_RightHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "animate",
+      "recipeSha256": "843ad0b10f19ad9b5bc9544de62e0c6289970681ef81fa262f43d0988bc59f37",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 10,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"animate\\\", \\\"result\\\": {\\\"fps\\\": 60, \\\"clips\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"clip\\\": \\\"Seorin_Idle\\\", \\\"action\\\": \\\"M22_Seorin_Character__Seorin_Idle\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 121, \\\"durationSeconds\\\": 2.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "f4975491be54deae0ae517c9f3fca0d323e77ef6ced5bb032c8a3d5b008b66b7",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 11,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"INFO Draco mesh compression is available, use library at /Applications/Blender.app/Contents/Resources/5.1/scripts/addons_core/io_scene_gltf2/libextern_draco.dylib\\n16:14:37 | INFO: Starting glTF 2.0 export\\n16:14:37 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n16:14:37 | INFO: Primitives created: 19\\n16:14:37 | INFO: Extracting primitive: Cube\\n16:14:37 | INFO: Primitives created: 1\\n16:14:37 | INFO: Finished glTF 2.0 export in 0.27597904205322266 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.2209 sec.\\n16:14:37 | INFO: Starting glTF 2.0 export\\n16:14:37 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n16:14:37 | INFO: Primitives created: 6\\n16:14:37 | INFO: Extracting primitive: Cube\\n16:14:37 | INFO: Primitives created: 1\\n16:14:37 | INFO: Finished glTF 2.0 export in 0.11963415145874023 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.1076 sec.\\n16:14:38 | INFO: Starting glTF 2.0 export\\n16:14:38 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n16:14:38 | INFO: Primitives created: 6\\n16:14:38 | INFO: Extracting primitive: Cube\\n16:14:38 | INFO: Primitives created: 1\\n16:14:38 | INFO: Finished glTF 2.0 export in 0.12464594841003418 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.1103 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 2}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 2}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 2}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7460, \\\"triangles\\\": 14248, \\\"polygons\\\": 6236, \\\"boundsBlenderXYZ\\\": [[-0.34871700406074524, 0.34871700406074524], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.7155920267105103]], \\\"weightedVertices\\\": 7460, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1388, \\\"triangles\\\": 2680, \\\"polygons\\\": 1190, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1388, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_SkinShade\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1388, \\\"triangles\\\": 2680, \\\"polygons\\\": 1190, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1388, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_SkinShade\\\"]}], \\\"preservedCandidate\\\": null, \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "model",
+      "recipeSha256": "4bc74c660dcfac483c10fbdb07135d5ae94655f20012c8d2a975154c01b8049b",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 13,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"model\\\", \\\"result\\\": {\\\"meshes\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7912, \\\"triangles\\\": 15188, \\\"polygons\\\": 6682, \\\"boundsBlenderXYZ\\\": [[-0.34871700406074524, 0.34871700406074524], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.7155920267105103]], \\\"weightedVertices\\\": 7912, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "rig",
+      "recipeSha256": "4bc74c660dcfac483c10fbdb07135d5ae94655f20012c8d2a975154c01b8049b",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 14,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"rig\\\", \\\"result\\\": {\\\"rigs\\\": [{\\\"name\\\": \\\"M22_Seorin_Character_Rig\\\", \\\"bones\\\": 50, \\\"names\\\": [\\\"Root\\\", \\\"Hips\\\", \\\"Spine\\\", \\\"Chest\\\", \\\"Neck\\\", \\\"Head\\\", \\\"RightUpperArm\\\", \\\"RightForearm\\\", \\\"RightWrist\\\", \\\"RightIndex01\\\", \\\"RightIndex02\\\", \\\"RightIndex03\\\", \\\"RightMiddle01\\\", \\\"RightMiddle02\\\", \\\"RightMiddle03\\\", \\\"RightRing01\\\", \\\"RightRing02\\\", \\\"RightRing03\\\", \\\"RightLittle01\\\", \\\"RightLittle02\\\", \\\"RightLittle03\\\", \\\"RightThumb01\\\", \\\"RightThumb02\\\", \\\"RightThumb03\\\", \\\"RightContact\\\", \\\"LeftUpperArm\\\", \\\"LeftForearm\\\", \\\"LeftWrist\\\", \\\"LeftIndex01\\\", \\\"LeftIndex02\\\", \\\"LeftIndex03\\\", \\\"LeftMiddle01\\\", \\\"LeftMiddle02\\\", \\\"LeftMiddle03\\\", \\\"LeftRing01\\\", \\\"LeftRing02\\\", \\\"LeftRing03\\\", \\\"LeftLittle01\\\", \\\"LeftLittle02\\\", \\\"LeftLittle03\\\", \\\"LeftThumb01\\\", \\\"LeftThumb02\\\", \\\"LeftThumb03\\\", \\\"LeftContact\\\", \\\"RightThigh\\\", \\\"RightShin\\\", \\\"RightFoot\\\", \\\"LeftThigh\\\", \\\"LeftShin\\\", \\\"LeftFoot\\\"]}, {\\\"name\\\": \\\"M22_Seorin_LeftHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}, {\\\"name\\\": \\\"M22_Seorin_RightHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "animate",
+      "recipeSha256": "4bc74c660dcfac483c10fbdb07135d5ae94655f20012c8d2a975154c01b8049b",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 15,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"animate\\\", \\\"result\\\": {\\\"fps\\\": 60, \\\"clips\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"clip\\\": \\\"Seorin_Idle\\\", \\\"action\\\": \\\"M22_Seorin_Character__Seorin_Idle\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 121, \\\"durationSeconds\\\": 2.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}]}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "4bc74c660dcfac483c10fbdb07135d5ae94655f20012c8d2a975154c01b8049b",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 16,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"16:17:17 | INFO: Starting glTF 2.0 export\\n16:17:17 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n16:17:17 | INFO: Primitives created: 19\\n16:17:17 | INFO: Finished glTF 2.0 export in 0.24510884284973145 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1410 sec.\\n16:17:18 | INFO: Starting glTF 2.0 export\\n16:17:18 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n16:17:18 | INFO: Primitives created: 5\\n16:17:18 | INFO: Finished glTF 2.0 export in 0.14885711669921875 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.0939 sec.\\n16:17:18 | INFO: Starting glTF 2.0 export\\n16:17:18 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n16:17:18 | INFO: Primitives created: 5\\n16:17:18 | INFO: Finished glTF 2.0 export in 0.12170100212097168 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.0923 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7912, \\\"triangles\\\": 15188, \\\"polygons\\\": 6682, \\\"boundsBlenderXYZ\\\": [[-0.34871700406074524, 0.34871700406074524], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.7155920267105103]], \\\"weightedVertices\\\": 7912, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-003\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 17,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-character.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 18,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-face.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 19,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-rest.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 20,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-grip.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 21,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-insert.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 22,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-seal.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 23,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-align.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "fed5182c8ed2e405f3452fadbfd7522146d6e95a6b34f3490c210aa1efc50e99",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 24,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"16:19:33 | INFO: Starting glTF 2.0 export\\n16:19:33 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n16:19:33 | INFO: Primitives created: 19\\n16:19:33 | INFO: Finished glTF 2.0 export in 0.27132391929626465 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1401 sec.\\n16:19:33 | INFO: Starting glTF 2.0 export\\n16:19:33 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n16:19:33 | INFO: Primitives created: 5\\n16:19:34 | INFO: Finished glTF 2.0 export in 0.142075777053833 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.0936 sec.\\n16:19:34 | INFO: Starting glTF 2.0 export\\n16:19:34 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n16:19:34 | INFO: Primitives created: 5\\n16:19:34 | INFO: Finished glTF 2.0 export in 0.13640618324279785 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.0950 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150, \\\"movingChannels\\\": [\\\"Chest:rotation\\\", \\\"Neck:rotation\\\", \\\"Head:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7912, \\\"triangles\\\": 15188, \\\"polygons\\\": 6682, \\\"boundsBlenderXYZ\\\": [[-0.34871700406074524, 0.34871700406074524], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.7155920267105103]], \\\"weightedVertices\\\": 7912, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-011\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "model",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 25,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"model\\\", \\\"result\\\": {\\\"meshes\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3132828176021576, 0.3132828176021576], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "rig",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 26,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"rig\\\", \\\"result\\\": {\\\"rigs\\\": [{\\\"name\\\": \\\"M22_Seorin_Character_Rig\\\", \\\"bones\\\": 50, \\\"names\\\": [\\\"Root\\\", \\\"Hips\\\", \\\"Spine\\\", \\\"Chest\\\", \\\"Neck\\\", \\\"Head\\\", \\\"RightUpperArm\\\", \\\"RightForearm\\\", \\\"RightWrist\\\", \\\"RightIndex01\\\", \\\"RightIndex02\\\", \\\"RightIndex03\\\", \\\"RightMiddle01\\\", \\\"RightMiddle02\\\", \\\"RightMiddle03\\\", \\\"RightRing01\\\", \\\"RightRing02\\\", \\\"RightRing03\\\", \\\"RightLittle01\\\", \\\"RightLittle02\\\", \\\"RightLittle03\\\", \\\"RightThumb01\\\", \\\"RightThumb02\\\", \\\"RightThumb03\\\", \\\"RightContact\\\", \\\"LeftUpperArm\\\", \\\"LeftForearm\\\", \\\"LeftWrist\\\", \\\"LeftIndex01\\\", \\\"LeftIndex02\\\", \\\"LeftIndex03\\\", \\\"LeftMiddle01\\\", \\\"LeftMiddle02\\\", \\\"LeftMiddle03\\\", \\\"LeftRing01\\\", \\\"LeftRing02\\\", \\\"LeftRing03\\\", \\\"LeftLittle01\\\", \\\"LeftLittle02\\\", \\\"LeftLittle03\\\", \\\"LeftThumb01\\\", \\\"LeftThumb02\\\", \\\"LeftThumb03\\\", \\\"LeftContact\\\", \\\"RightThigh\\\", \\\"RightShin\\\", \\\"RightFoot\\\", \\\"LeftThigh\\\", \\\"LeftShin\\\", \\\"LeftFoot\\\"]}, {\\\"name\\\": \\\"M22_Seorin_LeftHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}, {\\\"name\\\": \\\"M22_Seorin_RightHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "animate",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 27,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"animate\\\", \\\"result\\\": {\\\"fps\\\": 60, \\\"clips\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"clip\\\": \\\"Seorin_Idle\\\", \\\"action\\\": \\\"M22_Seorin_Character__Seorin_Idle\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 121, \\\"durationSeconds\\\": 2.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 28,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-character.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 29,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-face.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "7f2f323d918a205c0be777a52d4f233748cbbb0fa407220dc5166e2d9848fe28",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 30,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"16:25:02 | INFO: Starting glTF 2.0 export\\n16:25:02 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n16:25:02 | INFO: Primitives created: 19\\n16:25:02 | INFO: Finished glTF 2.0 export in 0.2499551773071289 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1670 sec.\\n16:25:03 | INFO: Starting glTF 2.0 export\\n16:25:03 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n16:25:03 | INFO: Primitives created: 5\\n16:25:03 | INFO: Finished glTF 2.0 export in 0.1718740463256836 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.1065 sec.\\n16:25:03 | INFO: Starting glTF 2.0 export\\n16:25:03 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n16:25:03 | INFO: Primitives created: 5\\n16:25:03 | INFO: Finished glTF 2.0 export in 0.1281750202178955 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.1100 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150, \\\"movingChannels\\\": [\\\"Chest:rotation\\\", \\\"Neck:rotation\\\", \\\"Head:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3132828176021576, 0.3132828176021576], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.0560000017285347, 0.07373513281345367], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1292, \\\"triangles\\\": 2520, \\\"polygons\\\": 1126, \\\"boundsBlenderXYZ\\\": [[-0.07373513281345367, 0.0560000017285347], [-0.17400000989437103, 0.27399998903274536], [-0.04600000008940697, 0.047999996691942215]], \\\"weightedVertices\\\": 1292, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-015\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "model",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 31,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"model\\\", \\\"result\\\": {\\\"meshes\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3132828176021576, 0.3132828176021576], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "rig",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 32,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"rig\\\", \\\"result\\\": {\\\"rigs\\\": [{\\\"name\\\": \\\"M22_Seorin_Character_Rig\\\", \\\"bones\\\": 50, \\\"names\\\": [\\\"Root\\\", \\\"Hips\\\", \\\"Spine\\\", \\\"Chest\\\", \\\"Neck\\\", \\\"Head\\\", \\\"RightUpperArm\\\", \\\"RightForearm\\\", \\\"RightWrist\\\", \\\"RightIndex01\\\", \\\"RightIndex02\\\", \\\"RightIndex03\\\", \\\"RightMiddle01\\\", \\\"RightMiddle02\\\", \\\"RightMiddle03\\\", \\\"RightRing01\\\", \\\"RightRing02\\\", \\\"RightRing03\\\", \\\"RightLittle01\\\", \\\"RightLittle02\\\", \\\"RightLittle03\\\", \\\"RightThumb01\\\", \\\"RightThumb02\\\", \\\"RightThumb03\\\", \\\"RightContact\\\", \\\"LeftUpperArm\\\", \\\"LeftForearm\\\", \\\"LeftWrist\\\", \\\"LeftIndex01\\\", \\\"LeftIndex02\\\", \\\"LeftIndex03\\\", \\\"LeftMiddle01\\\", \\\"LeftMiddle02\\\", \\\"LeftMiddle03\\\", \\\"LeftRing01\\\", \\\"LeftRing02\\\", \\\"LeftRing03\\\", \\\"LeftLittle01\\\", \\\"LeftLittle02\\\", \\\"LeftLittle03\\\", \\\"LeftThumb01\\\", \\\"LeftThumb02\\\", \\\"LeftThumb03\\\", \\\"LeftContact\\\", \\\"RightThigh\\\", \\\"RightShin\\\", \\\"RightFoot\\\", \\\"LeftThigh\\\", \\\"LeftShin\\\", \\\"LeftFoot\\\"]}, {\\\"name\\\": \\\"M22_Seorin_LeftHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}, {\\\"name\\\": \\\"M22_Seorin_RightHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "animate",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 33,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"animate\\\", \\\"result\\\": {\\\"fps\\\": 60, \\\"clips\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"clip\\\": \\\"Seorin_Idle\\\", \\\"action\\\": \\\"M22_Seorin_Character__Seorin_Idle\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 121, \\\"durationSeconds\\\": 2.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 34,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-character.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 35,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-face.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 36,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-rest.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 37,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-grip.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "5cfec47d17ac3542cc5cf240f9bb477e7449e4fe499e6066d2b8eb3c72657208",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 38,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-insert.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "a92ee35314064ef53089dae8d87a202daee02cd429df97fd427e58ff88d12ed1",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 40,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"17:06:01 | INFO: Starting glTF 2.0 export\\n17:06:01 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n17:06:01 | INFO: Primitives created: 19\\n17:06:01 | INFO: Finished glTF 2.0 export in 0.25243687629699707 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1698 sec.\\n17:06:01 | INFO: Starting glTF 2.0 export\\n17:06:01 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n17:06:01 | INFO: Primitives created: 5\\n17:06:01 | INFO: Finished glTF 2.0 export in 0.12214875221252441 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.0918 sec.\\n17:06:02 | INFO: Starting glTF 2.0 export\\n17:06:02 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n17:06:02 | INFO: Primitives created: 5\\n17:06:02 | INFO: Finished glTF 2.0 export in 0.12498712539672852 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.0962 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150, \\\"movingChannels\\\": [\\\"Chest:rotation\\\", \\\"Neck:rotation\\\", \\\"Head:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3132828176021576, 0.3132828176021576], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-026\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "model",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 41,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"model\\\", \\\"result\\\": {\\\"meshes\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3085734248161316, 0.3085734248161316], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": false, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "rig",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 42,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"rig\\\", \\\"result\\\": {\\\"rigs\\\": [{\\\"name\\\": \\\"M22_Seorin_Character_Rig\\\", \\\"bones\\\": 50, \\\"names\\\": [\\\"Root\\\", \\\"Hips\\\", \\\"Spine\\\", \\\"Chest\\\", \\\"Neck\\\", \\\"Head\\\", \\\"RightUpperArm\\\", \\\"RightForearm\\\", \\\"RightWrist\\\", \\\"RightIndex01\\\", \\\"RightIndex02\\\", \\\"RightIndex03\\\", \\\"RightMiddle01\\\", \\\"RightMiddle02\\\", \\\"RightMiddle03\\\", \\\"RightRing01\\\", \\\"RightRing02\\\", \\\"RightRing03\\\", \\\"RightLittle01\\\", \\\"RightLittle02\\\", \\\"RightLittle03\\\", \\\"RightThumb01\\\", \\\"RightThumb02\\\", \\\"RightThumb03\\\", \\\"RightContact\\\", \\\"LeftUpperArm\\\", \\\"LeftForearm\\\", \\\"LeftWrist\\\", \\\"LeftIndex01\\\", \\\"LeftIndex02\\\", \\\"LeftIndex03\\\", \\\"LeftMiddle01\\\", \\\"LeftMiddle02\\\", \\\"LeftMiddle03\\\", \\\"LeftRing01\\\", \\\"LeftRing02\\\", \\\"LeftRing03\\\", \\\"LeftLittle01\\\", \\\"LeftLittle02\\\", \\\"LeftLittle03\\\", \\\"LeftThumb01\\\", \\\"LeftThumb02\\\", \\\"LeftThumb03\\\", \\\"LeftContact\\\", \\\"RightThigh\\\", \\\"RightShin\\\", \\\"RightFoot\\\", \\\"LeftThigh\\\", \\\"LeftShin\\\", \\\"LeftFoot\\\"]}, {\\\"name\\\": \\\"M22_Seorin_LeftHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}, {\\\"name\\\": \\\"M22_Seorin_RightHand_Rig\\\", \\\"bones\\\": 18, \\\"names\\\": [\\\"Forearm\\\", \\\"Wrist\\\", \\\"Index01\\\", \\\"Index02\\\", \\\"Index03\\\", \\\"Middle01\\\", \\\"Middle02\\\", \\\"Middle03\\\", \\\"Ring01\\\", \\\"Ring02\\\", \\\"Ring03\\\", \\\"Little01\\\", \\\"Little02\\\", \\\"Little03\\\", \\\"Thumb01\\\", \\\"Thumb02\\\", \\\"Thumb03\\\", \\\"Contact\\\"]}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "animate",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 43,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"animate\\\", \\\"result\\\": {\\\"fps\\\": 60, \\\"clips\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"clip\\\": \\\"Seorin_Idle\\\", \\\"action\\\": \\\"M22_Seorin_Character__Seorin_Idle\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 121, \\\"durationSeconds\\\": 2.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_LeftHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Rest\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Rest\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 61, \\\"durationSeconds\\\": 1.0, \\\"contactFrame\\\": null, \\\"contactMs\\\": null}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Insert\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Insert\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 16, \\\"durationSeconds\\\": 0.25, \\\"contactFrame\\\": 13, \\\"contactMs\\\": 200.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Align\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Align\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 13, \\\"durationSeconds\\\": 0.2, \\\"contactFrame\\\": 7, \\\"contactMs\\\": 100.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Grip\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Grip\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 25, \\\"durationSeconds\\\": 0.4, \\\"contactFrame\\\": 19, \\\"contactMs\\\": 300.0}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"clip\\\": \\\"Hands_Seal\\\", \\\"action\\\": \\\"M22_Seorin_RightHand__Hands_Seal\\\", \\\"startFrame\\\": 1, \\\"endFrame\\\": 19, \\\"durationSeconds\\\": 0.3, \\\"contactFrame\\\": 10, \\\"contactMs\\\": 150.0}]}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 44,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"17:21:58 | INFO: Starting glTF 2.0 export\\n17:21:58 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n17:21:58 | INFO: Primitives created: 19\\n17:21:58 | INFO: Finished glTF 2.0 export in 0.24605798721313477 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1380 sec.\\n17:21:58 | INFO: Starting glTF 2.0 export\\n17:21:58 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n17:21:58 | INFO: Primitives created: 5\\n17:21:58 | INFO: Finished glTF 2.0 export in 0.12276721000671387 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.1294 sec.\\n17:21:58 | INFO: Starting glTF 2.0 export\\n17:21:58 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n17:21:58 | INFO: Primitives created: 5\\n17:21:58 | INFO: Finished glTF 2.0 export in 0.12258410453796387 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.0963 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150, \\\"movingChannels\\\": [\\\"Chest:rotation\\\", \\\"Neck:rotation\\\", \\\"Head:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3085734248161316, 0.3085734248161316], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-028\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 45,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-character.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 46,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-face.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 47,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-rest.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 48,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-grip.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 49,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-insert.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 50,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-seal.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 51,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-hands-align.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "render",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 52,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"stage\\\": \\\"render\\\", \\\"result\\\": {\\\"renders\\\": [\\\"preview-sleeves.png\\\"], \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "stage": "export",
+      "recipeSha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0",
+      "mcpResult": {
+        "jsonrpc": "2.0",
+        "id": 53,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"executed\": true,\n  \"result\": \"17:23:01 | INFO: Starting glTF 2.0 export\\n17:23:01 | INFO: Extracting primitive: M22_MSH_CharacterMesh\\n17:23:02 | INFO: Primitives created: 19\\n17:23:02 | INFO: Finished glTF 2.0 export in 0.2969698905944824 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx'\\n(bpy.data.armatures['M22_Seorin_Character_Rig'], 'POSE')\\nexport finished in 0.1417 sec.\\n17:23:02 | INFO: Starting glTF 2.0 export\\n17:23:02 | INFO: Extracting primitive: M22_MSH_LeftHandMesh\\n17:23:02 | INFO: Primitives created: 5\\n17:23:02 | INFO: Finished glTF 2.0 export in 0.1248922348022461 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx'\\n(bpy.data.armatures['M22_Seorin_LeftHand_Rig'], 'POSE')\\nexport finished in 0.0993 sec.\\n17:23:02 | INFO: Starting glTF 2.0 export\\n17:23:02 | INFO: Extracting primitive: M22_MSH_RightHandMesh\\n17:23:02 | INFO: Primitives created: 5\\n17:23:02 | INFO: Finished glTF 2.0 export in 0.14363336563110352 s\\n\\n\\nFBX export starting... '/Users/jangyoung/orca/unknown/assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx'\\n(bpy.data.armatures['M22_Seorin_RightHand_Rig'], 'POSE')\\nexport finished in 0.0966 sec.\\n{\\\"stage\\\": \\\"export\\\", \\\"result\\\": {\\\"exports\\\": {\\\"Seorin_Character\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"durationSeconds\\\": 2.0, \\\"channels\\\": 150, \\\"movingChannels\\\": [\\\"Chest:rotation\\\", \\\"Neck:rotation\\\", \\\"Head:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [50], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Seorin_Idle\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 120.0, \\\"durationSeconds\\\": 2.0}]}}, \\\"Seorin_LeftHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}, \\\"Seorin_RightHand\\\": {\\\"glb\\\": {\\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"durationSeconds\\\": 0.9999999999999999, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"durationSeconds\\\": 0.25, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"durationSeconds\\\": 0.2, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"durationSeconds\\\": 0.4, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"durationSeconds\\\": 0.3, \\\"channels\\\": 54, \\\"movingChannels\\\": [\\\"Wrist:rotation\\\", \\\"Index01:rotation\\\", \\\"Index02:rotation\\\", \\\"Index03:rotation\\\", \\\"Middle01:rotation\\\", \\\"Middle02:rotation\\\", \\\"Middle03:rotation\\\", \\\"Ring01:rotation\\\", \\\"Ring02:rotation\\\", \\\"Ring03:rotation\\\", \\\"Little01:rotation\\\", \\\"Little02:rotation\\\", \\\"Little03:rotation\\\", \\\"Thumb01:rotation\\\", \\\"Thumb02:rotation\\\", \\\"Thumb03:rotation\\\"], \\\"rootTranslationMaxDeltaMeters\\\": 0}], \\\"skins\\\": 1, \\\"skinJointCounts\\\": [18], \\\"meshes\\\": 1}, \\\"fbx\\\": {\\\"version\\\": 7400, \\\"clips\\\": [{\\\"name\\\": \\\"Hands_Rest\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 60.0, \\\"durationSeconds\\\": 1.0}, {\\\"name\\\": \\\"Hands_Insert\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 15.0, \\\"durationSeconds\\\": 0.25}, {\\\"name\\\": \\\"Hands_Align\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 12.0, \\\"durationSeconds\\\": 0.2}, {\\\"name\\\": \\\"Hands_Grip\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 24.0, \\\"durationSeconds\\\": 0.4}, {\\\"name\\\": \\\"Hands_Seal\\\", \\\"firstFrame\\\": 0.0, \\\"lastFrame\\\": 18.0, \\\"durationSeconds\\\": 0.3}]}}}, \\\"geometry\\\": [{\\\"asset\\\": \\\"Seorin_Character\\\", \\\"object\\\": \\\"M22_CharacterMesh\\\", \\\"vertices\\\": 7876, \\\"triangles\\\": 15124, \\\"polygons\\\": 6654, \\\"boundsBlenderXYZ\\\": [[-0.3085734248161316, 0.3085734248161316], [-0.18700000643730164, 0.10998948663473129], [0.023000000044703484, 1.6805920600891113]], \\\"weightedVertices\\\": 7876, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 47, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Skin\\\", \\\"M22_MAT_SkinShade\\\", \\\"M22_MAT_EyeWhite\\\", \\\"M22_MAT_Iris\\\", \\\"M22_MAT_Hair\\\", \\\"M22_MAT_Lip\\\", \\\"M22_MAT_HairLight\\\", \\\"M22_MAT_Trouser\\\", \\\"M22_MAT_ApronEdge\\\", \\\"M22_MAT_Sole\\\", \\\"M22_MAT_Boot\\\", \\\"M22_MAT_Leather\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Nail\\\", \\\"M22_MAT_Apron\\\", \\\"M22_MAT_Brass\\\", \\\"M22_MAT_Paper\\\"]}, {\\\"asset\\\": \\\"Seorin_LeftHand\\\", \\\"object\\\": \\\"M22_LeftHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}, {\\\"asset\\\": \\\"Seorin_RightHand\\\", \\\"object\\\": \\\"M22_RightHandMesh\\\", \\\"vertices\\\": 1420, \\\"triangles\\\": 2772, \\\"polygons\\\": 1240, \\\"boundsBlenderXYZ\\\": [[-0.07699999958276749, 0.07699999958276749], [-0.17400000989437103, 0.800000011920929], [-0.05999999865889549, 0.05999999865889549]], \\\"weightedVertices\\\": 1420, \\\"maxWeightsPerVertex\\\": 2, \\\"vertexGroups\\\": 17, \\\"skinned\\\": true, \\\"materials\\\": [\\\"M22_MAT_Skin\\\", \\\"M22_MAT_Cuff\\\", \\\"M22_MAT_Seam\\\", \\\"M22_MAT_Shirt\\\", \\\"M22_MAT_Nail\\\"]}], \\\"preservedCandidate\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-037\\\", \\\"scenePreserved\\\": true}, \\\"originalSceneUnchanged\\\": true, \\\"originalStructureUnchanged\\\": true}\\n\"\n}"
+            }
+          ],
+          "isError": false
+        }
+      }
+    }
+  ]
+}

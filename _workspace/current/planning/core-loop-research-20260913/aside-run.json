@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-09-13T13:22:44Z",
+  "sessionId": "45OZ1GSC9FAud0zE",
+  "launcher": {
+    "binary": "aside",
+    "versionObserved": "1.26.906.1630",
+    "argvPrefix": [
+      "exec",
+      "--effort",
+      "ultrabrowse",
+      "--permission",
+      "guard"
+    ],
+    "effortFlagObservedByMain": true,
+    "exitCode": 0,
+    "elapsedSeconds": 1280.31,
+    "outputArtifact": "artifact://277",
+    "requestContract": {
+      "path": "_workspace/current/handoff/aside-core-loop-research-20260913.md",
+      "bytes": 10158,
+      "sha256": "6f9d75227319346353e32ccd51e5ae9d739c9ba1758814fe19c583105a04f520"
+    }
+  },
+  "researchResult": {
+    "report": {
+      "path": "_workspace/current/planning/aside-core-loop-research-20260913.md",
+      "bytes": 62591,
+      "sha256": "4184a136a8c12a11643eb565c82e8dd7af2591ca67bf03e6ed3db75ed58a9f75"
+    },
+    "publicSourceEntries": 12,
+    "recommendations": 10,
+    "experiments": 3,
+    "scope": "Rules, core loops, game composition and development recommendations; no implementation"
+  },
+  "methodBoundaries": {
+    "deepResearchSkillProcedureReportedByAside": true,
+    "advancedWebSearchAndOriginalTextFetchReportedByAside": true,
+    "browserPagesReportedByAside": [
+      "Golden Idol developer interview",
+      "Microsoft XAG 115",
+      "Lucas Pope mobile development log"
+    ],
+    "browserCleanupObservedInOutput": {
+      "closedPublicTabs": 3
+    },
+    "explicitDeepModelFailuresReportedByAside": {
+      "status": 402,
+      "message": "Insufficient credits",
+      "failedTasks": 2,
+      "failedRetry": 1,
+      "fallback": "Available default profile; completed"
+    },
+    "independentDeepResearchSaasJobClaimed": false,
+    "standardDeepResearchJsonPipelineValidated": false,
+    "paymentOrAccountConfigurationChanged": false
+  },
+  "mainReview": {
+    "results": {
+      "path": "_workspace/current/handoff/aside-core-loop-results-20260913.md",
+      "bytes": 10935,
+      "sha256": "a7e17f5022ce3364535b9964d96f8750c8473d2d2f230874b0c03918f1081f74"
+    },
+    "sourceLedgerEntriesCrossChecked": [
+      "E2",
+      "E4",
+      "E9",
+      "E10",
+      "E11",
+      "E12"
+    ],
+    "additionalPrimaryGuidance": "https://gameaccessibilityguidelines.com/include-interactive-tutorials/",
+    "sourceDateLimit": "XAG 115 browser display date differs from Markdown metadata. Cite access date and body guidance, not one asserted modification date.",
+    "codeSections": [
+      "T0GameSession.cs:328-338",
+      "T0GameSession.cs:370-372",
+      "C1SignatureGameSession.cs:79-81"
+    ],
+    "acceptance": "Research accepted as recommendations, not canonical changes or production approval"
+  },
+  "experimentContract": {
+    "artifact": {
+      "path": "_workspace/current/planning/core-loop-research-20260913/game-design-hypothesis.json",
+      "bytes": 9360,
+      "sha256": "ed5cf0620947504a5df9cc5c81190a8807d8994dad1b6d22e7b48bbc2772f7c5"
+    },
+    "validator": "skill://game-design-theory/scripts/validate-design-hypothesis.py",
+    "exitCode": 0,
+    "selfTestExitCode": 0,
+    "selfTestCases": [
+      "valid accepted",
+      "missing falsifier rejected",
+      "placeholder rejected"
+    ],
+    "prototypeExecuted": false,
+    "humanParticipants": 0,
+    "effectVerdict": "inconclusive",
+    "corrections": [
+      "Current C1 fixed evidence IDs are not a manual-selection control",
+      "Separate pilot exposure from frozen-build first-play T0 evaluation",
+      "Auxiliary source-rule explanation cannot replace H-2 goal explanation"
+    ]
+  },
+  "separatePriorRegression": {
+    "artifact": {
+      "path": "_workspace/current/systems/tech-verification/m22/hint-focus-restoration.xml",
+      "bytes": 3379,
+      "sha256": "e53ad52a4b121de423df9196a265d585daa71174b74a71bdc4110f475113a948"
+    },
+    "passedExistingCases": 1,
+    "uniqueM22CasesAfterRun": 157,
+    "runtimeChanged": false,
+    "nativeVisualFocusRestorationClaimed": false
+  },
+  "repositoryStateAtClose": {
+    "observedDate": "2026-09-13",
+    "mode": "branch-and-stage hygiene; read-only reconciliation",
+    "head": "b2ae1fb8119be1b797f874c38441cbd433aa72d4",
+    "parent": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+    "commitTimestamp": "2026-09-13 22:13:25 +0900",
+    "commitSubject": "docs(m13): record worktree, branch and disk cleanup receipt",
+    "commitActor": "Outside this assistant session; actor not identified",
+    "worktreeCount": 1,
+    "branch": "main",
+    "upstreamFromLocalMetadata": "origin/main",
+    "remoteFetchedByThisSession": false,
+    "statusSnapshot": {
+      "staged": 0,
+      "unstaged": 66,
+      "untracked": 73,
+      "rawOutputArtifact": "artifact://296",
+      "scope": "Tool-reported path counts at observation, not a clean-worktree claim"
+    },
+    "integration": "M22/runtime and research changes remain uncommitted in the one main worktree. No separate branch to merge or delete; commit/push remains user-only.",
+    "supersededCurrentStateClaim": "52ad551 is the earlier observation in RFC-CX-016, not current HEAD."
+  },
+  "deliveryBoundaries": {
+    "newGameplayImplemented": false,
+    "canonChanged": false,
+    "newAssetsGenerated": false,
+    "humanRecruitmentOrPlayExecuted": false,
+    "productionOrCommercialGatePromoted": false,
+    "commitOrPushPerformedByThisSession": false
+  }
+}

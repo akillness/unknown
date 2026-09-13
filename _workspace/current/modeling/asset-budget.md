@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c4
 status: current
 supersedes: null
@@ -8,7 +8,7 @@ owner: game-modeler
 
 # Modeling and Reuse Budget
 
-[TARGET] 수치는 프로파일링 전 상한, 실제 사용량0. 노드형 카메라라 전면 가시 영역만 제작하지만 카메라 전환에서 빈 뒷면이 보이는지 검수한다.
+[TARGET] 수치는 프로파일링 전 상한이다. 아래 C4 첫 실측은 당시 그레이박스의 기록이며 현재 M7/M22 런타임 총사용량이 아니다. 노드형 카메라라 전면 가시 영역을 우선하되 카메라 전환에서 빈 뒷면이 보이는지 검수한다.
 
 | 라이브러리 | 수량 | 재사용 계약 | 견적 인일 |
 |---|---:|---|---:|
@@ -47,3 +47,17 @@ assetId/hash/author/source/license/allowedUses/AI_used/sourceFiles/exportVersion
 
 ### G5가 아직 통과할 수 없는 이유
 뷰당 tri·드로콜·텍스처 상주 세 지표 중 **런타임 실측은 0건**이다. 오늘 얻은 144 tris는 Blender 계산값이지 Unity 런타임 관측값이 아니다. `[TARGET]` 자리를 실측으로 바꾸기 전에는 PASS를 요청하지 않는다.
+
+## M22 — 한서린과 조작 손의 명시적 범위 추가
+
+2026-09-13 사용자 후속 지시 및 RFC-CX-018. 기존 셸/도구/초상/공용/UI 수량을 숨겨 바꾸지 않고 **원본 3D 인물 1 + 좌/우 손 2**를 별도 증분으로 추가한다. 다른 캐릭터를 3D화하거나 NPC/보행 콘텐츠를 확장하지 않는다.
+
+| 증분 자산 | 저작 상한 [TARGET] | 사용 위치 | 실측 |
+|---|---|---|---|
+| 한서린 전신 Generic rig | 20k triangle, 65본 이하, 정점당 ≤4본 | 시작 화면의 기존 scene viewport | Unity 임포트 15,124 tri / 50본; Blender 최대 2본 웨이트 |
+| 좌/우 팔뚝·손 Generic rig | 합 12k triangle, 각각 22본 이하, 정점당 ≤4본 | 기존 기록 취급·회로·판독·확정 작업 | Unity 각각 2,772 tri / 18본, 합 5,544 tri; Blender 최대 2본 웨이트 |
+
+- 기존 뷰당 300k tri/150 drawcall/512MiB 상한을 올리지 않는다. 팔/손과 전신을 같은 뷰에 불필요하게 중복 표시하지 않는다.
+- 원본 단색 재질·메시·키프레임 저작을 우선한다. 외부 모델/애니/텍스처 구매·다운로드 없음. 초상 시트를 새 UV 텍스처로 복사하지 않는다.
+- `assets/generated/3d/seorin-m22/r01/manifest.json`은 실제 메시/본/클립/스케일/해시/저작 도구를 기록한다. 파일 수를 drawcall로, Blender triangle 수를 Unity 프레임 성능으로 부르지 않는다.
+- 신규 3D는 진단으로 임포트한 뒤 Main이 네이티브 장면·접촉·복귀를 검수한다. 사용자 선택에 따라 **M20 r02 이미지는 계속 기본 적용 보류**이며 이 독자 저작 증분과 승인 계보를 섞지 않는다.

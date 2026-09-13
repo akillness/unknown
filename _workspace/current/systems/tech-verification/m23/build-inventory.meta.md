@@ -1,0 +1,15 @@
+---
+updated: 2026-09-14
+cycle: 20260909-preproduction-c7
+status: current
+supersedes: null
+owner: game-qa
+---
+
+# M23 · build-inventory.json
+
+[OBSERVED] 최종 macOS 앱315파일의 정렬된 경로·bytes·SHA-256. 합계410875105B가 실제 BuildReport와 같다. 앱 전체는 로컬 Builds에만 보관하며 이 목록은 다운로드 바이너리가 아니다.
+
+| 파일 | bytes | SHA-256 |
+|---|---:|---|
+| `build-inventory.json` | 71452 | `eb1e019eac57dd2a9d4441fc15101218d0d4738a6dcc925711bbc7acb63d87c6` |

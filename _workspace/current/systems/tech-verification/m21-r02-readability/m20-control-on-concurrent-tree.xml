@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 07:08:21Z" end-time="2026-09-13 07:08:23Z" duration="1.6421441">
+  <test-suite type="TestSuite" id="1121" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="96" result="Failed" site="Child" start-time="2026-09-13 07:08:21Z" end-time="2026-09-13 07:08:23Z" duration="1.642144" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1115" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="96" result="Failed" site="Child" start-time="2026-09-13 07:08:22Z" end-time="2026-09-13 07:08:23Z" duration="1.634454" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="8545" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1116" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="96" result="Failed" site="Child" start-time="2026-09-13 07:08:22Z" end-time="2026-09-13 07:08:23Z" duration="1.632157" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1117" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="96" result="Failed" site="Child" start-time="2026-09-13 07:08:22Z" end-time="2026-09-13 07:08:23Z" duration="1.630097" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1113" name="T0WorkSurfacePlayModeTests" fullname="Tide.Tests.T0WorkSurfacePlayModeTests" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-09-13 07:08:22Z" end-time="2026-09-13 07:08:23Z" duration="1.626026" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1114" name="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" fullname="Tide.Tests.T0WorkSurfacePlayModeTests.M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" methodname="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" seed="1177898338" result="Failed" start-time="2026-09-13 07:08:22Z" end-time="2026-09-13 07:08:23Z" duration="1.617050" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[Unhandled log message: '[Exception] InvalidOperationException: V-4: receipt contract differs from producer receipt'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[Tide.Data.ReceiptVerifier.Verify (System.Collections.Generic.IReadOnlyDictionary`2[TKey,TValue] tables, System.Byte[] receiptBytes, System.Byte[] trustedReceiptBytes) (at Assets/_Project/Data/ReceiptVerifier.cs:22)
+Tide.Data.T0DataLoader.LoadVerified (System.Collections.Generic.IReadOnlyDictionary`2[TKey,TValue] files, System.Byte[] receipt, System.Byte[] trustedReceipt) (at Assets/_Project/Data/T0DataLoader.cs:15)
+Tide.Data.T0CatalogAsset.Load () (at Assets/_Project/Data/T0CatalogAsset.cs:26)
+Tide.App.T0GameSession.Initialize (Tide.App.T0RuntimeConfig value, System.String saveDirectory) (at Assets/_Project/App/T0GameSession.cs:43)
+Tide.App.T0GameSession:Initialize(T0RuntimeConfig, String) (at Assets/_Project/App/T0GameSession.cs:68)
+Tide.Tests.<Boot>d__15:MoveNext() (at Assets/_Project/Tests/PlayMode/T0WorkSurfacePlayModeTests.cs:72)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[InvalidOperationException: V-4: receipt contract differs from producer receipt
+Tide.Data.ReceiptVerifier.Verify (System.Collections.Generic.IReadOnlyDictionary`2[TKey,TValue] tables, System.Byte[] receiptBytes, System.Byte[] trustedReceiptBytes) (at Assets/_Project/Data/ReceiptVerifier.cs:22)
+Tide.Data.T0DataLoader.LoadVerified (System.Collections.Generic.IReadOnlyDictionary`2[TKey,TValue] files, System.Byte[] receipt, System.Byte[] trustedReceipt) (at Assets/_Project/Data/T0DataLoader.cs:15)
+Tide.Data.T0CatalogAsset.Load () (at Assets/_Project/Data/T0CatalogAsset.cs:26)
+Tide.App.T0GameSession.Initialize (Tide.App.T0RuntimeConfig value, System.String saveDirectory) (at Assets/_Project/App/T0GameSession.cs:43)
+UnityEngine.Debug:LogException(Exception)
+Tide.App.T0GameSession:Initialize(T0RuntimeConfig, String) (at Assets/_Project/App/T0GameSession.cs:68)
+Tide.Tests.<Boot>d__15:MoveNext() (at Assets/_Project/Tests/PlayMode/T0WorkSurfacePlayModeTests.cs:72)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

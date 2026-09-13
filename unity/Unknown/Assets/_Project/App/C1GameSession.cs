@@ -52,6 +52,8 @@ namespace Tide.App
                     "\n\n다음 기록: 겹쳐 붙은 서명지 ";
                 screen.Actions.Add(A("continue-c1-signature","서명지철 조사로 이동",ContinueToSignature));
                 screen.Actions.Add(A("c1-review",L("evidence"),()=>OpenOverlay("evidence")));
+                screen.Actions.Add(A("c1-interview-prep","면접 준비 · 형식 안내",OpenInterviewPrep,InterviewPrepAvailable,
+                    "다음 단계의 면접 형식만 보여줍니다. 기록은 바뀌지 않습니다."));
                 return;
             }
             var observation=patrolPacket["observations"].FirstOrDefault(o=>(string)o["id"]==document);
@@ -92,8 +94,10 @@ namespace Tide.App
         void ApplyStagePresentation(bool forceHub=false)
         {
             var camera=Camera.main;if(camera==null)return;
-            string stage=forceHub||!started?"hub":PatrolActive?(SignatureActive?"signature":"patrol"):M7ReaderStageEnabled?"reader":"hub";
+            string stage=forceHub||!isActiveAndEnabled?"hub":M22TitleEnabled?"seorin":!started||OpeningActive?"hub":PatrolActive?(SignatureActive?"signature":"patrol"):M7ReaderStageEnabled?"reader":"hub";
             if(stage==shownStage){ApplySignatureVisualState();return;}
+            ClearM22Embodiment();
+            if(m7ReaderVisual!=null){m7ReaderVisual.SetActive(false);Destroy(m7ReaderVisual);m7ReaderVisual=null;}
             if(shownStage!="hub")
             {
                 if(patrolVisual!=null){patrolVisual.SetActive(false);Destroy(patrolVisual);patrolVisual=null;}
@@ -107,7 +111,8 @@ namespace Tide.App
             hiddenHubRoots=hub.IsValid()&&hub.isLoaded?hub.GetRootGameObjects().Where(g=>g.activeSelf&&g.GetComponentsInChildren<Renderer>().Length>0).ToArray():new GameObject[0];
             foreach(var item in hiddenHubRoots)item.SetActive(false);
             camera.clearFlags=CameraClearFlags.SolidColor;
-            if(stage=="reader"){ApplyM7ReaderStage(camera);}
+            if(stage=="seorin"){ApplyM22TitleStage(camera);}
+            else if(stage=="reader"){ApplyM7ReaderStage(camera);}
             else if(stage=="signature")
             {
                 var view=Resources.Load<C1SignatureViewSettings>("C1SignatureView");if(view==null){camera.backgroundColor=new Color(.035f,.065f,.075f);return;}

@@ -1,0 +1,41 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url));
+const root=path.resolve(here,'../../../../..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const baseline=JSON.parse(fs.readFileSync(path.join(here,'baseline.json'),'utf8'));
+const base='unity/Unknown/Assets/_Project/';
+const profile=read(base+'Presentation/M5DirectionProfile.cs');
+const asset=read(base+'Resources/M5Direction.asset');
+const strings=JSON.parse(read(base+'Resources/T0Strings.json'));
+const expected={firstTitle:'마지막 당직',firstCaption:'폐국 전날 밤, 마지막 당직을 맡았다.',secondTitle:'목록과 서랍',secondCaption:'목록과 서랍을 대조해, 무엇을 남길지 정한다.'};
+const forbidden=/결손|4시간|네 시간|정전|한도연|대조의 밤|서린|H-1|H\+3|판 #0/;
+const checks=[];
+const check=(id,ok,detail)=>checks.push({id,passed:!!ok,...(detail===undefined?{}:{detail})});
+const field=key=>{const m=asset.match(new RegExp('^  '+key+': ("(?:[^"\\\\]|\\\\.)*")','m'));return m?JSON.parse(m[1].replace(/\r?\n[ \t]*/g,' ')):null;};
+for(const [key,value] of Object.entries(expected)){
+  check('serialized-'+key,field(key)===value,{actual:field(key),expected:value});
+  const m=profile.match(new RegExp('public string '+key+'=("[^"\\n]*")'));
+  check('default-'+key,m&&JSON.parse(m[1])===value);
+}
+check('opening-no-early-reveal',Object.values(expected).every(v=>!forbidden.test(v)));
+check('cut-durations-preserved',/^  firstShotSeconds: 3\.125$/m.test(asset)&&/^  secondShotSeconds: 2\.875$/m.test(asset));
+check('existing-art-and-approval-preserved',/^  runtimeApproved: 1$/m.test(asset)&&/^  openingImage: \{fileID: 2800000, guid: 3bd214058163b4f8984f562a6ab5b6da, type: 3\}$/m.test(asset)&&/^  sectionSurface: \{fileID: 2800000, guid: 83da0b74462874a81a5fbeff437bf387, type: 3\}$/m.test(asset));
+check('fallback-safe',strings.caseObjective.ko==='현재 기록을 대조하고 다음 근거를 확인'&&!forbidden.test(strings.caseObjective.ko));
+const rest=structuredClone(strings);delete rest.caseObjective;
+check('all-other-ui-strings-preserved',hash(JSON.stringify(rest))===baseline.strings.unrelatedKeysSha);
+check('existing-builder-unmodified',hash(read(base+'Editor/M5DirectionProjectBuilder.cs'))===baseline.sources.find(x=>x.path===base+'Editor/M5DirectionProjectBuilder.cs').sha256);
+// This reproduces the documented guard only. It is NOT execution of the C# method.
+const beats=JSON.parse(read(base+'Data/Tables/beats.json')).rows;
+const records=JSON.parse(read(base+'Data/Tables/records.json')).rows;
+const names=records.map(r=>r.displayNameKo).filter(Boolean);
+const requiresFallback=objective=>!objective||names.some(n=>objective.includes(n));
+const currentFallbackBeats=beats.filter(b=>requiresFallback(b.objective)).map(b=>b.id);
+check('current-authored-objectives-not-dependent-on-fallback',currentFallbackBeats.length===0,{currentFallbackBeats,method:'JavaScript guard model; not native C#'});
+check('missing-and-redacted-objective-model-fails-safe',requiresFallback('')&&names.every(n=>requiresFallback(n))&&!forbidden.test(strings.caseObjective.ko));
+check('copy-has-no-count-solution',Object.values(expected).every(v=>!/[0-9]|세 줄|한 점|여섯|다섯/.test(v)));
+const report={timestamp:new Date().toISOString(),scope:'static source/data contract and a labeled JavaScript guard model only; NOT Unity compilation, native play, duration readability or immersion',checks,passed:checks.filter(c=>c.passed).length,failed:checks.filter(c=>!c.passed).length,copyLengths:Object.fromEntries(Object.entries(expected).map(([k,v])=>[k,Array.from(v).length]))};
+console.log(JSON.stringify(report,null,2));process.exitCode=report.failed?1:0;

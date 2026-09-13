@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "scope": "isolated-practice",
+  "limits": {
+    "residualLimitMinutes": 4,
+    "rawErrorMinutes": 40,
+    "stepMinutes": 1,
+    "minOffsetMinutes": -40,
+    "maxOffsetMinutes": 40,
+    "initialOffsetMinutes": 0
+  },
+  "arrangements": [
+    {
+      "label": "기본 시편",
+      "trackA": [
+        { "label": "넓은 피크", "shape": "wide", "minute": 20 },
+        { "label": "좁은 피크", "shape": "narrow", "minute": 65 },
+        { "label": "어깨 피크", "shape": "shoulder", "minute": 120 }
+      ],
+      "trackB": [
+        { "label": "넓은 피크", "shape": "wide", "minute": 38 },
+        { "label": "좁은 피크", "shape": "narrow", "minute": 85 },
+        { "label": "어깨 피크", "shape": "shoulder", "minute": 142 }
+      ],
+      "eventA": 70,
+      "eventB": 96
+    },
+    {
+      "label": "전이 시편 · 다른 배치",
+      "trackA": [
+        { "label": "좁은 피크", "shape": "narrow", "minute": 30 },
+        { "label": "어깨 피크", "shape": "shoulder", "minute": 80 },
+        { "label": "넓은 피크", "shape": "wide", "minute": 135 }
+      ],
+      "trackB": [
+        { "label": "좁은 피크", "shape": "narrow", "minute": 15 },
+        { "label": "어깨 피크", "shape": "shoulder", "minute": 67 },
+        { "label": "넓은 피크", "shape": "wide", "minute": 121 }
+      ],
+      "eventA": 100,
+      "eventB": 66
+    }
+  ]
+}

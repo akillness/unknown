@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-11
+updated: 2026-09-14
 cycle: bootstrap
 status: draft
 supersedes: null
@@ -575,3 +575,111 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [OBSERVED] 두 빌드의 차이는 **1바이트**이고 두 빌드 사이에 추적 파일 내용 변경은 없었다(`git status` 깨끗). 1바이트 차는 Unity 빌드 비결정성이며 소스 변경이 아니다.
 - [OBSERVED] 재빌드를 돌린 이유: `Rendering/T0URP.asset`의 mtime이 1차 빌드보다 늦어 출하 산출물이 커밋된 소스보다 낡았을 가능성이 있었다. 내용은 동일했으나(git 깨끗) mtime만으로는 판정할 수 없어 실제로 다시 빌드해 확인했다. 출하 산출물은 푸시된 트리와 일치한다.
 - [CARRIED] 저장소 용량: 이번 커밋에 M12 원본 캡처 `.mov` 3개(약 60MB)가 들어갔다. provenance 계약이 sha256 재검증을 위해 원본 사본 보존을 요구하고 기존 previz 클립도 추적되는 선례가 있어 그대로 넣었다. Git LFS 미설정 상태이며 용량 정책은 product 레인 검토 항목으로 남긴다.
+
+## RFC-CX-017 — M22 힌트 리듬·판독 연출·작업면 리소스 통합 (2026-09-13)
+
+- [OBSERVED] 세션 시작 main=52ad551, 등록 worktree=기본 checkout 1개. M14~M21 미커밋 변경을 기준선으로 보존하며 origin을 fetch했다. 공유 checkout의 다른 터미널에 통합 소유권을 통지했다.
+- [OBSERVED] `T0GameSession.A`만 유휴 타이머를 일괄 갱신하고 `Update`는 제안 임계와 재제안 대기를 한 값으로 사용한다. 기존 `hint-system.md` H-R10은 두 데이터 노브의 독립성을 요구한다.
+- [OBSERVED] `ApplyM7ReaderStage`는 `phasePage*2+(phaseStart?1:0)`를 크랭크 트리거로 사용하며 `M7ReaderStageVisual.Update`는 입장 첫 프레임에도 동작을 시작한다. 이는 판독 성공과 다른 사건이다.
+- [DECISION] 시스템/밸런스 레인은 힌트 활동·제안 리듬을 수정한다. 180초 임계와 180초 쿨다운의 설계 수치는 유지하고 데이터 소유권을 분리한다. 자동 힌트 승격·비용·세이브 필드 변경은 금지한다.
+- [DECISION] 연출/모션 레인은 판독 성공 이벤트에만 크랭크를 연결하고, 이동/되돌림/재진입으로 허위 판독을 연출하지 않는다. 기존 데이터 타임라인과 150도 스트로크 상한을 유지하며 모션 축소 중간 전환·정지 포즈 복원을 검증한다.
+- [DECISION] 리소스 레인은 기존 `M20WorkSurface` 임포트/승격 경로를 완성한다. r02 원본 해시·Clamp 단일 배경·텍스트 배킹·비-raycast·일반/150% 텍스트를 네이티브 검수한 뒤에만 디렉터가 T0 런타임 승인한다. r01·상업 출시 자격은 승격하지 않는다.
+- [DECISION] 공유 소유권: Main=T0Interface/production/.mex/최종 검증·Git. 힌트 레인=T0GameSession/Input/힌트 스키마·발행기·관련 테스트. 연출 레인=M7ReaderSession/판독 이벤트 통합용 독립 partial/관련 테스트. 리소스 레인=M20 프로필·임포터·관련 테스트. 동일 소스의 필수 훅은 레인 간 메시지로 조율한다.
+- [BOUNDARY] 검증은 모든 작성 종료 후 Main이 직렬 실행한다. 사람 플레이 n=0, G4/G7의 몰입·수용성 PASS 및 상업 라이선스 검증을 주장하지 않는다. 독립 응답은 실제 반환된 것만 기록한다.
+- status: implementation; decided_by: game-production-director (Main, 사용자 통합 요청 집행)
+
+### RFC-CX-017 사용자 리소스 선택과 실제 레인 응답 (2026-09-13)
+
+- [OBSERVED] 사용자는 **기존 승인 리소스 개선**을 선택했다. r02의 기본 런타임 승격 계획은 철회하며 `runtimeEligible:false`, `runtimeApproved:false`와 미확인 라이선스를 유지한다. 새 승격/라이선스 예외 프레임워크는 추가하지 않는다.
+- [OBSERVED] HintCadence는 systems/balance 정의를 로드하고 독립 180초 노브·활동 판정 수정에 ACK했다. ReaderMotion은 presentation/motion/systems 정의를 로드하고 성공 판독에만 크랭크 반응, 저감모션 즉시 복귀에 ACK했다. ResourceSurface는 concept/presentation/modeler 정의를 로드하고 라이선스 미확인 승격에 COUNTER, 사용자 최종 범위에 ACK했다. 각 레인은 Unity 검증을 실행하지 않았다.
+- [DECISION] 승인된 `M7UiSkin.workSurfaceTint.a`를 0.30으로 낮춰 종이 무늬가 본문을 압도하지 않게 한다. 이는 재질 데이터의 시각 비교 변수이며 퍼즐 난이도나 신규 이미지 승격이 아니다. 네이티브 검수는 별도 영수증으로 남긴다.
+
+## RFC-CX-018 — 게임플레이 중심 리서치·한서린·조작 손·모션 (2026-09-13)
+
+- [OBSERVED] 사용자가 유사게임 리서치/컨셉·톤 차용 및 **Blender MCP를 이용한 주인공·플레이 손 동작·모션의 구현 적용**을 추가 요청했다. 기존 손 없음/3D 인물 보류는 이 명시적 후속 지시와 충돌하는 범위에서 재개한다. 자유 보행·전투·새 챕터는 요청되지 않았다.
+- [DECISION] 고정 관찰점에서 읽기/정렬/판독/확정을 손의 실제 접촉과 연결한다. 한서린의 걷은 소매·앞치마·수첩과 낮은 어깨의 기존 실루엣을 유지한다. 시작 화면의 실제 3D 인물 표현과 조작 중 일관된 양손을 같은 원본 계보로 제공한다.
+- [DECISION] 참고작의 정보 대조, 물리적 도구 가독성, 절제된 긴장만 연구한다. 브랜드·글귀·얼굴·메시·텍스처·독특한 장치/레이아웃은 가져오지 않는다. 출처 사실과 본 프로젝트 적용 가설을 구분한다.
+- [DECISION] 원본 형상·재질·리그·모션을 Blender에서 저작한다. 타사 모델/유료 생성 호출 없음. 캐릭터 20k tri, 양손 합 12k tri, 리그 65본 이하를 저작 상한으로 두되 실측 전 PASS하지 않는다. GLB는 원본 전달, FBX는 검증된 Unity 임포트 어댑터 역할이다.
+- [DECISION] 손의 애니메이션은 판정 결과를 읽기만 한다. LoadRecord/회로 정렬의 즉시 성공, Read 성공, ReadOriginal/Cite의 내구 저장 성공을 구분한다. 기존 크랭크 420/160/520ms·150도 및 확정 잉크 300ms를 참조하고 손이 입력·저장을 지연시키지 않는다. 모션 축소/화면 이탈/실패에서 즉시 안전한 정지 포즈, 재진입 시 성공 재생 없음.
+- [OBSERVED] Blender 5.1.2의 기존 MCP addon(127.0.0.1:9876)이 응답했다. 공식 Lab MCP의 execute 프로토콜과 설치 addon의 execute_code 프로토콜이 달라 최초 읽기가 시간 초과했다. 설치 파일/사용자 addon을 수정하지 않고 세션 한정 MCP 어댑터로 실제 tools/call을 연결했다. 읽기 결과: 미저장 `Scene`, Cube/Light/Camera 3개, dirty=false. 이 원본은 변경·삭제하지 않는다.
+- [BOUNDARY] 기존 M14~M22 변경 보존, 새로운 성공/인물 메타데이터를 세이브 스키마에 추가하지 않음. r02 승인 보류 유지. 사람 몰입/재미/플레이타임·상업 출시 성과는 미측정.
+- status: implementation; decided_by: game-production-director (최신 사용자 지시 집행)
+
+## RFC-CX-ASIDE-20260913 — 병행 OMP 리서치 연결·무스포일러 오프닝·GTI 후보
+
+- [OBSERVED] 사용자 Aside 요청으로 현재 OMP(`01a09984-ff92-7000-b047-a64aca285590`)와 unknown 작업 위치를 확인했다. OMP의 힌트/크랭크/기존 승인 표면/Blender 레인과 겹치지 않게 세 역할 리서치와 좁은 문구 개선을 수행했다. OMP 세션을 두 번째 writer로 resume하거나 비공식 메시지 주입을 하지 않았다.
+- [DECISION] `M5Direction.asset`↔`M5DirectionProfile.cs` 오프닝 4문구를 마지막 당직 상황/목록·서랍 대조로 동기화했다. `T0Strings.caseObjective.ko`는 누락/가림 때도 조기 사건 정보를 노출하지 않는 일반 문구로 바꿨다. 현재 정상 비트 3개에서는 fallback이 발동하지 않는다.
+- [ACK] 독립 synopsis/worldview 리뷰는 캐논/보상 선지급 없는 문구에 ACK, C# 기본값 동기화를 counter로 요구했고 반영했다. 독립 QA는 정확한 3파일 범위·해시·승인 아트 불변을 재계산해 scoped ACK했다. 렌더 동작/밸런스 수치/재화/모션은 무변경이므로 이 결정은 그 게이트를 승격하지 않는다.
+- [DECISION] 근거 없는 정답 허용폭/시간 조정과 쓰이지 않는 near-miss 노브 추가는 보류. 원작 장치/브랜드/문구는 복제하지 않는다.
+- [OBSERVED] GTI CLI 2회로 원본 2장을 생성·보존했다. 오프닝 후보는 구도 계약 미달로 수정 필요, 정적 내비게이션 패널은 시각 검토 후보. 새 패널 원본 중앙부 종이색 대비7.76:1, 약화색4.20:1(미달). 모두 `runtimeEligible:false`, `commercialReleaseEligible:false`, 실제 내부 호출 수/크레딧 unknown. 사용자 기존 승인 리소스만 적용 선택을 보존했다.
+- [VERIFICATION] 정적17/17, 캠페인50/50. 네이티브는 Unity license unavailable(exit198)로 컴파일/테스트 전에 차단. 실제 Unity PASS, 재미·몰입·플레이시간 개선은 주장하지 않는다.
+- [BOUNDARY] 커밋/푸시/워크트리 정리 없음. 다른 세션의 변경을 되돌리지 않음. 현재 source/data 반영은 완료, 새 이미지 기본 적용과 네이티브 검증은 별도 차단 항목이다.
+- evidence: `presentation/aside-immersion-20260913/decision-and-implementation.md`, `systems/tech-verification/aside-immersion-20260913/`, `handoff/aside-immersion-20260913.md`.
+- status: source changes verified; native/art promotion blocked; decided_by: game-production-director (Aside, 사용자 로컬 개선 요청 범위).
+
+## RFC-CX-018 M22 네이티브 구도·해부학 교정과 로컬 런타임 승인 (2026-09-13)
+
+- [OBSERVED] Blender MCP 실제 제작 호출 45건의 응답과 단계별 소스 해시를 `Builds/m22/blender-mcp-session.json`에 보존했다. 마지막 export RPC 53은 원본 Scene의 오브젝트·메시·재질·월드·카메라 구조 보존을 확인했다. 새 데이터가 생긴 작업 세션의 dirty 불변은 주장하지 않는다.
+- [OBSERVED] Unity 최종 임포트는 전신 15,124 tri/50본, 손 각각 2,772 tri/18본, 총 11개 Generic FBX take다. `Builds/m22-embodiment-import-audit.json`의 source 해시가 최종 저작 파일을 식별한다. 기존의 고정 판독기 하드웨어를 장전 기록물처럼 움직이지 않는다.
+- [OBSERVED] 네이티브 pass 01에서 후면/잘린 머리, 화면 안에 끝나는 팔, 손가락이 아래로 사라지는 문서 자세를 발견했다. pass 02에서 양 엄지가 바깥으로 향하는 추가 결함을 발견해 캐릭터·양손·thumb 애니메이션을 Blender 원본에서 함께 교정했다. pass 03의 정면 시작 화면, 문서 양손의 안쪽 엄지, 판독기 소매/접촉 및 실제 판독 영상으로 수정 결과를 확인했다.
+- [OBSERVED] 격리된 실제 저장 슬롯에서 인수 문서·이관 목록 확인 → 회로 투명지 정렬 → 세 구역 표시·근거 부착 → t0-b3 판독 진입 → 검증 사본 보관을 네이티브 포인터로 실행했다. 모션 축소 True에서 재판독한 별도 영상은 정지한 손/크랭크와 정상 UI 결과를 기록한다. 입력 자동화는 소유 PID와 입력 좌표의 최상위 창을 확인했고, 같은 번들 id의 다른 C1 플레이어는 조작·종료하지 않았다.
+- [DECISION] 이 네이티브 검토에 한해 `M22Embodiment.runtimeApproved=true`로 로컬 기본 런타임을 개방하고, 승인 상태에서 전체 회귀와 진단 플래그 없는 최종 빌드를 검증한다. 인수문서·회로·판독 손 연출은 세이브나 입력의 권위가 아니다.
+- [BOUNDARY] 원본 `runtimeEligible:false`, 기존 M20 r02 승인 보류, 기존 컨셉 사용권 미확인, 사람 플레이 n=0은 유지한다. 본 승인은 상업 출시·G4/G7·480분 플레이 검증이 아니다. 최종 테스트 결과와 기본 빌드 영수증은 후속 항목에 추가한다.
+
+## RFC-CX-018 M22 최종 로컬 검증·handoff (2026-09-13)
+
+- [OBSERVED] 최종 PlayMode 98건 중 97 pass/0 fail/격리 부팅 1 skip, EditMode 56/56 pass, 명시적 임시 저장 경로의 실제 serialized boot 1/1 pass. 겹치는 boot를 제외한 고유 통과 사례는 154개다. campaign 정합 50/50, T0 테이블 5/5도 통과했다. 영수증: `systems/tech-verification/m22/verification.json`.
+- [TEST POLICY] 오프닝 문자열·기본값을 고정한 테스트 1개와 fallback 문구 고정값을 제거했다. 초반 스포일러 차단/누락 목표 fallback 2건과 안전한 저작 목표 우선순위 1건은 최종 EditMode에서 실제 통과했다. 이전 57/57 결과도 `editmode-before-assertion-cleanup.xml`에 보존하며 게임 코드·저작 문구는 변경하지 않았다.
+- [FIX] 첫 통합 실행의 4실패를 분리했다. 손/크랭크가 이전 프레임의 시간을 새 동작으로 소비하던 문제는 수락 시점의 monotonic unscaled clock으로 수정했다. 저작 rest 검사는 2프레임 가정 대신 관측 가능한 이동을 기다리고, 힌트 경계 검사는 정확히 표현 가능한 합성 시계 원점을 쓴다. 제목 화면은 이제 서랍이 아닌 한서린을 표시하므로 시작 전 월드 클릭 검사는 숨겨진 서랍 투영 대신 viewport의 실제 클릭을 사용한다. 힌트 런타임 규칙에 tolerance나 예외를 추가하지 않았다.
+- [OBSERVED] `runtimeApproved:1`, 진단 플래그 없는 macOS 기본 빌드가 exit 0으로 생성됐다. 실제 창에서 인물/문서 손, 판 삽입→접촉→복귀, 판독 손잡이 추적, 모션 축소의 정적 반응을 확인했다. 네이티브 키 입력은 실제 content focus와 한 번의 cliclick 매크로에서 Tab 이동을 확인했으며 초기 별도 프로세스 주입은 화면을 바꾸지 않았다. 전체 게임·물리 패드/IME 검증으로 확대하지 않는다.
+- [EVIDENCE] 실제 영상/스틸은 `docs/media/gameplay-m22/`, 원본 창 캡처와 상세 동작 기록은 Unity `Builds/m22/native-default/`다. 공개용 영상은 창 장식 제거·30fps 인코딩뿐이며 생성 프레임/속도 변경/오디오는 없다. 원본 Scene 보존은 45/45, 상세 구조 보존은 기록된 36/36이고 초기 9건에는 상세 필드가 없다.
+- [INTEGRATION] main 작업트리 1개, HEAD `52ad5510522eca6d5cfd8d743d85f28cb254635f`. 기존 사용자/Aside 작업을 보존한 미커밋 통합이며 삭제할 완료 worktree는 0개다. CLAUDE §10.128에 따라 commit/push는 실행하지 않았다.
+- [BOUNDARY] 원본 생성 자산의 `runtimeEligible:false`와 M20 r02 보류 유지. 인간 몰입·편안함·완주 시간·G4/G7·상업 사용권은 미확인이다. 이 로컬 기본 빌드 승인은 완성판 또는 Steam 출시 승인이 아니다.
+- [KNOWLEDGE] `graphify update .`로 2,172파일의 구조 그래프를 갱신했다(38,066노드/42,062간선/4,039커뮤니티, 새 모델 토큰 0). M22 런타임/임포터와 정리한 테스트 심볼을 확인했다. HTML은 5,000노드 제한으로 생성하지 않았으며 의미 추출·도메인 라벨링 완료를 주장하지 않는다. 세션 시작 때 `mex`가 TeX Live로 확인되어 mex-agent graph/check/log는 `skipped`; `.mex/ROUTER.md`와 이 handoff를 직접 갱신했다.
+
+## RFC-CX-018 M22 입력·중단 계약 보완 검증 (2026-09-13)
+
+- [FIX] 제안을 실제 `hint-offer-open`/`hint-offer-dismiss` 버튼으로 전환했다. 헤더에 제목·부제목과 분리된 영역을 쓰고 기존 키보드 선택 체계에 연결했다. 제안이 초점을 빼앗지 않으며 숨겨진 버튼은 선택 목록에서 빠진다. 문서·메뉴·저장 대기 억제와 180/180초는 유지했다.
+- [DECISION] 이동·Tab·포인터로 제안까지 접근하는 입력이 제안을 없애서는 안 된다. 탐색 활동은 idle만 갱신하고 Offered를 유지한다. 유효 게임 조작은 소비·쿨다운을 시작하며 닫기는 세션 내 계수만 올린다. 도움 열기는 별도 수준 요청 전까지 본문을 공개하지 않는다. `system-specs/hint-system.md`를 같은 상태 계약으로 수정했다.
+- [FIX] 손과 크랭크는 수락 시점 monotonic 시계를 유지한다. `OnApplicationPause`/`OnApplicationFocus`에서 진행 중 동작을 취소하고 중단 중 새 동작을 거부해 복귀 후 재생하지 않는다. Editor pause API가 동일하다는 주장은 하지 않는다.
+- [OBSERVED] 임시 Editor `CreateInstance` 재생성 스모크에서 승인 프로필의 오프닝 문구·시간·리소스 및 작업면 알파 0.3 일치, persistentAssetsModified=false를 확인했다. 임시 `.cs/.meta` 제거 후 최종 EditMode/boot/build를 실행했다. 구조·문구 고정 테스트는 복원하지 않고 두 보호 기록명의 fallback 비공개와 안전 저작 목표 우선순위를 회귀로 유지했다.
+- [OBSERVED] 교정 후 PlayMode 100 pass/0 fail/1 boot skip, EditMode 56/56, 별도 serialized boot 1/1로 고유 157건 통과했다. 기본 macOS 빌드 410,816,644B, `Tide.App.dll` SHA-256 `9ba36071f8114044ed85741102ab3a949e76b27822175df6cc9384f83285864b`. 이전 154건 기록·XML·모션 미디어 지문은 별도 보존했다.
+- [NATIVE] 새 격리 저장 경로에서 150% 글자를 실제 설정했다. 문서 화면은 180초 후에도 제안을 억제했다. 판독기는 183.07초 무입력 대기 후 제안을 표시했고, Tab/Shift+Tab으로 닫기 버튼에 접근해 Enter로 닫아도 판독기가 유지됐다. 재제안의 보기 버튼은 포인터로 도움 메뉴만 열었고 Esc로 같은 판독기에 복귀했다. 정확한 발생 프레임·물리 패드·IME는 측정하지 않았다.
+- [EVIDENCE] 새 스틸은 `docs/media/gameplay-m22/native-contract-provenance.json`, 입력·실패한 포커스 자동화 시도·실제 확인 경계는 `systems/tech-verification/m22/native-contract-actions.json`을 따른다. 기존 모션 영상은 `Tide.App.before-contract-corrections.dll`의 이전 빌드 증거이며 새 UI 빌드로 소급하지 않는다.
+- [CLEANUP] 이번 소유 플레이어 PID 54666만 종료했다(SIGTERM 143, 빌드 결과 아님). 원래 Blender와 다른 사용자 플레이어는 종료하지 않았다. 명시적 앱 활성화와 동일 호출 내 CGWindow PID/id 검사 뒤 실제 입력을 보냈으며, 실패한 Orca 포커스 도구 응답은 성공 조작으로 집계하지 않았다.
+- [BOUNDARY] 기존 main 미커밋 통합/사용자 전용 commit·push, M20 r02 보류, 원본 runtimeEligible:false, 사람 플레이·성능 n=0 및 전체 캠페인/상업 게이트 경계를 그대로 유지한다.
+- [KNOWLEDGE] 교정 후 `graphify update .`의 AST 재추출은 2,189/2,189파일을 완료했다(38,358노드/42,382간선/4,067커뮤니티, 35.39초, 새 모델 토큰 0). 변경 문서·이미지의 의미 추출과 5,000노드 제한으로 생략된 HTML 시각화는 미완 범위로 분리한다. mex-agent는 여전히 사용 불가로 건너뛰고 `.mex/ROUTER.md`와 이 영수증을 직접 갱신했다.
+- [INPUT ORDER] 후속 경고의 `onAnyButtonPress → NoteActivity` 전제는 현재 연결과 달랐다. 실제 연결은 `Watch.Activity → NoteInputActivity`이며 idle만 갱신한다. 기존 `QueueStateEvent` 기반 Tab/Enter/Esc/패드 B 경로에 닫기 전후 ScreenChanged 0·surface 보존·Journal.HeadSeq 불변을 단정하도록 강화한 뒤 3/3 통과했다(`hint-input-ordering.xml`, 10:43:28–10:43:29Z). 직접 Back/Activate 호출로 닫기를 대체하지 않았고, 런타임·네이티브 assembly는 변경하지 않았다. 이는 기존 157건 중 3건의 추가 단정 검증이며 사례 수에 더하지 않는다.
+- [FOCUS RETURN] `hint-system.md`의 이전 일반 초점 복귀를 별도로 단정했다. `handover` 초점을 기억하고 `Focus("hint-offer-dismiss")`로 대상을 준비한 뒤 실제 InputSystem Enter press/release를 보냈다. 기존 사례 1/1이 CurrentFocusId 복귀·ScreenChanged 0·Journal.HeadSeq 불변·shell 유지·숨김 초점 제거를 통과했다(`hint-focus-restoration.xml`, 12:51:40–12:51:41Z). 직접 Focus는 탐색 증거가 아니고 직접 Back/Activate로 닫지 않았다. 이는 PlayMode의 초점 계약 증거이며 네이티브 시각적 복귀나 고유 사례 추가를 주장하지 않는다.
+
+### RFC-CX-016 워크트리·브랜치 확인과 디스크 정리 - 2026-09-13
+
+- [OBSERVED] 사용자 지시로 워크트리·브랜치 상태를 확인했다. **정리할 브랜치 이상은 없었다**: 워크트리 1개(`/Users/jangyoung/orca/unknown`), 로컬 브랜치 `main` 1개, `origin/main` 추적, 발산 0/0, HEAD `52ad551`, detached 아님, 제거 대상 워크트리 관리 디렉터리 0, 끊긴 원격 ref 0, stash 0, 병합 충돌 마커 0.
+- [OBSERVED] **병행 세션 3개가 살아 있다.** 한 세션이 22:05에 `planning/aside-core-loop-research-20260913.md`, 21:51에 `Builds/m22`를 썼다. 커밋되지 않은 138개 파일은 그들의 진행 중 작업이며 **손대지 않았다**. 공유 문서 3건(`decision-log.md`·`changelog.md`·`task-manifest.md`)에 그들이 M13 뒤로 이어 적었고(127 insert / 1 delete), 유일한 삭제는 frontmatter 날짜 갱신이다. M13 내용은 전수 확인해 보존됐다.
+- [OBSERVED] 실제 정리 대상은 브랜치가 아니라 **디스크 잔재**였다. (1) 객체 저장소가 한 번도 팩되지 않아 loose 4,868개·531.58MiB 상태였다 → `git gc`로 팩 1개 491.46MiB, loose 0, `.git` 535M→509M, `git fsck` 클린, HEAD/main/origin/main 해시 동일. gc는 팩만 했고 **아무것도 prune하지 않았다**(기본 `gc.pruneExpire=2.weeks.ago`, 저장소 생성 후 며칠) — 병행 세션에 안전하다. 손상 임시 객체 3개 제거. (2) 세션 스크래치 122MB 제거 — 원본 `.mov` 3개가 추적 저장소에 sha256 동일하게 보존됨을 **먼저 확인한 뒤** `/tmp/m9raw`를 지웠다. 남은 53개 0.8MB는 병행 세션 것이라 남겼다. (3) 대체된 빌드 산출물 5개 **1,303MB** 제거(`C1-M4-mac`·`M5-mac`·`T0-resource-integration-20260910-final`·`t0-diagnostics`·`t0-viewport-diagnostics`). 전부 gitignore 대상이라 **어느 브랜치에도 없었다**; 영수증은 빌드 로그와 바이트 수를 보존하고 각 빌드는 소스에서 재생성 가능하다. `T0-mac`(현행)과 병행 세션의 `m22`·`m22-verification`·`m7-diagnostics`는 유지했다.
+- [OBSERVED] 정리 후 현행 빌드 실행 확인: `T0-mac` 392MB 번들 실행 성공, Player.log 예외 0, `T0_BOOT entry-start`. 최초 실행 파일 존재 검사가 BROKEN을 냈으나 이는 프로브 경로 오류였다(실제 바이너리는 공백 포함 `Unknown T0`).
+- [BOUNDARY] 영수증: `systems/tech-verification/legacy-purge-m13/workspace-cleanup-receipt.json`. 디스크 정리는 추적 파일을 바꾸지 않았으므로 브랜치 내용에는 영향이 없다.
+
+## RFC-CX-ASIDE-CORE-20260913 · 규칙·코어 루프 조사 수용 경계
+
+- [REQUEST] 사용자가 Aside의 딥리서치와 Ultra Browser를 통한 프로젝트 조사 및 디벨롭할 부분의 제시를 요청했다. Main이 정본·M22·C1·M8·사람 검증 계약을 지정한 뒤 실제 `aside exec --effort ultrabrowse --permission guard`를 실행했다.
+- [OBSERVED] 세션 `45OZ1GSC9FAud0zE` 정상 종료. `planning/aside-core-loop-research-20260913.md`의 공개 출처 12개·권고 10개·실험 3개를 받았고 Main은 핵심 원문/실제 Reader·Signature 코드와 대조했다. deep 모델의 402 실패와 기본 프로필 재배정, 연구용 브라우저 3개 닫기를 성공 연구와 구별해 기록한다.
+- [DECISION] 다음 구현 후보는 기존 사실·입력·판정을 지키는 T0 두 자료/시간창 비교 시편이다. 기존 M8 활용, 현재 C1 고정 ID가 이해를 대신하는지 관찰, 조위정합 개념 검증이 새 콘텐츠보다 먼저다. 폐국 시점·기본값 라벨·독립 경로 보존 약속/검사 단위는 소유 레인 결정 대상으로 남기며 정본을 임의로 약화하지 않는다.
+- [VERIFY] Main의 출처 계보 단일 변수 계약 구조 검증 및 검증기 self-test 3건 PASS. 현재 C1을 수동 선택 구현으로 오인하던 control 문구를 교정했다. 시편 노출 파일럿은 정식 12명/5유형 초회 표본과 분리하고, 같은 사람의 후속 과제는 T0 자유 회상과 H 기록 뒤에만 둔다.
+- [BOUNDARY] 보고서의 후속 질문 문구·개발안은 승인된 저작/구현이 아니다. 사람·성능 n=0, 25/480분 설계 목표, Base 네 조건, M20 r02 미승격·원본 runtimeEligible:false·사용자 전용 commit/push는 유지한다. 이전 초점 복귀 1/1 보강은 RFC-CX-018이며 고유 157에 중복 가산하지 않는다.
+- [HANDOFF] `handoff/aside-core-loop-results-20260913.md`가 최종 권고·출처 대조 범위를, `planning/core-loop-research-20260913/aside-run.json`이 실행과 산출물 지문을 소유한다.
+- [CONCURRENT HEAD] 종결 직전 읽기 전용 `git status --short --branch`, `git worktree list --porcelain`, `git log -1`로 외부 커밋을 반영했다. 현재 관측 HEAD는 `b2ae1fb8119be1b797f874c38441cbd433aa72d4`, 부모 `52ad5510522eca6d5cfd8d743d85f28cb254635f`, 22:13:25+09:00의 `docs(m13): record worktree, branch and disk cleanup receipt`다. **이 세션이 만든 커밋이 아니며 실행 주체는 특정하지 않는다.** RFC-CX-016의 52ad551/발산 상태는 그때의 이력이고 현행 상태로 전달하지 않는다.
+- [INTEGRATION SNAPSHOT] 워크트리 1개·main·로컬 origin/main 추적, 도구 요약 staged 0/unstaged 66/untracked 73이었다. M22 런타임·리서치 변경이 여전히 작업트리에 있으므로 외부 문서 커밋을 전체 통합 완료로 세지 않는다. 별도 병합/삭제 브랜치는 없고 commit/push는 사용자 전용이다. stage/commit/push/reset/checkout/fetch는 이 세션이 수행하지 않았다.
+- [CLOSURE CHECK] 연구 영수증의 중첩 파일 지문 5개, 두 JSON sidecar 지문, 로컬 문서 링크 6개가 일치했다. freshness는 662개 Markdown에서 0건, frontmatter/supersedes 범위만 PASS. Graphify는 AST 2,199/2,199·38,634노드/42,670간선·0토큰으로 갱신했으나 문서 의미 추출·HTML은 미갱신이다. zg 관측은 2,011/2,011파일·104,402 entities·182 truncated fragments·대기/실패 0이며 truncation을 완전 검색 보장으로 확대하지 않는다.
+
+## RFC-CX-M23-20260913 · 코어 루프 구현 승인과 기준 합의
+
+- [REQUEST] 사용자 최신 요청은 계획 구현·서브에이전트 논의·기준 디버깅·빌드·Git push·최종 리뷰/개선 계획이다. 명시적 stage/commit/일반 push를 이번 작업에 승인한 것으로 기록하며 이전 연구 요청의 사용자 전용 Git 경계와 구분한다.
+- [DECISION] `handoff/m23-core-loop-implementation.md`에서 R1–R10 전건을 추적한다. ReaderCompare·SignatureSources·AlignmentPractice·CanonConsistency가 각 레인 기준을 ACK했고 독립 GoalReview와 반례를 논의했다. Main은 공유 세션/UI·검증·Git 통합 소유자다.
+- [AMENDMENT] R1 비교 자료/시간창은 보기 전용, 기존 실제 LoadRecord는 원래의 저널 명령이다. R2 SignatureScreen 실제 소유 파일은 C1SignatureGameSession.cs이며 해당 writer가 통합한다. C1 proof의 과거 reducer/hash는 보존하고 새 명령 payload 버전으로 수동 쌍을 기록한다.
+- [AMENDMENT] R5 연습장 키/도구/전역 명령은 본편 상태와 격리한다. 각 사건 오차는 fitted residual이 아니라 데이터 잔차 한도를 보수적 하한으로 쓴다. R7 작업 상태 자동저장과 증거 확정, 비적용 미리보기를 구분한다.
+- [AMENDMENT] R4 ‘대장이 끊기는 지점’을 실제 마지막 관측 시각으로 정정하는 단일 힌트 변경을 승인한다. P1/P2 보존 약속은 유지하고 약한 검사와 강한 미검증을 분리한다. R6은 기존 수집기 부재를 숨기지 않고 시간표가 있는 네이티브 영상의 수동 주석 경로로 준비한다.
+- [BOUNDARY] 사람 n=0·Base 조건·후반 생산 게이트·목표 Windows 장치 미측정은 유지한다. 시편과 사람 이해/450–540분 완주/출시 승인은 다른 판정이다. 기존 M22 승인 리소스만 사용한다.
+- [CLOSURE 2026-09-14] R1/R2/R3/R5/R7 구현 및 R4 교정 뒤 독립 RuntimeAcceptance/EvidenceAcceptance와 Q1–Q5 반례를 해결했다. 실제 UI에서 발견한 offscreen feedback은 오른쪽 고정 영역으로 옮기고 Navigation 높이는 유지했다. 테스트/네이티브 증거와 제외된 매크로는 `qa/m23-integration-review.md`에 있다.
+- [EXECUTION] Unity고유177통과·Node7·정본50·그래프18, Mac315파일/410875105B와 실제150% 비교/확정/프로세스 재시작 복구. 임시 Editor producer와 .meta 제거. `systems/tech-verification/m23/verification.json`의 전체 앱 지문과 신구 캡처 구분을 따른다.
+- [GATE] 강한 P1/P2 감사 exit3/blocked, 사람 n=0·실제 노력 없음·Windows 및 전체 캠페인 미측정. R6은 실행 패킷/약8초 창 녹화만 준비했으며 자동 수집기나45분 안정성은 완료가 아니다. R8/R9 생산을 시작하지 않았다. 다음 순서는 `handoff/m23-results-and-improvement-plan.md`에 동결한다.

@@ -32,7 +32,8 @@ namespace Tide.Tests
         void Enter(){Click("continue-c1-signature");}
         void Ready()
         {
-            Enter();var def=game.Definition.Signature;foreach(var id in def.Observations)Do("ObserveSignature",id);Do("SetSignatureHumidity","low");Do("TrialSignature");Do("SeparateSignature");foreach(var id in def.Copies)Do("CopySignature",id);Do("MarkSignature",def.RegionId);Do("CompareSignature",def.ComparisonId);Do("SelectSignatureProof",def.LeftClue,def.RightClue);
+            Enter();var def=game.Definition.Signature;foreach(var id in def.Observations)Do("ObserveSignature",id);Do("SetSignatureHumidity","low");Do("TrialSignature");Do("SeparateSignature");foreach(var id in def.Copies)Do("CopySignature",id);Do("MarkSignature",def.RegionId);Do("CompareSignature",def.ComparisonId);
+            Click("c1-signature-proof-left-"+def.LeftClue);Click("c1-signature-proof-right-"+def.RightClue);Click("c1-signature-cite");
         }
         PuzzleCommand Confirm()=>new PuzzleCommand("ConfirmSignature",game.Definition.Signature.ComparisonId,game.Definition.Signature.RegionId);
         Text[] Texts()=>host.GetComponentsInChildren<Text>();
@@ -69,6 +70,57 @@ namespace Tide.Tests
         [UnityTest] public IEnumerator TwoStepConfirmationDoesNotCommitEarly()
         {
             Ready();yield return Wait(game.FlushSaves());game.SetConfirmMode("two-step");Click("c1-signature-confirm");Assert.AreEqual("preview",game.Surface);Assert.IsFalse(game.SignatureComplete);Click("preview-next");Assert.AreEqual("confirm",game.Surface);Assert.IsFalse(game.SignatureComplete);Click("confirm-submit");while(game.SavePending)yield return null;Assert.IsTrue(game.SignatureComplete);Assert.AreEqual(1,game.SuccessfulReceipts);
+        }
+        [UnityTest] public IEnumerator CandidateChoicesStayUnrecordedAndNeverReplacePriorProofUntilCited()
+        {
+            Enter();var def=game.Definition.Signature;
+            Assert.IsFalse(game.Interface.ActionIds.Any(id=>id.StartsWith("c1-signature-proof-left-")));
+            Do("ObserveSignature",def.LeftClue);
+            Assert.IsFalse(game.Interface.ActionIds.Contains("c1-signature-proof-right-"+def.RightClue));
+            Assert.IsFalse(game.Interface.ActionIds.Contains("c1-signature-proof-left-"+def.Copies[0]));
+            Do("ObserveSignature",def.RightClue);Do("SetSignatureHumidity","low");Do("TrialSignature");Do("SeparateSignature");
+            foreach(var id in def.Copies)Do("CopySignature",id);
+            Do("MarkSignature",def.RegionId);Do("CompareSignature",def.ComparisonId);
+            yield return Wait(game.FlushSaves());
+            var hash=game.Journal.State.StateHash;var head=game.Journal.HeadSeq;
+            Assert.IsFalse(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-cite").interactable);
+            Click("c1-signature-proof-left-"+def.Copies[0]);Click("c1-signature-proof-right-"+def.Copies[1]);
+            Assert.AreEqual(hash,game.Journal.State.StateHash);Assert.AreEqual(head,game.Journal.HeadSeq);
+            Assert.IsFalse(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-cite").interactable);
+            Assert.IsFalse(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-confirm").interactable);
+            Click("c1-signature-proof-right-"+def.RightClue);Click("c1-signature-cite");
+            Assert.AreEqual(def.Copies[0],def.RecordedProofLeft(game.Journal.State));
+            yield return Wait(game.FlushSaves());hash=game.Journal.State.StateHash;
+            var saved=File.ReadAllBytes(Path.Combine(directory,"save.json"));
+            Click("c1-signature-proof-left-"+def.Copies[1]);Click("c1-signature-proof-right-"+def.Copies[1]);
+            Assert.AreEqual(hash,game.Journal.State.StateHash);
+            Assert.AreEqual(def.Copies[0],def.RecordedProofLeft(game.Journal.State));
+            Assert.IsFalse(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-confirm").interactable);
+            Click("c1-signature-proof-discard");
+            Assert.IsTrue(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-confirm").interactable);
+            CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(directory,"save.json")));
+            UnityEngine.Object.Destroy(host);yield return null;Create();yield return null;game.StartGame();
+            Assert.AreEqual(hash,game.Journal.State.StateHash);
+            Assert.AreEqual(def.Copies[0],game.Definition.Signature.RecordedProofLeft(game.Journal.State));
+            Assert.IsTrue(host.GetComponentsInChildren<Button>().Single(button=>button.name=="c1-signature-confirm").interactable);
+        }
+        [UnityTest] public IEnumerator RevealedCopyNotesRetainLineageLinksAcrossReentryWithoutGeneratingQuestions()
+        {
+            Ready();yield return Wait(game.FlushSaves());var def=game.Definition.Signature;
+            var original=game.ObservedReviewSources().Single(source=>source.Id=="signature:"+def.LeftClue);
+            var copy=game.ObservedReviewSources().Single(source=>source.Id=="signature:"+def.Copies[0]);
+            Assert.AreEqual(original.OriginId,copy.OriginId);Assert.AreEqual(original.SourceType,copy.SourceType);
+            var hash=game.Journal.State.StateHash;var head=game.Journal.HeadSeq;
+            game.OpenReviewNotes();yield return null;
+            game.Interface.ReviewEditor.text="직접 본 내용과 아직 추측인 내용을 구분한다.";
+            Click("review-source-"+copy.Id);
+            Assert.IsNull(game.ReviewShownQuestion);
+            var save=game.SaveReviewNoteAsync();yield return Wait(save);Assert.IsTrue(save.Result);
+            UnityEngine.Object.Destroy(host);yield return null;Create();yield return null;game.StartGame();game.OpenReviewNotes();yield return null;
+            CollectionAssert.Contains(game.ReviewStore.Load()["sourceIds"].Values<string>().ToArray(),copy.Id);
+            Assert.IsNull(game.ReviewShownQuestion);
+            Assert.AreEqual(hash,game.Journal.State.StateHash);Assert.AreEqual(head,game.Journal.HeadSeq);
+            Assert.IsFalse(game.Interface.ActionIds.Any(id=>id.StartsWith("review-open-signature:")),"C1 source return must not route into the underlying reader tool.");
         }
         [UnityTest] public IEnumerator NonfocusedSourceOpensOnOneMouseClick(){yield return MouseClickSource(false);}
         [UnityTest] public IEnumerator NonfocusedSourceOpensOnOneFastMouseClick(){yield return MouseClickSource(true);}

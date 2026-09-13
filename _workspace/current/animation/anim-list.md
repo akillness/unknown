@@ -1,18 +1,18 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-13
 cycle: 20260909-preproduction-c5
 status: draft
 supersedes: null
 owner: game-animator
 ---
 
-# Anim List — 클립 10종 · 키 이벤트 표
+# Anim List — 기존 프롭 10종 · M22 인물/손 6동작
 
 ## 0. 지위 · 정본 관계 · 실측 상태
 
-- 이 문서는 `animation/animation-contract.md`(C4/C5 검증 대기)의 **"10개 재사용 클립"** 목록을 행 단위로 펴고, **키 이벤트 프레임**을 붙인 것이다. 클립 **집합·시간 대역·취소 규칙의 정본은 계약**이고, 이 문서는 **클립별 개별 수치와 이벤트 위치**를 소유한다. 계약에 없는 클립을 여기서 늘리지 않는다(재측정: 계약 본문의 클립 토큰 `sort -u | wc -l` = **10**).
+- 기존 프롭 10종은 `animation/animation-contract.md`(C4/C5 검증 대기)의 목록을 행 단위로 펴고 키 이벤트를 붙인 것이다. **M22 인물/손 증분은 최신 사용자 지시와 RFC-CX-018에 의해 별도로 개방**되며 §11이 실제 Blender 저작·내보내기 목록을 기록한다. 기존 프롭의 시간·취소 규칙은 바꾸지 않는다.
 - 리그 규격은 `animation/rig-requirements.md`. **rig-first**: §7 모델러 ack 전에는 `clip-specs/` 를 열지 않는다(현재 파일 수 0 [OBSERVED]).
-- **실측 0** [OBSERVED]: `.anim` 파일 0개 · Animator Controller 0개 · 재생 캡처 0장 · 사람 플레이 n=0 · 프레임 타임 측정 0건. 아래 **length·키 이벤트·프레임은 전부 [TARGET]** 이다. 자산의 존재/상태만 [OBSERVED] 인용이다.
+- **M22 이전 기준선 [OBSERVED 2026-09-10]**: `.anim` 파일 0개 · Animator Controller 0개 · 재생 캡처 0장 · 사람 플레이 n=0 · 프레임 타임 측정 0건. 이를 M22 이후 실제 FBX 내장 클립의 부재로 인용하지 않는다. 아래 기존 프롭의 length·키 이벤트·프레임은 [TARGET]이고, M22 저작 결과는 §11 및 생성 manifest에서 구분한다.
 - frontmatter: 신설이므로 `supersedes: null`, `cycle` 은 레인 live 문서와 동일한 `20260909-preproduction-c5`, `status: draft`(C3-F33 — QA 검증 후 소유 레인이 current 로 올린다).
 
 ## 1. 시간 기준 (timebase) — ms 가 정본, 프레임은 파생
@@ -126,7 +126,7 @@ grep -in "수면\|water"   _workspace/current/modeling/asset-manifest.md   # →
 
 ## 8. 이 문서가 증명하지 않는 것 [OBSERVED]
 
-`.anim` 0개 · Animator 0개 · Unity 임포트 0건 · 재생 프레임 캡처 0장 · 사람 플레이 n=0 · 조작감/타이밍 실측 0건. **표의 ms 는 설계값이며 관측값이 아니다.** G4·G5 어느 것도 이 문서로 PASS 하지 않는다.
+2026-09-10의 `.anim`/Animator/Unity 임포트/캡처 0건은 과거 기준선이다. M22는 FBX 내장 클립과 수동 Generic Playables를 사용하므로 독립 `.anim` 파일이나 Animator Controller의 개수로 모션 유무를 판단하지 않는다. 사람 플레이 n=0이며 **설계 ms와 저작 키프레임은 실사용 타이밍/조작감 관측값이 아니다**. 이 목록만으로 G4·G5를 PASS하지 않는다.
 
 ## 9. 미해결
 
@@ -140,3 +140,23 @@ grep -in "수면\|water"   _workspace/current/modeling/asset-manifest.md   # →
 | 날짜 | 회차 | 내용 |
 |---|---|---|
 | 2026-09-10 | R4 | **신설.** 계약 10클립을 행으로 펴고 60 fps·50 ms 격자 timebase 와 키 이벤트(hit/fx/cancel) 표를 붙였다. 대상 자산 부재 2건을 `[BLOCKED:rig]` 로 표시. `supersedes: null` 유지 |
+
+## 11. M22 — Blender MCP 직접 저작 클립 (RFC-CX-018)
+
+[OBSERVED 2026-09-13] 실제 Blender MCP에서 모델·리그·키프레임·FBX/GLB 및 프리뷰를 생성했다. `assets/generated/3d/seorin-m22/r01/manifest.json`과 생성기 `scripts/blender/build-seorin-m22.py`가 정확한 소스/해시/본/프레임을 소유한다. 프리뷰와 Unity 네이티브 비교로 목 길이·봉제선·전신 중립 손 자세, 화면 안에 끝나던 소매, 좌/우 엄지 방향을 원본에서 교정했다. 이전 후보는 history에 보존했다.
+
+| 동작 / 정확한 takeName | 적용 파일 | 내보낸 구간 @60fps | 접촉/재생 규칙 |
+|---|---|---|---|
+| `Seorin_Idle` | Character | 0–120 (2.0s) | 시작 화면의 절제된 호흡/자세. 루트 이동 없음 |
+| `Hands_Rest` | LeftHand / RightHand | 0–60 (1.0s) | 런타임은 정지 포즈를 샘플. 대기 자체가 성공 조작은 아님 |
+| `Hands_Insert` | LeftHand / RightHand | 0–15 (250ms) | 기존 plate_insert 접촉 200ms; 성공 장전에서만 |
+| `Hands_Align` | LeftHand / RightHand | 0–12 (200ms) | 짧은 정렬/복귀. 퍼즐 이동·입력을 지연하는 시간이 아님 |
+| `Hands_Grip` | LeftHand / RightHand | 0–24 (400ms) | 닫힌 grip 포즈는 0.4s. 실제 크랭크의 420/160/520ms·150도는 기존 reader driver가 소유 |
+| `Hands_Seal` | LeftHand / RightHand | 0–18 (300ms) | 접촉 150ms. 현재 context의 내구 저장 성공만 확정 반응 |
+
+- 6개 의미 동작, 실제 FBX take는 전신 1 + 좌/우 각각 5 = **11개**다. 양손의 코드 경로가 비슷하다고 리그나 파일을 한 손으로 대체하지 않는다.
+- [OBSERVED · Blender/Unity 임포트] 전신 15,124 tri/50본, 양손 각각 2,772 tri/18본(합 5,544 tri); 정점당 최대 영향 본 2개. `Root`/`Forearm` 이동은 0이며 손 클립의 손목·15개 손가락 회전 채널을 내보냈다. 각 손에 Forearm 100% 웨이트의 소매를 연장해 팔 끝이 네이티브 화면 안에서 잘리지 않게 했다.
+- [OBSERVED · 저작] 각 손의 `Contact` 본 원점이 grip 앵커다. Blender 세계좌표를 Unity 본 로컬좌표로 오인하지 않도록 런타임 gripPoint는 `(0,0,0)`이다. 실제 접촉 여부는 Unity 변환·포즈를 포함해 별도 검증한다.
+- [DECISION · 런타임] 판독기 왼손은 카메라 기준 대기 위치에서 접촉점으로 접근해 Insert/Seal의 접촉 구간을 유지한 뒤 150ms에 복귀한다. 오른손은 조작 중 닫힌 grip을 유지하며 실제 손잡이 위치를 따른다. `rd-hex-plate`는 불러온 기록물이 아니라 고정 판독기 하드웨어이므로 손과 함께 이동시키지 않는다. 모션 축소/이탈/실패에서는 즉시 취소하며 150ms 복귀가 입력·저장의 지연은 아니다.
+- [OBSERVED / BOUNDARY] 진단 플래그 없는 Unity 개발 빌드에서 삽입·복귀, 손잡이 추적과 모션 축소를 확인했다. 프레임 시작 이전의 작업 시간이 새 동작에 섞이지 않도록 판독/손 동작은 수락 시점의 unscaled monotonic clock을 사용한다. 접촉·취소·저장 실패 회귀와 실제 화면은 `systems/tech-verification/m22/verification.json` 및 `docs/media/gameplay-m22/`에 기록했다. Blender 프리뷰를 게임 화면으로 부르거나 사람 플레이 검증을 주장하지 않는다.
+- [DECISION · 중단] 수락 시점 이전 작업을 제외하는 `realtimeSinceStartupAsDouble`은 유지한다. 앱 pause/포커스 상실 시 손·크랭크를 즉시 대기 포즈로 되돌리고 중단 중 새 요청을 거절하므로, 복귀 프레임이 중단 시간을 소비하거나 이전 명령을 재생하지 않는다. Editor의 프로그램식 일시정지 API 동등성은 별도 주장하지 않는다.

@@ -1,0 +1,185 @@
+{
+  "artifact": "m16-runtime-capture",
+  "generated_utc": "2026-09-13T01:56:06.844054+00:00",
+  "classification": {
+    "kind": "automated agent-operated native capture",
+    "is_human_playtest": false,
+    "is_performance_proof": false,
+    "is_physical_input_proof": false,
+    "is_g4_g7_certification": false,
+    "claims_all_resources_visually_perfect": false
+  },
+  "preflight": {
+    "free_gib_before": 12.0,
+    "free_gib_after": 11.95,
+    "disk_gate_threshold_gib": 10,
+    "disk_gate_passed": true,
+    "unity_editor_running": false,
+    "unity_lockfile_present": false,
+    "build_gate_passed": true
+  },
+  "repo": {
+    "head": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+    "branch": "main"
+  },
+  "runtime_profiles_observed_approved": {
+    "M7Hub": true,
+    "M7UiSkin": true,
+    "M7ReaderStage": true,
+    "M8ReviewNotes": true,
+    "source": "Assets/_Project/Resources/*.asset runtimeApproved: 1",
+    "note": "no diagnostic override flags were passed; gates satisfied by runtimeApproved alone"
+  },
+  "build": {
+    "unity_version": "6000.5.6f1",
+    "build_method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+    "build_options": "BuildOptions.Development",
+    "reported_total_size_bytes": 403838113,
+    "on_disk_total_bytes": 403838113,
+    "file_count": 315,
+    "main_binary_sha256": "047771b8d1c579ef4e1a5a690b3a0240c641613392a8192527127513faa41562",
+    "main_binary_bytes": 67916,
+    "globalgamemanagers_sha256": "327c2129f21440587b37cfe569937faeb180296377e62ebd30d6b8c70f97a60f",
+    "bundle_manifest_sha256": "fdd59572f324d1e1dba33fee2f50a597cfedde3317e760d6ffcd89da513d97f1",
+    "bundle_id": "com.TideRegistry.Unknown-T0"
+  },
+  "build_log": {
+    "path": "build-mac.log",
+    "result_line": "T0_MAC_BUILD Succeeded bytes=403838113"
+  },
+  "launch": {
+    "argv": [
+      "--t0-save-dir",
+      "/tmp/unknown-m16-capture-1789264187",
+      "-screen-width",
+      "1280",
+      "-screen-height",
+      "800",
+      "-screen-fullscreen",
+      "0"
+    ],
+    "save_root": "/tmp/unknown-m16-capture-1789264187",
+    "save_root_files_after_run": [],
+    "save_root_empty": true,
+    "window_points": {
+      "x": 957,
+      "y": 50,
+      "w": 640,
+      "h": 432
+    },
+    "window_pixels_equivalent": {
+      "w": 1280,
+      "h": 864,
+      "backing_scale": 2.0
+    },
+    "pid": 54206,
+    "clean_exit": true
+  },
+  "capture": {
+    "method": "orca computer get-app-state --app com.TideRegistry.Unknown-T0 --window-index 0",
+    "explicit_window_capture": true,
+    "desktop_wide_capture_used": false,
+    "screenshot_scale": 1.7,
+    "screenshot_px": {
+      "w": 1088,
+      "h": 734
+    },
+    "distinct_visual_states_captured": 1,
+    "files": [
+      {
+        "label": "00-title-focused",
+        "path": "shots/00-title-focused.png",
+        "sha256": "6c43b62d7f0672180b022ce9764ca0b41a9d8986ea7d96196ede119c3629004a",
+        "bytes": 898425
+      },
+      {
+        "label": "01-title-stability",
+        "path": "shots/01-title-stability.png",
+        "sha256": "6c43b62d7f0672180b022ce9764ca0b41a9d8986ea7d96196ede119c3629004a",
+        "bytes": 898425
+      }
+    ]
+  },
+  "observed_visual_states": {
+    "00-title-focused": "Pre-start title screen (started=false). Header '조수기록국 · 당직 인수', subtitle '21:00 · 시작 전 설정'; actions '당직 시작 / 계속' and '접근성 · 설정'; footer control legend; 'Development Build' watermark. M7 hub shell materials visible in 3D viewport (stone/concrete floor+wall, workbench, approved r03 drawer). M7 UI skin visible as rag-paper/parchment panel surfaces on the content panel and textured header/footer bands.",
+    "01-title-stability": "Byte-identical re-capture of the same pre-start state (identical sha256), taken after all input attempts; proves no input was delivered and the rendered state did not advance."
+  },
+  "requirements_status": {
+    "m7_hub_plus_ui_skin_after_entering_game": {
+      "captured": false,
+      "partial_evidence": "M7 hub shell and M7 UI skin are observed rendering in the native player, but only in the pre-start title state; the post-entry hub surface (node navigation list + toolbar) was never reached.",
+      "reason_not_captured": "entering the game requires activating the '당직 시작 / 계속' action; synthetic input is denied by macOS TCC"
+    },
+    "m7_reader_stage": {
+      "captured": false,
+      "reason_not_captured": "reader stage requires tool==\"reader\" (T0GameSession.SelectTool/OpenTool), reachable only by in-game activation; no command-line or save-file route sets it. Blocked by the same input denial."
+    },
+    "m8_review_notes": {
+      "captured": false,
+      "reachable_without_changing_puzzle_state": true,
+      "reachability_analysis": "OpenReviewNotes() only sets overlay=\"reviewNotes\" and re-renders; it submits no PuzzleCommand, so reaching it would not have mutated puzzle state. Entry point is the '검토 노트 · 대조 메모' action added while overlay is evidence/hypothesis.",
+      "reason_not_captured": "requires prior game entry plus two activations; blocked by the same input denial"
+    }
+  },
+  "player_log": {
+    "path": "logs/Player.log",
+    "bytes": 6820,
+    "boot_markers": [
+      "T0_BOOT entry-start",
+      "T0_BOOT ui-root-loaded",
+      "T0_BOOT hub-loaded",
+      "T0_BOOT session-initialized"
+    ],
+    "exception_count": 0,
+    "scan_pattern": "Exception|NullReference|Error:|error CS|Unhandled|Assertion failed|StackOverflow (excluding Debug.Log stack frames)",
+    "boot_failed": false
+  },
+  "inputs_used": {
+    "successful": [
+      "open -n Unknown.app --args ... (launch)",
+      "open -a Unknown.app (activation)",
+      "orca computer get-app-state (screenshot)",
+      "kill -TERM (shutdown)"
+    ],
+    "in_game_activations_delivered": 0,
+    "pointer_clicks_delivered": 0,
+    "key_events_delivered": 0
+  },
+  "blocking_limit": {
+    "summary": "macOS TCC assistive-access (Accessibility) is not granted to this automated agent context, so no synthetic pointer or keyboard event can be delivered to the player.",
+    "evidence": [
+      {
+        "route": "osascript System Events click/keystroke",
+        "result": "execution error -25211 (osascript is not allowed assistive access)"
+      },
+      {
+        "route": "cliclick",
+        "result": "'Accessibility privileges not enabled'; cursor position unchanged after m:400,400 (1418,332 before and after)"
+      },
+      {
+        "route": "orca computer click / press-key",
+        "result": "window_not_focused even while osascript independently reported frontmost='Unknown T0'; orca computer permissions reports accessibility=not-granted, screenshots=granted"
+      }
+    ],
+    "not_caused_by": [
+      "screen lock",
+      "window occlusion",
+      "app not frontmost",
+      "window-id resolution"
+    ],
+    "unblock": "Grant Accessibility to the controlling process (e.g. 'Orca Computer Use' helper and/or the terminal host) in System Settings > Privacy & Security > Accessibility, then re-run; the capture path itself already works."
+  },
+  "scope_compliance": {
+    "files_written": "only under _workspace/current/systems/tech-verification/m16-runtime-capture/ (plus gitignored Builds/ output and /tmp save root)",
+    "git_head_unchanged": true,
+    "baseline_entries": 56,
+    "content_changed": [],
+    "removed": [],
+    "added_outside_evidence_dir": [],
+    "m14_m15_entries_tracked": 22,
+    "m14_m15_violations": [],
+    "m14_m15_preserved_exactly": true,
+    "no_reset_stash_revert_clean_commit_push": true,
+    "no_approval_or_asset_generation_changes": true
+  }
+}

@@ -33,20 +33,28 @@ namespace Tide.App {
   string node="hub-view-desk",tool,overlay,document,status="",saveId=Guid.NewGuid().ToString(),createdUtc=DateTime.UtcNow.ToString("O");
   bool started,bootFailed,saveReadOnly; bool phaseStart; int phasePage; int generation,toolIndex; string attemptKey; PuzzleCommand proposed; CancellationTokenSource pendingCancel;
   T0CommitFeedback feedback;Task background=Task.CompletedTask; string selectedArea,saveRootDirectory; readonly Dictionary<string,int> hintLevels=new Dictionary<string,int>(StringComparer.Ordinal); int pendingHintLevel; bool hintLevelsDirty; float lastActivity; float cameraHorizontalFov;
+  float idleHintOfferSeconds,hintOfferCooldownSeconds,hintOfferCooldownUntil;
+  bool hintContextSuppressed=true;string hintBeat;
+  ViewAction hintOfferOpen,hintOfferDismiss;
+  public bool HintOfferVisible {get;private set;}
+  public int HintOfferDismissedCount {get;private set;}
   public void Initialize(T0RuntimeConfig value,string saveDirectory=null){
    config=value; Interface=gameObject.AddComponent<T0Interface>();Interface.Initialize();
    if(EventSystem.current==null){var es=new GameObject("Input event system",typeof(EventSystem));DontDestroyOnLoad(es);var input=es.AddComponent<InputSystemUIInputModule>();input.AssignDefaultActions();input.move=null;input.submit=null;input.cancel=null;}
    try{
     patrolPacket=JObject.Parse(Resources.Load<TextAsset>("C1PatrolContract").text);signaturePacket=JObject.Parse(Resources.Load<TextAsset>("C1SignatureContract").text);Definition=C1SignatureData.Attach(C1PatrolData.Attach(config.catalog.Load(),patrolPacket),signaturePacket);Simulation=new T0Simulation(Definition);
     records=JObject.Parse(config.records.text);zones=JObject.Parse(config.zones.text);tools=JObject.Parse(config.tools.text);hints=JObject.Parse(config.hints.text);beats=config.beats==null?null:JObject.Parse(config.beats.text);strings=JObject.Parse(config.strings.text);policy=JObject.Parse(config.savePolicy.text);
+    idleHintOfferSeconds=float.Parse((string)tools["knobs"]["idleHintOfferSeconds"]["value"],CultureInfo.InvariantCulture);
+    hintOfferCooldownSeconds=float.Parse((string)tools["knobs"]["hintOfferCooldownSeconds"]["value"],CultureInfo.InvariantCulture);
     Journal=new CommandJournal(Simulation,SnapshotInterval);
     cameraHorizontalFov=(float)zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==node)["cameraPose"]["fovDeg"];
     if(T0DataLoader.CitationBlockers(Definition).Count>0)throw new InvalidOperationException("Canonical citation metadata absent");
     var args=Environment.GetCommandLineArgs();var arg=Array.IndexOf(args,"--t0-save-dir");if(arg>=0&&arg+1<args.Length)saveDirectory=args[arg+1];
     saveRootDirectory=saveDirectory??Path.Combine(Application.persistentDataPath,"saves");Store=new AtomicSaveStore(saveRootDirectory);
     settings=DefaultSettings();
-    var settingsPath=Path.Combine(Store.DirectoryPath,"settings.json");if(File.Exists(settingsPath))try{settings=SaveCodec.Decode(File.ReadAllText(settingsPath));}catch(Exception){status="설정을 기본값으로 복구했습니다.";}
+    var settingsPath=SettingsPath;if(File.Exists(settingsPath))try{settings=SaveCodec.Decode(File.ReadAllText(settingsPath));}catch(Exception){status="설정을 기본값으로 복구했습니다.";}
     Watch=gameObject.AddComponent<WatchInput>();Watch.Initialize(config.bindings.text,(string)settings["bindings"]);
+    Watch.Activity+=NoteInputActivity;
     Watch.Navigate+=Interface.Navigate;Watch.BeginInteract+=Interface.BeginActivation;Watch.EndInteract+=Interface.EndActivation;
     Watch.ToolWheel+=()=>OpenOverlay("toolWheel");Watch.Adjust+=Adjust;Watch.Tool+=SelectTool;Watch.Overlay+=OpenOverlay;Watch.Query+=Query;Watch.Disconnect+=Disconnect;
     Interface.ReviewCompositionActive=()=>Watch.ImeCompositionActive;Interface.TextEntryChanged+=Watch.SetTextEntry;Watch.TextEntryExitRequested+=Interface.EndReviewEditing;
@@ -58,7 +66,7 @@ namespace Tide.App {
     var loaded=Store.Load(validate:doc=>JournalSave.Decode(doc,Simulation,SnapshotInterval));
     if(loaded.Document!=null){try{Journal=JournalSave.Decode(loaded.Document,Simulation,SnapshotInterval);RestoreHintLevels(loaded.Document);saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];if(loaded.Source!="save.json")status=L("recovered")+" "+loaded.Source;}catch(Exception e){status=L("recovery")+" "+e.Message;overlay="recovery";}}
     else if(loaded.Failure!=null){saveReadOnly=true;status=L("recovery")+" "+loaded.Failure;overlay="recovery";}
-    ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();BindM7Hub();lastActivity=Time.unscaledTime;Render();
+    ResetWorkspaceViews();ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();BindM7Hub();lastActivity=Time.unscaledTime;Render();
    }catch(Exception e){bootFailed=true;Debug.LogException(e);Interface.Render(new GameScreen{Title="T0 데이터 확인이 필요합니다",Body=e.Message,Footer="부팅이 중단되었습니다. 저장 파일은 변경하지 않았습니다."});}
   }
   // interaction-rules.md §1-1: two-step is the canonical default confirmation mode.
@@ -73,12 +81,39 @@ namespace Tide.App {
   JObject Record(string id)=>records["rows"].OfType<JObject>().First(r=>(string)r["recordId"]==id);
   string Name(string id)=>Definition.Records.ContainsKey(id)?(string)Record(id)["displayNameKo"]:id;
   string CurrentBeat=>BeatFor(Journal.State);
-  ViewAction A(string id,string label,Action action,bool enabled=true,string detail=null,float hold=0)=>new ViewAction{Id=id,Label=label,Activate=()=>{lastActivity=Time.unscaledTime;action();},Enabled=enabled,Detail=detail,HoldSeconds=hold};
-  void Update(){UpdateOpening();if(!bootFailed&&started)UpdateReviewNotesAvailability();if(!bootFailed&&started&&!OpeningActive&&overlay==null&&document==null&&Time.unscaledTime-lastActivity>float.Parse((string)tools["knobs"]["idleHintOfferSeconds"]["value"],CultureInfo.InvariantCulture)){status=L("hintOffer");lastActivity=Time.unscaledTime;Render();}}
+  ViewAction A(string id,string label,Action action,bool enabled=true,string detail=null,float hold=0)=>new ViewAction{Id=id,Label=label,Activate=()=>{NoteActivity();action();},Enabled=enabled,Detail=detail,HoldSeconds=hold};
+  void NoteInputActivity(){lastActivity=Time.unscaledTime;}
+  void NoteActivity(){NoteInputActivity();DismissHintOffer(lastActivity);}
+  void DismissOfferedHint(){if(!HintOfferVisible)return;HintOfferDismissedCount++;NoteActivity();}
+  void RenderHintOffer(){
+   if(HintOfferVisible){
+    if(hintOfferOpen==null){
+     hintOfferOpen=A("hint-offer-open",null,()=>OpenOverlay("hints"));
+     hintOfferDismiss=new ViewAction{Id="hint-offer-dismiss",Activate=DismissOfferedHint};
+    }
+    hintOfferOpen.Label=L("hintOffer");hintOfferDismiss.Label=L("back");
+   }
+   Interface.SetHintOffer(HintOfferVisible?hintOfferOpen:null,HintOfferVisible?hintOfferDismiss:null);
+  }
+  void DismissHintOffer(float now){
+   if(!HintOfferVisible)return;
+   HintOfferVisible=false;hintOfferCooldownUntil=now+hintOfferCooldownSeconds;Interface.SetHintOffer(null,null);
+  }
+  bool SyncHintContext(float now,bool checkBeat=false){
+   bool suppressed=bootFailed||!started||OpeningActive||overlay!=null||document!=null||SavePending;
+   var beat=checkBeat?CurrentBeat:hintBeat;
+   if(suppressed||hintContextSuppressed||hintBeat!=beat){lastActivity=now;DismissHintOffer(now);}
+   hintContextSuppressed=suppressed;hintBeat=beat;return !suppressed;
+  }
+  void UpdateHintCadence(float now){
+   if(!SyncHintContext(now)||HintOfferVisible||now-lastActivity<idleHintOfferSeconds||now<hintOfferCooldownUntil)return;
+   HintOfferVisible=true;RenderHintOffer();
+  }
+  void Update(){UpdateOpening();if(!bootFailed&&started)UpdateReviewNotesAvailability();if(!bootFailed&&Journal!=null)UpdateHintCadence(Time.unscaledTime);}
   // Resume status follows the actual state (D-M9-16): the t0-b1 welcome only fits a fresh or intake-stage save.
   string ResumeStatus()=>SignatureActive?(SignatureComplete?"저장된 대조 기록을 복원했습니다.":"저장된 서명지 작업을 복원했습니다."):PatrolActive?"저장된 순찰 기록을 복원했습니다.":Simulation.IsComplete(Journal.State,"t0-b3")?L("caseReview"):Simulation.IsComplete(Journal.State,"t0-b1")?L("resumeInProgress"):L("welcome");
   public void StartGame(){CancelOpening();if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=ResumeStatus();Render();}
-  public void GoNode(string id){CloseTool();node=id;document=null;overlay=null;var camera=Camera.main;var target=zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==id);if(camera!=null){var pos=target["cameraPose"]["pos"];var look=target["cameraPose"]["lookAt"];camera.transform.position=Point(pos);camera.transform.LookAt(Point(look));cameraHorizontalFov=(float)target["cameraPose"]["fovDeg"];}Render();}
+  public void GoNode(string id){if(AlignmentPracticeActive)return;CloseTool();node=id;document=null;overlay=null;var camera=Camera.main;var target=zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==id);if(camera!=null){var pos=target["cameraPose"]["pos"];var look=target["cameraPose"]["lookAt"];camera.transform.position=Point(pos);camera.transform.LookAt(Point(look));cameraHorizontalFov=(float)target["cameraPose"]["fovDeg"];}Render();}
   Transform approvedDrawer;
   Renderer[] approvedDrawerRenderers;
   void LateUpdate(){if(!bootFailed){ApplySceneViewport();InteractWithApprovedDrawer();}}
@@ -109,62 +144,78 @@ namespace Tide.App {
     if(renderer.transform.IsChildOf(approvedDrawer)||!CameraCanRender(renderer,camera,frustum))continue;
     if(renderer.bounds.IntersectRay(ray,out var distance)&&distance<nearest)return;
    }
-   lastActivity=Time.unscaledTime;GoNode("hub-view-drawer");
+   NoteActivity();GoNode("hub-view-drawer");
   }
   static bool CameraCanRender(Renderer renderer,Camera camera,Plane[] frustum)=>renderer!=null&&renderer.enabled&&!renderer.forceRenderingOff&&renderer.gameObject.activeInHierarchy&&renderer.shadowCastingMode!=UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly&&(camera.cullingMask&(1<<renderer.gameObject.layer))!=0&&GeometryUtility.TestPlanesAABB(frustum,renderer.bounds);
   void ApplySceneViewport(){var camera=Camera.main;if(camera==null||Interface==null||cameraHorizontalFov<=0)return;var viewport=Interface.SceneViewport;if(viewport.width<=0||viewport.height<=0||Screen.height<=0)return;camera.rect=viewport;camera.aspect=Screen.width*viewport.width/(Screen.height*viewport.height);camera.fieldOfView=Camera.HorizontalToVerticalFieldOfView(cameraHorizontalFov,camera.aspect);}
   static Vector3 Point(JToken p)=>new Vector3((float)p["x"],(float)p["z"],(float)p["y"]);
   void CloseTool(){if(tool=="circuit")SubmitImmediate(new PuzzleCommand("CloseTool","circuit"),false);tool=null;}
-  public void OpenTool(string id){if(OpeningActive)return;if(!started)return;if(PatrolActive){document=null;overlay=null;tool=null;Render();return;}CloseTool();document=null;overlay=null;tool=id;if(id=="circuit"){var v=SubmitImmediate(new PuzzleCommand("OpenTool","circuit"),false);if(!v.IsValid){tool=null;status=L("finishIntake");}}Render();}
-  void SelectTool(int index){if(index>0)toolIndex=index-1;else toolIndex=(toolIndex+(index<0?5:1))%6;var ids=new[]{"circuit","reader","alignment","routing","corrosion","seal"};OpenTool(ids[Mathf.Clamp(toolIndex,0,5)]);}
+  public void OpenTool(string id){if(OpeningActive||AlignmentPracticeActive)return;if(!started)return;NoteActivity();if(PatrolActive){document=null;overlay=null;tool=null;Render();return;}CloseTool();document=null;overlay=null;tool=id;if(id=="circuit"){var v=SubmitImmediate(new PuzzleCommand("OpenTool","circuit"),false);if(!v.IsValid){tool=null;status=L("finishIntake");}}Render();}
+  void SelectTool(int index){if(AlignmentPracticeActive)return;if(index>0)toolIndex=index-1;else toolIndex=(toolIndex+(index<0?5:1))%6;var ids=new[]{"circuit","reader","alignment","routing","corrosion","seal"};OpenTool(ids[Mathf.Clamp(toolIndex,0,5)]);}
   // hint-system.md §2: revealedLevel[beatId] survives close/reopen — no reset on overlay entry.
-  public void OpenOverlay(string id){if(OpeningActive&&id!="settings")return;overlay=id;Render();}
-  void Query(){if(OpeningActive)return;if(tool=="circuit")OpenOverlay("coverageQuery");}
-  void Disconnect(){if(OpeningActive)return;if(tool=="reader"&&Journal.State.LoadedRecordId!=null)RequestConfirm(new PuzzleCommand("CiteToBoard",Journal.State.LoadedRecordId));}
-  public void Back(){if(OpeningActive){if(overlay!=null){overlay=null;Render();}else FinishOpening();return;}if(SavePending){CancelPending();QueueSave();}if(overlay=="reviewNotes"){CloseReviewNotes();return;}if(overlay!=null){overlay=null;proposed=null;Render();return;}if(document!=null){document=null;Render();return;}if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){SubmitImmediate(new PuzzleCommand("Cancel"));return;}CloseTool();Render();}
+  public void OpenOverlay(string id){if(AlignmentPracticeActive)return;if(OpeningActive&&id!="settings")return;overlay=id;Render();}
+  void Query(){if(OpeningActive||AlignmentPracticeActive)return;if(tool=="circuit")OpenOverlay("coverageQuery");}
+  void Disconnect(){if(OpeningActive||AlignmentPracticeActive)return;if(tool=="reader"&&Journal.State.LoadedRecordId!=null)RequestConfirm(new PuzzleCommand("CiteToBoard",Journal.State.LoadedRecordId));}
+  public void Back(){if(AlignmentPracticeActive){ResetAlignmentPractice();overlay=null;Render();return;}if(HintOfferVisible){DismissOfferedHint();return;}if(OpeningActive){if(overlay!=null){overlay=null;Render();}else FinishOpening();return;}if(SavePending){CancelPending();QueueSave();}if(overlay=="reviewNotes"){CloseReviewNotes();return;}if(overlay!=null){proposed=null;DismissOverlay();return;}if(document!=null){document=null;Render();return;}if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){SubmitImmediate(new PuzzleCommand("Cancel"));return;}CloseTool();Render();}
+  void DismissOverlay(){if(overlay=="preview"||overlay=="confirm"){if(FeedbackStage==ActionFeedbackStage.Preview)SetActionFeedback(ActionFeedbackStage.None);proposed=null;}overlay=null;Render();}
   public ValidationResult SubmitImmediate(PuzzleCommand command,bool render=true){
+   if(AlignmentPracticeActive)return ValidationResult.InvalidData("PRACTICE_ISOLATED");
    if(command.CommandId=="ConfirmPatrol"||command.CommandId=="ConfirmSignature")return ValidationResult.InvalidData("C1_REQUIRES_ATOMIC_COMMIT");
-   CancelPending();var verdict=Journal.Submit(command);status=verdict.IsValid?"":PatrolDiagnostic(verdict);
-   if(verdict.IsValid)QueueSave();if(render)Render();return verdict;
+   NoteActivity();var interrupted=CancelPending();var verdict=Journal.Submit(command);status=verdict.IsValid?"":PatrolDiagnostic(verdict);
+   if(verdict.IsValid){SetActionFeedback(ActionFeedbackStage.Accepted);QueueSave();if(command.CommandId=="Read")PresentReaderAction(command);}else if(interrupted)QueueSave();if(render)Render();if(verdict.IsValid)PresentM22Action(command,false);return verdict;
   }
-  void CancelPending(){if(!SavePending)return;generation++;pendingCancel?.Cancel();SavePending=false;attemptKey=null;FlushHintLevelsIfDirty();}
+  bool CancelPending(){if(!SavePending)return false;generation++;pendingCancel?.Cancel();SavePending=false;attemptKey=null;hintLevelsDirty=false;SetActionFeedback(ActionFeedbackStage.None);return true;}
   JObject SaveDocument(CommandJournal journal,string key){var doc=JournalSave.Encode(journal,key,(int)policy["entryCap"],(int)policy["byteCap"],saveId,createdUtc,hintLevels);doc["beatId"]=BeatFor(journal.State);return doc;}
-  void QueueSave(){if(saveReadOnly)return;var candidate=Journal.Clone();var key=Guid.NewGuid().ToString();background=Persist(candidate,key);}
-  async Task Persist(CommandJournal journal,string key){try{await Store.WriteAsync(SaveDocument(journal,key));reviewAvailabilityMayChange=true;}catch(Exception e){Debug.LogWarning("T0 autosave: "+e.Message);status=L("saveFailed");}}
-  public void Undo(){if(OpeningActive)return;CancelPending();if(Journal.Undo()){status=L("undone");QueueSave();}overlay=null;Render();}
-  public void Redo(){if(OpeningActive)return;CancelPending();if(Journal.Redo()){status=L("redone");QueueSave();}overlay=null;Render();}
+  void QueueSave(){if(saveReadOnly)return;var candidate=Journal.Clone();var key=Guid.NewGuid().ToString();background=Persist(candidate,key,++autosaveSequence,feedbackRevision,Store);}
+  async Task Persist(CommandJournal journal,string key,int sequence,int revision,AtomicSaveStore targetStore){
+   try{
+    await targetStore.WriteAsync(SaveDocument(journal,key));reviewAvailabilityMayChange=true;
+    if(this!=null&&sequence==autosaveSequence&&revision==feedbackRevision&&targetStore==Store&&(FeedbackStage==ActionFeedbackStage.Accepted||FeedbackStage==ActionFeedbackStage.None||(FeedbackStage==ActionFeedbackStage.SaveFailed&&overlay!="saveFailure")))SetActionFeedback(ActionFeedbackStage.WorkSaved);
+   }catch(Exception e){
+    Debug.LogWarning("T0 autosave: "+e.Message);
+    if(this!=null&&sequence==autosaveSequence&&targetStore==Store)SetActionFeedback(ActionFeedbackStage.SaveFailed);
+   }
+  }
+  public void Undo(){if(OpeningActive||AlignmentPracticeActive)return;NoteActivity();var interrupted=CancelPending();if(Journal.Undo()){status=L("undone");SetActionFeedback(ActionFeedbackStage.Accepted);QueueSave();}else if(interrupted)QueueSave();overlay=null;Render();}
+  public void Redo(){if(OpeningActive||AlignmentPracticeActive)return;NoteActivity();var interrupted=CancelPending();if(Journal.Redo()){status=L("redone");SetActionFeedback(ActionFeedbackStage.Accepted);QueueSave();}else if(interrupted)QueueSave();overlay=null;Render();}
   public void RequestConfirm(PuzzleCommand command){
-   if(SavePending)return;proposed=command;attemptKey=null;var v=Simulation.Validate(Journal.State,command);if(!v.IsValid){status=PatrolDiagnostic(v);Render();return;}
-   overlay=ConfirmMode=="two-step"?"preview":"confirm";Render();
+   if(SavePending||AlignmentPracticeActive)return;proposed=command;attemptKey=null;var v=Simulation.Validate(Journal.State,command);if(!v.IsValid){status=PatrolDiagnostic(v);Render();return;}
+   overlay=ConfirmMode=="two-step"?"preview":"confirm";SetActionFeedback(ActionFeedbackStage.Preview);Render();
   }
   public async Task<bool> CommitAsync(PuzzleCommand command){
-   if(SavePending||saveReadOnly)return false;var candidate=Journal.Clone();var valid=candidate.Submit(command);if(!valid.IsValid){status=PatrolDiagnostic(valid);Render();return false;}
-   var key=attemptKey??(attemptKey=Guid.NewGuid().ToString());var attempt=++generation;pendingCancel=new CancellationTokenSource();SavePending=true;proposed=command;overlay="pending";Render();var receiptContext=Watch.ContextGeneration;
+   if(SavePending||saveReadOnly||AlignmentPracticeActive)return false;var candidate=Journal.Clone();var valid=candidate.Submit(command);if(!valid.IsValid){status=PatrolDiagnostic(valid);Render();return false;}
+   autosaveSequence++;
+   var key=attemptKey??(attemptKey=Guid.NewGuid().ToString());var attempt=++generation;pendingCancel=new CancellationTokenSource();SavePending=true;proposed=command;overlay="pending";SetActionFeedback(ActionFeedbackStage.CommitSaving);Render();var receiptContext=Watch.ContextGeneration;
    try{
     await Store.WriteAsync(SaveDocument(Journal.Clone(),key+"-checkpoint"),"checkpoint.pre-commit.json",pendingCancel.Token);
     await Store.WriteAsync(SaveDocument(candidate,key),"save.json",pendingCancel.Token);
     if(attempt!=generation||pendingCancel.IsCancellationRequested)return false;
-    Journal=candidate;SavePending=false;attemptKey=null;overlay=null;status=L("saved");bool present=Watch.ContextGeneration==receiptContext;FlushHintLevelsIfDirty();Render();
-    if(present){SuccessfulReceipts++;tCommitReceipt?.Invoke(new CommitReceipt{AttemptId=key,CommandId=command.CommandId,ContextGeneration=Watch.ContextGeneration,Success=true});}return true;
-   }catch(Exception e){if(attempt!=generation)return false;SavePending=false;overlay="saveFailure";status=L("saveFailed");Debug.LogWarning("T0 commit: "+e.Message);FlushHintLevelsIfDirty();Render();return false;}
+    Journal=candidate;SavePending=false;attemptKey=null;overlay=null;status=L("saved");bool present=Watch.ContextGeneration==receiptContext;SetActionFeedback(present?ActionFeedbackStage.CommitSaved:ActionFeedbackStage.None);FlushHintLevelsIfDirty();Render();if(present&&command.CommandId=="ReadOriginal")PresentReaderAction(command);
+   if(present){PresentM22Action(command,true);SuccessfulReceipts++;tCommitReceipt?.Invoke(new CommitReceipt{AttemptId=key,CommandId=command.CommandId,ContextGeneration=Watch.ContextGeneration,Success=true});}return true;
+   }catch(Exception e){if(attempt!=generation)return false;SavePending=false;overlay="saveFailure";status=L("saveFailed");SetActionFeedback(ActionFeedbackStage.SaveFailed);Debug.LogWarning("T0 commit: "+e.Message);FlushHintLevelsIfDirty();Render();return false;}
   }
   void Preview(){if(OpeningActive)return;if(overlay!=null)return;if(tool=="reader"&&Journal.State.LoadedRecordId!=null)SubmitImmediate(new PuzzleCommand("Read"));else if(tool=="circuit"){var area=Definition.UncoveredAreas.FirstOrDefault(a=>"area-"+a==Interface.CurrentFocusId);if(area!=null)SubmitImmediate(new PuzzleCommand("ToggleUncovered",area));}}
-  void Adjust(Vector2 delta,bool fine){if(OpeningActive)return;if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){
+  void Adjust(Vector2 delta,bool fine){if(OpeningActive)return;if(AlignmentPracticeActive){Interface.Navigate(delta.y>0||delta.x<0?-1:1);return;}if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){
    var o=Definition.Overlay;if(fine&&!o.FineGridStep.HasValue){status=L("fineUnavailable");Render();return;}double step=fine?o.FineGridStep.Value:o.GridStep;
    double x=double.Parse(Journal.State.Get("overlayX"),CultureInfo.InvariantCulture),y=double.Parse(Journal.State.Get("overlayY"),CultureInfo.InvariantCulture);
    if(Mathf.Abs(delta.x)>Mathf.Abs(delta.y))x+=Math.Sign(delta.x)*step;else y+=Math.Sign(delta.y)*step;
    SubmitImmediate(new PuzzleCommand("SetOverlayOffset",value:x.ToString(CultureInfo.InvariantCulture),otherValue:y.ToString(CultureInfo.InvariantCulture)));
   }else Interface.Navigate(delta.y>0||delta.x<0?-1:1);}
   string Reason(ReasonCode code)=>L("reason."+code);
-  void SaveSettings(){Directory.CreateDirectory(Store.DirectoryPath);var path=Path.Combine(Store.DirectoryPath,"settings.json");var temp=path+".tmp";File.WriteAllText(temp,SaveCodec.Encode(settings));if(File.Exists(path))File.Replace(temp,path,path+".bak");else File.Move(temp,path);Render();}
+  // Player settings are per-install, not per-slot: the recovery overlay reassigns Store, so anchoring
+  // the write to Store.DirectoryPath dropped text scale, reduced motion, hold, confirm mode and rebinds
+  // into a slot folder that boot never reads. Read and write share this one save-root path.
+  string SettingsPath=>Path.Combine(saveRootDirectory,"settings.json");
+  void SaveSettings(){Directory.CreateDirectory(saveRootDirectory);var path=SettingsPath;var temp=path+".tmp";File.WriteAllText(temp,SaveCodec.Encode(settings));if(File.Exists(path))File.Replace(temp,path,path+".bak");else File.Move(temp,path);Render();}
   string ControlFooter()=>L(Watch!=null&&Watch.LastDeviceIsGamepad?"controlsPad":"controls");
   float HoldSeconds=>settings["holdSeconds"]==null?float.Parse((string)tools["knobs"]["commitHoldSeconds"]["value"],CultureInfo.InvariantCulture):(float)settings["holdSeconds"];
   void CycleHoldDuration(){var option=JObject.Parse(Resources.Load<TextAsset>("HoldOptions").text);float min=(float)option["minSeconds"],max=(float)option["maxSeconds"],step=(float)option["stepSeconds"];settings["holdSeconds"]=HoldSeconds>=max?min:Math.Round(HoldSeconds+step,1);SaveSettings();}
   public void SetConfirmMode(string mode){settings[SignatureActive?"c1SignatureConfirmMode":PatrolActive?"c1ConfirmMode":"confirmMode"]=mode;SaveSettings();}
   public void Render(){
    if(bootFailed||strings==null)return;Interface.TextScale=(float?)settings["textScale"]??1f;
-   var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter()};
-   Watch.ToolPanel=tool!=null&&!OpeningActive;Watch.OverlayActive=overlay!=null;
+   SyncHintContext(Time.unscaledTime,true);
+   var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter(),ActionFeedback=AlignmentPracticeActive?null:ActionFeedbackText};
+   Watch.ToolPanel=tool!=null&&!OpeningActive&&!AlignmentPracticeActive;Watch.OverlayActive=overlay!=null;
    if(OpeningActive)OpeningScreen(s);
    else if(!started){s.Body=L("intro");s.Actions.Add(A("start",L("start"),BeginOpeningOrStart));s.Actions.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));}
    else{
@@ -174,10 +225,12 @@ namespace Tide.App {
     if(overlay==null){if(SignatureActive)SignatureScreen(s);else if(PatrolActive)PatrolScreen(s);else if(document!=null)DocumentScreen(s);else if(tool=="circuit")CircuitScreen(s);else if(tool=="reader")ReaderScreen(s);else if(tool!=null){s.Body=L("stub");s.Actions.Add(A("close-tool",L("back"),Back));}else ShellScreen(s);}
    }
    if(overlay!=null){if(!started||OpeningActive)s.Toolbar.Add(A("back",L("back"),Back));s.ShowOpening=false;s.OpeningImage=null;s.Actions.Clear();OverlayScreen(s);if(started&&(overlay=="evidence"||overlay=="hypothesis"))s.Actions.Insert(0,A("open-review-notes","검토 노트 · 대조 메모",OpenReviewNotes));}
-   if(!PatrolActive&&Simulation.IsComplete(Journal.State,"t0-b3"))s.Subtitle+=" · "+L("complete");
-   s.CaseThread=OpeningActive||overlay=="reviewNotes"?null:CaseThreadText();
-   if(DirectionEnabled&&SignatureActive&&!OpeningActive){s.ShowDirection=true;s.SectionSurface=directionProfile.sectionSurface;foreach(var action in s.Actions.Concat(s.Toolbar))action.DirectionCategory=SignatureDirectionCategory(action.Id);}
-   ApplyM7UiSkin(s);Interface.Render(s);ApplyStagePresentation();ApplySceneViewport();
+   if(!AlignmentPracticeActive&&!PatrolActive&&Simulation.IsComplete(Journal.State,"t0-b3"))s.Subtitle+=" · "+L("complete");
+   // M18: the interview preparation panel suppresses the case card like reviewNotes does, so the
+   // patrol summary's source condition and actor display name cannot leak onto an anonymous surface.
+   s.CaseThread=OpeningActive||AlignmentPracticeActive||overlay=="reviewNotes"||overlay==InterviewPrepOverlay?null:CaseThreadText();
+   if(DirectionEnabled&&SignatureActive&&!OpeningActive&&!AlignmentPracticeActive){s.ShowDirection=true;s.SectionSurface=directionProfile.sectionSurface;foreach(var action in s.Actions.Concat(s.Toolbar))action.DirectionCategory=SignatureDirectionCategory(action.Id);}
+   ApplyM7UiSkin(s);ApplyM20WorkSurface(s);Interface.Render(s);RenderHintOffer();ApplyStagePresentation();RefreshM22Embodiment();ApplySceneViewport();
   }
   // Projection only: required pins are progress, but the existing full predicate owns completion.
   string CaseThreadText(){
@@ -294,6 +347,7 @@ namespace Tide.App {
    s.Actions.Add(A("start-prev",L("startEarlier"),()=>ShiftWindow(id,true,-1)));s.Actions.Add(A("start-next",L("startLater"),()=>ShiftWindow(id,true,1)));s.Actions.Add(A("end-prev",L("endEarlier"),()=>ShiftWindow(id,false,-1)));s.Actions.Add(A("end-next",L("endLater"),()=>ShiftWindow(id,false,1)));
    s.Actions.Add(A("cite",L("cite"),()=>RequestConfirm(new PuzzleCommand("CiteToBoard",id)),!SavePending));
    s.Actions.Add(A("select-record",L("chooseRecord"),()=>OpenOverlay("readerEvidence")));
+   ReaderComparisonScreen(s);
   }
   void ShiftWindow(string id,bool start,int delta){var phases=Definition.Records[id].Phases;var first=Journal.State.Get("windowStart:"+id)??phases[0];var last=Journal.State.Get("windowEnd:"+id)??phases[phases.Count-1];int index=phases.ToList().IndexOf(start?first:last);var next=phases[Mathf.Clamp(index+delta,0,phases.Count-1)];SubmitImmediate(new PuzzleCommand("SetWindow",value:start?next:first,otherValue:start?last:next));}
   void RecoverySlots(GameScreen s){
@@ -301,11 +355,13 @@ namespace Tide.App {
    foreach(var directory in Directory.GetDirectories(saveRootDirectory,"recovery-*").OrderBy(d=>d)){
     var store=new AtomicSaveStore(directory);var loaded=store.Load(validate:d=>JournalSave.Decode(d,Simulation,SnapshotInterval));if(loaded.Document==null)continue;
     var path=directory;var label=L("recoverySlot")+" "+(++index)+" · "+(string)loaded.Document["createdUtc"];
-    s.Actions.Add(A("select-slot-"+index,label,()=>{var next=new AtomicSaveStore(path);var validated=next.Load(validate:d=>JournalSave.Decode(d,Simulation,SnapshotInterval));if(validated.Document==null){status=L("recovery");Render();return;}Journal=JournalSave.Decode(validated.Document,Simulation,SnapshotInterval);RestoreHintLevels(validated.Document);Store=next;saveId=(string)validated.Document["saveId"];createdUtc=(string)validated.Document["createdUtc"];saveReadOnly=false;ConfigureOpening(false);overlay=null;status=L("recovered");Render();}));
+    s.Actions.Add(A("select-slot-"+index,label,()=>{var next=new AtomicSaveStore(path);var validated=next.Load(validate:d=>JournalSave.Decode(d,Simulation,SnapshotInterval));if(validated.Document==null){status=L("recovery");Render();return;}Journal=JournalSave.Decode(validated.Document,Simulation,SnapshotInterval);RestoreHintLevels(validated.Document);Store=next;saveId=(string)validated.Document["saveId"];createdUtc=(string)validated.Document["createdUtc"];ResetWorkspaceViews();saveReadOnly=false;ConfigureOpening(false);overlay=null;status=L("recovered");Render();}));
    }
   }
   void OverlayScreen(GameScreen s){
+   if(AlignmentPracticeActive){AlignmentPracticeScreen(s);return;}
    if(overlay=="reviewNotes"){ReviewNotesScreen(s);return;}
+   if(overlay==InterviewPrepOverlay){InterviewPrepScreen(s);return;}
    if(SignatureOverlay(s))return;
             if(PatrolActive&&overlay=="toolWheel"){s.Body="C1 · "+PatrolText("c1.patrol.preview");s.Actions.Add(A("c1-circuit",PatrolText("c1.patrol.title"),()=>{overlay=null;document=null;Render();}));s.Actions.Add(A("overlay-back",L("back"),Back));return;}
    s.Title=L(overlay);s.Body="";
@@ -313,6 +369,7 @@ namespace Tide.App {
    else if(overlay=="coverageQuery"){s.Body=L("outsideCoverage");}
    else if(overlay=="phasePicker"){var id=Journal.State.LoadedRecordId;var phases=Definition.Records[id].Phases;s.Body=L("window");s.Actions.Add(A("phase-prev",L("previousPage"),()=>{phasePage=Math.Max(0,phasePage-1);Render();}));s.Actions.Add(A("phase-next",L("nextPage"),()=>{phasePage=Math.Min((phases.Count-1)/30,phasePage+1);Render();}));foreach(var phase in phases.Skip(phasePage*30).Take(30)){var selected=phase;var sample=Record(id)["samples"].First(x=>(string)x["phase"]==selected);var reading=(string)sample["state"]=="missing"?L("missing"):((string)sample["state"]=="flat"?L("flat")+" · ":"")+(sample["pressure"]??sample["tideHeight"]).ToString();s.Actions.Add(A("phase-"+selected,selected+" · "+reading,()=>{var first=Journal.State.Get("windowStart:"+id)??phases[0];var last=Journal.State.Get("windowEnd:"+id)??phases[phases.Count-1];var v=SubmitImmediate(new PuzzleCommand("SetWindow",value:phaseStart?selected:first,otherValue:phaseStart?last:selected),false);if(v.IsValid)overlay=null;Render();}));}}
    else if(overlay=="settings"){if(DirectionEnabled&&!OpeningActive)s.Actions.Add(A("intro-replay","도입 안내 다시 보기",ReplayOpening,!SavePending));if(!OpeningActive)s.Actions.Add(A("saved-slots",L("savedSlots"),()=>OpenOverlay("recovery")));
+    if(started&&!OpeningActive&&AlignmentPracticeAvailable)s.Actions.Add(A("alignment-practice",(string)settings["language"]=="en"?"Separate alignment practice · no campaign progress":"별도 조위정합 연습장 · 본편 진행과 무관",OpenAlignmentPractice,!SavePending));
     s.Actions.Add(A("language",L("language")+": "+(string)settings["language"],()=>{settings["language"]=(string)settings["language"]=="ko"?"en":"ko";SaveSettings();}));
     s.Actions.Add(A("text-scale",L("textScale")+": "+settings["textScale"],()=>{double scale=(double)settings["textScale"];settings["textScale"]=scale>=1.5?1:Math.Round(scale+.1,1);SaveSettings();}));
     s.Actions.Add(A("reduced-motion",L("reducedMotion")+": "+settings["reducedMotion"],()=>{settings["reducedMotion"]=!(bool)settings["reducedMotion"];SaveSettings();}));
@@ -348,10 +405,10 @@ namespace Tide.App {
     if(proposed!=null){var v=Simulation.Validate(Journal.State,proposed);if(!v.IsValid)s.Body+="\n"+(PatrolDiagnostic(v));}
     if(overlay=="preview"&&ConfirmMode=="two-step")s.Actions.Add(A("preview-next",L("next"),()=>{overlay="confirm";Render();}));
     else s.Actions.Add(A("confirm-submit",L("confirm"),()=>{_ = CommitAsync(proposed);},proposed!=null&&Simulation.Validate(Journal.State,proposed).IsValid,hold:ConfirmMode=="hold"?HoldSeconds:0));
-   }else if(overlay=="recovery"){s.Body=status;RecoverySlots(s);s.Actions.Add(A("recovery-new-slot",L("newSlot"),()=>{Store=new AtomicSaveStore(Path.Combine(saveRootDirectory,"recovery-"+Guid.NewGuid().ToString("N")));saveId=Guid.NewGuid().ToString();createdUtc=DateTime.UtcNow.ToString("O");Journal=new CommandJournal(Simulation,SnapshotInterval);hintLevels.Clear();saveReadOnly=false;started=false;document=null;tool=null;ConfigureOpening(true);overlay=null;status=L("oldSavePreserved");Render();}));s.Actions.Add(A("recovery-retry",L("retry"),()=>{var loaded=Store.Load();if(loaded.Document!=null)try{Journal=JournalSave.Decode(loaded.Document,Simulation,SnapshotInterval);RestoreHintLevels(loaded.Document);saveReadOnly=false;saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];ConfigureOpening(false);overlay=null;status=L("recovered");}catch(Exception e){status=e.Message;}Render();}));}
-   s.Actions.Add(A("overlay-back",L("back"),()=>{overlay=null;Render();}));
+   }else if(overlay=="recovery"){s.Body=status;RecoverySlots(s);s.Actions.Add(A("recovery-new-slot",L("newSlot"),()=>{Store=new AtomicSaveStore(Path.Combine(saveRootDirectory,"recovery-"+Guid.NewGuid().ToString("N")));saveId=Guid.NewGuid().ToString();createdUtc=DateTime.UtcNow.ToString("O");Journal=new CommandJournal(Simulation,SnapshotInterval);ResetWorkspaceViews();hintLevels.Clear();saveReadOnly=false;started=false;document=null;tool=null;ConfigureOpening(true);overlay=null;status=L("oldSavePreserved");Render();}));s.Actions.Add(A("recovery-retry",L("retry"),()=>{var loaded=Store.Load();if(loaded.Document!=null)try{Journal=JournalSave.Decode(loaded.Document,Simulation,SnapshotInterval);RestoreHintLevels(loaded.Document);saveReadOnly=false;saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];ResetWorkspaceViews();ConfigureOpening(false);overlay=null;status=L("recovered");}catch(Exception e){status=e.Message;}Render();}));}
+   s.Actions.Add(A("overlay-back",L("back"),DismissOverlay));
   }
   public Task FlushSaves()=>Task.WhenAll(background,reviewBackground);
-  void OnDestroy(){pendingCancel?.Cancel();ApplyStagePresentation(true);}
+  void OnDestroy(){feedbackRevision++;generation++;pendingCancel?.Cancel();ApplyStagePresentation(true);}
  }
 }

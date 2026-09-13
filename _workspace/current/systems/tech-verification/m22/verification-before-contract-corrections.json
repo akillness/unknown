@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-09-13T09:36:43Z",
+  "scope": "M22 local development integration; RFC-CX-017 and RFC-CX-018",
+  "verdict": "verified-local-uncommitted",
+  "engine": "Unity 6000.5.6f1",
+  "platform": "macOS arm64 / Apple M2 Pro / Metal",
+  "cleanup": {
+    "ownedProcessesStopped": [
+      {"name": "unknown-m22-player", "supervisorStopExit": 1},
+      {"name": "unknown-m22-blender-mcp", "supervisorStopExit": 143}
+    ],
+    "stopExitCodesAreBuildResults": false,
+    "removed": [
+      "unity/Unknown/Builds/m22/window-probe",
+      "unity/Unknown/Builds/m22/window-probe.swift",
+      "unity/Unknown/Builds/m22/game-crop-check.png",
+      "session-temporary/blender_bridge.py"
+    ],
+    "temporaryPoseCaptureTestRemoved": true,
+    "baselineBackupPreserved": true,
+    "originalBlenderAndUnownedPlayersStoppedByThisSession": false
+  },
+  "tests": [
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/playmode.xml",
+      "id": "2",
+      "testcasecount": "98",
+      "result": "Skipped:Ignored",
+      "total": "98",
+      "passed": "97",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "1",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 08:52:46Z",
+      "end-time": "2026-09-13 08:53:38Z",
+      "duration": "51.8003091"
+    },
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/editmode.xml",
+      "id": "2",
+      "testcasecount": "56",
+      "result": "Passed",
+      "total": "56",
+      "passed": "56",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 09:30:25Z",
+      "end-time": "2026-09-13 09:30:28Z",
+      "duration": "2.5817377"
+    },
+    {
+      "file": "_workspace/current/systems/tech-verification/m22/boot.xml",
+      "id": "2",
+      "testcasecount": "1",
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-09-13 08:54:27Z",
+      "end-time": "2026-09-13 08:54:28Z",
+      "duration": "1.0654879"
+    }
+  ],
+  "uniquePassedCases": 154,
+  "testNotes": [
+    "The full PlayMode suite intentionally skipped the serialized boot case; that same case passed separately with an explicit isolated save directory.",
+    "Before repair: 98 PlayMode cases, 93 passed, 4 failed, 1 intentionally skipped. Full pre-fix XML is preserved.",
+    "Hand/crank action time is now anchored at the accepted action with an unscaled monotonic clock, excluding prior frame work.",
+    "The hint boundary fixture now uses an exactly representable synthetic clock origin; no runtime timing tolerance or gameplay rule was relaxed.",
+    "The authored-rest fixture waits for observable movement instead of assuming two frames. The drawer fixture no longer projects a hidden hub drawer on the protagonist title screen.",
+    "Final assertion cleanup removed one opening-copy/default snapshot test and a hard-coded fallback-copy expectation without changing game code or authored copy. All three opening safety/precedence cases passed in the final 56-case EditMode run. The earlier 57-case receipt is preserved as editmode-before-assertion-cleanup.xml."
+  ],
+  "validators": [
+    {
+      "command": "node _workspace/current/planning/validate-campaign.mjs",
+      "checks": 50,
+      "passed": 50,
+      "failed": 0,
+      "scope": "document consistency, not played duration"
+    },
+    {
+      "command": "node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/systems/data/t0",
+      "checks": 5,
+      "passed": 5,
+      "failed": 0,
+      "scope": "T0 canonical table consistency"
+    }
+  ],
+  "build": {
+    "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+    "exitCode": 0,
+    "application": "unity/Unknown/Builds/T0-mac/Unknown.app",
+    "burstCompilation": "disabled using --burst-disable-compilation after an earlier compiler crash; no source workaround",
+    "log": {
+      "path": "unity/Unknown/Builds/m22/native-build-verified.log",
+      "bytes": 498272,
+      "sha256": "036af29c14a3c627c20176e7c239875e09aa44f6dc9ae4004339df6a33caf8f1"
+    },
+    "assembly": {
+      "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+      "bytes": 131072,
+      "sha256": "35a616807a465359e36320f0a242ec6df71aeb904984782fbaa40102b581ec31"
+    },
+    "editorWarnings": "An access-token update warning was followed by successful entitlement resolution. The build exited successfully; this is not a warning-free-build claim."
+  },
+  "blender": {
+    "version": "5.1.2",
+    "transport": "actual Blender MCP through a session-local protocol adapter to the existing addon; addon/config unchanged",
+    "sourceRecipe": {
+      "path": "scripts/blender/build-seorin-m22.py",
+      "bytes": 47362,
+      "sha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0"
+    },
+    "productionCalls": 45,
+    "executed": 45,
+    "originalSceneChecks": {
+      "passed": 45,
+      "failed": 0
+    },
+    "detailedStructureChecks": {
+      "passed": 36,
+      "failed": 0,
+      "notRecorded": 9
+    },
+    "lastExportRpc": 53,
+    "dirtyStatePreservedClaim": false,
+    "receipt": "_workspace/current/systems/tech-verification/m22/blender-mcp-session.json"
+  },
+  "assets": {
+    "characterTriangles": 15124,
+    "characterBones": 50,
+    "trianglesPerHand": 2772,
+    "bonesPerHand": 18,
+    "combinedHandTriangles": 5544,
+    "maximumBlenderWeightsPerVertex": 2,
+    "semanticActions": 6,
+    "fbxTakes": 11,
+    "rootMotion": false,
+    "rawRuntimeEligible": false,
+    "localRuntimeApproved": true,
+    "m20R02Promoted": false,
+    "commercialLicenseApproved": false
+  },
+  "native": {
+    "diagnosticFlags": [],
+    "pid": 65711,
+    "windowId": 6298,
+    "saveScope": "isolated agent-played T0-b3 continuation; no fixture-seeded native progression",
+    "confirmed": [
+      "default protagonist title framing",
+      "document hands with inward thumbs and text clearance",
+      "plate insertion reaches forward and returns",
+      "right grip follows the crank during a deliberate successful read",
+      "return to authored rest",
+      "reduced-motion read keeps hands and crank static while UI responds",
+      "Tab navigation to off-screen plate selection after verified native content focus",
+      "reader overlay removes hands; closing restores the appropriate context",
+      "normal-motion setting restored after the smoke test"
+    ],
+    "inputBoundary": "PID/window and pointer hit target checked before native clicks. Keyboard proof used a single cliclick macro after content focus; earlier separate-process Tab attempts did not change focus. Physical controller/IME not observed.",
+    "runtimeLogScan": "No Exception/Error/Failed matches in the captured supervised player log; editor licensing warnings are separate.",
+    "evidence": "docs/media/gameplay-m22/provenance.json"
+  },
+  "sourceIdentity": [
+    {
+      "path": "scripts/blender/build-seorin-m22.py",
+      "bytes": 47362,
+      "sha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M22EmbodimentVisual.cs",
+      "bytes": 10829,
+      "sha256": "7326b4b2c96b60ebc4d781d4a26609727d253857233be1bf46cb9ef197ee401a"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M22SeorinSession.cs",
+      "bytes": 5348,
+      "sha256": "d012ae622106d06c8f772ce02ca78f36bd9953617edcb5baf71d9900b40e6d02"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+      "bytes": 9274,
+      "sha256": "ea7fefb8bd183ff93f6263f4b1a2d23ebb01e9c5a0a5d9e412597cf0c760d6a9"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+      "bytes": 45150,
+      "sha256": "92e79cea3d804e66b8a4267a1928b94cf028b147c6b2e47b241b903387550144"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+      "bytes": 7986,
+      "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/Resources/M22Embodiment.asset",
+      "bytes": 2923,
+      "sha256": "ffff7ebe4da34881bcceb0d74d408bc802cb5b0a4abdaae351e654357b0f2e6e"
+    }
+  ],
+  "git": {
+    "branch": "main",
+    "head": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+    "workingTreeIntegration": "all implemented changes are in the existing main worktree; user/Aside changes preserved",
+    "worktreesObserved": 1,
+    "worktreesRemoved": 0,
+    "committed": false,
+    "pushed": false,
+    "boundary": "CLAUDE.md section 10 line 128 reserves commit/push for the user"
+  },
+  "notMeasured": [
+    "human playtests (n=0)",
+    "fun, immersion and comfort",
+    "full 480-minute campaign completion",
+    "frame-time, draw-call and resident-texture performance budgets",
+    "Steam/commercial release readiness"
+  ],
+  "knowledgeSync": {
+    "graphify": {
+      "command": "graphify update .",
+      "result": "refreshed-structural-only",
+      "files": 2172,
+      "nodes": 38066,
+      "edges": 42062,
+      "communities": 4039,
+      "newModelTokens": 0,
+      "coveredSourceFiles": [
+        "M22EmbodimentVisual.cs",
+        "M22EmbodimentProfile.cs",
+        "M22SeorinSession.cs",
+        "M22EmbodimentProjectBuilder.cs",
+        "AsideImmersionContractTests.cs"
+      ],
+      "removedSnapshotTestAbsent": true,
+      "limitations": [
+        "Structural refresh only; no new semantic document/image extraction or domain community labeling.",
+        "Native graph.html generation skipped above the 5000-node visualization limit."
+      ]
+    },
+    "mex": {
+      "result": "skipped",
+      "reason": "The session-start identity probe found TeX Live mex, not an available mex-agent. The wrong binary was not invoked for graph/check/log.",
+      "manualHandoffUpdated": [
+        ".mex/ROUTER.md",
+        "_workspace/current/production/decision-log.md"
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/playmode.xml",
+      "bytes": 107731,
+      "sha256": "75135882391383a4c4d9f070dafb592bd43c3a01bc95496b5005374d07420618"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/editmode.xml",
+      "bytes": 43006,
+      "sha256": "14c18141560e57e531130694252adba023712980c5707bf29233402983214f84"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/editmode-before-assertion-cleanup.xml",
+      "bytes": 43640,
+      "sha256": "67da8d035510ee4a18b629682a3d9deaedce53b650f9a7a307e2583433b90812"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/boot.xml",
+      "bytes": 3434,
+      "sha256": "fd70447744f4898ab93e68d03ab2102f86266c7e1df08a8a4fd08b1c3f25960e"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/playmode-before-fix.xml",
+      "bytes": 110964,
+      "sha256": "0691e750cd560cd03d211e1266cc36b0f7f8095c61ba91ceaa7f38451ee10246"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/import-audit.json",
+      "bytes": 2366,
+      "sha256": "448f3c4cabd5bde23f3cf83bda5a7f8f1c43c8364d50ffc446c59430a0c395ce"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/blender-mcp-session.json",
+      "bytes": 132323,
+      "sha256": "82f8bcefa996ae66226fb3bbc73048374175ee5f629f39d700b49b4bec9112f9"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-default-actions.json",
+      "bytes": 60409,
+      "sha256": "260e48dab77f070e63c99e07a2e6908799721dd976aa10293f8ab2b85b9a838f"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-diagnostic-actions.json",
+      "bytes": 32495,
+      "sha256": "86ed3ae642acb7c7c772fe85ae31e9d3df27f47e28b9875a7e50f46e8fb794d5"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m22/native-playthrough-actions.json",
+      "bytes": 100811,
+      "sha256": "01b6c88e2963ed5202805639293fd11be8a258fb5c36a03855bd0c9b9299e99b"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+ "scope": "M20 baseline re-verification after 3 test runs + 1 build + 2 native launches",
+ "head_before": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+ "head_now": "52ad5510522eca6d5cfd8d743d85f28cb254635f",
+ "head_unchanged": true,
+ "baselined_files": 119,
+ "byte_identical": 117,
+ "missing": [],
+ "changed": [
+  {
+   "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+   "owner": "M20 (intentional additive edit)"
+  },
+  {
+   "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+   "owner": "M20 (intentional additive edit)"
+  }
+ ],
+ "graphify_out_changed": [],
+ "assets_generated_changed": [],
+ "m20_source_files": {
+  "unity/Unknown/Assets/_Project/Presentation/M20WorkSurfaceProfile.cs": {
+   "sha256": "68730969873092e5c9bbdd8a7ddc084c28ef5f3b697d0decca76b4a240cfb599",
+   "bytes": 1737
+  },
+  "unity/Unknown/Assets/_Project/Editor/M20WorkSurfaceProjectBuilder.cs": {
+   "sha256": "9c7b6bee086a5b669e9ad538fc3ff6245532c1eccf7662ea4181fd392676f22d",
+   "bytes": 5995
+  },
+  "unity/Unknown/Assets/_Project/App/M20WorkSurfaceSession.cs": {
+   "sha256": "69eadd9ab31ae2dffec3266dc5dee0d5dc301d5951802539326422ad3fa7455e",
+   "bytes": 1783
+  },
+  "unity/Unknown/Assets/_Project/Tests/PlayMode/T0WorkSurfacePlayModeTests.cs": {
+   "sha256": "12d9f6addca3ef84f9a574954c0084450bbe4c09ed2ff9c8883f63f5a4a8b27d",
+   "bytes": 16254
+  },
+  "unity/Unknown/Assets/_Project/Resources/M20WorkSurface.asset": {
+   "sha256": "746303366e6b4f592fbeb68e8c2430266de9e907abaec5155d787b3627c3a264",
+   "bytes": 597
+  },
+  "unity/Unknown/Assets/_Project/Art/Candidates/m20-ui-r02/UI_M20_ArchivalWorkSurface.png": {
+   "sha256": "cc52db8a8950aa7fd0915e4cae92b04a5892f9d9130863d89b2b52cbf83d75a7",
+   "bytes": 2220940
+  },
+  "_workspace/current/presentation/t0-work-surface-m20.md": {
+   "sha256": "1253edb00f3db6619b256134fbe1f172404928f0f81a5d05d2824d7fc2e5cd40",
+   "bytes": 14325
+  }
+ },
+ "post_m20_hashes": {
+  "unity/Unknown/Assets/_Project/UI/T0Interface.cs": "d9a1120a1d9e07d595975f851699e3cc4536601d4d24f1a7d8d34ae9656af596",
+  "unity/Unknown/Assets/_Project/App/T0GameSession.cs": "f3e26e9377c85af3c32042747902c37c668d80b4dea8e709fd525b1cd7cc8079"
+ },
+ "pre_m20_hashes": {
+  "unity/Unknown/Assets/_Project/UI/T0Interface.cs": "f4468449c6f76f0196c1de7a6e3cecf285621a11df32f07ae4f32751ba3c414b",
+  "unity/Unknown/Assets/_Project/App/T0GameSession.cs": "a61290acc193df9bc79c6861b1dc9dded95b45c8cb4a9b2c06d68c1ce3da0c92"
+ },
+ "git_commands_not_run": [
+  "reset",
+  "stash",
+  "revert",
+  "clean",
+  "checkout",
+  "commit",
+  "push",
+  "add"
+ ]
+}
