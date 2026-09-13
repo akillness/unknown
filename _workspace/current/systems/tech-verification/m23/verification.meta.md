@@ -12,7 +12,7 @@ owner: game-qa
 
 | 파일 | bytes | SHA-256 |
 |---|---:|---|
-| `verification.json` | 88283 | `62fd8ef61b732e3e81a5610f05fd2b19c80663b81ce9f1d9ee68c9136067a7be` |
+| `verification.json` | 95624 | `cc64c59ef7466161d8f69aa81afebb5a2d6c5389c01a62f60039ec2aee92f84f` |
 
 ## 초기35ebdc5 전달 정리·동기화 이력
 
@@ -40,4 +40,14 @@ owner: game-qa
 
 기존 vault의 decisions(D-017)·index·log를 승인된 직접 파일 대체 경로로 동기화했다. session-start의 freshness는680개 Markdown에서0건이며 frontmatter/supersedes 검사만 의미한다. cycle start가 없어 오래됨을 측정하지 않았고 메모리 전체 검증도 아니다. mex-agent는 사용할 수 없어 skip했으며 TeX `mex`를 실행하지 않았다.
 
-명시 경로만 stage/commit/일반 push한다. 원시 `.log`53개·로컬 저장 시편·앱 번들은 전달에서 제외한다. 정확한 최종 커밋/원격 ref는 Git 기록과 최종 응답으로 확인한다. 원본 JSON의88283B/SHA-256 `62fd8ef61b732e3e81a5610f05fd2b19c80663b81ce9f1d9ee68c9136067a7be`는 이 메타데이터 추가로 바뀌지 않는다.
+7e2c383 전달 시점에는 원시 `.log`53개·로컬 저장 시편·앱 번들을 제외했다. 당시 JSON88283B/SHA-25662fd8ef6…는 이전 버전이다. 현행 JSON의 크기·해시는 위 표이며 변경한 JSON과 이 메타데이터를 함께 새 커밋으로 일반 push한다.
+
+## 최종 소스 검증과 영수증 정합
+
+-7e2c383 생산 소스에서 `editmode-source-final.xml`을 실행해65/65를 확인했다. 외부 예제1개를 제외한 프로젝트64와 기존 최종 PlayMode122/격리 boot1의 고유 합집합은187이다. 이전 실행을 재실행한 것처럼 표시하지 않는다.
+-6c88870f epoch 자체에 최종 소스20개의 bytes/SHA와5d7b18c commit을 붙였다. 각 레코드가 그 Git blob과 일치하며 이전35755c5c 소스를 사용하지 않았다.
+- 최상위 completedUtc는2026-09-13T17:20:20Z로 마지막 실행17:17:14Z 이후다. sourceBaseCommit은7e2c383이며 런타임 수정·재빌드·사람/생산 gate 변경은 없다. Git 원격 확인은 다음 일반 push의 결과로 기록한다.
+
+후속 동기화는 graphify2238파일/39284노드/43547엣지/4157커뮤니티·LLM토큰0, zg2084/2084파일·106467엔티티·190잘린조각·pending0/failed0으로 완료했다. freshness는680개 Markdown의 frontmatter/supersedes에서0건이다. HTML5000노드 제한·mex-agent 미사용·age 미측정 경계는 동일하다.
+
+JSON95624B/cc64c59e…와 메타데이터 표의 일치, XML51463B/63179940… 및 마지막 실행 이후 완료 시각을 함께 검사했다. 공개 대상은 이 후속 작업의 증거·문서·생성 그래프뿐이며 Git 소유권 점검에서 런타임 변경/다른 작업의 변경은 없었다. 원시 로그53개는 계속 제외한다.

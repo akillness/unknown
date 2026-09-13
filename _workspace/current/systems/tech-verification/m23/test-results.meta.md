@@ -24,7 +24,7 @@ owner: game-qa
 
 ## 5d7b18c 첫 교정 XML
 
-최종은 correction-editmode.xml의 프로젝트64 + correction-playmode-final.xml121 + correction-boot-final.xml1 =186개다. EditMode65번째 `AddressableAssets.DocExampleCode.TestStub.RequiredTest`는 외부 예제로 제외한다. RED 실행12회는 신규9개 고유 사례의 반복/확장 실행이며, 이전177과 더하지 않는다.
+당시186은 correction-editmode.xml의 프로젝트64 + correction-playmode-final.xml121 + correction-boot-final.xml1의 집계다. 이 EditMode는 최종 geometry 수정 전 실행을 이월했으므로 동일 소스 수렴 증거가 아니다. EditMode65번째 외부 예제는 제외한다. RED12회는 신규9개 고유 사례의 반복/확장 실행이다. 최신 소스의 재실행은 마지막 절에 기록한다.
 
 | XML | pass | fail | skip | SHA-256 |
 |---|---:|---:|---:|---|
@@ -42,7 +42,7 @@ owner: game-qa
 
 ## 마지막 off-reader 수명 교정
 
-현행은 최신 PlayMode122 +올바른 격리 boot1 +기존 프로젝트 EditMode64 =187 고유 통과다. Q6의 추가1사례를 포함한 후속 고유 회귀10개가 모두 통과했다. 첫 boot의 인자 누락은 skip이며 성공으로 세지 않는다.
+최신 소스7e2c383에서 EditMode를 재실행했다:65 pass/0 fail/0 skip 중 프로젝트64와 외부 Addressables 예제1이다. 외부 예제를 제외한64 +같은 최종 생산 소스의 PlayMode122 +격리 boot1 =187 고유 통과다. 후속 회귀10개가 통과했고 인자 누락 boot의 skip은 제외한다. 이전177/186/첫187 집계의 EditMode 이월을 현행 동일 소스 증거와 혼동하지 않는다.
 
 | XML | pass | fail | skip | SHA-256 |
 |---|---:|---:|---:|---|
@@ -50,3 +50,6 @@ owner: game-qa
 | `off-reader-playmode-final.xml` | 122 | 0 | 1 | `d758c19498107f738a28b8837f9017b7e2c3036a455acda2d26d0ffa4cc787a9` |
 | `off-reader-boot-isolated.xml` | 1 | 0 | 0 | `93681177370cf95250a98e9caf1ecd2a23b2a62ba8b18b95c46d13142d72766b` |
 | `off-reader-boot-invocation-skipped.xml` | 0 | 0 | 1 | `1b93aa0b532c20181c8cd325a38e3ff8ac614d6320e6c16925f245418fa427ef` |
+| `editmode-source-final.xml` | 65 | 0 | 0 | `63179940afc56e4f8e7221f0a4eb6aa0c7c5c7d6b3d9c7b72fcf516af97c6fe6` |
+
+최신 EditMode 실행은2026-09-13T17:17:11Z–17:17:14Z이며 프로젝트64개를 fullname 집합으로 분리해 PlayMode/격리 boot와 합집합187을 확인했다. 원본 XML은51463바이트다.

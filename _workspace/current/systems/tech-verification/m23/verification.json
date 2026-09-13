@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "completedUtc": "2026-09-13T16:39:16Z",
+  "completedUtc": "2026-09-13T17:20:20Z",
   "cycle": "20260909-preproduction-c7",
   "milestone": "M23",
   "scope": "R1/R2/R3/R4 correction/R5 isolated practice/R7; current T0 and C1-b2 developer slice, not complete campaign",
-  "sourceBaseCommit": "5d7b18cad0026b4acbe6f28b289f6786981b98e2",
+  "sourceBaseCommit": "7e2c383759cc81530efb970d05e0a3e3d6d23124",
   "sourceSnapshots": [
     {
       "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
@@ -642,9 +642,30 @@
           "end-time": "2026-09-13 16:58:40Z",
           "duration": "0.0362223"
         }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/editmode-source-final.xml",
+        "bytes": 51463,
+        "sha256": "63179940afc56e4f8e7221f0a4eb6aa0c7c5c7d6b3d9c7b72fcf516af97c6fe6",
+        "run": {
+          "id": "2",
+          "testcasecount": "65",
+          "result": "Passed",
+          "total": "65",
+          "passed": "65",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 17:17:11Z",
+          "end-time": "2026-09-13 17:17:14Z",
+          "duration": "2.5588068"
+        }
       }
     ],
-    "editModeCountingNote": "64 Tide.Tests EditMode cases are carried from correction-editmode.xml; its one vendor example is excluded. The current122 PlayMode +1 isolated boot bring the unique project union to187.",
+    "editModeCountingNote": "Fresh editmode-source-final.xml on7e2c383:65 passed, comprising64 Tide.Tests project cases and1 excluded AddressableAssets vendor stub. Together with final-source122 PlayMode and1 isolated boot, the distinct project union is187. Historical EditMode XMLs remain provenance only.",
     "newDistinctRegressionCases": 10,
     "redTestExecutions": 13,
     "nonUnityScope": "Node/campaign/T0-table/evidence-graph results are carried from initial35ebdc5, not rerun for this render-lifetime fix."
@@ -1331,7 +1352,111 @@
           "buildReportBytes": 410875885,
           "fingerprint": "6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e",
           "inventory": "build-inventory-correction.json",
-          "checks": "Final actual reader, all six complete peak outlines/A-B labels/uncertainty bands, lower correspondence ground, protected 1/I/H shortcuts, Escape return to reader."
+          "checks": "Final actual reader, all six complete peak outlines/A-B labels/uncertainty bands, lower correspondence ground, protected 1/I/H shortcuts, Escape return to reader.",
+          "sourceCommit": "5d7b18cad0026b4acbe6f28b289f6786981b98e2",
+          "sourceSnapshots": [
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+              "bytes": 48442,
+              "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+              "bytes": 10495,
+              "sha256": "d68279315b6faf1df132a9015e241afbf8fca75df3443c85318c2d9e04d06a9e"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
+              "bytes": 7456,
+              "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+              "bytes": 15713,
+              "sha256": "e46f3d3d21d9ed383f75dbb70fab8cc47a286196dc1dddf9333ec031e327fe6b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+              "bytes": 3219,
+              "sha256": "c4b870a38ce7ca4b47ceda398489b55c63952e78678adf69fcfc1bd8f0897c97"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
+              "bytes": 22172,
+              "sha256": "885320c41b96d134f5f42ac37337419030e52bc1f33898960979e4407cc604cb"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
+              "bytes": 11073,
+              "sha256": "f7daf019a76df7b08779893a6364d3b98ae7028c9e88fd7ab2b1fb5bb1f7c35d"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0ActionFeedbackSession.cs",
+              "bytes": 1362,
+              "sha256": "d4c4c246b7fa53a53aba95d6906d48f443c3f8de946863b21dd00885dec21596"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+              "bytes": 9569,
+              "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+              "bytes": 4089,
+              "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+              "bytes": 32583,
+              "sha256": "d8d6e37bcdcf53dd0e37f1cc1b66be0da6fb31c6282fab80f2e4c503dc9c7258"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
+              "bytes": 5243,
+              "sha256": "f1285b06091d1976d0fc2c05370cfff2b02656660f52306b091600ca59ba34f1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
+              "bytes": 6766,
+              "sha256": "5593e0aea9cd298a1a903d604c681958172cd45d4dccc9a4dc43c60e86dc43b8"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+              "bytes": 7986,
+              "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/AlignmentPractice.cs",
+              "bytes": 8547,
+              "sha256": "f93b36c9764734baf31abc5b9f8a6768968bdc5e73c7b72ff81c7aeffd350bf0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+              "bytes": 9932,
+              "sha256": "d24a5cd450c456c044bde2e7be3bc74ea0a45728de556d9f4a6ed6efa336be0b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23AlignmentPractice.json",
+              "bytes": 1413,
+              "sha256": "3eb3a06a1c1340dd50c8d9d490fe380fed70ebbc7a67533b327e47d6f5c28a95"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23Feedback.json",
+              "bytes": 700,
+              "sha256": "82d3d8d4dc246686d9458f851e35571fa307c1a56c95e022c536d6cb7aa9c7a0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+              "bytes": 14558,
+              "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/M21ReadingBackingInterface.cs",
+              "bytes": 5530,
+              "sha256": "3efac7422de95999bd2017c024b44c4b8b39e54544ea6cbe98dbea3b840ea547"
+            }
+          ],
+          "sourceVerification": "All20 retained source snapshots match the exact bytes and SHA-256 of Git blobs at5d7b18cad0026b4acbe6f28b289f6786981b98e2. This is the final4% peak-geometry source, not the earlier35755c5c epoch."
         }
       ],
       "comparisonSaveBefore": {
@@ -1803,7 +1928,7 @@
             }
           }
         ],
-        "editModeCountingNote": "The correction EditMode XML has 65 passes: 64 Tide.Tests cases plus AddressableAssets.DocExampleCode.TestStub.RequiredTest. The vendor example is excluded from the 186 project cases.",
+        "editModeCountingNote": "Historical5d7b18c total186 includes64 project EditMode passes from15:45Z, before final geometry changes. It is not a same-source convergence claim; the one vendor stub is excluded.",
         "newDistinctRegressionCases": 9,
         "redTestExecutions": 12
       },
@@ -2147,5 +2272,39 @@
       "humanEvaluation": false
     },
     "cleanup": "No disposable producer or new production scaffold. Prior evidence remains tied to its original build. Current graph/index/wiki/freshness synchronization is recorded in verification.meta.md."
+  },
+  "evidenceConvergence": {
+    "sourceCommit": "7e2c383759cc81530efb970d05e0a3e3d6d23124",
+    "productionSourceChanged": false,
+    "sourceSnapshotsChecked": 20,
+    "editMode": {
+      "path": "_workspace/current/systems/tech-verification/m23/editmode-source-final.xml",
+      "bytes": 51463,
+      "sha256": "63179940afc56e4f8e7221f0a4eb6aa0c7c5c7d6b3d9c7b72fcf516af97c6fe6",
+      "run": {
+        "id": "2",
+        "testcasecount": "65",
+        "result": "Passed",
+        "total": "65",
+        "passed": "65",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-09-13 17:17:11Z",
+        "end-time": "2026-09-13 17:17:14Z",
+        "duration": "2.5588068"
+      }
+    },
+    "uniqueProjectPasses": 187,
+    "excludedVendorCases": [
+      "AddressableAssets.DocExampleCode.TestStub.RequiredTest"
+    ],
+    "historicalEditModeScope": "64 Tide.Tests EditMode cases are carried from correction-editmode.xml; its one vendor example is excluded. The current122 PlayMode +1 isolated boot bring the unique project union to187.",
+    "finalPracticeEpochSource": "postPublicationCorrection.native.epochs[3].sourceSnapshots:20 Git-blob verified records at5d7b18c",
+    "previousTopLevelCompletedUtc": "2026-09-13T16:39:16Z",
+    "historicalUnityTotals": "The earlier177/186/first187 publication totals carried historical EditMode results. Only the current64+122+1 union uses editmode-source-final.xml on final production source."
   }
 }

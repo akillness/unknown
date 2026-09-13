@@ -55,7 +55,7 @@ ReaderCompare·SignatureSources·AlignmentPractice·CanonConsistency가 소유�
 
 | 실행 | 결과 |
 |---|---|
-| Unity6000.5.6f1 EditMode | 프로젝트64 통과. 교정 XML의65번째 외부 Addressables 예제 stub는 합계 제외 |
+| Unity6000.5.6f1 EditMode | 최종 소스7e2c383에서65/65 재실행. 프로젝트64만 집계하고 외부 Addressables 예제1개 제외 |
 | 최종 PlayMode |122 통과/0실패/격리 boot1 skip |
 | 별도 boot |올바른 격리 인자로1/1. 첫 인자 누락 실행은 skip이며 성공으로 세지 않음 |
 | 고유 Unity 사례 |187 통과. 후속10사례 RED→GREEN; RED13회와 반복 실행/외부 예제는 중복 계상하지 않음 |
@@ -68,6 +68,8 @@ ReaderCompare·SignatureSources·AlignmentPractice·CanonConsistency가 소유�
 | 수동 녹화 경로 |창 한 개7.931667초,1664×1098 H264,무음. 인코딩 fps는 게임 성능이 아님 |
 
 현행 앱은 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`, 전체 목록은 [build-inventory-off-reader.json](../systems/tech-verification/m23/build-inventory-off-reader.json)이다. 나머지 네 build-inventory 목록은 이전 epoch다. 앱·체크포인트·전체 로그는 Git에 넣지 않는다. 마지막 시나리오는 별도 off-reader-pin-native에서 실행했고 원래 boundary-reader를 바꾸지 않았다. 새 producer 없음, 소유 플레이어 종료.
+
+추가 증거 정합: `editmode-source-final.xml`이17:17:14Z에 완료되어 현행187은 EditMode 이월이 아닌 최종 생산 소스 기준이다. 이전177/186/첫187 집계는 역사적 이월을 포함한다.6c88870f epoch에는5d7b18c Git blob과 바이트/SHA가 일치하는 최종 소스20개를 직접 연결했다. 최상위 completedUtc도 마지막 검증 이후로 갱신했다.
 
 ## 다음 개선 순서와 통과 조건
 
