@@ -45,7 +45,7 @@ owner: game-qa
 ## 최종 소스 검증과 영수증 정합
 
 -7e2c383 생산 소스에서 `editmode-source-final.xml`을 실행해65/65를 확인했다. 외부 예제1개를 제외한 프로젝트64와 기존 최종 PlayMode122/격리 boot1의 고유 합집합은187이다. 이전 실행을 재실행한 것처럼 표시하지 않는다.
--6c88870f epoch 자체에 최종 소스20개의 bytes/SHA와5d7b18c commit을 붙였다. 각 레코드가 그 Git blob과 일치하며 이전35755c5c 소스를 사용하지 않았다.
+- 6c88870f는 이전 연습 빌드이며 소스 커밋은5d7b18c다. 해당 연습 빌드의 소스20개 bytes/SHA가 그 Git blob과 일치함을 확인했다. 현행 생산 소스7e2c383·앱ba14f79e와 구분한다.
 - 최상위 completedUtc는2026-09-13T17:20:20Z로 마지막 실행17:17:14Z 이후다. sourceBaseCommit은7e2c383이며 런타임 수정·재빌드·사람/생산 gate 변경은 없다. Git 원격 확인은 다음 일반 push의 결과로 기록한다.
 
 후속 동기화는 graphify2238파일/39284노드/43547엣지/4157커뮤니티·LLM토큰0, zg2084/2084파일·106467엔티티·190잘린조각·pending0/failed0으로 완료했다. freshness는680개 Markdown의 frontmatter/supersedes에서0건이다. HTML5000노드 제한·mex-agent 미사용·age 미측정 경계는 동일하다.

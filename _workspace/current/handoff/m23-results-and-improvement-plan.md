@@ -69,7 +69,7 @@ ReaderCompare·SignatureSources·AlignmentPractice·CanonConsistency가 소유�
 
 현행 앱은 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`, 전체 목록은 [build-inventory-off-reader.json](../systems/tech-verification/m23/build-inventory-off-reader.json)이다. 나머지 네 build-inventory 목록은 이전 epoch다. 앱·체크포인트·전체 로그는 Git에 넣지 않는다. 마지막 시나리오는 별도 off-reader-pin-native에서 실행했고 원래 boundary-reader를 바꾸지 않았다. 새 producer 없음, 소유 플레이어 종료.
 
-추가 증거 정합: `editmode-source-final.xml`이17:17:14Z에 완료되어 현행187은 EditMode 이월이 아닌 최종 생산 소스 기준이다. 이전177/186/첫187 집계는 역사적 이월을 포함한다.6c88870f epoch에는5d7b18c Git blob과 바이트/SHA가 일치하는 최종 소스20개를 직접 연결했다. 최상위 completedUtc도 마지막 검증 이후로 갱신했다.
+추가 증거 정합: `editmode-source-final.xml`이17:17:14Z에 완료되어 현행187은 EditMode 이월이 아닌 생산 소스7e2c383 기준이다. 이전177/186/첫187 집계는 역사적 이월을 포함한다. 이전 연습 빌드6c88870f에는 해당 빌드의 소스20개를5d7b18c Git blob의 바이트/SHA와 대조해 연결했다. 현행 앱은ba14f79e다. 최상위 completedUtc도 마지막 검증 이후로 갱신했다.
 
 ## 다음 개선 순서와 통과 조건
 
