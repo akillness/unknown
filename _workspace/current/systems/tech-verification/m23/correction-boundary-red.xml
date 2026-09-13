@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Failed(Child)" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:20Z" duration="5.6442932">
+  <test-suite type="TestSuite" id="1147" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="121" result="Failed" site="Child" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:20Z" duration="5.644293" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1141" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="121" result="Failed" site="Child" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:20Z" duration="5.636470" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="84206" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1142" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="121" result="Failed" site="Child" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:20Z" duration="5.634634" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1143" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="121" result="Failed" site="Child" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:20Z" duration="5.633150" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1058" name="ReaderComparisonPlayModeTests" fullname="Tide.Tests.ReaderComparisonPlayModeTests" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:16Z" duration="1.856035" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1061" name="UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" fullname="Tide.Tests.ReaderComparisonPlayModeTests.UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" methodname="UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1914750721" result="Failed" start-time="2026-09-13 15:42:14Z" end-time="2026-09-13 15:42:16Z" duration="1.847376" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Unavailable evidence must disappear from the current and pinned comparison views
+  Expected is <System.String[1]>, actual is <System.String[2]>
+  Values differ at index [1]
+  Extra:    < "rec-tide-ledger-bureau" >]]></message>
+                <stack-trace><![CDATA[at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable expected, System.Collections.IEnumerable actual, System.String message, System.Object[] args) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0
+at Tide.Tests.ReaderComparisonPlayModeTests+<UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded>d__13.MoveNext () [0x002f6] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/ReaderComparisonPlayModeTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1093" name="T0PlayModeTests" fullname="Tide.Tests.T0PlayModeTests" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" testcasecount="33" result="Failed" site="Child" start-time="2026-09-13 15:42:16Z" end-time="2026-09-13 15:42:19Z" duration="2.854093" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1117" name="AlignmentPracticeRejectsConfirmModePersistence" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsConfirmModePersistence" methodname="AlignmentPracticeRejectsConfirmModePersistence" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1653088991" result="Failed" start-time="2026-09-13 15:42:16Z" end-time="2026-09-13 15:42:17Z" duration="0.658831" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Practice must not create persisted files
+  Expected: equivalent to < "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/save.bak", "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/save.json", "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/settings.json" >
+  But was:  < "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/save.bak", "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/save.json", "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/settings.json", "/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/t0-play-df6c95879dd148e89502dcbc2f6b80f6/settings.json.bak" >
+]]></message>
+                <stack-trace><![CDATA[at NUnit.Framework.CollectionAssert.AreEquivalent (System.Collections.IEnumerable expected, System.Collections.IEnumerable actual, System.String message, System.Object[] args) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0
+at Tide.Tests.T0PlayModeTests+<AssertPracticeCallIsolated>d__43.MoveNext () [0x0022a] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:228
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1119" name="AlignmentPracticeRejectsLegalPatrolEntry" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalPatrolEntry" methodname="AlignmentPracticeRejectsLegalPatrolEntry" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1936704212" result="Failed" start-time="2026-09-13 15:42:17Z" end-time="2026-09-13 15:42:17Z" duration="0.168677" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A public session call must not escape practice
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0PlayModeTests+<AssertPracticeCallIsolated>d__43.MoveNext () [0x001a3] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:226
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1120" name="AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" methodname="AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="2065216663" result="Failed" start-time="2026-09-13 15:42:17Z" end-time="2026-09-13 15:42:17Z" duration="0.192366" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A public session call must not escape practice
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0PlayModeTests+<AssertPracticeCallIsolated>d__43.MoveNext () [0x001a3] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:226
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1118" name="AlignmentPracticeRejectsReviewNotePersistence" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotePersistence" methodname="AlignmentPracticeRejectsReviewNotePersistence" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="682255758" result="Failed" label="Error" start-time="2026-09-13 15:42:17Z" end-time="2026-09-13 15:42:18Z" duration="0.584015" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.AggregateException : One or more errors occurred. (  Expected: False
+  But was:  True
+)
+  ----> NUnit.Framework.AssertionException :   Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[  at Tide.Tests.T0PlayModeTests+<Wait>d__16.MoveNext () [0x0005a] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:38 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44 
+--AssertionException
+  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x00044] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at NUnit.Framework.Assert.IsFalse (System.Boolean condition) [0x00007] in <8b63e8ac0a4746599ed207982825ae6c>:0 
+  at Tide.Tests.T0PlayModeTests.<AlignmentPracticeRejectsReviewNotePersistence>b__48_0 () [0x00025] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:252 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1116" name="AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" methodname="AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1276947478" result="Failed" start-time="2026-09-13 15:42:18Z" end-time="2026-09-13 15:42:19Z" duration="0.625160" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A public session call must not escape practice
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0PlayModeTests+<AssertPracticeCallIsolated>d__43.MoveNext () [0x001a3] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:226
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1115" name="AlignmentPracticeRejectsStartGameWithoutReplacingReader" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsStartGameWithoutReplacingReader" methodname="AlignmentPracticeRejectsStartGameWithoutReplacingReader" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="72733133" result="Failed" start-time="2026-09-13 15:42:19Z" end-time="2026-09-13 15:42:19Z" duration="0.620437" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A public session call must not escape practice
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0PlayModeTests+<AssertPracticeCallIsolated>d__43.MoveNext () [0x001a3] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs:226
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1127" name="T0ReadingBackingPlayModeTests" fullname="Tide.Tests.T0ReadingBackingPlayModeTests" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-09-13 15:42:19Z" end-time="2026-09-13 15:42:20Z" duration="0.916575" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1128" name="PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" fullname="Tide.Tests.T0ReadingBackingPlayModeTests.PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" methodname="PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" seed="676938906" result="Failed" start-time="2026-09-13 15:42:19Z" end-time="2026-09-13 15:42:20Z" duration="0.914797" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  the practice correspondence paragraph must have a reading ground behind its glyphs
+  Expected: not null
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Tide.Tests.T0ReadingBackingPlayModeTests+<PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface>d__38.MoveNext () [0x00541] in /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Tests/PlayMode/T0ReadingBackingPlayModeTests.cs:235
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in ./Library/PackageCache/com.unity.test-framework@1405238725ab/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

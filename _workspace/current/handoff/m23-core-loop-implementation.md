@@ -30,11 +30,11 @@ owner: game-production-director
 
 | id | 구현 목표 | 기계·네이티브 인수 기준 | 사람/생산 증거 경계 |
 |---|---|---|---|
-| R1 | T0 두 자료와 선택 시간창 동시 비교 | 현재 자료와 사용자가 고정한 다른 자료의 제목/구간/단위/결손을 동시에 보존. 고정/해제/자료 전환은 Journal·읽기 횟수·인용을 바꾸지 않음. 키보드/150%에서 조작 가능 | 탐색 편의가 추론 향상이라는 주장은 금지 |
+| R1 | T0 두 자료와 선택 시간창 동시 비교 | 현재 자료와 사용자가 고정한 다른 자료의 제목/구간/단위/결손을 동시에 보존. 고정/해제/자료 전환은 Journal·읽기 횟수·인용을 바꾸지 않음. 매 렌더에서 고정 출처의 현재 가시성을 검사하며 Undo로 접근이 사라지면 해제, Redo로 자동 복원하지 않음. 키보드/150%와 M20 진단 배경에서도 차트·설명을 읽을 수 있음 | 탐색 편의가 추론 향상이라는 주장은 금지 |
 | R2 | C1-b2에서 사용자가 근거를 고른다 | 공개된 원문/사본 중 좌·우를 선택. 같은 루트/같은 매체를 형식 사유로 거부. valid selection만 기존 SelectSignatureProof로 기록. 다른 선택안과 이미 기록한 근거 구분. 세이브 replay/Undo/Redo 보존 | 완료율만으로 자력 이해 PASS 금지 |
 | R3 | 원본·사본·인용·독립성 표시 및 기존 M8 연결 | 관찰한 출처만 표시. M8 질문은 요청 시만 생성. 같은 루트·같은 매체를 별도로 설명, 숨은 이름/ID 비공개. 원문 복귀는 UI 도구 입력/진행을 침범하지 않음 | 연결선 없는 전이 실험은 별도 파일럿 |
 | R4 | 문구/검사 강도 정합 | README 폐국 시점·확정 기본 라벨·현재 save 버전·t0-b3 끝점 힌트 정정. P1 2쌍/P2 불파괴 약속은 약화하지 않음. C-07의 최소1쌍 검사와 강한 보존 감사를 분리하며, 근거 없는 항목은 NOT-MEASURED/blocked | 새 출처/근거를 날조해 강한 감사 PASS 금지 |
-| R5 | 실제 조작 가능한 조위정합 회색상자 | 일반 시편 데이터의 세 피크를 수동 대응/조절, 제안은 수동 적용, residualLimit 데이터, lock/unlock/reset, gap <= errA+errB는 indeterminate. 연습장 전체에서 진행/원본/저장 불변 | C3 콘텐츠 구현/사람 개념 이해 PASS 아님 |
+| R5 | 실제 조작 가능한 조위정합 회색상자 | 일반 시편 데이터의 세 피크를 수동 대응/조절, 제안은 수동 적용, residualLimit 데이터, lock/unlock/reset, gap <= errA+errB는 indeterminate. 직접 세션 API까지 포함해 진행·설정·노트·저장 바이트 불변. Back만 연습을 종료하고 원래 작업면으로 돌아감. 설명은 Text/M21 읽기 배경, 트랙은 별도 부모 배경으로 150% 진단 화면의 A/B 라벨·실제 불투명 mesh 획 대비를 보존 | C3 콘텐츠 구현/사람 개념 이해 PASS 아님 |
 | R6 | 한 T0 빌드의 사람 관찰 실행 | 기존 프로토콜에 맞는 캡처/기록/채점 패키지, 첫 행동 시점·AFK와 미측정 분리. 파일럿과 초회 표본 분리 | H1 median<=60s, H2>=10/12, H3=0/12, 12명/5유형은 실제 참가자가 없으면 block |
 | R7 | 조작 수락·시험 결과·내구 저장 피드백 구분 | 기존 손/크랭크 수락·취소를 보존. 사용자는 수락/시험/기록완료·실패를 문자와 시각으로 구별. 실패에 성공 연출 없음. 새 유료/후보 오디오 승격 없음 | 손맛/피로 개선은 사람 관찰과 별개 |
 | R8 | 재방문 질문·현재 상태 | Base gate 후 구역별 첫 질문/변경조건/새 비교축을 실제 적용 | gate 전 본 생산 시작 금지 |
@@ -86,3 +86,12 @@ owner: game-production-director
 ## 최종 통합 경계
 
 [OBSERVED 2026-09-14] R5는 Editor 또는 `--m23-alignment-practice`에서만 접근한다. R7은 큐 sequence/표시 revision 소유권과 취소 후 작업저장을 보완했고, 실제 깊은 스크롤에서 발견한 Q5를 오른쪽 고정 피드백 영역으로 수정했다. Navigation 높이는 유지해 기존150% 비교를 보존한다. 최종 실행·RED·네이티브 증거·외부 차단·개선 순서는 `handoff/m23-results-and-improvement-plan.md` 및 `systems/tech-verification/m23/verification.json`이 소유한다. 기존 계약의 Base 조건을 낮추지 않았다.
+
+후속 경계 교정에서는 Main이 `PracticeIsolationFix`에 T0PlayModeTests의 회귀 작성, `PracticeContrastFix`에 T0ReadingBackingPlayModeTests의 회귀 작성을 명시 위임했다. 두 레인은 프로덕션 패치를 제안만 했고 Main이 RED 실행 뒤 적용·통합했다. ReaderComparison/CaseThread 대비의 실제 네이티브 발견과 교정도 Main 소유다. 화면의 pending 닫기는 쓰기를 계속하고 Esc/Undo는 취소하는 구분을 유지한다.
+
+## 최초35ebdc5 이후 교정
+
+- Q6–Q11/C7-F61..F66을 추가로 닫았다. Undo로 비가시화된 pin을 해제하고 연습장 직접 세션 API6개는 mutation 전 반환한다. pending 화면 Back과 Esc/Undo 취소의 기존 구분은 바꾸지 않는다.
+- M21 Text 규칙과 이름 있는 CaseThread를 유지하면서 진단 카드/트랙의 부모 읽기 배경을 분리했다. 기본 색/상업 승인 상태는 그대로다. 실제 mesh 끝점 반례로 가로 피크 여백은 양 모드4%로 수정했다.
+- 분리 테스트 파일에 한해 PracticeIsolationFix/PracticeContrastFix가 회귀/패치 제안을 맡았고, validation과 프로덕션 통합은 Main이 전담했다. 최종 고유186(프로젝트 EditMode64 + PlayMode121 + boot1), 신규9사례 RED→GREEN이다. 외부 stub1/RED 반복12회를 중복 계상하지 않는다.
+- 최종 Mac315파일/410875885B·6c88870f…와 native104/106/107/108의 모든 피크/라벨/설명/복귀·3파일 바이트 불변을 확인했다. Undo/Redo native86/89/90/92는 중간11a42388…에서 얻은 별도 증거다. 전체 지문/소스/부정 증거는 `systems/tech-verification/m23/verification.json`을 따른다.

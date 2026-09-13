@@ -20,7 +20,15 @@ namespace Tide.UI
         {
             if (view == null) return;
             FlowText(parent, "두 트랙 공통 축 · H±분 · 삼각선: 피크 / 사각 띠: 사건 가능 구간", 16, ink);
-            var chart = Rect("Alignment practice paired tracks", parent, Vector2.zero, Vector2.one);
+            var chartParent = parent;
+            if (surface != null && surface.workSurface != null)
+            {
+                chartParent = Flow(parent, 0);
+                var ground = chartParent.gameObject.AddComponent<Image>();
+                ground.color = new Color(paper.r, paper.g, paper.b, ReadingBandAlpha);
+                ground.raycastTarget = false;
+            }
+            var chart = Rect("Alignment practice paired tracks", chartParent, Vector2.zero, Vector2.one);
             chart.gameObject.AddComponent<LayoutElement>().preferredHeight = 230 * scale;
             var graphic = chart.gameObject.AddComponent<AlignmentPracticeChart>();
             graphic.View = view; graphic.color = ink; graphic.raycastTarget = false;
@@ -32,7 +40,7 @@ namespace Tide.UI
                 + (view.BaselineLocked ? " · 정합 후 오차띠" : " · 원시 ±" + view.RawErrorMinutes + "분 오차띠 · B 조절 미리보기"), 16, ink);
             FlowText(parent, view.StateLabel, 18, ink);
             FlowText(parent, view.OrderLabel, 18, ink);
-            FlowText(parent, view.AnchorLabel, 16, ink, "Practice correspondence summary");
+            FlowText(parent, view.AnchorLabel, 16, ink);
         }
         static string PracticePhase(int minute) => "H" + minute.ToString("+0;-0;0", CultureInfo.InvariantCulture) + "분";
     }
@@ -66,7 +74,8 @@ namespace Tide.UI
         {
             vh.Clear(); if (View == null) return;
             var r = GetPixelAdjustedRect(); int min = Minimum, max = Maximum;
-            float X(int minute) => r.xMin + r.width * (.025f + .95f * (minute - min) / Math.Max(1f, max - min));
+            // Keep the widest/shouldered peak and its stroke inside either range edge.
+            float X(int minute) => r.xMin + r.width * (.04f + .92f * (minute - min) / Math.Max(1f, max - min));
             float Y(float fraction) => r.yMin + r.height * fraction;
             void Box(float x0, float y0, float x1, float y1, Color tint)
             {

@@ -12,7 +12,7 @@ owner: game-qa
 
 `GoalReview`는 최초 R1–R10 목표/반례를 검토했다. 구현 후 `RuntimeAcceptance`는 R1/R7, `EvidenceAcceptance`는 R2/R3/R5를 독립으로 읽었다. 모두 **읽기 전용**이며 빌드·테스트·Git·네이티브 입력을 실행하지 않았다. 아래 실행 결과는 Main의 증거다. 초기 범위 검토의 no-findings는 후속 구현이 무결하다는 뜻이 아니다.
 
-결함 상태의 정본은 `qa/defect-register.md` §16의 C7-F56..F60이다. 아래 M23-Q1..Q5는 그 순서에 대응하는 진단 참조이며 별도 결함으로 중복 계상하지 않는다.
+결함 상태 정본은 `qa/defect-register.md` §16의 C7-F56..F66이다. M23-Q1..Q11은 같은 순서의 진단 참조이며 중복 결함으로 계상하지 않는다. Q1–Q5는 초기35ebdc5, Q6–Q11은 후속 교정이다.
 
 ## 실제 발견과 수정
 
@@ -40,9 +40,28 @@ owner: game-qa
 
 R4의 강한 P1/P2 보존 감사는 증거 부족 **exit3/blocked**다. 최소 독립쌍 검사와 Node 회귀7건 통과는 명제별 대체 경로/양쪽 불파괴 전수 증명이 아니다. R3 C1 원본 복귀 제한은 기존 경계를 유지했으며 새 경로 구현으로 포장하지 않는다. R6 실제 사람0명, R8/R9 Base gate, R10 본편 시간/Windows 기준기와 실제 노력150% STOP 판단은 별도 미충족 상태다.
 
-## 최종 수정안의 실행과 독립 재검토
+## 초기35ebdc5 수정안의 실행과 독립 재검토
 
 - `feedback-visibility-red.xml`은 원래 배치에서 실제로 실패했다. 첫 고정안이 Navigation까지 줄여 `playmode-release.xml`의 기존 Band comparison150% 회귀가 실패했다. 오른쪽 Work Surface만 분리한 최종안은 `playmode-release-final.xml`112 pass/0 fail/격리 boot1 skip, 별도 `boot-release.xml`1/1이다. EditMode64를 합친 고유 수는177이다.
 - Main이 최종 앱에서 미기록 후보 차단(48), 깊은 목록의 WorkSaved(49/50), 비적용 Preview(51), 실제2단계 확정의 CommitSaved(54), 프로세스 재시작 후 같은 저장/노트 바이트(55),150% 두 차트(59), 키보드 연습 readout/return/exit(61–63)를 관찰했다.55는 OS 재부팅이 아니다.
 - RuntimeAcceptance는 Q1/Q2/Q4와 고정 피드백 배치를 정적으로 재검토하고 담당 범위의 추가 입증 결함 없음으로 종료했다. 네이티브 실행/테스트는 Main의 증거라고 명확히 분리했다.
 - 전이 후 도구막대 초점을 놓친 매크로19는 연습장을 나간 뒤 일반 게임을 조작했으므로 격리 증거에서 제외한다.32–34의 합성 포인터 스크롤/드래그도 실제 이동이 관찰되지 않았다. 도구의 `ok`/`synthetic_input:unverified`를 게임 행동 성공으로 세지 않는다.
+
+## 최초 전달 후 경계·진단 화면 교정
+
+Main이 Q6를 추적한 뒤 PracticeIsolationFix와 PracticeContrastFix에 서로 다른 테스트 파일을 위임했다. 두 레인은 validation/프로덕션 편집 없이 회귀와 패치를 제안했고 Main이 실행·적용·빌드했다. Q9–Q11은 Main의 실제 창 관찰에서 발견됐다.
+
+| ID / 정본 | 심각도 | 실제 반례와 교정 |
+|---|---|---|
+| Q6 / C7-F61 | S2 | loaded Plate가 유지되어도 Undo로 Ledger가 비가시화되면 pinned graph를 해제. Redo는 접근만 복구하고 pin은 복구하지 않음 |
+| Q7 / C7-F62 | S2 | StartGame/OpenReviewNotes/SetConfirmMode/SaveReviewNoteAsync/ContinueToPatrol/ContinueToSignature를 mutation 전 차단. 합법 진행 fixture와 파일 목록/바이트 불변의 실제 RED6건 → GREEN |
+| Q8 / C7-F63 | S2 | 대응 설명의 사용자 정의 이름이 M21 Text 스캔을 빠져나감. 기본 식별자 복원으로150% 흐름/배경/대비 회복 |
+| Q9 / C7-F64 | S2 | native71의 비교 카드·CaseThread 대비 누락. 진단 전용 부모 배경으로 원래 색/이름/기본 스킨 보존. 카드와 CaseThread 각각 실제 RED |
+| Q10 / C7-F65 | S2 | native95의 트랙과 A/B 라벨이 어두운 표면에 묻힘. 별도 부모 배경, 입력 비간섭, 실제 canvas mesh 불투명 획·라벨 대비 검증 |
+| Q11 / C7-F66 | S3 | native99에서 양 끝 피크가 잘림. 기본 모드 mesh도 경계4.48단위 초과 RED.4% 가로 여백으로 양 모드 정점 경계 통과 |
+
+- 최종 `correction-playmode-final.xml`:121 pass/0 fail/boot1 skip. 별도 `correction-boot-final.xml`:1/1. EditMode는 프로젝트64 + 외부 예제 stub1이므로 고유 프로젝트 수는186이다. 신규9사례를 확장·재실행한 RED12회를12개 신규 테스트로 더하지 않는다.
+- 모든 후속 XML/11개 스틸/192개 입력·캡처 이벤트는 M23 영수증에 연결했다.86/89/90/92는 지문11a42388…의 reader 검증,99는35755c5c…의 대비 수정/피크 잘림,104/106/107/108은6c88870f…의 최종 검증이다.95와71은 부정 증거다.
+- 최종 native에서 모든 피크·A/B 라벨·오차대·하단 대응 설명을 직접 보았고1/I/H 후 연습장이 유지됐다. Escape는 원래 reader로 돌아갔으며 save/save.bak/settings의 목록·바이트·해시가 전후 동일했다. 직접 API6개는 PlayMode 증거이지 native에서 외부 API를 호출한 증거가 아니다.
+- frame87의 예상 Undo 파일명과 달리 실제 초점은 Cite였다. Enter를 보내지 않고 두 Tab 뒤 frame88의 Undo 초점을 확인했다.91은 t0-b2의 Redo 초점,92는 실제 Redo 후 t0-b3/고정 없음이다. 실패한 focus 복원/미이동 hotkey·scroll은 성공으로 세지 않았다.
+- 최초 회귀 작성의 누락된 Tide.UI import로 생긴 컴파일 오류는 테스트 RED로 세지 않았다. 실제 실패 XML 이후에만 원인 교정을 적용했다. renderer 소유 GetMesh() 반환값은 파괴하지 않는다.

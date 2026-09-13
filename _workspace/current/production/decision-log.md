@@ -683,3 +683,12 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [CLOSURE 2026-09-14] R1/R2/R3/R5/R7 구현 및 R4 교정 뒤 독립 RuntimeAcceptance/EvidenceAcceptance와 Q1–Q5 반례를 해결했다. 실제 UI에서 발견한 offscreen feedback은 오른쪽 고정 영역으로 옮기고 Navigation 높이는 유지했다. 테스트/네이티브 증거와 제외된 매크로는 `qa/m23-integration-review.md`에 있다.
 - [EXECUTION] Unity고유177통과·Node7·정본50·그래프18, Mac315파일/410875105B와 실제150% 비교/확정/프로세스 재시작 복구. 임시 Editor producer와 .meta 제거. `systems/tech-verification/m23/verification.json`의 전체 앱 지문과 신구 캡처 구분을 따른다.
 - [GATE] 강한 P1/P2 감사 exit3/blocked, 사람 n=0·실제 노력 없음·Windows 및 전체 캠페인 미측정. R6은 실행 패킷/약8초 창 녹화만 준비했으며 자동 수집기나45분 안정성은 완료가 아니다. R8/R9 생산을 시작하지 않았다. 다음 순서는 `handoff/m23-results-and-improvement-plan.md`에 동결한다.
+
+## RFC-CX-M23-CORRECTION-20260914 · 최초 전달 후 경계 교정
+
+- [TRIGGER] 최초35ebdc5 뒤 pinned 출처 가시성과 직접 API 격리 반례, 실제 진단 화면의 읽기 배경/끝 피크 누락을 발견했다. 정적 리뷰의 당시 no-findings를 완전성 증명으로 해석하지 않는다.
+- [OWNERSHIP] Main이 Q6 및 통합/실행/Git 소유. PracticeIsolationFix와 PracticeContrastFix는 다른 테스트 파일/패치 제안만 담당하고 validation을 실행하지 않았다. Q9–Q11은 Main의 네이티브 발견이다.
+- [DECISION] pin은 현재 접근 가능할 때만 유지하며 Redo는 자동 재고정하지 않는다. 연습 세션 API는 mutation 전에 차단한다. M21 Text 규약과 이름 있는 CaseThread를 보존하고 중첩 그래픽은 진단 전용 별도 부모 배경으로 처리한다. 같은 CanvasRenderer에 두 Graphic을 겹치지 않는다.4% 피크 여백은 양 모드의 실제 mesh 경계 RED에 따른 수정이다.
+- [VERIFY] 후속 Q6–Q11 모두 closed(C7-F61..F66). 신규9사례의 RED12회와 최종121 PlayMode/64 프로젝트 EditMode/1 boot=186. Mac315파일/410875885B·6c88870f…; 정확한 소스/빌드 epoch와 native Undo/Redo·최종 연습 바이트 불변은 m23/verification.json에 기록한다.
+- [PRESERVE] pending 화면 Back은 쓰기를 계속하고 Esc/Undo는 취소한다. 원래 영상/17스틸/177사례를 새 빌드로 소급하지 않는다. 초기/중간/최종 목록을 따로 보존한다. 기존 로그53개·다른 작업·승인 자산을 삭제하지 않는다.
+- [GATE] 사람0·강한 P1/P2 blocked·실제 노력/Windows/전체 완주 미측정·Base/R8/R9 차단을 유지한다. 일반 push 승인은 이번 사용자 요청의 개발 소스 전달에 한정된다.

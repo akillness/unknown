@@ -85,7 +85,7 @@ namespace Tide.App
 
         public void OpenReviewNotes()
         {
-            if (OpeningActive) return;
+            if (OpeningActive || AlignmentPracticeActive) return;
             reviewReturnPending = false;
             reviewReturnFocusId = null;
             if (overlay != "reviewNotes") reviewPreviousOverlay = overlay;
@@ -359,6 +359,7 @@ namespace Tide.App
 
         public async Task<bool> SaveReviewNoteAsync()
         {
+            if (AlignmentPracticeActive) return false;
             BindReviewNotes();
             if (reviewSaving || !CanPersistReviewNote || reviewStore.ReadOnly) return false;
             var target = reviewStore;

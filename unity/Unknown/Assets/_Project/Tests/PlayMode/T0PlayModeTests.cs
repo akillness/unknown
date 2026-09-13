@@ -196,7 +196,7 @@ yield return null;if(Directory.Exists(directory))Directory.Delete(directory,true
    Click("practice-propose");Click("practice-apply");Click("practice-lock");Click("practice-lock");
    yield return null;Canvas.ForceUpdateCanvases();
    var work=host.GetComponentsInChildren<UnityEngine.UI.ScrollRect>().Single(s=>s.viewport.name=="Viewport");
-   var summary=host.GetComponentsInChildren<RectTransform>().Single(t=>t.name=="Practice correspondence summary");
+   var summary=host.GetComponentsInChildren<UnityEngine.UI.Text>().Single(t=>t.text.StartsWith("대응 1: A",StringComparison.Ordinal)).rectTransform;
    Assert.Greater(work.content.rect.height,work.viewport.rect.height,"This case must exercise the overflowing 150% readout");
    Assert.IsTrue(game.Interface.Focus("practice-read-down"));yield return PressKey(Key.Enter);Canvas.ForceUpdateCanvases();
    var corners=new Vector3[4];var viewCorners=new Vector3[4];summary.GetWorldCorners(corners);work.viewport.GetWorldCorners(viewCorners);
@@ -205,7 +205,7 @@ yield return null;if(Directory.Exists(directory))Directory.Delete(directory,true
    host.GetComponentInChildren<Tide.UI.AlignmentPracticeChart>().GetComponent<RectTransform>().GetWorldCorners(corners);
    Assert.GreaterOrEqual(corners[0].y,viewCorners[0].y-.5f);Assert.LessOrEqual(corners[2].y,viewCorners[2].y+.5f);
    foreach(var key in new[]{Key.Z,Key.Y,Key.I,Key.H,Key.F1,Key.Q,Key.Tab,Key.Space,Key.Digit1,Key.Digit3})yield return PressKey(key);
-   game.Undo();game.Redo();game.OpenTool("circuit");game.GoNode("hub-view-desk");
+   game.Undo();game.Redo();game.OpenTool("circuit");game.GoNode("hub-view-desk");game.OpenOverlay("settings");
    Assert.IsFalse(game.SubmitImmediate(new PuzzleCommand("Read")).IsValid);
    Assert.IsFalse(awaitResult(game.CommitAsync(new PuzzleCommand("ReadOriginal"))));
    game.RequestConfirm(new PuzzleCommand("ReadOriginal"));
@@ -215,6 +215,55 @@ yield return null;if(Directory.Exists(directory))Directory.Delete(directory,true
    Assert.IsNull(game.Practice);yield return Wait(game.FlushSaves());
    Assert.AreEqual(hash,game.Journal.State.StateHash);Assert.AreEqual(head,game.Journal.HeadSeq);
    CollectionAssert.AreEqual(before,File.ReadAllBytes(Path.Combine(directory,"save.json")));
+  }
+  IEnumerator AssertPracticeCallIsolated(Func<Task> call){
+   yield return Wait(game.FlushSaves());
+   var surface=game.Surface;var actions=game.Interface.ActionIds.ToArray();
+   var hash=game.Journal.State.StateHash;var head=game.Journal.HeadSeq;
+   var files=Directory.GetFiles(directory).ToDictionary(path=>path,File.ReadAllBytes);
+   game.OpenAlignmentPractice();Assert.IsTrue(game.AlignmentPracticeActive);
+   yield return Wait(call());yield return Wait(game.FlushSaves());
+   Assert.IsTrue(game.AlignmentPracticeActive,"A public session call must not escape practice");
+   Assert.IsFalse(game.SavePending);Assert.AreEqual(hash,game.Journal.State.StateHash);Assert.AreEqual(head,game.Journal.HeadSeq);
+   CollectionAssert.AreEquivalent(files.Keys,Directory.GetFiles(directory),"Practice must not create persisted files");
+   foreach(var file in files)CollectionAssert.AreEqual(file.Value,File.ReadAllBytes(file.Key),file.Key);
+   game.Back();Assert.IsNull(game.Practice);Assert.AreEqual(surface,game.Surface);
+   CollectionAssert.AreEqual(actions,game.Interface.ActionIds,"Leaving practice must restore the existing work surface");
+  }
+  IEnumerator CompletedPracticeFixture(string fixture){
+   Directory.CreateDirectory(directory);
+   File.Copy(Path.Combine(Application.dataPath,"_Project/Tests/Fixtures/"+fixture),Path.Combine(directory,"save.json"),true);
+   yield return Restart();game.StartGame();
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsStartGameWithoutReplacingReader(){
+   yield return ReaderReady();
+   yield return AssertPracticeCallIsolated(()=>{game.StartGame();return Task.CompletedTask;});
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsReviewNotesWithoutReplacingReader(){
+   yield return ReaderReady();
+   yield return AssertPracticeCallIsolated(()=>{game.OpenReviewNotes();return Task.CompletedTask;});
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsConfirmModePersistence(){
+   yield return ReaderReady();game.SetConfirmMode("two-step");
+   yield return AssertPracticeCallIsolated(()=>{game.SetConfirmMode("hold");return Task.CompletedTask;});
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsReviewNotePersistence(){
+   yield return ReaderReady();Assert.IsTrue(game.CanPersistReviewNote);Assert.IsFalse(game.ReviewStore.ReadOnly);
+   yield return AssertPracticeCallIsolated(async()=>{Assert.IsFalse(await game.SaveReviewNoteAsync());});
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsLegalPatrolEntry(){
+   yield return CompletedPracticeFixture("T0CompletedV1.json");game.OpenTool("reader");
+   Assert.IsTrue(game.Simulation.Validate(game.Journal.State,new PuzzleCommand("EnterPatrol")).IsValid);
+   yield return AssertPracticeCallIsolated(()=>{game.ContinueToPatrol();return Task.CompletedTask;});
+   game.ContinueToPatrol();yield return Wait(game.FlushSaves());Assert.IsTrue(game.PatrolActive);
+  }
+  [UnityTest] public IEnumerator AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry(){
+   yield return CompletedPracticeFixture("C1PatrolCompletedV2.json");
+   Assert.IsTrue(game.InterviewPrepAvailable);
+   yield return AssertPracticeCallIsolated(()=>{game.OpenInterviewPrep();return Task.CompletedTask;});
+   Assert.IsTrue(game.Simulation.Validate(game.Journal.State,new PuzzleCommand("EnterSignature")).IsValid);
+   yield return AssertPracticeCallIsolated(()=>{game.ContinueToSignature();return Task.CompletedTask;});
+   game.ContinueToSignature();yield return Wait(game.FlushSaves());Assert.IsTrue(game.SignatureActive);
   }
   const System.Reflection.BindingFlags PrivateInstance=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
   void HintCall(string method,params object[] args)=>typeof(T0GameSession).GetMethod(method,PrivateInstance).Invoke(game,args);

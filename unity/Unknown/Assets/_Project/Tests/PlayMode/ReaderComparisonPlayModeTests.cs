@@ -76,6 +76,35 @@ namespace Tide.Tests
             Assert.IsTrue(labels.Any(t=>t.Contains(current.AxisLabel)));Assert.IsTrue(labels.Any(t=>t.Contains(pinned.AxisLabel)));
         }
 
+        [UnityTest] public IEnumerator UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded()
+        {
+            game.OpenTool("circuit");
+            Click("begin-overlay");Click("offset-left");Click("offset-up");Click("anchor-overlay");
+            var area=game.Definition.UncoveredAreas[0];
+            Click("area-"+area);
+            Assert.IsFalse(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Click("area-"+area);
+            game.OpenTool("reader");Click("reader-compare-"+Ledger);Click("reader-compare-pin");
+            yield return null;
+            Assert.AreEqual(Plate,game.Journal.State.LoadedRecordId);
+            Assert.AreEqual(Ledger,Charts().Last().Range.RecordId);
+            game.Undo(); // Closing circuit was the last working command; both records remain visible.
+            yield return null;
+            Assert.IsTrue(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Assert.AreEqual(2,Charts().Length);
+            game.Undo(); // Undo the final area mark without undoing the earlier loaded plate.
+            yield return null;
+            Assert.IsFalse(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Assert.IsTrue(game.Simulation.IsAvailable(game.Journal.State,"t0-b2"));
+            Assert.AreEqual(Plate,game.Journal.State.LoadedRecordId);
+            CollectionAssert.AreEqual(new[]{Plate},Charts().Select(c=>c.Range.RecordId).ToArray(),
+                "Unavailable evidence must disappear from the current and pinned comparison views");
+            Assert.IsFalse(game.Interface.ActionIds.Contains("reader-compare-"+Ledger));
+            game.Redo();yield return null;
+            Assert.IsTrue(game.Simulation.IsAvailable(game.Journal.State,"t0-b3"));
+            Assert.AreEqual(1,Charts().Length,"Restoring access must not resurrect a cleared presentation pin");
+        }
+
         [UnityTest] public IEnumerator FlatAndSingleSampleWindowsRenderButMissingWindowDoesNotInventSignal()
         {
             Window("H-4:20","H-3:52");yield return null;Canvas.ForceUpdateCanvases();
@@ -94,6 +123,44 @@ namespace Tide.Tests
             }
             Window("H-1:00","H+2:56");yield return null;Canvas.ForceUpdateCanvases();chart=Charts().Single();mesh=chart.canvasRenderer.GetMesh();
             Assert.IsTrue(float.IsNaN(chart.Range.Minimum));Assert.AreEqual(0,mesh.vertexCount);
+        }
+
+        [UnityTest] public IEnumerator DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText()
+        {
+            var profile=Resources.Load<Tide.Presentation.M20WorkSurfaceProfile>("M20WorkSurface");
+            Assert.IsNotNull(profile);Assert.IsNotNull(profile.workSurface);
+            var previous=profile.diagnosticOverride;var approved=profile.runtimeApproved;
+            var ink=Charts().Single().color;
+            try
+            {
+                profile.diagnosticOverride=true;
+                game.OpenOverlay("settings");for(int i=0;i<5;i++)Click("text-scale");Click("overlay-back");
+                foreach(var pinned in new[]{false,true})
+                {
+                    if(pinned){Click("reader-compare-pin");Click("reader-compare-"+Ledger);}
+                    yield return null;yield return null;Canvas.ForceUpdateCanvases();
+                    var row=(RectTransform)Charts()[0].transform.parent.parent;
+                    Assert.LessOrEqual(row.rect.height,row.GetComponentInParent<ScrollRect>().viewport.rect.height);
+                    var caseThread=host.GetComponentsInChildren<Text>().Single(t=>t.name=="CaseThread");
+                    var cards=Enumerable.Range(0,row.childCount).Select(row.GetChild).Concat(new[]{caseThread.transform.parent});
+                    foreach(var card in cards)
+                    {
+                        var ground=card.GetComponent<Image>();
+                        Assert.IsNotNull(ground,"Nested comparison ink needs a reading ground over the dark diagnostic surface");
+                        Assert.IsFalse(ground.raycastTarget,"The contrast correction must not intercept comparison input");
+                        var back=new Color(ground.color.r*ground.color.a,ground.color.g*ground.color.a,ground.color.b*ground.color.a).linear;
+                        var fore=ink.linear;
+                        float dark=.2126f*fore.r+.7152f*fore.g+.0722f*fore.b;
+                        float light=.2126f*back.r+.7152f*back.g+.0722f*back.b;
+                        Assert.Greater((light+.05f)/(dark+.05f),4f,"Worst-case component-color contrast, not an accessibility certification");
+                        foreach(var text in card.GetComponentsInChildren<Text>())Assert.AreEqual(ink,text.color);
+                        foreach(var chart in card.GetComponentsInChildren<ReaderComparisonChart>())
+                        {Assert.AreEqual(ink,chart.color);Assert.IsTrue(chart.canvasRenderer.hasRectClipping);}
+                    }
+                }
+                Assert.AreEqual(approved,profile.runtimeApproved,"Diagnostic legibility must not promote the candidate");
+            }
+            finally{profile.diagnosticOverride=previous;}
         }
 
         [UnityTest] public IEnumerator BothRangesFitTogetherAtLargeTextAndRecoveryRetryClearsPin()

@@ -185,8 +185,16 @@ namespace Tide.UI
             RenderAlignmentPractice(content,model.AlignmentPractice);
             if(model.ReaderComparison!=null&&!string.IsNullOrEmpty(model.CaseThread))
             {
-                FlowText(content,model.CaseThread,16,ink);
-                var note=content.GetChild(content.childCount-1).GetComponent<Text>();
+                var noteParent=content;
+                if(surface!=null&&surface.workSurface!=null)
+                {
+                    noteParent=Flow(content,0);
+                    var ground=noteParent.gameObject.AddComponent<Image>();
+                    ground.color=new Color(paper.r,paper.g,paper.b,ReadingBandAlpha);
+                    ground.raycastTarget=false;
+                }
+                FlowText(noteParent,model.CaseThread,16,ink);
+                var note=noteParent.GetChild(noteParent.childCount-1).GetComponent<Text>();
                 note.name="CaseThread";note.raycastTarget=false;
             }
             FlowText(content,model.Body,20,ink);

@@ -18,7 +18,7 @@ namespace Tide.App
         string SignatureText(string key,string fallback=null)=>(string)signaturePacket["localization"]?[key]??fallback??L("unavailable");
         bool SignatureHas(string key)=>C1SignatureDefinition.Has(Journal.State,key);
         string SignatureValue(string key)=>C1SignatureDefinition.Get(Journal.State,key);
-        public void ContinueToSignature(){signatureSurface=null;CloseTool();document=null;overlay=null;SubmitImmediate(new PuzzleCommand("EnterSignature"));}
+        public void ContinueToSignature(){if(AlignmentPracticeActive)return;signatureSurface=null;CloseTool();document=null;overlay=null;SubmitImmediate(new PuzzleCommand("EnterSignature"));}
         PuzzleCommand SignatureConfirmation()=>new PuzzleCommand("ConfirmSignature",Definition.Signature.ComparisonId,Definition.Signature.RegionId);
         string SignatureCaseThread(){
             string context=SignatureComplete?"번호대 연결 기록 · 아래쪽은 미해결":SignatureValue("humidity")!=null?SignatureText("c1.signature.humidity."+SignatureValue("humidity"))+" · "+(SignatureValue("trial")=="safe"?"가장자리 풀림":SignatureValue("trial")=="risk"?"잉크 번짐 위험":"시험 전"):SignatureHas("separated")?"두 사본과 판의 번호대를 확인한다.":"기록을 살펴보고 습도 시험을 선택한다.";

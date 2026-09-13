@@ -186,15 +186,15 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 
 | task | owner | phase | artifact | status |
 |---|---|---|---|---|
-| R1 현재/고정 두 기록 동시 비교 | systems, QA | P3/P4 | ReaderComparisonSession/View, m23/verification.json | done;150% 실제 차트·비교 저장 불변 |
+| R1 현재/고정 두 기록 동시 비교 | systems, QA | P3/P4 | ReaderComparisonSession/View, m23/verification.json | done;150% 진단 대비·비교 저장 불변·Undo 비가시 출처 pin 해제/Redo 비복원 |
 | R2 공개 출처 수동 선택·후보와 기록 구분 | systems, QA | P3/P4 | C1SignatureGameSession/Data/Definition | done; 같은 루트 거부·명시 인용/확정·구 save replay/복구 |
 | R3 기존 M8 계보·요청형 질문 | systems, QA | P3/P4 | ReviewNotesSession | done; 사본2/원본1 표시·노트 재시작 바이트 보존; 기존 원문 복귀 경계 유지 |
 | R4 문구/감사 강도 정정과 생성물 동기 | canon, planner, systems | P3/P4 | m23-r4-canon-consistency.md, preservation-audit.json | correction done; campaign50/graph18/Node7; 강한 P1/P2 exit3 blocked |
-| R5 별도 정합 시편·150% 키보드·저장 격리 | systems, QA | P3/P4 | AlignmentPractice/Session/View | done; 수동 적용/잠금·겹침unknown·비인과 전이; 사람 이해 아님 |
+| R5 별도 정합 시편·150% 키보드·저장 격리 | systems, QA | P3/P4 | AlignmentPractice/Session/View | done; 직접 API6개 격리·진단 mesh/라벨/문단 대비·양 끝 피크·native 저장/설정 불변. 사람 이해 아님 |
 | R6 한 빌드 실제12명/5유형 평가 | QA, operations | P4 | qa/m23-human-evaluation.md | blocked; n=0, 수동 창 녹화 약8초만 확인, 전체 producer/45분 미검증 |
-| R7 저장 큐/취소/미리보기/고정 가시성 | systems, QA | P3/P4 | T0ActionFeedbackSession, T0GameSession, T0Interface | done; Q1–Q5 RED→교정→최종112 PlayMode 및 실제 스크롤/내구 확정 |
+| R7 저장 큐/취소/미리보기/고정 가시성 | systems, QA | P3/P4 | T0ActionFeedbackSession, T0GameSession, T0Interface | done; 초기 Q1–Q5 RED→교정·실제 스크롤/내구 확정, 후속 최종121 PlayMode에도 통과 |
 | R8 재방문 생산 | planning, systems | P3 | Base production gate | blocked; 사람·개념·실제 노력·게이트 미충족 |
 | R9 증언/3제출 생산 | synopsis, systems | P3 | Base production gate | blocked; 준비 패널은 후반 생산 완료가 아님 |
 | R10 전체 완주/목표 장치 | QA, production | P4 | m23/verification.json | partial; 현재 슬라이스 복구/Mac만 검증. 전체450–540분·Windows 미측정 |
-| 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; Unity177·Mac410875105B·실제 native; 임시 producer/.meta 제거 |
+| 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; 초기35ebdc5 후 Q6–Q11 교정, 프로젝트 Unity186·Mac410875885B·정확한 빌드별 native. 새 producer 없음·소유 플레이어 종료 |
 | 소스 전달과 최종 개선 계획 | director | P5 | handoff/m23-results-and-improvement-plan.md | 최신 요청의 명시적 commit/normal push 승인; 기존 M22/Aside 보존. 실제 커밋/원격 결과는 Git 기록을 따름 |

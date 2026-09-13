@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
-  "completedUtc": "2026-09-13T15:13:35Z",
+  "completedUtc": "2026-09-13T16:39:16Z",
   "cycle": "20260909-preproduction-c7",
   "milestone": "M23",
   "scope": "R1/R2/R3/R4 correction/R5 isolated practice/R7; current T0 and C1-b2 developer slice, not complete campaign",
-  "sourceBaseCommit": "b2ae1fb8119be1b797f874c38441cbd433aa72d4",
+  "sourceBaseCommit": "35ebdc5aaeee0b32656a9caa6482121151a035f4",
   "sourceSnapshots": [
     {
       "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
-      "bytes": 48374,
-      "sha256": "d0ff2f58af30bb32571df0db8e6a76ba55a20ff7bb4ae11b65a9c0d896b74d07"
+      "bytes": 48442,
+      "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
-      "bytes": 10448,
-      "sha256": "08f6cb1780f7c7fd7f46b056c3c1866f6654d64873d27870dcb998c4cb9473b1"
+      "bytes": 10495,
+      "sha256": "d68279315b6faf1df132a9015e241afbf8fca75df3443c85318c2d9e04d06a9e"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
-      "bytes": 7182,
-      "sha256": "6470fefcb20b9b70591a66d67305583b91241f1cea20c67ba40794da34791620"
+      "bytes": 7456,
+      "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
-      "bytes": 15679,
-      "sha256": "4f8d135b60864f73d150471284c78a30c13beb41da51cde360e79ffc77f33726"
+      "bytes": 15713,
+      "sha256": "e46f3d3d21d9ed383f75dbb70fab8cc47a286196dc1dddf9333ec031e327fe6b"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
@@ -33,8 +33,8 @@
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
-      "bytes": 22090,
-      "sha256": "27770778dc02e08505319e6d955c2e1badabf8431b01e083140f3fc4a353c836"
+      "bytes": 22172,
+      "sha256": "885320c41b96d134f5f42ac37337419030e52bc1f33898960979e4407cc604cb"
     },
     {
       "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
@@ -58,18 +58,18 @@
     },
     {
       "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
-      "bytes": 32179,
-      "sha256": "8cd9eeabe1731bd5347c5e2547ae678fc41997b4501f4a03c884079f7af89e70"
+      "bytes": 32583,
+      "sha256": "d8d6e37bcdcf53dd0e37f1cc1b66be0da6fb31c6282fab80f2e4c503dc9c7258"
     },
     {
       "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
-      "bytes": 4785,
-      "sha256": "8cfdbc8b3c54eb308f2be1111ae0e8f6ecf5c7eb2dc149aba8d26027aec0d6a5"
+      "bytes": 5243,
+      "sha256": "f1285b06091d1976d0fc2c05370cfff2b02656660f52306b091600ca59ba34f1"
     },
     {
       "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
-      "bytes": 6324,
-      "sha256": "c871853209fea2a6e97593794a4c2459e5a55331377c33a227a038b29a170857"
+      "bytes": 6766,
+      "sha256": "5593e0aea9cd298a1a903d604c681958172cd45d4dccc9a4dc43c60e86dc43b8"
     },
     {
       "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
@@ -100,6 +100,11 @@
       "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
       "bytes": 14558,
       "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+    },
+    {
+      "path": "unity/Unknown/Assets/_Project/UI/M21ReadingBackingInterface.cs",
+      "bytes": 5530,
+      "sha256": "3efac7422de95999bd2017c024b44c4b8b39e54544ea6cbe98dbea3b840ea547"
     }
   ],
   "campaign": {
@@ -112,17 +117,17 @@
     "unity": "6000.5.6f1 (0e0577a1a2ac)",
     "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
     "result": "Succeeded",
-    "buildReportBytes": 410875105,
-    "inventoryBytes": 410875105,
+    "buildReportBytes": 410875885,
+    "inventoryBytes": 410875885,
     "inventoryFiles": 315,
-    "fingerprint": "d310c591fedfb8635efc543f21261ca2e5ee022a39eb75ead6ef0c2b86d26ad2",
+    "fingerprint": "6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e",
     "fingerprintAlgorithm": "SHA256 of UTF-8 JSON of the sorted file inventory, sort_keys=True, separators=(comma,colon); paths repository-relative",
-    "inventory": "build-inventory.json",
+    "inventory": "build-inventory-correction.json",
     "assemblies": [
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.UI.dll",
         "bytes": 46080,
-        "sha256": "2161b0ebe5b185c18b2841f946ea27795cd4339a6cff969c5cc901fa67b7abbf"
+        "sha256": "2db17a6f216282a14004852a9b911e768fff6a575ecd38ee3b136c6190ab322d"
       },
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Data.dll",
@@ -146,8 +151,8 @@
       },
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
-        "bytes": 158208,
-        "sha256": "bdc1fa14e98da02d3e38579871f08e519be1a1c33e66abb5467bd99d4da4ee35"
+        "bytes": 158720,
+        "sha256": "bdaf40b0c34151ae5d53cb8f6ffdb6ac6c5260e1a523294d5d33e3f8275c3ac4"
       },
       {
         "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Sim.dll",
@@ -156,13 +161,14 @@
       }
     ],
     "localApp": "unity/Unknown/Builds/T0-mac/Unknown.app",
-    "publishedBinary": false
+    "publishedBinary": false,
+    "enumeration": "333 entries independently enumerated with five untruncated glob partitions; 315 files exactly match the hashed inventory."
   },
   "tests": {
-    "uniqueUnityPassed": 177,
+    "uniqueUnityPassed": 186,
     "uniqueUnityFailed": 0,
     "editModePassed": 64,
-    "playModePassed": 112,
+    "playModePassed": 121,
     "playModeSkipped": 1,
     "skipReason": "serialized boot requires isolated --t0-save-dir and was separately exercised",
     "isolatedBootPassed": 1,
@@ -317,8 +323,242 @@
           "end-time": "2026-09-13 14:49:17Z",
           "duration": "65.5240686"
         }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-boundary-red.xml",
+        "bytes": 17597,
+        "sha256": "5f32e6724ae01269764bc9fade8cbcb64b4e083a990d992b282956510992da13",
+        "run": {
+          "id": "2",
+          "testcasecount": "8",
+          "result": "Failed(Child)",
+          "total": "8",
+          "passed": "0",
+          "failed": "8",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 15:42:14Z",
+          "end-time": "2026-09-13 15:42:20Z",
+          "duration": "5.6442932"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-comparison-card-red.xml",
+        "bytes": 4811,
+        "sha256": "0914911c0a8df8bb92d280a00611ed71185f68267e9bc3cdb2fc3aefadf464e4",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 15:54:20Z",
+          "end-time": "2026-09-13 15:54:22Z",
+          "duration": "1.851483"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-comparison-case-thread-red.xml",
+        "bytes": 4811,
+        "sha256": "7b9bfcd08308f80c7cf353b5a349e2b425b22f1bf9d7c1aefdd1eb65427529a3",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 15:58:54Z",
+          "end-time": "2026-09-13 15:58:56Z",
+          "duration": "1.8236048"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-practice-timeline-red.xml",
+        "bytes": 4879,
+        "sha256": "20428901b4036e23188bd8825edbd2e6654db18e09189fecd11db8dbaa3b4c85",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:19:02Z",
+          "end-time": "2026-09-13 16:19:04Z",
+          "duration": "1.9811468"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-practice-peak-bounds-red.xml",
+        "bytes": 4883,
+        "sha256": "625568b7203fae54870b970cdcf898444263789a4b61a885a3572d081845919a",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Failed(Child)",
+          "total": "1",
+          "passed": "0",
+          "failed": "1",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:29:21Z",
+          "end-time": "2026-09-13 16:29:23Z",
+          "duration": "1.436706"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-boundary-green.xml",
+        "bytes": 125613,
+        "sha256": "3f50ecff87700eb688f136f8fad2278841a21c35028de62016a91fe8132e47ef",
+        "run": {
+          "id": "2",
+          "testcasecount": "121",
+          "result": "Skipped:Ignored",
+          "total": "121",
+          "passed": "120",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 15:43:38Z",
+          "end-time": "2026-09-13 15:44:47Z",
+          "duration": "69.0927457"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-editmode.xml",
+        "bytes": 51466,
+        "sha256": "ec23261192b41259b6fcaea3c815df3a425a5f88b40434b73dd45ebe1f5fef10",
+        "run": {
+          "id": "2",
+          "testcasecount": "65",
+          "result": "Passed",
+          "total": "65",
+          "passed": "65",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 15:45:41Z",
+          "end-time": "2026-09-13 15:45:44Z",
+          "duration": "2.6580768"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-reader-green.xml",
+        "bytes": 126383,
+        "sha256": "3849ff9f962af0e6386f9e877c3acf6cfef39d30277443b30f63830fe2629acb",
+        "run": {
+          "id": "2",
+          "testcasecount": "122",
+          "result": "Skipped:Ignored",
+          "total": "122",
+          "passed": "121",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:00:34Z",
+          "end-time": "2026-09-13 16:01:45Z",
+          "duration": "71.840602"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-practice-contrast-green.xml",
+        "bytes": 126382,
+        "sha256": "001992d8f551ed5eaf567366c68c7f501dbcd17b7abcf0dd833bcaf57aad399e",
+        "run": {
+          "id": "2",
+          "testcasecount": "122",
+          "result": "Skipped:Ignored",
+          "total": "122",
+          "passed": "121",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:21:44Z",
+          "end-time": "2026-09-13 16:22:54Z",
+          "duration": "69.7999168"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-playmode-final.xml",
+        "bytes": 126379,
+        "sha256": "a65e9eb1f89e0556c6142a7f5f41871d2fa896e7403e44fb8ffa4a17afe168ae",
+        "run": {
+          "id": "2",
+          "testcasecount": "122",
+          "result": "Skipped:Ignored",
+          "total": "122",
+          "passed": "121",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "1",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:30:34Z",
+          "end-time": "2026-09-13 16:31:42Z",
+          "duration": "68.7560909"
+        }
+      },
+      {
+        "path": "_workspace/current/systems/tech-verification/m23/correction-boot-final.xml",
+        "bytes": 3439,
+        "sha256": "c817f248ecbac2ba4e243c8b2d90632a552c0704fdfd76707c0832c357ef9464",
+        "run": {
+          "id": "2",
+          "testcasecount": "1",
+          "result": "Passed",
+          "total": "1",
+          "passed": "1",
+          "failed": "0",
+          "inconclusive": "0",
+          "skipped": "0",
+          "asserts": "0",
+          "engine-version": "3.5.0.0",
+          "clr-version": "4.0.30319.42000",
+          "start-time": "2026-09-13 16:32:09Z",
+          "end-time": "2026-09-13 16:32:10Z",
+          "duration": "1.0908002"
+        }
       }
-    ]
+    ],
+    "editModeCountingNote": "The correction EditMode XML has 65 passes: 64 Tide.Tests cases plus AddressableAssets.DocExampleCode.TestStub.RequiredTest. The vendor example is excluded from the 186 project cases.",
+    "newDistinctRegressionCases": 9,
+    "redTestExecutions": 12
   },
   "canonAudit": {
     "result": "blocked",
@@ -348,10 +588,17 @@
       "M23-Q2 visible Back preview dismissal",
       "M23-Q3 keyboard practice viewport",
       "M23-Q4 cancelled-commit working-save ownership",
-      "M23-Q5 scrolling feedback invisibility"
+      "M23-Q5 scrolling feedback invisibility",
+      "M23-Q6 pin visibility after Undo",
+      "M23-Q7 direct session API practice escape/persistence",
+      "M23-Q8 practice correspondence paragraph identity and ground",
+      "M23-Q9 diagnostic comparison cards and named CaseThread contrast",
+      "M23-Q10 diagnostic paired-track chart and label contrast",
+      "M23-Q11 outermost wide/shouldered peak clipping"
     ],
     "remainingProvenFindingsInAssignedReviewScope": 0,
-    "notAnEntireRepositorySecurityAudit": true
+    "notAnEntireRepositorySecurityAudit": true,
+    "postPublicationReview": "Main investigated Q6; PracticeIsolationFix and PracticeContrastFix wrote isolated regression slices/proposed fixes without validation. Main ran all red/green/build/native checks and discovered Q9/Q10/Q11 on the actual diagnostic surface. Six new defect groups: five S2 and one S3; no claim of a new independent whole-repository audit."
   },
   "native": {
     "inputTool": "orca computer; synthetic input alone is unverified, screenshots are observed proof",
@@ -528,7 +775,8 @@
       "audioStreams": 0,
       "averageCaptureFrameRate": "8300/159",
       "boundary": "8-second bounded window-only capture; not game performance or 45-minute session stability"
-    }
+    },
+    "lineageNote": "Historical pre-correction evidence from the initial publication. Do not attribute its 17 numbered captures or video to the new final binary."
   },
   "externalGates": {
     "actualHumanParticipants": 0,
@@ -558,6 +806,515 @@
       "m23-reader-release"
     ],
     "rawUnityLogs": "local ignored Builds/m23 only; license/session diagnostic lines not published",
-    "preexistingM22AndAsideWork": "preserved; explicit publication scope audit required, no blanket staging"
+    "preexistingM22AndAsideWork": "preserved; explicit publication scope audit required, no blanket staging",
+    "postPublicationNote": "No new producer or runtime scaffold was added. Owned players were stopped; raw logs/checkpoints and full app remain local. Updated artifacts and memory synchronization receipts follow in verification.meta.md.",
+    "initialPublicationNote": "Unless explicitly marked post-publication, this section preserves the original 35ebdc5 cleanup/synchronization results. Current synchronization is recorded in verification.meta.md.",
+    "postPublicationLedger": {
+      "parsed": 176,
+      "dropped": 0,
+      "c7Total": 66,
+      "c7Closed": 39,
+      "matchedBrowserCells": 63,
+      "viewport": [
+        1440,
+        900
+      ],
+      "ledger": {
+        "path": "_workspace/current/production/cycle-ledger.json",
+        "bytes": 2102,
+        "sha256": "285143f53683edf70a62512c4161b1e5c60eb4fee8555cfa1f9ad84729b2273e"
+      },
+      "presentation": {
+        "path": "_workspace/current/presentation/steam-game-plan.html",
+        "bytes": 101263,
+        "sha256": "878d7827658b87c9f4fa0a4066a3783ff17828f68cff9e3cbd269ad2fb2ec9f7"
+      },
+      "browserCapture": {
+        "path": "_workspace/current/systems/tech-verification/m23/native/ledger-correction-slide-19.png",
+        "bytes": 429428,
+        "sha256": "713d9742aeedc296fb3258b4668162e2456eb2037c4e73098f045135dfdf6d4d"
+      },
+      "documentChecks": 514,
+      "documentPassed": 514,
+      "documentStatus": "SPEC-PASS",
+      "runtimeStatus": "NOT-MEASURED"
+    }
+  },
+  "previousPublication": {
+    "commit": "35ebdc5aaeee0b32656a9caa6482121151a035f4",
+    "uniqueUnityPassed": 177,
+    "build": {
+      "platform": "macOS arm64",
+      "unity": "6000.5.6f1 (0e0577a1a2ac)",
+      "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+      "result": "Succeeded",
+      "buildReportBytes": 410875105,
+      "inventoryBytes": 410875105,
+      "inventoryFiles": 315,
+      "fingerprint": "d310c591fedfb8635efc543f21261ca2e5ee022a39eb75ead6ef0c2b86d26ad2",
+      "fingerprintAlgorithm": "SHA256 of UTF-8 JSON of the sorted file inventory, sort_keys=True, separators=(comma,colon); paths repository-relative",
+      "inventory": "build-inventory.json",
+      "assemblies": [
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.UI.dll",
+          "bytes": 46080,
+          "sha256": "2161b0ebe5b185c18b2841f946ea27795cd4339a6cff969c5cc901fa67b7abbf"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Data.dll",
+          "bytes": 17920,
+          "sha256": "8913a89b094988043ed240d33e91670a62f1663823168f1fd08310c1bf1cee4c"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Input.dll",
+          "bytes": 19456,
+          "sha256": "12fbb8b25b9bab245ab4a67cefc0dad7a3a1ad92fbd3fef856d4de36f0df91fa"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Save.dll",
+          "bytes": 24064,
+          "sha256": "1f8b2df3d505a0d26bb5fc0b9a0e70c5a46f11f471f5a59d8b721d1ebcaa0d06"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Presentation.dll",
+          "bytes": 14336,
+          "sha256": "bd59a288340eee104116f5c89c5fcd145ae50ed5b337fd0878cb8a8e26d4fadc"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.App.dll",
+          "bytes": 158208,
+          "sha256": "bdc1fa14e98da02d3e38579871f08e519be1a1c33e66abb5467bd99d4da4ee35"
+        },
+        {
+          "path": "unity/Unknown/Builds/T0-mac/Unknown.app/Contents/Resources/Data/Managed/Tide.Sim.dll",
+          "bytes": 67072,
+          "sha256": "b5628f06ca7b4a64776d823690d15937e3a3d879ba40ad6779535291c0dccfa0"
+        }
+      ],
+      "localApp": "unity/Unknown/Builds/T0-mac/Unknown.app",
+      "publishedBinary": false
+    },
+    "note": "Original XML, native captures and build-inventory.json are retained. Their final labels describe that publication, not the correction binary."
+  },
+  "postPublicationCorrection": {
+    "defectIds": [
+      "C7-F61",
+      "C7-F62",
+      "C7-F63",
+      "C7-F64",
+      "C7-F65",
+      "C7-F66"
+    ],
+    "allClosed": true,
+    "newDistinctRegressionCases": [
+      "Tide.Tests.ReaderComparisonPlayModeTests.DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText",
+      "Tide.Tests.ReaderComparisonPlayModeTests.UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsConfirmModePersistence",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalPatrolEntry",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotePersistence",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotesWithoutReplacingReader",
+      "Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsStartGameWithoutReplacingReader",
+      "Tide.Tests.T0ReadingBackingPlayModeTests.PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface"
+    ],
+    "testSources": [
+      {
+        "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/ReaderComparisonPlayModeTests.cs",
+        "bytes": 13133,
+        "sha256": "6ab354f59070ffcebdfce18f969a4915993d4f52995a634d252313f6258ab7f4"
+      },
+      {
+        "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0PlayModeTests.cs",
+        "bytes": 43004,
+        "sha256": "adb50cb796195e34069c0ce1826ae56458149a4c7a0e8ad15af01003ceb2de2c"
+      },
+      {
+        "path": "unity/Unknown/Assets/_Project/Tests/PlayMode/T0ReadingBackingPlayModeTests.cs",
+        "bytes": 27543,
+        "sha256": "0a467a75444b61b0acc825ae547b628745191c197c642c9856a0191ec8961fc2"
+      }
+    ],
+    "guardScope": "Session entrypoints are guarded before mutation. Initialize lifecycle and arbitrary direct Journal/store object mutation are not a sandbox claim. Pending screen Back still leaves the write running; Esc/Undo cancel it.",
+    "defaultPresentation": "No ink, labels, candidate approval or default skin recoloring. Reading grounds are diagnostic-only; peak edge padding is corrected in both default and diagnostic modes.",
+    "native": {
+      "textScale": 1.5,
+      "reducedMotion": true,
+      "flags": [
+        "--m23-alignment-practice",
+        "--m20-ui-surface-diagnostic"
+      ],
+      "checkpoint": "unity/Unknown/Builds/m23/boundary-reader",
+      "humanParticipants": 0,
+      "captures": [
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/71-boundary-reader-settled-150.png",
+          "bytes": 717399,
+          "sha256": "8078bf0a87a75115479a7a85983d45e36ae17303da766603f8a9262f21582d0d"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/86-delivery-restarted-pinned-pair-150.png",
+          "bytes": 858933,
+          "sha256": "a68ba4fa1750ee49fc1ed0743f2e3ab5b5cdc41e76a753215e3432b70cb02f1f"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/89-delivery-first-undo-still-t0-b3.png",
+          "bytes": 855481,
+          "sha256": "b775ff2ddd6211a0445f6438ae151cb9ac3cb436e568b5f4dff2ca6f7e839821"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/90-delivery-hidden-ledger-pin-cleared-t0-b2.png",
+          "bytes": 686654,
+          "sha256": "9dabf2adeb8345095beecb2d02d9e5dc8858ef8078170654700dbfe3465ec946"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/92-delivery-redo-restores-access-not-pin.png",
+          "bytes": 686526,
+          "sha256": "6008989746b7e348cefef0187e21ed613e1458424c6855e40a2492c1eba997f5"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/95-delivery-practice-open-150.png",
+          "bytes": 736276,
+          "sha256": "f66554029951979605289823dbff6a78f8076c44b3907d1014aae95eee47691b"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/99-release-practice-tracks-readable-150.png",
+          "bytes": 871567,
+          "sha256": "59fbe4840ffe3474666326dad16821972fa632cf322d3e383ed1474d6fbf5bec"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/104-final-reader-before-practice.png",
+          "bytes": 899326,
+          "sha256": "491723a80473d60b385dc1f45662010612aea39af07c53d627401ea4ca0a232c"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/106-final-complete-peaks-and-labels-150.png",
+          "bytes": 871985,
+          "sha256": "966a5c15b186a26f3dbfdb11f5db71b3b6cf4b3766d7f452f9e9b53c88ab64fa"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/107-final-correspondence-and-shortcut-isolation-150.png",
+          "bytes": 899927,
+          "sha256": "b2498842555d3678cc8b55b14c401b549b0530b09cbf7ff28fe10aeccc3260f5"
+        },
+        {
+          "path": "_workspace/current/systems/tech-verification/m23/native/108-final-practice-exit-restores-reader.png",
+          "bytes": 899647,
+          "sha256": "1c294e59d9758f70fc058d22782cf0c249478c6af8f1560943417d9d3cad28f0"
+        }
+      ],
+      "actions": {
+        "path": "_workspace/current/systems/tech-verification/m23/native-correction-actions.json",
+        "bytes": 79809,
+        "sha256": "a4c3b02eb87dcf97c00e0fc7e0d997d825b948b38bc2dbc0eb25bbfe528f88c3"
+      },
+      "actionCount": 192,
+      "epochs": [
+        {
+          "captureNumbers": [
+            71
+          ],
+          "buildReportBytes": 410875709,
+          "status": "Negative reader contrast evidence; full fingerprint was not retained for this intermediate binary."
+        },
+        {
+          "captureNumbers": [
+            86,
+            89,
+            90,
+            92,
+            95
+          ],
+          "buildReportBytes": 410875833,
+          "fingerprint": "11a42388a9499e648f63078046ad8b1aabba64f9185778984318cff91dc6d34a",
+          "inventory": "build-inventory-reader-contrast.json",
+          "sourceSnapshots": [
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+              "bytes": 48442,
+              "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+              "bytes": 10495,
+              "sha256": "d68279315b6faf1df132a9015e241afbf8fca75df3443c85318c2d9e04d06a9e"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
+              "bytes": 7456,
+              "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+              "bytes": 15713,
+              "sha256": "e46f3d3d21d9ed383f75dbb70fab8cc47a286196dc1dddf9333ec031e327fe6b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+              "bytes": 3219,
+              "sha256": "c4b870a38ce7ca4b47ceda398489b55c63952e78678adf69fcfc1bd8f0897c97"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
+              "bytes": 22172,
+              "sha256": "885320c41b96d134f5f42ac37337419030e52bc1f33898960979e4407cc604cb"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
+              "bytes": 11073,
+              "sha256": "f7daf019a76df7b08779893a6364d3b98ae7028c9e88fd7ab2b1fb5bb1f7c35d"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0ActionFeedbackSession.cs",
+              "bytes": 1362,
+              "sha256": "d4c4c246b7fa53a53aba95d6906d48f443c3f8de946863b21dd00885dec21596"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+              "bytes": 9569,
+              "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+              "bytes": 4089,
+              "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+              "bytes": 32583,
+              "sha256": "d8d6e37bcdcf53dd0e37f1cc1b66be0da6fb31c6282fab80f2e4c503dc9c7258"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
+              "bytes": 5243,
+              "sha256": "f1285b06091d1976d0fc2c05370cfff2b02656660f52306b091600ca59ba34f1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
+              "bytes": 6289,
+              "sha256": "9a3e5a76e968320bdf4185fc6b1482482e190714b2d5a484873908faa99bc5b4"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+              "bytes": 7986,
+              "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/AlignmentPractice.cs",
+              "bytes": 8547,
+              "sha256": "f93b36c9764734baf31abc5b9f8a6768968bdc5e73c7b72ff81c7aeffd350bf0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+              "bytes": 9932,
+              "sha256": "d24a5cd450c456c044bde2e7be3bc74ea0a45728de556d9f4a6ed6efa336be0b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23AlignmentPractice.json",
+              "bytes": 1413,
+              "sha256": "3eb3a06a1c1340dd50c8d9d490fe380fed70ebbc7a67533b327e47d6f5c28a95"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23Feedback.json",
+              "bytes": 700,
+              "sha256": "82d3d8d4dc246686d9458f851e35571fa307c1a56c95e022c536d6cb7aa9c7a0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+              "bytes": 14558,
+              "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+            }
+          ],
+          "checks": "Visible pin survives first Undo; second Undo returns t0-b2 with Plate retained and Ledger pin cleared; Redo restores t0-b3 without pin resurrection. Frame95 is negative practice-track contrast evidence."
+        },
+        {
+          "captureNumbers": [
+            99
+          ],
+          "buildReportBytes": 410875885,
+          "fingerprint": "35755c5cc72ef5b2210933e1c1de0539bcb8a818bdde51da2474ebb0cb4048aa",
+          "inventory": "build-inventory-practice-contrast.json",
+          "sourceSnapshots": [
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0GameSession.cs",
+              "bytes": 48442,
+              "sha256": "e7d5cf570ad4fc0964fb47f9b843b8374eabb0b670d8967aa1dedc4d814f12a1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1GameSession.cs",
+              "bytes": 10495,
+              "sha256": "d68279315b6faf1df132a9015e241afbf8fca75df3443c85318c2d9e04d06a9e"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReaderComparisonSession.cs",
+              "bytes": 7456,
+              "sha256": "7cbeb56b9fb3389d0cd54f62f94d7bbe44bdbe78093f61112306326404b8a208"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureGameSession.cs",
+              "bytes": 15713,
+              "sha256": "e46f3d3d21d9ed383f75dbb70fab8cc47a286196dc1dddf9333ec031e327fe6b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/C1SignatureData.cs",
+              "bytes": 3219,
+              "sha256": "c4b870a38ce7ca4b47ceda398489b55c63952e78678adf69fcfc1bd8f0897c97"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/ReviewNotesSession.cs",
+              "bytes": 22172,
+              "sha256": "885320c41b96d134f5f42ac37337419030e52bc1f33898960979e4407cc604cb"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/AlignmentPracticeSession.cs",
+              "bytes": 11073,
+              "sha256": "f7daf019a76df7b08779893a6364d3b98ae7028c9e88fd7ab2b1fb5bb1f7c35d"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0ActionFeedbackSession.cs",
+              "bytes": 1362,
+              "sha256": "d4c4c246b7fa53a53aba95d6906d48f443c3f8de946863b21dd00885dec21596"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/M7ReaderSession.cs",
+              "bytes": 9569,
+              "sha256": "464a74ad50b556c5eaa54710482d07e5d3cad42cb08bc52777b2cfef955e93d4"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/App/T0OpeningSession.cs",
+              "bytes": 4089,
+              "sha256": "3f062548fdbf689a93878c2b3d5237990abcbb9b9bfd6f61a83545a271e4efda"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/T0Interface.cs",
+              "bytes": 32583,
+              "sha256": "d8d6e37bcdcf53dd0e37f1cc1b66be0da6fb31c6282fab80f2e4c503dc9c7258"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/ReaderComparisonView.cs",
+              "bytes": 5243,
+              "sha256": "f1285b06091d1976d0fc2c05370cfff2b02656660f52306b091600ca59ba34f1"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/UI/AlignmentPracticeView.cs",
+              "bytes": 6679,
+              "sha256": "25b4f0283811f72c722459dbe26dbd10fe09bde7a55e6e1a33eb607434793246"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Input/WatchInput.cs",
+              "bytes": 7986,
+              "sha256": "4a491da74fa1239d2dee2f43bcd45ae9653b09eab4299228e64c65e972ff252f"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/AlignmentPractice.cs",
+              "bytes": 8547,
+              "sha256": "f93b36c9764734baf31abc5b9f8a6768968bdc5e73c7b72ff81c7aeffd350bf0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Sim/C1SignatureDefinition.cs",
+              "bytes": 9932,
+              "sha256": "d24a5cd450c456c044bde2e7be3bc74ea0a45728de556d9f4a6ed6efa336be0b"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23AlignmentPractice.json",
+              "bytes": 1413,
+              "sha256": "3eb3a06a1c1340dd50c8d9d490fe380fed70ebbc7a67533b327e47d6f5c28a95"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/M23Feedback.json",
+              "bytes": 700,
+              "sha256": "82d3d8d4dc246686d9458f851e35571fa307c1a56c95e022c536d6cb7aa9c7a0"
+            },
+            {
+              "path": "unity/Unknown/Assets/_Project/Resources/T0Strings.json",
+              "bytes": 14558,
+              "sha256": "232ab03a285b9e35f7139d9eb5c9c8f164fb4b4d89639e935bbe557186347fa2"
+            }
+          ],
+          "checks": "Track contrast is repaired; outer peak clipping is still visible. Not the final geometry build."
+        },
+        {
+          "captureNumbers": [
+            104,
+            106,
+            107,
+            108
+          ],
+          "buildReportBytes": 410875885,
+          "fingerprint": "6c88870f889b0f59f156d1df49c340273515f3451a036065dc13ec1bda447d3e",
+          "inventory": "build-inventory-correction.json",
+          "checks": "Final actual reader, all six complete peak outlines/A-B labels/uncertainty bands, lower correspondence ground, protected 1/I/H shortcuts, Escape return to reader."
+        }
+      ],
+      "comparisonSaveBefore": {
+        "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+        "bytes": 8722,
+        "sha256": "fc95d7414a273d58bae0d9e50147d16a00e6e8f5a01277009f8ebe22c9e7a4d7"
+      },
+      "comparisonSaveAfter": {
+        "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+        "bytes": 8722,
+        "sha256": "fc95d7414a273d58bae0d9e50147d16a00e6e8f5a01277009f8ebe22c9e7a4d7"
+      },
+      "comparisonSaveUnchanged": true,
+      "afterUndoSave": {
+        "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+        "bytes": 8722,
+        "sha256": "9106b539ea7d152880f47cc36e88803878eaf014807c0a26e3915c88ea661a83"
+      },
+      "afterRedoSave": {
+        "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+        "bytes": 8722,
+        "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+      },
+      "finalPracticeBefore": [
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+          "bytes": 8722,
+          "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+        },
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/save.bak",
+          "bytes": 8722,
+          "sha256": "9106b539ea7d152880f47cc36e88803878eaf014807c0a26e3915c88ea661a83"
+        },
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/settings.json",
+          "bytes": 173,
+          "sha256": "1bce93fc4bf6555c699d994ad96e4018e9196bf6383f10f5adf539a857847e94"
+        }
+      ],
+      "finalPracticeAfter": [
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/save.json",
+          "bytes": 8722,
+          "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+        },
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/save.bak",
+          "bytes": 8722,
+          "sha256": "9106b539ea7d152880f47cc36e88803878eaf014807c0a26e3915c88ea661a83"
+        },
+        {
+          "path": "unity/Unknown/Builds/m23/boundary-reader/settings.json",
+          "bytes": 173,
+          "sha256": "1bce93fc4bf6555c699d994ad96e4018e9196bf6383f10f5adf539a857847e94"
+        }
+      ],
+      "finalPracticeFileInventory": [
+        "save.json",
+        "save.bak",
+        "settings.json"
+      ],
+      "finalPracticeAllBytesUnchanged": true,
+      "excludedAttempts": [
+        "Shift+Tab and navigation scroll produced no observed movement; unverified delivery is not success.",
+        "Coordinate clicks and a key were aborted by window_not_focused on pid69825; one owned-process restart restored usable input. No OS unlock or reboot performed.",
+        "Frame87 filename anticipated Undo but actually focused Cite. No Enter was sent there; two Tabs led to verified Undo in frame88 before execution."
+      ],
+      "processesStopped": true,
+      "operatingSystemReboot": false,
+      "actualHumanEvaluation": false,
+      "windowsPerformanceMeasured": false
+    }
   }
 }

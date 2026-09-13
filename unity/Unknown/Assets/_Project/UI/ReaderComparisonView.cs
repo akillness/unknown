@@ -37,6 +37,14 @@ namespace Tide.UI
                 var empty=Flow(row,0);empty.gameObject.AddComponent<LayoutElement>().flexibleWidth=1;
                 FlowText(empty,"고정한 비교창 없음\n현재 선택을 고정한 뒤 다른 자료나 구간을 선택하세요.",16,ink);
             }
+            // Nested chart cards own their ground; M21 bands cover only direct surface paragraphs.
+            if(surface!=null&&surface.workSurface!=null)
+                for(int i=0;i<row.childCount;i++)
+                {
+                    var ground=row.GetChild(i).gameObject.AddComponent<Image>();
+                    ground.color=new Color(paper.r,paper.g,paper.b,ReadingBandAlpha);
+                    ground.raycastTarget=false;
+                }
             FlowText(parent,"각 그래프는 자체 세로축 · 가로축은 조위 위상 H±시:분 · 결손은 연결하지 않음"+
                 (string.IsNullOrEmpty(view.Relationship)?"":"\n"+view.Relationship),15,ink);
         }

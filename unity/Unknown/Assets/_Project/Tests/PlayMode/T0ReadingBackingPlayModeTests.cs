@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using Tide.App;
 using Tide.Presentation;
+using Tide.UI;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -183,6 +184,110 @@ namespace Tide.Tests
    Assert.Greater(label.fontSize,helper.fontSize,where+": the action label outranks the helper");
    Assert.AreEqual(FontStyle.Bold,label.fontStyle,where+": only the action label is bold");
    Assert.AreEqual(FontStyle.Normal,helper.fontStyle,where+": the helper stays normal weight");
+  }
+
+  [UnityTest] public IEnumerator PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface()
+  {
+   Assert.IsNotNull(profile,"M20WorkSurface.asset missing");
+   Assert.IsNotNull(profile.workSurface,"M20 diagnostic surface must have its imported candidate");
+   Assert.IsFalse(profile.runtimeApproved,"the diagnostic candidate must remain unapproved");
+   if(CommandLineDiagnostic)
+    Assert.Ignore("--m20-ui-surface-diagnostic forces the gate on; the gate-off ink baseline is not observable");
+
+   Color baselineInk=default;float baselineRatio=0;
+   foreach(bool diagnostic in new[]{false,true})
+   {
+    profile.diagnosticOverride=diagnostic;
+    GameObject host=null;T0GameSession game=null;
+    yield return Boot((h,g)=>{host=h;game=g;});
+    Assert.IsTrue(game.PatrolComplete,"use the real completed-C1 fixture");
+    Assert.IsTrue(game.Interface.Activate("settings"));
+    for(int i=0;i<5;i++)Assert.IsTrue(game.Interface.Activate("text-scale"));
+    Assert.IsTrue(game.Interface.Activate("alignment-practice"));
+    Assert.IsTrue(game.AlignmentPracticeActive);
+    Assert.AreEqual(1.5f,game.Interface.TextScale);
+    for(int i=0;i<3;i++)
+    {
+     Assert.IsTrue(game.Interface.Activate("practice-slot-"+i));
+     Assert.IsTrue(game.Interface.Activate("practice-a-"+i));
+     Assert.IsTrue(game.Interface.Activate("practice-b-"+i));
+    }
+    yield return null;yield return null;yield return null;
+    Canvas.ForceUpdateCanvases();
+
+    // Select the actual readout by content, independently of the paragraph identity used by M21.
+    var paragraph=host.GetComponentsInChildren<Text>().Single(t=>t.text.StartsWith("대응 1: A",StringComparison.Ordinal));
+    Assert.Greater(paragraph.preferredHeight,paragraph.fontSize,"exercise the multiline correspondence readout");
+    var surface=Live(host,"Work Surface");
+   var tracks=host.GetComponentsInChildren<AlignmentPracticeChart>().Single();
+   var trackMesh=tracks.canvasRenderer.GetMesh();
+   Assert.IsNotNull(trackMesh,"exercise the actual rendered track mesh");
+    var plotRect=tracks.GetPixelAdjustedRect();
+    foreach(var vertex in trackMesh.vertices)
+    {
+     Assert.GreaterOrEqual(vertex.x,plotRect.xMin-.01f,"keep the complete first peak inside the chart");
+     Assert.LessOrEqual(vertex.x,plotRect.xMax+.01f,"keep the complete last peak inside the chart");
+    }
+    if(!diagnostic)
+    {
+     baselineInk=Body(host).color;
+     Assert.AreEqual(baselineInk,paragraph.color,"correspondence uses the committed body ink");
+     baselineRatio=Ratio(paragraph.color,OverBlack(surface.GetComponent<Image>().color));
+    Assert.AreEqual(baselineInk,tracks.color,"paired tracks use the committed body ink");
+     Assert.IsNull(BandOf(paragraph),"gate off must preserve the unbacked default");
+     continue;
+    }
+
+    Assert.AreEqual(1,Backings(surface,M20Backing).Length,"the actual M20 diagnostic ground must be present");
+    Assert.AreSame(profile.workSurface,Backings(surface,M20Backing)[0].texture);
+    Assert.AreEqual(baselineInk,Body(host).color,"body ink must not change to repair contrast");
+    Assert.AreEqual(baselineInk,paragraph.color,"correspondence ink must not change to repair contrast");
+    var band=BandOf(paragraph);
+    Assert.IsNotNull(band,"the practice correspondence paragraph must have a reading ground behind its glyphs");
+    Assert.IsFalse(band.raycastTarget,"the reading ground must not intercept practice input");
+    Assert.IsTrue(band.GetComponent<LayoutElement>().ignoreLayout,"the ground must not displace the readout");
+    Assert.Greater(band.color.a,0f);
+    Assert.LessOrEqual(band.color.a,MaxBandAlpha,"preserve the translucent reading strip");
+    var bandRect=WorldRect(band.rectTransform);
+    var textRect=WorldRect(paragraph.rectTransform);
+    Assert.LessOrEqual(bandRect.xMin,textRect.xMin+.01f,"cover the resolved left edge");
+    Assert.GreaterOrEqual(bandRect.xMax,textRect.xMax-.01f,"cover the resolved right edge");
+    Assert.GreaterOrEqual(bandRect.yMax,textRect.yMax-.01f,"cover the resolved top edge");
+    Assert.LessOrEqual(bandRect.yMin,textRect.yMin+.01f,"cover the resolved bottom edge");
+    Assert.GreaterOrEqual(band.rectTransform.rect.height,
+     Mathf.Max(paragraph.rectTransform.rect.height,paragraph.preferredHeight)-.01f,
+     "cover every flowed line, including glyphs below the assigned layout rect at 150%");
+    float ratio=Ratio(paragraph.color,OverBlack(band.color));
+    Assert.Greater(ratio,MinBodyRatio,"correspondence ink must meet the existing worst-case body contrast acceptance");
+    Assert.Greater(ratio,MinBaselineFraction*baselineRatio,"recover the existing fraction of gate-off contrast");
+   var tracksGround=tracks.transform.parent.GetComponent<Image>();
+   Assert.IsNotNull(tracksGround,"paired tracks need their own reading ground over the dark diagnostic surface");
+   Assert.IsFalse(tracksGround.raycastTarget,"the track ground must not intercept practice input");
+   var tracksRect=WorldRect(tracks.rectTransform);
+   var tracksGroundRect=WorldRect(tracksGround.rectTransform);
+   Assert.LessOrEqual(tracksGroundRect.xMin,tracksRect.xMin+.01f);
+   Assert.GreaterOrEqual(tracksGroundRect.xMax,tracksRect.xMax-.01f);
+   Assert.LessOrEqual(tracksGroundRect.yMin,tracksRect.yMin+.01f);
+   Assert.GreaterOrEqual(tracksGroundRect.yMax,tracksRect.yMax-.01f);
+   Assert.AreEqual(baselineInk,tracks.color,"do not recolor tracks to repair their contrast");
+   Assert.Greater(Ratio(tracks.color,OverBlack(tracksGround.color)),MinBodyRatio,
+    "paired tracks must meet the existing worst-case contrast acceptance");
+   bool hasOpaqueStroke=false;
+   foreach(var vertex in trackMesh.colors32)
+   {
+    if(vertex.a!=255)continue; // uncertainty fills are translucent; their outlines carry the shape
+    hasOpaqueStroke=true;
+    Assert.Greater(Ratio(vertex,OverBlack(tracksGround.color)),MinBodyRatio,
+     "the rendered mesh, not only Graphic.color, must retain contrasting track outlines");
+   }
+   Assert.IsTrue(hasOpaqueStroke,"the paired-track mesh must render opaque outlines");
+   foreach(var label in tracks.GetComponentsInChildren<Text>())
+   {
+    Assert.AreEqual(baselineInk,label.color);
+    Assert.Greater(Ratio(label.color,OverBlack(tracksGround.color)),MinBodyRatio);
+   }
+    Assert.AreEqual(originalApproved,profile.runtimeApproved,"a reading-ground fix must never promote the candidate");
+   }
   }
 
   [UnityTest] public IEnumerator M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates()

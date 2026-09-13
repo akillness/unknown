@@ -8,7 +8,7 @@ owner: game-qa
 
 # M23 · build-inventory.json
 
-[OBSERVED] 최종 macOS 앱315파일의 정렬된 경로·bytes·SHA-256. 합계410875105B가 실제 BuildReport와 같다. 앱 전체는 로컬 Builds에만 보관하며 이 목록은 다운로드 바이너리가 아니다.
+[OBSERVED] 초기35ebdc5 전달의 macOS 앱315파일/410875105B 목록이다. “최종”은 당시 빌드를 뜻한다. 현행은 build-inventory-correction.json이며 중간 reader/practice-contrast 목록과도 구분한다. 앱 전체는 로컬 Builds에만 보관하며 이 목록은 다운로드 바이너리가 아니다.
 
 | 파일 | bytes | SHA-256 |
 |---|---:|---|

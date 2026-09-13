@@ -32,6 +32,12 @@ namespace Tide.App
 
         void ReaderComparisonScreen(GameScreen screen)
         {
+            if(pinnedReaderRange!=null&&
+                !Definition.Records[pinnedReaderRange.RecordId].VisibleAt.Any(b=>Simulation.IsAvailable(Journal.State,b)))
+            {
+                pinnedReaderRange=null;
+                comparisonResetScroll=true;
+            }
             var loaded=Journal.State.LoadedRecordId;
             if(loaded==null)return;
             if(comparisonRecord==null||comparisonLoadedRecord!=loaded||
@@ -41,7 +47,7 @@ namespace Tide.App
             var phases=Definition.Records[comparisonRecord].Phases;
             var start=Journal.State.Get("windowStart:"+comparisonRecord)??phases[0];
             var end=Journal.State.Get("windowEnd:"+comparisonRecord)??phases[phases.Count-1];
-            // Deliberate reader window edits/Undo update the current view, never the pinned snapshot.
+            // Window edits and Undo preserve a pinned window only while its record remains visible.
             if(start!=comparisonJournalStart||end!=comparisonJournalEnd)SelectReaderComparison(comparisonRecord);
             var current=ReaderRange(comparisonRecord,comparisonStart,comparisonEnd);
             screen.ReaderComparison=new ReaderComparisonView { Current=current,Pinned=pinnedReaderRange,

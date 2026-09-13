@@ -1,16 +1,23 @@
 ---
-updated: 2026-09-10
+updated: 2026-09-14
 cycle: 20260909-preproduction-c5
 status: current
 supersedes: null
 owner: game-presentation-director
 describes: _workspace/current/presentation/steam-game-plan.html
-revision: r7 (R7d 최종 덱 재빌드 — QA 재검증 6 이후 대장을 s19 63칸에 재대조. 생성기 로직 변경 0건). r3·r4·r5·r6 절은 역사로 남긴다
+revision: r7 generator + M23 correction ledger refresh (2026-09-14; C7 66/39, all63 browser cells match). r3–r7 historical measurements remain below
 ---
 
-# steam-game-plan.html 메타 (r7)
+# steam-game-plan.html 메타 · M23 대장 동기
 
-## 소유와 생성
+## 현행 M23 후속 교정 · 2026-09-14
+
+- 기존 `regen-cycle-ledger.py`→`generate-deck.mjs`로만 재생성했다.176개 결함/dropped0, C7총66/closed39. 생성기 로직은 수정하지 않았다.
+- 덱36장/36목차/본문 최대6줄,101263B·SHA256 `878d7827658b87c9f4fa0a4066a3783ff17828f68cff9e3cbd269ad2fb2ec9f7`. 자체 오류0, 기존 외부 링크16장 경고1 유지.
+- 새 브라우저1440×900에서 실제 s19의7행×9칸=63개 값을 대장과 대조했다. 표 경계 전체가 viewport 안에 있고 직접 스틸에서66/39를 확인했다. 증거: `systems/tech-verification/m23/native/ledger-correction-slide-19.png`(1800×1125).
+- 검사514/514는 문서/schema/산술 SPEC-PASS, runtimeStatus NOT-MEASURED다. 이 덱은 사람 평가나 Base·출시 승인이 아니다. 아래 r3–r7 수치/작업 경계는 각 날짜의 역사다.
+
+## 초기 r3–r7의 소유와 생성
 - 생성기: `_workspace/current/presentation/generate-deck.mjs`.
 - 개요: `_workspace/current/presentation/deck-outline.md`.
 - HTML은 **생성물**이다. 내용을 바꾸려면 HTML이 아니라 생성기를 고치고 다시 빌드한다.

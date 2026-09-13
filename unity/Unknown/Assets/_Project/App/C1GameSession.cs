@@ -25,6 +25,7 @@ namespace Tide.App
             Definition.Beats.FirstOrDefault(b=>b.Id!=C1PatrolDefinition.BeatId && b.Id!=C1SignatureDefinition.BeatId && Simulation.IsAvailable(state,b.Id)&&!Simulation.IsComplete(state,b.Id))?.Id??"t0-b3";
         public void ContinueToPatrol()
         {
+            if(AlignmentPracticeActive)return;
             CloseTool();document=null;overlay=null;
             SubmitImmediate(new PuzzleCommand("EnterPatrol"));
         }

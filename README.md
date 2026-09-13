@@ -8,11 +8,11 @@
 
 두 기록의 **동시 비교**, 직접 고르는 **서명 근거와 출처 계보**, 본편과 격리된 **조위정합 연습장**, 스크롤해도 유지되는 **작업저장·미리보기·확정저장 피드백**을 구현했습니다. 미기록 후보는 확정을 막으며 이전에 기록한 근거는 보존합니다. 같은 원본의 사본을 독립 근거로 세지 않습니다.
 
-| 두 자료·시간창 동시 비교 · 150% | 확정 후 내구 저장 피드백 · 150% |
+| 두 자료·시간창 동시 비교 · 후속 진단 검증 150% | 초기 35ebdc5 확정 후 내구 저장 피드백 · 150% |
 |---|---|
-| ![M23 실제 macOS 두 기록 비교](_workspace/current/systems/tech-verification/m23/native/59-release-simultaneous-ledger-and-pinned-plate-150.png) | ![M23 실제 서명 확정과 저장 완료](_workspace/current/systems/tech-verification/m23/native/54-release-durable-signature-confirmation-150.png) |
+| ![M23 실제 macOS 두 기록 비교](_workspace/current/systems/tech-verification/m23/native/86-delivery-restarted-pinned-pair-150.png) | ![M23 실제 서명 확정과 저장 완료](_workspace/current/systems/tech-verification/m23/native/54-release-durable-signature-confirmation-150.png) |
 
-- **검증:** Unity 고유177개 통과(EditMode64 + PlayMode112 + 별도 boot1), Node7개·정본50개·증거 그래프18개 통과. macOS 앱315파일/410,875,105B를 빌드하고 실제 키보드·클릭·앱 재시작 복구를 확인했습니다. OS 재부팅·사람 이해·Windows 성능 증거는 아닙니다.
+- **검증:** 후속 교정은 Unity 고유186개 통과(EditMode64 + PlayMode121 + 별도 boot1). 외부 패키지 예제1개와 반복 실행은 제외합니다. macOS 앱315파일/410,875,885B, 실제 Undo/Redo의 고정 해제·150% 진단 화면·연습 종료/저장 격리를 확인했습니다. 이전 177개·Node7·정본50·그래프18·서명 재시작 증거는 원래 빌드 기록으로 보존합니다. OS 재부팅·사람 이해·Windows 성능 증거는 아닙니다.
 - **실행:** 로컬 `unity/Unknown/Builds/T0-mac/Unknown.app`. 별도 연습장은 Editor 또는 네이티브 실행 인자 `--m23-alignment-practice`에서만 열립니다. 정식 초회 평가에는 이 인자를 쓰지 않습니다.
 - **경계:** 현재 범위는 T0→C1-b2입니다. 사람 n=0, 강한 P1/P2 보존 감사 blocked, R8/R9 Base gate와 전체450–540분·Windows 실측은 미충족입니다. M20 r02·미승인 아트/상업 상태를 승격하지 않았습니다.
 
