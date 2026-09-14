@@ -15,7 +15,7 @@
 - **검증:** 새 Blender 출력 15개와 리그/클립 계약, Unity 임포트, 기본 빌드 315파일/**411,041,089B**, 실제 손 접촉·복귀와 비교 전후 저장 해시 불변을 확인했습니다. 아래 M23의 187개 테스트는 당시 증거이며 M24에서 재실행한 수치가 아닙니다. 30fps는 영상 규격이지 성능 실측이 아닙니다.
 - **경계:** 원본 후보 `runtimeEligible:false`, 사람 n=0·Base/R8/R9·강한 P1/P2 보존 감사·Windows/전체 캠페인·상업 승인 상태는 유지합니다. M22/M23 영상과 영수증을 덮어쓰지 않았습니다.
 
-[Blender 원본](assets/generated/3d/seorin-m22/r01/Seorin_Character.blend) · [정확한 M24 검증 영수증](_workspace/current/systems/tech-verification/m24/verification.json) · [영상 출처와 편집 구간](docs/media/gameplay-m24/provenance.json)
+[M24 Blender 원본 · 납품 커밋 고정](https://github.com/akillness/unknown/blob/86fb88fa06cd72ffd5f777eb9ecf0fe0e81faace/assets/generated/3d/seorin-m22/r01/Seorin_Character.blend) · [정확한 M24 검증 영수증](_workspace/current/systems/tech-verification/m24/verification.json) · [영상 출처와 편집 구간](docs/media/gameplay-m24/provenance.json)
 
 ## 이전 코어 구현 · M23 (2026-09-14)
 
@@ -46,7 +46,7 @@ Blender MCP에서 직접 저작한 **한서린과 조작용 양손**을 기본 �
 - **검증:** EditMode **56**, PlayMode **100**, 별도 격리 부팅 **1**, 고유 **157건** 통과. 진단 플래그 없는 macOS 빌드를 실제로 조작했습니다. 영상의 30fps는 인코딩 규격이며 성능 실측이 아닙니다.
 - **네이티브 힌트 확인:** [150% 제안·키보드 초점](docs/media/gameplay-m22/hint-offer-150.png) · [Enter로 닫은 뒤 판독기 유지](docs/media/gameplay-m22/hint-dismiss-150.png) · [자동 공개 없는 도움 메뉴](docs/media/gameplay-m22/hint-help-unrevealed-150.png). 180초 설정을 단축하지 않은 실제 대기·재제안과 입력을 확인했습니다.
 
-실행 파일: `unity/Unknown/Builds/T0-mac/Unknown.app` · [정확한 검증 영수증](_workspace/current/systems/tech-verification/m22/verification.json) · [Blender 원본](assets/generated/3d/seorin-m22/r01/) · [비교작 조사와 적용 범위](_workspace/current/planning/t0-research-to-implementation-r01.md)
+실행 파일의 작업 경로: `unity/Unknown/Builds/T0-mac/Unknown.app` (현재 빌드로 갱신됨) · [당시의 정확한 검증 영수증](_workspace/current/systems/tech-verification/m22/verification.json) · [M22 Blender 원본 · 이전 커밋 고정](https://github.com/akillness/unknown/tree/fdcdc27e7dbda829f253f8cee0266f6b1427f27b/assets/generated/3d/seorin-m22/r01/) · [비교작 조사와 적용 범위](_workspace/current/planning/t0-research-to-implementation-r01.md)
 
 기존 인물·삽입·판독 영상은 교정 전 M22 네이티브 빌드이며, 새 힌트 스틸은 입력·중단 계약 교정 후 빌드입니다. 두 빌드 지문과 캡처 범위는 각각 [모션 출처](docs/media/gameplay-m22/provenance.json)와 [힌트 UI 출처](docs/media/gameplay-m22/native-contract-provenance.json)에 분리했습니다.
 
