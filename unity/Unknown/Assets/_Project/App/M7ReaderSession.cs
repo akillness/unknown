@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Tide.App
 {
     // RFC-CX-013 lane ReaderStage: M7 optical reader 3D stage (mesh, record set, lighting, crank motion).
-    // Gate: profile.runtimeApproved || --m7-reader-diagnostic. Fallback = hub stays shown, no stage change.
+    // Gate: profile.runtimeApproved || profile.diagnosticOverride || --m7-reader-diagnostic. Fallback = hub stays shown, no stage change.
     // Camera is posed once on entry and never touched again (presentation/cinematic-gameplay-m6.md:11); C1GameSession restores it on exit.
     public sealed partial class T0GameSession
     {
@@ -27,7 +27,7 @@ namespace Tide.App
                 return readerStageProfile;
             }
         }
-        bool M7ReaderGate=>ReaderStageProfile!=null&&(ReaderStageProfile.runtimeApproved||Environment.GetCommandLineArgs().Contains("--m7-reader-diagnostic"));
+        bool M7ReaderGate=>ReaderStageProfile!=null&&(ReaderStageProfile.runtimeApproved||ReaderStageProfile.diagnosticOverride||M7EditorPreview||Environment.GetCommandLineArgs().Contains("--m7-reader-diagnostic"));
         // True when the reader stage should be shown instead of the hub (stage=="reader").
         bool M7ReaderStageEnabled=>tool=="reader"&&!PatrolActive&&M7ReaderGate;
         public bool M7ReaderStageActive=>shownStage=="reader";

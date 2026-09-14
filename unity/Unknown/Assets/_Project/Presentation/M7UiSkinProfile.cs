@@ -5,6 +5,9 @@ namespace Tide.Presentation {
     [CreateAssetMenu(menuName="Unknown/M7 UI Skin")]
     public sealed class M7UiSkinProfile:ScriptableObject {
         public bool runtimeApproved;
+        // In-memory diagnostic activation for the Editor and tests (M20/M22 parity). [NonSerialized] so previewing
+        // never persists an approval into the asset.
+        [System.NonSerialized] public bool diagnosticOverride;
         public Texture2D paperPanel;
         public Texture2D bronzeFrame;
         public Color ink=new Color(23/255f,50/255f,56/255f);

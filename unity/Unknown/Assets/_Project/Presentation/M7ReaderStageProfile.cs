@@ -6,6 +6,9 @@ namespace Tide.Presentation {
     [CreateAssetMenu(menuName="Unknown/M7 Reader Stage")]
     public sealed class M7ReaderStageProfile:ScriptableObject {
         public bool runtimeApproved;
+        // In-memory diagnostic activation for the Editor and tests (M20/M22 parity). [NonSerialized] so previewing
+        // never persists an approval into the asset.
+        [System.NonSerialized] public bool diagnosticOverride;
         public GameObject reader;
         public GameObject recordSet;
         // Stage space: reader prefab at origin, bench top = y 0. Blender (x,y,z) -> Unity (x,z,y); values are placeholders the builder overwrites from imported bounds.

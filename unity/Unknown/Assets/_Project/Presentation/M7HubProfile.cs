@@ -5,6 +5,9 @@ namespace Tide.Presentation {
     [CreateAssetMenu(menuName="Unknown/M7 Hub")]
     public sealed class M7HubProfile:ScriptableObject {
         public bool runtimeApproved;
+        // In-memory diagnostic activation for the Editor and tests (M20/M22 parity). [NonSerialized] so it can
+        // never be saved into the asset: previewing the candidate for one run must not leave an approval on disk.
+        [System.NonSerialized] public bool diagnosticOverride;
         public Material floorAndWall;
         public Material workbench;
         public Material plateShelf;

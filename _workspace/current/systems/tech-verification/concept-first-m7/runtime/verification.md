@@ -145,3 +145,20 @@ M7_IMPORT_ALL_DONE
 - gate-three의 런타임 사용 (`SM_Env_GateThree`는 내보냈지만 런타임이 인스턴스화하지 않는다).
 
 [CARRIED] 승격 경로는 **디렉터 전용 승인 + 별도 감사**다. 레인별 메뉴는 `Tools/M7/Approve hub shell (director only)`, `Tools/M7/Approve UI skin (director only)`, `Tools/M7/Approve reader stage (director only)`이며, 그 전에 [`handoff/asset-runbook.md`](../../../../handoff/asset-runbook.md) §3.1의 **8개 감사 항목**을 채운 RFC를 `handoff/rfc-inbox/`에 제출해 디렉터가 `production/decision-log.md`에 판정을 append해야 한다. 실행자는 `decision-log.md`를 직접 편집하지 않는다. 이 문서는 그 감사의 기술 입력이며 판정 자체가 아니다.
+
+## 에디터 모드 확인 경로 (2026-09-13 추가)
+
+[OBSERVED] Unity Hub로 프로젝트를 열어 Play만 눌러 확인하는 경로를 배선했다. 막고 있던 두 가지: (1) `Library/`가 gitignore라 새 클론/새 Hub 열기는 빈 무제 씬으로 시작해 `boot.unity`의 `T0Entry`가 실행되지 않았다. (2) 세 M7 게이트가 `runtimeApproved`와 `Environment.GetCommandLineArgs()`만 읽어, 커스텀 인자를 전달할 수 없는 Hub 실행에서는 켤 방법이 없었다.
+
+[OBSERVED] 배선 내용:
+
+- `Presentation/M7{Hub,UiSkin,ReaderStage}Profile.cs`에 `[NonSerialized] public bool diagnosticOverride`를 추가했다. M20(`M20WorkSurfaceProfile.cs:25`)·M22(`M22EmbodimentProfile.cs:10`)와 동일한 관례이며, `[NonSerialized]`이므로 프리뷰가 에셋에 승인으로 굳지 않는다.
+- 세 게이트는 이제 `runtimeApproved || diagnosticOverride || M7EditorPreview || --m7-<lane>-diagnostic`이다.
+- `App/M7EditorPreview.cs` — `#if UNITY_EDITOR`에서만 `EditorPrefs`를 읽고, 플레이어 빌드에는 `false` 상수로 컴파일된다. `Application.isBatchMode`일 때 강제로 닫혀 헤드리스 검사가 결정적으로 유지된다.
+- `Editor/M7EditorPreviewMenu.cs` — `Tools/M7/Editor preview`(체크 토글), `Tools/M7/Report gate state`, `Tools/T0/Open boot scene`, `Tools/T0/Play from boot scene`, 그리고 에디터 세션당 1회 빈 씬일 때만 `boot.unity`를 여는 `[InitializeOnLoadMethod]`. 이 파일은 `runtimeApproved`를 쓰지 않는다.
+
+[OBSERVED] 검사 결과: EditMode **64/64**, PlayMode **127/128 + 조건부 스킵 1**(`T0BootSceneTests`는 명시적 `--t0-save-dir`를 요구하는 선재 스킵). 신규 `Tests/PlayMode/M7EditorPreviewPlayModeTests.cs` **5/5** 통과 — 배치 가드(프리뷰가 헤드리스에서 어떤 게이트도 열지 못함), 레인별 `diagnosticOverride` 게이트 개방, 레인 간 독립성, 그리고 세 경우 모두 `runtimeApproved`가 기록되지 않음을 고정한다. 배선 자체는 `Tide.EditorTools.M7EditorPreviewMenu.VerifyEditorPreviewWiring`으로 확인했다: `M7_PREVIEW_WIRING OK bootScene=Assets/_Project/Scenes/boot.unity entryPoint=True buildScene0=Assets/_Project/Scenes/boot.unity prefKey=Tide.M7.EditorPreview`(로그 `m7-preview-wiring.log`).
+
+[OBSERVED] 이 시점의 게이트 상태는 `M7_GATE_STATE editorPreview=False hub/ui/reader 전부 approved=True`다 — 병행 세션이 `3a7d1e3 feat(game): promote M7 concept resources to runtime`으로 세 프로파일을 이미 승격했다. 따라서 **지금은 프리뷰 토글 없이도** Play에서 M7 룩이 보인다. 프리뷰 스위치가 필요한 경우는 후보를 재임포트해 `runtimeApproved`가 다시 false로 돌아갈 때(빌더가 임포트 시 항상 false로 강제한다)와, 승인/미승인 룩을 A/B로 비교할 때다.
+
+[CARRIED] **미검증**: 대화형 에디터 세션에서의 실제 Hub 열기·Play 렌더는 사람이 확인해야 한다(배치 실행은 `isBatchMode`로 프리뷰가 닫히고 `[InitializeOnLoadMethod]` 자동 열기도 건너뛴다). 또한 에디터 GUI의 Test Runner로 PlayMode 검사를 돌릴 때 프리뷰를 켜 두면 게이트 오프 계약 검사가 실패한다 — 토글 로그가 이 점을 경고한다.

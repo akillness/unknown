@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="64" result="Passed" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:56Z" duration="3.5377803">
+  <test-suite type="TestSuite" id="1000" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:56Z" duration="3.537780" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1076" name="Tide.Tests.Sim.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Sim.dll" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:56Z" duration="3.533052" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="24016" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1077" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:56Z" duration="3.532817" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1078" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:56Z" duration="3.532652" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AlignmentPracticeTests" fullname="Tide.Tests.AlignmentPracticeTests" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.051115" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1003" name="ClosedIntervalsRequireStrictSeparationAndALockedBaselineEvenWithZeroResidual" fullname="Tide.Tests.AlignmentPracticeTests.ClosedIntervalsRequireStrictSeparationAndALockedBaselineEvenWithZeroResidual" methodname="ClosedIntervalsRequireStrictSeparationAndALockedBaselineEvenWithZeroResidual" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="2038338012" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.013699" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="LockedStateRejectsEditsAndTransferRequiresFreshCorrespondences" fullname="Tide.Tests.AlignmentPracticeTests.LockedStateRejectsEditsAndTransferRequiresFreshCorrespondences" methodname="LockedStateRejectsEditsAndTransferRequiresFreshCorrespondences" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="414496256" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.024677" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="MaximumResidualUsesAuthoredInclusiveLimitRatherThanAverageCancellation" fullname="Tide.Tests.AlignmentPracticeTests.MaximumResidualUsesAuthoredInclusiveLimitRatherThanAverageCancellation" methodname="MaximumResidualUsesAuthoredInclusiveLimitRatherThanAverageCancellation" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="1644415768" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.000284" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="ReusingOnePeakCannotProduceAValidBaselineEvenWithZeroResidual" fullname="Tide.Tests.AlignmentPracticeTests.ReusingOnePeakCannotProduceAValidBaselineEvenWithZeroResidual" methodname="ReusingOnePeakCannotProduceAValidBaselineEvenWithZeroResidual" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="1348690004" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.000161" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="SuggestionNeverAppliesOrLocksAndEveryValidDefaultOffsetKeepsOverlapUnknown" fullname="Tide.Tests.AlignmentPracticeTests.SuggestionNeverAppliesOrLocksAndEveryValidDefaultOffsetKeepsOverlapUnknown" methodname="SuggestionNeverAppliesOrLocksAndEveryValidDefaultOffsetKeepsOverlapUnknown" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="2012013427" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.003909" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="WrongCorrespondenceCannotLockDespiteSmallResidual" fullname="Tide.Tests.AlignmentPracticeTests.WrongCorrespondenceCannotLockDespiteSmallResidual" methodname="WrongCorrespondenceCannotLockDespiteSmallResidual" classname="Tide.Tests.AlignmentPracticeTests" runstate="Runnable" seed="86567504" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.000240" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1008" name="AsideImmersionContractTests" fullname="Tide.Tests.AsideImmersionContractTests" classname="Tide.Tests.AsideImmersionContractTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.010835" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="AuthoredSafeObjectiveStillWinsOverFallback" fullname="Tide.Tests.AsideImmersionContractTests.AuthoredSafeObjectiveStillWinsOverFallback" methodname="AuthoredSafeObjectiveStillWinsOverFallback" classname="Tide.Tests.AsideImmersionContractTests" runstate="Runnable" seed="73296032" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.002932" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1011" name="MissingAndRedactedEarlyObjectivesUseSafeResourceFallback" fullname="Tide.Tests.AsideImmersionContractTests.MissingAndRedactedEarlyObjectivesUseSafeResourceFallback" classname="Tide.Tests.AsideImmersionContractTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.007232" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1009" name="MissingAndRedactedEarlyObjectivesUseSafeResourceFallback(&quot;t0-b1&quot;)" fullname="Tide.Tests.AsideImmersionContractTests.MissingAndRedactedEarlyObjectivesUseSafeResourceFallback(&quot;t0-b1&quot;)" methodname="MissingAndRedactedEarlyObjectivesUseSafeResourceFallback" classname="Tide.Tests.AsideImmersionContractTests" runstate="Runnable" seed="628539999" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.005711" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="MissingAndRedactedEarlyObjectivesUseSafeResourceFallback(&quot;t0-b2&quot;)" fullname="Tide.Tests.AsideImmersionContractTests.MissingAndRedactedEarlyObjectivesUseSafeResourceFallback(&quot;t0-b2&quot;)" methodname="MissingAndRedactedEarlyObjectivesUseSafeResourceFallback" classname="Tide.Tests.AsideImmersionContractTests" runstate="Runnable" seed="325883363" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.001037" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="C1PatrolTests" fullname="Tide.Tests.C1PatrolTests" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.424795" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1019" name="ConfirmationIsOneReplayableUndoableChapterTransaction" fullname="Tide.Tests.C1PatrolTests.ConfirmationIsOneReplayableUndoableChapterTransaction" methodname="ConfirmationIsOneReplayableUndoableChapterTransaction" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="615233482" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.117280" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="EitherMissingClueBlocksAnOtherwiseReadyConfirmation" fullname="Tide.Tests.C1PatrolTests.EitherMissingClueBlocksAnOtherwiseReadyConfirmation" methodname="EitherMissingClueBlocksAnOtherwiseReadyConfirmation" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="1124566548" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.032131" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="EntryRequiresCompletedT0AndDoesNotCompleteC1" fullname="Tide.Tests.C1PatrolTests.EntryRequiresCompletedT0AndDoesNotCompleteC1" methodname="EntryRequiresCompletedT0AndDoesNotCompleteC1" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="2133696339" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.019614" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="EveryInvalidConfigurationAndMissingRequirementRejectsWithoutWorldEffects" fullname="Tide.Tests.C1PatrolTests.EveryInvalidConfigurationAndMissingRequirementRejectsWithoutWorldEffects" methodname="EveryInvalidConfigurationAndMissingRequirementRejectsWithoutWorldEffects" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="1556557690" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.022148" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="EveryInvalidPreviewRecoversFreelyAndDoubleFoldsRestoreEachBranch" fullname="Tide.Tests.C1PatrolTests.EveryInvalidPreviewRecoversFreelyAndDoubleFoldsRestoreEachBranch" methodname="EveryInvalidPreviewRecoversFreelyAndDoubleFoldsRestoreEachBranch" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="2000680580" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.043954" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="FreeBypassOnlyRecoversPreviewAndPreservesAlreadyObservedClue" fullname="Tide.Tests.C1PatrolTests.FreeBypassOnlyRecoversPreviewAndPreservesAlreadyObservedClue" methodname="FreeBypassOnlyRecoversPreviewAndPreservesAlreadyObservedClue" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="482453772" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.023979" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="FutureSchemaRefusesBeforeBackupFallback" fullname="Tide.Tests.C1PatrolTests.FutureSchemaRefusesBeforeBackupFallback" methodname="FutureSchemaRefusesBeforeBackupFallback" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="1154615865" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.082397" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="LegacyPhysicalPlayerSaveMigratesWithoutChangingCommandsOrIdentity" fullname="Tide.Tests.C1PatrolTests.LegacyPhysicalPlayerSaveMigratesWithoutChangingCommandsOrIdentity" methodname="LegacyPhysicalPlayerSaveMigratesWithoutChangingCommandsOrIdentity" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="14141256" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.057107" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="PacketRejectsMissingInitializationAndForbiddenBypassGrants" fullname="Tide.Tests.C1PatrolTests.PacketRejectsMissingInitializationAndForbiddenBypassGrants" methodname="PacketRejectsMissingInitializationAndForbiddenBypassGrants" classname="Tide.Tests.C1PatrolTests" runstate="Runnable" seed="478773952" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:53Z" duration="0.022975" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1023" name="C1SignatureTests" fullname="Tide.Tests.C1SignatureTests" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:54Z" duration="0.821050" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1024" name="ActualPriorV2SaveMigratesWithoutChangingReplayIdentityOrOriginalBytes" fullname="Tide.Tests.C1SignatureTests.ActualPriorV2SaveMigratesWithoutChangingReplayIdentityOrOriginalBytes" methodname="ActualPriorV2SaveMigratesWithoutChangingReplayIdentityOrOriginalBytes" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="1120873124" result="Passed" start-time="2026-09-14 02:18:53Z" end-time="2026-09-14 02:18:54Z" duration="0.456984" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="AtomicCompletionUndoRedoReplayAndResetPreserveUnresolvedRegion" fullname="Tide.Tests.C1SignatureTests.AtomicCompletionUndoRedoReplayAndResetPreserveUnresolvedRegion" methodname="AtomicCompletionUndoRedoReplayAndResetPreserveUnresolvedRegion" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="387624333" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.074269" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="ConfirmationNeedsMaskComparisonAndExplicitDistinctSourceProof" fullname="Tide.Tests.C1SignatureTests.ConfirmationNeedsMaskComparisonAndExplicitDistinctSourceProof" methodname="ConfirmationNeedsMaskComparisonAndExplicitDistinctSourceProof" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="1299424164" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.064098" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="CopiesAreExplicitIdempotentAndCannotFormIndependentProof" fullname="Tide.Tests.C1SignatureTests.CopiesAreExplicitIdempotentAndCannotFormIndependentProof" methodname="CopiesAreExplicitIdempotentAndCannotFormIndependentProof" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="98188943" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.027691" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="CopyProofRequiresRevealedSourceAndCannotBypassComparison" fullname="Tide.Tests.C1SignatureTests.CopyProofRequiresRevealedSourceAndCannotBypassComparison" methodname="CopyProofRequiresRevealedSourceAndCannotBypassComparison" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="827325778" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.028105" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="EntryRequiresPatrolAndDoesNotCompleteOrGrantCopies" fullname="Tide.Tests.C1SignatureTests.EntryRequiresPatrolAndDoesNotCompleteOrGrantCopies" methodname="EntryRequiresPatrolAndDoesNotCompleteOrGrantCopies" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="644664541" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.017156" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="PacketRejectsSameRootProofAndResolvableCopySelfReference" fullname="Tide.Tests.C1SignatureTests.PacketRejectsSameRootProofAndResolvableCopySelfReference" methodname="PacketRejectsSameRootProofAndResolvableCopySelfReference" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="143668616" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.026836" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="RejectedPairsKeepRecordedEvidenceAndReversedCopyProofSurvivesUndoReplayAndFolding" fullname="Tide.Tests.C1SignatureTests.RejectedPairsKeepRecordedEvidenceAndReversedCopyProofSurvivesUndoReplayAndFolding" methodname="RejectedPairsKeepRecordedEvidenceAndReversedCopyProofSurvivesUndoReplayAndFolding" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="1356534611" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.042629" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="RiskTrialsNeverDamageSourceAndResetNeverGrantsEvidence" fullname="Tide.Tests.C1SignatureTests.RiskTrialsNeverDamageSourceAndResetNeverGrantsEvidence" methodname="RiskTrialsNeverDamageSourceAndResetNeverGrantsEvidence" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="422903625" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.024179" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="TrialRequiresObservationAndExplicitChoiceAndSelectionInvalidatesTrial" fullname="Tide.Tests.C1SignatureTests.TrialRequiresObservationAndExplicitChoiceAndSelectionInvalidatesTrial" methodname="TrialRequiresObservationAndExplicitChoiceAndSelectionInvalidatesTrial" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="2119161492" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.032827" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="UnsupportedIdsCannotMutatePrerequisiteReadyState" fullname="Tide.Tests.C1SignatureTests.UnsupportedIdsCannotMutatePrerequisiteReadyState" methodname="UnsupportedIdsCannotMutatePrerequisiteReadyState" classname="Tide.Tests.C1SignatureTests" runstate="Runnable" seed="513911732" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.022864" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1035" name="M9CoreTests" fullname="Tide.Tests.M9CoreTests" classname="Tide.Tests.M9CoreTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.073293" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1040" name="CaseObjectiveFollowsTheBeatsTableThroughTheDisclosureGuard" fullname="Tide.Tests.M9CoreTests.CaseObjectiveFollowsTheBeatsTableThroughTheDisclosureGuard" methodname="CaseObjectiveFollowsTheBeatsTableThroughTheDisclosureGuard" classname="Tide.Tests.M9CoreTests" runstate="Runnable" seed="1842212182" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.031899" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="DefaultConfirmationModeIsTwoStep" fullname="Tide.Tests.M9CoreTests.DefaultConfirmationModeIsTwoStep" methodname="DefaultConfirmationModeIsTwoStep" classname="Tide.Tests.M9CoreTests" runstate="Runnable" seed="582277755" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.008726" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="EncodePersistsHintLevelsUnderTheExistingFieldNameAndStaysDecodable" fullname="Tide.Tests.M9CoreTests.EncodePersistsHintLevelsUnderTheExistingFieldNameAndStaysDecodable" methodname="EncodePersistsHintLevelsUnderTheExistingFieldNameAndStaysDecodable" classname="Tide.Tests.M9CoreTests" runstate="Runnable" seed="1482324333" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.011846" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="EncodeWithoutHintLevelsKeepsTheEmptyObjectCompatibility" fullname="Tide.Tests.M9CoreTests.EncodeWithoutHintLevelsKeepsTheEmptyObjectCompatibility" methodname="EncodeWithoutHintLevelsKeepsTheEmptyObjectCompatibility" classname="Tide.Tests.M9CoreTests" runstate="Runnable" seed="1647173392" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.007717" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="PreviewDifferenceSentencesDescribeCitationAndOriginalReadChanges" fullname="Tide.Tests.M9CoreTests.PreviewDifferenceSentencesDescribeCitationAndOriginalReadChanges" methodname="PreviewDifferenceSentencesDescribeCitationAndOriginalReadChanges" classname="Tide.Tests.M9CoreTests" runstate="Runnable" seed="2030436135" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.007445" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1041" name="ReviewNotesTests" fullname="Tide.Tests.ReviewNotesTests" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.207739" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1050" name="FailureBeforeRenamePreservesPreviousNoteAndCanRetry" fullname="Tide.Tests.ReviewNotesTests.FailureBeforeRenamePreservesPreviousNoteAndCanRetry" methodname="FailureBeforeRenamePreservesPreviousNoteAndCanRetry" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="882535668" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.150829" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1049" name="IncompatibleNotesFailClosedAndPreserveOriginal" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.014312" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1043" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;future&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;future&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="328027855" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.003429" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1044" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;checksum&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;checksum&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="755843306" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.002326" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;identity&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;identity&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1901400894" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.004736" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;type&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;type&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1864320999" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.001050" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1047" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;huge-version&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;huge-version&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="969487189" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.000939" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1048" name="IncompatibleNotesFailClosedAndPreserveOriginal(&quot;duplicate&quot;)" fullname="Tide.Tests.ReviewNotesTests.IncompatibleNotesFailClosedAndPreserveOriginal(&quot;duplicate&quot;)" methodname="IncompatibleNotesFailClosedAndPreserveOriginal" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1565973235" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.001040" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1042" name="NotesAreIsolatedByDirectoryAndSaveIdentityWithoutWritingGameplay" fullname="Tide.Tests.ReviewNotesTests.NotesAreIsolatedByDirectoryAndSaveIdentityWithoutWritingGameplay" methodname="NotesAreIsolatedByDirectoryAndSaveIdentityWithoutWritingGameplay" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1129125798" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.035614" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1051" name="OversizedDraftIsRefusedWithoutCreatingAnyFiles" fullname="Tide.Tests.ReviewNotesTests.OversizedDraftIsRefusedWithoutCreatingAnyFiles" methodname="OversizedDraftIsRefusedWithoutCreatingAnyFiles" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="240475159" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.001821" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1053" name="QuestionBranchesOnIndependentMediaAfterOriginDuplicatesTakePriority" fullname="Tide.Tests.ReviewNotesTests.QuestionBranchesOnIndependentMediaAfterOriginDuplicatesTakePriority" methodname="QuestionBranchesOnIndependentMediaAfterOriginDuplicatesTakePriority" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1317113842" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.002364" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1052" name="QuestionDependsOnExplicitSourceStructureWithoutJudgingText" fullname="Tide.Tests.ReviewNotesTests.QuestionDependsOnExplicitSourceStructureWithoutJudgingText" methodname="QuestionDependsOnExplicitSourceStructureWithoutJudgingText" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="288536082" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.000782" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1054" name="UnknownMediaCountAsInsufficientForTheContrastQuestion" fullname="Tide.Tests.ReviewNotesTests.UnknownMediaCountAsInsufficientForTheContrastQuestion" methodname="UnknownMediaCountAsInsufficientForTheContrastQuestion" classname="Tide.Tests.ReviewNotesTests" runstate="Runnable" seed="1283539330" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:54Z" duration="0.000411" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1055" name="T0ContractTests" fullname="Tide.Tests.T0ContractTests" classname="Tide.Tests.T0ContractTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:56Z" duration="1.465753" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1056" name="GeneratedT0ContractChecksPass" fullname="Tide.Tests.T0ContractTests.GeneratedT0ContractChecksPass" methodname="GeneratedT0ContractChecksPass" classname="Tide.Tests.T0ContractTests" runstate="Runnable" seed="720272806" result="Passed" start-time="2026-09-14 02:18:54Z" end-time="2026-09-14 02:18:56Z" duration="1.465021" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1057" name="T0M2Tests" fullname="Tide.Tests.T0M2Tests" classname="Tide.Tests.T0M2Tests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.476371" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1072" name="AfterRenameRetryIsIdempotent" fullname="Tide.Tests.T0M2Tests.AfterRenameRetryIsIdempotent" methodname="AfterRenameRetryIsIdempotent" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="936417320" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.029671" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1063" name="ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" fullname="Tide.Tests.T0M2Tests.ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" methodname="ApprovedLedgerNullSystemIsValidAndOtherRecordsStayUnassigned" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1391834277" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.005856" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1073" name="CancellationBeforeRenameDoesNotPublish" fullname="Tide.Tests.T0M2Tests.CancellationBeforeRenameDoesNotPublish" methodname="CancellationBeforeRenameDoesNotPublish" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1626524086" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.011421" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1067" name="CanonicalSaveRootAndChecksumAreOrderIndependent" fullname="Tide.Tests.T0M2Tests.CanonicalSaveRootAndChecksumAreOrderIndependent" methodname="CanonicalSaveRootAndChecksumAreOrderIndependent" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="147927528" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.013846" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1061" name="CircuitCancelCloseAndReopenPreserveUnrelatedState" fullname="Tide.Tests.T0M2Tests.CircuitCancelCloseAndReopenPreserveUnrelatedState" methodname="CircuitCancelCloseAndReopenPreserveUnrelatedState" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1283834127" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.008865" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1060" name="CircuitFsmRejectsBypassAndBadOffsets" fullname="Tide.Tests.T0M2Tests.CircuitFsmRejectsBypassAndBadOffsets" methodname="CircuitFsmRejectsBypassAndBadOffsets" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="652836697" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.008974" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1062" name="FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" fullname="Tide.Tests.T0M2Tests.FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" methodname="FullCanonicalT0CompletesWithOneMediumPerAreaAndIndependentPair" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="136704306" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.012811" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1071" name="InterruptedWritePreservesPreviousSave" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.048140" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1068" name="InterruptedWritePreservesPreviousSave(BeforeWrite)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(BeforeWrite)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="472017015" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.016446" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1069" name="InterruptedWritePreservesPreviousSave(DuringWrite)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(DuringWrite)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1761902660" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.017237" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="InterruptedWritePreservesPreviousSave(BeforeRename)" fullname="Tide.Tests.T0M2Tests.InterruptedWritePreservesPreviousSave(BeforeRename)" methodname="InterruptedWritePreservesPreviousSave" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="717843209" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.013683" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1064" name="JournalUndoRedoBranchesAndAutoCopiesAreImmutable" fullname="Tide.Tests.T0M2Tests.JournalUndoRedoBranchesAndAutoCopiesAreImmutable" methodname="JournalUndoRedoBranchesAndAutoCopiesAreImmutable" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1896571304" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.019846" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1058" name="RedoFollowsSelectedBranchAcrossSharedAncestors" fullname="Tide.Tests.T0M2Tests.RedoFollowsSelectedBranchAcrossSharedAncestors" methodname="RedoFollowsSelectedBranchAcrossSharedAncestors" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="755119766" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.006004" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1065" name="Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" fullname="Tide.Tests.T0M2Tests.Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" methodname="Snapshot200AndFoldKeepCurrentStateAndCoarseUndo" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="115697695" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.035595" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1066" name="SnapshotAndPayloadCorruptionReject" fullname="Tide.Tests.T0M2Tests.SnapshotAndPayloadCorruptionReject" methodname="SnapshotAndPayloadCorruptionReject" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="2023947508" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.124673" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1074" name="TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" fullname="Tide.Tests.T0M2Tests.TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" methodname="TruncationRecoversBackupThenCheckpointWithoutDeletingBytes" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="1702077764" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.028657" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1059" name="UnknownVersionsRefuseEvenWithValidBackup" fullname="Tide.Tests.T0M2Tests.UnknownVersionsRefuseEvenWithValidBackup" methodname="UnknownVersionsRefuseEvenWithValidBackup" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="150511271" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.098886" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1075" name="VersionZeroMigratesWithBackupAndFutureVersionIsRefused" fullname="Tide.Tests.T0M2Tests.VersionZeroMigratesWithBackupAndFutureVersionIsRefused" methodname="VersionZeroMigratesWithBackupAndFutureVersionIsRefused" classname="Tide.Tests.T0M2Tests" runstate="Runnable" seed="472460567" result="Passed" start-time="2026-09-14 02:18:56Z" end-time="2026-09-14 02:18:56Z" duration="0.018408" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

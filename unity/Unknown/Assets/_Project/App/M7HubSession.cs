@@ -8,12 +8,13 @@ using UnityEngine.SceneManagement;
 namespace Tide.App
 {
     // RFC-CX-013 lane HubShell: M7 concept-first watchroom shell materials.
-    // Gate: profile.runtimeApproved || --m7-hub-diagnostic. Fallback = committed hub scene untouched.
+    // Gate: profile.runtimeApproved || profile.diagnosticOverride || --m7-hub-diagnostic.
+    // Fallback = committed hub scene untouched. Editor preview drives diagnosticOverride only (never runtimeApproved).
     public sealed partial class T0GameSession
     {
         public const string M7HubLampName="M7 hub lamp";
         M7HubProfile hubProfile;
-        bool M7HubEnabled=>hubProfile!=null&&(hubProfile.runtimeApproved||Environment.GetCommandLineArgs().Contains("--m7-hub-diagnostic"));
+        bool M7HubEnabled=>hubProfile!=null&&(hubProfile.runtimeApproved||hubProfile.diagnosticOverride||M7EditorPreview||Environment.GetCommandLineArgs().Contains("--m7-hub-diagnostic"));
         public static int M7HubLampCount(Scene scene)=>scene.IsValid()&&scene.isLoaded?scene.GetRootGameObjects().Count(x=>x.name==M7HubLampName):0;
         void BindM7Hub()
         {
