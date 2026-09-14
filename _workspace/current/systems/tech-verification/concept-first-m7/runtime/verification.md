@@ -162,3 +162,11 @@ M7_IMPORT_ALL_DONE
 [OBSERVED] 이 시점의 게이트 상태는 `M7_GATE_STATE editorPreview=False hub/ui/reader 전부 approved=True`다 — 병행 세션이 `3a7d1e3 feat(game): promote M7 concept resources to runtime`으로 세 프로파일을 이미 승격했다. 따라서 **지금은 프리뷰 토글 없이도** Play에서 M7 룩이 보인다. 프리뷰 스위치가 필요한 경우는 후보를 재임포트해 `runtimeApproved`가 다시 false로 돌아갈 때(빌더가 임포트 시 항상 false로 강제한다)와, 승인/미승인 룩을 A/B로 비교할 때다.
 
 [CARRIED] **미검증**: 대화형 에디터 세션에서의 실제 Hub 열기·Play 렌더는 사람이 확인해야 한다(배치 실행은 `isBatchMode`로 프리뷰가 닫히고 `[InitializeOnLoadMethod]` 자동 열기도 건너뛴다). 또한 에디터 GUI의 Test Runner로 PlayMode 검사를 돌릴 때 프리뷰를 켜 두면 게이트 오프 계약 검사가 실패한다 — 토글 로그가 이 점을 경고한다.
+
+## HEAD 재빌드와 디스크 발견 (2026-09-14)
+
+[OBSERVED] `4045509` 시점에서 macOS 플레이어를 재빌드했다: `T0_MAC_BUILD Succeeded bytes=411041241`, exit 0, 컴파일 오류 0, Burst 크래시 0 (`build-mac-4045509.log`). 이전 빌드는 `405982777` bytes / 2026-09-12였고 그 사이 병행 세션의 M22·M23·M24 작업이 들어왔다. 실행 파일 mtime이 빌드 시각과 일치해 신선함을 확인했다. 스모크: 플레이어가 기동해 유지되고 `Player.log` 예외 0, 시작 로그는 Metal·InputSystem 초기화 정상.
+
+[OBSERVED] 빌드 산출물은 `unity/Unknown/.gitignore:6 [Bb]uilds/`로 git에서 제외된다. 즉 **git push에는 빌드가 포함되지 않으며**, 이 저장소에는 CI 워크플로(`.github/workflows`)가 없다. 배포 파이프라인은 존재하지 않고, 상점 공개·Steam 제출은 `CLAUDE.md` §10에 따라 이 요청만으로 실행하지 않는다.
+
+[OBSERVED] 같은 폴더의 `preview-editmode.xml`(11:15, total 64 · passed 27 · failed 37)은 **코드 회귀가 아니라 디스크 고갈**이다. 실패 메시지가 `System.IO.IOException : No space left on device`이며, 공간을 회수한 뒤 11:18 실행은 64/64로 통과했다. 이 머신의 디스크는 99~100% 사용 중이고 Unity 실행 1회가 수백 MB를 쓰므로, 검사 실패 시 **먼저 `df -h`를 확인**한다. 해당 중간 산출물은 오해를 부를 증거라 커밋하지 않고 추적 밖에 남겼다.
