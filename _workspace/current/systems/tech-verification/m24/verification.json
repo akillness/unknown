@@ -1,0 +1,326 @@
+{
+  "milestone": "M24",
+  "rfc": "RFC-CX-M24-20260914",
+  "verifiedAtUtc": "2026-09-14T01:50:51Z",
+  "sourceBaseCommit": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b",
+  "sourceScope": "Working-tree Blender recipe, regenerated character family and imported Unity art; no C# gameplay changes authored in M24",
+  "sourceRecipe": {
+    "path": "scripts/blender/build-seorin-m22.py",
+    "bytes": 50686,
+    "sha256": "480503a1c856f881d63db6f2efbdbb3f1c90b6ff967ffd3221b87105272d84b7"
+  },
+  "sourceManifest": {
+    "path": "assets/generated/3d/seorin-m22/r01/manifest.json",
+    "bytes": 134571,
+    "sha256": "4aee04c676559cc19c20cbf804ec33b930548ee9b4555642209b97795df25575"
+  },
+  "blender": {
+    "version": "5.1.2",
+    "connection": "actual running Blender MCP addon through an owned legacy-protocol compatibility bridge",
+    "executedStages": 19,
+    "originalSceneChecksPassed": 19,
+    "originalStructureChecksPassed": 19,
+    "originalScene": "Scene; Cube/Light/Camera; untitled filepath retained",
+    "originalSessionDirtyUnchangedClaim": false,
+    "priorOutputsAndRecipePreserved": {
+      "localBackupPath": "assets/generated/3d/seorin-m22/r01/history/candidate-075",
+      "localOnly": true,
+      "publishedBaselineCommit": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b",
+      "baselineOutputDirectory": "assets/generated/3d/seorin-m22/r01",
+      "baselineManifest": {
+        "gitObject": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b:assets/generated/3d/seorin-m22/r01/manifest.json",
+        "gitBlob": "6dc1156eb56ddcc57cb1965fa0ddd75959617c6b",
+        "bytes": 132897,
+        "sha256": "5759a6bb6966fdc4c5d094cdccfae6557cfb1c290152151820a8c8cfc8258f37"
+      },
+      "baselineRecipe": {
+        "gitObject": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b:scripts/blender/build-seorin-m22.py",
+        "gitBlob": "03714aeb97e7ef555f146236e599c736b9e81173",
+        "bytes": 47362,
+        "sha256": "e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0"
+      }
+    },
+    "changes": [
+      "continuous face/cheek/jaw surface and refined eyes/nose/lips",
+      "continuous asymmetric bob shell with smaller fringe and strand detail",
+      "shoulder/collar/sleeve contours, cuff folds and apron stitching/rivets/notebook tab"
+    ],
+    "characterTrianglesBefore": 15124,
+    "characterTriangles": 19618,
+    "characterVertices": 10344,
+    "characterBones": 50,
+    "characterTriangleBudget": 20000,
+    "remainingCharacterTriangles": 382,
+    "trianglesPerHand": 2772,
+    "bonesPerHand": 18,
+    "maxWeightsPerVertex": 2,
+    "materials": 19,
+    "newTextures": 0,
+    "rigsUnchanged": 3,
+    "authoredTakesUnchanged": 11,
+    "externalDownloads": false,
+    "paidGeneration": false,
+    "sessionReceipt": {
+      "path": "_workspace/current/systems/tech-verification/m24/blender-session.json",
+      "bytes": 69800,
+      "sha256": "f493b492fbe4bdfc63fd5a0bdd5272499990078d3cff73ea39d8be7de2027177"
+    },
+    "validatedOutputs": [
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-character.png",
+        "bytes": 1092899,
+        "sha256": "c5e0e2d3a0e97dd152c4e076296d526264fac219469438440082323ef8011a8a"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-face.png",
+        "bytes": 1039609,
+        "sha256": "06a7bfd9d97a688d63801aa8cd0b48b0c6db1a16b9ae74762840b2c18179a649"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_Character.fbx",
+        "bytes": 1066396,
+        "sha256": "50b502c3f451078bcbd25e8fe943ab2e6908514439a18f464993bf389efdf4f9"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-sleeves.png",
+        "bytes": 1269781,
+        "sha256": "3aa0f90b7f3d47971d5a7aed161be3186d3bf66980e2ece89b84eac1b8e5971a"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.glb",
+        "bytes": 174956,
+        "sha256": "9923f4210453c45e309b18d8d34f3dce9b0ad79108d45b7210d9cfcd135c509a"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_RightHand.glb",
+        "bytes": 174960,
+        "sha256": "83ae899047b6bb4b02caaeb17484542b88f31c809636b661191e384bed80acdc"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-hands-seal.png",
+        "bytes": 1092282,
+        "sha256": "95489f9ff71a4153908753012568a959ef4aa3baa79a5c192ed6583645362fff"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-hands-align.png",
+        "bytes": 1100455,
+        "sha256": "91a9358fd686ef8bcd9e4c2c80c528abc60cc0cd4a01fb7c0b7b00c80566b34f"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-hands-rest.png",
+        "bytes": 1104142,
+        "sha256": "4df54a55dcea75710c2281e39b81280c9492c2dd27d722b2c7b38705efc240e5"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_Character.glb",
+        "bytes": 649068,
+        "sha256": "a95b49afd3e6786c9e35420a63a7706f24e0a7d7f6df62a427f3c8842d238646"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-hands-grip.png",
+        "bytes": 1075473,
+        "sha256": "ee806fbd6224c3169abb8e66ba513d56e42ab5b22cf6c612e45a1648830884fa"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-hands-insert.png",
+        "bytes": 1101980,
+        "sha256": "b3f13d3db74c73d55e2eab1bb69dfd67c25be4d101623ddae6007d1962f03904"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_LeftHand.fbx",
+        "bytes": 773116,
+        "sha256": "a4e9027d1cb70327a7355dabbd42cbfb03f98b03d898e12673ac5573ec96c9b1"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_RightHand.fbx",
+        "bytes": 773164,
+        "sha256": "eb612bc4c182892e6018ef31463cea7aa811eb3624b59e9bc3608dd38576d425"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/Seorin_Character.blend",
+        "bytes": 560941,
+        "sha256": "a7d1ef36a0cedaac702de1d229b5ea3ab3b5a141d9f236f631b4f43eebc50872"
+      }
+    ]
+  },
+  "unity": {
+    "version": "6000.5.6f1",
+    "project": "unity/Unknown",
+    "import": {
+      "command": "Tide.EditorTools.M22EmbodimentProjectBuilder.Import",
+      "exitCode": 0,
+      "runtimeApprovedAtImport": false,
+      "audit": {
+        "path": "_workspace/current/systems/tech-verification/m24/import-audit.json",
+        "bytes": 2365,
+        "sha256": "005113761634ede50d61d6f60d2a38a9cad45cd8fb335942560c92453a2472dc"
+      },
+      "sourceAndImportedBytesMatch": [
+        {
+          "path": "unity/Unknown/Assets/_Project/Art/M22Seorin/manifest.json",
+          "bytes": 134571,
+          "sha256": "4aee04c676559cc19c20cbf804ec33b930548ee9b4555642209b97795df25575"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Art/M22Seorin/Seorin_Character.fbx",
+          "bytes": 1066396,
+          "sha256": "50b502c3f451078bcbd25e8fe943ab2e6908514439a18f464993bf389efdf4f9"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Art/M22Seorin/Seorin_LeftHand.fbx",
+          "bytes": 773116,
+          "sha256": "a4e9027d1cb70327a7355dabbd42cbfb03f98b03d898e12673ac5573ec96c9b1"
+        },
+        {
+          "path": "unity/Unknown/Assets/_Project/Art/M22Seorin/Seorin_RightHand.fbx",
+          "bytes": 773164,
+          "sha256": "eb612bc4c182892e6018ef31463cea7aa811eb3624b59e9bc3608dd38576d425"
+        }
+      ]
+    },
+    "diagnostic": {
+      "buildExitCode": 0,
+      "buildBytes": 411041088,
+      "flag": "--m22-seorin-diagnostic",
+      "motionProof": {
+        "path": "_workspace/current/systems/tech-verification/m24/diagnostic/contact-motion.png",
+        "bytes": 442314,
+        "sha256": "b07dc7981ad31532e9057c30b10e4c6023d6db0c1be4d61ceb75417f78c93527"
+      }
+    },
+    "approval": {
+      "owner": "Main acting production/modeling/presentation integration roles",
+      "independentReviewer": false,
+      "decision": "Reapprove only the existing local development profile after native title appearance and crank contact/return review",
+      "runtimeApproved": true,
+      "sourceRuntimeEligible": false,
+      "profile": {
+        "path": "unity/Unknown/Assets/_Project/Resources/M22Embodiment.asset",
+        "bytes": 2923,
+        "sha256": "ffff7ebe4da34881bcceb0d74d408bc802cb5b0a4abdaae351e654357b0f2e6e"
+      }
+    },
+    "finalBuild": {
+      "command": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+      "exitCode": 0,
+      "marker": "T0_MAC_BUILD Succeeded bytes=411041089",
+      "fileCount": 315,
+      "bytes": 411041089,
+      "inventory": {
+        "path": "_workspace/current/systems/tech-verification/m24/build-inventory.json",
+        "bytes": 71452,
+        "sha256": "4cfee5348515e3ffc3b5b65a0075fd0f26120973cbe0ebc324f6ebc20b8260ba"
+      },
+      "inventoryDigest": "115fc67e3bf1dad51058bd49201615e11403af75f0fee506f8de7e5064ab5629",
+      "digestMethod": "SHA256 UTF-8 JSON inventory sorted by path; object keys sorted; compact separators comma/colon"
+    },
+    "native": {
+      "diagnosticFlags": [],
+      "readyMarkers": [
+        "T0_BOOT entry-start",
+        "T0_BOOT ui-root-loaded",
+        "T0_BOOT hub-loaded",
+        "T0_BOOT session-initialized"
+      ],
+      "observed": [
+        "updated character appears in default title viewport",
+        "read moves the right hand with the crank and returns it to rest",
+        "selected tide ledger and pinned pressure plate are both visible",
+        "comparison leaves save.json bytes and SHA256 unchanged"
+      ],
+      "receipt": {
+        "path": "_workspace/current/systems/tech-verification/m24/native-actions.json",
+        "bytes": 23094,
+        "sha256": "4ce0819d7a833fa9416b441df56e335e79495bc2664e52578bf659abc9ae5e84"
+      }
+    },
+    "tests": {
+      "suiteRunInM24": false,
+      "reason": "Art-only recipe/export update verified through actual Blender execution, import/build and native behavior; no new contract or test suite assertion authored",
+      "historicalM23Only": {
+        "uniqueProjectPasses": 187,
+        "receipt": "_workspace/current/systems/tech-verification/m23/verification.json"
+      }
+    }
+  },
+  "media": {
+    "provenance": {
+      "path": "docs/media/gameplay-m24/provenance.json",
+      "bytes": 6170,
+      "sha256": "a7ae4716dabb84fe4688f5cc3a746c020bd9e5fd9d6901ac75698dd0693863e5"
+    },
+    "durationSeconds": 18,
+    "width": 1280,
+    "height": 800,
+    "fps": 30,
+    "audio": false,
+    "actualNativePixels": true,
+    "timeWarpOrGeneratedFrames": false,
+    "fullCampaignOrHumanPlay": false
+  },
+  "memory": {
+    "graphCommand": "graphify update .",
+    "graphExitCode": 0,
+    "codeFiles": 1839,
+    "nodes": 44002,
+    "edges": 49307,
+    "communities": 4613,
+    "seconds": 37.34,
+    "llmNeeded": false,
+    "outputDirectory": "graphify-out",
+    "degraded": "Installed legacy layout retained; summary command unsupported, generated GRAPH_REPORT.md read instead; HTML skipped above 5000 nodes; document/image semantic extraction not refreshed",
+    "mex": "skipped: binary on PATH is TeX Live, not mex-agent; no drift-free claim"
+  },
+  "cleanup": {
+    "ownedDiagnosticPlayerStopped": true,
+    "ownedFinalPlayerStopped": true,
+    "ownedBridgeStopped": true,
+    "stopExitCode": 143,
+    "userBlenderPid13985StillRunning": true,
+    "rootEditorIncident": "Unexpected Unity Hub editor targeted repo root. User authorized normal closure; subsequent process absence observed. Root cache/settings/.meta files were not deleted or staged.",
+    "rawRecordingAndSetupDrafts": "retained locally under ignored unity/Unknown/Builds/m24, not published as accepted media",
+    "existingUnrelatedLogs": "preserved and excluded from staging",
+    "ownedTemporaryInputAndBridgeToolsRemoved": true,
+    "preservationHistory": "retained locally; excluded from new Git staging and future graph input by scoped ignore rules; final r01 artifacts remain publishable"
+  },
+  "freshness": {
+    "command": "bash skill://game-ops-harness/scripts/freshness-check.sh /Users/jangyoung/orca/unknown",
+    "exitCode": 0,
+    "findings": 0,
+    "markdownArtifacts": 691,
+    "scope": "frontmatter contract and supersedes topology only",
+    "stalenessMeasured": false,
+    "memorySyncVerifiedByThisCommand": false
+  },
+  "deliveryIntegrity": {
+    "sourceExportHashesMatched": 15,
+    "sourceImporterHashesMatched": 4,
+    "mediaOutputHashesMatched": 6,
+    "sourceManifestAndSidecarsMatched": 15,
+    "rigsAndAuthoredClipsUnchanged": true,
+    "deliveryFrames": 540,
+    "durationSeconds": 18,
+    "videoOnly": true,
+    "readmeTargetFilesExist": 7,
+    "preservationHistoryIgnoredFinalBlendTrackedEligible": true
+  },
+  "repositoryVerifyChecklist": {
+    "metadata": "Same C7 in-place revision; final evidence current, source candidate/rig draft status intentionally preserved, predecessors kept",
+    "freshness": "File-contract check passed; not a complete G8 or staleness claim",
+    "numbers": "Geometry, bytes, fingerprints and clip properties measured; 20k geometry cap remains a target",
+    "crossLaneAck": "Main owns production/modeling/presentation/systems integration under RFC-CX-M24-20260914; no independent reviewer claim",
+    "memorySync": "Code graph refreshed; .mex routing/pattern notes and external llm-wiki unknown decisions D-018 updated",
+    "mexCheck": "Skipped because PATH resolves to TeX Live, not mex-agent; no all-six-pass or drift-free claim"
+  },
+  "boundaries": {
+    "sourceRuntimeEligible": false,
+    "humanPlaytestCount": 0,
+    "commercialApproval": false,
+    "performanceMeasurement": false,
+    "windowsVerified": false,
+    "fullCampaignVerified": false,
+    "baseR8R9": "blocked unchanged",
+    "strongP1P2Audit": "blocked unchanged",
+    "M20r02": "unapproved unchanged"
+  }
+}

@@ -198,3 +198,12 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | R10 전체 완주/목표 장치 | QA, production | P4 | m23/verification.json | partial; 현재 슬라이스 복구/Mac만 검증. 전체450–540분·Windows 미측정 |
 | 통합 빌드·독립 리뷰·cleanup | Main, reviewers | P4 | m23/verification.json, qa/m23-integration-review.md | done; Q6–Q11 및 Q6 off-reader 경계 교정. 프로젝트 Unity187·Mac410875921B·epoch별 native. 새 producer 없음·소유 플레이어 종료 |
 | 소스 전달과 최종 개선 계획 | director | P5 | handoff/m23-results-and-improvement-plan.md | 최신 요청의 명시적 commit/normal push 승인; 기존 M22/Aside 보존. 실제 커밋/원격 결과는 Git 기록을 따름 |
+
+## M24 — 캐릭터 디테일·플레이 영상 (2026-09-14)
+
+| task | owner | phase | artifact | status |
+|---|---|---|---|---|
+| Blender 원본 보존 및 한서린 디테일 개정 | modeling, presentation | P3 | scripts/blender/build-seorin-m22.py, assets/generated/3d/seorin-m22/r01/ | complete; MCP19단계 보존 확인·전신19,618 tri/50본·기존3리그/11 take |
+| Unity 임포트·실제 외형/동작 검증 | systems, QA | P3/P4 | M22Embodiment, systems/tech-verification/m24/ | complete; 진단 검수 후 기본 프로필 재승인·최종315파일/411,041,089B·실제 접촉/복귀 |
+| 현행 빌드 플레이 영상·README 갱신 | presentation, QA | P4 | docs/media/gameplay-m24/, README.md | complete; 같은 기본 빌드18초·T0-b3 격리 재개·무음·Blender 전후 비교는 별도 |
+| 검증 증거·메모리 동기 및 일반 push | director | P5 | Git main, production/decision-log.md | 검증 자료와 메모리 동기; 이번 명시적 commit/일반 push의 실제 결과는 Git 기록을 따름. 기존 로그/다른 작업 보존 |

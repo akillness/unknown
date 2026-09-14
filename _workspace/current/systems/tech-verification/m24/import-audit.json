@@ -1,0 +1,86 @@
+{
+  "rfc": "RFC-CX-018",
+  "runtimeApproved": false,
+  "source": "assets/generated/3d/seorin-m22/r01",
+  "manifestSha256": "4aee04c676559cc19c20cbf804ec33b930548ee9b4555642209b97795df25575",
+  "profile": "Assets/_Project/Resources/M22Embodiment.asset",
+  "rigs": [
+    {
+      "file": "Seorin_Character.fbx",
+      "sha256": "50b502c3f451078bcbd25e8fe943ab2e6908514439a18f464993bf389efdf4f9",
+      "prefab": "Assets/_Project/Art/M22Seorin/Seorin_Character.prefab",
+      "triangles": 19618,
+      "deformBones": 50,
+      "boundsCenter": [
+        0.0,
+        0.8095123,
+        0.0386052579
+      ],
+      "boundsSize": [
+        0.667828441,
+        1.73444486,
+        0.353049368
+      ],
+      "clips": [
+        "Seorin_Idle"
+      ],
+      "gripBone": null,
+      "rootMotion": false
+    },
+    {
+      "file": "Seorin_LeftHand.fbx",
+      "sha256": "a4e9027d1cb70327a7355dabbd42cbfb03f98b03d898e12673ac5573ec96c9b1",
+      "prefab": "Assets/_Project/Art/M22Seorin/Seorin_LeftHand.prefab",
+      "triangles": 2772,
+      "deformBones": 18,
+      "boundsCenter": [
+        -1.49011612E-08,
+        -3.7252903E-08,
+        -0.312357426
+      ],
+      "boundsSize": [
+        0.154000252,
+        0.120000079,
+        0.9752848
+      ],
+      "clips": [
+        "Hands_Rest",
+        "Hands_Insert",
+        "Hands_Align",
+        "Hands_Grip",
+        "Hands_Seal"
+      ],
+      "gripBone": "Contact",
+      "rootMotion": false
+    },
+    {
+      "file": "Seorin_RightHand.fbx",
+      "sha256": "eb612bc4c182892e6018ef31463cea7aa811eb3624b59e9bc3608dd38576d425",
+      "prefab": "Assets/_Project/Art/M22Seorin/Seorin_RightHand.prefab",
+      "triangles": 2772,
+      "deformBones": 18,
+      "boundsCenter": [
+        -1.49011612E-08,
+        -3.7252903E-08,
+        -0.312357426
+      ],
+      "boundsSize": [
+        0.154000252,
+        0.120000079,
+        0.9752848
+      ],
+      "clips": [
+        "Hands_Rest",
+        "Hands_Insert",
+        "Hands_Align",
+        "Hands_Grip",
+        "Hands_Seal"
+      ],
+      "gripBone": "Contact",
+      "rootMotion": false
+    }
+  ],
+  "handsCombinedTriangles": 5544,
+  "gate": "--m22-seorin-diagnostic",
+  "alignment": "Native review required: title facing/framing, reader grip orientation, support offset, foreground wrist/cuff framing. Pose fields remain editable; reimport preserves native alignment."
+}

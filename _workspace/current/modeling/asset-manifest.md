@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-14
 cycle: 20260909-preproduction-c4
 status: current
 supersedes: null
@@ -225,3 +225,9 @@ The preserved r01 construction recipe and target dimensions are `modeling/pipeli
 | `Seorin_RightHand` | `.fbx` / `.glb` | 2,772 tri · 18본 | 같은 5 take; 실제 크랭크 손잡이의 Contact 본 추적 | M22 로컬 기본 빌드 |
 
 원본 `runtimeEligible:false`는 보존한다. 로컬 적용은 Unity `Resources/M22Embodiment.asset`의 별도 `runtimeApproved`와 RFC-CX-018 네이티브 영수증이 소유하며 재임포트는 게이트를 다시 닫는다. 초상용 2D `PT_HanSeorin`을 3D 자산의 별칭으로 사용하지 않는다. 전체 캠페인·상업 사용권·사람 플레이·성능 승인은 이 증분에 포함하지 않는다.
+
+### 10.1 M24 디테일 개정 (RFC-CX-M24-20260914)
+
+[OBSERVED 2026-09-14] 위 M22 표는 당시 수치다. 같은 자산 신원/경로의 현행 한서린은 **19,618 tri / 50본**으로, 얼굴·머리·작업복 마감을 개정했다. 양손은 각각 **2,772 tri / 18본**이며 형상·리그·11 take·접촉 시간은 보존했다. 20k 상한 및 47종+3종 신원 계약을 늘리지 않는다.
+
+기존 importer가 승인 gate를 닫은 뒤 Main이 네이티브 진단의 외형/접촉/복귀를 보고 로컬 기본 빌드에 재승인했다. 진단 플래그 없는 최종 빌드에서 타이틀·판독·두 자료 대조를 확인했다. 정확한 해시/임포트 수치/영상 편집 경계는 `systems/tech-verification/m24/verification.json` 및 `docs/media/gameplay-m24/provenance.json`을 따른다. 원본 후보·상업·사람·전체 캠페인 gate는 바뀌지 않는다.

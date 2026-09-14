@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-14
 cycle: 20260909-preproduction-c4
 status: current
 supersedes: null
@@ -61,3 +61,7 @@ assetId/hash/author/source/license/allowedUses/AI_used/sourceFiles/exportVersion
 - 원본 단색 재질·메시·키프레임 저작을 우선한다. 외부 모델/애니/텍스처 구매·다운로드 없음. 초상 시트를 새 UV 텍스처로 복사하지 않는다.
 - `assets/generated/3d/seorin-m22/r01/manifest.json`은 실제 메시/본/클립/스케일/해시/저작 도구를 기록한다. 파일 수를 drawcall로, Blender triangle 수를 Unity 프레임 성능으로 부르지 않는다.
 - 신규 3D는 진단으로 임포트한 뒤 Main이 네이티브 장면·접촉·복귀를 검수한다. 사용자 선택에 따라 **M20 r02 이미지는 계속 기본 적용 보류**이며 이 독자 저작 증분과 승인 계보를 섞지 않는다.
+
+### M24 재실측 — 같은 신원·같은 상한
+
+[OBSERVED 2026-09-14] `M22EmbodimentProjectBuilder.Import`와 `systems/tech-verification/m24/import-audit.json`에서 한서린 **19,618 tri / 50본**, 양손 각각 **2,772 tri / 18본**을 확인했다. Blender 최대 웨이트는 여전히 2본이다. 전신은 20,000 상한에서 **382 tri**가 남는다. M22의 15,124는 이전 형상의 기록이며 현재 수치로 사용하지 않는다. 재질 19종을 유지하고 텍스처·새 리그를 추가하지 않았다. 프레임 시간·드로콜·GPU 상주량 측정이나 상한 증가는 아니다.

@@ -1,0 +1,2242 @@
+{
+  "sourceBaseCommit": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b",
+  "before": {
+    "version": "5.1.2",
+    "baseline": {
+      "filepath": "",
+      "scenes": {
+        "Scene": {
+          "objects": {
+            "Cube": {
+              "type": "MESH",
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false
+            },
+            "Light": {
+              "type": "LIGHT",
+              "matrix": [
+                [
+                  -0.29086464643478394,
+                  -0.7711008191108704,
+                  0.5663931965827942,
+                  4.076245307922363
+                ],
+                [
+                  0.9551711678504944,
+                  -0.1998833566904068,
+                  0.21839119493961334,
+                  1.0054539442062378
+                ],
+                [
+                  -0.05518905818462372,
+                  0.6045247316360474,
+                  0.7946722507476807,
+                  5.903861999511719
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false
+            },
+            "Camera": {
+              "type": "CAMERA",
+              "matrix": [
+                [
+                  0.6859206557273865,
+                  -0.32401347160339355,
+                  0.6515582203865051,
+                  7.358891487121582
+                ],
+                [
+                  0.7276763319969177,
+                  0.305420845746994,
+                  -0.6141703724861145,
+                  -6.925790786743164
+                ],
+                [
+                  0.0,
+                  0.8953956365585327,
+                  0.44527140259742737,
+                  4.958309173583984
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false
+            }
+          },
+          "frame": 1,
+          "camera": "Camera"
+        }
+      }
+    },
+    "originalStructure": {
+      "filepath": "",
+      "scenes": {
+        "Scene": {
+          "objects": {
+            "Cube": {
+              "type": "MESH",
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false,
+              "dataName": "Cube",
+              "materials": [
+                "Material"
+              ],
+              "geometrySha256": "8619210a50f315bda2d161c4607009f67596b7b53eab5c1fbdf3653d981e7040"
+            },
+            "Light": {
+              "type": "LIGHT",
+              "matrix": [
+                [
+                  -0.29086464643478394,
+                  -0.7711008191108704,
+                  0.5663931965827942,
+                  4.076245307922363
+                ],
+                [
+                  0.9551711678504944,
+                  -0.1998833566904068,
+                  0.21839119493961334,
+                  1.0054539442062378
+                ],
+                [
+                  -0.05518905818462372,
+                  0.6045247316360474,
+                  0.7946722507476807,
+                  5.903861999511719
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false,
+              "dataName": "Light",
+              "materials": [],
+              "energy": 1000.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "lightType": "POINT"
+            },
+            "Camera": {
+              "type": "CAMERA",
+              "matrix": [
+                [
+                  0.6859206557273865,
+                  -0.32401347160339355,
+                  0.6515582203865051,
+                  7.358891487121582
+                ],
+                [
+                  0.7276763319969177,
+                  0.305420845746994,
+                  -0.6141703724861145,
+                  -6.925790786743164
+                ],
+                [
+                  0.0,
+                  0.8953956365585327,
+                  0.44527140259742737,
+                  4.958309173583984
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "hidden": false,
+              "renderHidden": false,
+              "dataName": "Camera",
+              "materials": [],
+              "lens": 50.0,
+              "sensorWidth": 36.0,
+              "clipStart": 0.10000000149011612,
+              "clipEnd": 100.0
+            }
+          },
+          "frame": 1,
+          "camera": "Camera",
+          "world": {
+            "name": "World",
+            "color": [
+              0.05087608844041824,
+              0.05087608844041824,
+              0.05087608844041824
+            ],
+            "nodes": [
+              {
+                "name": "World Output",
+                "type": "ShaderNodeOutputWorld",
+                "inputs": {}
+              },
+              {
+                "name": "Background",
+                "type": "ShaderNodeBackground",
+                "inputs": {
+                  "Color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    1.0
+                  ],
+                  "Strength": 1.0,
+                  "Weight": 0.0
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ownedScene": true
+  },
+  "preservation": {
+    "jsonrpc": "2.0",
+    "id": 58,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"executed\": true,\n  \"result\": \"{\\\"preservedBeforeM24\\\": \\\"assets/generated/3d/seorin-m22/r01/history/candidate-075\\\"}\\n\"\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "stages": [
+    {
+      "utc": "2026-09-14T00:49:11Z",
+      "payload": {
+        "stage": "setup",
+        "result": {
+          "scene": "M22_Seorin_Production",
+          "alreadyExists": true,
+          "baseline": {
+            "filepath": "",
+            "scenes": {
+              "Scene": {
+                "objects": {
+                  "Cube": {
+                    "type": "MESH",
+                    "matrix": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "hidden": false,
+                    "renderHidden": false
+                  },
+                  "Light": {
+                    "type": "LIGHT",
+                    "matrix": [
+                      [
+                        -0.29086464643478394,
+                        -0.7711008191108704,
+                        0.5663931965827942,
+                        4.076245307922363
+                      ],
+                      [
+                        0.9551711678504944,
+                        -0.1998833566904068,
+                        0.21839119493961334,
+                        1.0054539442062378
+                      ],
+                      [
+                        -0.05518905818462372,
+                        0.6045247316360474,
+                        0.7946722507476807,
+                        5.903861999511719
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "hidden": false,
+                    "renderHidden": false
+                  },
+                  "Camera": {
+                    "type": "CAMERA",
+                    "matrix": [
+                      [
+                        0.6859206557273865,
+                        -0.32401347160339355,
+                        0.6515582203865051,
+                        7.358891487121582
+                      ],
+                      [
+                        0.7276763319969177,
+                        0.305420845746994,
+                        -0.6141703724861145,
+                        -6.925790786743164
+                      ],
+                      [
+                        0.0,
+                        0.8953956365585327,
+                        0.44527140259742737,
+                        4.958309173583984
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "hidden": false,
+                    "renderHidden": false
+                  }
+                },
+                "frame": 1,
+                "camera": "Camera"
+              }
+            }
+          }
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:49:11Z",
+      "payload": {
+        "stage": "model",
+        "result": {
+          "meshes": [
+            {
+              "asset": "Seorin_Character",
+              "object": "M22_CharacterMesh",
+              "vertices": 10056,
+              "triangles": 19066,
+              "polygons": 8501,
+              "boundsBlenderXYZ": [
+                [
+                  -0.3085734248161316,
+                  0.3085734248161316
+                ],
+                [
+                  -0.18700000643730164,
+                  0.1099889799952507
+                ],
+                [
+                  0.023000000044703484,
+                  1.673909306526184
+                ]
+              ],
+              "weightedVertices": 10056,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 47,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Shirt",
+                "M22_MAT_Skin",
+                "M22_MAT_SkinShade",
+                "M22_MAT_EyeWhite",
+                "M22_MAT_Iris",
+                "M22_MAT_Hair",
+                "M22_MAT_Lip",
+                "M22_MAT_HairLight",
+                "M22_MAT_Trouser",
+                "M22_MAT_ApronEdge",
+                "M22_MAT_Sole",
+                "M22_MAT_Boot",
+                "M22_MAT_Leather",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Nail",
+                "M22_MAT_Apron",
+                "M22_MAT_Brass",
+                "M22_MAT_Paper"
+              ]
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "object": "M22_LeftHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "object": "M22_RightHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:49:11Z",
+      "payload": {
+        "stage": "rig",
+        "result": {
+          "rigs": [
+            {
+              "name": "M22_Seorin_Character_Rig",
+              "bones": 50,
+              "names": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "RightUpperArm",
+                "RightForearm",
+                "RightWrist",
+                "RightIndex01",
+                "RightIndex02",
+                "RightIndex03",
+                "RightMiddle01",
+                "RightMiddle02",
+                "RightMiddle03",
+                "RightRing01",
+                "RightRing02",
+                "RightRing03",
+                "RightLittle01",
+                "RightLittle02",
+                "RightLittle03",
+                "RightThumb01",
+                "RightThumb02",
+                "RightThumb03",
+                "RightContact",
+                "LeftUpperArm",
+                "LeftForearm",
+                "LeftWrist",
+                "LeftIndex01",
+                "LeftIndex02",
+                "LeftIndex03",
+                "LeftMiddle01",
+                "LeftMiddle02",
+                "LeftMiddle03",
+                "LeftRing01",
+                "LeftRing02",
+                "LeftRing03",
+                "LeftLittle01",
+                "LeftLittle02",
+                "LeftLittle03",
+                "LeftThumb01",
+                "LeftThumb02",
+                "LeftThumb03",
+                "LeftContact",
+                "RightThigh",
+                "RightShin",
+                "RightFoot",
+                "LeftThigh",
+                "LeftShin",
+                "LeftFoot"
+              ]
+            },
+            {
+              "name": "M22_Seorin_LeftHand_Rig",
+              "bones": 18,
+              "names": [
+                "Forearm",
+                "Wrist",
+                "Index01",
+                "Index02",
+                "Index03",
+                "Middle01",
+                "Middle02",
+                "Middle03",
+                "Ring01",
+                "Ring02",
+                "Ring03",
+                "Little01",
+                "Little02",
+                "Little03",
+                "Thumb01",
+                "Thumb02",
+                "Thumb03",
+                "Contact"
+              ]
+            },
+            {
+              "name": "M22_Seorin_RightHand_Rig",
+              "bones": 18,
+              "names": [
+                "Forearm",
+                "Wrist",
+                "Index01",
+                "Index02",
+                "Index03",
+                "Middle01",
+                "Middle02",
+                "Middle03",
+                "Ring01",
+                "Ring02",
+                "Ring03",
+                "Little01",
+                "Little02",
+                "Little03",
+                "Thumb01",
+                "Thumb02",
+                "Thumb03",
+                "Contact"
+              ]
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:49:12Z",
+      "payload": {
+        "stage": "animate",
+        "result": {
+          "fps": 60,
+          "clips": [
+            {
+              "asset": "Seorin_Character",
+              "clip": "Seorin_Idle",
+              "action": "M22_Seorin_Character__Seorin_Idle",
+              "startFrame": 1,
+              "endFrame": 121,
+              "durationSeconds": 2.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Rest",
+              "action": "M22_Seorin_LeftHand__Hands_Rest",
+              "startFrame": 1,
+              "endFrame": 61,
+              "durationSeconds": 1.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Insert",
+              "action": "M22_Seorin_LeftHand__Hands_Insert",
+              "startFrame": 1,
+              "endFrame": 16,
+              "durationSeconds": 0.25,
+              "contactFrame": 13,
+              "contactMs": 200.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Align",
+              "action": "M22_Seorin_LeftHand__Hands_Align",
+              "startFrame": 1,
+              "endFrame": 13,
+              "durationSeconds": 0.2,
+              "contactFrame": 7,
+              "contactMs": 100.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Grip",
+              "action": "M22_Seorin_LeftHand__Hands_Grip",
+              "startFrame": 1,
+              "endFrame": 25,
+              "durationSeconds": 0.4,
+              "contactFrame": 19,
+              "contactMs": 300.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Seal",
+              "action": "M22_Seorin_LeftHand__Hands_Seal",
+              "startFrame": 1,
+              "endFrame": 19,
+              "durationSeconds": 0.3,
+              "contactFrame": 10,
+              "contactMs": 150.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Rest",
+              "action": "M22_Seorin_RightHand__Hands_Rest",
+              "startFrame": 1,
+              "endFrame": 61,
+              "durationSeconds": 1.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Insert",
+              "action": "M22_Seorin_RightHand__Hands_Insert",
+              "startFrame": 1,
+              "endFrame": 16,
+              "durationSeconds": 0.25,
+              "contactFrame": 13,
+              "contactMs": 200.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Align",
+              "action": "M22_Seorin_RightHand__Hands_Align",
+              "startFrame": 1,
+              "endFrame": 13,
+              "durationSeconds": 0.2,
+              "contactFrame": 7,
+              "contactMs": 100.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Grip",
+              "action": "M22_Seorin_RightHand__Hands_Grip",
+              "startFrame": 1,
+              "endFrame": 25,
+              "durationSeconds": 0.4,
+              "contactFrame": 19,
+              "contactMs": 300.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Seal",
+              "action": "M22_Seorin_RightHand__Hands_Seal",
+              "startFrame": 1,
+              "endFrame": 19,
+              "durationSeconds": 0.3,
+              "contactFrame": 10,
+              "contactMs": 150.0
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:49:38Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-character.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:49:43Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-face.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:52:13Z",
+      "payload": {
+        "stage": "model",
+        "result": {
+          "meshes": [
+            {
+              "asset": "Seorin_Character",
+              "object": "M22_CharacterMesh",
+              "vertices": 10344,
+              "triangles": 19618,
+              "polygons": 8753,
+              "boundsBlenderXYZ": [
+                [
+                  -0.3085734248161316,
+                  0.3085734248161316
+                ],
+                [
+                  -0.18700000643730164,
+                  0.1099889799952507
+                ],
+                [
+                  0.023000000044703484,
+                  1.673909306526184
+                ]
+              ],
+              "weightedVertices": 10344,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 47,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Shirt",
+                "M22_MAT_Skin",
+                "M22_MAT_SkinShade",
+                "M22_MAT_EyeWhite",
+                "M22_MAT_Iris",
+                "M22_MAT_Hair",
+                "M22_MAT_Lip",
+                "M22_MAT_HairLight",
+                "M22_MAT_Trouser",
+                "M22_MAT_ApronEdge",
+                "M22_MAT_Sole",
+                "M22_MAT_Boot",
+                "M22_MAT_Leather",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Nail",
+                "M22_MAT_Apron",
+                "M22_MAT_Brass",
+                "M22_MAT_Paper"
+              ]
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "object": "M22_LeftHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "object": "M22_RightHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": false,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:52:13Z",
+      "payload": {
+        "stage": "rig",
+        "result": {
+          "rigs": [
+            {
+              "name": "M22_Seorin_Character_Rig",
+              "bones": 50,
+              "names": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "RightUpperArm",
+                "RightForearm",
+                "RightWrist",
+                "RightIndex01",
+                "RightIndex02",
+                "RightIndex03",
+                "RightMiddle01",
+                "RightMiddle02",
+                "RightMiddle03",
+                "RightRing01",
+                "RightRing02",
+                "RightRing03",
+                "RightLittle01",
+                "RightLittle02",
+                "RightLittle03",
+                "RightThumb01",
+                "RightThumb02",
+                "RightThumb03",
+                "RightContact",
+                "LeftUpperArm",
+                "LeftForearm",
+                "LeftWrist",
+                "LeftIndex01",
+                "LeftIndex02",
+                "LeftIndex03",
+                "LeftMiddle01",
+                "LeftMiddle02",
+                "LeftMiddle03",
+                "LeftRing01",
+                "LeftRing02",
+                "LeftRing03",
+                "LeftLittle01",
+                "LeftLittle02",
+                "LeftLittle03",
+                "LeftThumb01",
+                "LeftThumb02",
+                "LeftThumb03",
+                "LeftContact",
+                "RightThigh",
+                "RightShin",
+                "RightFoot",
+                "LeftThigh",
+                "LeftShin",
+                "LeftFoot"
+              ]
+            },
+            {
+              "name": "M22_Seorin_LeftHand_Rig",
+              "bones": 18,
+              "names": [
+                "Forearm",
+                "Wrist",
+                "Index01",
+                "Index02",
+                "Index03",
+                "Middle01",
+                "Middle02",
+                "Middle03",
+                "Ring01",
+                "Ring02",
+                "Ring03",
+                "Little01",
+                "Little02",
+                "Little03",
+                "Thumb01",
+                "Thumb02",
+                "Thumb03",
+                "Contact"
+              ]
+            },
+            {
+              "name": "M22_Seorin_RightHand_Rig",
+              "bones": 18,
+              "names": [
+                "Forearm",
+                "Wrist",
+                "Index01",
+                "Index02",
+                "Index03",
+                "Middle01",
+                "Middle02",
+                "Middle03",
+                "Ring01",
+                "Ring02",
+                "Ring03",
+                "Little01",
+                "Little02",
+                "Little03",
+                "Thumb01",
+                "Thumb02",
+                "Thumb03",
+                "Contact"
+              ]
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:52:14Z",
+      "payload": {
+        "stage": "animate",
+        "result": {
+          "fps": 60,
+          "clips": [
+            {
+              "asset": "Seorin_Character",
+              "clip": "Seorin_Idle",
+              "action": "M22_Seorin_Character__Seorin_Idle",
+              "startFrame": 1,
+              "endFrame": 121,
+              "durationSeconds": 2.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Rest",
+              "action": "M22_Seorin_LeftHand__Hands_Rest",
+              "startFrame": 1,
+              "endFrame": 61,
+              "durationSeconds": 1.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Insert",
+              "action": "M22_Seorin_LeftHand__Hands_Insert",
+              "startFrame": 1,
+              "endFrame": 16,
+              "durationSeconds": 0.25,
+              "contactFrame": 13,
+              "contactMs": 200.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Align",
+              "action": "M22_Seorin_LeftHand__Hands_Align",
+              "startFrame": 1,
+              "endFrame": 13,
+              "durationSeconds": 0.2,
+              "contactFrame": 7,
+              "contactMs": 100.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Grip",
+              "action": "M22_Seorin_LeftHand__Hands_Grip",
+              "startFrame": 1,
+              "endFrame": 25,
+              "durationSeconds": 0.4,
+              "contactFrame": 19,
+              "contactMs": 300.0
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "clip": "Hands_Seal",
+              "action": "M22_Seorin_LeftHand__Hands_Seal",
+              "startFrame": 1,
+              "endFrame": 19,
+              "durationSeconds": 0.3,
+              "contactFrame": 10,
+              "contactMs": 150.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Rest",
+              "action": "M22_Seorin_RightHand__Hands_Rest",
+              "startFrame": 1,
+              "endFrame": 61,
+              "durationSeconds": 1.0,
+              "contactFrame": null,
+              "contactMs": null
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Insert",
+              "action": "M22_Seorin_RightHand__Hands_Insert",
+              "startFrame": 1,
+              "endFrame": 16,
+              "durationSeconds": 0.25,
+              "contactFrame": 13,
+              "contactMs": 200.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Align",
+              "action": "M22_Seorin_RightHand__Hands_Align",
+              "startFrame": 1,
+              "endFrame": 13,
+              "durationSeconds": 0.2,
+              "contactFrame": 7,
+              "contactMs": 100.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Grip",
+              "action": "M22_Seorin_RightHand__Hands_Grip",
+              "startFrame": 1,
+              "endFrame": 25,
+              "durationSeconds": 0.4,
+              "contactFrame": 19,
+              "contactMs": 300.0
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "clip": "Hands_Seal",
+              "action": "M22_Seorin_RightHand__Hands_Seal",
+              "startFrame": 1,
+              "endFrame": 19,
+              "durationSeconds": 0.3,
+              "contactFrame": 10,
+              "contactMs": 150.0
+            }
+          ]
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:52:18Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-character.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:52:23Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-face.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:06Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-hands-rest.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:10Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-hands-grip.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:15Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-hands-insert.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:19Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-hands-seal.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:24Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-hands-align.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:28Z",
+      "payload": {
+        "stage": "render",
+        "result": {
+          "renders": [
+            "preview-sleeves.png"
+          ],
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T00:53:30Z",
+      "payload": {
+        "stage": "export",
+        "result": {
+          "exports": {
+            "Seorin_Character": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Seorin_Idle",
+                    "durationSeconds": 2.0,
+                    "channels": 150,
+                    "movingChannels": [
+                      "Chest:rotation",
+                      "Neck:rotation",
+                      "Head:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  50
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Seorin_Idle",
+                    "firstFrame": 0.0,
+                    "lastFrame": 120.0,
+                    "durationSeconds": 2.0
+                  }
+                ]
+              }
+            },
+            "Seorin_LeftHand": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "durationSeconds": 0.9999999999999999,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "durationSeconds": 0.25,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "durationSeconds": 0.2,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "durationSeconds": 0.4,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "durationSeconds": 0.3,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  18
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "firstFrame": 0.0,
+                    "lastFrame": 60.0,
+                    "durationSeconds": 1.0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "firstFrame": 0.0,
+                    "lastFrame": 15.0,
+                    "durationSeconds": 0.25
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "firstFrame": 0.0,
+                    "lastFrame": 12.0,
+                    "durationSeconds": 0.2
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "firstFrame": 0.0,
+                    "lastFrame": 24.0,
+                    "durationSeconds": 0.4
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "firstFrame": 0.0,
+                    "lastFrame": 18.0,
+                    "durationSeconds": 0.3
+                  }
+                ]
+              }
+            },
+            "Seorin_RightHand": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "durationSeconds": 0.9999999999999999,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "durationSeconds": 0.25,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "durationSeconds": 0.2,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "durationSeconds": 0.4,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "durationSeconds": 0.3,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  18
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "firstFrame": 0.0,
+                    "lastFrame": 60.0,
+                    "durationSeconds": 1.0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "firstFrame": 0.0,
+                    "lastFrame": 15.0,
+                    "durationSeconds": 0.25
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "firstFrame": 0.0,
+                    "lastFrame": 12.0,
+                    "durationSeconds": 0.2
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "firstFrame": 0.0,
+                    "lastFrame": 24.0,
+                    "durationSeconds": 0.4
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "firstFrame": 0.0,
+                    "lastFrame": 18.0,
+                    "durationSeconds": 0.3
+                  }
+                ]
+              }
+            }
+          },
+          "geometry": [
+            {
+              "asset": "Seorin_Character",
+              "object": "M22_CharacterMesh",
+              "vertices": 10344,
+              "triangles": 19618,
+              "polygons": 8753,
+              "boundsBlenderXYZ": [
+                [
+                  -0.3085734248161316,
+                  0.3085734248161316
+                ],
+                [
+                  -0.18700000643730164,
+                  0.1099889799952507
+                ],
+                [
+                  0.023000000044703484,
+                  1.673909306526184
+                ]
+              ],
+              "weightedVertices": 10344,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 47,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Shirt",
+                "M22_MAT_Skin",
+                "M22_MAT_SkinShade",
+                "M22_MAT_EyeWhite",
+                "M22_MAT_Iris",
+                "M22_MAT_Hair",
+                "M22_MAT_Lip",
+                "M22_MAT_HairLight",
+                "M22_MAT_Trouser",
+                "M22_MAT_ApronEdge",
+                "M22_MAT_Sole",
+                "M22_MAT_Boot",
+                "M22_MAT_Leather",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Nail",
+                "M22_MAT_Apron",
+                "M22_MAT_Brass",
+                "M22_MAT_Paper"
+              ]
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "object": "M22_LeftHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "object": "M22_RightHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            }
+          ],
+          "preservedCandidate": "assets/generated/3d/seorin-m22/r01/history/candidate-088",
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    },
+    {
+      "utc": "2026-09-14T01:00:43Z",
+      "payload": {
+        "stage": "export",
+        "result": {
+          "exports": {
+            "Seorin_Character": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Seorin_Idle",
+                    "durationSeconds": 2.0,
+                    "channels": 150,
+                    "movingChannels": [
+                      "Chest:rotation",
+                      "Neck:rotation",
+                      "Head:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  50
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Seorin_Idle",
+                    "firstFrame": 0.0,
+                    "lastFrame": 120.0,
+                    "durationSeconds": 2.0
+                  }
+                ]
+              }
+            },
+            "Seorin_LeftHand": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "durationSeconds": 0.9999999999999999,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "durationSeconds": 0.25,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "durationSeconds": 0.2,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "durationSeconds": 0.4,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "durationSeconds": 0.3,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  18
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "firstFrame": 0.0,
+                    "lastFrame": 60.0,
+                    "durationSeconds": 1.0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "firstFrame": 0.0,
+                    "lastFrame": 15.0,
+                    "durationSeconds": 0.25
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "firstFrame": 0.0,
+                    "lastFrame": 12.0,
+                    "durationSeconds": 0.2
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "firstFrame": 0.0,
+                    "lastFrame": 24.0,
+                    "durationSeconds": 0.4
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "firstFrame": 0.0,
+                    "lastFrame": 18.0,
+                    "durationSeconds": 0.3
+                  }
+                ]
+              }
+            },
+            "Seorin_RightHand": {
+              "glb": {
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "durationSeconds": 0.9999999999999999,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "durationSeconds": 0.25,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "durationSeconds": 0.2,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "durationSeconds": 0.4,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "durationSeconds": 0.3,
+                    "channels": 54,
+                    "movingChannels": [
+                      "Wrist:rotation",
+                      "Index01:rotation",
+                      "Index02:rotation",
+                      "Index03:rotation",
+                      "Middle01:rotation",
+                      "Middle02:rotation",
+                      "Middle03:rotation",
+                      "Ring01:rotation",
+                      "Ring02:rotation",
+                      "Ring03:rotation",
+                      "Little01:rotation",
+                      "Little02:rotation",
+                      "Little03:rotation",
+                      "Thumb01:rotation",
+                      "Thumb02:rotation",
+                      "Thumb03:rotation"
+                    ],
+                    "rootTranslationMaxDeltaMeters": 0
+                  }
+                ],
+                "skins": 1,
+                "skinJointCounts": [
+                  18
+                ],
+                "meshes": 1
+              },
+              "fbx": {
+                "version": 7400,
+                "clips": [
+                  {
+                    "name": "Hands_Rest",
+                    "firstFrame": 0.0,
+                    "lastFrame": 60.0,
+                    "durationSeconds": 1.0
+                  },
+                  {
+                    "name": "Hands_Insert",
+                    "firstFrame": 0.0,
+                    "lastFrame": 15.0,
+                    "durationSeconds": 0.25
+                  },
+                  {
+                    "name": "Hands_Align",
+                    "firstFrame": 0.0,
+                    "lastFrame": 12.0,
+                    "durationSeconds": 0.2
+                  },
+                  {
+                    "name": "Hands_Grip",
+                    "firstFrame": 0.0,
+                    "lastFrame": 24.0,
+                    "durationSeconds": 0.4
+                  },
+                  {
+                    "name": "Hands_Seal",
+                    "firstFrame": 0.0,
+                    "lastFrame": 18.0,
+                    "durationSeconds": 0.3
+                  }
+                ]
+              }
+            }
+          },
+          "geometry": [
+            {
+              "asset": "Seorin_Character",
+              "object": "M22_CharacterMesh",
+              "vertices": 10344,
+              "triangles": 19618,
+              "polygons": 8753,
+              "boundsBlenderXYZ": [
+                [
+                  -0.3085734248161316,
+                  0.3085734248161316
+                ],
+                [
+                  -0.18700000643730164,
+                  0.1099889799952507
+                ],
+                [
+                  0.023000000044703484,
+                  1.673909306526184
+                ]
+              ],
+              "weightedVertices": 10344,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 47,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Shirt",
+                "M22_MAT_Skin",
+                "M22_MAT_SkinShade",
+                "M22_MAT_EyeWhite",
+                "M22_MAT_Iris",
+                "M22_MAT_Hair",
+                "M22_MAT_Lip",
+                "M22_MAT_HairLight",
+                "M22_MAT_Trouser",
+                "M22_MAT_ApronEdge",
+                "M22_MAT_Sole",
+                "M22_MAT_Boot",
+                "M22_MAT_Leather",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Nail",
+                "M22_MAT_Apron",
+                "M22_MAT_Brass",
+                "M22_MAT_Paper"
+              ]
+            },
+            {
+              "asset": "Seorin_LeftHand",
+              "object": "M22_LeftHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            },
+            {
+              "asset": "Seorin_RightHand",
+              "object": "M22_RightHandMesh",
+              "vertices": 1420,
+              "triangles": 2772,
+              "polygons": 1240,
+              "boundsBlenderXYZ": [
+                [
+                  -0.07699999958276749,
+                  0.07699999958276749
+                ],
+                [
+                  -0.17400000989437103,
+                  0.800000011920929
+                ],
+                [
+                  -0.05999999865889549,
+                  0.05999999865889549
+                ]
+              ],
+              "weightedVertices": 1420,
+              "maxWeightsPerVertex": 2,
+              "vertexGroups": 17,
+              "skinned": true,
+              "materials": [
+                "M22_MAT_Skin",
+                "M22_MAT_Cuff",
+                "M22_MAT_Seam",
+                "M22_MAT_Shirt",
+                "M22_MAT_Nail"
+              ]
+            }
+          ],
+          "preservedCandidate": "assets/generated/3d/seorin-m22/r01/history/candidate-103",
+          "scenePreserved": true
+        },
+        "originalSceneUnchanged": true,
+        "originalStructureUnchanged": true
+      }
+    }
+  ],
+  "validatedArtifacts": 15,
+  "rigAndClipContractUnchanged": true,
+  "ignoredRootUnityMetadataExcluded": true
+}

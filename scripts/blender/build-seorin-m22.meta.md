@@ -1,17 +1,17 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-14
 cycle: 20260909-preproduction-c7
 status: draft
 supersedes: null
 owner: game-production-director
 ---
 
-# M22 · build-seorin-m22.py
+# M22 / M24 · build-seorin-m22.py
 
-[OBSERVED] RFC-CX-017/018 로컬 개발 통합 산출물. 정본 검증 범위와 실패/통과 구분은 `_workspace/current/systems/tech-verification/m22/verification.json`, 실제 화면 출처·편집 범위는 `docs/media/gameplay-m22/provenance.json`이 소유한다.
+[OBSERVED] RFC-CX-018의 기존 저작 경로를 유지한 RFC-CX-M24-20260914 디테일 개정이다. 실제 Blender 실행·보존 검사는 `_workspace/current/systems/tech-verification/m24/blender-session.json`, 새 기본 빌드·영상은 같은 폴더의 `verification.json` 및 `docs/media/gameplay-m24/provenance.json`을 따른다.
 
 | 파일 | bytes | SHA-256 |
 |---|---:|---|
-| `build-seorin-m22.py` | 47362 | `e90a36d07bcef80a9b2510ddf2c0e846627c6efc84fa31eb3b90f9bf1f4fb8e0` |
+| `build-seorin-m22.py` | 50686 | `480503a1c856f881d63db6f2efbdbb3f1c90b6ff967ffd3221b87105272d84b7` |
 
-[BOUNDARY] 실제 Blender MCP에서 실행한 저작 레시피다. 외부 메시/애니메이션을 다운로드하지 않았다. 원본 Scene 비교는 45/45 통과, 상세 구조 비교는 기록이 있는 36/36 통과이며 초기 9건에는 상세 필드가 없다. 원본 .blend 덮어쓰기나 작업 세션의 dirty 불변을 주장하지 않는다. 원본 Blender 후보의 `runtimeEligible:false`, 미확인 상업 라이선스, 사람 플레이 n=0, 사용자 전용 commit/push 경계를 유지한다.
+[BOUNDARY] 실제 Blender MCP에서 실행한 저작 레시피다. 외부 메시/애니메이션 다운로드·유료 생성은 없다. 이전 r01과 레시피를 candidate-075에 먼저 보존했다. 원본 .blend 덮어쓰기나 사용자 세션 dirty 불변은 주장하지 않는다. 원본 `runtimeEligible:false`·미확인 상업 라이선스·사람 n=0은 유지한다. 이번 사용자 지시는 관련 자산·영상의 commit/일반 push를 명시적으로 승인했다.

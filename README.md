@@ -4,11 +4,24 @@
 >
 > 이 저장소는 Steam 프리미엄 Unity 신작의 **사전제작(preproduction)** 저장소입니다. 컨셉·프리비주얼라이제이션 이미지와 개발 빌드의 게임 내 UI 캡처를 구분해 표기합니다. 사람 플레이·성능·판매 실측은 아직 **n = 0** 입니다.
 
-## 최신 개발 빌드 · M23 (2026-09-14)
+## 최신 플레이 영상 · M24 (2026-09-14)
+
+[![M24 실제 macOS 판독 동작 미리보기](docs/media/gameplay-m24/reader-preview.gif)](docs/media/gameplay-m24/gameplay.mp4)
+
+**[18초 플레이 영상 보기](docs/media/gameplay-m24/gameplay.mp4)** · [캐릭터 시작 화면](docs/media/gameplay-m24/title.png) · [두 기록 대조](docs/media/gameplay-m24/comparison.png) · [Blender 디테일 전후 비교](docs/media/gameplay-m24/blender-detail-comparison.png)
+
+- **캐릭터:** Blender에서 얼굴 윤곽·눈/코/입, 비대칭 머리의 연속 면과 가닥, 소매 주름·앞치마 봉제선/리벳을 다듬었습니다. 전신은 15,124 → **19,618 tri**, 50본이며 기존 20k 상한 이내입니다. 양손 형상·리그·11 take·접촉 시간은 유지했습니다.
+- **영상:** 진단 플래그 없는 같은 macOS 개발 빌드의 **타이틀 → 판독 → 서로 다른 기록 대조** 세 구간입니다. T0-b3 격리 체크포인트에서 재개한 에이전트 조작이며 연속 완주나 사람 플레이가 아닙니다. OS 창틀 제거·구간 편집·30fps 인코딩만 적용했고 오디오는 없습니다. Blender 비교 이미지는 별도의 렌더입니다.
+- **검증:** 새 Blender 출력 15개와 리그/클립 계약, Unity 임포트, 기본 빌드 315파일/**411,041,089B**, 실제 손 접촉·복귀와 비교 전후 저장 해시 불변을 확인했습니다. 아래 M23의 187개 테스트는 당시 증거이며 M24에서 재실행한 수치가 아닙니다. 30fps는 영상 규격이지 성능 실측이 아닙니다.
+- **경계:** 원본 후보 `runtimeEligible:false`, 사람 n=0·Base/R8/R9·강한 P1/P2 보존 감사·Windows/전체 캠페인·상업 승인 상태는 유지합니다. M22/M23 영상과 영수증을 덮어쓰지 않았습니다.
+
+[Blender 원본](assets/generated/3d/seorin-m22/r01/Seorin_Character.blend) · [정확한 M24 검증 영수증](_workspace/current/systems/tech-verification/m24/verification.json) · [영상 출처와 편집 구간](docs/media/gameplay-m24/provenance.json)
+
+## 이전 코어 구현 · M23 (2026-09-14)
 
 두 기록의 **동시 비교**, 직접 고르는 **서명 근거와 출처 계보**, 본편과 격리된 **조위정합 연습장**, 스크롤해도 유지되는 **작업저장·미리보기·확정저장 피드백**을 구현했습니다. 미기록 후보는 확정을 막으며 이전에 기록한 근거는 보존합니다. 같은 원본의 사본을 독립 근거로 세지 않습니다.
 
-| 최신 두 자료·시간창 동시 비교 · 150% | 초기 35ebdc5 확정 후 내구 저장 피드백 · 150% |
+| M23 최종 두 자료·시간창 동시 비교 · 150% | 초기 35ebdc5 확정 후 내구 저장 피드백 · 150% |
 |---|---|
 | ![M23 실제 macOS 두 기록 비교](_workspace/current/systems/tech-verification/m23/native/112-off-reader-pinned-pair.png) | ![M23 실제 서명 확정과 저장 완료](_workspace/current/systems/tech-verification/m23/native/54-release-durable-signature-confirmation-150.png) |
 
@@ -37,7 +50,7 @@ Blender MCP에서 직접 저작한 **한서린과 조작용 양손**을 기본 �
 
 기존 인물·삽입·판독 영상은 교정 전 M22 네이티브 빌드이며, 새 힌트 스틸은 입력·중단 계약 교정 후 빌드입니다. 두 빌드 지문과 캡처 범위는 각각 [모션 출처](docs/media/gameplay-m22/provenance.json)와 [힌트 UI 출처](docs/media/gameplay-m22/native-contract-provenance.json)에 분리했습니다.
 
-위 M22 단락의 영상·수치는 이전 빌드의 역사적 증거입니다. 최신 구현/소스 전달은 위 M23 기록을 따릅니다. M20 r02는 기본 적용 보류를 유지하며, 본 검증은 완성판·상업 라이선스·사람 플레이·480분 완주 승인이 아닙니다.
+위 M22 단락의 영상·수치는 이전 빌드의 역사적 증거입니다. 최신 캐릭터/영상은 위 M24, 코어 구현은 M23 기록을 따릅니다. M20 r02는 기본 적용 보류를 유지하며, 본 검증은 완성판·상업 라이선스·사람 플레이·480분 완주 승인이 아닙니다.
 
 ## 기존 세계관 컨셉
 

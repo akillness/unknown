@@ -699,3 +699,20 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [DECISION] pin 가시성 소유권은 특정 UI가 아니라 세션 공통 Render에 둔다. 초기화 guard 뒤에서 한 번 검사하고 특정 화면의 중복 검사는 제거한다.
 - [VERIFY] off-reader RED1 → 최신 PlayMode122/0fail/1격리skip +boot1/1 +프로젝트 EditMode64=187. 최초 boot 인자 누락 skip은 별도 보존한다. Mac410875921B·ba14f79e…; native112–117에서 회로Undo/Redo 후 reader 단일 차트, 비교 save 불변·전체 progress 복원을 관찰했다.
 - [BOUNDARY] C7-F61 확장이며 새 결함으로 더하지 않는다. 원래186개/6c88870f… 증거를 새 빌드로 소급하지 않는다. 사람·Base·강한 보존·Windows·전체 캠페인 gate는 그대로다.
+
+## RFC-CX-M24-20260914 · 캐릭터 디테일과 실제 플레이 영상
+
+- [REQUEST] 사용자 최신 지시가 Blender 캐릭터 디테일 수정과 플레이 영상 갱신·Git push를 승인했다.
+- [DECISION] Main은 .claude/agents/game-modeler.md 및 game-presentation-director/game-animator 정의를 적용해 한서린 원본 컨셉 기반의 얼굴·머리·작업복 마감을 개선한다. 독립 서브에이전트의 동의로 위장하지 않는다. 본 이름/계층/클립/동작 시간/손 접촉과 캐논·저장 규칙은 바꾸지 않는다.
+- [PRESERVE] 기존 Blender 사용자 장면과 r01 출력/레시피를 먼저 보존한다. 외부 이미지·메시·애니메이션을 내려받거나 유료 생성하지 않는다. 후보 원본 runtimeEligible:false와 상업 사용권 미승인을 유지한다.
+- [VERIFY PLAN] 메시/본/클립·파일 해시 대조 → 기존 Unity importer → 네이티브 진단/기본 장면·idle/접촉/복귀 → 동일 업데이트 빌드의 실제 창 녹화. 형상·색·편집과 재개 시편을 명시한다. 실제 사람이 플레이했다고 주장하지 않는다.
+- [GIT] Main이 명시 경로로 commit/일반 push한다. 기존 M22/M23 영상·증거를 새 빌드로 소급하지 않는다. 출시·Base·사람·Windows·전체 완주 gate는 그대로다.
+
+### RFC-CX-M24-20260914 · 네이티브 검수와 영상 전달
+
+- [OBSERVED] 실제 Blender 5.1.2 MCP의 기록된 19단계에서 원본 Scene 및 상세 구조 보존을 각각 19/19 확인했다. 첫 변경 전에 r01/레시피를 candidate-075에 보존했다. 얼굴·헤어·작업복 마감 뒤 전신 19,618 tri/50본, 양손 각 2,772 tri/18본, 재질 19종이다. 3 skeleton과 11 take가 이전 manifest와 동일하며 새 텍스처/다운로드/유료 생성은 없다.
+- [DECISION] 기존 importer의 `runtimeApproved:false`를 거쳐 Main이 실제 타이틀 외형·손잡이 접촉/복귀를 검수한 뒤 로컬 개발 프로필만 재승인했다. 원본 `runtimeEligible:false`는 유지한다. 디렉터/모델링/연출 역할 적용은 Main의 수행이며 독립 담당자의 ACK로 위장하지 않는다.
+- [NATIVE] 최종 기본 Mac 빌드315파일/411,041,089B, inventory digest `115fc67e3bf1dad51058bd49201615e11403af75f0fee506f8de7e5064ab5629`. 진단 플래그 없이 격리 T0-b3 저장을 재개해 한서린·판독 스트로크/복귀·조위대장과 고정 압력판 대조를 확인했다. 비교 전후 save.json 바이트/SHA는 동일했다.
+- [MEDIA] `docs/media/gameplay-m24/gameplay.mp4`는 같은 빌드의 실제 창 녹화 세 구간을 18초/1280×800/30fps/무음으로 편집했다. OS 창틀만 제거했으며 속도 변경·생성 프레임·가짜 게임 UI를 넣지 않았다. Blender 전후 이미지는 별도 렌더로 표시했다. 실패한 포커스/타이밍/Undo 시도는 완성 영상이나 성공 판정에 포함하지 않는다.
+- [TOOLING] Orca의 no-focused-window 거부 후 PID/번들/창/기하/전경/포인터 수신자를 검증하는 임시 macOS 입력으로 진행했다. 발송 영수증만으로 UI 성공을 판정하지 않았다. 소유 진단/최종 플레이어와 임시 Blender bridge는 종료했고 사용자 Blender PID13985는 실행 중으로 확인했다. 잘못 열린 루트 Unity의 정상 종료는 사용자 승인 후 확인했으며 루트 캐시·설정·.meta와 기존 로그는 삭제하지 않았다.
+- [BOUNDARY] 이번 증거는 `systems/tech-verification/m24/verification.json`과 매체 provenance가 소유한다. M23의187개 테스트는 과거 실행이며 이번에 재실행하지 않았다. 사람0명·Base/R8/R9·강한 P1/P2·Windows/전체 캠페인·상업 게이트는 유지한다. 소스/매체 전달의 실제 commit·일반 push 결과는 Git 이력을 따른다.

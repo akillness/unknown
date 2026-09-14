@@ -1,0 +1,829 @@
+{
+  "milestone": "M24",
+  "sourceBaseCommit": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b",
+  "buildInventoryDigest": "115fc67e3bf1dad51058bd49201615e11403af75f0fee506f8de7e5064ab5629",
+  "epoch": "final-default-profile-approved",
+  "pid": 70331,
+  "windowId": 7896,
+  "launchArguments": [
+    "--t0-save-dir",
+    "unity/Unknown/Builds/m24/recording-save",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "1280",
+    "-screen-height",
+    "800",
+    "-logFile",
+    "-"
+  ],
+  "diagnosticFlags": [],
+  "checkpoint": "isolated copy of m23/boundary-reader, resumed T0-b3",
+  "settings": {
+    "textScale": 1.0,
+    "reducedMotion": false,
+    "language": "ko",
+    "confirmMode": "two-step"
+  },
+  "fixtureBefore": [
+    {
+      "path": "unity/Unknown/Builds/m24/recording-save/save.json",
+      "bytes": 8722,
+      "sha256": "b10a564dc4579e926ddc7541b2aa774c614de9cb9b45bdb0e8f1aae8d3e4b3dd"
+    },
+    {
+      "path": "unity/Unknown/Builds/m24/recording-save/save.bak",
+      "bytes": 8722,
+      "sha256": "9106b539ea7d152880f47cc36e88803878eaf014807c0a26e3915c88ea661a83"
+    },
+    {
+      "path": "unity/Unknown/Builds/m24/recording-save/settings.json",
+      "bytes": 174,
+      "sha256": "b45903f36976481ddeff36811a80fdfd66723cf37d2839eb9d2b87af6ab3b644"
+    }
+  ],
+  "read": {
+    "headBefore": 32,
+    "headAfter": 34,
+    "rawActionOffsetSeconds": 2.403227375005372,
+    "observed": "native crank/hand stroke and return; verified copy retained; original wear 0/3 visible"
+  },
+  "comparison": {
+    "saveBefore": {
+      "path": "unity/Unknown/Builds/m24/recording-save/save.json",
+      "bytes": 8953,
+      "sha256": "57dc3619fecafc6d8265ff41b09771a131440bd35687b30c6f5e387b1caed890"
+    },
+    "saveAfter": {
+      "path": "unity/Unknown/Builds/m24/recording-save/save.json",
+      "bytes": 8953,
+      "sha256": "57dc3619fecafc6d8265ff41b09771a131440bd35687b30c6f5e387b1caed890"
+    },
+    "saveUnchanged": true,
+    "observed": "selected tide ledger against pinned pressure plate; independent scales and missing pressure gap remain visible"
+  },
+  "inputEventsAreDispatchReceiptsNotAcceptance": true,
+  "events": [
+    {
+      "utc": "2026-09-14T01:25:56Z",
+      "action": "capture",
+      "label": "title-initial",
+      "file": {
+        "path": "_workspace/current/systems/tech-verification/m24/native/title-initial.png",
+        "bytes": 893806,
+        "sha256": "8304893b55a1f8fdb88853161291b42be59853a06140a35cb37500676e515ded"
+      },
+      "window": {
+        "isOffscreen": false,
+        "isMinimized": false,
+        "width": 640,
+        "screenIndex": 0,
+        "x": 957,
+        "height": 432,
+        "y": 50,
+        "id": 7896,
+        "platform": {
+          "layer": 0
+        },
+        "title": "Unknown T0"
+      },
+      "screenshot": {
+        "width": 1280,
+        "height": 864,
+        "scale": 2
+      }
+    },
+    {
+      "utc": "2026-09-14T01:26:38Z",
+      "monotonic": 252315.698238041,
+      "action": "click",
+      "x": 455,
+      "y": 206,
+      "pid": 70331,
+      "windowId": 7896
+    },
+    {
+      "utc": "2026-09-14T01:26:40Z",
+      "action": "capture",
+      "label": "continued-checkpoint",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/continued-checkpoint.png",
+        "bytes": 726688,
+        "sha256": "29107077133325a2b4ae0b8c52059cb3cc16a7e7d36676f78895840706bcf48d"
+      },
+      "window": {
+        "platform": {
+          "layer": 0
+        },
+        "height": 432,
+        "isMinimized": false,
+        "y": 50,
+        "title": "Window",
+        "isOffscreen": false,
+        "id": 7896,
+        "width": 640,
+        "x": 957,
+        "screenIndex": 0
+      },
+      "screenshot": {
+        "width": 1088,
+        "scale": 1.7,
+        "height": 734
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:30:29Z",
+      "action": "capture",
+      "label": "reader-before-read",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/reader-before-read.png",
+        "bytes": 692909,
+        "sha256": "a6c3a3a987e3ed38b67ce6ba1baac2c9043d888b7e2715433c652e2269fdec99"
+      },
+      "window": {
+        "height": 432,
+        "width": 640,
+        "isOffscreen": false,
+        "x": 957,
+        "y": 50,
+        "platform": {
+          "layer": 0
+        },
+        "isMinimized": false,
+        "title": "Unknown T0",
+        "id": 7896,
+        "screenIndex": 0
+      },
+      "screenshot": {
+        "height": 734,
+        "width": 1088,
+        "scale": 1.7
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:30:52Z",
+      "monotonic": 252569.559888083,
+      "action": "click",
+      "x": 135,
+      "y": 296,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=click"
+    },
+    {
+      "utc": "2026-09-14T01:30:54Z",
+      "action": "capture",
+      "label": "reader-entered",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/reader-entered.png",
+        "bytes": 692909,
+        "sha256": "a6c3a3a987e3ed38b67ce6ba1baac2c9043d888b7e2715433c652e2269fdec99"
+      },
+      "window": {
+        "platform": {
+          "layer": 0
+        },
+        "title": "Unknown T0",
+        "y": 50,
+        "id": 7896,
+        "height": 432,
+        "isMinimized": false,
+        "isOffscreen": false,
+        "screenIndex": 0,
+        "width": 640,
+        "x": 957
+      },
+      "screenshot": {
+        "width": 1088,
+        "scale": 1.7,
+        "height": 734
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:31:23Z",
+      "monotonic": 252600.416802208,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:24Z",
+      "monotonic": 252600.840097416,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:24Z",
+      "monotonic": 252601.254749875,
+      "action": "Return",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Return"
+    },
+    {
+      "utc": "2026-09-14T01:31:25Z",
+      "action": "capture",
+      "label": "reader-keyboard-entered",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/reader-keyboard-entered.png",
+        "bytes": 784334,
+        "sha256": "f08ff1b821a65f15b188abec15c8d71a249e9f4445fb1c9a37f86de3d6c82e32"
+      },
+      "window": {
+        "height": 432,
+        "isOffscreen": false,
+        "id": 7896,
+        "title": "Unknown T0",
+        "x": 957,
+        "y": 50,
+        "width": 640,
+        "platform": {
+          "layer": 0
+        },
+        "isMinimized": false,
+        "screenIndex": 0
+      },
+      "screenshot": {
+        "width": 1088,
+        "scale": 1.7,
+        "height": 734
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:31:45Z",
+      "monotonic": 252621.944315916,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:45Z",
+      "monotonic": 252622.365983708,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:46Z",
+      "monotonic": 252622.7787325,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:46Z",
+      "monotonic": 252623.211458583,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:31:46Z",
+      "monotonic": 252623.628522541,
+      "action": "Return",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Return"
+    },
+    {
+      "utc": "2026-09-14T01:31:48Z",
+      "action": "capture",
+      "label": "reader-open-final",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/reader-open-final.png",
+        "bytes": 816387,
+        "sha256": "01d2ed7001d3e6af5483c8980f08f9617af21fde23ee5a8afba4c5e69c244735"
+      },
+      "window": {
+        "title": "Unknown T0",
+        "width": 640,
+        "isOffscreen": false,
+        "isMinimized": false,
+        "id": 7896,
+        "screenIndex": 0,
+        "platform": {
+          "layer": 0
+        },
+        "y": 50,
+        "x": 957,
+        "height": 432
+      },
+      "screenshot": {
+        "height": 734,
+        "width": 1088,
+        "scale": 1.7
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:32:06Z",
+      "monotonic": 252643.257564291,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:06Z",
+      "monotonic": 252643.67424425,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:07Z",
+      "monotonic": 252644.087778291,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:07Z",
+      "monotonic": 252644.498163583,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:08Z",
+      "monotonic": 252644.914059833,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:08Z",
+      "monotonic": 252645.332774166,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:08Z",
+      "monotonic": 252645.746697625,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:09Z",
+      "monotonic": 252646.16355125,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:09Z",
+      "monotonic": 252646.580531333,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:10Z",
+      "monotonic": 252646.999937541,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:10Z",
+      "monotonic": 252647.413665166,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:11Z",
+      "monotonic": 252647.831398708,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:11Z",
+      "monotonic": 252648.260224875,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:11Z",
+      "monotonic": 252648.67192725,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:32:12Z",
+      "action": "capture",
+      "label": "read-action-final",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/read-action-final.png",
+        "bytes": 851586,
+        "sha256": "0dbe80207aa06d06c700b067312048f5f3904e3b9b31367fd211b537d3c6c46f"
+      },
+      "window": {
+        "platform": {
+          "layer": 0
+        },
+        "height": 432,
+        "isMinimized": false,
+        "y": 50,
+        "title": "Unknown T0",
+        "isOffscreen": false,
+        "id": 7896,
+        "width": 640,
+        "x": 957,
+        "screenIndex": 0
+      },
+      "screenshot": {
+        "height": 864,
+        "scale": 2,
+        "width": 1280
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:33:18Z",
+      "action": "capture",
+      "label": "read-ready-final",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/read-ready-final.png",
+        "bytes": 805905,
+        "sha256": "f0833dcc2f856fa0ed4b2a8568afd5dad81374510a538a145a9ca152f7e8e5c2"
+      },
+      "window": {
+        "isMinimized": false,
+        "isOffscreen": false,
+        "screenIndex": 0,
+        "y": 50,
+        "x": 957,
+        "width": 640,
+        "platform": {
+          "layer": 0
+        },
+        "id": 7896,
+        "title": "Unknown T0",
+        "height": 432
+      },
+      "screenshot": {
+        "height": 864,
+        "scale": 2,
+        "width": 1280
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:34:14Z",
+      "monotonic": 252771.297252583,
+      "action": "click",
+      "x": 450,
+      "y": 149,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=click"
+    },
+    {
+      "utc": "2026-09-14T01:34:21Z",
+      "action": "capture",
+      "label": "read-complete-final",
+      "file": {
+        "path": "_workspace/current/systems/tech-verification/m24/native/read-complete-final.png",
+        "bytes": 894344,
+        "sha256": "ec457758fe97a846e3e1cfa8285b0e0fe2efafa86dfde5602c9bfecf859e1d9a"
+      },
+      "window": {
+        "height": 432,
+        "width": 640,
+        "isOffscreen": false,
+        "x": 957,
+        "y": 50,
+        "platform": {
+          "layer": 0
+        },
+        "isMinimized": false,
+        "title": "Unknown T0",
+        "id": 7896,
+        "screenIndex": 0
+      },
+      "screenshot": {
+        "width": 1280,
+        "scale": 2,
+        "height": 864
+      }
+    },
+    {
+      "utc": "2026-09-14T01:34:57Z",
+      "monotonic": 252814.110754458,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:34:57Z",
+      "monotonic": 252814.593449291,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:34:58Z",
+      "monotonic": 252815.075161041,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:34:58Z",
+      "monotonic": 252815.56161175,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:34:59Z",
+      "monotonic": 252816.044774875,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:34:59Z",
+      "monotonic": 252816.539474833,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:35:00Z",
+      "monotonic": 252817.027736125,
+      "action": "ShiftTab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=ShiftTab"
+    },
+    {
+      "utc": "2026-09-14T01:35:01Z",
+      "action": "capture",
+      "label": "pin-ready-final",
+      "file": {
+        "path": "unity/Unknown/Builds/m24/capture-drafts/pin-ready-final.png",
+        "bytes": 658471,
+        "sha256": "8f0bfba3169fe37f36b214df8645cdc97fbd72b68db01dcc541ed3620ef8cd2f"
+      },
+      "window": {
+        "title": "Unknown T0",
+        "width": 640,
+        "isOffscreen": false,
+        "isMinimized": false,
+        "id": 7896,
+        "screenIndex": 0,
+        "platform": {
+          "layer": 0
+        },
+        "y": 50,
+        "x": 957,
+        "height": 432
+      },
+      "screenshot": {
+        "width": 1088,
+        "scale": 1.7,
+        "height": 734
+      },
+      "published": false
+    },
+    {
+      "utc": "2026-09-14T01:35:33Z",
+      "monotonic": 252849.828146416,
+      "action": "Return",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Return"
+    },
+    {
+      "utc": "2026-09-14T01:35:33Z",
+      "monotonic": 252850.669381666,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:35:34Z",
+      "monotonic": 252851.126515291,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:35:34Z",
+      "monotonic": 252851.56366925,
+      "action": "Tab",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Tab"
+    },
+    {
+      "utc": "2026-09-14T01:35:35Z",
+      "monotonic": 252852.032372666,
+      "action": "Return",
+      "x": null,
+      "y": null,
+      "pid": 70331,
+      "windowId": 7896,
+      "adapter": "PID/window/point-guarded CGEvent",
+      "result": "delivered pid=70331 window=7896 action=Return"
+    },
+    {
+      "utc": "2026-09-14T01:35:36Z",
+      "action": "capture",
+      "label": "different-media-final",
+      "file": {
+        "path": "_workspace/current/systems/tech-verification/m24/native/different-media-final.png",
+        "bytes": 830727,
+        "sha256": "66ca3d2a597f6bd133a6b7143b1e138fd3331a51fb931a0e5536211061da1876"
+      },
+      "window": {
+        "width": 640,
+        "id": 7896,
+        "height": 432,
+        "title": "Window",
+        "y": 50,
+        "x": 957,
+        "isMinimized": false,
+        "isOffscreen": false,
+        "screenIndex": 0,
+        "platform": {
+          "layer": 0
+        }
+      },
+      "screenshot": {
+        "height": 734,
+        "scale": 1.7,
+        "width": 1088
+      }
+    }
+  ],
+  "publishedCaptures": [
+    {
+      "path": "_workspace/current/systems/tech-verification/m24/native/contact-motion-final.png",
+      "bytes": 462192,
+      "sha256": "35d332c67f88e77a3e275bef39bf54a162c3022d3b0a3786beee462b17a07d5b"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m24/native/different-media-final.png",
+      "bytes": 830727,
+      "sha256": "66ca3d2a597f6bd133a6b7143b1e138fd3331a51fb931a0e5536211061da1876"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m24/native/read-complete-final.png",
+      "bytes": 894344,
+      "sha256": "ec457758fe97a846e3e1cfa8285b0e0fe2efafa86dfde5602c9bfecf859e1d9a"
+    },
+    {
+      "path": "_workspace/current/systems/tech-verification/m24/native/title-initial.png",
+      "bytes": 893806,
+      "sha256": "8304893b55a1f8fdb88853161291b42be59853a06140a35cb37500676e515ded"
+    }
+  ],
+  "toolingNotes": [
+    "Orca coordinate focus guard reported no focused window after title continuation, including its one restore retry and explicit OS activation. These failed calls are excluded from accepted actions.",
+    "Used a throwaway CGEvent helper restricted by application bundle id, PID, visible window id, 640x432 geometry, foreground process and pointer recipient. Mouse click count was explicitly set to 1; shifted Tab used real modifier press/release.",
+    "Initial raw title recording includes setup/idle after title. Only seconds 0.6–4.6 are published. Diagnostic timing/Undo attempts are not used as final motion proof."
+  ],
+  "ownedPlayerStopped": true,
+  "stopExitCode": 143
+}

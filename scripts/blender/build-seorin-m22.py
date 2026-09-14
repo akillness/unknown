@@ -43,7 +43,7 @@ def sha(path):
 
 def archive(reason):
     """Snapshot our complete candidate before replacing any prior output."""
-    existing = [p for p in OUT.iterdir() if p.name != 'history'] if OUT.exists() else []
+    existing = [p for p in OUT.iterdir() if p.name != 'history' and p.suffix != '.meta'] if OUT.exists() else []
     if not existing:
         return None
     history = OUT / 'history'
@@ -310,57 +310,97 @@ def build_character(c):
     bones=[('Root',(0,0,0),(0,0,.15),None),('Hips',(0,0,.86),(0,0,1.04),'Root'),
         ('Spine',(0,0,1.04),(0,0,1.23),'Hips'),('Chest',(0,0,1.23),(0,0,1.40),'Spine'),
         ('Neck',(0,0,1.40),(0,-.009,1.455),'Chest'),('Head',(0,-.009,1.455),(0,-.017,1.655),'Neck')]
-    s.tube([(0,0,.92),(0,0,1.02),(0,.008,1.13),(0,.007,1.24),(0,.005,1.34),(0,0,1.40)],
-           [(.15,.105),(.14,.10),(.135,.096),(.16,.103),(.179,.092),(.145,.073)],
-           'Shirt',[{'Hips':1},{'Hips':.5,'Spine':.5},{'Spine':1},{'Spine':.4,'Chest':.6},{'Chest':1},{'Chest':1}],24)
+    s.tube([(0,0,.92),(0,0,1.02),(0,.008,1.13),(0,.007,1.24),
+            (0,.005,1.335),(0,.003,1.373),(0,-.002,1.405),(0,-.004,1.418)],
+           [(.15,.105),(.14,.10),(.135,.096),(.16,.103),
+            (.173,.089),(.147,.074),(.075,.048),(.048,.037)],
+           'Shirt',[{'Hips':1},{'Hips':.5,'Spine':.5},{'Spine':1},{'Spine':.4,'Chest':.6},
+                    {'Chest':1},{'Chest':1},{'Chest':1},{'Chest':1}],28)
     s.tube([(0,0,1.378),(0,-.004,1.411),(0,-.012,1.465)],
-           [(.054,.043),(.043,.039),(.041,.04)],'Skin',{'Neck':1},16)
-    # Head contour has explicit chin, jaw, cheek, temple and crown stations.
-    s.tube([(0,-.028,1.473),(0,-.024,1.486),(0,-.016,1.52),(0,-.01,1.558),
-            (0,-.006,1.59),(0,0,1.63),(0,.006,1.671),(0,.009,1.694)],
-           [(.023,.031),(.041,.047),(.059,.06),(.071,.066),(.073,.068),(.071,.064),(.051,.048),(.012,.015)],
-           'Skin',{'Head':1},28)
+           [(.050,.041),(.040,.037),(.039,.038)],'Skin',{'Neck':1},20)
+    # A continuous cheek/jaw surface; eye sockets and cheek planes are not floating spheres.
+    head_start=len(s.vertices)
+    s.tube([(0,-.023,1.473),(0,-.023,1.480),(0,-.020,1.493),(0,-.016,1.512),
+            (0,-.012,1.535),(0,-.009,1.551),(0,-.007,1.567),(0,-.006,1.584),
+            (0,-.004,1.602),(0,0,1.63),(0,.005,1.654),(0,.008,1.679),(0,.009,1.694)],
+           [(.020,.025),(.030,.035),(.041,.045),(.052,.052),(.060,.059),(.066,.064),
+            (.068,.067),(.069,.067),(.069,.066),(.067,.061),(.058,.054),(.038,.037),(.010,.012)],
+           'Skin',{'Head':1},36)
+    for i in range(head_start,len(s.vertices)):
+        x,y,z=s.vertices[i]
+        if y<-.025:
+            cheek=math.exp(-((abs(x)-.038)/.023)**2-((z-1.55)/.023)**2)
+            socket=math.exp(-((abs(x)-.029)/.020)**2-((z-1.580)/.012)**2)
+            s.vertices[i]=(x,y-.004*cheek+.003*socket,z)
     for sign in (-1,1):
-        s.ellipsoid((sign*.070,.002,1.561),(.013,.015,.025),'Skin',{'Head':1},12,8)
-        s.ellipsoid((sign*.075,-.010,1.561),(.005,.004,.014),'SkinShade',{'Head':1},10,6)
-        # Narrow tired eyes with sculpted upper/lower lids, not ball eyes.
-        x=sign*.031
-        s.ellipsoid((x,-.069,1.582),(.020,.006,.007),'EyeWhite',{'Head':1},14,6)
-        s.ellipsoid((x,-.074,1.582),(.0065,.002,.006),'Iris',{'Head':1},12,6)
-        s.tube([(x-.019,-.072,1.582),(x-.009,-.075,1.588),(x+.009,-.075,1.588),(x+.019,-.071,1.583)],
-               [.0022]*4,'SkinShade',{'Head':1},6)
-        s.tube([(x-.018,-.071,1.579),(x,-.074,1.575),(x+.017,-.071,1.579)],
-               [.0016]*3,'SkinShade',{'Head':1},6)
-        s.tube([(x-.017,-.07,1.602),(x,-.074,1.606),(x+.017,-.069,1.603)],
-               [.0032,.004,.002],'Hair',{'Head':1},6)
-    # Nose planes, nostril wings, understated closed lips.
-    s.tube([(0,-.066,1.595),(0,-.080,1.566),(0,-.087,1.549),(0,-.077,1.545)],
-           [(.006,.003),(.006,.005),(.008,.007),(.01,.002)],'Skin',{'Head':1},10)
-    for x in (-.009,.009):
-        s.ellipsoid((x,-.075,1.547),(.006,.006,.004),'SkinShade',{'Head':1},10,6)
-    s.tube([(-.021,-.070,1.524),(-.008,-.076,1.526),(0,-.077,1.524),(.008,-.076,1.525),(.020,-.070,1.524)],
-           [.001,.003,.0025,.003,.001],'Lip',{'Head':1},8)
-    s.tube([(-.018,-.070,1.521),(0,-.076,1.519),(.018,-.070,1.521)],
-           [.001,.003,.001],'Lip',{'Head':1},8)
-    # Asymmetric bob cap: custom swept panels leave face open, with longer left fringe.
-    s.ellipsoid((0,.009,1.66),(.075,.066,.049),'Hair',{'Head':1},24,10)
-    for j in range(18):
-        a=2*math.pi*j/18
-        front=max(0,-math.sin(a))
-        bottom=1.515 if front<.25 else (1.60 if math.cos(a)>0 else 1.55)
-        pts=[(.006,.008,1.709),(.052*math.cos(a)+.005,.056*math.sin(a)+.008,1.689),
-             (.076*math.cos(a)+.003,.073*math.sin(a)+.007,1.65),
-             (.081*math.cos(a),.072*math.sin(a)+.011,1.60),
-             (.070*math.cos(a)-.004,.065*math.sin(a)+.013,bottom)]
-        if front>.55:
-            pts=pts[:3]+[(pts[2][0]-.018,pts[2][1]-.009,bottom)]
-        s.tube(pts,[(.007,.005),(.019,.008),(.019,.009),(.011,.006),(.002,.002)][:len(pts)],
-               'Hair' if j%4 else 'HairLight',{'Head':1},8,axis=(math.cos(a),math.sin(a),0))
-    # Deliberately swept fringe from right crown to the left temple.
-    for j in range(5):
-        s.tube([(.035+j*.005,-.041,1.684),(.012+j*.004,-.074,1.663),
-                (-.03+j*.004,-.083,1.623),(-.062+j*.003,-.07,1.559-j*.004)],
-               [(.013,.006),(.013,.006),(.009,.004),(.0015,.001)],'Hair',{'Head':1},8)
+        s.ellipsoid((sign*.068,.002,1.562),(.011,.013,.023),'Skin',{'Head':1},12,8)
+        s.ellipsoid((sign*.073,-.009,1.562),(.004,.003,.012),'SkinShade',{'Head':1},10,6)
+        x=sign*.029
+        eye_start=len(s.vertices)
+        s.ellipsoid((x,-.069,1.582),(.017,.005,.006),'EyeWhite',{'Head':1},16,6)
+        s.ellipsoid((x,-.0738,1.582),(.0049,.0015,.0049),'Iris',{'Head':1},12,6)
+        s.ellipsoid((x,-.075,1.582),(.0023,.0007,.003),'Hair',{'Head':1},10,6)
+        s.ellipsoid((x-.0015,-.0757,1.584),(.0008,.0004,.0008),'EyeWhite',{'Head':1},8,4)
+        s.tube([(x-.016,-.070,1.582),(x-.007,-.074,1.587),(x+.008,-.074,1.587),(x+.016,-.070,1.582)],
+               [.001,.0018,.0016,.0008],'SkinShade',{'Head':1},8)
+        s.tube([(x-.016,-.069,1.580),(x,-.073,1.576),(x+.016,-.069,1.580)],
+               [.0008,.0012,.0008],'Skin',{'Head':1},8)
+        s.tube([(x-.016,-.067,1.601),(x-.004,-.072,1.604),(x+.013,-.068,1.602)],
+               [.0012,.0025,.0012],'Hair',{'Head':1},8)
+        # Wrap eyes and lids around the face rather than leaving flat discs.
+        center_depth=math.sqrt(1-(x/.069)**2)
+        for i in range(eye_start,len(s.vertices)):
+            px,py,pz=s.vertices[i]
+            depth=math.sqrt(max(.05,1-(px/.069)**2))
+            s.vertices[i]=(px,py+.003+.067*(center_depth-depth),pz)
+    # Rounded bridge, tip and alae; nostril shadow is confined to the underside.
+    s.tube([(0,-.067,1.596),(0,-.073,1.576),(0,-.083,1.556),
+            (0,-.086,1.550),(0,-.079,1.545)],
+           [(.004,.003),(.005,.004),(.006,.005),(.008,.005),(.009,.0025)],
+           'Skin',{'Head':1},16)
+    for x in (-.008,.008):
+        s.ellipsoid((x,-.076,1.548),(.006,.005,.004),'Skin',{'Head':1},12,6)
+        s.ellipsoid((x,-.080,1.545),(.0025,.0015,.0012),'SkinShade',{'Head':1},8,4)
+    s.tube([(-.018,-.067,1.524),(-.006,-.073,1.526),(0,-.074,1.524),(.006,-.073,1.526),(.018,-.067,1.524)],
+           [.0006,.0018,.0014,.0018,.0006],'Lip',{'Head':1},8)
+    s.tube([(-.016,-.067,1.522),(0,-.074,1.520),(.016,-.067,1.522)],
+           [.0005,.002,.0005],'Lip',{'Head':1},8)
+    # Continuous asymmetric bob, with shallow strand relief instead of pointed tubes.
+    hair_rings=[]
+    hair_steps=(.035,.18,.34,.50,.65,.78,.88,.95,1.0)
+    for t in hair_steps:
+        ring=[]
+        for j in range(40):
+            a=2*math.pi*j/40
+            front=max(0,-math.sin(a))
+            bottom=1.525+.110*math.sqrt(front)-.012*max(0,-math.cos(a))
+            radius=math.sin(t*math.pi/2)*(1-.035*t**8)
+            relief=.0012*math.sin(20*a+3*t)*t
+            x=.017*(1-t)+(.078*radius+relief)*math.cos(a)
+            y=.009+(.073*radius+relief)*math.sin(a)
+            z=1.709-(1.709-bottom)*t*t
+            ring.append(s.vertex((x,y,z),{'Head':1}))
+        hair_rings.append(ring)
+    s.face(hair_rings[0],'Hair')
+    for upper,lower in zip(hair_rings,hair_rings[1:]):
+        for j in range(40):
+            n=(j+1)%40
+            s.face((upper[j],lower[j],lower[n],upper[n]),'Hair')
+    # Fine highlights follow the shell; the temple fringe stays outside the eye line.
+    for j in range(0,40,2):
+        pts=[]
+        for ring in hair_rings[1:]:
+            x,y,z=s.vertices[ring[j]]
+            pts.append((x*1.009,(y-.009)*1.009+.009,z+.0005))
+        s.tube(pts,[.00035,.0006,.0007,.0007,.0006,.0005,.0003,.0001],
+               'HairLight',{'Head':1},5)
+    for j in range(12):
+        offset=j*.0015
+        s.tube([(.023+offset,-.035,1.689),(.008+offset,-.064,1.669),
+                (-.019+offset,-.075,1.644),(-.044+offset,-.070,1.619),
+                (-.060+offset,-.052,1.582),(-.068+offset,-.030,1.537)],
+               [(.003,.0015),(.005,.002),(.006,.002),(.005,.002),(.003,.0015),(.0004,.0003)],
+               'Hair',{'Head':1},8,axis=(1,0,0))
     for sign,label in ((-1,'Right'),(1,'Left')):
         hip=(sign*.086,0,.93); knee=(sign*.102,-.008,.52); ankle=(sign*.112,.008,.13)
         bones += [(label+'Thigh',hip,knee,'Hips'),(label+'Shin',knee,ankle,label+'Thigh'),
@@ -387,16 +427,22 @@ def build_character(c):
                 s.box((sign*.112+dx,dy,.032),(.018,.038,.018),'Boot',{label+'Foot':1},.003)
         shoulder=(sign*.164,0,1.361); elbow=(sign*.232,-.008,1.14); wrist=(sign*.264,-.041,.924)
         bones += [(label+'UpperArm',shoulder,elbow,'Chest'),(label+'Forearm',elbow,wrist,label+'UpperArm')]
-        s.ellipsoid((sign*.151,0,1.347),(.082,.065,.061),'Shirt',
-                    {'Chest':.55,label+'UpperArm':.45},16,8)
-        s.tube([shoulder,(sign*.19,.002,1.318),(sign*.211,-.003,1.247),(sign*.231,-.009,1.161),
-                (sign*.238,-.015,1.123)],
-               [(.063,.064),(.07,.067),(.058,.060),(.055,.055),(.052,.049)],
-               'Shirt',{label+'UpperArm':1},16)
-        s.tube([(sign*.23,-.009,1.172),(sign*.237,-.014,1.143),(sign*.24,-.017,1.126)],
-               [(.061,.058),(.062,.057),(.054,.05)],'Cuff',{label+'UpperArm':1},16)
+        s.ellipsoid((sign*.151,0,1.336),(.061,.057,.053),'Shirt',
+                    {'Chest':.55,label+'UpperArm':.45},20,10)
+        s.tube([(sign*.141,0,1.350),(sign*.17,.001,1.344),(sign*.19,.002,1.318),
+                (sign*.211,-.003,1.247),(sign*.231,-.009,1.161),(sign*.238,-.015,1.123)],
+               [(.052,.051),(.059,.058),(.061,.059),(.053,.057),(.054,.052),(.051,.047)],
+               'Shirt',{label+'UpperArm':1},20,axis=(0,1,0))
+        s.tube([(sign*.23,-.009,1.178),(sign*.234,-.011,1.158),
+                (sign*.239,-.015,1.138),(sign*.24,-.017,1.126)],
+               [(.056,.054),(.061,.057),(.059,.053),(.052,.049)],
+               'Cuff',{label+'UpperArm':1},20)
         s.tube([(sign*.234,-.012,1.148),(sign*.237,-.014,1.141)],
-               [(.063,.058)]*2,'Seam',{label+'UpperArm':1},16)
+               [(.060,.055)]*2,'Seam',{label+'UpperArm':1},20)
+        for z in (1.215,1.245,1.278):
+            x=sign*(.211+(1.247-z)*.25)
+            s.tube([(x-sign*.035,-.045,z+.012),(x,-.061,z),(x+sign*.032,-.043,z+.005)],
+                   [.0006,.0025,.0005],'Shirt',{label+'UpperArm':1},6)
         # Local forearm +Y follows wrist->elbow, local fingers continue downwards.
         y=(Vector(elbow)-Vector(wrist)).normalized(); x=Vector((1,0,0)); x=(x-y*x.dot(y)).normalized(); z=x.cross(y)
         matrix=Matrix(((x.x,y.x,z.x,wrist[0]),(x.y,y.y,z.y,wrist[1]),(x.z,y.z,z.z,wrist[2]),(0,0,0,1)))
@@ -423,8 +469,8 @@ def build_character(c):
         s.box((sign*.098,-.126,1.291),(.033,.009,.045),'Brass',{'Chest':1},.003)
         s.box((sign*.098,-.133,1.292),(.023,.005,.028),'Apron',{'Chest':1},.001)
     s.box((0,-.12,1.117),(.025,.008,.306),'Apron',{'Spine':1},.002)
-    s.tube([(-.043,-.038,1.398),(0,-.056,1.390),(.043,-.038,1.398)],
-           [.006,.007,.006],'Cuff',{'Chest':1},8)
+    s.tube([(0,-.004,1.403),(0,-.004,1.412),(0,-.004,1.419)],
+           [(.054,.042),(.052,.040),(.047,.037)],'Cuff',{'Chest':1},32)
     s.box((0,-.126,.99),(.29,.014,.033),'ApronEdge',{'Hips':1},.003)
     s.box((-.013,-.132,.902),(.147,.018,.128),'ApronEdge',{'Hips':1},.008)
     s.box((-.013,-.143,.909),(.135,.007,.111),'Apron',{'Hips':1},.004)
@@ -435,6 +481,23 @@ def build_character(c):
     s.box((.164,-.11,.925),(.076,.005,.012),'Brass',{'Hips':1},.001)
     for z in (.886,.897,.908,.941,.953):
         s.tube([(.137,-.103,z),(.188,-.103,z)],[.0006]*2,'Paper',{'Hips':1},6)
+    # Sewn hems and worn workwear details use the existing palette and skin weights.
+    for sign in (-1,1):
+        for j in range(24):
+            z=.675+j*.023
+            x=sign*(.137-.035*max(0,z-.96)/.31)
+            y=-.107-.020*min(1,(z-.675)/.595)
+            weight={'Hips':1} if z<1 else {'Spine':1}
+            s.face([s.vertex(p,weight) for p in
+                    [(x-.0006,y,z),(x+.0006,y,z),(x+.0006,y,z+.006),(x-.0006,y,z+.006)]],'Seam')
+        s.ellipsoid((sign*.097,-.137,1.263),(.004,.002,.004),'Brass',{'Spine':1},10,6)
+        s.tube([(sign*.031,-.126,1.244),(sign*.046,-.130,1.17),(sign*.049,-.125,1.108)],
+               [.0004,.0014,.0004],'ApronEdge',{'Spine':1},6)
+    for x in (-.071,.045):
+        s.ellipsoid((x,-.148,.953),(.003,.0015,.003),'Brass',{'Hips':1},10,6)
+    s.box((.017,-.15,.931),(.040,.002,.016),'Leather',{'Hips':1},.001)
+    s.tube([(.164,-.110,.998),(.177,-.12,1.012),(.17,-.12,1.034)],
+           [.0018,.002,.0018],'Brass',{'Hips':1},8)
     # Shorten the exposed neck without changing facial proportions or identity.
     for i,weights in enumerate(s.weights):
         if weights.get('Head')==1:
@@ -681,6 +744,7 @@ def fbx_info(path):
 def manifest():
     s=scene()
     return {'rfc':'RFC-CX-018','runtimeEligible':False,'promotedBy':None,
+        'detailRevision':'M24','detailRfc':'RFC-CX-M24-20260914',
         'tool':'Blender MCP execute_blender_code via execute_m22_blender_stage',
         'blenderVersion':bpy.app.version_string,'method':'Original procedural mesh authoring and authored skeletal animation; no third-party mesh or texture',
         'sourceScript':'scripts/blender/build-seorin-m22.py',
@@ -734,10 +798,11 @@ def write_manifest():
     m['renders']=json.loads(scene().get('renders','[]'))
     m['files']=[{'file':str(p.relative_to(OUT)),'sha256':sha(p),'bytes':p.stat().st_size}
                 for p in OUT.rglob('*') if p.is_file() and 'history' not in p.parts
-                and p.name not in ('manifest.json','provenance.json') and not p.name.endswith('.meta.md')]
+                and p.name not in ('manifest.json','provenance.json')
+                and p.suffix != '.meta' and not p.name.endswith('.meta.md')]
     (OUT/'manifest.json').write_text(json.dumps(m,indent=2))
     (OUT/'provenance.json').write_text(json.dumps({k:m[k] for k in
-        ('rfc','runtimeEligible','promotedBy','tool','method','sourceScript','sourceScriptSha256',
+        ('rfc','detailRevision','detailRfc','runtimeEligible','promotedBy','tool','method','sourceScript','sourceScriptSha256',
          'conceptRef','conceptSha256','license','generatedAt','files')},indent=2))
     return m
 

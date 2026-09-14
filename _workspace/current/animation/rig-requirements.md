@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-14
 cycle: 20260909-preproduction-c5
 status: draft
 supersedes: null
@@ -107,6 +107,12 @@ owner: game-animator
 - [DECISION] 손 삽입 250ms/접촉 200ms, 확정 300ms/접촉 150ms는 기존 `anim-list.md`를 따른다. 왼손은 접촉 유지 후 150ms에 카메라 기준 대기 위치로 복귀한다. 크랭크는 `T0ReaderVfx.json`의 420/160/520ms·150도를 계속 소유하며 오른손의 닫힌 grip이 실제 손잡이를 따라간다. 고정 `rd-hex-plate` 하드웨어는 움직이지 않고, 판정·저장을 모션 완료까지 미루지 않는다.
 - [DECISION] 최초 입장/페이지 이동/렌더/undo/redo는 성공 모션이 아니다. `ReadOriginal`·인용 확정은 내구 저장 성공 및 현재 context인 경우만 재생한다. 모션 축소·화면 이탈·disable·앱 일시중단·포커스 상실은 즉시 정지·복귀한다. 중단 중 새 연출 요청도 재생하지 않으며 복귀 시 예약 재생하지 않는다.
 - [BOUNDARY] 신체 표현은 고정 관찰점의 시작 화면/1인칭 조작에만 적용한다. 출시 승인, 외부 이미지 사용권, 사람 몰입/편안함 검증을 이 리그 계약이 대체하지 않는다. 구현/네이티브 검증 상태는 M22 task-manifest와 QA 영수증에서 추적한다.
+
+### 3.2 M24 형상 개정과 리그 보존
+
+[OBSERVED 2026-09-14] 캐릭터 디테일 개정 뒤 3개 skeleton과 11 authored take를 이전 r01 manifest와 대조해 동일함을 확인했다. 한서린 형상은 19,618 tri/50본이며 양손은 각각 2,772 tri/18본, 정점당 최대 2본을 유지한다. 기존 이름/계층/키프레임/접촉 시간·Generic·루트모션 없음 계약은 바꾸지 않았다.
+
+Main이 진단 및 기본 macOS 빌드에서 타이틀 외형과 판독기의 손잡이 추적·복귀를 실제 확인했다. 이번 새 증거는 `systems/tech-verification/m24/verification.json`과 `docs/media/gameplay-m24/`다. M22의 삽입/봉인/축소모션 전체 사례를 이번 실행으로 다시 검증했다고 주장하지 않는다.
 
 ## 4. (C) 인물 초상 15컷 (5인 × 3표정) 납품 규격 — **리그 없음**
 

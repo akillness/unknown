@@ -1,0 +1,187 @@
+{
+  "milestone": "M24",
+  "createdAtUtc": "2026-09-14T01:46:33Z",
+  "sourceBaseCommit": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b",
+  "buildInventory": {
+    "path": "_workspace/current/systems/tech-verification/m24/build-inventory.json",
+    "bytes": 71452,
+    "sha256": "4cfee5348515e3ffc3b5b65a0075fd0f26120973cbe0ebc324f6ebc20b8260ba"
+  },
+  "buildInventoryDigest": "115fc67e3bf1dad51058bd49201615e11403af75f0fee506f8de7e5064ab5629",
+  "buildDigestMethod": "SHA256 of UTF-8 compact JSON inventory sorted by path, object keys sorted; separators comma/colon",
+  "runtimeProfile": {
+    "path": "unity/Unknown/Assets/_Project/Resources/M22Embodiment.asset",
+    "bytes": 2923,
+    "sha256": "ffff7ebe4da34881bcceb0d74d408bc802cb5b0a4abdaae351e654357b0f2e6e"
+  },
+  "profileApproved": true,
+  "diagnosticFlags": [],
+  "capture": "macOS screencapture -v -V <seconds> -l 7896 -x; actual Unity Metal player, PID 70331",
+  "operator": "agent-controlled native input; not a human playtest",
+  "checkpoint": "T0-b3 resumed from an isolated saved fixture; not a continuous campaign run",
+  "rawCapturesLocalOnly": [
+    {
+      "file": {
+        "path": "unity/Unknown/Builds/m24/gameplay-final-native.mov",
+        "bytes": 27198446,
+        "sha256": "8696c4809c5726e2f9ec1c73b2cb1fdd316d6e040294d4891de13d07b4fea603"
+      },
+      "durationSeconds": 50.035,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1504,
+          "height": 1088,
+          "avg_frame_rate": "4660/91",
+          "nb_frames": "2563"
+        }
+      ]
+    },
+    {
+      "file": {
+        "path": "unity/Unknown/Builds/m24/reader-final-native.mov",
+        "bytes": 4099303,
+        "sha256": "6f168ef7a834f05851cdc5f3a064bcff7f2c906f7b17cb5cf9c07ed94842cf85"
+      },
+      "durationSeconds": 7.911667,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1504,
+          "height": 1088,
+          "avg_frame_rate": "20150/397",
+          "nb_frames": "403"
+        }
+      ]
+    },
+    {
+      "file": {
+        "path": "unity/Unknown/Builds/m24/comparison-final-native.mov",
+        "bytes": 7107337,
+        "sha256": "337d0fcd53335d65cecbc5ec47580a35dac8b7d4034c37413f4e2d1aec9ad6bc"
+      },
+      "durationSeconds": 12.023333,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1504,
+          "height": 1088,
+          "avg_frame_rate": "24360/481",
+          "nb_frames": "609"
+        }
+      ]
+    }
+  ],
+  "edit": {
+    "cropRawPixels": {
+      "x": 112,
+      "y": 140,
+      "width": 1280,
+      "height": 800
+    },
+    "cuts": [
+      {
+        "source": "gameplay-final-native.mov",
+        "startSeconds": 0.6,
+        "endSeconds": 4.6,
+        "topic": "character title"
+      },
+      {
+        "source": "reader-final-native.mov",
+        "startSeconds": 0.6,
+        "endSeconds": 6.6,
+        "topic": "read crank stroke and return"
+      },
+      {
+        "source": "comparison-final-native.mov",
+        "startSeconds": 2,
+        "endSeconds": 10,
+        "topic": "select tide ledger against pinned pressure record"
+      }
+    ],
+    "durationSeconds": 18,
+    "output": "1280x800 H264/yuv420p, 30fps CFR, CRF18",
+    "audio": "none; not recorded or synthesized",
+    "timeWarp": false,
+    "interpolation": "no generated/interpolated frames; CFR sampling only",
+    "overlays": "none; native Development Build watermark retained",
+    "gif": "seconds 4–10 of delivery MP4, 640x400, 15fps, 128-color palette; preview only"
+  },
+  "deliveryProbe": {
+    "file": {
+      "path": "docs/media/gameplay-m24/gameplay.mp4",
+      "bytes": 1177210,
+      "sha256": "511bed1f8c72be74b60508718c9030eda91e3ef19ef61dad7c084f2ca76ffd57"
+    },
+    "durationSeconds": 18.0,
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 800,
+        "avg_frame_rate": "30/1",
+        "nb_frames": "540"
+      }
+    ]
+  },
+  "blenderComparison": {
+    "notGameplay": true,
+    "sources": [
+      {
+        "gitObject": "fdcdc27e7dbda829f253f8cee0266f6b1427f27b:assets/generated/3d/seorin-m22/r01/preview-face.png",
+        "gitBlob": "aba8ff3ed761dc5b2f99c50787cc70022503e5ae",
+        "localPreservationCopy": "assets/generated/3d/seorin-m22/r01/history/candidate-075/preview-face.png",
+        "bytes": 1031028,
+        "sha256": "1a898e8e1eb25dc068f0aaed5f88d2067fc90d1206ba5443a1ecc52fe17bba63"
+      },
+      {
+        "path": "assets/generated/3d/seorin-m22/r01/preview-face.png",
+        "bytes": 1039609,
+        "sha256": "06a7bfd9d97a688d63801aa8cd0b48b0c6db1a16b9ae74762840b2c18179a649"
+      }
+    ],
+    "edit": "Each actual 1000x1000 Blender render downsampled to 640x640; side by side with a 60px BEFORE/AFTER label strip; no generative edit"
+  },
+  "outputs": [
+    {
+      "path": "docs/media/gameplay-m24/gameplay.mp4",
+      "bytes": 1177210,
+      "sha256": "511bed1f8c72be74b60508718c9030eda91e3ef19ef61dad7c084f2ca76ffd57"
+    },
+    {
+      "path": "docs/media/gameplay-m24/reader-preview.gif",
+      "bytes": 512118,
+      "sha256": "7de8c9db41af7792308271b3090435d26fc97a30be8b402c0268f1d52a611ed9"
+    },
+    {
+      "path": "docs/media/gameplay-m24/title.png",
+      "bytes": 554682,
+      "sha256": "c480edc02b864359624ce8da2b273e8d4337a54f0d555aa3dd1b3e8057511be1"
+    },
+    {
+      "path": "docs/media/gameplay-m24/reader-contact.png",
+      "bytes": 675451,
+      "sha256": "7eddfb31c86abdc278d416a595c7d34f723f8fff5fbeeeedc1dcc8107dcddbb4"
+    },
+    {
+      "path": "docs/media/gameplay-m24/comparison.png",
+      "bytes": 847528,
+      "sha256": "b43ad9eb48a075af83bc14e32a8b68e2550c5bb9507902656ad098336f98b186"
+    },
+    {
+      "path": "docs/media/gameplay-m24/blender-detail-comparison.png",
+      "bytes": 530414,
+      "sha256": "8481663d645959b6df18d87e05dd5be9f772d9bd17cbbe3093221316e5e5d4dd"
+    }
+  ],
+  "historicalMediaUnchanged": [
+    "docs/media/gameplay-m22/",
+    "_workspace/current/systems/tech-verification/m23/"
+  ],
+  "performanceClaim": false,
+  "humanPlaytestCount": 0
+}
