@@ -1,0 +1,283 @@
+{
+ "milestone": "M25",
+ "rfc": "RFC-CX-M25-20260918",
+ "verifiedAtUtc": "2026-09-18T10:45:06Z",
+ "sourceBaseCommit": "61c7fe5",
+ "scope": "Higgsfield-generated backgrounds/portraits/tool icons/motion clips behind M25Resources gate; guide overlay (F2); TypeScale readability tiers; macOS dev build; GitHub Release dev zip",
+ "provider": {
+  "tool": "higgsfield CLI 1.1.25",
+  "account_plan": "ultra",
+  "balance_first_read_utc": "2026-09-18T09:49Z",
+  "balance_first_read": 2739.5,
+  "balance_before_first_own_job": 2641.5,
+  "balance_after_last_own_job": 2442.5,
+  "observed_session_delta": 297.0,
+  "observed_delta_outside_own_jobs_min": 104.5,
+  "attributable_window_delta": 199.0,
+  "quoted_costs": {
+   "gpt_image_2 16:9 2k high ×9 (7 backgrounds + 2 quay regenerations)": 58.5,
+   "gpt_image_2 1:1 1k high ×6 icons": 21.0,
+   "nano_banana_flash 1:1 2k ×6 portraits (incl. 1 probe)": 12.0,
+   "seedance_2_0 5s 720p ×3": 67.5
+  },
+  "quoted_total": 159.0,
+  "note": "[OBSERVED] balance dropped 98.0 (09:49→10:04Z) and 6.5 (10:05→10:07Z) with no job of this session running; per-job deltas overlap under 3-way parallelism, so the receipt is quoted_total ≤ attributable_window_delta; the 503 retry (icon-routing) created no charged job."
+ },
+ "generation": {
+  "manifest": "_workspace/current/concept/m25-higgsfield-jobs.json",
+  "script": "scripts/gen-higgsfield.py",
+  "images": 18,
+  "videos": 3,
+  "rejected": [
+   "assets/generated/2d/m25/rejected/bg-quay-r01-plaque.png (pseudo-glyph plaque §10-4)",
+   "assets/generated/2d/m25/rejected/bg-quay-r02-pillar-plate.png (pillar plate)"
+  ],
+  "textAbsenceInspection": "100% crops: watch-room clock dial (ticks only), quay board (blank), Doyeon clipboard (blank cradle), lowland (none), quay r03 pillars (bare)",
+  "provenance": {
+   "2d/m25/backgrounds": [
+    {
+     "id": "bg-harbor-night",
+     "model": "gpt_image_2",
+     "job_id": "917eef28-9116-4cef-a00f-5b7d52f8f4cd",
+     "sha256": "8ac3d23ffde7cad8…",
+     "credits_delta_observed": 49.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-gate-three",
+     "model": "gpt_image_2",
+     "job_id": "8dfba021-049c-4652-8328-b2ca433d17a0",
+     "sha256": "659cea06d5cefeed…",
+     "credits_delta_observed": 49.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-hub-watchroom",
+     "model": "gpt_image_2",
+     "job_id": "5ebabb4e-e252-43a7-b528-a4f847bac370",
+     "sha256": "ecb185010d67ae2f…",
+     "credits_delta_observed": 49.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-lowland",
+     "model": "gpt_image_2",
+     "job_id": "fa0f757a-8234-4450-90cf-f8ae1875e4a4",
+     "sha256": "c8bd6d38086a2a8c…",
+     "credits_delta_observed": 19.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-pump-one",
+     "model": "gpt_image_2",
+     "job_id": "33089244-5b18-426c-8d40-0829d4257eae",
+     "sha256": "66e9df42017596aa…",
+     "credits_delta_observed": 19.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-reader-desk",
+     "model": "gpt_image_2",
+     "job_id": "cc2be885-541e-4c7d-9cb6-e63e3b800e8f",
+     "sha256": "cea7f14485c0abe2…",
+     "credits_delta_observed": 20.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "bg-quay",
+     "model": "gpt_image_2",
+     "job_id": "ca6c028d-984d-4f0e-8b13-a34badcbd997",
+     "sha256": "4dddc9743ca1922f…",
+     "credits_delta_observed": 6.5,
+     "runtimeEligible": false
+    }
+   ],
+   "2d/m25/portraits": [
+    {
+     "id": "pt-jaehwa",
+     "model": "nano_banana_flash",
+     "job_id": "3d0c1784-8b31-47d1-a0b4-7875a26426e0",
+     "sha256": "9f8e8b8fb28fca39…",
+     "credits_delta_observed": 2.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "pt-seorin",
+     "model": "nano_banana_flash",
+     "job_id": "7ae920ab-a270-499a-8c23-7942ec33956a",
+     "sha256": "5cb51112cba0f43f…",
+     "credits_delta_observed": 12.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "pt-eunjeong",
+     "model": "nano_banana_flash",
+     "job_id": "dd01cd35-9a90-4239-b3d5-d39a2a48e5b0",
+     "sha256": "09ab8b203e259519…",
+     "credits_delta_observed": 4.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "pt-seongchan",
+     "model": "nano_banana_flash",
+     "job_id": "396a5d99-f944-4cb3-a178-e091ce12f282",
+     "sha256": "bdc872144d2cf5e1…",
+     "credits_delta_observed": 4.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "pt-doyeon",
+     "model": "nano_banana_flash",
+     "job_id": "596c0667-bc18-427a-9094-fe32c9d39134",
+     "sha256": "a00f6a5e9beebd7b…",
+     "credits_delta_observed": 9.0,
+     "runtimeEligible": false
+    }
+   ],
+   "2d/m25/tools": [
+    {
+     "id": "icon-circuit",
+     "model": "gpt_image_2",
+     "job_id": "ce943965-9c7b-47c7-b9c1-3f1b66045858",
+     "sha256": "9978d4e8baf56702…",
+     "credits_delta_observed": 10.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "icon-reader",
+     "model": "gpt_image_2",
+     "job_id": "89d54d56-ef01-4502-8671-5ed7a19179ee",
+     "sha256": "f3cc0a07a2902ced…",
+     "credits_delta_observed": 10.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "icon-alignment",
+     "model": "gpt_image_2",
+     "job_id": "e4633d0e-829a-40b2-93cc-e33990bba149",
+     "sha256": "0d2eb573521615d6…",
+     "credits_delta_observed": 10.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "icon-corrosion",
+     "model": "gpt_image_2",
+     "job_id": "5dc22488-81c9-4a83-ba53-b4f5ab17130e",
+     "sha256": "11f54b85f5233d68…",
+     "credits_delta_observed": 74.5,
+     "runtimeEligible": false
+    },
+    {
+     "id": "icon-seal",
+     "model": "gpt_image_2",
+     "job_id": "7a3f2a41-f63c-4750-a8c3-0787aa481cc4",
+     "sha256": "711b5ef5c704392a…",
+     "credits_delta_observed": 71.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "icon-routing",
+     "model": "gpt_image_2",
+     "job_id": "c34e85ff-735a-4417-8214-4c89ac6186ae",
+     "sha256": "58276527df6627db…",
+     "credits_delta_observed": 3.5,
+     "runtimeEligible": false
+    }
+   ],
+   "video/m25": [
+    {
+     "id": "mo-opening-harbor",
+     "model": "seedance_2_0",
+     "job_id": "bfa7bb00-a690-4960-9da5-14d358cb28c9",
+     "sha256": "ce6ad4590a47a89e…",
+     "credits_delta_observed": 71.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "mo-reader-operation",
+     "model": "seedance_2_0",
+     "job_id": "d836dfdd-b8d4-44cd-b863-df0fb72520f1",
+     "sha256": "ce5d9e818ce67b2c…",
+     "credits_delta_observed": 71.0,
+     "runtimeEligible": false
+    },
+    {
+     "id": "mo-hub-watchroom",
+     "model": "seedance_2_0",
+     "job_id": "3770dadf-c375-4a2f-bb7f-79b980c4efa8",
+     "sha256": "f28c92040374632c…",
+     "credits_delta_observed": 71.0,
+     "runtimeEligible": false
+    }
+   ]
+  }
+ },
+ "unity": {
+  "editor": "6000.5.6f1",
+  "import": "Tide.EditorTools.M25ResourceProjectBuilder.Import → 18 items, import-audit.json",
+  "approval": "M25ResourceProjectBuilder.Approve → Resources/M25Resources.asset runtimeApproved:true (local development profile only)",
+  "tests": {
+   "editmode": {
+    "total": 65,
+    "passed": 65,
+    "failed": 0,
+    "skipped": 0
+   },
+   "playmode_pre_teaching_test": {
+    "total": 133,
+    "passed": 132,
+    "failed": 0,
+    "skipped": 1,
+    "note": "skip = T0BootSceneTests without --t0-save-dir (conditional)"
+   },
+   "playmode_final": {
+    "total": 134,
+    "passed": 133,
+    "failed": 0,
+    "skipped": 1,
+    "note": "skip = T0BootSceneTests without --t0-save-dir (conditional); boot re-run isolated 1/1"
+   },
+   "boot_isolated": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+   },
+   "new_tests": [
+    "Tests/PlayMode/M25GuidePlayModeTests.cs ×6"
+   ]
+  },
+  "build": {
+   "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+   "log": "T0_MAC_BUILD Succeeded bytes=438910587",
+   "app": "unity/Unknown/Builds/T0-mac/Unknown.app",
+   "files": 316,
+   "bytes": 438910587,
+   "inventoryDigest": "aaa5361d47e369360f512d9b2dc99cde9849a3786f7a8a4df7e1e84d8eeaac96",
+   "inventory": "build-inventory.json"
+  },
+  "native": {
+   "captures": "docs/media/m25/{start-screen,guide-overlay,guide-overlay-tall,opening-motion-frame,circuit-teaching-header}.png",
+   "method": "open -n … --t0-save-dir <fresh> -screen-width 1600 -screen-height 900; osascript key codes F2/Tab/Enter/1; screencapture -R; window frame cropped",
+   "openingClipObserved": "two captures 1 s apart differ on 36.9% of pixels (>8/255) while the still would not → the VideoPlayer path is live in the player",
+   "humanPlaytestCount": 0,
+   "performanceClaim": false,
+   "windows": "not built"
+  }
+ },
+ "readability": {
+  "typeScale": {
+   "Display": 30,
+   "Title": 24,
+   "Body": 21,
+   "Section": 18,
+   "Label": 18,
+   "Status": 17,
+   "Helper": 15,
+   "Meta": 14,
+   "lineSpacing": 1.15
+  },
+  "contract": "Body > Label > Helper; only Label/Section/Display/Status bold; helper toned toward the surface (existing PlayMode contract tests kept green)"
+ },
+ "boundary": "commercial licence UNVERIFIED (Higgsfield ToS); assets/generated provenance stays runtimeEligible:false; no campaign/beat/hint data change; no save-schema change"
+}

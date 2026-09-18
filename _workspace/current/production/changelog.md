@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-14
+updated: 2026-09-18
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -161,3 +161,12 @@ owner: game-production-director
 - 기존 임포터와 네이티브 검수 후 로컬 기본 빌드에 적용했다. 최종 Mac315파일/411,041,089B에서 타이틀·판독 동작/복귀·두 자료 대조를 확인했으며 비교 조작은 저장 파일을 바꾸지 않았다.
 - README의 최신 영상을 같은 기본 빌드의18초 실제 창 녹화로 갱신했다. 1280×800/30fps/무음, 격리 T0-b3 재개/세 구간 편집이다. Blender 전후 비교는 게임플레이와 분리했고 M22/M23 증거는 보존했다.
 - M24는 아트/매체 검증이며 M23 테스트187개의 재실행이나 사람·성능·Windows·전체 캠페인·상업 승인으로 확대하지 않는다. 정확한 지문과 편집 범위: `systems/tech-verification/m24/verification.json`, `docs/media/gameplay-m24/provenance.json`.
+
+## 2026-09-18 · M25 Higgsfield 전 리소스 제작·적용, 안내 오버레이, 가독성, 빌드·배포 (RFC-CX-M25-20260918)
+
+- **리소스(Higgsfield CLI 1.1.25)**: 배경 7(오프닝 은포항 야경·당직실·제3수문·구염전 저지대·냉동창고 부두·제1양수장·판독기 책상), 초상 5(한서린·문재화·오은정·표성찬·한도연), 도구 아이콘 6(캐논 형태 부호 — 부식 결정은 육각으로 정정), 모션 3(오프닝 푸시인·당직실 정물·판독 동작, seedance_2_0 5 s/720p/무음). `bg-quay`는 명판 재발로 2회 재생성(반려본 보존). 텍스트 부재 100% 크롭 검수 5건. `assets/generated/{2d,video}/m25/` provenance는 `runtimeEligible:false` 유지.
+- **적용**: `Editor/M25ResourceProjectBuilder.Import`(SHA 대조) → `Art/Candidates/m25/` 18항목 → `Resources/M25Resources.asset`; 승격 감사 후 `Approve()`로 로컬 개발 프로필만 `runtimeApproved:true`. 오프닝 정지 이미지 교체 + `VideoPlayer` 클립(모션 축소·batchmode·실패 시 정지 이미지), 시작 화면 내비게이션 패널 배경, 도구 휠 아이콘 행, 안내 화면 인물 카드(한서린·한도연만)·구역 도판.
+- **안내 강화**: `guide` 오버레이(F2 · 툴바 「안내」 · 시작 화면 버튼) — 지금 할 일(캠페인 objective, 기록명 가드)·세 단계 진행 표시·도구 절차·조작·규칙·인물·구역. 회로/판독 안내 접두를 `▶ 안내 · 단계 {beat} · 남은 조건 {n}개 · F2 전체 안내`로 구조화. `Data/Tables`·`campaign.json`·힌트 본문 불변.
+- **가독성**: `Tide.UI.TypeScale`(Display 30 · Title 24 · Body 21 · Section 18 · Label 18 · Status 17 · Helper 15 · Meta 14, 행간 1.15). 제목/섹션/상태 Bold, 헬퍼는 표면 쪽 톤. 기존 계층 계약 테스트 유지.
+- **검증**: EditMode 65/65 · PlayMode 전체(최종 트리, `m25/playmode.xml`) · 격리 boot 1/1 · 신규 M25 테스트 6/6. 기본 macOS 빌드 316파일/438,910,587B/digest `aaa5361d…`; 실제 창 캡처 5장(`docs/media/m25/`), 오프닝 클립 재생을 1 s 간격 캡처 차이(36.9% 픽셀)로 관측.
+- **배포**: `main` 일반 push + GitHub Release `v0.25.0-dev`(prerelease, 미서명 개발 빌드 zip). 상점 공개 아님. 사람 플레이 n=0, 성능·Windows·전체 캠페인·상업 사용권 미측정/UNVERIFIED. 영수증: `systems/tech-verification/m25/verification.json`.

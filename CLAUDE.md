@@ -172,3 +172,11 @@ PASS / FIX(≤2) / REDO. 열린 S1 결함, 측정 누락, 숫자 자리의 `[TAR
 - 사용자가 Aside 계획의 구현·서브에이전트 기준 논의·디버깅·빌드·Git push·최종 개선 계획을 명시 요청했다. 이 작업의 검증된 변경은 명시적 pathspec으로 stage/commit/일반 push한다. §10의 기획 요청 당시 사용자 전용 Git 경계는 이번 명시 승인에는 적용하지 않는다.
 - force push, 타인의 변경 되돌림, 유료 생성/구매, Steam 공개·실명/금융 작업은 승인하지 않는다. Base의 실제 사람 검증·생산 착수 조건은 유지한다.
 - 실행 범위와 소유권·인수 기준: `_workspace/current/handoff/m23-core-loop-implementation.md`. 실제 참가자/목표 장치가 없으면 미측정과 외부 차단을 기록하고, 실행 가능한 구현·네이티브 검증·빌드·리뷰는 끝까지 수행한다.
+
+## M25 리소스 제공자·안내·배포 (2026-09-18 사용자 지시 · RFC-CX-M25-20260918)
+
+- 사용자 지시 "힉스필드이용해서 오브젝트, 캐릭터, 모션, 배경 등 모든 리소스 컨셉에 맞게 생성해서 적용" 에 따라 **M25 신규 리소스 제공자는 Higgsfield CLI**다(이미지 `gpt_image_2`/`nano_banana_flash`, 영상 `seedance_2_0`). 이 지시가 위 「이미지 생성 제공자(2026-09-11)」의 GTI 지정보다 우선한다. 기존 산출물의 출처·해시는 보존하고 재표기하지 않는다. 실행 절차: `scripts/gen-higgsfield.py <jobs.json>` — 작업 정본은 `_workspace/current/concept/m25-higgsfield-jobs.json`, 출력은 `assets/generated/{2d,video}/m25/`(provenance `runtimeEligible:false`). 크레딧은 견적 합 + 전후 잔액 + 외부 소모 관측으로 영수증을 남긴다(병렬 실행의 작업별 차액은 영수증이 아니다).
+- 참조 입력은 RFC-CX-009의 원전 우선을 유지하되 M25는 원본 c4 시트(인물 5·공간 3·도구 6)를 한정 바인딩한다. `unity/`·`docs/media/`·3D 프리뷰·M5/M6 파생물은 여전히 참조하지 않는다. 생성 이미지의 명판·판·스티커는 §10-4 위반이며 100% 크롭 검수로 반려한다.
+- 적용은 `Editor/M25ResourceProjectBuilder.Import`(SHA 대조, `runtimeApproved:false`) → 승격 감사(decision-log) → `Approve()`(로컬 개발 프로필만) 순서다. 오프닝 클립은 선택 장식이며 모션 축소·batchmode·준비 실패 시 정지 이미지 경로가 유지된다(M5 「No runtime movie dependency」 조건부 갱신).
+- 안내: `guide` 오버레이(F2·툴바 「안내」·시작 화면)와 `▶ 안내 · 단계 · 남은 조건` 접두. `Data/Tables`·`campaign.json`·힌트 본문은 안내 강화의 대상이 아니다. 가독성: `Tide.UI.TypeScale` 상수 외의 인라인 글자 크기를 새로 만들지 않는다.
+- 배포 = 기본 macOS 개발 빌드 zip을 GitHub Release(prerelease, 미서명)에 첨부 + `main` 일반 push. 사용자 최신 요청이 명시 승인했다. 상점 공개·Steam·실명/금융·force push는 여전히 하지 않는다.

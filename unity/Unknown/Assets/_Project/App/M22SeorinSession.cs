@@ -26,7 +26,8 @@ namespace Tide.App
             }
         }
         bool M22EmbodimentEnabled=>EmbodimentProfile!=null&&EmbodimentProfile.Complete&&(EmbodimentProfile.runtimeApproved||EmbodimentProfile.diagnosticOverride||embodimentDiagnostic);
-        bool M22TitleEnabled=>!started&&!OpeningActive&&overlay==null&&M22EmbodimentEnabled;
+        // M25: the guide is read from the start screen, so Han Seorin stays on the title stage beneath it.
+        bool M22TitleEnabled=>!started&&!OpeningActive&&(overlay==null||overlay==GuideOverlay)&&M22EmbodimentEnabled;
         void ApplyM22TitleStage(Camera camera)
         {
             var profile=EmbodimentProfile;

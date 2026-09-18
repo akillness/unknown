@@ -12,7 +12,7 @@ namespace Tide.UI {
             for(int i=0;i<keys.Length;i++){
                 var mark=Panel("Direction "+keys[i],strip,new Vector2(i/3f,.06f),new Vector2((i+1)/3f,.94f),Color.clear);
                 mark.GetComponent<Image>().raycastTarget=false;directionMarks[keys[i]]=mark.GetComponent<Image>();
-                Text("Label",mark,labels[i],18,paper,new Vector2(.05f,.12f),new Vector2(.95f,.88f));
+                Text("Label",mark,labels[i],TypeScale.Label,paper,new Vector2(.05f,.12f),new Vector2(.95f,.88f));
                 mark.Find("Label").GetComponent<Text>().alignment=TextAnchor.MiddleCenter;
                 mark.Find("Label").GetComponent<Text>().raycastTarget=false;
             }
@@ -33,20 +33,22 @@ namespace Tide.UI {
    var picture=Rect("Opening image",root,Vector2.zero,Vector2.one);
             var graphic=picture.gameObject.AddComponent<RawImage>();graphic.texture=model.OpeningImage;graphic.raycastTarget=false;
             var ratio=picture.gameObject.AddComponent<AspectRatioFitter>();ratio.aspectMode=AspectRatioFitter.AspectMode.FitInParent;ratio.aspectRatio=(float)model.OpeningImage.width/model.OpeningImage.height;
+            // M25: the motion clip is decoration over the still; reduced motion / batchmode / errors keep the still.
+            AttachOpeningClip(graphic,model.OpeningClip,model.OpeningImage);
    }
-            Text("Opening game title",root,model.Title,16,paper,new Vector2(.655f,.86f),new Vector2(.965f,.95f));
+            Text("Opening game title",root,model.Title,TypeScale.Meta,paper,new Vector2(.655f,.86f),new Vector2(.965f,.95f),FontStyle.Bold);
             var caption=Rect("Opening caption area",root,new Vector2(.655f,.30f),new Vector2(.965f,.83f));
             caption.gameObject.AddComponent<RectMask2D>();
    var captionFlow=Flow(caption,6);
    captionFlow.anchorMin=new Vector2(0,1);captionFlow.anchorMax=Vector2.one;captionFlow.pivot=new Vector2(.5f,1);captionFlow.offsetMin=captionFlow.offsetMax=Vector2.zero;
    captionFlow.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
    var captionScroll=caption.gameObject.AddComponent<ScrollRect>();captionScroll.viewport=caption;captionScroll.content=captionFlow;captionScroll.horizontal=false;captionScroll.vertical=true;captionScroll.scrollSensitivity=30;
-            FlowText(captionFlow,model.OpeningHeading,26,paper);
-            FlowText(captionFlow,model.Body,21,paper);
+            FlowText(captionFlow,model.OpeningHeading,TypeScale.Display,paper,"Text",FontStyle.Bold);
+            FlowText(captionFlow,model.Body,TypeScale.Body,paper);
             var actionArea=Rect("Opening actions",root,new Vector2(.655f,.07f),new Vector2(.965f,.28f));
             var actionFlow=Flow(actionArea,6);
             foreach(var action in model.Actions)Button(actionFlow,action);
-            Text("Footer",root,model.Footer,13,paper,new Vector2(.025f,.008f),new Vector2(.975f,.055f));
+            Text("Footer",root,model.Footer,TypeScale.Meta,paper,new Vector2(.025f,.008f),new Vector2(.975f,.055f));
             footerText=root.Find("Footer").GetComponent<Text>();
             scroll=null;navigationScroll=null;SceneViewport=UnityEngine.Rect.zero;
             Canvas.ForceUpdateCanvases();focusIndex=0;
@@ -63,8 +65,8 @@ namespace Tide.UI {
             var layout=section.gameObject.AddComponent<VerticalLayoutGroup>();layout.padding=new RectOffset(12,12,12,14);layout.spacing=8;
             layout.childControlWidth=true;layout.childControlHeight=true;layout.childForceExpandHeight=false;
             section.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
-            FlowText(section,action.SectionTitle,18,paper);
-            if(!string.IsNullOrEmpty(action.SectionDetail))FlowText(section,action.SectionDetail,16,paper);
+            FlowText(section,action.SectionTitle,TypeScale.Section,paper,"Text",FontStyle.Bold);
+            if(!string.IsNullOrEmpty(action.SectionDetail))FlowText(section,action.SectionDetail,TypeScale.Helper,paper);
             return section;
         }
     }

@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-14
+updated: 2026-09-18
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -61,3 +61,17 @@ source_signal: '사용자 2차 요청 2026-09-09 (초안 개발 + 5회 리뷰 + 
 - [TARGET] 캐릭터20k triangle/65본 이하, 양손 합12k/각22본 이하, 최대4본 웨이트. 기존 원본 장면/출력은 보존하며 외부 자산·유료 생성·라이선스 승격은 하지 않는다.
 - [DECISION] Unity 임포트와 실제 네이티브 외형/동작 확인 뒤 같은 업데이트 빌드로 플레이 영상을 캡처한다. 실제 앱 창만 녹화하고 생성 프레임·전체 데스크톱·마이크·연속 완주처럼 보이는 저장 시편 접합은 금지한다. 편집/시편/빌드 출처를 표시한다.
 - [OWNERSHIP] Main이 Blender 실행·Unity 통합·녹화·명시 경로 stage/commit/일반 push를 소유한다. 사용자 최신 요청이 이번 Git 전달을 명시 승인한다. 사람·Base·Windows·전체 캠페인 gate는 유지한다.
+
+## M25 — Higgsfield 전 리소스 제작·적용, 튜토리얼·가독성, 빌드·배포·push·README (2026-09-18)
+
+[OBSERVED] 사용자: "힉스필드이용해서 오브젝트, 캐릭터, 모션, 배경 등 모든 리소스 컨셉에 맞게 생성해서 적용하고 업데이트해줘. 튜토리얼과 가이드부분도 강화하고, 가독성을 위해 텍스트는 변별력있게 구성해줘." 이어서 "빌드하고 배포까지 해야해. 깃푸시까지, 리드미도 개선된 내용을 바탕으로 전체 새롭게 업데이트해야해".
+
+- cycle_type: content-update (P1 진입). 기존 T0~C1-b2 슬라이스의 리소스·가이드·가독성 갱신이며 새 구역/본편 생산이 아니다.
+- [DECISION · 사용자 지정] 이번 사이클의 신규 리소스 제공자는 **Higgsfield CLI**(이미지·영상·필요 시 3D)다. 이 최신 지시가 RFC-CX-006(이미지=GTI)보다 우선한다(RFC-CX-M25-20260918). 과거 GTI/Blender/Higgsfield 산출물의 출처 기록은 보존하고 재표기하지 않는다.
+- [DECISION] 시각 원전은 `concept/style-guide.md`와 원본 컨셉 시트다(RFC-CX-009 유지). 현재 플레이 화면·프리팹·3D 프리뷰·M5/M6 파생물은 참조 입력으로 쓰지 않는다. 신규 참조 바인딩은 decision-log의 M25 블록이 명시한 원본 c4 시트에 한정한다.
+- [DECISION] 적용 범위: (1) 오프닝 배경·시작 화면 배경(RawImage), (2) 인물 초상 5인 1:1 슬롯(안내 화면 인물 카드 · T0 공개 범위 내 이름·공적 역할만), (3) 도구 6종 아이콘(도구 휠·안내 카드), (4) 오프닝 모션 클립(모션 축소 시 정지 이미지로 대체, 재생 실패 시 정지 이미지 유지), (5) 구역 4곳 배경(안내 화면 참고 도판·README). 저장 스키마·퍼즐 데이터·`Data/Tables/*.json`·캠페인 정본은 바꾸지 않는다.
+- [DECISION] 튜토리얼/가이드: 새 `guide` 오버레이(F2 · 툴바 「안내」)가 현재 단계의 목표·도구 사용 절차·조작·규칙(힌트 무료·되돌림·2단계 확정)을 한 화면에 모은다. 회로/판독 안내 접두는 단계·남은 조건을 구조화한다. 힌트 본문(캠페인 정본)은 손대지 않는다.
+- [DECISION] 가독성: `T0Interface`에 명명된 타이포 스케일(Display 30 · Title 24 · Section 18 Bold · Body 21 · Label 18 Bold · Helper 15 · Meta 14)과 행간을 도입한다. 계층 순서 계약(body > label > helper, label만 Bold)은 기존 PlayMode 계약 테스트로 유지한다. 게이트 off 리터럴은 유지한다.
+- [TARGET] 신규 이미지 ≤ 30장, 영상 ≤ 3클립, Higgsfield 크레딧 ≤ 300. 실제 소모는 전후 `higgsfield account status` 차액으로 decision-log에 기록한다.
+- [OWNERSHIP] Main(디렉터 역할)이 생성·임포트·승격 감사(로컬 개발 프로필 한정, 상업 사용권은 UNVERIFIED 유지)·Unity 검증·빌드·GitHub Release(개발 빌드 zip)·명시 경로 stage/commit/일반 push·README 전면 갱신을 소유한다. 사용자 최신 요청이 빌드·배포·push를 명시 승인한다.
+- [BOUNDARY] force push·타인 변경 되돌림·Steam/실명/금융·상점 공개는 하지 않는다. 사람 플레이테스트 n=0, 성능·Windows·전체 캠페인·상업 게이트는 유지한다. 55개 미추적 로그/XML은 스테이징하지 않는다.

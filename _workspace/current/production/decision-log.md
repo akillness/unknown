@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-14
+updated: 2026-09-18
 cycle: bootstrap
 status: draft
 supersedes: null
@@ -716,3 +716,31 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [MEDIA] `docs/media/gameplay-m24/gameplay.mp4`는 같은 빌드의 실제 창 녹화 세 구간을 18초/1280×800/30fps/무음으로 편집했다. OS 창틀만 제거했으며 속도 변경·생성 프레임·가짜 게임 UI를 넣지 않았다. Blender 전후 이미지는 별도 렌더로 표시했다. 실패한 포커스/타이밍/Undo 시도는 완성 영상이나 성공 판정에 포함하지 않는다.
 - [TOOLING] Orca의 no-focused-window 거부 후 PID/번들/창/기하/전경/포인터 수신자를 검증하는 임시 macOS 입력으로 진행했다. 발송 영수증만으로 UI 성공을 판정하지 않았다. 소유 진단/최종 플레이어와 임시 Blender bridge는 종료했고 사용자 Blender PID13985는 실행 중으로 확인했다. 잘못 열린 루트 Unity의 정상 종료는 사용자 승인 후 확인했으며 루트 캐시·설정·.meta와 기존 로그는 삭제하지 않았다.
 - [BOUNDARY] 이번 증거는 `systems/tech-verification/m24/verification.json`과 매체 provenance가 소유한다. M23의187개 테스트는 과거 실행이며 이번에 재실행하지 않았다. 사람0명·Base/R8/R9·강한 P1/P2·Windows/전체 캠페인·상업 게이트는 유지한다. 소스/매체 전달의 실제 commit·일반 push 결과는 Git 이력을 따른다.
+
+## RFC-CX-M25-20260918 · Higgsfield 전 리소스 제작·적용, 안내 강화, 가독성, 빌드·배포·push
+
+- [REQUEST] 사용자 2026-09-18: Higgsfield로 오브젝트·캐릭터·모션·배경 등 모든 리소스를 컨셉에 맞게 생성·적용·업데이트하고, 튜토리얼·가이드를 강화하며, 텍스트 가독성을 변별력 있게 구성한 뒤 빌드·배포·git push·README 전면 갱신까지 수행한다.
+- [DECISION · 제공자] 이번 M25 신규 리소스는 Higgsfield CLI 1.1.25로 생성한다(이미지 `gpt_image_2`/`nano_banana_flash`, 영상 `seedance_2_0`). 이 사용자 지시가 RFC-CX-006(이미지=GTI)을 M25 범위에서 대체한다. 기존 산출물의 실제 출처·해시·provenance는 보존하며 재표기하지 않는다. MuAPI는 여전히 미연결이며 사용하지 않는다.
+- [DECISION · 참조 바인딩] RFC-CX-009의 원전 우선 규칙을 유지한다. M25는 `concept/concept-first-m7-sources.json`의 허용 4장에 더해 원본 c4 컨셉 시트 `char-{seorin,jaehwa,eunjeong,seongchan,doyeon}-sheet.png`, `space-{lowland,wharf,pumphouse-one}-mood.png`, `tool-*-hero.png`를 **M25 한정** 참조 입력으로 바인딩한다(모두 GTI/c4 원본, 런타임·M5/M6 파생물 아님). `unity/`·`docs/media/`·`assets/generated/3d/`·previz는 참조하지 않는다.
+- [DECISION · 적용] 생성물은 `assets/generated/2d/m25/<set>/`·`assets/generated/video/m25/`에 `provenance.json`(`runtimeEligible:false`, `license: UNVERIFIED (Higgsfield ToS)`)으로 시작한다. `Tide.EditorTools.M25ResourceProjectBuilder.Import`가 SHA 대조 후 `Assets/_Project/Art/Candidates/m25/`로 복사하고 `Resources/M25Resources.asset`(`runtimeApproved:false`)에 연결한다. 승격 감사(이 블록 하위 `### 승격 감사`)를 통과한 항목만 로컬 개발 프로필 `runtimeApproved:true`로 올린다. 상업 사용권은 UNVERIFIED로 유지한다(M22/M24 정밀도와 동일한 범위).
+- [DECISION · 모션] 오프닝 클립은 `VideoPlayer`(RenderTexture → RawImage)로 재생하되 모션 축소 설정 시 기존 정지 이미지 경로를 그대로 쓰고, 준비 실패·batchmode·클립 부재 시에도 정지 이미지로 즉시 대체한다. decision-log 「No runtime movie dependency」(M5)는 **M25에서 조건부로 갱신**된다: 영상은 선택 장식이며 진행·저장·판정에 관여하지 않는다.
+- [DECISION · 안내] `guide` 오버레이(F2·툴바 「안내」)를 추가한다. 현재 단계 목표(캠페인 `objective`, 기록명 노출 가드 유지), 도구 절차(회로/판독, 아이콘), 조작, 규칙(힌트 무료·되돌림·2단계 확정), T0 공개 범위 인물 카드(한서린·한도연 이름/공적 역할만)를 담는다. `Data/Tables/*.json`·`campaign.json`·힌트 본문은 변경하지 않는다.
+- [DECISION · 가독성] `Tide.UI.TypeScale` 상수(Display 30 · Title 24 · Section 18 · Body 21 · Label 18 · Helper 15 · Meta 14)와 행간 1.15를 도입한다. 계약: body > label > helper, label만 Bold, helper는 표면 쪽으로 톤 다운. 스킨 off 리터럴은 유지한다.
+- [DECISION · 배포] "배포" = 개발용 macOS 빌드를 zip으로 GitHub Release(`v0.25.0-dev`, prerelease)에 첨부하고 `main`을 일반 push한다. 서명·공증 없음(개발 빌드), 상점 공개가 아니다. Steam/실명/금융/유료 외주·force push는 하지 않는다.
+- [VERIFY PLAN] 크레딧 전후 잔액 → provenance 해시 → 텍스트 부재 육안 검수(100%) → Unity EditMode/PlayMode/boot 재실행 → 기본 macOS 빌드 → 실제 창 캡처 → Release/commit/push 결과를 Git 이력·`systems/tech-verification/m25/`가 소유한다.
+- [BOUNDARY] 사람 플레이테스트 n=0, 성능·Windows·전체 캠페인·상업 게이트 유지. 55개 미추적 로그/XML은 스테이징하지 않는다. 미측정 항목은 미측정으로 기록한다.
+
+### RFC-CX-M25-20260918 · 승격 감사와 전달
+
+- [PROVIDER] Higgsfield CLI 1.1.25, 계정 ultra. 잔액 첫 판독 2739.5(09:49Z) → 첫 자체 작업 직전 2641.5 → 마지막 작업 후 2442.5. 견적 합 159.0(gpt_image_2 16:9 2k ×9 = 58.5 · 1k 아이콘 ×6 = 21.0 · nano_banana_flash ×6 = 12.0 · seedance_2_0 ×3 = 67.5). 자체 작업이 없는 구간에서 잔액이 98.0과 6.5 줄어든 것을 관측했으므로 세션 총 차액 297.0 중 ≥104.5는 이 세션 밖 소모다. 3병렬 실행으로 작업별 차액이 겹쳐 개별 차액은 영수증으로 쓰지 않는다. 503 실패 1회(icon-routing)는 과금 작업을 만들지 않았고 재실행으로 완료했다.
+- [AUDIT 1 라이선스] Higgsfield ToS 상업 사용권 **UNVERIFIED 유지**. 승격 범위는 M22/M24와 같은 **로컬 개발 프로필**(`Resources/M25Resources.asset` `runtimeApproved:true`)에 한정하며 원본 provenance `runtimeEligible:false`는 바꾸지 않는다. 상업 출시 승인이 아니다.
+- [AUDIT 2 해시] 임포터가 18항목 전부 provenance `output_sha256`과 대조해 통과(`m25/import-audit.json`). 원본은 `assets/generated/`에 남긴다.
+- [AUDIT 3 텍스트 부재] 100% 크롭 검수: 당직실 시계(눈금만) · 부두 관측판(무문자) · 한도연 클립보드(빈 서명칸) · 저지대 · 부두 r03 기둥(맨 콘크리트). `bg-quay` r01의 의사 글리프 명판, r02의 기둥 판은 §10-4 위반으로 반려하고 `2d/m25/rejected/`에 보존했다.
+- [AUDIT 4 명명·캐논] 파일명·프롬프트에 가제 문자열 0. 인물 5인 모두 한국인·중립 표정·선악 미부호화. 도구 6종 1비트 실루엣 구분(조위정합 두 레일·집게 3, 부식 육각 결정 정정). 유럽 판타지·네온·경고등 0.
+- [AUDIT 5 예산] 임포트 크기 배경 2048/1158, 구역 1024/579, 아이콘 512², 초상 1024², 클립 1280×720 5 s H.264 3.0 MB. 빌드 +27.9 MB(411.0→438.9 MB). 런타임 tri/drawcall은 기존 측정 범위와 동일하게 **미측정**(G5 [TARGET] 유지).
+- [AUDIT 6–7 리그·세이브] 리그·세이브 스키마·`Data/Tables`·캠페인 정본 변경 0. 안내 오버레이와 클립은 진행·저장·판정에 관여하지 않음을 PlayMode 테스트로 고정(`M25GuidePlayModeTests` 6/6).
+- [AUDIT 8 플립 기록] Unity 프로필 플립은 `M25ResourceProjectBuilder.Approve()`(로그 `M25_RESOURCES_APPROVED`). 원본 provenance는 생성기 소유이며 플립하지 않았다.
+- [VERIFY] EditMode 65/65 · PlayMode 134(133 pass/0 fail/1 조건부 skip) · 격리 boot 1/1. 빌드 `T0_MAC_BUILD Succeeded bytes=438910587`, 316파일, digest `aaa5361d47e369360f512d9b2dc99cde9849a3786f7a8a4df7e1e84d8eeaac96`. 실제 창 캡처 5장(`docs/media/m25/`), 오프닝 클립 재생 관측(1 s 간격 캡처 36.9% 픽셀 변화).
+- [DECISION · M5 갱신] 「No runtime movie dependency」는 다음으로 대체된다: 오프닝 클립은 선택 장식이며 `M25Resources` 게이트·모션 축소·batchmode·준비 실패 어느 조건에서도 정지 이미지 경로가 유지된다. 진행·저장·판정 의존 0.
+- [GIT · RELEASE] 명시 pathspec stage → commit → `main` 일반 push → tag `v0.25.0-dev` → GitHub Release(prerelease)에 `Unknown-T0-macOS-dev-v0.25.0.zip`(미서명·미공증 개발 빌드) 첨부. 상점 공개·Steam·실명/금융·force push 없음. 55개 미추적 로그/XML은 스테이징하지 않았다.
+- [BOUNDARY] 사람 플레이 n=0 · 성능/Windows/전체 캠페인 미측정 · 강한 P1/P2·Base·R8/R9 게이트 유지. 문재화·오은정·표성찬 초상은 생성·임포트됐으나 T0 공개 범위 밖이라 안내 화면에 표시하지 않는다.

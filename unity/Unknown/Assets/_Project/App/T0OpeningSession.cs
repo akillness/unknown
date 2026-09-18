@@ -50,7 +50,8 @@ namespace Tide.App {
         }
         void OpeningScreen(GameScreen screen){
             screen.Title=L("title");
-            screen.ShowOpening=true;screen.OpeningImage=directionProfile.openingImage;
+            // M25: the Higgsfield harbour still (and its clip, never under reduced motion) replace the M5 still behind one gate.
+            var m25Opening=M25OpeningImage;screen.ShowOpening=true;screen.OpeningImage=m25Opening!=null?m25Opening:directionProfile.openingImage;screen.OpeningClip=M25OpeningClip;
             screen.OpeningHeading=ReducedMotion?directionProfile.firstTitle:openingCaption==0?directionProfile.firstTitle:directionProfile.secondTitle;
             screen.Body=ReducedMotion?directionProfile.firstCaption+"\n\n"+directionProfile.secondTitle+"\n"+directionProfile.secondCaption:
                 openingCaption==0?directionProfile.firstCaption:directionProfile.secondCaption;

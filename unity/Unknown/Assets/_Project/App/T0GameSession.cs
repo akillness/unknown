@@ -66,7 +66,7 @@ namespace Tide.App {
     var loaded=Store.Load(validate:doc=>JournalSave.Decode(doc,Simulation,SnapshotInterval));
     if(loaded.Document!=null){try{Journal=JournalSave.Decode(loaded.Document,Simulation,SnapshotInterval);RestoreHintLevels(loaded.Document);saveId=(string)loaded.Document["saveId"];createdUtc=(string)loaded.Document["createdUtc"];if(loaded.Source!="save.json")status=L("recovered")+" "+loaded.Source;}catch(Exception e){status=L("recovery")+" "+e.Message;overlay="recovery";}}
     else if(loaded.Failure!=null){saveReadOnly=true;status=L("recovery")+" "+loaded.Failure;overlay="recovery";}
-    ResetWorkspaceViews();ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();BindM7Hub();lastActivity=Time.unscaledTime;Render();
+    ResetWorkspaceViews();ConfigureOpening(loaded.Document==null&&loaded.Failure==null);BindApprovedDrawer();BindM7Hub();BindM25Resources();lastActivity=Time.unscaledTime;Render();
    }catch(Exception e){bootFailed=true;Debug.LogException(e);Interface.Render(new GameScreen{Title="T0 데이터 확인이 필요합니다",Body=e.Message,Footer="부팅이 중단되었습니다. 저장 파일은 변경하지 않았습니다."});}
   }
   // interaction-rules.md §1-1: two-step is the canonical default confirmation mode.
@@ -218,10 +218,10 @@ namespace Tide.App {
    var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter(),ActionFeedback=AlignmentPracticeActive?null:ActionFeedbackText};
    Watch.ToolPanel=tool!=null&&!OpeningActive&&!AlignmentPracticeActive;Watch.OverlayActive=overlay!=null;
    if(OpeningActive)OpeningScreen(s);
-   else if(!started){s.Body=L("intro");s.Actions.Add(A("start",L("start"),BeginOpeningOrStart));s.Actions.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));}
+   else if(!started){s.Body=L("intro");s.NavigationBackdrop=M25StartBackdrop;s.Actions.Add(A("start",L("start"),BeginOpeningOrStart));s.Actions.Add(A("guide",L("guide"),()=>OpenOverlay(GuideOverlay)));s.Actions.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));}
    else{
     if(!PatrolActive)foreach(var n in zones["rows"][0]["viewNodes"]){string id=(string)n["nodeId"];s.Navigation.Add(A(id,(string)n["label"],()=>GoNode(id)));}
-    s.Toolbar.Add(A("undo",L("undo"),Undo));s.Toolbar.Add(A("redo",L("redo"),Redo));s.Toolbar.Add(A("evidence",L("evidence"),()=>OpenOverlay("evidence")));s.Toolbar.Add(A("hints",L("hints"),()=>OpenOverlay("hints")));s.Toolbar.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));s.Toolbar.Add(A("back",L("back"),Back));
+    s.Toolbar.Add(A("undo",L("undo"),Undo));s.Toolbar.Add(A("redo",L("redo"),Redo));s.Toolbar.Add(A("evidence",L("evidence"),()=>OpenOverlay("evidence")));s.Toolbar.Add(A("hints",L("hints"),()=>OpenOverlay("hints")));s.Toolbar.Add(A("guide",L("guide"),()=>OpenOverlay(GuideOverlay)));s.Toolbar.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));s.Toolbar.Add(A("back",L("back"),Back));
     if(Journal.CoarseUndo)s.Footer=L("coarseUndo")+" · "+s.Footer;
     if(overlay==null){if(SignatureActive)SignatureScreen(s);else if(PatrolActive)PatrolScreen(s);else if(document!=null)DocumentScreen(s);else if(tool=="circuit")CircuitScreen(s);else if(tool=="reader")ReaderScreen(s);else if(tool!=null){s.Body=L("stub");s.Actions.Add(A("close-tool",L("back"),Back));}else ShellScreen(s);}
    }
@@ -285,7 +285,7 @@ namespace Tide.App {
    var hint=(string)hints["rows"].FirstOrDefault(h=>(string)h["beatId"]==beat&&(int)h["level"]==1)?["sourceTextKo"];
    if(hint==null)return null;
    int remaining=Definition.Beats.Single(b=>b.Id==beat).Requirements.Count(r=>!Simulation.IsSatisfied(Journal.State,r));
-   return L("teachingIntro")+"\n"+hint+"\n"+string.Format(L("teachingRemaining"),remaining);
+   return TeachingHeader(beat,remaining)+"\n"+hint;
   }
   // S-C pure preview diff (RFC-CX-011): sentences describing what an applied command changes.
   public static List<string> PreviewDifferenceSentences(PuzzleState current,PuzzleState candidate,Func<string,string> text,Func<string,string> name){
@@ -366,7 +366,8 @@ namespace Tide.App {
    if(SignatureOverlay(s))return;
             if(PatrolActive&&overlay=="toolWheel"){s.Body="C1 · "+PatrolText("c1.patrol.preview");s.Actions.Add(A("c1-circuit",PatrolText("c1.patrol.title"),()=>{overlay=null;document=null;Render();}));s.Actions.Add(A("overlay-back",L("back"),Back));return;}
    s.Title=L(overlay);s.Body="";
-   if(overlay=="toolWheel"){foreach(var id in new[]{"circuit","reader","alignment","routing","corrosion","seal"}){var selected=id;s.Actions.Add(A("wheel-"+id,L("action."+id),()=>OpenTool(selected)));}}
+   if(overlay=="toolWheel"){AddToolWheelFigures(s);foreach(var id in new[]{"circuit","reader","alignment","routing","corrosion","seal"}){var selected=id;s.Actions.Add(A("wheel-"+id,L("action."+id),()=>OpenTool(selected)));}}
+   else if(overlay==GuideOverlay){GuideScreen(s);}
    else if(overlay=="coverageQuery"){s.Body=L("outsideCoverage");}
    else if(overlay=="phasePicker"){var id=Journal.State.LoadedRecordId;var phases=Definition.Records[id].Phases;s.Body=L("window");s.Actions.Add(A("phase-prev",L("previousPage"),()=>{phasePage=Math.Max(0,phasePage-1);Render();}));s.Actions.Add(A("phase-next",L("nextPage"),()=>{phasePage=Math.Min((phases.Count-1)/30,phasePage+1);Render();}));foreach(var phase in phases.Skip(phasePage*30).Take(30)){var selected=phase;var sample=Record(id)["samples"].First(x=>(string)x["phase"]==selected);var reading=(string)sample["state"]=="missing"?L("missing"):((string)sample["state"]=="flat"?L("flat")+" · ":"")+(sample["pressure"]??sample["tideHeight"]).ToString();s.Actions.Add(A("phase-"+selected,selected+" · "+reading,()=>{var first=Journal.State.Get("windowStart:"+id)??phases[0];var last=Journal.State.Get("windowEnd:"+id)??phases[phases.Count-1];var v=SubmitImmediate(new PuzzleCommand("SetWindow",value:phaseStart?selected:first,otherValue:phaseStart?last:selected),false);if(v.IsValid)overlay=null;Render();}));}}
    else if(overlay=="settings"){if(DirectionEnabled&&!OpeningActive)s.Actions.Add(A("intro-replay","도입 안내 다시 보기",ReplayOpening,!SavePending));if(!OpeningActive)s.Actions.Add(A("saved-slots",L("savedSlots"),()=>OpenOverlay("recovery")));

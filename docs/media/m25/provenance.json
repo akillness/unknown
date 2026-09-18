@@ -1,0 +1,231 @@
+{
+  "schema": "provenance/v1",
+  "milestone": "M25",
+  "rfc": "RFC-CX-M25-20260918",
+  "assets": [
+    {
+      "id": "m25-start-screen",
+      "file": "start-screen.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1054531,
+      "output_sha256": "a36fbaf0083a54f9498e698a2e5e96c4b6fc88e6f7cd72e02c5cca31325d91ba",
+      "generated_at": "2026-09-18T10:43:52.500551+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build aaa5361d…, 316 files/438,910,587 B), OS window frame cropped, agent-controlled keyboard input, fresh isolated --t0-save-dir; not a human playtest",
+      "width": 1600,
+      "height": 900,
+      "build_inventory": "_workspace/current/systems/tech-verification/m25/build-inventory.json"
+    },
+    {
+      "id": "m25-guide-overlay",
+      "file": "guide-overlay.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1210809,
+      "output_sha256": "2b20c09eb78548c43278f5ad2f2a909c90bf129c2f4426514dde19f1d9d911e5",
+      "generated_at": "2026-09-18T10:43:52.504894+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build aaa5361d…, 316 files/438,910,587 B), OS window frame cropped, agent-controlled keyboard input, fresh isolated --t0-save-dir; not a human playtest",
+      "width": 1600,
+      "height": 900,
+      "build_inventory": "_workspace/current/systems/tech-verification/m25/build-inventory.json"
+    },
+    {
+      "id": "m25-guide-overlay-tall",
+      "file": "guide-overlay-tall.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 2436467,
+      "output_sha256": "d69e1eab3820184bb864f8bad75293eec59ae3c03765404f71ba8e27f316861a",
+      "generated_at": "2026-09-18T10:43:52.508436+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build aaa5361d…, 316 files/438,910,587 B), OS window frame cropped, agent-controlled keyboard input, fresh isolated --t0-save-dir; not a human playtest",
+      "width": 1600,
+      "height": 1900,
+      "build_inventory": "_workspace/current/systems/tech-verification/m25/build-inventory.json"
+    },
+    {
+      "id": "m25-opening-motion-frame",
+      "file": "opening-motion-frame.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1427907,
+      "output_sha256": "88abaab83ffca9c597c3d16bb709a16ba94ff032992061911aa25ea6478f4ce7",
+      "generated_at": "2026-09-18T10:43:52.510979+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build aaa5361d…, 316 files/438,910,587 B), OS window frame cropped, agent-controlled keyboard input, fresh isolated --t0-save-dir; not a human playtest",
+      "width": 1600,
+      "height": 900,
+      "build_inventory": "_workspace/current/systems/tech-verification/m25/build-inventory.json"
+    },
+    {
+      "id": "m25-circuit-teaching-header",
+      "file": "circuit-teaching-header.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 973185,
+      "output_sha256": "d683aedad5ba50a5310a62fe5f3b001276b16afc41ce453d94aa6a0580246a45",
+      "generated_at": "2026-09-18T10:43:52.514047+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build aaa5361d…, 316 files/438,910,587 B), OS window frame cropped, agent-controlled keyboard input, fresh isolated --t0-save-dir; not a human playtest",
+      "width": 1600,
+      "height": 900,
+      "build_inventory": "_workspace/current/systems/tech-verification/m25/build-inventory.json"
+    },
+    {
+      "id": "m25-mo-opening-harbor",
+      "file": "mo-opening-harbor.mp4",
+      "category": "previz-video",
+      "tool": "copy of Higgsfield CLI output",
+      "derived_from": [
+        "assets/generated/video/m25/mo-opening-harbor.mp4"
+      ],
+      "bytes": 3094558,
+      "output_sha256": "ce6ad4590a47a89e94018e29285a9a25b37a50401316a6a030c4cf2bf52ee40a",
+      "generated_at": "2026-09-18T10:43:52.520048+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield seedance_2_0 image-to-video previsualization; NOT gameplay"
+    },
+    {
+      "id": "m25-mo-hub-watchroom",
+      "file": "mo-hub-watchroom.mp4",
+      "category": "previz-video",
+      "tool": "copy of Higgsfield CLI output",
+      "derived_from": [
+        "assets/generated/video/m25/mo-hub-watchroom.mp4"
+      ],
+      "bytes": 1741818,
+      "output_sha256": "f28c92040374632c336f0a794495b5df3ca07fce626d0e6e586b666360ef8bf1",
+      "generated_at": "2026-09-18T10:43:52.523375+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield seedance_2_0 image-to-video previsualization; NOT gameplay"
+    },
+    {
+      "id": "m25-mo-reader-operation",
+      "file": "mo-reader-operation.mp4",
+      "category": "previz-video",
+      "tool": "copy of Higgsfield CLI output",
+      "derived_from": [
+        "assets/generated/video/m25/mo-reader-operation.mp4"
+      ],
+      "bytes": 1879853,
+      "output_sha256": "ce5d9e818ce67b2c4db52baac7b71b3becaaeaef160e7fbfa2db3ccfc20b17d3",
+      "generated_at": "2026-09-18T10:43:52.528586+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield seedance_2_0 image-to-video previsualization; NOT gameplay"
+    },
+    {
+      "id": "m25-opening-harbor-gif",
+      "file": "opening-harbor.gif",
+      "category": "previz-gif",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/video/m25/mo-opening-harbor.mp4"
+      ],
+      "bytes": 4457003,
+      "output_sha256": "2adb176bbddc9dc99941bab9cc1695077d68ea8a34fca60ceb60f72a91fe2ff5",
+      "generated_at": "2026-09-18T10:43:53.141408+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield seedance_2_0 image-to-video previsualization; NOT gameplay; 8 fps 560 px GIF derivative",
+      "width": 560,
+      "height": 315,
+      "fps": 8
+    },
+    {
+      "id": "m25-cast-portraits",
+      "file": "cast-portraits.jpg",
+      "category": "concept-sheet",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m25/portraits/"
+      ],
+      "bytes": 82272,
+      "output_sha256": "775794ecd8dfbb95ba8e515e8f5d7d5d63294abd1e117fbae5df3dfaa7c2129e",
+      "generated_at": "2026-09-18T10:43:53.520524+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield nano_banana_flash dialogue portraits, concept sheet; NOT gameplay",
+      "width": 1600,
+      "height": 346
+    },
+    {
+      "id": "m25-tool-icons",
+      "file": "tool-icons.jpg",
+      "category": "concept-sheet",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m25/tools/"
+      ],
+      "bytes": 95517,
+      "output_sha256": "424424d566cd8073784636418476b44b88d5ff7869b005be318638b30cc9230c",
+      "generated_at": "2026-09-18T10:43:53.663344+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 tool icons (canon glyph codes), concept sheet; NOT gameplay",
+      "width": 1560,
+      "height": 286
+    },
+    {
+      "id": "m25-zones",
+      "file": "zones.jpg",
+      "category": "concept-sheet",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m25/backgrounds/"
+      ],
+      "bytes": 227379,
+      "output_sha256": "a2de34412343c587a70e3f464d755284c55e8aa9afc34a5cc95cfa73c8e2fdcd",
+      "generated_at": "2026-09-18T10:43:54.035344+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 zone backdrops, concept sheet; NOT gameplay",
+      "width": 1280,
+      "height": 772
+    },
+    {
+      "id": "m25-opening-harbor",
+      "file": "opening-harbor.jpg",
+      "category": "concept-derivative",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m25/backgrounds/bg-harbor-night.png"
+      ],
+      "bytes": 252446,
+      "output_sha256": "2aefc5cf803f2dab4b9b980241e2deb9e5cad516ca0b2a679f62455820e480af",
+      "generated_at": "2026-09-18T10:43:54.140206+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 background, README derivative; NOT gameplay",
+      "width": 1592,
+      "height": 900
+    },
+    {
+      "id": "m25-hub-watchroom",
+      "file": "hub-watchroom.jpg",
+      "category": "concept-derivative",
+      "tool": "python3 PIL 12 / ffmpeg 7 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m25/backgrounds/bg-hub-watchroom.png"
+      ],
+      "bytes": 340185,
+      "output_sha256": "444934ad99aa359f45f6091495ad06310159e194bcf88dc95d9c190e4c8472ef",
+      "generated_at": "2026-09-18T10:43:54.254556+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 background, README derivative; NOT gameplay",
+      "width": 1592,
+      "height": 900
+    }
+  ]
+}

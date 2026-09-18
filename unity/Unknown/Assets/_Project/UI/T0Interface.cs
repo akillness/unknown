@@ -4,6 +4,7 @@ using Tide.Presentation;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 namespace Tide.UI
 {
@@ -14,6 +15,16 @@ namespace Tide.UI
         public Action Activate;
         public float HoldSeconds;
     }
+    // M25: a captioned picture inside a guide section (portrait, tool icon, zone backdrop). Aspect = width/height.
+    public sealed class ScreenFigure
+    {
+        public Texture2D Texture; public string Caption; public float Aspect=1f;
+    }
+    // M25: a headed block under the body — heading (Section tier, Bold), paragraph (Body tier), optional figure row.
+    public sealed class ScreenSection
+    {
+        public string Heading,Body; public float FigureHeight=110; public readonly List<ScreenFigure> Figures=new List<ScreenFigure>();
+    }
     public sealed class GameScreen
     {
         public string Title,Subtitle,Body,Status,Footer,CaseThread;
@@ -23,6 +34,7 @@ namespace Tide.UI
         public readonly List<ViewAction> Navigation=new List<ViewAction>();
         public readonly List<ViewAction> Actions=new List<ViewAction>();
         public readonly List<ViewAction> Toolbar=new List<ViewAction>();
+        public readonly List<ScreenSection> Sections=new List<ScreenSection>();
         public float[] Chart;
         public string ChartLabel;
         public Vector2[] AnchorTargets,AnchorOverlay;
@@ -30,6 +42,10 @@ namespace Tide.UI
         public SignaturePaperView SignaturePaper;
   public ReviewNotesView ReviewNotes;
         public Texture2D OpeningImage,SectionSurface;
+        // M25: optional motion clip drawn over OpeningImage (null = the committed static opening); painted
+        // backdrop for the navigation panel while it lists nothing (start screen).
+        public VideoClip OpeningClip;
+        public Texture2D NavigationBackdrop;
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
@@ -129,6 +145,7 @@ namespace Tide.UI
             if(EventSystem.current?.currentSelectedGameObject!=null)
                 focusKey=EventSystem.current.currentSelectedGameObject.name;
             if(root!=null) { root.gameObject.SetActive(false); Destroy(root.gameObject); }
+            ReleaseOpeningClip();
             hintOfferHost=null;hintOfferPanel=null;hintOfferOpen=null;hintOfferDismiss=null;hintReturnFocusKey=null;
             actionFeedbackText=null;
             focus.Clear(); keyed.Clear(); directionMarks.Clear();CurrentDirectionCategory=null;
@@ -139,17 +156,19 @@ namespace Tide.UI
             if(model.ShowOpening){RenderOpening(model);return;}
             var header=Panel("Header",root,new Vector2(0,.88f),new Vector2(1,1),skin==null?new Color(.05f,.12f,.15f,.94f):skin.header);
             SkinBacking("M7 frame",header,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
-            Text("Title",header,model.Title,28,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.62f,.95f));
-            Text("Subtitle",header,model.Subtitle,15,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.62f,.44f));
+            Text("Title",header,model.Title,TypeScale.Display,new Color(.95f,.91f,.78f),new Vector2(.02f,.42f),new Vector2(.62f,.95f),FontStyle.Bold);
+            Text("Subtitle",header,model.Subtitle,TypeScale.Meta,new Color(.72f,.81f,.78f),new Vector2(.02f,.04f),new Vector2(.62f,.44f));
             hintOfferHost=header;
             float feedbackHeight=model.AlignmentPractice==null ? .055f*scale : 0;
             var feedbackRow=Panel("Action feedback surface",root,new Vector2(.46f,.115f),new Vector2(1,.115f+feedbackHeight),ink);
             feedbackRow.GetComponent<Image>().raycastTarget=false;
-            Text("Action feedback",feedbackRow,"",16,paper,new Vector2(.015f,.05f),new Vector2(.985f,.95f));
+            Text("Action feedback",feedbackRow,"",16,paper,new Vector2(.015f,.05f),new Vector2(.985f,.95f),FontStyle.Bold);
             actionFeedbackText=feedbackRow.Find("Action feedback").GetComponent<Text>();actionFeedbackText.raycastTarget=false;
             SetActionFeedback(model.ActionFeedback);
             var sceneWindow=Rect("Scene viewport",root,new Vector2(0,.515f),new Vector2(.43f,.865f));
             var left=Panel("Navigation",root,new Vector2(0,.12f),new Vector2(.43f,.5f),skin==null?new Color(.08f,.17f,.2f,.92f):skin.navigation);
+            // M25: the start screen lists no view nodes, so the empty navigation panel carries the painted watch room instead.
+            if(model.NavigationBackdrop!=null&&model.Navigation.Count==0) FullBleedBacking("M25 backdrop",left,model.NavigationBackdrop,Color.white);
             var navigationViewport=Rect("Navigation Viewport",left,new Vector2(.025f,.02f),new Vector2(.975f,.98f));navigationViewport.gameObject.AddComponent<RectMask2D>();
             var leftFlow=Flow(navigationViewport,12);leftFlow.anchorMin=new Vector2(0,1);leftFlow.anchorMax=Vector2.one;leftFlow.pivot=new Vector2(.5f,1);leftFlow.offsetMin=leftFlow.offsetMax=Vector2.zero;leftFlow.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
             navigationScroll=left.gameObject.AddComponent<ScrollRect>();navigationScroll.viewport=navigationViewport;navigationScroll.content=leftFlow;navigationScroll.horizontal=false;navigationScroll.vertical=true;navigationScroll.scrollSensitivity=30;
@@ -160,7 +179,7 @@ namespace Tide.UI
                 float height=.185f*scale;
                 var card=Panel("Case thread",root,new Vector2(.46f,.865f-height),new Vector2(1,.865f),ink);
                 card.GetComponent<Image>().raycastTarget=false;
-                Text("CaseThread",card,model.CaseThread,20,paper,new Vector2(.025f,.04f),new Vector2(.975f,.96f));
+                Text("CaseThread",card,model.CaseThread,TypeScale.Section,paper,new Vector2(.025f,.04f),new Vector2(.975f,.96f));
                 card.Find("CaseThread").GetComponent<Text>().raycastTarget=false;
                 float directionHeight=model.ShowDirection ? .055f*Mathf.Max(1,scale) : 0;
                 if(model.ShowDirection)RenderDirectionStrip(.865f-height,directionHeight,model.SectionSurface);
@@ -193,15 +212,22 @@ namespace Tide.UI
                     ground.color=new Color(paper.r,paper.g,paper.b,ReadingBandAlpha);
                     ground.raycastTarget=false;
                 }
-                FlowText(noteParent,model.CaseThread,16,ink);
+                FlowText(noteParent,model.CaseThread,TypeScale.Helper,ink);
                 var note=noteParent.GetChild(noteParent.childCount-1).GetComponent<Text>();
                 note.name="CaseThread";note.raycastTarget=false;
             }
-            FlowText(content,model.Body,20,ink);
+            FlowText(content,model.Body,TypeScale.Body,ink);
+            // M25 guide sections: Section-tier bold heading, Body-tier paragraph, fixed-size figure row.
+            foreach(var section in model.Sections)
+            {
+                FlowText(content,section.Heading,TypeScale.Section,ink,"Section heading",FontStyle.Bold);
+                FlowText(content,section.Body,TypeScale.Body,ink);
+                FigureRow(content,section);
+            }
    RenderReviewNotes(content,model.ReviewNotes);
             if(model.Chart!=null)
             {
-                FlowText(content,model.ChartLabel,15,ink);
+                FlowText(content,model.ChartLabel,TypeScale.Meta,ink);
                 var chart=Rect("Signal",content,Vector2.zero,Vector2.one);
                 chart.gameObject.AddComponent<LayoutElement>().preferredHeight=160;
                 var graphic=chart.gameObject.AddComponent<SignalChart>(); graphic.Values=model.Chart; graphic.color=ink;
@@ -212,7 +238,7 @@ namespace Tide.UI
                 diagram.gameObject.AddComponent<LayoutElement>().preferredHeight=190;
                 var graphic=diagram.gameObject.AddComponent<AnchorDiagram>();
                 graphic.Targets=model.AnchorTargets; graphic.Overlay=model.AnchorOverlay; graphic.color=brass;
-                if(model.AnchorLabels!=null) FlowText(content,string.Join(" · ",model.AnchorLabels),15,ink);
+                if(model.AnchorLabels!=null) FlowText(content,string.Join(" · ",model.AnchorLabels),TypeScale.Meta,ink);
             }
             RectTransform actionParent=content;
             foreach(var action in model.Actions)
@@ -220,21 +246,21 @@ namespace Tide.UI
                 if(!string.IsNullOrEmpty(action.SectionKey))actionParent=DirectionSection(content,action,model.SectionSurface);
                 // M19: helper text steps down a size and tones toward the surface so it cannot be
                 // mistaken for the action label above it (presentation/t0-action-plate-m19.md §1.1).
-                if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,16,actionParent==content?Muted(ink,paper):Muted(paper,ink));
+                if(!string.IsNullOrEmpty(action.Detail)) FlowText(actionParent,action.Detail,TypeScale.Helper,actionParent==content?Muted(ink,paper):Muted(paper,ink));
                 Button(actionParent,action);
                 // The review question answers the button above it; rendering it here keeps the answer in view after the focus scroll (D-M9-15).
                 if(model.ReviewNotes!=null&&action.Id==model.ReviewNotes.QuestionAnchorId) RenderReviewQuestion(actionParent,model.ReviewNotes);
             }
             // RFC-CX-016: the committed literal is authored for the dark Work Surface; with the skin on the same line sits
             // on rag paper, so the skin supplies a deeper ochre. skin==null keeps the committed literal byte-identical.
-            if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,16,skin==null?new Color(.38f,.18f,.07f):skin.statusOnPaper);
+            if(!string.IsNullOrEmpty(model.Status)) FlowText(content,model.Status,TypeScale.Status,skin==null?new Color(.38f,.18f,.07f):skin.statusOnPaper,"Text",FontStyle.Bold);
             var bar=Panel("Toolbar",root,new Vector2(0,0),new Vector2(1,.105f),skin==null?new Color(.05f,.12f,.15f,.96f):skin.toolbar);
             SkinBacking("M7 frame",bar,skin?.bronzeFrame,skin==null?0:skin.frameTilesAcross,new Color(.5f,.5f,.5f,.72f));
             var tools=Rect("Tools",bar,new Vector2(.01f,.34f),new Vector2(.99f,.96f));
             var horizontal=tools.gameObject.AddComponent<HorizontalLayoutGroup>(); horizontal.spacing=8;
             horizontal.childControlWidth=true; horizontal.childForceExpandWidth=true; horizontal.childControlHeight=true;
             foreach(var action in model.Toolbar) Button(tools,action);
-            Text("Footer",bar,model.Footer,13,new Color(.78f,.84f,.8f),new Vector2(.015f,0),new Vector2(.985f,.3f));
+            Text("Footer",bar,model.Footer,TypeScale.Meta,new Color(.78f,.84f,.8f),new Vector2(.015f,0),new Vector2(.985f,.3f));
             footerText=bar.Find("Footer").GetComponent<Text>();
             Canvas.ForceUpdateCanvases();
             foreach(var backing in backings) backing.Apply();
@@ -338,19 +364,65 @@ namespace Tide.UI
             var g=r.gameObject.AddComponent<VerticalLayoutGroup>(); g.spacing=10; g.padding=new RectOffset(padding,padding,padding,padding);
             g.childControlWidth=true; g.childControlHeight=true; g.childForceExpandHeight=false; return r;
         }
-        private void Text(string name,Transform parent,string value,int size,Color c,Vector2 min,Vector2 max)
+        private void Text(string name,Transform parent,string value,int size,Color c,Vector2 min,Vector2 max,FontStyle style=FontStyle.Normal)
         {
             var r=Rect(name,parent,min,max); var text=r.gameObject.AddComponent<Text>(); text.font=font;text.text=value??"";
             text.fontSize=Mathf.RoundToInt(size*scale); text.color=c; text.horizontalOverflow=HorizontalWrapMode.Wrap;
+            text.fontStyle=style; text.lineSpacing=TypeScale.LineSpacing;
         }
-        private void FlowText(Transform parent,string value,int size,Color c,string name="Text")
+        private void FlowText(Transform parent,string value,int size,Color c,string name="Text",FontStyle style=FontStyle.Normal)
         {
             if(string.IsNullOrEmpty(value)) return;
             var r=Rect(name,parent,Vector2.zero,Vector2.one); var text=r.gameObject.AddComponent<Text>();
             text.font=font;text.text=value;text.fontSize=Mathf.RoundToInt(size*scale);text.color=c;
+            text.fontStyle=style; text.lineSpacing=TypeScale.LineSpacing;
             text.horizontalOverflow=HorizontalWrapMode.Wrap; text.verticalOverflow=VerticalWrapMode.Overflow;
             r.gameObject.AddComponent<LayoutElement>().minHeight=size*scale*1.7f;
         }
+        // M25 figure row: fixed canvas-unit cells (pictures do not follow the text scale), each cell = picture over
+        // a Meta-tier caption. No AspectRatioFitter inside the layout group — the cell width is preferredHeight×aspect.
+        private void FigureRow(Transform parent,ScreenSection section)
+        {
+            if(section.Figures.Count==0) return;
+            var row=Rect("Figures",parent,Vector2.zero,Vector2.one);
+            float captionHeight=TypeScale.Meta*scale*1.6f, cell=section.FigureHeight;
+            row.gameObject.AddComponent<LayoutElement>().preferredHeight=cell+captionHeight;
+            var group=row.gameObject.AddComponent<HorizontalLayoutGroup>(); group.spacing=10; group.childAlignment=TextAnchor.UpperLeft;
+            group.childControlWidth=true; group.childControlHeight=true; group.childForceExpandWidth=false; group.childForceExpandHeight=true;
+            foreach(var figure in section.Figures)
+            {
+                var item=Panel("Figure "+figure.Caption,row,Vector2.zero,Vector2.one,new Color(ink.r,ink.g,ink.b,.08f));
+                item.GetComponent<Image>().raycastTarget=false;
+                var element=item.gameObject.AddComponent<LayoutElement>(); element.preferredWidth=cell*Mathf.Max(.2f,figure.Aspect); element.flexibleWidth=0;
+                var picture=Rect("Picture",item,Vector2.zero,Vector2.one); picture.offsetMin=new Vector2(0,captionHeight); picture.offsetMax=Vector2.zero;
+                var image=picture.gameObject.AddComponent<RawImage>(); image.texture=figure.Texture; image.raycastTarget=false;
+                image.color=figure.Texture==null?new Color(ink.r,ink.g,ink.b,.35f):Color.white;
+                Text("Caption",item,figure.Caption,TypeScale.Meta,ink,Vector2.zero,Vector2.one);
+                var caption=item.Find("Caption").GetComponent<Text>(); caption.alignment=TextAnchor.LowerCenter; caption.raycastTarget=false;
+                ((RectTransform)caption.transform).offsetMax=new Vector2(0,-cell);
+            }
+        }
+        // M25 opening clip: a VideoPlayer renders into a RenderTexture that replaces the still only once the clip is
+        // prepared; any error keeps the still. Released on the next Render and on destroy (no leaked RenderTexture).
+        private VideoPlayer openingPlayer; private RenderTexture openingRender;
+        private void AttachOpeningClip(RawImage graphic,VideoClip clip,Texture2D still)
+        {
+            if(clip==null||graphic==null||Application.isBatchMode) return;
+            openingRender=new RenderTexture((int)Mathf.Max(16,clip.width),(int)Mathf.Max(16,clip.height),0){name="M25 opening clip"};
+            openingPlayer=graphic.gameObject.AddComponent<VideoPlayer>();
+            openingPlayer.playOnAwake=false; openingPlayer.source=VideoSource.VideoClip; openingPlayer.clip=clip;
+            openingPlayer.renderMode=VideoRenderMode.RenderTexture; openingPlayer.targetTexture=openingRender;
+            openingPlayer.isLooping=true; openingPlayer.audioOutputMode=VideoAudioOutputMode.None; openingPlayer.skipOnDrop=true;
+            openingPlayer.prepareCompleted+=player=>{ if(graphic!=null&&openingRender!=null){ graphic.texture=openingRender; player.Play(); } };
+            openingPlayer.errorReceived+=(player,message)=>{ if(graphic!=null) graphic.texture=still; Debug.LogWarning("M25 opening clip fell back to the still: "+message); };
+            openingPlayer.Prepare();
+        }
+        private void ReleaseOpeningClip()
+        {
+            if(openingPlayer!=null){ openingPlayer.Stop(); openingPlayer=null; }
+            if(openingRender!=null){ openingRender.Release(); Destroy(openingRender); openingRender=null; }
+        }
+        private void OnDestroy(){ ReleaseOpeningClip(); }
         // M19 plate ornament: a non-raycast child drawn from the colours Render() already resolved
         // (same rule as SkinBacking — ornament never intercepts input, never adds an asset).
         private Image Ornament(string name,Transform parent,Vector2 min,Vector2 max,Color c)
