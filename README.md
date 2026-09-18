@@ -20,16 +20,16 @@
 |---|---|
 | ![M25 macOS 개발 빌드 시작 화면 — 한서린 타이틀 스테이지, 당직실 배경, 세 단계 텍스트 계층](docs/media/m25/start-screen.png) | ![M25 안내 오버레이 — 지금 할 일, 세 단계, 도구 절차](docs/media/m25/guide-overlay.png) |
 
-위 두 장은 **실제 macOS 개발 빌드(`Unknown.app`, 316파일 / 438,910,587 B, digest `aaa5361d…`)의 창 캡처**입니다. OS 창틀만 잘라냈고 프레임·UI를 합성하지 않았습니다(에이전트 키 입력, 격리 저장 폴더). 오프닝 GIF는 같은 빌드가 재생하는 Higgsfield 클립의 파생본이며, 게임플레이 녹화가 아닙니다. 전체 목록과 해시: [`docs/media/m25/provenance.meta.md`](docs/media/m25/provenance.meta.md).
+위 두 장은 **실제 macOS 개발 빌드(`Unknown.app`, 316파일)의 창 캡처**입니다(첫 전달 빌드 digest `aaa5361d…`; 최종 빌드 438,913,631 B / digest `08e71660…`는 [`guide-c1-cast.png`](docs/media/m25/guide-c1-cast.png)에 기록). OS 창틀만 잘라냈고 프레임·UI를 합성하지 않았습니다(에이전트 키 입력, 격리 저장 폴더). 오프닝 GIF는 같은 빌드가 재생하는 Higgsfield 클립의 파생본이며, 게임플레이 녹화가 아닙니다. 전체 목록과 해시: [`docs/media/m25/provenance.meta.md`](docs/media/m25/provenance.meta.md).
 
 **M25에서 바뀐 것**
 
 - **리소스 — Higgsfield CLI로 전량 생성·적용.** 배경 7(오프닝 은포항 야경·당직실·제3수문·구염전 저지대·냉동창고 부두·제1양수장·판독기 책상), 인물 초상 5, 도구 아이콘 6(캐논 형태 부호: 격자·팔 달린 원·평행선 2줄+눈금 3·분기 Y·육각 결정·겹친 사각), 모션 3(5 s / 720p / 무음). 시각 원전은 `concept/style-guide.md`와 원본 컨셉 시트뿐이며 현재 플레이 화면·프리팹은 참조하지 않았습니다. 이미지 내 텍스트·명판은 100% 크롭 검수로 반려·재생성했습니다(반려본 보존).
 - **적용 범위.** 오프닝 정지 이미지 + 클립(모션 축소·재생 실패 시 정지 이미지), 시작 화면 당직실 배경, 도구 휠 아이콘, 안내 화면의 인물 카드(한서린·한도연)와 구역 도판. 임포터가 원본 SHA를 대조하고, 승격 감사 후 **로컬 개발 프로필만** 승인했습니다(`Resources/M25Resources.asset`). 원본 provenance는 `runtimeEligible:false`, 상업 사용권은 UNVERIFIED입니다.
-- **튜토리얼·가이드.** 새 `안내` 오버레이(F2 · 툴바 · 시작 화면)가 지금 할 일(캠페인 목표), 당직 인수의 세 단계와 진행 표시, 도구 절차(배선 추적·판독), 조작, 규칙(힌트 무료·되돌림·2단계 확정·매체 2종), 인물, 항구의 네 구역을 한 화면에 모읍니다. 회로·판독 화면의 안내 접두는 `▶ 안내 · 단계 t0-b2 · 남은 조건 n개 · F2 전체 안내`로 구조화했습니다. 캠페인 데이터·힌트 본문은 바꾸지 않았습니다.
+- **튜토리얼·가이드.** 새 `안내` 오버레이(F2 · 툴바 · 시작 화면)가 지금 할 일(캠페인 목표), 당직 인수의 세 단계와 진행 표시, 도구 절차(배선 추적·판독), 조작, 규칙(힌트 무료·되돌림·2단계 확정·매체 2종), 인물, 항구의 네 구역을 한 화면에 모읍니다. 긴 본문은 **PageUp/PageDown**으로 넘깁니다(키보드만으로 읽을 수 있습니다). 인물 카드는 캠페인 공개 상한을 따릅니다 — 한서린·한도연은 처음부터, 문재화는 C1 진입 뒤, 오은정·표성찬은 아직 플레이 가능 구간 밖이라 나오지 않습니다. 회로·판독 화면의 안내 접두는 `▶ 안내 · 단계 t0-b2 · 남은 조건 n개 · F2 전체 안내`로 구조화했습니다. 캠페인 데이터·힌트 본문은 바꾸지 않았습니다.
 - **가독성.** 이름 있는 타이포 스케일 `TypeScale` — Display 30 · Title 24 · Body 21 · Section 18 · Label 18 · Status 17 · Helper 15 · Meta 14, 행간 1.15. 제목·섹션·상태는 굵게, 헬퍼는 표면 쪽으로 톤 다운. 계층 계약(본문 > 버튼 라벨 > 헬퍼, 라벨만 굵게)은 PlayMode 테스트로 고정되어 있습니다.
-- **검증 [OBSERVED].** EditMode 65/65 · PlayMode 134(133 통과 / 0 실패 / 1 조건부 skip = `--t0-save-dir` 없는 boot 테스트) · 격리 boot 1/1 · 신규 M25 테스트 6/6. 영수증: [`_workspace/current/systems/tech-verification/m25/verification.json`](_workspace/current/systems/tech-verification/m25/verification.json).
-- **배포.** GitHub Release **`v0.25.0-dev`**(prerelease)에 macOS 개발 빌드 zip을 첨부했습니다. 서명·공증이 없는 개발 빌드라 다른 Mac에서는 Gatekeeper 경고가 나며, 상점 공개가 아닙니다.
+- **검증 [OBSERVED].** EditMode 65/65 · PlayMode 136(135 통과 / 0 실패 / 1 조건부 skip = `--t0-save-dir` 없는 boot 테스트) · 격리 boot 1/1 · 신규 M25 테스트 8/8. 영수증: [`_workspace/current/systems/tech-verification/m25/verification.json`](_workspace/current/systems/tech-verification/m25/verification.json).
+- **배포.** GitHub Release **`v0.25.1-dev`**(prerelease)에 최종 macOS 개발 빌드 zip을 첨부했습니다(`v0.25.0-dev`는 같은 날의 첫 전달본으로 보존). 서명·공증이 없는 개발 빌드라 다른 Mac에서는 Gatekeeper 경고가 나며, 상점 공개가 아닙니다.
 
 ### 새 리소스 미리보기 (컨셉 · 게임플레이 아님)
 
@@ -39,11 +39,11 @@
 
 ![항구의 네 구역 — 제3수문·구염전 저지대·냉동창고 부두·제1양수장](docs/media/m25/zones.jpg)
 
-판독 동작 프리비즈: [`docs/media/m25/mo-reader-operation.mp4`](docs/media/m25/mo-reader-operation.mp4) · 당직실 정물: [`mo-hub-watchroom.mp4`](docs/media/m25/mo-hub-watchroom.mp4). 실제 실행 화면 추가 캡처: [`guide-overlay-tall.png`](docs/media/m25/guide-overlay-tall.png) · [`opening-motion-frame.png`](docs/media/m25/opening-motion-frame.png) · [`circuit-teaching-header.png`](docs/media/m25/circuit-teaching-header.png).
+판독 동작 프리비즈: [`docs/media/m25/mo-reader-operation.mp4`](docs/media/m25/mo-reader-operation.mp4) · 당직실 정물: [`mo-hub-watchroom.mp4`](docs/media/m25/mo-hub-watchroom.mp4). 실제 실행 화면 추가 캡처: [`guide-overlay-tall.png`](docs/media/m25/guide-overlay-tall.png) · [`guide-c1-cast.png`](docs/media/m25/guide-c1-cast.png)(C1 진입 뒤 인물 카드 3장·PageDown) · [`opening-motion-frame.png`](docs/media/m25/opening-motion-frame.png) · [`circuit-teaching-header.png`](docs/media/m25/circuit-teaching-header.png).
 
 ## 실행 · 빌드 · 테스트
 
-**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.25.0-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
+**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.25.1-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
 
 **소스에서 실행** — Unity Hub에 `unity/Unknown/`을 추가하고 **Unity 6000.5.6f1**로 엽니다. `Assets/_Project/Scenes/boot.unity`가 자동으로 열리며 Play로 허브·회로·판독·설정·저장 흐름을 실행합니다.
 
@@ -67,7 +67,7 @@ P="$PWD/unity/Unknown"
 "$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M25ResourceProjectBuilder.Import -logFile /tmp/m25-import.log
 ```
 
-**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · 1~6 도구 · I 증거함 · H 가설판 · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
+**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · **PageUp/PageDown 본문** · 1~6 도구 · I 증거함 · H 가설판 · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
 
 ## 세 기둥
 
@@ -156,7 +156,7 @@ bash .claude/skills/game-ops-harness/scripts/freshness-check.sh
 
 ## 측정하지 않은 것
 
-사람 플레이테스트(n = 0), 재미·몰입·플레이타임(480분은 `[TARGET]`), 성능(런타임 tri/drawcall/텍스처 상주), Windows 빌드, 전체 캠페인 완결성. 게이트 G1~G8은 PASS 0 / G8 PARTIAL(메모리 동기 영수증 일부 미검증)로 남아 있습니다. 이 저장소가 약속하는 것과 하지 않는 것: `_workspace/current/production/premium-preproduction-contract.md`.
+사람 플레이테스트(n = 0), 재미·몰입·플레이타임(480분은 `[TARGET]`), 성능(런타임 tri/drawcall/텍스처 상주), Windows 빌드(이 개발 머신의 Unity에는 Windows 모듈이 설치돼 있지 않습니다), 전체 캠페인 완결성. 게이트 G1~G8은 PASS 0 / G8 PARTIAL(메모리 동기 영수증 일부 미검증)로 남아 있습니다. 이 저장소가 약속하는 것과 하지 않는 것: `_workspace/current/production/premium-preproduction-contract.md`.
 
 ---
 

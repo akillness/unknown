@@ -170,3 +170,12 @@ owner: game-production-director
 - **가독성**: `Tide.UI.TypeScale`(Display 30 · Title 24 · Body 21 · Section 18 · Label 18 · Status 17 · Helper 15 · Meta 14, 행간 1.15). 제목/섹션/상태 Bold, 헬퍼는 표면 쪽 톤. 기존 계층 계약 테스트 유지.
 - **검증**: EditMode 65/65 · PlayMode 전체(최종 트리, `m25/playmode.xml`) · 격리 boot 1/1 · 신규 M25 테스트 6/6. 기본 macOS 빌드 316파일/438,910,587B/digest `aaa5361d…`; 실제 창 캡처 5장(`docs/media/m25/`), 오프닝 클립 재생을 1 s 간격 캡처 차이(36.9% 픽셀)로 관측.
 - **배포**: `main` 일반 push + GitHub Release `v0.25.0-dev`(prerelease, 미서명 개발 빌드 zip). 상점 공개 아님. 사람 플레이 n=0, 성능·Windows·전체 캠페인·상업 사용권 미측정/UNVERIFIED. 영수증: `systems/tech-verification/m25/verification.json`.
+
+## 2026-09-18 · M25 후속 — 안내 페이징, 인물 공개 규칙, zg 재생성, v0.25.1-dev (RFC-CX-M25-20260918)
+
+- `ScrollPage` 입력 액션(PageUp/PageDown, 키보드)이 작업면 본문을 한 쪽씩 넘긴다. 오프닝·연습장에서는 무시하고 재렌더·저장·퍼즐 상태를 바꾸지 않는다. 조작 안내·설정 재지정 목록에 반영.
+- 안내 인물 카드가 캠페인 공개 상한을 따른다: 한서린·한도연(`t0-b1`), 문재화(C1 진입 후, `c1-b1`). 오은정·표성찬은 5장·3장에서 처음 이름이 나오므로 플레이 가능 슬라이스에는 표시 면이 없다(초상은 임포트·승인 대기).
+- 사용자 승인 후 `zg index --rebuild` 성공(2,171/2,171). Windows 빌드는 이 머신에 Unity Windows 모듈이 없어 불가(경계로 기록).
+- 검증: EditMode 65/65 · PlayMode 136(135/0/1 조건부 skip) · 격리 boot 1/1 · M25 테스트 8/8. 빌드 316파일/438,913,631B/digest `08e71660…`, 네이티브 캡처 `docs/media/m25/guide-c1-cast.png`(C1 fixture, F2 + PageDown ×3).
+- 배포: `main` 일반 push + GitHub Release `v0.25.1-dev`(prerelease, 미서명 개발 빌드 zip). `v0.25.0-dev`는 첫 전달본으로 보존하고 노트에 대체 표기.
+

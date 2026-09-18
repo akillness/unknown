@@ -9,6 +9,8 @@ namespace Tide.Input {
   public event Action ToolWheel;
   public event Action BeginInteract,EndInteract,Preview,Undo,Redo,Query,Disconnect,Cancel;
   public event Action<string> Overlay; public event Action<int> Tool;
+  // M25: PageUp/PageDown page the work surface (keyboard-only reading of long guide/document text).
+  public event Action<int> ScrollPage;
   public event Action Activity;
   public bool ToolPanel {get;set;} public bool OverlayActive {get;set;}
   public InputActionAsset Actions {get;private set;}
@@ -44,6 +46,7 @@ namespace Tide.Input {
    map.FindAction("Query").performed+=c=>{if(c.ReadValue<float>()<=0)return;if(c.control.device is Gamepad&&(Gamepad.current.leftShoulder.isPressed)){Overlay?.Invoke("hints");return;}if(ToolPanel&&!OverlayActive)Query?.Invoke();};
    map.FindAction("Tool").performed+=c=>{if(c.ReadValue<float>()<=0)return;if(OverlayActive)return;var key=Role(c);if(key=="wheel"){if(ToolPanel)Disconnect?.Invoke();else ToolWheel?.Invoke();}else if(key=="next")Tool?.Invoke((Gamepad.current.leftShoulder.isPressed)?-1:0);else if(int.TryParse(key,out var n))Tool?.Invoke(n);};
    map.FindAction("Disconnect").performed+=c=>{if(ToolPanel&&!OverlayActive)Disconnect?.Invoke();};
+   map.FindAction("ScrollPage").performed+=c=>{if(c.ReadValue<float>()<=0)return;ScrollPage?.Invoke(Role(c)=="up"?-1:1);};
    map.FindAction("Cancel").performed+=c=>Cancel?.Invoke();map.Enable();
   }
   void Update(){

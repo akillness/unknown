@@ -12,7 +12,7 @@ owner: game-production-director
 
 | 파일 | 종류 | 출처 |
 |---|---|---|
-| `start-screen.png` `guide-overlay.png` `guide-overlay-tall.png` `opening-motion-frame.png` `circuit-teaching-header.png` | **실제 macOS 개발 빌드 창 캡처** (빌드 digest `aaa5361d…`, 316파일/438,910,587B). OS 창틀만 잘라냈고 속도·프레임·UI를 합성하지 않았다. 에이전트 키 입력, 격리 `--t0-save-dir`, 사람 플레이 아님 | `unity/Unknown/Builds/T0-mac/Unknown.app` |
+| `start-screen.png` `guide-overlay.png` `guide-overlay-tall.png` `opening-motion-frame.png` `circuit-teaching-header.png` (빌드 digest `aaa5361d…`, 438,910,587B) · `guide-c1-cast.png` (후속 빌드 digest `08e71660…`, 438,913,631B — C1 fixture 저장, F2 + PageDown ×3) | **실제 macOS 개발 빌드 창 캡처**(316파일). OS 창틀만 잘라냈고 속도·프레임·UI를 합성하지 않았다. 에이전트 키 입력, 격리 `--t0-save-dir`, 사람 플레이 아님 | `unity/Unknown/Builds/T0-mac/Unknown.app` |
 | `mo-opening-harbor.mp4` `mo-hub-watchroom.mp4` `mo-reader-operation.mp4` `opening-harbor.gif` | Higgsfield `seedance_2_0` 이미지→영상 **프리비즈**(5 s, 720p, 무음). 게임플레이 아님 | `assets/generated/video/m25/` |
 | `cast-portraits.jpg` `tool-icons.jpg` `zones.jpg` `opening-harbor.jpg` `hub-watchroom.jpg` | Higgsfield `gpt_image_2` / `nano_banana_flash` 생성물의 축소 파생본. 컨셉/README용, 게임플레이 아님 | `assets/generated/2d/m25/` |
 

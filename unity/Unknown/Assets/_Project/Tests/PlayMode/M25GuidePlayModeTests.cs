@@ -100,7 +100,7 @@ namespace Tide.Tests {
    var pictures=host.GetComponentsInChildren<RawImage>().Where(r=>r.name=="Picture").ToArray();
    Assert.GreaterOrEqual(pictures.Count(p=>p.texture!=null),6+2,"six tool icons and two portraits are drawn");
    foreach(var picture in pictures)Assert.IsFalse(picture.raycastTarget,"figures never intercept input");
-   foreach(var banned in new[]{"문재화","오은정","표성찬"})StringAssert.DoesNotContain(banned,Visible(),"only the T0-public cast is named");
+   foreach(var banned in new[]{"문재화","오은정","표성찬"})StringAssert.DoesNotContain(banned,Visible(),"a fresh watch names only the T0-public cast");
    Assert.IsFalse(File.Exists(Path.Combine(directory,"save.json")));
   }
   [UnityTest] public IEnumerator CircuitTeachingHeaderNamesBeatAndRemainingConditions(){
@@ -113,6 +113,36 @@ namespace Tide.Tests {
    StringAssert.Contains("▶ 안내 · 단계 t0-b2 · 남은 조건",text,"the guided teaching header names the beat and the remaining conditions");
    StringAssert.Contains("F2 전체 안내",text,"the header points at the full guide");
    StringAssert.DoesNotContain("남은 조건 0개",text,"a freshly opened circuit still has open conditions");
+  }
+  [UnityTest] public IEnumerator PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns(){
+   Click("guide");yield return null;Canvas.ForceUpdateCanvases();
+   var scroll=host.GetComponentsInChildren<ScrollRect>().Single(s=>s.viewport.name=="Viewport");
+   Assert.That(scroll.verticalNormalizedPosition,Is.EqualTo(1f).Within(1e-4f),"the guide opens at its top");
+   Assert.Greater(scroll.content.rect.height,scroll.viewport.rect.height,"the guide is longer than its viewport, so paging is meaningful");
+   var hash=game.Journal.State.StateHash;int renders=0;game.Interface.ScreenChanged+=()=>renders++;
+   yield return Press(Key.PageDown);
+   Assert.Less(scroll.verticalNormalizedPosition,.999f,"PageDown moves the reading surface down");
+   Assert.AreEqual(T0GameSession.GuideOverlay,game.Surface,"paging never leaves the guide");
+   Assert.AreEqual(0,renders,"paging scrolls in place; it does not re-render");
+   for(int i=0;i<12;i++)yield return Press(Key.PageUp);
+   Assert.That(scroll.verticalNormalizedPosition,Is.EqualTo(1f).Within(1e-4f),"PageUp returns to the top and clamps");
+   Assert.AreEqual(hash,game.Journal.State.StateHash);Assert.IsFalse(File.Exists(Path.Combine(directory,"save.json")));
+   Assert.IsTrue(game.Interface.ActionIds.Contains("guide-hints"),"the guide's own actions survive paging");
+  }
+  [UnityTest] public IEnumerator CastFollowsDisclosureOnceC1IsEntered(){
+   if(profile==null||profile.portraits.Length==0)Assert.Ignore("M25Resources.asset not imported");
+   profile.runtimeApproved=true;
+   yield return Wait(game.FlushSaves());UnityEngine.Object.Destroy(host);yield return null;
+   File.Copy(Path.Combine(Application.dataPath,"_Project/Tests/Fixtures/C1PatrolCompletedV2.json"),Path.Combine(directory,"save.json"),true);
+   host=new GameObject("M25 guide test C1");game=host.AddComponent<T0GameSession>();game.Initialize(Resources.Load<T0RuntimeConfig>("T0Runtime"),directory);yield return null;
+   game.StartGame();yield return null;Assert.IsTrue(game.PatrolComplete,"fixture enters C1");
+   var bytes=File.ReadAllBytes(Path.Combine(directory,"save.json"));
+   game.OpenOverlay(T0GameSession.GuideOverlay);yield return null;
+   var text=Visible();
+   foreach(var named in new[]{"한서린","한도연","문재화"})StringAssert.Contains(named,text,named+" is public once C1 has been entered");
+   foreach(var banned in new[]{"오은정","표성찬"})StringAssert.DoesNotContain(banned,text,banned+" is first named past the playable slice");
+   StringAssert.Contains("C1 · 두 개의 필적",text,"the guide names the C1 stage without spoiling its objective");
+   CollectionAssert.AreEqual(bytes,File.ReadAllBytes(Path.Combine(directory,"save.json")),"opening the guide in C1 writes nothing");
   }
  }
 }

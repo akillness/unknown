@@ -11,3 +11,4 @@ last_updated: 2026-09-18
 - Runtime: `App/M25ResourceSession.cs` (guide overlay, figures, teaching header), `UI/TypeScale.cs`, `UI/T0Interface.cs` (sections, figure rows, navigation backdrop, opening VideoPlayer with still fallback), `Input/WatchInput.cs` + `WatchBindings.json` (F2 guide), `Resources/T0Strings.json` (+26 keys, teachingHeader), `M22SeorinSession.cs` (title stage stays under guide).
 - Receipts: EditMode 65/65 · PlayMode 134 (133/0/1 conditional skip) · boot 1/1 · build 316 files/438,910,587 B digest aaa5361d… · 5 native captures in `docs/media/m25/`.
 - Memory sync: mex-agent skipped (PATH mex = TeX); graphify/zg/vault results recorded in `_workspace/current/retrospectives/m25-higgsfield-resources-20260918.md`.
+- Follow-up: ScrollPage (PageUp/PageDown) input, PublicCast() disclosure rule, zg rebuild OK; final receipts EditMode 65/65 · PlayMode 136 (135/0/1) · boot 1/1 · build 438,913,631 B digest 08e71660…; Release v0.25.1-dev.

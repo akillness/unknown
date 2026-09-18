@@ -15,9 +15,9 @@ owner: game-production-director
 | 생성 | 이미지 18 + 반려 2, 영상 3 (Higgsfield CLI 1.1.25) | `concept/m25-higgsfield-jobs.json`, `assets/generated/{2d,video}/m25/provenance.json` |
 | 크레딧 | 견적 합 159.0 · 자체 구간 차액 199.0 · 세션 밖 소모 ≥104.5 관측 | `systems/tech-verification/m25/verification.json` |
 | 적용 | 임포트 18항목(SHA 대조) · 로컬 개발 프로필 승인 | `m25/import-audit.json`, decision-log 승격 감사 |
-| 테스트 | EditMode 65/65 · PlayMode 134(133/0/1 조건부 skip) · 격리 boot 1/1 · 신규 6/6 | `m25/{editmode,playmode,boot}.xml` |
-| 빌드 | 316파일 · 438,910,587B · digest `aaa5361d…` | `m25/build-inventory.json` |
-| 네이티브 | 실제 창 캡처 5장, 오프닝 클립 재생 관측 | `docs/media/m25/` |
+| 테스트 | 최종 EditMode 65/65 · PlayMode 136(135/0/1 조건부 skip) · 격리 boot 1/1 · 신규 8/8 (첫 전달: 134/133/0/1 · 6/6) | `m25/{editmode,playmode,boot}.xml` |
+| 빌드 | 최종 316파일 · 438,913,631B · digest `08e71660…` (v0.25.1-dev); 첫 전달 438,910,587B · `aaa5361d…` (v0.25.0-dev) | `m25/build-inventory.json` |
+| 네이티브 | 실제 창 캡처 6장(C1 인물 카드·PageDown 포함), 오프닝 클립 재생 관측 | `docs/media/m25/` |
 | 가독성 | TypeScale 8단(30/24/21/18/18/17/15/14) + 행간 1.15 | `UI/TypeScale.cs`, 계약 테스트 |
 
 ## 무엇이 바뀌었나 (Ground)
@@ -34,12 +34,13 @@ owner: game-production-director
 - 배치모드 PlayMode에서 키 입력 테스트는 `editorInputBehaviorInPlayMode=AllDeviceInputAlwaysGoesToGameView` + `backgroundBehavior=IgnoreFocus`가 둘 다 필요하다(기존 T0PlayModeTests 관례).
 - Unity 플레이어의 저장된 창 크기는 `-screen-width/-screen-height` 인자로 덮을 수 있고 Retina에서 창 pt×2 = 캡처 px.
 
-## 미해결 리스크
+## 미해결 리스크 → 후속 처리 (2026-09-18 사용자 승인 후)
 
-- 상업 사용권 UNVERIFIED(모든 생성 백엔드). 사람 플레이 n=0, 성능·Windows 미측정.
-- 문재화·오은정·표성찬 초상은 임포트됐으나 표시 슬롯이 없다(C1 인터뷰 화면은 익명 유지). 후속 회차에서 공개 상한에 맞춰 배치.
-- 안내 본문의 세로 스크롤은 마우스 휠·Tab 초점 이동에 의존한다. PageDown 바인딩은 없다.
-- `graphify update`가 이전 세션과 같이 실패하면 G8은 PARTIAL로 남는다(아래 memory_sync).
+- ~~문재화·오은정·표성찬 초상 표시 슬롯 없음~~ → **공개 규칙으로 해소.** `PublicCast()`: 한서린·한도연은 `t0-b1`(인수 각서)부터, 문재화는 C1 진입 후(`c1-b1` 목표가 이름을 적는다) 안내 인물 카드에 나타난다. 오은정(5장)·표성찬(3장)은 플레이 가능 슬라이스 밖에서 처음 이름이 나오므로 **표시 면이 없는 것이 캐논상 올바른 상태**다(초상은 임포트·승인 상태로 대기). 테스트 `CastFollowsDisclosureOnceC1IsEntered`, 네이티브 캡처 `docs/media/m25/guide-c1-cast.png`.
+- ~~PageDown 바인딩 없음~~ → **해소.** `ScrollPage` 액션(PageUp/PageDown, 키보드)이 `Interface.ScrollWork`로 본문을 한 쪽씩 넘긴다. 오프닝·연습장에서는 무시, 재렌더·저장·상태 변경 없음. 테스트 `PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns`. 설정의 키 재지정 목록에 `본문 한 쪽 위·아래` 행이 추가된다.
+- ~~zg 인덱스 실패~~ → **해소.** 사용자 승인 후 `zg index --rebuild`: 2,171/2,171 파일, 108,904 entities, queue 0.
+- ~~graphify 실패 우려~~ → 이번 세션은 성공(아래 영수증).
+- **남는 경계(작업이 아니라 측정 불가·환경 부재):** 상업 사용권 UNVERIFIED(모든 생성 백엔드) · 사람 플레이 n=0 · 성능 미측정 · **Windows 빌드 불가** — 이 머신의 Unity 6000.5.6f1에는 `MacStandaloneSupport`·`WebGLSupport`만 설치돼 있고 Windows 모듈이 없다(Unity Hub에서 모듈 추가가 선행돼야 한다).
 
 ## 다음 진입 결정
 
@@ -53,8 +54,8 @@ owner: game-production-director
 
 ## 실행 영수증 (memory_sync)
 
-- `freshness-check.sh`: 구조 검사 0 findings / 696 artifacts (exit 0). `--since 2026-09-18`은 631 findings — 이번 사이클이 손대지 않은 산출물의 `updated`가 사이클 시작 이전이라는 뜻이며 M25 범위의 결함이 아니다. **G8 = PARTIAL**(구조 PASS, 시점 신선도 전량 미갱신, mex skipped, zg 실패).
+- `freshness-check.sh`: 구조 검사 0 findings / 696 artifacts (exit 0). `--since 2026-09-18`은 631 findings — 이번 사이클이 손대지 않은 산출물의 `updated`가 사이클 시작 이전이라는 뜻이며 M25 범위의 결함이 아니다. **G8 = PARTIAL**(구조 PASS · graphify PASS · zg PASS(재생성) · mex skipped · 시점 신선도 전량 미갱신).
 - graphify: `graphify update .` **성공** — 45,902 nodes · 51,485 edges · 4,872 communities, `graphify-out/graph.json`·`GRAPH_REPORT.md` 갱신(이전 세션의 ModuleNotFoundError는 재현되지 않았다).
-- zg: `zg index`(증분) 실패 `[ZVEC_INTERNAL_ERROR] FtsRocksdbReducer: source postings is not BitPacked`, 이후 `zg status`가 `Failed to open zvec collection storage`를 돌려준다. 공유 데몬(pid 7334, 다른 하네스 소유)이 살아 있고 인덱스 재생성은 사용자 승인 사항이라 `--rebuild`/`--drop`을 실행하지 않았다. **후속: 사용자 승인 후 `zg index --rebuild`.**
+- zg: 증분 `zg index`는 `[ZVEC_INTERNAL_ERROR] FtsRocksdbReducer: source postings is not BitPacked`로 실패했고 `zg status`가 저장소를 열지 못했다. 사용자 승인 후 `zg index --rebuild` 실행 → **성공**(2,171/2,171 파일, 108,904 entities, queue 0). `--drop`은 쓰지 않았다.
 - mex-agent: skipped (PATH `mex`는 TeX). `.mex/ROUTER.md` 상태와 `.mex/events/m25-higgsfield-20260918.md`는 직접 갱신.
 - vault: Obsidian 미실행 → 직접 쓰기 폴백. `wiki/reports/2026-09-18-unknown-m25-higgsfield-resources.md`, `wiki/projects/unknown/decisions.md` D-019, `index.md` 한 줄, `log.md` 한 줄.

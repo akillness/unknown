@@ -1,7 +1,7 @@
 {
  "milestone": "M25",
  "rfc": "RFC-CX-M25-20260918",
- "verifiedAtUtc": "2026-09-18T10:45:06Z",
+ "verifiedAtUtc": "2026-09-18T14:51:09Z",
  "sourceBaseCommit": "61c7fe5",
  "scope": "Higgsfield-generated backgrounds/portraits/tool icons/motion clips behind M25Resources gate; guide overlay (F2); TypeScale readability tiers; macOS dev build; GitHub Release dev zip",
  "provider": {
@@ -231,11 +231,11 @@
     "note": "skip = T0BootSceneTests without --t0-save-dir (conditional)"
    },
    "playmode_final": {
-    "total": 134,
-    "passed": 133,
+    "total": 136,
+    "passed": 135,
     "failed": 0,
     "skipped": 1,
-    "note": "skip = T0BootSceneTests without --t0-save-dir (conditional); boot re-run isolated 1/1"
+    "note": "skip = T0BootSceneTests without --t0-save-dir (conditional); boot re-run isolated 1/1; new M25 tests 8/8"
    },
    "boot_isolated": {
     "total": 1,
@@ -244,17 +244,22 @@
     "skipped": 0
    },
    "new_tests": [
-    "Tests/PlayMode/M25GuidePlayModeTests.cs ×6"
+    "Tests/PlayMode/M25GuidePlayModeTests.cs ×8"
    ]
   },
   "build": {
    "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
-   "log": "T0_MAC_BUILD Succeeded bytes=438910587",
+   "log": "T0_MAC_BUILD Succeeded bytes=438913631",
    "app": "unity/Unknown/Builds/T0-mac/Unknown.app",
    "files": 316,
-   "bytes": 438910587,
-   "inventoryDigest": "aaa5361d47e369360f512d9b2dc99cde9849a3786f7a8a4df7e1e84d8eeaac96",
-   "inventory": "build-inventory.json"
+   "bytes": 438913631,
+   "inventoryDigest": "08e71660a89493d903c9671e99b01d2b66fbc90e81e0959654da181b3174d6e8",
+   "inventory": "build-inventory.json",
+   "previous": {
+    "bytes": 438910587,
+    "inventoryDigest": "aaa5361d47e369360f512d9b2dc99cde9849a3786f7a8a4df7e1e84d8eeaac96",
+    "release": "v0.25.0-dev"
+   }
   },
   "native": {
    "captures": "docs/media/m25/{start-screen,guide-overlay,guide-overlay-tall,opening-motion-frame,circuit-teaching-header}.png",
@@ -279,5 +284,12 @@
   },
   "contract": "Body > Label > Helper; only Label/Section/Display/Status bold; helper toned toward the surface (existing PlayMode contract tests kept green)"
  },
- "boundary": "commercial licence UNVERIFIED (Higgsfield ToS); assets/generated provenance stays runtimeEligible:false; no campaign/beat/hint data change; no save-schema change"
+ "boundary": "commercial licence UNVERIFIED (Higgsfield ToS); assets/generated provenance stays runtimeEligible:false; no campaign/beat/hint data change; no save-schema change",
+ "followUp_20260918": {
+  "zg": "zg index --rebuild succeeded after user approval: 2,171/2,171 files, 108,904 entities, queue 0 (earlier incremental index failed with ZVEC_INTERNAL_ERROR)",
+  "paging": "ScrollPage action (PageUp/PageDown, keyboard) → Interface.ScrollWork; guarded during opening/practice; test PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns",
+  "castDisclosure": "PublicCast(): seorin+doyeon always (t0-b1 handover brief), jaehwa once C1 entered/complete (c1-b1 objective); eunjeong/seongchan first named in chapters 5/3 outside the playable slice → intentionally no surface; test CastFollowsDisclosureOnceC1IsEntered",
+  "windows": "not built — Unity 6000.5.6f1 install has MacStandaloneSupport + WebGLSupport only (no WindowsStandaloneSupport module); recorded as boundary, not leftover work",
+  "humanPlaytest": "n=0 — cannot be produced by this session"
+ }
 }

@@ -85,9 +85,40 @@
           "processors": "",
           "interactions": "",
           "initialStateCheck": false
+        },
+        {
+          "name": "ScrollPage",
+          "type": "PassThrough",
+          "id": "7a1d3c9e-5b2f-4e6a-8c1d-3f9e2b7a4c25",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
         }
       ],
       "bindings": [
+        {
+          "name": "up",
+          "id": "b4e7a2c1-9d3f-4a5b-8e6c-1f2d3a4b5c26",
+          "path": "<Keyboard>/pageUp",
+          "interactions": "",
+          "processors": "",
+          "groups": "KeyboardMouse",
+          "action": "ScrollPage",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "down",
+          "id": "c5f8b3d2-0e4a-4b6c-9f7d-2a3e4b5c6d27",
+          "path": "<Keyboard>/pageDown",
+          "interactions": "",
+          "processors": "",
+          "groups": "KeyboardMouse",
+          "action": "ScrollPage",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
         {
           "name": "Navigate",
           "id": "9bacb485-697a-431d-81f0-30c554b5c777",

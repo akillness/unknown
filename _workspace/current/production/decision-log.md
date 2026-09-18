@@ -744,3 +744,13 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [DECISION · M5 갱신] 「No runtime movie dependency」는 다음으로 대체된다: 오프닝 클립은 선택 장식이며 `M25Resources` 게이트·모션 축소·batchmode·준비 실패 어느 조건에서도 정지 이미지 경로가 유지된다. 진행·저장·판정 의존 0.
 - [GIT · RELEASE] 명시 pathspec stage → commit → `main` 일반 push → tag `v0.25.0-dev` → GitHub Release(prerelease)에 `Unknown-T0-macOS-dev-v0.25.0.zip`(미서명·미공증 개발 빌드) 첨부. 상점 공개·Steam·실명/금융·force push 없음. 55개 미추적 로그/XML은 스테이징하지 않았다.
 - [BOUNDARY] 사람 플레이 n=0 · 성능/Windows/전체 캠페인 미측정 · 강한 P1/P2·Base·R8/R9 게이트 유지. 문재화·오은정·표성찬 초상은 생성·임포트됐으나 T0 공개 범위 밖이라 안내 화면에 표시하지 않는다.
+
+### RFC-CX-M25-20260918 · 후속 판정 (사용자: 미해결 부분 완료)
+
+- [DECISION · 인물 공개] 안내 인물 카드는 데이터가 아니라 **공개 상한 규칙**으로 결정한다(timeline §7): 한서린·한도연 = `t0-b1` 인수 각서(공식 문서), 문재화 = `c1-b1` 목표 문장(C1 진입/완료 시). 오은정·표성찬은 B20~B22(5장)·3장에서 처음 이름이 나오므로 T0~C1-b2 슬라이스에서는 **의도적으로 표시하지 않는다.** C1 인터뷰 준비 화면의 익명 규칙(M18)은 그대로다.
+- [DECISION · 입력] `ScrollPage`(PageUp/PageDown) 추가. 게임패드 바인딩은 두지 않는다(오른쪽 스틱은 도구 선택에 쓰인다). 오프닝·연습장에서는 무시. 재렌더 없음 = 초점·힌트 리듬 불변.
+- [DECISION · 메모리] `zg index --rebuild`를 사용자 승인 후 실행했고 성공했다. `--drop`은 쓰지 않았다.
+- [BOUNDARY · Windows] Unity 6000.5.6f1 설치에 `WindowsStandaloneSupport`가 없다. Windows 플레이어는 모듈 설치 후 별도 회차에서 빌드한다. 사람 플레이 n=0·성능 미측정은 이 세션이 만들 수 없는 값이다.
+- [VERIFY] EditMode 65/65 · PlayMode 136(135/0/1 조건부 skip) · 격리 boot 1/1 · M25 8/8. `T0_MAC_BUILD Succeeded bytes=438913631`, digest `08e71660a89493d903c9671e99b01d2b66fbc90e81e0959654da181b3174d6e8`. 네이티브: C1 fixture 저장에서 F2 → PageDown ×3 → 인물 3장(한서린·한도연·문재화)·구역 4장 캡처.
+- [GIT · RELEASE] 명시 pathspec commit → `main` 일반 push → tag `v0.25.1-dev` → prerelease zip 교체 없이 신규 Release. `v0.25.0-dev`는 보존(노트에 "v0.25.1-dev로 대체" 표기).
+

@@ -59,6 +59,7 @@ namespace Tide.App {
     Watch.ToolWheel+=()=>OpenOverlay("toolWheel");Watch.Adjust+=Adjust;Watch.Tool+=SelectTool;Watch.Overlay+=OpenOverlay;Watch.Query+=Query;Watch.Disconnect+=Disconnect;
     Interface.ReviewCompositionActive=()=>Watch.ImeCompositionActive;Interface.TextEntryChanged+=Watch.SetTextEntry;Watch.TextEntryExitRequested+=Interface.EndReviewEditing;
     Watch.Cancel+=Back;Watch.Undo+=Undo;Watch.Redo+=Redo;Watch.Preview+=Preview;
+    Watch.ScrollPage+=pages=>{if(OpeningActive||AlignmentPracticeActive)return;NoteInputActivity();Interface.ScrollWork(pages);};
     var fx=JObject.Parse(Resources.Load<TextAsset>("T0Vfx").text);feedback=gameObject.AddComponent<T0CommitFeedback>();feedback.Initialize((float)fx["duration_ms"]/1000f,((JArray)fx["phases"]).Where(x=>(string)x["id"]!="await_impact").Select(x=>(float)x["start_ms"]).DefaultIfEmpty((float)fx["duration_ms"]).Min()/1000f);
     tCommitReceipt+=receipt=>{if(!C1PatrolDefinition.Handles(receipt.CommandId)&&!C1SignatureDefinition.Handles(receipt.CommandId))feedback.Present(receipt.AttemptId,receipt.Success,(bool)settings["reducedMotion"]);};
     Interface.ScreenChanged+=()=>{Watch.NewContext();feedback.Clear();};

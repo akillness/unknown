@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Tide.Presentation;
 using Tide.UI;
@@ -48,8 +49,11 @@ namespace Tide.App {
             s.Sections.Add(tools);
             s.Sections.Add(new ScreenSection{Heading=L("guideControls"),Body=ControlFooter()+"\n"+L("guideControlsDetail")});
             s.Sections.Add(new ScreenSection{Heading=L("guideRules"),Body=L("guideRule1")+"\n"+L("guideRule2")+"\n"+L("guideRule3")+"\n"+L("guideRule4")});
+            // Disclosure follows the campaign (timeline §7): 한서린·한도연 are public from t0-b1 (handover brief),
+            // 문재화 from c1-b1 (patrol objective names him). 오은정·표성찬 are first named in chapters 5 and 3,
+            // which are not in the playable slice, so their imported portraits have no surface yet by design.
             var cast=new ScreenSection{Heading=L("guideCast"),Body=L("guideCastDetail"),FigureHeight=150};
-            foreach(var id in new[]{"seorin","doyeon"})cast.Figures.Add(new ScreenFigure{Texture=M25Portrait(id),Caption=L("cast."+id),Aspect=1});
+            foreach(var id in PublicCast())cast.Figures.Add(new ScreenFigure{Texture=M25Portrait(id),Caption=L("cast."+id),Aspect=1});
             if(cast.Figures.All(f=>f.Texture==null))cast.Figures.Clear();
             s.Sections.Add(cast);
             if(m25!=null&&M25Enabled&&m25.zoneIds.Length>0){
@@ -62,5 +66,11 @@ namespace Tide.App {
             if(!started)s.Actions.Add(A("guide-start",L("start"),()=>{overlay=null;BeginOpeningOrStart();}));
         }
         static string Step(int number,bool done,string text)=>(done?"✓ ":"○ ")+number+". "+text;
+        // Names the player has already met on an official surface. 재화 joins once C1 has been entered
+        // (his condition is written into the watch log there); nobody past the playable slice is listed.
+        IEnumerable<string> PublicCast(){
+            yield return "seorin";yield return "doyeon";
+            if(PatrolActive||PatrolComplete)yield return "jaehwa";
+        }
     }
 }
