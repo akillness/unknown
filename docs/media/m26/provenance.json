@@ -1,0 +1,135 @@
+{
+  "schema": "provenance/v1",
+  "milestone": "M26",
+  "rfc": "RFC-CX-M26-20260918",
+  "assets": [
+    {
+      "id": "m26-shell-inquiry",
+      "file": "shell-inquiry.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 885453,
+      "output_sha256": "8311446f469ccc356cde5330bdaf585b1fbe5250dd0cf12dec7d3befbfffc0d2",
+      "width": 1600,
+      "height": 900,
+      "generated_at": "2026-09-19T13:32:31.659710+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build 7e210806…, 316 files/444,948,527 B; final release build 444,954,066 B / a4864536… differs only by media-figure captions and the receipt R key route), OS window frame cropped, T0CompletedV1 fixture save, agent-controlled input; not a human playtest",
+      "build_inventory": "_workspace/current/systems/tech-verification/m26/build-inventory.json"
+    },
+    {
+      "id": "m26-inquiry-needed",
+      "file": "inquiry-needed.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1031122,
+      "output_sha256": "2ab0af913e8f775b4b550031c52a31090218116560074f7be7cf9932b83b0577",
+      "width": 1600,
+      "height": 900,
+      "generated_at": "2026-09-19T13:32:31.662371+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build 7e210806…, 316 files/444,948,527 B; final release build 444,954,066 B / a4864536… differs only by media-figure captions and the receipt R key route), OS window frame cropped, T0CompletedV1 fixture save, agent-controlled input; not a human playtest",
+      "build_inventory": "_workspace/current/systems/tech-verification/m26/build-inventory.json"
+    },
+    {
+      "id": "m26-hypothesis-board",
+      "file": "board.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1149464,
+      "output_sha256": "06c3cc700cc0943015b0772a4503fa369a6540a2e8bac42c73b7f24ce9af1f1c",
+      "width": 1600,
+      "height": 900,
+      "generated_at": "2026-09-19T13:32:31.664176+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build 7e210806…, 316 files/444,948,527 B; final release build 444,954,066 B / a4864536… differs only by media-figure captions and the receipt R key route), OS window frame cropped, T0CompletedV1 fixture save, agent-controlled input; not a human playtest",
+      "build_inventory": "_workspace/current/systems/tech-verification/m26/build-inventory.json"
+    },
+    {
+      "id": "m26-receipt",
+      "file": "receipt.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1125960,
+      "output_sha256": "2b98af795b937f2729dad55c5042a4683dd258f7d5c066a68ade9ffeb2df1d25",
+      "width": 1600,
+      "height": 900,
+      "generated_at": "2026-09-19T13:32:31.665968+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build 7e210806…, 316 files/444,948,527 B; final release build 444,954,066 B / a4864536… differs only by media-figure captions and the receipt R key route), OS window frame cropped, T0CompletedV1 fixture save, agent-controlled input; not a human playtest",
+      "build_inventory": "_workspace/current/systems/tech-verification/m26/build-inventory.json"
+    },
+    {
+      "id": "m26-receipt-paged",
+      "file": "receipt-paged.png",
+      "category": "native-capture",
+      "tool": "screencapture (macOS) + PIL crop",
+      "derived_from": [
+        "unity/Unknown/Builds/T0-mac/Unknown.app"
+      ],
+      "bytes": 1081687,
+      "output_sha256": "745962eadb42b1ef840542b26829a26c9c977d81a571c784cae7162666d7fc73",
+      "width": 1600,
+      "height": 900,
+      "generated_at": "2026-09-19T13:32:31.670190+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] actual macOS development-player window capture (Unknown.app build 7e210806…, 316 files/444,948,527 B; final release build 444,954,066 B / a4864536… differs only by media-figure captions and the receipt R key route), OS window frame cropped, T0CompletedV1 fixture save, agent-controlled input; not a human playtest",
+      "build_inventory": "_workspace/current/systems/tech-verification/m26/build-inventory.json"
+    },
+    {
+      "id": "m26-icons-and-glyphs",
+      "file": "icons-and-glyphs.jpg",
+      "category": "concept-sheet",
+      "tool": "python3 PIL 12 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m26/icons/",
+        "assets/generated/2d/m26/glyphs/"
+      ],
+      "bytes": 52977,
+      "output_sha256": "a1aec71b7f8eb156a396009835d116655dcf332d0ee0d3fba6b91edbdb48aa7d",
+      "generated_at": "2026-09-19T13:32:31.796409+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 media silhouettes and structural-state glyphs, concept sheet; NOT gameplay"
+    },
+    {
+      "id": "m26-question-card",
+      "file": "question-card.jpg",
+      "category": "concept-derivative",
+      "tool": "python3 PIL 12 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m26/surfaces/card-question.png"
+      ],
+      "bytes": 96986,
+      "output_sha256": "4d64a53a4d32b1ea7601c618086c9ea437ade9db584590478187e1663e875e1a",
+      "generated_at": "2026-09-19T13:32:31.861911+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 surface, README derivative; NOT gameplay"
+    },
+    {
+      "id": "m26-transfer-envelope",
+      "file": "transfer-envelope.jpg",
+      "category": "concept-derivative",
+      "tool": "python3 PIL 12 (derivative)",
+      "derived_from": [
+        "assets/generated/2d/m26/surfaces/prop-transfer-envelope.png"
+      ],
+      "bytes": 180447,
+      "output_sha256": "ad066d841e0abcea60ae080937f9f28831bb57ac317f78dba1024364dac79026",
+      "generated_at": "2026-09-19T13:32:31.941942+00:00",
+      "runtimeEligible": false,
+      "claim": "[OBSERVED] Higgsfield gpt_image_2 surface, README derivative; NOT gameplay"
+    }
+  ]
+}

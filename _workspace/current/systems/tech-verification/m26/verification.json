@@ -1,0 +1,231 @@
+{
+ "milestone": "M26",
+ "rfc": "RFC-CX-M26-20260918",
+ "verifiedAtUtc": "2026-09-19T13:57:13Z",
+ "sourceBaseCommit": "19db780",
+ "research": {
+  "tool": "aside exec --effort ultrabrowse",
+  "session": "szZUom6G8YnfSs9Q",
+  "report": "_workspace/current/planning/aside-similar-games-research-20260918.md",
+  "sources": 61,
+  "games": 10,
+  "adopted": [
+   "D2 inquiry strip",
+   "D3 structural state + player counterexample",
+   "D4 media silhouettes on citations",
+   "D10 T0 receipt"
+  ],
+  "deferred": [
+   "D1 micro-task reflow (needs human observation to justify replacing the F2 guide)",
+   "D5 new-record notice",
+   "D6 comparison rail",
+   "D8 question-relation view",
+   "D9 150% dual-document header"
+  ],
+  "notAdopted": [
+   "3-lock confirmation",
+   "wrong-answer penalties",
+   "timers",
+   "auto contradiction lines",
+   "auto evidence selection"
+  ]
+ },
+ "provider": {
+  "tool": "higgsfield CLI 1.1.25",
+  "balance_before": 2388.5,
+  "balance_after": 2351.0,
+  "observed_delta": 37.5,
+  "quoted_total": 37.5,
+  "quoted": {
+   "gpt_image_2 21:9 2k high ×1": 6.5,
+   "gpt_image_2 4:3 2k high ×1": 6.5,
+   "gpt_image_2 1:1 1k high ×7": 24.5
+  },
+  "note": "[OBSERVED] 2442.5→2388.5 (−54.0) happened between the M25 release and the first M26 job with no job of this session running; same outside-consumption pattern as M25."
+ },
+ "generation": {
+  "manifest": "_workspace/current/concept/m26-higgsfield-jobs.json",
+  "images": 9,
+  "videos": 0,
+  "rejected": [],
+  "textAbsenceInspection": "100% crops: envelope pockets (blank, embossed double-square seal), question card (blank), media icons (no lettering), glyphs (marks only)",
+  "provenance": {
+   "2d/m26/surfaces": [
+    {
+     "id": "card-question",
+     "model": "gpt_image_2",
+     "job_id": "6bbf4e7e-578e-443b-aeca-4907d197c399",
+     "sha256": "2f510ea1058e4e46…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "prop-transfer-envelope",
+     "model": "gpt_image_2",
+     "job_id": "03955dd6-079d-47c1-91c6-e6aca57d41e4",
+     "sha256": "eb9d266ff96d9bac…",
+     "runtimeEligible": false
+    }
+   ],
+   "2d/m26/icons": [
+    {
+     "id": "media-plate",
+     "model": "gpt_image_2",
+     "job_id": "10575621-5a48-4426-9dc5-06f1112bc879",
+     "sha256": "cc1a7ccee58c7e99…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "media-log",
+     "model": "gpt_image_2",
+     "job_id": "fccd60b2-2931-4025-835d-ef8facf68abb",
+     "sha256": "133418cc14573adb…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "media-ledger",
+     "model": "gpt_image_2",
+     "job_id": "d129854a-b568-4511-b589-f0aa1435483f",
+     "sha256": "086c63c40f9502ae…",
+     "runtimeEligible": false
+    }
+   ],
+   "2d/m26/glyphs": [
+    {
+     "id": "state-unreviewed",
+     "model": "gpt_image_2",
+     "job_id": "509f1979-dc3e-4578-a0af-a259287a53ed",
+     "sha256": "56ab83490d99b419…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "state-one-medium",
+     "model": "gpt_image_2",
+     "job_id": "9a48c6cf-b4bb-498b-84dc-e7f72927211e",
+     "sha256": "6d3d926aed4bbb79…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "state-two-media",
+     "model": "gpt_image_2",
+     "job_id": "2c27a57c-ede8-49f9-ac75-29e9f480fe9b",
+     "sha256": "08fc38d7a4d97322…",
+     "runtimeEligible": false
+    },
+    {
+     "id": "state-counterexample",
+     "model": "gpt_image_2",
+     "job_id": "8b36a701-22bc-4937-b9f0-0f8ae62459e5",
+     "sha256": "27732b0d30bc7612…",
+     "runtimeEligible": false
+    }
+   ]
+  }
+ },
+ "unity": {
+  "sim": "MarkCounterexample command → fact counter:<record>; additive to the save schema, never satisfies or blocks a requirement",
+  "import": "Tide.EditorTools.M26ResourceProjectBuilder.Import → 9 items (SHA-checked) into Resources/M25Resources.asset (m26Approved gate)",
+  "approval": "M26ResourceProjectBuilder.Approve → m26Approved:true (local development profile only)",
+  "tests": {
+   "source": "qa-loop run 20260919T135355Z (quiet tree, standard priority) - XML copied here; scripts/qa-loop.sh",
+   "editmode": {
+    "total": 65,
+    "passed": 65,
+    "failed": 0,
+    "skipped": 0
+   },
+   "playmode": {
+    "total": 141,
+    "passed": 140,
+    "failed": 0,
+    "skipped": 1
+   },
+   "boot_isolated": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+   },
+   "new_tests": [
+    "Tests/PlayMode/M26InquiryPlayModeTests.cs ×6 (RKeyOpensReceiptOnlyAfterT0Completion added by RFC-CX-M26-QA)"
+   ],
+   "note": "playmode skip = T0BootSceneTests without --t0-save-dir (conditional); isolated boot 1/1"
+  },
+  "build": {
+   "method": "Tide.EditorTools.T0ProjectBuilder.BuildMac",
+   "log": "T0_MAC_BUILD Succeeded bytes=444954066",
+   "files": 316,
+   "bytes": 444954066,
+   "inventoryDigest": "a4864536a1ad2c09c9ae4600706a2a347d4e9cae24f00f33fd11fae1cace9049",
+   "previous": {
+    "release": "v0.25.1-dev",
+    "bytes": 438913631,
+    "inventoryDigest": "08e71660a89493d903c9671e99b01d2b66fbc90e81e0959654da181b3174d6e8"
+   },
+   "qaLoopBuild": {
+    "run": "20260919T135355Z",
+    "bytes": 444954067,
+    "digest": "82cebecb4216…",
+    "note": "Builds/qa-loop/Unknown.app - separate target; differs from the release artifact by 1 byte and digest (build output is not byte-deterministic)"
+   }
+  },
+  "native": {
+   "captures": "docs/media/m26/{shell-inquiry,inquiry-needed,board,receipt,receipt-paged}.png",
+   "method": "open -n … --t0-save-dir <fixture T0CompletedV1>; osascript key codes (Enter, H, Esc, Tab, PageDown) + cliclick for one plate; screencapture -R; window frame cropped",
+   "captureBuild": "the captures were taken on the pre-caption-fix build (444,948,527 B / 7e210806…); the final build differs only by media-figure caption text",
+   "humanPlaytestCount": 0
+  }
+ },
+ "boundary": "commercial licence UNVERIFIED; assets/generated provenance runtimeEligible:false; human playtest n=0; performance unmeasured; Windows module absent; no campaign/beat/hint data change",
+ "qaLoop": {
+  "rfc": "RFC-CX-M26-QA-20260918",
+  "scripts": [
+   "scripts/qa-loop.sh",
+   "scripts/qa-loop-report.py",
+   "scripts/qa-loop-install.sh",
+   "scripts/launchd/io.github.akillness.unknown.qa-loop.plist"
+  ],
+  "launchd": {
+   "label": "io.github.akillness.unknown.qa-loop",
+   "startInterval": 10800,
+   "processType": "Standard",
+   "runAtLoad": false,
+   "installedVia": "launchctl bootstrap gui/<uid>",
+   "verified": "launchctl print → run interval = 10800 seconds; last exit code = 0"
+  },
+  "ledger": "_workspace/current/qa/loop/ledger.md",
+  "rows": [
+   {
+    "run": "20260919T133921Z",
+    "verdict": "SKIPPED (dry-run)"
+   },
+   {
+    "run": "20260919T133959Z",
+    "verdict": "RED",
+    "cause": "contaminated: Background/Nice 5 throttling (PlayMode 352 s, real-time hold test misfired), script edited mid-run, boot prefix; kept as record"
+   },
+   {
+    "run": "20260919T134955Z",
+    "verdict": "SKIPPED (dry-run)"
+   },
+   {
+    "run": "20260919T135101Z",
+    "verdict": "RED·MIXED",
+    "cause": "boot save dir pre-created by mktemp -d; tree edited (docs) during run"
+   },
+   {
+    "run": "20260919T135355Z",
+    "verdict": "GREEN",
+    "editmode": "65/65",
+    "playmode": "141/142 (1 conditional skip)",
+    "boot": "1/1",
+    "build": "OK 444,954,067 B"
+   }
+  ],
+  "improvementPlan": "_workspace/current/handoff/m26-results-and-improvement-plan.md",
+  "applied": [
+   "U0 loop",
+   "U1 receipt R key"
+  ],
+  "boundaries": "no git writes, no Assets edits, no gate promotion, no model calls; unattended fixing agent = separate approval"
+ }
+}

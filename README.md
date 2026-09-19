@@ -12,6 +12,34 @@
 
 3주 전에 폐국을 고지한 조수기록국의 이관 전 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.
 
+## 지금 플레이 가능한 것 · M26 (2026-09-18)
+
+| 사건 흐름 카드 + 현재 조사 질문 | 가설판 — 구조 상태와 반례 표시 | T0 당직 영수증 |
+|---|---|---|
+| ![M26 macOS 개발 빌드 — 작업대, 사건 흐름 카드 아래 한 줄 질문과 매체 아이콘](docs/media/m26/shell-inquiry.png) | ![M26 가설판 — 네 가지 구조 상태 범례, 고정 인용의 매체, 반례로 고정 토글](docs/media/m26/board.png) | ![M26 당직 영수증 — 확정한 것·보류한 것·다음 질문, 이관 봉투](docs/media/m26/receipt.png) |
+
+위 세 장은 **실제 macOS 개발 빌드(`Unknown.app`, 316파일)의 창 캡처**입니다(캡처 빌드 digest `7e210806…`; 최종 릴리스 빌드 444,954,066 B / digest `a4864536…`는 매체 도판 캡션과 영수증 `R` 키만 다릅니다). OS 창틀만 잘라냈고 합성하지 않았습니다(T0 완료 fixture 저장, 에이전트 키 입력). 전체 목록과 해시: [`docs/media/m26/provenance.meta.md`](docs/media/m26/provenance.meta.md).
+
+**M26에서 바뀐 것 — 유사 게임 딥리서치 → 디벨롭**
+
+- **조사.** Aside 브라우저 에이전트가 비교작 10종(Return of the Obra Dinn · The Case/Rise of the Golden Idol · The Roottrees are Dead · Chants of Sennaar · Lorelei and the Laser Eyes · Strange Horticulture · Her Story · Papers, Please · Outer Wilds; Pentiment · Immortality 보조)의 스토어·Most Helpful 리뷰·개발자 자료 **61건**을 읽고 첫 10~30분 교습법과 증거/가설 UI를 비교했습니다: [`planning/aside-similar-games-research-20260918.md`](_workspace/current/planning/aside-similar-games-research-20260918.md). 권고 10건 중 **채택 4 · 보류 5 · 비채택**(3개 잠금 확인·벌점·타이머·자동 모순선·자동 근거·자유서술 채점 — 캐논 불변식 위반). 조사는 사람 플레이 데이터를 대체하지 않습니다.
+- **D2 현재 조사 질문.** 사건 흐름 카드 아래 한 줄 질문(`지금 묻는 것 · …`)과 고정한 매체/아직 필요한 매체 아이콘. 비트마다 바뀌지만 기록명·시각·정답은 담지 않습니다(테스트가 검사). 판독 비교 화면에서는 카드에 이어 인라인으로 흐릅니다.
+- **D3 가설판 구조 상태.** 주장의 **구조 상태 4단계** — 미검토 / 한 매체 / 서로 다른 매체 2종 / 반례 고정 — 와 범례 글리프. 인용마다 「반례로 고정」 토글이 있고(새 sim 명령 `MarkCounterexample`, 되돌림 가능), 요구조건·완료·저장 스키마에 영향을 주지 않습니다. 「이 상태는 제출 형식의 준비도만 말합니다. 주장이 참이라는 판정이 아닙니다」를 항상 병기합니다.
+- **D4 매체 실루엣.** 증거함·가설판·영수증의 인용 목록에 염판(육각)·당직일지(둥근 책자)·조위대장(세로 등) 아이콘. 게이트가 꺼지면 테두리 칩으로 대체(색만으로 구분하지 않음).
+- **D10 T0 당직 영수증.** t0-b3 저장이 성공하면 작업대에 「T0 당직 영수증 보기」, 그리고 어느 화면에서든 **`R`**. 확정한 것(인용·결정) / 보류한 것(반례 표시) / 다음 질문(이름 없음) + 이관 봉투 도판. 재열람은 멱등이고 저장 바이트가 바뀌지 않습니다. 인수 완료 전의 `R`은 상태문 한 줄만 남깁니다.
+- **리소스.** Higgsfield CLI `gpt_image_2` 9장(질문 카드·이관 봉투·매체 실루엣 3·상태 글리프 4, 크레딧 37.5 = 견적) → `M26ResourceProjectBuilder.Import`(원본 SHA 대조) → **로컬 개발 프로필만** 승인(`m26Approved`). 원본 provenance `runtimeEligible:false`, 상업 사용권 UNVERIFIED.
+- **3시간 QA 루프.** launchd `io.github.akillness.unknown.qa-loop`가 3시간마다 `scripts/qa-loop.sh`를 실행합니다 — EditMode → PlayMode → 격리 boot → QA 빌드(`Builds/qa-loop`, 릴리스 산출물과 분리) → 전수 SHA → [`_workspace/current/qa/loop/ledger.md`](_workspace/current/qa/loop/ledger.md) 한 행 + 실패 테스트를 프레임·소유 레인으로 묶은 `latest-triage.md`. 루프는 **측정·분류만** 하며 커밋·Assets 편집·게이트 승격·모델 호출을 하지 않습니다. 첫 사이클은 스로틀링(`Background`/`Nice`)으로 실시간 홀드 테스트를 오판했고 그 행은 지우지 않았습니다 — 표준 우선순위·자기 복사본 실행·트리 변경(`MIXED`) 감지로 고쳤습니다. 개선 방향 정본: [`handoff/m26-results-and-improvement-plan.md`](_workspace/current/handoff/m26-results-and-improvement-plan.md).
+- **검증 [OBSERVED].** QA 루프 `20260919T135355Z`(조용한 트리, 표준 우선순위): EditMode 65/65 · PlayMode 142(141 통과 / 0 실패 / 1 조건부 skip) · 격리 boot 1/1 · 신규 M26 테스트 6/6. 릴리스 빌드 `T0_MAC_BUILD Succeeded bytes=444954066`, 316파일, digest `a4864536…`. 영수증: [`_workspace/current/systems/tech-verification/m26/verification.json`](_workspace/current/systems/tech-verification/m26/verification.json).
+- **배포.** GitHub Release **`v0.26.0-dev`**(prerelease)에 최종 macOS 개발 빌드 zip을 첨부했습니다. 서명·공증이 없는 개발 빌드이며 상점 공개가 아닙니다.
+
+### M26 리소스 미리보기 (컨셉 · 게임플레이 아님)
+
+| 매체 실루엣 + 구조 상태 글리프 (gpt_image_2) | 질문 카드 | 이관 봉투 |
+|---|---|---|
+| ![염판·당직일지·조위대장 실루엣과 미검토·한 매체·매체 2종·반례 글리프](docs/media/m26/icons-and-glyphs.jpg) | ![현재 조사 질문 카드 배경](docs/media/m26/question-card.jpg) | ![T0 영수증의 이관 봉투](docs/media/m26/transfer-envelope.jpg) |
+
+실제 실행 화면 추가 캡처: [`inquiry-needed.png`](docs/media/m26/inquiry-needed.png)(반례 해제 뒤 필요 매체 아이콘) · [`receipt-paged.png`](docs/media/m26/receipt-paged.png)(PageDown).
+
 ## 지금 플레이 가능한 것 · M25 (2026-09-18)
 
 [![오프닝 — 은포항 야경 (Higgsfield 프리비즈 클립, 게임 내 VideoPlayer 재생)](docs/media/m25/opening-harbor.gif)](docs/media/m25/mo-opening-harbor.mp4)
@@ -43,7 +71,7 @@
 
 ## 실행 · 빌드 · 테스트
 
-**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.25.1-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
+**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.26.0-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
 
 **소스에서 실행** — Unity Hub에 `unity/Unknown/`을 추가하고 **Unity 6000.5.6f1**로 엽니다. `Assets/_Project/Scenes/boot.unity`가 자동으로 열리며 Play로 허브·회로·판독·설정·저장 흐름을 실행합니다.
 
@@ -63,11 +91,18 @@ P="$PWD/unity/Unknown"
 "$UNITY_EDITOR" -batchmode -projectPath "$P" -runTests -testPlatform PlayMode -testFilter Tide.Tests.T0BootSceneTests \
   -testResults /tmp/boot.xml -logFile /tmp/boot.log --t0-save-dir /tmp/unknown-c1-m4-boot-$(date +%s)
 
-# M25 리소스 재임포트(원본 SHA 대조) · 승인은 감사 후 별도
+# M25/M26 리소스 재임포트(원본 SHA 대조) · 승인은 감사 후 별도
 "$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M25ResourceProjectBuilder.Import -logFile /tmp/m25-import.log
+"$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M26ResourceProjectBuilder.Import -logFile /tmp/m26-import.log
+
+# 3시간 QA 루프 (launchd, 사용자 도메인) — 설치 / 즉시 1회 / 상태 / 해제
+scripts/qa-loop-install.sh --now      # 한 사이클 ≈ 3분: 결과는 _workspace/current/qa/loop/ledger.md · latest-triage.md
+scripts/qa-loop-install.sh --status
+scripts/qa-loop-install.sh --uninstall
+scripts/qa-loop.sh                    # 스케줄 없이 한 사이클만 (같은 원장에 기록)
 ```
 
-**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · **PageUp/PageDown 본문** · 1~6 도구 · I 증거함 · H 가설판 · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
+**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · **PageUp/PageDown 본문** · 1~6 도구 · I 증거함 · H 가설판 · **R 당직 영수증(인수 완료 뒤)** · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
 
 ## 세 기둥
 
@@ -120,11 +155,14 @@ CLAUDE.md                        저장소 운영 규칙 (14역할 + 디렉터 �
 _workspace/current/              살아 있는 산출물 (레인별 폴더, frontmatter 필수)
 _workspace/archive/              대체된 이전 판본 (읽기 전용, supersedes 로 연결)
 _workspace/current/handoff/      구현 핸드오프 브리프 · 검증 계획 · 리소스 런북
-_workspace/current/systems/tech-verification/m25/   M25 영수증 (verification.json, import-audit, build-inventory, NUnit XML)
+_workspace/current/systems/tech-verification/m2{5,6}/   M25·M26 영수증 (verification.json, import-audit, build-inventory, NUnit XML)
+_workspace/current/qa/loop/      3시간 QA 루프 원장 (ledger.md · ledger.jsonl · latest.json · latest-triage.md)
+_workspace/current/planning/aside-similar-games-research-20260918.md   유사 게임 딥리서치 보고서 (61 출처)
 unity/Unknown/                   Unity 6000.5.6f1 프로젝트 (in-repo) — Assets/_Project/{App,UI,Presentation,Sim,Data,Save,Input,Editor,Tests}
-assets/generated/{2d,3d,video,previz,audio}/   생성 리소스 + provenance.json (승격 전 runtimeEligible:false); M25 = 2d/m25, video/m25
-docs/media/                      README 미디어 (파생본) + provenance; docs/media/m25 = 이번 캡처·프리비즈
-scripts/                         gen-higgsfield.py (M25) · gen-2d.sh (GTI) · gen-video-higgsfield.sh · make-previz-gif.sh
+assets/generated/{2d,3d,video,previz,audio}/   생성 리소스 + provenance.json (승격 전 runtimeEligible:false); M25 = 2d/m25, video/m25; M26 = 2d/m26
+docs/media/                      README 미디어 (파생본) + provenance; docs/media/m25, m26 = 캡처·프리비즈
+scripts/                         qa-loop.sh · qa-loop-report.py · qa-loop-install.sh · launchd/ (QA 루프)
+                                 gen-higgsfield.py (M25/M26) · gen-2d.sh (GTI) · gen-video-higgsfield.sh · make-previz-gif.sh
                                  refresh-2d-provenance.py · regen-cycle-ledger.py · qa_m7_texture_tiling.py · blender/
 ```
 
@@ -156,7 +194,7 @@ bash .claude/skills/game-ops-harness/scripts/freshness-check.sh
 
 ## 측정하지 않은 것
 
-사람 플레이테스트(n = 0), 재미·몰입·플레이타임(480분은 `[TARGET]`), 성능(런타임 tri/drawcall/텍스처 상주), Windows 빌드(이 개발 머신의 Unity에는 Windows 모듈이 설치돼 있지 않습니다), 전체 캠페인 완결성. 게이트 G1~G8은 PASS 0 / G8 PARTIAL(메모리 동기 영수증 일부 미검증)로 남아 있습니다. 이 저장소가 약속하는 것과 하지 않는 것: `_workspace/current/production/premium-preproduction-contract.md`.
+사람 플레이테스트(n = 0), 재미·몰입·플레이타임(480분은 `[TARGET]`), 성능(런타임 tri/drawcall/텍스처 상주), Windows 빌드(이 개발 머신의 Unity에는 Windows 모듈이 설치돼 있지 않습니다), 전체 캠페인 완결성, 빌드 바이트 결정성(같은 트리에서 재빌드해도 digest가 달라집니다 — QA 루프 원장이 누적 관찰). 3시간 QA 루프는 회귀를 **측정**할 뿐 사람 플레이·재미·이해를 대신하지 않습니다. 게이트 G1~G8은 PASS 0 / G8 PARTIAL(메모리 동기 영수증 일부 미검증)로 남아 있습니다. 이 저장소가 약속하는 것과 하지 않는 것: `_workspace/current/production/premium-preproduction-contract.md`.
 
 ---
 

@@ -46,6 +46,9 @@ namespace Tide.UI
         // backdrop for the navigation panel while it lists nothing (start screen).
         public VideoClip OpeningClip;
         public Texture2D NavigationBackdrop;
+        // M26 (D2): the current inquiry line under the case card, with pinned / still-needed media figures.
+        public string Inquiry; public Texture2D InquiryBacking;
+        public readonly List<ScreenFigure> InquiryPinned=new List<ScreenFigure>(),InquiryNeeded=new List<ScreenFigure>();
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
@@ -183,7 +186,11 @@ namespace Tide.UI
                 card.Find("CaseThread").GetComponent<Text>().raycastTarget=false;
                 float directionHeight=model.ShowDirection ? .055f*Mathf.Max(1,scale) : 0;
                 if(model.ShowDirection)RenderDirectionStrip(.865f-height,directionHeight,model.SectionSurface);
-                contentTop=.85f-height-directionHeight;
+                // M26 (D2): one inquiry line + media figures directly under the card; it takes its own band so the
+                // committed card geometry and the body paragraphs below are unchanged.
+                float inquiryHeight=string.IsNullOrEmpty(model.Inquiry)?0:.06f*Mathf.Max(1,scale);
+                if(inquiryHeight>0)RenderInquiryStrip(.865f-height-directionHeight,inquiryHeight,model);
+                contentTop=.85f-height-directionHeight-inquiryHeight;
             }
             var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f+feedbackHeight),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
             // M20: the diagnostic candidate is ONE full-bleed, non-tiled backing and therefore REPLACES the tiled
@@ -215,6 +222,13 @@ namespace Tide.UI
                 FlowText(noteParent,model.CaseThread,TypeScale.Helper,ink);
                 var note=noteParent.GetChild(noteParent.childCount-1).GetComponent<Text>();
                 note.name="CaseThread";note.raycastTarget=false;
+                // M26 (D2): in the reader layout the card flows inline, so the inquiry strip flows right after it.
+                if(!string.IsNullOrEmpty(model.Inquiry))
+                {
+                    var band=Rect("Inquiry band",noteParent,Vector2.zero,Vector2.one);
+                    band.gameObject.AddComponent<LayoutElement>().preferredHeight=TypeScale.Helper*scale*2.2f;
+                    RenderInquiryStrip(band,model);
+                }
             }
             FlowText(content,model.Body,TypeScale.Body,ink);
             // M25 guide sections: Section-tier bold heading, Body-tier paragraph, fixed-size figure row.

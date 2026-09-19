@@ -70,6 +70,8 @@ namespace Tide.EditorTools {
   }
   public static void BuildMac()=>BuildMacAt("Builds/T0-mac/Unknown.app");
   public static void BuildMacFramingFix()=>BuildMacAt("Builds/T0-mac-framing/Unknown.app");
+  // QA loop (scripts/qa-loop.sh) builds here so the scheduled run never overwrites the release artifact in Builds/T0-mac.
+  public static void BuildMacQa()=>BuildMacAt("Builds/qa-loop/Unknown.app");
   static void BuildMacAt(string output){var report=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Where(s=>s.enabled).Select(s=>s.path).ToArray(),output,BuildTarget.StandaloneOSX,BuildOptions.Development);Debug.Log("T0_MAC_BUILD "+report.summary.result+" bytes="+report.summary.totalSize);if(report.summary.result!=BuildResult.Succeeded)throw new InvalidOperationException("T0 player build failed");}
  }
 }

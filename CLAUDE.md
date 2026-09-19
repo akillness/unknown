@@ -180,3 +180,18 @@ PASS / FIX(≤2) / REDO. 열린 S1 결함, 측정 누락, 숫자 자리의 `[TAR
 - 적용은 `Editor/M25ResourceProjectBuilder.Import`(SHA 대조, `runtimeApproved:false`) → 승격 감사(decision-log) → `Approve()`(로컬 개발 프로필만) 순서다. 오프닝 클립은 선택 장식이며 모션 축소·batchmode·준비 실패 시 정지 이미지 경로가 유지된다(M5 「No runtime movie dependency」 조건부 갱신).
 - 안내: `guide` 오버레이(F2·툴바 「안내」·시작 화면)와 `▶ 안내 · 단계 · 남은 조건` 접두. `Data/Tables`·`campaign.json`·힌트 본문은 안내 강화의 대상이 아니다. 가독성: `Tide.UI.TypeScale` 상수 외의 인라인 글자 크기를 새로 만들지 않는다.
 - 배포 = 기본 macOS 개발 빌드 zip을 GitHub Release(prerelease, 미서명)에 첨부 + `main` 일반 push. 사용자 최신 요청이 명시 승인했다. 상점 공개·Steam·실명/금융·force push는 여전히 하지 않는다.
+
+## M26 유사게임 딥리서치 → 디벨롭 → Higgsfield 리소스 → 빌드·배포 (2026-09-18 사용자 지시 · RFC-CX-M26-20260918)
+
+- 사용자 지시 "유사게임 딥리서치후 디벨롭해서 빌드후 배포 ㄱ, 리소스는 힉스필드이용해서 업데이트 ㄱ"(`aside-browser` 스킬). 조사는 Aside `aside exec --effort ultrabrowse`로 수행하며 저장소 편집은 보고서 1건(`planning/aside-similar-games-research-20260918.md`)뿐이다. 조사는 사람 플레이 데이터를 대체하지 않는다.
+- 채택·보류·비채택은 `production/decision-log.md` RFC-CX-M26 블록이 기준이다. 캐논 불변식 유지: 가설판 상태는 **구조 상태**(제출 형식 준비도)이지 참·거짓 판정이 아니다. 반례 표시(`MarkCounterexample`)는 플레이어 소유 주석이며 요구조건을 충족·차단하지 않는다. 현재 조사 질문·영수증 텍스트는 기록명·시각·정답을 담지 않는다(`M26InquiryPlayModeTests`가 검사).
+- Higgsfield 생성물은 `scripts/gen-higgsfield.py` + `concept/m26-higgsfield-jobs.json` → `Editor/M26ResourceProjectBuilder.Import`(SHA 대조) → `Approve()`(로컬 개발 프로필 `m26Approved`)로만 런타임에 닿는다. 원본 provenance는 `runtimeEligible:false`로 남는다. 상업 사용권 UNVERIFIED.
+- 배포는 §M25와 동일: 명시 pathspec commit → `main` 일반 push → 태그·GitHub prerelease zip. 상점 공개·Steam·실명/금융·force push 없음. 사람 플레이 n=0·성능·Windows 미측정은 그대로 보고한다.
+
+## QA 루프 (2026-09-18 사용자 지시 · RFC-CX-M26-QA-20260918)
+
+- 3시간마다 launchd `io.github.akillness.unknown.qa-loop`가 `scripts/qa-loop.sh`를 실행한다: EditMode → PlayMode → 격리 boot → QA 빌드(`Builds/qa-loop`) → digest → `_workspace/current/qa/loop/ledger.md` 행 + `latest-triage.md`. 세션은 **시작 시 최신 행을 읽고**, RED면 triage의 프레임에서 시작한다. 한 세션을 넘겨 살아남은 실패만 `qa/defect-register.md`에 `QL-F<n>`로 등록한다.
+- 루프는 측정·분류만 한다. Git 쓰기·Assets 편집·게이트 승격·모델 호출을 하지 않으며, 릴리스 산출물(`Builds/T0-mac`)을 덮어쓰지 않는다. 루프에 무인 수정 에이전트를 붙이는 것은 별도 사용자 승인 항목이다.
+- 사이클이 실행 중일 때(`scripts/qa-loop-install.sh --status`가 `running`) Unity batchmode를 함께 띄우지 않는다(프로젝트 잠금 충돌). 루프 스크립트는 자기 복사본으로 실행되므로 편집은 다음 사이클부터 반영된다. 실행 중 트리를 편집하면 그 행은 `MIXED`로 표기되며 근거로 쓰지 않는다.
+- 개선 방향의 정본은 `_workspace/current/handoff/m26-results-and-improvement-plan.md`다. 사람 관찰이 없는 동안 개선 큐는 자체 QA 관찰과 조사 보고서로만 채운다.
+

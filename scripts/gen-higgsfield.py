@@ -35,9 +35,9 @@ def credits():
 
 def out_paths(job):
     if job["kind"] == "video":
-        d = os.path.join(ROOT, "assets/generated/video/m25")
+        d = os.path.join(ROOT, "assets/generated/video", job.get("root","m25"))
         return d, os.path.join(d, job["id"] + ".mp4")
-    d = os.path.join(ROOT, "assets/generated/2d/m25", job["set"])
+    d = os.path.join(ROOT, "assets/generated/2d", job.get("root","m25"), job["set"])
     return d, os.path.join(d, job["id"] + ".png")
 
 def build_cmd(job):

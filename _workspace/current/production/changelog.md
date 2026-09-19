@@ -179,3 +179,20 @@ owner: game-production-director
 - 검증: EditMode 65/65 · PlayMode 136(135/0/1 조건부 skip) · 격리 boot 1/1 · M25 테스트 8/8. 빌드 316파일/438,913,631B/digest `08e71660…`, 네이티브 캡처 `docs/media/m25/guide-c1-cast.png`(C1 fixture, F2 + PageDown ×3).
 - 배포: `main` 일반 push + GitHub Release `v0.25.1-dev`(prerelease, 미서명 개발 빌드 zip). `v0.25.0-dev`는 첫 전달본으로 보존하고 노트에 대체 표기.
 
+## 2026-09-18 · M26 유사게임 딥리서치 → 안내 질문·구조 상태·매체 실루엣·T0 영수증 (RFC-CX-M26-20260918)
+
+- **조사**: Aside가 비교작 10종·출처 61건으로 첫 10~30분 교습법과 증거/가설 UI를 비교(`planning/aside-similar-games-research-20260918.md`). 권고 10건 중 4건 채택, 5건 보류, 비채택 목록 명시.
+- **D2 현재 조사 질문**: 사건 흐름 카드 아래 한 줄 질문 + 고정한 매체/아직 필요한 매체 아이콘. 비트별 질문(t0-b1/b2/b3/완료, C1 순찰/서명)은 기록명·시각·정답 없음. 판독 비교 레이아웃에서도 인라인으로 유지.
+- **D3 가설판**: 주장의 구조 상태 4단계(미검토/한 매체/서로 다른 매체 2종/반례 고정) + 범례 글리프 + 인용별 「반례로 고정」 토글(새 sim 명령 `MarkCounterexample`, Undo/Redo 가능, 요구조건 무영향). 「제출 형식 준비도일 뿐 참이라는 판정이 아니다」를 항상 병기.
+- **D4 매체 실루엣**: 증거함·가설판·영수증의 인용 목록에 염판(육각)·당직일지(둥근 책자)·조위대장(세로 등) 아이콘.
+- **D10 T0 영수증**: t0-b3 저장 성공 뒤 작업대에 「T0 당직 영수증 보기」. 확정한 것(인용·결정)/보류한 것(반례 표시)/다음 질문(이름 없음) + 이관 봉투 도판. 재열람 멱등, 저장 불변.
+- **리소스**: Higgsfield `gpt_image_2` 9장 → `M26ResourceProjectBuilder.Import`(SHA) → `M25Resources.asset` `m26Approved`(로컬 개발 프로필). 크레딧 관측 37.5.
+- **검증**: EditMode 65/65 · PlayMode 141(140/0/1) · boot 1/1 · M26 5/5. 빌드 316파일/444,948,554B/digest `0e4296a0…`(1차) → 같은 날 QA-루프 후속 뒤 최종 444,954,066B/`a4864536…`. 네이티브 캡처 5장.
+- **배포**: `main` push + GitHub Release `v0.26.0-dev`(prerelease, 미서명 개발 빌드 zip). 사람 플레이 n=0·성능·Windows 미측정.
+
+## 2026-09-18 · 3시간 QA 루프 · 개선 방향 갱신 · 영수증 R 키 (RFC-CX-M26-QA-20260918)
+
+- **QA 루프**: `scripts/qa-loop.sh` + `scripts/qa-loop-report.py`, launchd `io.github.akillness.unknown.qa-loop`(10800초). EditMode → PlayMode → 격리 boot → QA 빌드(`Builds/qa-loop`, 릴리스 산출물과 분리) → 전수 SHA digest → `qa/loop/ledger.md` 행 + `latest-triage.md`(실패 테스트 → 프레임 → 소유 레인). 잠금·에디터 열림·트리 변경(MIXED) 감지. 설치/상태/해제 `scripts/qa-loop-install.sh`.
+- **개선 방향**: `handoff/m26-results-and-improvement-plan.md` — 권고별 달성 범위, 개선 큐 U0~U7, 다음 세션 절차.
+- **U1 영수증 R 키**: 인수 완료 뒤 어느 화면에서든 `R`로 당직 영수증, 완료 전에는 상태문 한 줄. 조작·안내 문구 갱신. 테스트 +1(M26 6/6).
+- **QA 루프가 잡은 것**: 스로틀링 하의 실시간 홀드 테스트 오판(표준 우선순위로 수정), boot 격리 접두사, 실행 중 스크립트 편집 오염 — 모두 원장 첫 행에 남김.

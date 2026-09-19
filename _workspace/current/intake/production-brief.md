@@ -75,3 +75,15 @@ source_signal: '사용자 2차 요청 2026-09-09 (초안 개발 + 5회 리뷰 + 
 - [TARGET] 신규 이미지 ≤ 30장, 영상 ≤ 3클립, Higgsfield 크레딧 ≤ 300. 실제 소모는 전후 `higgsfield account status` 차액으로 decision-log에 기록한다.
 - [OWNERSHIP] Main(디렉터 역할)이 생성·임포트·승격 감사(로컬 개발 프로필 한정, 상업 사용권은 UNVERIFIED 유지)·Unity 검증·빌드·GitHub Release(개발 빌드 zip)·명시 경로 stage/commit/일반 push·README 전면 갱신을 소유한다. 사용자 최신 요청이 빌드·배포·push를 명시 승인한다.
 - [BOUNDARY] force push·타인 변경 되돌림·Steam/실명/금융·상점 공개는 하지 않는다. 사람 플레이테스트 n=0, 성능·Windows·전체 캠페인·상업 게이트는 유지한다. 55개 미추적 로그/XML은 스테이징하지 않는다.
+
+## M26 — 유사게임 딥리서치 → 디벨롭 → Higgsfield 리소스 갱신 → 빌드·배포 (2026-09-18)
+
+[OBSERVED] 사용자: "유사게임 딥리서치후 디벨롭해서 빌드후 배포 ㄱ, 리소스는 힉스필드이용해서 업데이트 ㄱ" (`aside-browser` 스킬 호출).
+
+- cycle_type: content-update (P1 진입). 범위는 여전히 T0(3비트)→C1-b2 슬라이스이며 후반 장·NPC 증언·3제출은 Base gate 뒤로 유지한다(R8/R9/R10 gate-blocked).
+- [DECISION · 조사] Aside(`aside exec --effort ultrabrowse`, 세션 `szZUom6G8YnfSs9Q`)가 비교작 8종 이상(Obra Dinn·Golden Idol·Roottrees·Sennaar·Lorelei·Strange Horticulture·Her Story/Immortality·Pentiment·Paradise Killer·Shadows of Doubt·Unheard·Papers Please·Outer Wilds 로그)의 **첫 10~30분 교습법과 증거/가설 UI**를 스토어·리뷰·개발자 강연에서 읽고 `planning/aside-similar-games-research-20260918.md`에 보고한다. 2026-09-13 조사(R1~R10)와 M23 달성 범위를 먼저 읽어 **중복 권고를 배제**한다. 저장소 편집은 그 보고서 1건뿐, Git·구매·신규 로그인 없음.
+- [DECISION · 디벨롭] 보고서 S2 권고 중 캐논 제약(비전투·고정 시점·도구 6·무료 힌트·2단계 확정·매체 2종·공개 상한) 안에서 T0~C1 슬라이스에 바로 구현 가능한 상위 항목만 고른다. 정답 대행·자동 모순선·후반 콘텐츠·사람 패널 전제 항목은 채택하지 않는다. 채택 항목은 decision-log RFC-CX-M26-20260918에 적고 각각 PlayMode/EditMode 테스트로 고정한다.
+- [DECISION · 리소스] 보고서 S3 목록을 Higgsfield CLI(`gpt_image_2`/`nano_banana_flash`/`seedance_2_0`)로 생성한다. RFC-CX-M25 절차 그대로: `scripts/gen-higgsfield.py` + `concept/m26-higgsfield-jobs.json` → `assets/generated/{2d,video}/m26/` → SHA 대조 임포터 → 승격 감사 → 로컬 개발 프로필 승인. 크레딧 영수증은 견적 합 + 전후 잔액.
+- [TARGET] 신규 이미지 ≤ 20장, 영상 ≤ 2클립, 크레딧 ≤ 200.
+- [OWNERSHIP] Main(디렉터·planner·systems 역할)이 조사 감독·채택 판정·구현·테스트·빌드·GitHub Release(prerelease)·명시 경로 commit/일반 push를 소유한다. 사용자 요청이 빌드·배포·push를 명시 승인한다.
+- [BOUNDARY] force push·타인 변경 되돌림·Steam/실명/금융·상점 공개 없음. 사람 플레이 n=0·성능·Windows(모듈 부재) 미측정 유지. 조사 결과가 사람 데이터를 대체한다고 적지 않는다.

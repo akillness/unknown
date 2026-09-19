@@ -43,6 +43,9 @@ namespace Tide.Sim
                         data.Records.TryGetValue(command.Value??"",out var evidence) && evidence.VisibleAt.Any(b=>IsAvailable(state,b)),
                         "Unknown or unavailable area evidence");
                 case "LoadRecord": return Check(visible,"Unknown or unavailable record");
+                // M26 (RFC-CX-M26-20260918): a player-owned annotation only. It never satisfies or blocks a
+                // requirement; it exists so the hypothesis board can show "반례 고정" without judging anything.
+                case "MarkCounterexample": return Check(visible && state.Has("citation:"+id),"Counterexample requires a pinned citation");
                 case "Read":
                     return Check(state.LoadedRecordId!=null,"Reader has no loaded record");
                 case "ReadOriginal":
@@ -129,6 +132,9 @@ namespace Tide.Sim
                     if(!facts.Add("area:"+c.SubjectId)) facts.Remove("area:"+c.SubjectId);
                     break;
                 case "AttachAreaEvidence": facts.Add("evidence:"+c.SubjectId+":"+c.Value); break;
+                case "MarkCounterexample":
+                    if(!facts.Add("counter:"+c.SubjectId)) facts.Remove("counter:"+c.SubjectId);
+                    break;
                 case "LoadRecord": values["loaded"]=c.SubjectId; break;
                 case "Read":
                     facts.Add("copy:"+state.LoadedRecordId);

@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-14
+updated: 2026-09-18
 cycle: 20260909-preproduction-c3
 status: current
 supersedes: null
@@ -648,3 +648,5 @@ R7d-1 로 재생성한 시점의 대장은 **이 동기화 이전 상태**다(C5
 | C7-F66 | S3 | systems / QA | M23-Q11: 가로2.5% 여백보다 넓은 끝 피크가 차트 밖으로 잘림 | native99 및 기본 모드 mesh 왼쪽4.48단위 초과 RED.4% 여백 후 양 모드 경계 회귀와 native106에서 전체 피크 확인 | **closed** | game-systems-designer |
 
 영수증 루트는 `systems/tech-verification/m23/`다. 초기5건+후속6건 closed, Q6의 off-reader 반례도 추가 교정했다. 고유 후속 회귀10건·프로젝트 Unity187통과이며 같은 결함/반복 실행을 중복 계상하지 않는다. 사람 이해/전체 캠페인/Windows/강한 P1/P2 입증은 별개 미충족이다.
+
+- **QA 루프 (2026-09-18, RFC-CX-M26-QA-20260918)**: 3시간 간격 자동 측정이 `qa/loop/ledger.md`에 행을 쌓는다. RED 행의 실패 테스트는 `qa/loop/latest-triage.md`가 프레임·소유 레인으로 분류하며, **한 세션을 넘겨 살아남은 실패만** 이 등록부에 `QL-F<n>`로 등록한다. 첫 사이클(`20260919T133959Z`)의 실패 2건은 루프 자체 원인(스로틀링·boot 접두사)으로 같은 세션에 해소했고 등록하지 않는다. 관찰 후보: `C1PlayModeTests.HoldModeRequiresFullGestureForChapterConfirmation`의 실시간 의존(U7).

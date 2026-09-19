@@ -1,0 +1,78 @@
+{
+ "runId": "20260919T135355Z",
+ "at": "2026-09-19T13:56:26Z",
+ "git": {
+  "head": "19db780bba14",
+  "dirtyPaths": 93,
+  "treeChangedDuringRun": false
+ },
+ "skip": null,
+ "steps": {
+  "editmode": {
+   "exit": 0,
+   "seconds": 12
+  },
+  "playmode": {
+   "exit": 0,
+   "seconds": 112
+  },
+  "boot": {
+   "exit": 0,
+   "seconds": 17
+  },
+  "build": {
+   "exit": 0,
+   "seconds": 10
+  }
+ },
+ "editmode": {
+  "present": true,
+  "failures": [],
+  "total": 65,
+  "passed": 65,
+  "failed": 0,
+  "skipped": 0
+ },
+ "playmode": {
+  "present": true,
+  "failures": [
+   {
+    "name": "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen",
+    "result": "Skipped",
+    "message": "",
+    "frame": ""
+   }
+  ],
+  "total": 142,
+  "passed": 141,
+  "failed": 0,
+  "skipped": 1
+ },
+ "boot": {
+  "present": true,
+  "failures": [],
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "skipped": 0
+ },
+ "build": {
+  "ok": true,
+  "bytes": 444954067,
+  "files": 316,
+  "digest": "82cebecb42162122a2258964112c89b3526e290c7d22b5bad7b919e16eec4b66"
+ },
+ "failingTests": [],
+ "verdict": "GREEN",
+ "delta": {
+  "previousRun": "20260919T135101Z",
+  "newlyFailing": [],
+  "newlyPassing": [
+   "Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen"
+  ],
+  "totalTests": 0,
+  "buildBytes": 0,
+  "digestChanged": true,
+  "sameHead": true
+ }
+}

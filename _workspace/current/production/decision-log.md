@@ -754,3 +754,25 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [VERIFY] EditMode 65/65 · PlayMode 136(135/0/1 조건부 skip) · 격리 boot 1/1 · M25 8/8. `T0_MAC_BUILD Succeeded bytes=438913631`, digest `08e71660a89493d903c9671e99b01d2b66fbc90e81e0959654da181b3174d6e8`. 네이티브: C1 fixture 저장에서 F2 → PageDown ×3 → 인물 3장(한서린·한도연·문재화)·구역 4장 캡처.
 - [GIT · RELEASE] 명시 pathspec commit → `main` 일반 push → tag `v0.25.1-dev` → prerelease zip 교체 없이 신규 Release. `v0.25.0-dev`는 보존(노트에 "v0.25.1-dev로 대체" 표기).
 
+## RFC-CX-M26-20260918 · 유사게임 딥리서치 → 디벨롭 → Higgsfield 리소스 → 빌드·배포
+
+- [REQUEST] 사용자 2026-09-18: "유사게임 딥리서치후 디벨롭해서 빌드후 배포 ㄱ, 리소스는 힉스필드이용해서 업데이트 ㄱ" (`aside-browser` 스킬).
+- [RESEARCH] Aside `aside exec --effort ultrabrowse` 세션 `szZUom6G8YnfSs9Q`가 비교작 10종(Obra Dinn·Golden Idol/Rise·Roottrees·Sennaar·Lorelei·Strange Horticulture·Her Story·Papers Please·Outer Wilds; Pentiment·Immortality 보조)의 스토어·Most Helpful 리뷰·개발자 자료 61건을 읽고 `planning/aside-similar-games-research-20260918.md`(360행)를 작성했다. 저장소 편집은 그 1건뿐, Git·구매·신규 로그인 없음. 핵심 결론: 현행 슬라이스는 비교·계보·저장 안전성이 강하고, 비교작이 앞서는 것은 「작은 현장 과제로 규칙 익히기」「현재 질문 중심 연결」「자료 충분성과 가설 참·거짓의 분리 표시」다.
+- [DECISION · 채택] D2 현재 조사 질문 스트립(질문만, 정답·기록명·시각 없음, 고정/필요 매체 아이콘) · D3 가설판 구조 상태 4단계(미검토/한 매체/매체 2종/반례 고정 — 참·거짓 아님, 반례는 플레이어 표시 `MarkCounterexample`만) · D4 인용 목록의 매체 실루엣(염판 육각·당직일지 둥근 책자·조위대장 세로 등) · D10 T0 당직 영수증(확정/보류/다음 질문, 재열람 멱등, 저장 불변). 모두 T0~C1-b2 안에서 데이터 무변경.
+- [DECISION · 보류] D1 현장 마이크로 과제 재배치(F2 대체는 사람 관찰 없이는 근거 부족) · D5 새 기록 알림 · D6 대조 레일 · D8 질문–기록 관계 보기 · D9 150% 이중 문서 헤더. 다음 회차 후보로 보고서에 남긴다.
+- [DECISION · 비채택] 3개 잠금 확인, 오답 벌점, 타이머, 자동 모순선, 자동 근거 선택, 자유서술 채점 — 보고서 §7과 캐논 불변식.
+- [SIM] `MarkCounterexample <record>` = 고정된 인용에만 유효한 토글 사실 `counter:<record>`. 요구조건을 충족·차단하지 않고 세이브 스키마에 가산적이다(기존 세이브 무영향). 프리뷰 diff에 문장 추가.
+- [PROVIDER] Higgsfield CLI 1.1.25 `gpt_image_2` 9장(질문 카드·이관 봉투·매체 3·글리프 4). 견적 37.5 = 관측 차액 37.5(2388.5→2351.0). M25 릴리스와 첫 M26 작업 사이 2442.5→2388.5(−54.0)는 이 세션 밖 소모 관측. 반려 0.
+- [AUDIT] 해시 9/9 대조 통과(`m26/import-audit.json`) · 텍스트 부재 100% 크롭(봉투 주머니·질문 카드·아이콘·글리프) · 명명·캐논 위반 0 · 예산 +6.0 MB(438.9→444.9 MB) · 리그/세이브 변경 0 · Unity 플립은 `M26ResourceProjectBuilder.Approve()`(로컬 개발 프로필), 원본 provenance `runtimeEligible:false` 유지. 상업 사용권 UNVERIFIED.
+- [VERIFY] EditMode 65/65 · PlayMode 141(140/0/1 조건부 skip) · 격리 boot 1/1 · M26 테스트 5/5(상태 4단계·반례 Undo/Redo·비공개 0·영수증 멱등·게이트 on/off 도판). `T0_MAC_BUILD Succeeded bytes=444948554`, digest `0e4296a0…`(1차 전달 빌드; 최종 릴리스 빌드는 RFC-CX-M26-QA 뒤 444,954,066B/`a4864536…`). 네이티브 캡처 5장(`docs/media/m26/`).
+- [GIT · RELEASE] 명시 pathspec commit → `main` 일반 push → tag `v0.26.0-dev` → GitHub prerelease zip. 상점 공개·Steam·실명/금융·force push 없음.
+- [BOUNDARY] 사람 플레이 n=0 · 성능 미측정 · Windows 모듈 부재 · 조사는 사람 데이터를 대체하지 않는다(재미·이해 개선 주장 0).
+
+## RFC-CX-M26-QA-20260918 · 3시간 QA 루프 + 개선 방향 갱신 + U1 적용
+
+- [REQUEST] 사용자 2026-09-18(M26 전달 도중): "3시간 간격으로 QA 루프 설정하고, 개선 방향 업데이트해서 업데이트하고 빌드까지 하자."
+- [DECISION] QA 루프는 **결정적 측정·분류**까지다: `scripts/qa-loop.sh`(EditMode → PlayMode → 격리 boot → `BuildMacQa` → 전수 SHA) + `scripts/qa-loop-report.py`(`qa/loop/ledger.md`·`ledger.jsonl`·`latest.json`·`latest-triage.md`). launchd `io.github.akillness.unknown.qa-loop` `StartInterval 10800`, `RunAtLoad false`, 표준 우선순위. Git 쓰기·Assets 편집·게이트 승격·모델 호출 없음. 무인 에이전트 수정을 루프에 붙이는 것은 비용·무인 쓰기 위험으로 **별도 승인 항목**으로 남긴다(`QA_LOOP_POST_CMD` 확장점만 둠, 기본 미설정).
+- [OBSERVED] 첫 사이클(`20260919T133959Z`, Background/Nice 5)은 오염된 행이다: (1) 실행 중 스크립트를 편집해 bash가 바뀐 파일을 이어 읽었고(PlayMode 단계 중복·`tree: command not found`), (2) 세션이 U1을 편집 중이라 트리가 바뀌었으며, (3) 스로틀링으로 PlayMode가 352초(평소 ~95초)로 늘어나 실시간 홀드 테스트 `C1PlayModeTests.HoldModeRequiresFullGestureForChapterConfirmation`(0.1초 홀드가 완료로 판정)이 실패했고, (4) boot 격리 실행이 필수 접두사 `/tmp/unknown-c1-m4-boot`를 쓰지 않아 실패했다. 네 원인 모두 수정: 자기 복사본으로 `exec`(편집 무영향) · 시작/종료 트리 지문 비교로 `MIXED` 표기 · `ProcessType Standard`(Nice 제거) · boot 접두사. 오염 행은 원장에 그대로 남긴다(삭제하지 않음).
+- [DECISION · U1] 영수증 키보드 경로 `R`(`WatchBindings.json` Overlay 바인딩, `WatchInput` 역할 `receipt`, `OpenOverlay` 게이트: t0-b3 저장 완료 전에는 `receiptNotYet` 상태문만, 이름 없음). `controls`·`guideControlsDetail` 문구 갱신. 테스트 `RKeyOpensReceiptOnlyAfterT0Completion`(판독기에서 R로 열림·Esc로 닫힘·저장 바이트 불변). 근거: 네이티브 캡처에서 영수증 플레이트 도달에 Tab 탐색 7회.
+- [DECISION · 개선 큐] `handoff/m26-results-and-improvement-plan.md`가 정본. U0·U1 적용, U2~U4 사람 관찰 전 보류, U5 빌드 비결정성은 원장 누적 관찰 후, U6 Windows 모듈은 사용자 결정. 홀드 테스트의 실시간 의존은 U7 후보(가상 시계)로 등록.
+- [VERIFY] 아래 「QA 루프 정상 행」과 최종 릴리스 빌드 영수증은 `systems/tech-verification/m26/verification.json`·`qa/loop/ledger.md`.

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>io.github.akillness.unknown.qa-loop</string>
+
+  <!-- One deterministic QA cycle: EditMode -> PlayMode -> isolated boot -> macOS QA build -> ledger/triage.
+       Installed/removed by scripts/qa-loop-install.sh; the script itself never commits, pushes, or edits Assets/. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jangyoung/orca/unknown/scripts/qa-loop.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/jangyoung/orca/unknown</string>
+
+  <!-- Every 3 hours (10800 s) after load. Missed intervals during sleep coalesce into one run on wake. -->
+  <key>StartInterval</key>
+  <integer>10800</integer>
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>LANG</key>
+    <string>en_US.UTF-8</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/jangyoung/orca/unknown/unity/Unknown/Builds/qa-loop/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jangyoung/orca/unknown/unity/Unknown/Builds/qa-loop/launchd.log</string>
+
+  <!-- Standard priority on purpose: the first Background/Nice=5 cycle stretched PlayMode from ~95 s to 352 s and made a
+       real-time hold-gesture test misfire. QA measurements must run like a terminal run, not a throttled one. -->
+  <key>ProcessType</key>
+  <string>Standard</string>
+</dict>
+</plist>

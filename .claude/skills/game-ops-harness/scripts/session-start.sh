@@ -20,6 +20,7 @@ hr "manifest (open rows)"; [ -f "$CUR/production/task-manifest.md" ] && grep -E 
 hr "latest retrospective"; ls -t "$CUR"/retrospectives/*.md 2>/dev/null | head -1 | xargs -I{} sh -c 'echo {}; head -40 "{}"' || echo "(none)"
 hr "latest brief"; [ -f "$CUR/intake/production-brief.md" ] && head -25 "$CUR/intake/production-brief.md" || echo "(none)"
 hr "open RFCs"; [ -f "$CUR/production/decision-log.md" ] && grep -E '^## RFC-' "$CUR/production/decision-log.md" | tail -10 || echo "(none)"
+hr "qa loop (3 h · scripts/qa-loop.sh)"; if [ -f "$CUR/qa/loop/ledger.md" ]; then grep -E '^\| [0-9]{8}T' "$CUR/qa/loop/ledger.md" | tail -3; launchctl print "gui/$(id -u)/io.github.akillness.unknown.qa-loop" 2>/dev/null | grep -E 'state =|run interval' | head -2 | sed 's/^[[:space:]]*/  launchd: /' || echo "  launchd: not loaded (scripts/qa-loop-install.sh)"; else echo "(no ledger yet — scripts/qa-loop-install.sh --now)"; fi
 hr "freshness (G8 file contract only)"; bash "$SCRIPT_DIR/freshness-check.sh" --root "$ROOT" 2>&1 | tail -18
 hr "mex"
 if ! resolve_mex_agent; then

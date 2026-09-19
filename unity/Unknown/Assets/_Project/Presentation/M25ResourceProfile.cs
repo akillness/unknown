@@ -17,9 +17,20 @@ namespace Tide.Presentation {
         public Texture2D[] toolIcons=new Texture2D[0];
         public string[] portraitIds=new string[0];
         public Texture2D[] portraits=new Texture2D[0];
+        // M26 (RFC-CX-M26-20260918): question-card backing, T0 receipt envelope, record-media silhouettes
+        // (plate/log/ledger) and the four structural-state glyphs. Same gate, same import path, same audit.
+        public bool m26Approved;
+        public Texture2D questionCard;
+        public Texture2D receiptEnvelope;
+        public string[] mediaIds=new string[0];
+        public Texture2D[] mediaIcons=new Texture2D[0];
+        public string[] stateIds=new string[0];
+        public Texture2D[] stateGlyphs=new Texture2D[0];
         public Texture2D ToolIcon(string toolId)=>Lookup(toolIds,toolIcons,toolId);
         public Texture2D Portrait(string id)=>Lookup(portraitIds,portraits,id);
         public Texture2D ZoneBackdrop(string zoneId)=>Lookup(zoneIds,zoneBackdrops,zoneId);
+        public Texture2D MediaIcon(string sourceType)=>Lookup(mediaIds,mediaIcons,sourceType);
+        public Texture2D StateGlyph(string stateId)=>Lookup(stateIds,stateGlyphs,stateId);
         static Texture2D Lookup(string[] keys,Texture2D[] values,string key){
             if(keys==null||values==null||key==null)return null;
             for(int i=0;i<keys.Length&&i<values.Length;i++)if(keys[i]==key)return values[i];

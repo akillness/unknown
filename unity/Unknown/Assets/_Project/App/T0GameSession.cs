@@ -154,7 +154,10 @@ namespace Tide.App {
   public void OpenTool(string id){if(OpeningActive||AlignmentPracticeActive)return;if(!started)return;NoteActivity();if(PatrolActive){document=null;overlay=null;tool=null;Render();return;}CloseTool();document=null;overlay=null;tool=id;if(id=="circuit"){var v=SubmitImmediate(new PuzzleCommand("OpenTool","circuit"),false);if(!v.IsValid){tool=null;status=L("finishIntake");}}Render();}
   void SelectTool(int index){if(AlignmentPracticeActive)return;if(index>0)toolIndex=index-1;else toolIndex=(toolIndex+(index<0?5:1))%6;var ids=new[]{"circuit","reader","alignment","routing","corrosion","seal"};OpenTool(ids[Mathf.Clamp(toolIndex,0,5)]);}
   // hint-system.md §2: revealedLevel[beatId] survives close/reopen — no reset on overlay entry.
-  public void OpenOverlay(string id){if(AlignmentPracticeActive)return;if(OpeningActive&&id!="settings")return;overlay=id;Render();}
+  public void OpenOverlay(string id){if(AlignmentPracticeActive)return;if(OpeningActive&&id!="settings")return;
+  // M26 U1: the receipt has a keyboard route (R) but stays gated on the closing save of t0-b3; before that only a status line answers.
+  if(id==ReceiptOverlay&&!Simulation.IsComplete(Journal.State,"t0-b3")){status=L("receiptNotYet");Render();return;}
+  overlay=id;Render();}
   void Query(){if(OpeningActive||AlignmentPracticeActive)return;if(tool=="circuit")OpenOverlay("coverageQuery");}
   void Disconnect(){if(OpeningActive||AlignmentPracticeActive)return;if(tool=="reader"&&Journal.State.LoadedRecordId!=null)RequestConfirm(new PuzzleCommand("CiteToBoard",Journal.State.LoadedRecordId));}
   public void Back(){if(AlignmentPracticeActive){ResetAlignmentPractice();overlay=null;Render();return;}if(HintOfferVisible){DismissOfferedHint();return;}if(OpeningActive){if(overlay!=null){overlay=null;Render();}else FinishOpening();return;}if(SavePending){CancelPending();QueueSave();}if(overlay=="reviewNotes"){CloseReviewNotes();return;}if(overlay!=null){proposed=null;DismissOverlay();return;}if(document!=null){document=null;Render();return;}if(tool=="circuit"&&Simulation.CircuitMode(Journal.State)=="Overlaying"){SubmitImmediate(new PuzzleCommand("Cancel"));return;}CloseTool();Render();}
@@ -231,6 +234,7 @@ namespace Tide.App {
    // M18: the interview preparation panel suppresses the case card like reviewNotes does, so the
    // patrol summary's source condition and actor display name cannot leak onto an anonymous surface.
    s.CaseThread=OpeningActive||AlignmentPracticeActive||overlay=="reviewNotes"||overlay==InterviewPrepOverlay?null:CaseThreadText();
+   if(s.CaseThread!=null&&started)FillInquiry(s);
    if(DirectionEnabled&&SignatureActive&&!OpeningActive&&!AlignmentPracticeActive){s.ShowDirection=true;s.SectionSurface=directionProfile.sectionSurface;foreach(var action in s.Actions.Concat(s.Toolbar))action.DirectionCategory=SignatureDirectionCategory(action.Id);}
    ApplyM7UiSkin(s);ApplyM20WorkSurface(s);Interface.Render(s);RenderHintOffer();ApplyStagePresentation();RefreshM22Embodiment();ApplySceneViewport();
   }
@@ -296,8 +300,11 @@ namespace Tide.App {
      var id=fact.Substring(9);
      lines.Add(string.Format(text("previewFactCitation"),name(id),candidate.ValueSnapshot.TryGetValue("citationStart:"+id,out var start)?start:"?",candidate.ValueSnapshot.TryGetValue("citationEnd:"+id,out var end)?end:"?"));
     }else if(fact.StartsWith("copy:",StringComparison.Ordinal))lines.Add(string.Format(text("previewFactCopy"),name(fact.Substring(5))));
+    else if(fact.StartsWith("counter:",StringComparison.Ordinal))lines.Add(string.Format(text("previewFactCounter"),name(fact.Substring(8))));
     else if(!fact.StartsWith("kept:",StringComparison.Ordinal))lines.Add(string.Format(text("previewFactGeneric"),fact));
    }
+   foreach(var fact in current.FactSnapshot.Where(f=>f.StartsWith("counter:",StringComparison.Ordinal)&&!candidate.Has(f)))
+    lines.Add(string.Format(text("previewFactCounterCleared"),name(fact.Substring(8))));
    foreach(var pair in candidate.ReadCounts.OrderBy(p=>p.Key,StringComparer.Ordinal)){
     int before=current.ReadCount(pair.Key);
     if(pair.Value!=before)lines.Add(string.Format(text("previewReadCount"),name(pair.Key),before,pair.Value));
@@ -305,7 +312,7 @@ namespace Tide.App {
    return lines;
   }
   void ShellScreen(GameScreen s){
-   if(Simulation.IsComplete(Journal.State,"t0-b3"))s.Actions.Add(A("continue-c1","C1 · 두 개의 필적으로 이동",ContinueToPatrol));
+   if(Simulation.IsComplete(Journal.State,"t0-b3")){s.Actions.Add(A("t0-receipt",L("receiptOpen"),()=>OpenOverlay(ReceiptOverlay)));s.Actions.Add(A("continue-c1","C1 · 두 개의 필적으로 이동",ContinueToPatrol));}
    s.Body=L("room")+"\n"+L("intakeProgress")+" "+(Simulation.IsComplete(Journal.State,"t0-b1")?L("done"):L("inProgress"));
    if(node=="hub-view-desk"){
     s.Actions.Add(A("handover",Name("rec-handover-brief"),()=>{document="rec-handover-brief";Render();}));
@@ -369,6 +376,7 @@ namespace Tide.App {
    s.Title=L(overlay);s.Body="";
    if(overlay=="toolWheel"){AddToolWheelFigures(s);foreach(var id in new[]{"circuit","reader","alignment","routing","corrosion","seal"}){var selected=id;s.Actions.Add(A("wheel-"+id,L("action."+id),()=>OpenTool(selected)));}}
    else if(overlay==GuideOverlay){GuideScreen(s);}
+   else if(overlay==ReceiptOverlay){ReceiptScreen(s);}
    else if(overlay=="coverageQuery"){s.Body=L("outsideCoverage");}
    else if(overlay=="phasePicker"){var id=Journal.State.LoadedRecordId;var phases=Definition.Records[id].Phases;s.Body=L("window");s.Actions.Add(A("phase-prev",L("previousPage"),()=>{phasePage=Math.Max(0,phasePage-1);Render();}));s.Actions.Add(A("phase-next",L("nextPage"),()=>{phasePage=Math.Min((phases.Count-1)/30,phasePage+1);Render();}));foreach(var phase in phases.Skip(phasePage*30).Take(30)){var selected=phase;var sample=Record(id)["samples"].First(x=>(string)x["phase"]==selected);var reading=(string)sample["state"]=="missing"?L("missing"):((string)sample["state"]=="flat"?L("flat")+" · ":"")+(sample["pressure"]??sample["tideHeight"]).ToString();s.Actions.Add(A("phase-"+selected,selected+" · "+reading,()=>{var first=Journal.State.Get("windowStart:"+id)??phases[0];var last=Journal.State.Get("windowEnd:"+id)??phases[phases.Count-1];var v=SubmitImmediate(new PuzzleCommand("SetWindow",value:phaseStart?selected:first,otherValue:phaseStart?last:selected),false);if(v.IsValid)overlay=null;Render();}));}}
    else if(overlay=="settings"){if(DirectionEnabled&&!OpeningActive)s.Actions.Add(A("intro-replay","도입 안내 다시 보기",ReplayOpening,!SavePending));if(!OpeningActive)s.Actions.Add(A("saved-slots",L("savedSlots"),()=>OpenOverlay("recovery")));
@@ -387,6 +395,8 @@ namespace Tide.App {
    }else if(overlay=="evidence"||overlay=="hypothesis"){
     s.Body=L("evidenceIntro");if(PatrolActive){foreach(var observation in patrolPacket["observations"].Where(o=>Journal.State.Has("c1:observed:"+(string)o["id"])))s.Body+="\n"+(string)observation["description"]+" · "+ReviewMediaName((string)observation["sourceType"]);if(PatrolComplete)s.Body+="\n"+PatrolConditionText();}foreach(var line in KeptClueLines())s.Body+="\n✓ "+line;
     foreach(var id in Definition.Records.Keys.Where(id=>Journal.State.Has("citation:"+id)))s.Body+="\n"+Name(id)+" · "+Journal.State.Get("citationStart:"+id)+" → "+Journal.State.Get("citationEnd:"+id);
+    // M26: the evidence box gains the media strip (D4); the hypothesis board gains the structural state (D3).
+    if(overlay=="hypothesis")HypothesisBoard(s);else AddEvidenceMediaStrip(s);
    }else if(overlay=="hints"){
     var rows=(SignatureActive?new JArray(signaturePacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1SignatureDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):PatrolActive?new JArray(patrolPacket["narrative"]["hints"].Select((h,i)=>new JObject{["beatId"]=C1PatrolDefinition.BeatId,["level"]=i+1,["sourceTextKo"]=(string)h})):hints["rows"]).Where(h=>(string)h["beatId"]==CurrentBeat).OrderBy(h=>(int)h["level"]).ToArray();s.Body=L("hintFree");foreach(var row in rows.Where(h=>(int)h["level"]<=HintLevel))s.Body+="\n"+(string)row["sourceTextKo"];
     // The spoiler gate is data-driven: the next row's warnsBeforeReveal decides; synthesized C1 rows
