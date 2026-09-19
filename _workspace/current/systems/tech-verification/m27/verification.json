@@ -1,0 +1,124 @@
+{
+ "rfc": "RFC-CX-M27-20260918",
+ "cycle": "20260918-balance-patch-m27",
+ "verifiedAtUtc": "2026-09-19T16:45:22Z",
+ "instruction": "클루 명확 · 확장 가능한 시나리오 · 스테이지/실마리 중간 지점 명료 · 진행 보장 + 가이드/튜토리얼 · 플레이 관점 밸런스 · 리소스 UI",
+ "surveys": [
+  "ClueDataMap",
+  "RuntimeGuidanceMap",
+  "BalanceUiMap (read-only, session-local)"
+ ],
+ "data": {
+  "campaign.json": {
+   "t0-b1.objective": "이 방이 넘겨받은 것을 확인하고, 오늘 밤 목록에 올릴지 비워 둘지 결정한다.",
+   "t0-b2.objective": "회로 지도에서 오늘 밤 판독이 닿는 범위를 정하고, 회선이 닿지 않는 \"기록 밖\" 구획을 직접 접어 표시한다.",
+   "t0-b3.hints[1]": "+ 집게는 첫 결손 눈금과 기록이 다시 시작되는 첫 눈금에 문다."
+  },
+  "validator": {
+   "main": "50/50 PASS",
+   "t0": "6/6 PASS (T0-06 added: label·caption≤8·step unique · no displayNameKo/recordId/H±/card-banned)"
+  },
+  "emit": "emit-tables.mjs predicates map: label/caption/step per requires[] (MEDIA_WORD for C-07 pins); gapEndpointsFixed rule = half-open [first missing, first recovered)",
+  "tables": "systems/data/t0 → Data/Tables (byte-identical) → T0ProjectBuilder.Prepare (catalog receipt re-bound)"
+ },
+ "runtime": {
+  "new": [
+   "App/M27ChecklistSession.cs (CaseChecklist/StageLabel/StageShort/ProgressLine/CaseThreadNext/CaseThreadText/ResumeStatus/FillChecklist)",
+   "UI/M27ChecklistInterface.cs (chip band, fixed + inline)",
+   "Editor/M27ResourceProjectBuilder.cs"
+  ],
+  "changed": [
+   "T0GameSession.cs (old case-thread ladder removed; subtitle = stage; hint-offer setting; CurrentBeat public)",
+   "M25ResourceSession.cs (guide: stage title, task section, C1 from packets, T0 steps by definition order; teaching header = stage; dead M25ZoneBackdrop removed)",
+   "C1GameSession.cs (card literals → L(); PatrolNextText)",
+   "T0Interface.cs (card .185→.15 + checklist band .045; hint-offer frame)",
+   "M26InquiryInterface.cs (uv centre-crop)",
+   "M25ResourceProfile.cs (checklistIds/Glyphs, m27Approved)",
+   "T0Strings.json (+26 keys; teachingHeader {0} = stage)"
+  ],
+  "beatLiteralsAddedInApp": 0
+ },
+ "provider": {
+  "tool": "Higgsfield CLI 1.1.25",
+  "model": "gpt_image_2",
+  "images": 3,
+  "quoted": 10.5,
+  "balance_before": 2249.0,
+  "balance_after": 2238.5,
+  "observed_delta": 10.5,
+  "sequential": true,
+  "note": "2351.0 (M26 end) → 2249.0 at M27 start = -102.0 outside this session (observed, not ours)",
+  "assets": [
+   {
+    "id": "check-done",
+    "sha256": "132dd7f9d4efce23",
+    "size": "1024x1024"
+   },
+   {
+    "id": "check-current",
+    "sha256": "84c7d705a51483b7",
+    "size": "1024x1024"
+   },
+   {
+    "id": "check-open",
+    "sha256": "a13455c13a2bfc07",
+    "size": "1024x1024"
+   }
+  ]
+ },
+ "unity": {
+  "import": "M27ResourceProjectBuilder.Import 3 items SHA-checked; Approve() → m27Approved=true (local development profile only; licence UNVERIFIED)",
+  "tests": {
+   "source": "qa-loop run 20260919T164126Z (quiet tree)",
+   "editmode": {
+    "total": "65",
+    "passed": "65",
+    "failed": "0",
+    "skipped": "0"
+   },
+   "playmode": {
+    "total": "148",
+    "passed": "147",
+    "failed": "0",
+    "skipped": "1"
+   },
+   "boot_isolated": {
+    "total": "1",
+    "passed": "1",
+    "failed": "0",
+    "skipped": "0"
+   },
+   "new_tests": [
+    "Tests/PlayMode/M27ChecklistPlayModeTests.cs ×6"
+   ],
+   "adapted": [
+    "T0CaseThreadTests.AssertCard (citation counter only on the citation beat; stage line; no beat ids)",
+    "M25GuidePlayModeTests ×3 (stage title instead of beat id; C1 1/2)"
+   ],
+   "note": "playmode skip = T0BootSceneTests without --t0-save-dir; isolated boot 1/1"
+  },
+  "qaLoopCaughtDuringCycle": {
+   "run": "20260919T163626Z",
+   "failures": [
+    "C1SignaturePlayModeTests.NonfocusedSourceOpensOnOne(Fast)MouseClick ×2 — the new band shrank the work surface and moved the clicked button",
+    "ReaderComparisonPlayModeTests.DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText — chip text drawn at alpha .55 inside the reading surface"
+   ],
+   "fix": "card .185→.15 with band .045 (work surface height unchanged); chip text full ink, glyph carries the dim state",
+   "rerun": "20260919T164126Z GREEN"
+  },
+  "build": {
+   "log": "T0_MAC_BUILD Succeeded bytes=445068395",
+   "files": 316,
+   "bytes": 445068395,
+   "inventoryDigest": "db8cdb7b05d87e55cd850697c5d5bf30669f9f03344d3e4f2d155a3b365cca45"
+  }
+ },
+ "boundaries": {
+  "humanPlaytest": 0,
+  "balanceBands": "unchanged (180/180 s, readBudget 3, T0 25 min) — n=0",
+  "performance": "unmeasured",
+  "windows": "module absent",
+  "licence": "UNVERIFIED",
+  "claims": "no fun/comprehension improvement claimed"
+ }
+}

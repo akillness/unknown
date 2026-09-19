@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "scope": "t0",
   "generatedFrom": "planning/campaign.json",
-  "sourceSha256": "baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe",
+  "sourceSha256": "a86400a7a87abe04ad30fbeed9edf1e91a300c6712eeb64eec64c1b9918f62cb",
   "derivation": "subset+predicate",
   "stage": {
     "id": "T0",
@@ -50,7 +50,7 @@
       "tools": [],
       "toolTeaching": [],
       "proofRequired": false,
-      "objective": "오늘 밤, 무엇이 남을지는 아직 정해지지 않았다.",
+      "objective": "이 방이 넘겨받은 것을 확인하고, 오늘 밤 목록에 올릴지 비워 둘지 결정한다.",
       "clues": [
         {
           "id": "t0-b1-c1",
@@ -90,6 +90,9 @@
               "hb-l2",
               "hb-l3"
             ],
+            "step": 1,
+            "label": "인수받은 첫 문서의 세 항을 연다",
+            "caption": "문서 1",
             "_src": "「인수 각서 3항 … 열람」 · records §3.1 clause 3행"
           },
           {
@@ -100,12 +103,18 @@
               "tl-r2",
               "tl-r3"
             ],
+            "step": 2,
+            "label": "두 번째 문서의 세 줄을 연다",
+            "caption": "문서 2",
             "_src": "「이관 목록 3줄 … 열람」 · records §4.1 no 1~3"
           },
           {
             "type": "slotLoaded",
             "slotId": "workbench-standing-slot",
             "recordId": "plate-zero",
+            "step": 3,
+            "label": "판 하나를 상시 슬롯에 적재한다",
+            "caption": "슬롯",
             "_src": "「판 #0 이 작업대 상시 슬롯에 적재」 · worldview/glossary.md 「상시 슬롯」"
           },
           {
@@ -118,6 +127,9 @@
             ],
             "atLeastOnce": true,
             "reversible": true,
+            "step": 4,
+            "label": "두 번째 문서의 네 번째 줄을 기입 또는 공란으로 정한다",
+            "caption": "네 번째 줄",
             "_src": "「처리 여부(기입 또는 공란)가 한 번 기록」 · records §4.1 tl-r4 공란"
           }
         ],
@@ -160,7 +172,7 @@
         }
       ],
       "proofRequired": false,
-      "objective": "회로 지도에 오늘 밤 판독 가능한 범위와 \"기록 밖\" 구획을 직접 접어 표시하고 법1을 손으로 익힌다.",
+      "objective": "회로 지도에서 오늘 밤 판독이 닿는 범위를 정하고, 회선이 닿지 않는 \"기록 밖\" 구획을 직접 접어 표시한다.",
       "clues": [
         {
           "id": "t0-b2-c1",
@@ -201,11 +213,17 @@
               "hub-uncovered-3"
             ],
             "count": 3,
+            "step": 1,
+            "label": "회선이 닿지 않는 옥외 구획 3곳을 접어 표시한다",
+            "caption": "구획 표시",
             "_src": "「회로 지도에 음영 3구획이 모두 지정」 · zones.uncoveredAreaIds"
           },
           {
             "type": "eachAreaHasEvidence",
             "mediumsPerArea": 1,
+            "step": 2,
+            "label": "접은 구획마다 근거 매체를 하나씩 붙인다",
+            "caption": "근거 붙이기",
             "_src": "「각 구획에 근거 매체가 하나씩 붙는다」"
           }
         ],
@@ -272,7 +290,7 @@
       "completion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 증거함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다.",
       "hints": [
         "지금 정할 것은 결손 구간의 시작과 끝이다. 당직실 판독기 앞에서, 하나의 자료만으로 닫으려 하지 말라.",
-        "조위대장의 마지막 수치 시각과 각인이 무너진 시각을 같은 자에 놓고 읽어라.",
+        "조위대장의 마지막 수치 시각과 각인이 무너진 시각을 같은 자에 놓고 읽어라. 집게는 첫 결손 눈금과 기록이 다시 시작되는 첫 눈금에 문다.",
         "판독기에 원본을 걸고 붕괴 시작점과 대장에서 마지막으로 확인되는 시각 두 곳에 집게를 물려라."
       ],
       "recovery": "원본은 첫 판독에서 자동 복제되며 이후 어떤 조작으로도 재판독 횟수가 줄지 않는다.",
@@ -290,6 +308,9 @@
             "originId": "plate-standard-hub",
             "rootOriginId": "plate-standard-hub",
             "recordId": "rec-plate-standard-hub",
+            "step": 2,
+            "label": "판 기록을 가설판에 인용한다",
+            "caption": "판 인용",
             "_src": "planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)"
           },
           {
@@ -299,18 +320,27 @@
             "originId": "tide-ledger-bureau",
             "rootOriginId": "tide-ledger-bureau",
             "recordId": "rec-tide-ledger-bureau",
+            "step": 3,
+            "label": "대장 기록을 가설판에 인용한다",
+            "caption": "대장 인용",
             "_src": "planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)"
           },
           {
             "type": "independentPair",
             "rule": "sourceType 상이 AND rootOriginId 상이",
             "validatorCheck": "C-07",
+            "step": 4,
+            "label": "서로 다른 매체의 두 기록이 한 쌍을 이룬다",
+            "caption": "매체 2종",
             "_src": "interaction-rules.md §3 · RFC-S5(예외 없음)"
           },
           {
             "type": "autoCopyCreated",
             "count": 1,
             "recordId": "rec-plate-standard-hub",
+            "step": 1,
+            "label": "판을 처음 판독해 검증 사본을 남긴다",
+            "caption": "첫 판독",
             "_src": "「첫 판독의 검증 사본 1점이 증거함에 생성」 · plate-readout.md P-R1"
           },
           {
@@ -318,7 +348,10 @@
             "recordId": "rec-plate-standard-hub",
             "startPhase": "H-1:00",
             "endPhase": "H+3:00",
-            "_src": "t0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING"
+            "step": 5,
+            "label": "결손 구간을 고정한다 — 시작은 첫 결손 눈금, 끝은 기록이 돌아온 첫 눈금",
+            "caption": "결손 구간",
+            "_src": "t0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING · RFC-CX-M27 끝점 규칙"
           }
         ],
         "_srcCompletion": "인용 고정 술어 — reader로 표준 염판(plate · plate-standard-hub)과 기록국 조위대장(ledger · tide-ledger-bureau)을 각각 가설판에 인용으로 고정해 인용 2건이 남고, 그 두 인용이 결손 구간의 시작과 끝을 서로 다른 매체로 확정하며, 첫 판독의 검증 사본 1점이 증거함에 생성된다. 남는 질문 \"정전이라면 왜 대장 수치는 살아 있는가\"가 사건판에 열린다. T0에서 확정 명령이 발행되는 유일한 지점이며 proofRequired: true 는 이 인용 고정 2건으로 충족된다."

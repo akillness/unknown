@@ -853,15 +853,17 @@ function buildBeats(stage, records, zones) {
   const recordByOrigin = Object.fromEntries(records.rows.map((r) => [r.originId, r]));
   const uncovered = zones.rows[0].uncoveredAreaIds;
 
+  // M27 실마리 명료화: 요구조건마다 플레이어용 label/caption/step. 라벨은 기록 표시명·시각 값을 담지 않는다(T0-06).
+  const MEDIA_WORD = { plate: '판', ledger: '대장', log: '일지' };
   const predicates = {
     't0-b1': (beat) => ({
       kind: 'viewing',
       emitsCommitCommand: false,
       requires: [
-        { type: 'recordLinesViewed', recordId: 'rec-handover-brief', lineIds: ['hb-l1', 'hb-l2', 'hb-l3'], _src: '「인수 각서 3항 … 열람」 · records §3.1 clause 3행' },
-        { type: 'recordRowsViewed', recordId: 'rec-transfer-list', rowIds: ['tl-r1', 'tl-r2', 'tl-r3'], _src: '「이관 목록 3줄 … 열람」 · records §4.1 no 1~3' },
-        { type: 'slotLoaded', slotId: 'workbench-standing-slot', recordId: 'plate-zero', _src: '「판 #0 이 작업대 상시 슬롯에 적재」 · worldview/glossary.md 「상시 슬롯」' },
-        { type: 'decisionRecorded', decisionId: 'transfer-list-entry', rowId: 'tl-r4', values: ['written', 'blank'], atLeastOnce: true, reversible: true, _src: '「처리 여부(기입 또는 공란)가 한 번 기록」 · records §4.1 tl-r4 공란' },
+        { type: 'recordLinesViewed', recordId: 'rec-handover-brief', lineIds: ['hb-l1', 'hb-l2', 'hb-l3'], step: 1, label: '인수받은 첫 문서의 세 항을 연다', caption: '문서 1', _src: '「인수 각서 3항 … 열람」 · records §3.1 clause 3행' },
+        { type: 'recordRowsViewed', recordId: 'rec-transfer-list', rowIds: ['tl-r1', 'tl-r2', 'tl-r3'], step: 2, label: '두 번째 문서의 세 줄을 연다', caption: '문서 2', _src: '「이관 목록 3줄 … 열람」 · records §4.1 no 1~3' },
+        { type: 'slotLoaded', slotId: 'workbench-standing-slot', recordId: 'plate-zero', step: 3, label: '판 하나를 상시 슬롯에 적재한다', caption: '슬롯', _src: '「판 #0 이 작업대 상시 슬롯에 적재」 · worldview/glossary.md 「상시 슬롯」' },
+        { type: 'decisionRecorded', decisionId: 'transfer-list-entry', rowId: 'tl-r4', values: ['written', 'blank'], atLeastOnce: true, reversible: true, step: 4, label: '두 번째 문서의 네 번째 줄을 기입 또는 공란으로 정한다', caption: '네 번째 줄', _src: '「처리 여부(기입 또는 공란)가 한 번 기록」 · records §4.1 tl-r4 공란' },
       ],
       _srcCompletion: beat.completion,
     }),
@@ -869,8 +871,8 @@ function buildBeats(stage, records, zones) {
       kind: 'marking',
       emitsCommitCommand: false,
       requires: [
-        { type: 'uncoveredAreasMarked', zoneId: 'hub', areaIds: uncovered, count: uncovered.length, _src: '「회로 지도에 음영 3구획이 모두 지정」 · zones.uncoveredAreaIds' },
-        { type: 'eachAreaHasEvidence', mediumsPerArea: 1, _src: '「각 구획에 근거 매체가 하나씩 붙는다」' },
+        { type: 'uncoveredAreasMarked', zoneId: 'hub', areaIds: uncovered, count: uncovered.length, step: 1, label: `회선이 닿지 않는 옥외 구획 ${uncovered.length}곳을 접어 표시한다`, caption: '구획 표시', _src: '「회로 지도에 음영 3구획이 모두 지정」 · zones.uncoveredAreaIds' },
+        { type: 'eachAreaHasEvidence', mediumsPerArea: 1, step: 2, label: '접은 구획마다 근거 매체를 하나씩 붙인다', caption: '근거 붙이기', _src: '「각 구획에 근거 매체가 하나씩 붙는다」' },
       ],
       _srcCompletion: beat.completion,
     }),
@@ -883,18 +885,23 @@ function buildBeats(stage, records, zones) {
         commitCommandId: 'CiteToBoard',
         checkpointBefore: true,
         requires: [
-          ...pair.independentPair.map((c) => ({
+          ...pair.independentPair.map((c, i) => ({
             type: 'citationPinned',
             clueId: c.clueId,
             sourceType: c.sourceType,
             originId: c.originId,
             rootOriginId: c.rootOriginId,
             recordId: recordByOrigin[c.originId] ? recordByOrigin[c.originId].recordId : null,
+            step: 2 + i,
+            // 라벨은 매체어만 쓴다(M26 D4 공개 수준) — 기록 표시명은 T0-06 이 거부한다.
+            label: `${MEDIA_WORD[c.sourceType] ?? c.sourceType} 기록을 가설판에 인용한다`,
+            caption: `${MEDIA_WORD[c.sourceType] ?? c.sourceType} 인용`,
             _src: 'planning/validate-campaign.mjs --pairs (C-07 독립쌍 출력 · 손으로 고르지 않음)',
           })),
-          { type: 'independentPair', rule: 'sourceType 상이 AND rootOriginId 상이', validatorCheck: 'C-07', _src: 'interaction-rules.md §3 · RFC-S5(예외 없음)' },
-          { type: 'autoCopyCreated', count: 1, recordId: 'rec-plate-standard-hub', _src: '「첫 판독의 검증 사본 1점이 증거함에 생성」 · plate-readout.md P-R1' },
-          { type: 'gapEndpointsFixed', recordId: 'rec-plate-standard-hub', startPhase: 'H-1:00', endPhase: 'H+3:00', _src: 't0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING' },
+          { type: 'independentPair', rule: 'sourceType 상이 AND rootOriginId 상이', validatorCheck: 'C-07', step: 4, label: '서로 다른 매체의 두 기록이 한 쌍을 이룬다', caption: '매체 2종', _src: 'interaction-rules.md §3 · RFC-S5(예외 없음)' },
+          { type: 'autoCopyCreated', count: 1, recordId: 'rec-plate-standard-hub', step: 1, label: '판을 처음 판독해 검증 사본을 남긴다', caption: '첫 판독', _src: '「첫 판독의 검증 사본 1점이 증거함에 생성」 · plate-readout.md P-R1' },
+          // 끝점 규칙(RFC-CX-M27): 시작 = 첫 결손 눈금, 끝 = 기록이 돌아온 첫 눈금(반개구간). 데이터 missingBand 마지막 null 눈금은 끝이 아니다.
+          { type: 'gapEndpointsFixed', recordId: 'rec-plate-standard-hub', startPhase: 'H-1:00', endPhase: 'H+3:00', step: 5, label: '결손 구간을 고정한다 — 시작은 첫 결손 눈금, 끝은 기록이 돌아온 첫 눈금', caption: '결손 구간', _src: 't0-b3.consequence 「결손 구간 H-1:00~H+3:00(정확히 4시간)」 · records §5.2 MISSING · RFC-CX-M27 끝점 규칙' },
         ],
         _srcCompletion: beat.completion,
       };

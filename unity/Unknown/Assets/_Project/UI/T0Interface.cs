@@ -20,6 +20,8 @@ namespace Tide.UI
     {
         public Texture2D Texture; public string Caption; public float Aspect=1f;
     }
+    // M27: one requirement of the current beat. Done / Current / open; Glyph null = text form cue only (✓ ▶ ○).
+    public sealed class ChecklistItem { public string Label,Caption; public bool Done,Current; public Texture2D Glyph; }
     // M25: a headed block under the body — heading (Section tier, Bold), paragraph (Body tier), optional figure row.
     public sealed class ScreenSection
     {
@@ -49,6 +51,8 @@ namespace Tide.UI
         // M26 (D2): the current inquiry line under the case card, with pinned / still-needed media figures.
         public string Inquiry; public Texture2D InquiryBacking;
         public readonly List<ScreenFigure> InquiryPinned=new List<ScreenFigure>(),InquiryNeeded=new List<ScreenFigure>();
+        // M27: stage marker ("단계 i/n · 제목") and the current beat's requirement chips under the inquiry strip.
+        public string CaseStage; public readonly List<ChecklistItem> Checklist=new List<ChecklistItem>();
         public string OpeningHeading;
         public bool ShowDirection,ShowOpening;
         public bool ResetScroll;
@@ -97,6 +101,10 @@ namespace Tide.UI
             {
                 hintOfferPanel=Panel("Hint offer",hintOfferHost,new Vector2(.64f,.08f),new Vector2(.985f,.92f),paper);
                 hintOfferPanel.GetComponent<Image>().raycastTarget=false;
+                // M27: a bordered chip behind the offer so it reads as an offer by form, not by position or colour alone.
+                var frame=Panel("Hint offer frame",hintOfferPanel,Vector2.zero,Vector2.one,new Color(ink.r,ink.g,ink.b,.14f));
+                frame.GetComponent<Image>().raycastTarget=false;frame.SetAsFirstSibling();
+                var frameLayout=frame.gameObject.AddComponent<LayoutElement>();frameLayout.ignoreLayout=true;
                 var row=hintOfferPanel.gameObject.AddComponent<HorizontalLayoutGroup>();
                 row.padding=new RectOffset(8,8,6,6);row.spacing=8;
                 row.childControlWidth=row.childControlHeight=true;
@@ -179,7 +187,8 @@ namespace Tide.UI
             float contentTop=.865f;
             if(model.SignaturePaper!=null)RenderSignaturePaper(leftFlow,model.SignaturePaper);
             if(!string.IsNullOrEmpty(model.CaseThread)&&model.ReaderComparison==null) {
-                float height=.185f*scale;
+                // M27: the card gives .035 of its slack to the checklist band below so the work surface keeps its height.
+                float height=.15f*scale;
                 var card=Panel("Case thread",root,new Vector2(.46f,.865f-height),new Vector2(1,.865f),ink);
                 card.GetComponent<Image>().raycastTarget=false;
                 Text("CaseThread",card,model.CaseThread,TypeScale.Section,paper,new Vector2(.025f,.04f),new Vector2(.975f,.96f));
@@ -190,7 +199,10 @@ namespace Tide.UI
                 // committed card geometry and the body paragraphs below are unchanged.
                 float inquiryHeight=string.IsNullOrEmpty(model.Inquiry)?0:.06f*Mathf.Max(1,scale);
                 if(inquiryHeight>0)RenderInquiryStrip(.865f-height-directionHeight,inquiryHeight,model);
-                contentTop=.85f-height-directionHeight-inquiryHeight;
+                // M27: the requirement chips take one more band; the card and the body below stay unchanged.
+                float checklistHeight=model.Checklist.Count==0?0:.045f*Mathf.Max(1,scale);
+                if(checklistHeight>0)RenderChecklistBand(.865f-height-directionHeight-inquiryHeight,checklistHeight,model);
+                contentTop=.85f-height-directionHeight-inquiryHeight-checklistHeight;
             }
             var contentPanel=Panel("Work Surface",root,new Vector2(.46f,.12f+feedbackHeight),new Vector2(1,contentTop),new Color(paper.r,paper.g,paper.b,.97f));
             // M20: the diagnostic candidate is ONE full-bleed, non-tiled backing and therefore REPLACES the tiled
@@ -228,6 +240,13 @@ namespace Tide.UI
                     var band=Rect("Inquiry band",noteParent,Vector2.zero,Vector2.one);
                     band.gameObject.AddComponent<LayoutElement>().preferredHeight=TypeScale.Helper*scale*2.2f;
                     RenderInquiryStrip(band,model);
+                }
+                // M27: the requirement chips flow right after the inquiry strip in the same inline column.
+                if(model.Checklist.Count>0)
+                {
+                    var chips=Rect("Checklist band",noteParent,Vector2.zero,Vector2.one);
+                    chips.gameObject.AddComponent<LayoutElement>().preferredHeight=TypeScale.Helper*scale*1.9f;
+                    RenderChecklist(chips,model);
                 }
             }
             FlowText(content,model.Body,TypeScale.Body,ink);

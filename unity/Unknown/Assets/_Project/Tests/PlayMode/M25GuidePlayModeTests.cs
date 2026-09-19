@@ -78,7 +78,8 @@ namespace Tide.Tests {
    Assert.IsTrue(host.GetComponentsInChildren<Button>().Any(b=>b.name=="guide"),"the toolbar lists the guide next to hints");
    yield return Press(Key.F2);
    Assert.AreEqual(T0GameSession.GuideOverlay,game.Surface,"F2 routes to the guide overlay");
-   StringAssert.Contains("t0-b1",Visible(),"the guide names the current beat before any objective is met");
+   StringAssert.Contains("단계 1/3 · ",Visible(),"the guide names the current stage before any objective is met (M27: title, never the raw beat id)");
+   StringAssert.DoesNotContain("t0-b1",Visible());
    StringAssert.Contains("○ 1.",Visible(),"unfinished steps are marked open");
    yield return Press(Key.Escape);
    Assert.AreEqual("shell",game.Surface,"Esc closes the guide like any overlay");
@@ -110,7 +111,9 @@ namespace Tide.Tests {
    yield return Wait(game.FlushSaves());
    game.OpenTool("circuit");yield return null;
    var text=Visible();
-   StringAssert.Contains("▶ 안내 · 단계 t0-b2 · 남은 조건",text,"the guided teaching header names the beat and the remaining conditions");
+   StringAssert.Contains("▶ 안내 · 단계 2/3 · ",text,"the guided teaching header names the stage (M27: title, never the raw beat id)");
+   StringAssert.DoesNotContain("단계 t0-b2",text,"raw beat ids never reach the player");
+   StringAssert.Contains(" · 남은 조건",text);
    StringAssert.Contains("F2 전체 안내",text,"the header points at the full guide");
    StringAssert.DoesNotContain("남은 조건 0개",text,"a freshly opened circuit still has open conditions");
   }
@@ -141,7 +144,7 @@ namespace Tide.Tests {
    var text=Visible();
    foreach(var named in new[]{"한서린","한도연","문재화"})StringAssert.Contains(named,text,named+" is public once C1 has been entered");
    foreach(var banned in new[]{"오은정","표성찬"})StringAssert.DoesNotContain(banned,text,banned+" is first named past the playable slice");
-   StringAssert.Contains("C1 · 두 개의 필적",text,"the guide names the C1 stage without spoiling its objective");
+   StringAssert.Contains("C1 1/2 · ",text,"the guide names the C1 stage without spoiling its objective");
    CollectionAssert.AreEqual(bytes,File.ReadAllBytes(Path.Combine(directory,"save.json")),"opening the guide in C1 writes nothing");
   }
  }

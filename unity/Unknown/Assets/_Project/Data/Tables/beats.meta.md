@@ -1,10 +1,10 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-19
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
 owner: game-systems-designer
-describes: _workspace/current//Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Data/Tables/beats.json
+describes: _workspace/current/systems/data/t0/beats.json
 generated: true
 ---
 
@@ -15,16 +15,16 @@ generated: true
 ## 1. 생성 명령
 
 ```
-node _workspace/current/systems/pipeline/emit-tables.mjs --out /Users/jangyoung/orca/unknown/unity/Unknown/Assets/_Project/Data/Tables
+node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/current/systems/data/t0
 ```
 
-## 2. 이번 출력 [OBSERVED 2026-09-13]
+## 2. 이번 출력 [OBSERVED 2026-09-19]
 
 | 항목 | 값 |
 |---|---|
 | 파생 | `subset+predicate` |
-| sha256 | `356eeceee93f3ae997ff55a7ebd94e3f553d0f0aa0cfd36b91b96ff62e025fe9` |
-| 바이트 (`wc -c`) | 16213 |
+| sha256 | `bfff29219124bbd4022beb0234e1b4db535916205a8c7ce4675a457d3cc68da2` |
+| 바이트 (`wc -c`) | 17929 |
 | 행 수 | 3 |
 | 검증기 판정 | `verdict PASS · checks 50 · fail 0` (exit 0) |
 
@@ -34,13 +34,13 @@ node _workspace/current/systems/pipeline/emit-tables.mjs --out /Users/jangyoung/
 
 | 파일 | sha256(앞 12) |
 |---|---|
-| `planning/campaign.json` | `baa3ef6d3729…` |
+| `planning/campaign.json` | `a86400a7a87a…` |
 | `synopsis/t0-records.md` | `3b0f508faab2…` |
 | `systems/data-schemas/tools.md` | `bee25c972a69…` |
 | `systems/data-schemas/zones.md` | `0c166c80b9b5…` |
 | `concept/style-guide.md` | `a70e3dc79292…` |
 | `modeling/specs/hub-watchroom.md` | `d2e08e4e119f…` |
-| `modeling/asset-manifest.md` | `5410b0bbcda8…` |
+| `modeling/asset-manifest.md` | `efbcbc62684c…` |
 | `worldview/worldview-bible.md` | `87a9617ec9fe…` |
 | `systems/system-specs/wiring-trace.md` | `60d6f2b15844…` |
 | `systems/system-specs/plate-readout.md` | `55f502a63cbf…` |

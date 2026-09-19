@@ -20,10 +20,10 @@ MonoBehaviour:
   - {fileID: 4900000, guid: fe39ac644931845b6896ac392f012392, type: 3}
   receipt: {fileID: 4900000, guid: 2ed0e4112bc4643e69c5715653840d32, type: 3}
   producerReceipt: "{\n  \"emitter\": \"systems/pipeline/emit-tables.mjs\",\n  \"emitterOwner\":
-    \"game-systems-designer\",\n  \"emittedUtc\": \"2026-09-13T13:52:26.716Z\",\n 
-    \"scope\": \"t0\",\n  \"scopeSource\": \"--scope\",\n  \"dryRun\": false,\n 
-    \"source\": {\n    \"path\": \"planning/campaign.json\",\n    \"sha256\": \"baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe\",\n   
-    \"bytes\": 123944\n  },\n  \"validator\": {\n    \"path\": \"planning/validate-campaign.mjs\",\n   
+    \"game-systems-designer\",\n  \"emittedUtc\": \"2026-09-19T16:19:27.935Z\",\n 
+    \"scope\": \"t0\",\n  \"scopeSource\": \"out-dir-basename\",\n  \"dryRun\": false,\n 
+    \"source\": {\n    \"path\": \"planning/campaign.json\",\n    \"sha256\": \"a86400a7a87abe04ad30fbeed9edf1e91a300c6712eeb64eec64c1b9918f62cb\",\n   
+    \"bytes\": 124075\n  },\n  \"validator\": {\n    \"path\": \"planning/validate-campaign.mjs\",\n   
     \"owner\": \"game-planner\",\n    \"exitCode\": 0,\n    \"checks\": 50,\n   
     \"pass\": 50,\n    \"fail\": 0,\n    \"verdict\": \"PASS\"\n  },\n  \"aggregates\":
     {\n    \"stages\": 9,\n    \"beats\": 33,\n    \"clues\": 73,\n    \"sourceTypeDist\":
@@ -34,15 +34,15 @@ MonoBehaviour:
     5,\n      \"dock\": 5,\n      \"lowland\": 4\n    },\n    \"proofRequiredBeats\":
     17,\n    \"totalMinutes\": 480\n  },\n  \"tables\": [\n    {\n      \"file\":
     \"beats.json\",\n      \"derivation\": \"subset+predicate\",\n      \"sha256\":
-    \"356eeceee93f3ae997ff55a7ebd94e3f553d0f0aa0cfd36b91b96ff62e025fe9\",\n     
-    \"bytes\": 16213,\n      \"rows\": 3\n    },\n    {\n      \"file\": \"hints.json\",\n     
-    \"derivation\": \"projection\",\n      \"sha256\": \"168146a8cbd1f5e636dbc6e4b693098a90b1ac3a9ced1cd95d10a4bf7ce9a7c7\",\n     
-    \"bytes\": 4054,\n      \"rows\": 9\n    },\n    {\n      \"file\": \"tools.json\",\n     
+    \"bfff29219124bbd4022beb0234e1b4db535916205a8c7ce4675a457d3cc68da2\",\n     
+    \"bytes\": 17929,\n      \"rows\": 3\n    },\n    {\n      \"file\": \"hints.json\",\n     
+    \"derivation\": \"projection\",\n      \"sha256\": \"d88210f95749a981823af48b97fefaffff14b549deedb0de0129c31eea238c1b\",\n     
+    \"bytes\": 4137,\n      \"rows\": 9\n    },\n    {\n      \"file\": \"tools.json\",\n     
     \"derivation\": \"schema-projection\",\n      \"sha256\": \"9356ba85a9670e1928e4045d59aa920b3fa9712414fff404c113c6c145113ac7\",\n     
     \"bytes\": 10412,\n      \"rows\": 2\n    },\n    {\n      \"file\": \"zones.json\",\n     
     \"derivation\": \"authoring-derivation\",\n      \"sha256\": \"3c3d043f6f4573ebafff1d4a5c6229d3ac632f3dadc3a425ef07e65214bd0f08\",\n     
     \"bytes\": 15341,\n      \"rows\": 1\n    },\n    {\n      \"file\": \"records.json\",\n     
-    \"derivation\": \"markdown-parse+rule\",\n      \"sha256\": \"f5263d036f14bdb2b687aa68ccfa837a9dd6750ea21a9ac7388bb3632f83e9b6\",\n     
+    \"derivation\": \"markdown-parse+rule\",\n      \"sha256\": \"371572e7f4ad154435ad273997890e7baa75a8bd83cb8635925ade9cab64cf11\",\n     
     \"bytes\": 70694,\n      \"rows\": 5\n    }\n  ],\n  \"importerContract\": {\n   
     \"mustVerify\": [\n      \"validator.verdict === \\\"PASS\\\"\",\n      \"sha256(beats.json)
     === receipt.tables[beats.json].sha256\",\n      \"sha256(hints.json) === receipt.tables[hints.json].sha256\",\n     
@@ -76,7 +76,7 @@ MonoBehaviour:
     },\n    \"hubModel\": {\n      \"path\": \"modeling/specs/hub-watchroom.md\",\n     
     \"sha256\": \"d2e08e4e119fc624e447f29d5951add142c969a170c19fee6da9cf3b7ee37529\"\n   
     },\n    \"manifest\": {\n      \"path\": \"modeling/asset-manifest.md\",\n     
-    \"sha256\": \"5410b0bbcda86d96c3de5f09c113da5639b92194e6e5d29292e7e12eaa614d88\"\n   
+    \"sha256\": \"efbcbc62684c2b6211f51633246b6af1dccba803350d95d9e19c8654919ed729\"\n   
     },\n    \"bible\": {\n      \"path\": \"worldview/worldview-bible.md\",\n     
     \"sha256\": \"87a9617ec9fe6ac1eeac46db4391d4fcf9080efd62c477ee9f1e3cff3db43826\"\n   
     },\n    \"wiring\": {\n      \"path\": \"systems/system-specs/wiring-trace.md\",\n     

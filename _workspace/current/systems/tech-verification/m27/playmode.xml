@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="148" result="Skipped:Ignored" total="148" passed="147" failed="0" inconclusive="0" skipped="1" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:49:55Z" duration="111.3375564">
+  <test-suite type="TestSuite" id="1178" name="Unknown T0" fullname="Unknown T0" runstate="Runnable" testcasecount="148" result="Skipped" label="Ignored" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:49:55Z" duration="111.337556" total="148" passed="147" failed="0" inconclusive="0" skipped="1" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <reason>
+      <message><![CDATA[One or more child tests were ignored]]></message>
+    </reason>
+    <test-suite type="Assembly" id="1172" name="Tide.Tests.Play.dll" fullname="/Users/jangyoung/orca/unknown/unity/Unknown/Library/ScriptAssemblies/Tide.Tests.Play.dll" runstate="Runnable" testcasecount="148" result="Skipped" label="Ignored" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:49:55Z" duration="111.319420" total="148" passed="147" failed="0" inconclusive="0" skipped="1" asserts="0">
+      <properties>
+        <property name="_PID" value="74621" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <reason>
+        <message><![CDATA[One or more child tests were ignored]]></message>
+      </reason>
+      <test-suite type="TestSuite" id="1173" name="Tide" fullname="Tide" runstate="Runnable" testcasecount="148" result="Skipped" label="Ignored" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:49:55Z" duration="111.318900" total="148" passed="147" failed="0" inconclusive="0" skipped="1" asserts="0">
+        <properties />
+        <reason>
+          <message><![CDATA[One or more child tests were ignored]]></message>
+        </reason>
+        <test-suite type="TestSuite" id="1174" name="Tests" fullname="Tide.Tests" runstate="Runnable" testcasecount="148" result="Skipped" label="Ignored" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:49:55Z" duration="111.318335" total="148" passed="147" failed="0" inconclusive="0" skipped="1" asserts="0">
+          <properties />
+          <reason>
+            <message><![CDATA[One or more child tests were ignored]]></message>
+          </reason>
+          <test-suite type="TestFixture" id="1001" name="C1InterviewPrepPlayModeTests" fullname="Tide.Tests.C1InterviewPrepPlayModeTests" classname="Tide.Tests.C1InterviewPrepPlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:48:05Z" duration="1.078408" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="CompletedPatrolOpensAnonymousInterviewFormatPanelAndReturnsWithoutAnyMutation" fullname="Tide.Tests.C1InterviewPrepPlayModeTests.CompletedPatrolOpensAnonymousInterviewFormatPanelAndReturnsWithoutAnyMutation" methodname="CompletedPatrolOpensAnonymousInterviewFormatPanelAndReturnsWithoutAnyMutation" classname="Tide.Tests.C1InterviewPrepPlayModeTests" runstate="Runnable" seed="1012389982" result="Passed" start-time="2026-09-19 16:48:04Z" end-time="2026-09-19 16:48:05Z" duration="1.069310" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="C1PlayModeTests" fullname="Tide.Tests.C1PlayModeTests" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-09-19 16:48:05Z" end-time="2026-09-19 16:48:09Z" duration="3.423204" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="DefaultPatrolGuidanceDoesNotRevealSolutionOrMutateState" fullname="Tide.Tests.C1PlayModeTests.DefaultPatrolGuidanceDoesNotRevealSolutionOrMutateState" methodname="DefaultPatrolGuidanceDoesNotRevealSolutionOrMutateState" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="796750027" result="Passed" start-time="2026-09-19 16:48:05Z" end-time="2026-09-19 16:48:05Z" duration="0.246898" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="FailedSaveHasNoChapterEffectsAndRetryCommitsOnce" fullname="Tide.Tests.C1PlayModeTests.FailedSaveHasNoChapterEffectsAndRetryCommitsOnce" methodname="FailedSaveHasNoChapterEffectsAndRetryCommitsOnce" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="315387563" result="Passed" start-time="2026-09-19 16:48:05Z" end-time="2026-09-19 16:48:06Z" duration="0.447917" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: c1 injected candidate save failure
+]]></output>
+            </test-case>
+            <test-case id="1010" name="HoldModeRequiresFullGestureForChapterConfirmation" fullname="Tide.Tests.C1PlayModeTests.HoldModeRequiresFullGestureForChapterConfirmation" methodname="HoldModeRequiresFullGestureForChapterConfirmation" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="1549212653" result="Passed" start-time="2026-09-19 16:48:06Z" end-time="2026-09-19 16:48:07Z" duration="1.142372" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice" fullname="Tide.Tests.C1PlayModeTests.KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice" methodname="KeyboardAndPadUseTwoStepConfirmationAndRestartAtTerminalSlice" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="1889884540" result="Passed" start-time="2026-09-19 16:48:07Z" end-time="2026-09-19 16:48:08Z" duration="0.595918" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction" fullname="Tide.Tests.C1PlayModeTests.ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction" methodname="ObservedInvalidRoutingExplainsContradictionWithoutPrescribingAction" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="82896347" result="Passed" start-time="2026-09-19 16:48:08Z" end-time="2026-09-19 16:48:08Z" duration="0.405840" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="PendingUndoCancelsAllChapterEffectsAndSuppressesReceipt" fullname="Tide.Tests.C1PlayModeTests.PendingUndoCancelsAllChapterEffectsAndSuppressesReceipt" methodname="PendingUndoCancelsAllChapterEffectsAndSuppressesReceipt" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="1309872407" result="Passed" start-time="2026-09-19 16:48:08Z" end-time="2026-09-19 16:48:08Z" duration="0.332069" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary" fullname="Tide.Tests.C1PlayModeTests.PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary" methodname="PublicImmediateSubmissionCannotBypassAcceptedSaveBoundary" classname="Tide.Tests.C1PlayModeTests" runstate="Runnable" seed="951843506" result="Passed" start-time="2026-09-19 16:48:08Z" end-time="2026-09-19 16:48:09Z" duration="0.249870" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1011" name="C1SignaturePlayModeTests" fullname="Tide.Tests.C1SignaturePlayModeTests" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-09-19 16:48:09Z" end-time="2026-09-19 16:48:17Z" duration="8.139507" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1018" name="CandidateChoicesStayUnrecordedAndNeverReplacePriorProofUntilCited" fullname="Tide.Tests.C1SignaturePlayModeTests.CandidateChoicesStayUnrecordedAndNeverReplacePriorProofUntilCited" methodname="CandidateChoicesStayUnrecordedAndNeverReplacePriorProofUntilCited" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1623252304" result="Passed" start-time="2026-09-19 16:48:09Z" end-time="2026-09-19 16:48:10Z" duration="0.972016" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="DefaultGuidanceDoesNotRevealHumidityOrInventPageValue" fullname="Tide.Tests.C1SignaturePlayModeTests.DefaultGuidanceDoesNotRevealHumidityOrInventPageValue" methodname="DefaultGuidanceDoesNotRevealHumidityOrInventPageValue" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="829309821" result="Passed" start-time="2026-09-19 16:48:10Z" end-time="2026-09-19 16:48:10Z" duration="0.624581" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="ExecutedTrialOutcomeStaysVisibleWhileLowerControlsAreFocused" fullname="Tide.Tests.C1SignaturePlayModeTests.ExecutedTrialOutcomeStaysVisibleWhileLowerControlsAreFocused" methodname="ExecutedTrialOutcomeStaysVisibleWhileLowerControlsAreFocused" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="515977541" result="Passed" start-time="2026-09-19 16:48:10Z" end-time="2026-09-19 16:48:11Z" duration="0.659290" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint" fullname="Tide.Tests.C1SignaturePlayModeTests.FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint" methodname="FailedSaveRetryHasOneReceiptAndRestartsAtSignatureEndpoint" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="456790077" result="Passed" start-time="2026-09-19 16:48:11Z" end-time="2026-09-19 16:48:12Z" duration="0.901070" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: signature candidate-save failure
+]]></output>
+            </test-case>
+            <test-case id="1014" name="ImmediateSubmissionCannotPublishSignatureCompletion" fullname="Tide.Tests.C1SignaturePlayModeTests.ImmediateSubmissionCannotPublishSignatureCompletion" methodname="ImmediateSubmissionCannotPublishSignatureCompletion" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="246073317" result="Passed" start-time="2026-09-19 16:48:12Z" end-time="2026-09-19 16:48:13Z" duration="0.897683" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender" fullname="Tide.Tests.C1SignaturePlayModeTests.MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender" methodname="MaskPersistsAcrossSeparationCopiesComparisonAndReducedMotionLargeTextRender" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1711247453" result="Passed" start-time="2026-09-19 16:48:13Z" end-time="2026-09-19 16:48:13Z" duration="0.856739" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="NonfocusedSourceOpensOnOneFastMouseClick" fullname="Tide.Tests.C1SignaturePlayModeTests.NonfocusedSourceOpensOnOneFastMouseClick" methodname="NonfocusedSourceOpensOnOneFastMouseClick" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="538158230" result="Passed" start-time="2026-09-19 16:48:13Z" end-time="2026-09-19 16:48:14Z" duration="0.401003" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="NonfocusedSourceOpensOnOneMouseClick" fullname="Tide.Tests.C1SignaturePlayModeTests.NonfocusedSourceOpensOnOneMouseClick" methodname="NonfocusedSourceOpensOnOneMouseClick" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1025837803" result="Passed" start-time="2026-09-19 16:48:14Z" end-time="2026-09-19 16:48:14Z" duration="0.410425" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="PendingUndoCancelsAllSixSignatureEffectsAndReceipt" fullname="Tide.Tests.C1SignaturePlayModeTests.PendingUndoCancelsAllSixSignatureEffectsAndReceipt" methodname="PendingUndoCancelsAllSixSignatureEffectsAndReceipt" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1805880761" result="Passed" start-time="2026-09-19 16:48:14Z" end-time="2026-09-19 16:48:15Z" duration="0.741400" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="PointerSelectedButtonBecomesKeyboardTargetWithoutRerenderOrScroll" fullname="Tide.Tests.C1SignaturePlayModeTests.PointerSelectedButtonBecomesKeyboardTargetWithoutRerenderOrScroll" methodname="PointerSelectedButtonBecomesKeyboardTargetWithoutRerenderOrScroll" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="548441938" result="Passed" start-time="2026-09-19 16:48:15Z" end-time="2026-09-19 16:48:15Z" duration="0.115154" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="RevealedCopyNotesRetainLineageLinksAcrossReentryWithoutGeneratingQuestions" fullname="Tide.Tests.C1SignaturePlayModeTests.RevealedCopyNotesRetainLineageLinksAcrossReentryWithoutGeneratingQuestions" methodname="RevealedCopyNotesRetainLineageLinksAcrossReentryWithoutGeneratingQuestions" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1682805089" result="Passed" start-time="2026-09-19 16:48:15Z" end-time="2026-09-19 16:48:16Z" duration="0.871569" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="TwoStepConfirmationDoesNotCommitEarly" fullname="Tide.Tests.C1SignaturePlayModeTests.TwoStepConfirmationDoesNotCommitEarly" methodname="TwoStepConfirmationDoesNotCommitEarly" classname="Tide.Tests.C1SignaturePlayModeTests" runstate="Runnable" seed="1597811404" result="Passed" start-time="2026-09-19 16:48:16Z" end-time="2026-09-19 16:48:17Z" duration="0.684090" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1024" name="M25GuidePlayModeTests" fullname="Tide.Tests.M25GuidePlayModeTests" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:18Z" duration="1.250361" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1032" name="CastFollowsDisclosureOnceC1IsEntered" fullname="Tide.Tests.M25GuidePlayModeTests.CastFollowsDisclosureOnceC1IsEntered" methodname="CastFollowsDisclosureOnceC1IsEntered" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="1671537214" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:17Z" duration="0.110480" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="CircuitTeachingHeaderNamesBeatAndRemainingConditions" fullname="Tide.Tests.M25GuidePlayModeTests.CircuitTeachingHeaderNamesBeatAndRemainingConditions" methodname="CircuitTeachingHeaderNamesBeatAndRemainingConditions" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="934570959" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:17Z" duration="0.313522" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="F2OpensGuideDuringPlayAndToolbarListsIt" fullname="Tide.Tests.M25GuidePlayModeTests.F2OpensGuideDuringPlayAndToolbarListsIt" methodname="F2OpensGuideDuringPlayAndToolbarListsIt" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="492383098" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:17Z" duration="0.092478" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="GateOffKeepsCommittedOpeningAndNoBackdrop" fullname="Tide.Tests.M25GuidePlayModeTests.GateOffKeepsCommittedOpeningAndNoBackdrop" methodname="GateOffKeepsCommittedOpeningAndNoBackdrop" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="1419468020" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:17Z" duration="0.089063" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="GateOnDrawsBackdropIconsAndPortraitsWithoutRaycasts" fullname="Tide.Tests.M25GuidePlayModeTests.GateOnDrawsBackdropIconsAndPortraitsWithoutRaycasts" methodname="GateOnDrawsBackdropIconsAndPortraitsWithoutRaycasts" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="1854662688" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:17Z" duration="0.138090" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns" fullname="Tide.Tests.M25GuidePlayModeTests.PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns" methodname="PageDownScrollsTheGuideWithoutChangingStateAndPageUpReturns" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="976382147" result="Passed" start-time="2026-09-19 16:48:17Z" end-time="2026-09-19 16:48:18Z" duration="0.096185" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="StartScreenOffersGuideAndGuideNeverWritesState" fullname="Tide.Tests.M25GuidePlayModeTests.StartScreenOffersGuideAndGuideNeverWritesState" methodname="StartScreenOffersGuideAndGuideNeverWritesState" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="1009288001" result="Passed" start-time="2026-09-19 16:48:18Z" end-time="2026-09-19 16:48:18Z" duration="0.330989" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="TypeScaleTiersAreStrictlyOrdered" fullname="Tide.Tests.M25GuidePlayModeTests.TypeScaleTiersAreStrictlyOrdered" methodname="TypeScaleTiersAreStrictlyOrdered" classname="Tide.Tests.M25GuidePlayModeTests" runstate="Runnable" seed="189682434" result="Passed" start-time="2026-09-19 16:48:18Z" end-time="2026-09-19 16:48:18Z" duration="0.076689" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1033" name="M26InquiryPlayModeTests" fullname="Tide.Tests.M26InquiryPlayModeTests" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-19 16:48:18Z" end-time="2026-09-19 16:48:25Z" duration="6.602358" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1038" name="EvidenceBoxListsMediaOfPinsAndGateOnDrawsIcons" fullname="Tide.Tests.M26InquiryPlayModeTests.EvidenceBoxListsMediaOfPinsAndGateOnDrawsIcons" methodname="EvidenceBoxListsMediaOfPinsAndGateOnDrawsIcons" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="2031880820" result="Passed" start-time="2026-09-19 16:48:18Z" end-time="2026-09-19 16:48:19Z" duration="1.111889" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="InquiryStripFollowsTheBeatAndNeverDisclosesRecords" fullname="Tide.Tests.M26InquiryPlayModeTests.InquiryStripFollowsTheBeatAndNeverDisclosesRecords" methodname="InquiryStripFollowsTheBeatAndNeverDisclosesRecords" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="1227419263" result="Passed" start-time="2026-09-19 16:48:19Z" end-time="2026-09-19 16:48:20Z" duration="0.654850" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="ReceiptIsOfferedAfterClosingSaveReopensIdempotentlyAndNamesNoOne" fullname="Tide.Tests.M26InquiryPlayModeTests.ReceiptIsOfferedAfterClosingSaveReopensIdempotentlyAndNamesNoOne" methodname="ReceiptIsOfferedAfterClosingSaveReopensIdempotentlyAndNamesNoOne" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="300778324" result="Passed" start-time="2026-09-19 16:48:20Z" end-time="2026-09-19 16:48:21Z" duration="1.282519" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="RKeyOpensReceiptOnlyAfterT0Completion" fullname="Tide.Tests.M26InquiryPlayModeTests.RKeyOpensReceiptOnlyAfterT0Completion" methodname="RKeyOpensReceiptOnlyAfterT0Completion" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="1555271323" result="Passed" start-time="2026-09-19 16:48:21Z" end-time="2026-09-19 16:48:22Z" duration="1.297942" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="SameLineageCopiesStayOneMediumAndInvalidMarksAreRefused" fullname="Tide.Tests.M26InquiryPlayModeTests.SameLineageCopiesStayOneMediumAndInvalidMarksAreRefused" methodname="SameLineageCopiesStayOneMediumAndInvalidMarksAreRefused" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="77906044" result="Passed" start-time="2026-09-19 16:48:22Z" end-time="2026-09-19 16:48:23Z" duration="0.814475" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="StructuralStateWalksFourStatesAndCounterexampleIsUndoable" fullname="Tide.Tests.M26InquiryPlayModeTests.StructuralStateWalksFourStatesAndCounterexampleIsUndoable" methodname="StructuralStateWalksFourStatesAndCounterexampleIsUndoable" classname="Tide.Tests.M26InquiryPlayModeTests" runstate="Runnable" seed="1141423109" result="Passed" start-time="2026-09-19 16:48:23Z" end-time="2026-09-19 16:48:25Z" duration="1.438693" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1040" name="M27ChecklistPlayModeTests" fullname="Tide.Tests.M27ChecklistPlayModeTests" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-19 16:48:25Z" end-time="2026-09-19 16:48:29Z" duration="4.114227" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1046" name="ChecklistGlyphsFollowTheResourceGate" fullname="Tide.Tests.M27ChecklistPlayModeTests.ChecklistGlyphsFollowTheResourceGate" methodname="ChecklistGlyphsFollowTheResourceGate" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="2086724386" result="Passed" start-time="2026-09-19 16:48:25Z" end-time="2026-09-19 16:48:25Z" duration="0.075806" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="ChecklistMirrorsTheCurrentBeatRequirementsAndStepOrder" fullname="Tide.Tests.M27ChecklistPlayModeTests.ChecklistMirrorsTheCurrentBeatRequirementsAndStepOrder" methodname="ChecklistMirrorsTheCurrentBeatRequirementsAndStepOrder" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="49049182" result="Passed" start-time="2026-09-19 16:48:25Z" end-time="2026-09-19 16:48:26Z" duration="1.187166" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1043" name="GuideTaskSectionListsEveryConditionWithFormCues" fullname="Tide.Tests.M27ChecklistPlayModeTests.GuideTaskSectionListsEveryConditionWithFormCues" methodname="GuideTaskSectionListsEveryConditionWithFormCues" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="1520358164" result="Passed" start-time="2026-09-19 16:48:26Z" end-time="2026-09-19 16:48:26Z" duration="0.331484" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1045" name="HintOfferSettingTogglesAndPersists" fullname="Tide.Tests.M27ChecklistPlayModeTests.HintOfferSettingTogglesAndPersists" methodname="HintOfferSettingTogglesAndPersists" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="472028958" result="Passed" start-time="2026-09-19 16:48:26Z" end-time="2026-09-19 16:48:26Z" duration="0.176654" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1044" name="PatrolChecklistFollowsThePacketAndTheGuideShowsIt" fullname="Tide.Tests.M27ChecklistPlayModeTests.PatrolChecklistFollowsThePacketAndTheGuideShowsIt" methodname="PatrolChecklistFollowsThePacketAndTheGuideShowsIt" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="42982046" result="Passed" start-time="2026-09-19 16:48:26Z" end-time="2026-09-19 16:48:28Z" duration="1.283025" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1042" name="WrongWindowLeavesTheGapRequirementOpenOnTheCard" fullname="Tide.Tests.M27ChecklistPlayModeTests.WrongWindowLeavesTheGapRequirementOpenOnTheCard" methodname="WrongWindowLeavesTheGapRequirementOpenOnTheCard" classname="Tide.Tests.M27ChecklistPlayModeTests" runstate="Runnable" seed="1741588396" result="Passed" start-time="2026-09-19 16:48:28Z" end-time="2026-09-19 16:48:29Z" duration="1.056088" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1047" name="M5DirectionPlayModeTests" fullname="Tide.Tests.M5DirectionPlayModeTests" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-19 16:48:29Z" end-time="2026-09-19 16:48:45Z" duration="16.038991" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1061" name="FirstObservationStillAllowsRiskTrialAndMaskPersists" fullname="Tide.Tests.M5DirectionPlayModeTests.FirstObservationStillAllowsRiskTrialAndMaskPersists" methodname="FirstObservationStillAllowsRiskTrialAndMaskPersists" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1798838015" result="Passed" start-time="2026-09-19 16:48:29Z" end-time="2026-09-19 16:48:29Z" duration="0.245458" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1054" name="FocusLossAndPauseStopIntroClock" fullname="Tide.Tests.M5DirectionPlayModeTests.FocusLossAndPauseStopIntroClock" methodname="FocusLossAndPauseStopIntroClock" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="141426621" result="Passed" start-time="2026-09-19 16:48:29Z" end-time="2026-09-19 16:48:29Z" duration="0.507347" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1049" name="FreshIntroUsesObservedCutAndTimeoutWithoutWrites" fullname="Tide.Tests.M5DirectionPlayModeTests.FreshIntroUsesObservedCutAndTimeoutWithoutWrites" methodname="FreshIntroUsesObservedCutAndTimeoutWithoutWrites" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1589048370" result="Passed" start-time="2026-09-19 16:48:29Z" end-time="2026-09-19 16:48:35Z" duration="6.103743" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1053" name="HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" fullname="Tide.Tests.M5DirectionPlayModeTests.HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" methodname="HeldInputAcrossCutAndTimeoutDoesNotLeakOnRelease" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="575753353" result="Passed" start-time="2026-09-19 16:48:35Z" end-time="2026-09-19 16:48:42Z" duration="6.151370" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1052" name="HeldSkipCannotActivateGameplayUntilFreshPress" fullname="Tide.Tests.M5DirectionPlayModeTests.HeldSkipCannotActivateGameplayUntilFreshPress" methodname="HeldSkipCannotActivateGameplayUntilFreshPress" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1362422578" result="Passed" start-time="2026-09-19 16:48:42Z" end-time="2026-09-19 16:48:42Z" duration="0.066220" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1059" name="LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" fullname="Tide.Tests.M5DirectionPlayModeTests.LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" methodname="LoadedSaveBypassesIntroAndExplicitReplayPreservesBytesAndContext" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="423522225" result="Passed" start-time="2026-09-19 16:48:42Z" end-time="2026-09-19 16:48:42Z" duration="0.150760" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1058" name="MissingImageKeepsReadableInkFallbackAndSkip" fullname="Tide.Tests.M5DirectionPlayModeTests.MissingImageKeepsReadableInkFallbackAndSkip" methodname="MissingImageKeepsReadableInkFallbackAndSkip" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1156374201" result="Passed" start-time="2026-09-19 16:48:42Z" end-time="2026-09-19 16:48:42Z" duration="0.061941" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="PointerSettingsAt150IntroOpensAndReturns" fullname="Tide.Tests.M5DirectionPlayModeTests.PointerSettingsAt150IntroOpensAndReturns" methodname="PointerSettingsAt150IntroOpensAndReturns" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="533152653" result="Passed" start-time="2026-09-19 16:48:42Z" end-time="2026-09-19 16:48:42Z" duration="0.287865" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M5_POINTER_SCREEN 640x480
+]]></output>
+            </test-case>
+            <test-case id="1062" name="RecordStatusCannotAcceptPendingFailedOrCancelledSave" fullname="Tide.Tests.M5DirectionPlayModeTests.RecordStatusCannotAcceptPendingFailedOrCancelledSave" methodname="RecordStatusCannotAcceptPendingFailedOrCancelledSave" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="727273081" result="Passed" start-time="2026-09-19 16:48:42Z" end-time="2026-09-19 16:48:43Z" duration="0.818899" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: M5 expected save failure
+]]></output>
+            </test-case>
+            <test-case id="1048" name="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" fullname="Tide.Tests.M5DirectionPlayModeTests.ReducedMotionStartsFreshGameImmediatelyWithoutWrites" methodname="ReducedMotionStartsFreshGameImmediatelyWithoutWrites" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1383083788" result="Passed" start-time="2026-09-19 16:48:43Z" end-time="2026-09-19 16:48:43Z" duration="0.194016" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1056" name="ReplayFromToolKeepsKeyboardNavigationAndReturnContext" fullname="Tide.Tests.M5DirectionPlayModeTests.ReplayFromToolKeepsKeyboardNavigationAndReturnContext" methodname="ReplayFromToolKeepsKeyboardNavigationAndReturnContext" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="130703404" result="Passed" start-time="2026-09-19 16:48:43Z" end-time="2026-09-19 16:48:43Z" duration="0.247879" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1060" name="SelectedCategoryChangesWithoutRerenderOrJournalWrite" fullname="Tide.Tests.M5DirectionPlayModeTests.SelectedCategoryChangesWithoutRerenderOrJournalWrite" methodname="SelectedCategoryChangesWithoutRerenderOrJournalWrite" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1921465021" result="Passed" start-time="2026-09-19 16:48:43Z" end-time="2026-09-19 16:48:44Z" duration="0.110841" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1057" name="SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" fullname="Tide.Tests.M5DirectionPlayModeTests.SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" methodname="SelectingExistingSlotBypassesAndCreatingNewSlotRestoresFreshIntro" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1187506373" result="Passed" start-time="2026-09-19 16:48:44Z" end-time="2026-09-19 16:48:44Z" duration="0.256115" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1055" name="SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" fullname="Tide.Tests.M5DirectionPlayModeTests.SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" methodname="SettingsPauseAndReducedMotionShowAllLabelsAt150Percent" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="564094565" result="Passed" start-time="2026-09-19 16:48:44Z" end-time="2026-09-19 16:48:45Z" duration="0.696718" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M5_150_LAYOUT screen=640x480 caption=516.3572 viewport=523.2525
+]]></output>
+            </test-case>
+            <test-case id="1051" name="SkipFirstFrameAndEscapeConsumeInput" fullname="Tide.Tests.M5DirectionPlayModeTests.SkipFirstFrameAndEscapeConsumeInput" methodname="SkipFirstFrameAndEscapeConsumeInput" classname="Tide.Tests.M5DirectionPlayModeTests" runstate="Runnable" seed="1273425369" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.134716" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1063" name="M7EditorPreviewPlayModeTests" fullname="Tide.Tests.M7EditorPreviewPlayModeTests" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.662439" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1064" name="BatchModeGuardKeepsEveryLaneClosedWithoutApprovalOrOverride" fullname="Tide.Tests.M7EditorPreviewPlayModeTests.BatchModeGuardKeepsEveryLaneClosedWithoutApprovalOrOverride" methodname="BatchModeGuardKeepsEveryLaneClosedWithoutApprovalOrOverride" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" seed="1507622154" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.361031" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1065" name="HubDiagnosticOverrideOpensTheHubLaneWithoutApproval" fullname="Tide.Tests.M7EditorPreviewPlayModeTests.HubDiagnosticOverrideOpensTheHubLaneWithoutApproval" methodname="HubDiagnosticOverrideOpensTheHubLaneWithoutApproval" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" seed="174585960" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.049416" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1068" name="OneLaneOverrideLeavesTheOtherTwoGatesClosed" fullname="Tide.Tests.M7EditorPreviewPlayModeTests.OneLaneOverrideLeavesTheOtherTwoGatesClosed" methodname="OneLaneOverrideLeavesTheOtherTwoGatesClosed" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" seed="519218498" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.083205" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1067" name="ReaderDiagnosticOverrideOpensTheReaderLaneWithoutApproval" fullname="Tide.Tests.M7EditorPreviewPlayModeTests.ReaderDiagnosticOverrideOpensTheReaderLaneWithoutApproval" methodname="ReaderDiagnosticOverrideOpensTheReaderLaneWithoutApproval" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" seed="748014155" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.137921" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1066" name="UiSkinDiagnosticOverrideOpensTheUiLaneWithoutApproval" fullname="Tide.Tests.M7EditorPreviewPlayModeTests.UiSkinDiagnosticOverrideOpensTheUiLaneWithoutApproval" methodname="UiSkinDiagnosticOverrideOpensTheUiLaneWithoutApproval" classname="Tide.Tests.M7EditorPreviewPlayModeTests" runstate="Runnable" seed="1495135619" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.028391" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1069" name="M7HubPlayModeTests" fullname="Tide.Tests.M7HubPlayModeTests" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.152047" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1070" name="GateOffLeavesCommittedHubShellUntouched" fullname="Tide.Tests.M7HubPlayModeTests.GateOffLeavesCommittedHubShellUntouched" methodname="GateOffLeavesCommittedHubShellUntouched" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" seed="154583785" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.049392" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1071" name="GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" fullname="Tide.Tests.M7HubPlayModeTests.GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" methodname="GateOnSwapsListedRootsAddsOneLampAndFlatAmbientOnce" classname="Tide.Tests.M7HubPlayModeTests" runstate="Runnable" seed="1417987833" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:45Z" duration="0.101305" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1072" name="M7ReaderPlayModeTests" fullname="Tide.Tests.M7ReaderPlayModeTests" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:49:00Z" duration="14.178019" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1077" name="ApplicationSuspensionCancelsHandsAndCrankWithoutDeferredReplay" fullname="Tide.Tests.M7ReaderPlayModeTests.ApplicationSuspensionCancelsHandsAndCrankWithoutDeferredReplay" methodname="ApplicationSuspensionCancelsHandsAndCrankWithoutDeferredReplay" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="804613387" result="Passed" start-time="2026-09-19 16:48:45Z" end-time="2026-09-19 16:48:47Z" duration="1.906329" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1081" name="AuthoredRestAndBorrowedLightsSurviveCancellationAndDisable" fullname="Tide.Tests.M7ReaderPlayModeTests.AuthoredRestAndBorrowedLightsSurviveCancellationAndDisable" methodname="AuthoredRestAndBorrowedLightsSurviveCancellationAndDisable" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1507912827" result="Passed" start-time="2026-09-19 16:48:47Z" end-time="2026-09-19 16:48:47Z" duration="0.018251" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1073" name="GateOffNeverEntersReaderStage" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOffNeverEntersReaderStage" methodname="GateOffNeverEntersReaderStage" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="646885937" result="Passed" start-time="2026-09-19 16:48:47Z" end-time="2026-09-19 16:48:48Z" duration="0.167128" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1074" name="GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" methodname="GateOnBuildsStageWithTwoLightsAndTearsDownOnExit" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="989586317" result="Passed" start-time="2026-09-19 16:48:48Z" end-time="2026-09-19 16:48:48Z" duration="0.132463" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1082" name="GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" fullname="Tide.Tests.M7ReaderPlayModeTests.GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" methodname="GateOnSuppressesForeignHubLightsAndRestoresThemOnExit" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1189867413" result="Passed" start-time="2026-09-19 16:48:48Z" end-time="2026-09-19 16:48:48Z" duration="0.180059" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1075" name="ImportedGripTracksTheHandleThroughoutARead" fullname="Tide.Tests.M7ReaderPlayModeTests.ImportedGripTracksTheHandleThroughoutARead" methodname="ImportedGripTracksTheHandleThroughoutARead" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="347456734" result="Passed" start-time="2026-09-19 16:48:48Z" end-time="2026-09-19 16:48:50Z" duration="1.755798" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1076" name="InsertTouchesTheSupportAndReturnsWithinReach" fullname="Tide.Tests.M7ReaderPlayModeTests.InsertTouchesTheSupportAndReturnsWithinReach" methodname="InsertTouchesTheSupportAndReturnsWithinReach" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1713517433" result="Passed" start-time="2026-09-19 16:48:50Z" end-time="2026-09-19 16:48:51Z" duration="1.155134" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1078" name="OnlySuccessfulDeliberateReadsMoveCrank" fullname="Tide.Tests.M7ReaderPlayModeTests.OnlySuccessfulDeliberateReadsMoveCrank" methodname="OnlySuccessfulDeliberateReadsMoveCrank" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1667148146" result="Passed" start-time="2026-09-19 16:48:51Z" end-time="2026-09-19 16:48:54Z" duration="3.423795" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1079" name="OriginalReadRespondsOnlyAfterDurableSuccess" fullname="Tide.Tests.M7ReaderPlayModeTests.OriginalReadRespondsOnlyAfterDurableSuccess" methodname="OriginalReadRespondsOnlyAfterDurableSuccess" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="594723579" result="Passed" start-time="2026-09-19 16:48:54Z" end-time="2026-09-19 16:48:57Z" duration="2.993009" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: reader motion regression
+]]></output>
+            </test-case>
+            <test-case id="1080" name="ReducedMotionSwitchCancelsReadImmediatelyAndDoesNotReplay" fullname="Tide.Tests.M7ReaderPlayModeTests.ReducedMotionSwitchCancelsReadImmediatelyAndDoesNotReplay" methodname="ReducedMotionSwitchCancelsReadImmediatelyAndDoesNotReplay" classname="Tide.Tests.M7ReaderPlayModeTests" runstate="Runnable" seed="1499321049" result="Passed" start-time="2026-09-19 16:48:57Z" end-time="2026-09-19 16:49:00Z" duration="2.441786" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1083" name="M7UiSkinPlayModeTests" fullname="Tide.Tests.M7UiSkinPlayModeTests" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:00Z" duration="0.491879" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1084" name="GateOffKeepsCommittedLiteralsAndNoSkinBackings" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOffKeepsCommittedLiteralsAndNoSkinBackings" methodname="GateOffKeepsCommittedLiteralsAndNoSkinBackings" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="52749150" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:00Z" duration="0.122070" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1086" name="GateOnAtTextScale150RendersWithoutLayoutChange" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOnAtTextScale150RendersWithoutLayoutChange" methodname="GateOnAtTextScale150RendersWithoutLayoutChange" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="996173905" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:00Z" duration="0.299999" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1085" name="GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" fullname="Tide.Tests.M7UiSkinPlayModeTests.GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" methodname="GateOnInsertsNonRaycastBackingsAndKeepsButtonsClickable" classname="Tide.Tests.M7UiSkinPlayModeTests" runstate="Runnable" seed="1054877669" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:00Z" duration="0.066961" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1087" name="ReaderComparisonPlayModeTests" fullname="Tide.Tests.ReaderComparisonPlayModeTests" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:08Z" duration="8.273621" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1094" name="BothRangesFitTogetherAtLargeTextAndRecoveryRetryClearsPin" fullname="Tide.Tests.ReaderComparisonPlayModeTests.BothRangesFitTogetherAtLargeTextAndRecoveryRetryClearsPin" methodname="BothRangesFitTogetherAtLargeTextAndRecoveryRetryClearsPin" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1489333288" result="Passed" start-time="2026-09-19 16:49:00Z" end-time="2026-09-19 16:49:02Z" duration="1.862503" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1093" name="DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText" fullname="Tide.Tests.ReaderComparisonPlayModeTests.DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText" methodname="DiagnosticComparisonCardsKeepGraphAndReadoutContrastAtLargeText" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1571342282" result="Passed" start-time="2026-09-19 16:49:02Z" end-time="2026-09-19 16:49:03Z" duration="1.208688" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1092" name="FlatAndSingleSampleWindowsRenderButMissingWindowDoesNotInventSignal" fullname="Tide.Tests.ReaderComparisonPlayModeTests.FlatAndSingleSampleWindowsRenderButMissingWindowDoesNotInventSignal" methodname="FlatAndSingleSampleWindowsRenderButMissingWindowDoesNotInventSignal" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="714922294" result="Passed" start-time="2026-09-19 16:49:03Z" end-time="2026-09-19 16:49:04Z" duration="1.039358" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1088" name="PinAndComparisonNavigationLeaveProgressAndSaveUntouched" fullname="Tide.Tests.ReaderComparisonPlayModeTests.PinAndComparisonNavigationLeaveProgressAndSaveUntouched" methodname="PinAndComparisonNavigationLeaveProgressAndSaveUntouched" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="324429019" result="Passed" start-time="2026-09-19 16:49:04Z" end-time="2026-09-19 16:49:05Z" duration="0.911586" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1089" name="PinnedWindowSurvivesReaderEditsAndUndoWithDistinctAxes" fullname="Tide.Tests.ReaderComparisonPlayModeTests.PinnedWindowSurvivesReaderEditsAndUndoWithDistinctAxes" methodname="PinnedWindowSurvivesReaderEditsAndUndoWithDistinctAxes" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1887695489" result="Passed" start-time="2026-09-19 16:49:05Z" end-time="2026-09-19 16:49:06Z" duration="0.884318" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1091" name="UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" fullname="Tide.Tests.ReaderComparisonPlayModeTests.UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" methodname="UnavailablePinDoesNotReturnAfterUndoAndRedoOutsideReader" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1410392018" result="Passed" start-time="2026-09-19 16:49:06Z" end-time="2026-09-19 16:49:07Z" duration="1.180310" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1090" name="UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" fullname="Tide.Tests.ReaderComparisonPlayModeTests.UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" methodname="UndoToUnavailableRecordClearsItsPinnedGraphWhileEarlierRecordRemainsLoaded" classname="Tide.Tests.ReaderComparisonPlayModeTests" runstate="Runnable" seed="1264753511" result="Passed" start-time="2026-09-19 16:49:07Z" end-time="2026-09-19 16:49:08Z" duration="1.185044" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1095" name="ReviewNotesPlayModeTests" fullname="Tide.Tests.ReviewNotesPlayModeTests" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-09-19 16:49:08Z" end-time="2026-09-19 16:49:13Z" duration="4.950223" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1099" name="ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" fullname="Tide.Tests.ReviewNotesPlayModeTests.ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" methodname="ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1819688173" result="Passed" start-time="2026-09-19 16:49:08Z" end-time="2026-09-19 16:49:09Z" duration="0.380095" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-d3351eeec9f043ffbbc5d2b99927bee6
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · setup complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · observe brief begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · observe brief submitted
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=RanToCompletion
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · initialize complete
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait begin ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote status=WaitingForActivation
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · wait complete ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · cleanup drain begin
+M8_NOTE_TEST ASeparateExistingSaveIdentityCannotLoadThePreviousSavesNote · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1105" name="C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" fullname="Tide.Tests.ReviewNotesPlayModeTests.C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" methodname="C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1167089688" result="Passed" start-time="2026-09-19 16:49:09Z" end-time="2026-09-19 16:49:09Z" duration="0.572861" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-b9678a9856d742d7813ebfd93640fc48
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · setup complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · wait begin C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature status=RanToCompletion
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · wait complete C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · initialize complete
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · cleanup drain begin
+M8_NOTE_TEST C1NotesRemainOptionalAndReadableAtLargeTextWithoutRevealingUnobservedSignature · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1106" name="C1StagesNeverOfferSourceOriginalOpen" fullname="Tide.Tests.ReviewNotesPlayModeTests.C1StagesNeverOfferSourceOriginalOpen" methodname="C1StagesNeverOfferSourceOriginalOpen" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="700045136" result="Passed" start-time="2026-09-19 16:49:09Z" end-time="2026-09-19 16:49:10Z" duration="0.288788" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-f36148c4791d4957a4b3dc3c6e096387
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · initialize begin
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · initialize complete
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · setup complete
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · wait begin C1StagesNeverOfferSourceOriginalOpen status=RanToCompletion
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · wait complete C1StagesNeverOfferSourceOriginalOpen
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · initialize begin
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · initialize complete
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · cleanup drain begin
+M8_NOTE_TEST C1StagesNeverOfferSourceOriginalOpen · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1103" name="FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" fullname="Tide.Tests.ReviewNotesPlayModeTests.FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" methodname="FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1685341291" result="Passed" start-time="2026-09-19 16:49:10Z" end-time="2026-09-19 16:49:10Z" duration="0.265792" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-96f2062716f943bb8a88d39ed94bf648
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · initialize begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · initialize complete
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · setup complete
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · observe brief begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · observe brief submitted
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/injected-note-failure status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/injected-note-failure
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin WaitForGate/note-before-rename status=RanToCompletion
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete WaitForGate/note-before-rename
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-released status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-released
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait begin FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-retry status=WaitingForActivation
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · wait complete FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved/note-retry
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · cleanup drain begin
+M8_NOTE_TEST FailedSaveKeepsDraftAndInFlightLinkChangesRemainUnsaved · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1100" name="FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" fullname="Tide.Tests.ReviewNotesPlayModeTests.FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" methodname="FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="2137225476" result="Passed" start-time="2026-09-19 16:49:10Z" end-time="2026-09-19 16:49:10Z" duration="0.190744" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-0216bb12e8c844a38b272c29217679a2
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · initialize begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · initialize complete
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · setup complete
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · observe brief begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · observe brief submitted
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin WaitForGate/autosave-before-rename status=RanToCompletion
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete WaitForGate/autosave-before-rename
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/autosave-released status=WaitingForActivation
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/autosave-released
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait begin FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/note-after-autosave status=WaitingForActivation
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · wait complete FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus/note-after-autosave
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · cleanup drain begin
+M8_NOTE_TEST FirstAutosaveEnablesNotesAfterEditingEndsWithoutStealingTypingFocus · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1096" name="FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" fullname="Tide.Tests.ReviewNotesPlayModeTests.FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" methodname="FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1580196575" result="Passed" start-time="2026-09-19 16:49:10Z" end-time="2026-09-19 16:49:11Z" duration="0.388883" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-6a288fd18758444786e8af7590ce17a1
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · setup complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait begin FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists status=RanToCompletion
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait complete FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · wait complete Restart
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · initialize complete
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · cleanup drain begin
+M8_NOTE_TEST FreshDraftSurvivesClosingButCannotClaimPersistenceBeforeGameplayExists · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1101" name="ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" fullname="Tide.Tests.ReviewNotesPlayModeTests.ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" methodname="ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="24491059" result="Passed" start-time="2026-09-19 16:49:11Z" end-time="2026-09-19 16:49:11Z" duration="0.163691" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-9a184d8343fe4ebb9552e4f5b47083bf
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · initialize begin
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · initialize complete
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · setup complete
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · cleanup drain begin
+M8_NOTE_TEST ImeCandidateEscapeAndEnterStayInEditorWithoutEditingDraft · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1102" name="NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" fullname="Tide.Tests.ReviewNotesPlayModeTests.NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" methodname="NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="100193116" result="Passed" start-time="2026-09-19 16:49:11Z" end-time="2026-09-19 16:49:11Z" duration="0.259437" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-d726d0dd29f94dd3b5b65916036f989d
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · initialize begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · initialize complete
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · setup complete
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · observe brief begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · observe brief submitted
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait begin NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText status=WaitingForActivation
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait complete NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait begin NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText/native-tab-None status=WaitingForActivation
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait complete NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText/native-tab-None
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait begin NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText/native-tab-Tab status=WaitingForActivation
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · wait complete NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText/native-tab-Tab
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · cleanup drain begin
+M8_NOTE_TEST NativeTabCharacterAndPostExitEventsCannotModifyPastedNoteOrSavedText · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1097" name="NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" fullname="Tide.Tests.ReviewNotesPlayModeTests.NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" methodname="NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="760481460" result="Passed" start-time="2026-09-19 16:49:11Z" end-time="2026-09-19 16:49:11Z" duration="0.299399" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-75b3d4844b2147f59c9f61b175c7e0a9
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · setup complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · observe brief begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · observe brief submitted
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload status=WaitingForActivation
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload status=WaitingForActivation
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · wait complete Restart
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · initialize complete
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · cleanup drain begin
+M8_NOTE_TEST NotesUseOnlyObservedSourcesAndNeverChangeGameplayOnSaveOrReload · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1109" name="OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource" fullname="Tide.Tests.ReviewNotesPlayModeTests.OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource" methodname="OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1539835625" result="Passed" start-time="2026-09-19 16:49:11Z" end-time="2026-09-19 16:49:11Z" duration="0.212430" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-476fdca53ae045c7918517d16e94cb07
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · initialize begin
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · initialize complete
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · setup complete
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · observe brief begin
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · observe brief submitted
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · wait begin OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource status=WaitingForActivation
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · wait complete OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · cleanup drain begin
+M8_NOTE_TEST OpeningASourceOriginalReturnsToNotesWithFocusOnThatSource · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1107" name="OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes" fullname="Tide.Tests.ReviewNotesPlayModeTests.OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes" methodname="OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="2136239184" result="Passed" start-time="2026-09-19 16:49:11Z" end-time="2026-09-19 16:49:12Z" duration="0.517304" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-1b4eaeeb0e684c6eb6199344567fdb91
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · initialize begin
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · initialize complete
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · setup complete
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · observe brief begin
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · observe brief submitted
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · wait begin OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes status=WaitingForActivation
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · wait complete OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · cleanup drain begin
+M8_NOTE_TEST OpenToolPanelsNeverOfferSourceOriginalOpenWhileShellStillDoes · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1108" name="QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges" fullname="Tide.Tests.ReviewNotesPlayModeTests.QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges" methodname="QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="1159376433" result="Passed" start-time="2026-09-19 16:49:12Z" end-time="2026-09-19 16:49:12Z" duration="0.510469" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-e7dca5ab89c04fc4a9232492a96c7f90
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · initialize begin
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · initialize complete
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · setup complete
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · observe brief begin
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · observe brief submitted
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · wait begin QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges status=WaitingForActivation
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · wait complete QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · cleanup drain begin
+M8_NOTE_TEST QuestionOnlyUpdatesWhenExplicitlyRequestedAndStaysPinnedAcrossLinkChanges · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1110" name="ReducedMotionCompletesNoteTransitionsImmediately" fullname="Tide.Tests.ReviewNotesPlayModeTests.ReducedMotionCompletesNoteTransitionsImmediately" methodname="ReducedMotionCompletesNoteTransitionsImmediately" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="671689712" result="Passed" start-time="2026-09-19 16:49:12Z" end-time="2026-09-19 16:49:13Z" duration="0.405924" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-440a5c8937a747a3a9922d46d4aa23e6
+M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · initialize begin
+M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · initialize complete
+M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · setup complete
+M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · cleanup drain begin
+M8_NOTE_TEST ReducedMotionCompletesNoteTransitionsImmediately · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1098" name="TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" fullname="Tide.Tests.ReviewNotesPlayModeTests.TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" methodname="TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="5738603" result="Passed" start-time="2026-09-19 16:49:13Z" end-time="2026-09-19 16:49:13Z" duration="0.198274" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-3668158558af4a7ba4c407dcbe453c0b
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · initialize begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · initialize complete
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · setup complete
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · observe brief begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · observe brief submitted
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · wait begin TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape status=WaitingForActivation
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · wait complete TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · cleanup drain begin
+M8_NOTE_TEST TypingSuppressesShortcutsWithoutRerenderAndHeldReleaseCannotEscape · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+            <test-case id="1104" name="UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" fullname="Tide.Tests.ReviewNotesPlayModeTests.UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" methodname="UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection" classname="Tide.Tests.ReviewNotesPlayModeTests" runstate="Runnable" seed="953269995" result="Passed" start-time="2026-09-19 16:49:13Z" end-time="2026-09-19 16:49:13Z" duration="0.288855" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · setup directory=/var/folders/ln/_tgvj8cx53g_zzgqkk2w_vvm0000gn/T/review-note-play-4d1167fa05f8479cb6578f7341e9a885
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · setup complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · observe brief begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · observe brief submitted
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin Restart status=RanToCompletion
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete Restart
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · initialize complete
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait begin UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection status=WaitingForActivation
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · wait complete UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · cleanup drain begin
+M8_NOTE_TEST UnknownRestoredLinksCannotLeakOrExhaustVisibleSourceSelection · cleanup finished tasks=RanToCompletion
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1111" name="ScrollReachabilityTests" fullname="Tide.Tests.ScrollReachabilityTests" classname="Tide.Tests.ScrollReachabilityTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-19 16:49:13Z" end-time="2026-09-19 16:49:16Z" duration="2.475008" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1114" name="KeyboardAloneReachesEveryTickRowWithTheScrollFollowing" fullname="Tide.Tests.ScrollReachabilityTests.KeyboardAloneReachesEveryTickRowWithTheScrollFollowing" methodname="KeyboardAloneReachesEveryTickRowWithTheScrollFollowing" classname="Tide.Tests.ScrollReachabilityTests" runstate="Runnable" seed="1169152881" result="Passed" start-time="2026-09-19 16:49:13Z" end-time="2026-09-19 16:49:14Z" duration="0.914285" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1112" name="PointerWheelOverTheWorkSurfaceScrollsTheLongestList" fullname="Tide.Tests.ScrollReachabilityTests.PointerWheelOverTheWorkSurfaceScrollsTheLongestList" methodname="PointerWheelOverTheWorkSurfaceScrollsTheLongestList" classname="Tide.Tests.ScrollReachabilityTests" runstate="Runnable" seed="1852625269" result="Passed" start-time="2026-09-19 16:49:14Z" end-time="2026-09-19 16:49:15Z" duration="0.783587" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1113" name="RealMouseWheelReachesTheListThroughTheInputModule" fullname="Tide.Tests.ScrollReachabilityTests.RealMouseWheelReachesTheListThroughTheInputModule" methodname="RealMouseWheelReachesTheListThroughTheInputModule" classname="Tide.Tests.ScrollReachabilityTests" runstate="Runnable" seed="583785741" result="Passed" start-time="2026-09-19 16:49:15Z" end-time="2026-09-19 16:49:16Z" duration="0.775231" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1115" name="T0ActionPlatePlayModeTests" fullname="Tide.Tests.T0ActionPlatePlayModeTests" classname="Tide.Tests.T0ActionPlatePlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:16Z" duration="0.414173" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1116" name="CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" fullname="Tide.Tests.T0ActionPlatePlayModeTests.CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" methodname="CompletedC1ActionPlatesCarryAffordanceFocusInversionAndThreeTextTiersWithoutChangingActionsLabelsOrReflow" classname="Tide.Tests.T0ActionPlatePlayModeTests" runstate="Runnable" seed="2144571521" result="Passed" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:16Z" duration="0.413272" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1117" name="T0BootSceneTests" fullname="Tide.Tests.T0BootSceneTests" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" testcasecount="1" result="Skipped" label="Ignored" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:16Z" duration="0.019514" total="1" passed="0" failed="0" inconclusive="0" skipped="1" asserts="0">
+            <properties />
+            <reason>
+              <message><![CDATA[One or more child tests were ignored]]></message>
+            </reason>
+            <test-case id="1118" name="SerializedBootLoadsHubAndInitializesVisibleStartScreen" fullname="Tide.Tests.T0BootSceneTests.SerializedBootLoadsHubAndInitializesVisibleStartScreen" methodname="SerializedBootLoadsHubAndInitializesVisibleStartScreen" classname="Tide.Tests.T0BootSceneTests" runstate="Runnable" seed="1069416510" result="Skipped" label="Ignored" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:16Z" duration="0.012027" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <reason>
+                <message><![CDATA[Run with an explicit isolated --t0-save-dir for serialized boot verification.]]></message>
+              </reason>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1119" name="T0CaseThreadTests" fullname="Tide.Tests.T0CaseThreadTests" classname="Tide.Tests.T0CaseThreadTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:24Z" duration="7.208939" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1120" name="CaseThreadAfterCircuitNeverNamesTheSolutionSource" fullname="Tide.Tests.T0CaseThreadTests.CaseThreadAfterCircuitNeverNamesTheSolutionSource" methodname="CaseThreadAfterCircuitNeverNamesTheSolutionSource" classname="Tide.Tests.T0CaseThreadTests" runstate="Runnable" seed="1204535968" result="Passed" start-time="2026-09-19 16:49:16Z" end-time="2026-09-19 16:49:17Z" duration="0.645825" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1121" name="CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation" fullname="Tide.Tests.T0CaseThreadTests.CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation" methodname="CaseThreadFollowsLiveCitationsWithoutMutatingPuzzleOrNavigation" classname="Tide.Tests.T0CaseThreadTests" runstate="Runnable" seed="1398873987" result="Passed" start-time="2026-09-19 16:49:17Z" end-time="2026-09-19 16:49:23Z" duration="6.560202" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1122" name="T0IntroReplayReducedMotionTests" fullname="Tide.Tests.T0IntroReplayReducedMotionTests" classname="Tide.Tests.T0IntroReplayReducedMotionTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-19 16:49:24Z" end-time="2026-09-19 16:49:24Z" duration="0.397756" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1123" name="ExplicitIntroReplayUnderReducedMotionPresentsStaticGuidanceAndReturnsWithoutWrites" fullname="Tide.Tests.T0IntroReplayReducedMotionTests.ExplicitIntroReplayUnderReducedMotionPresentsStaticGuidanceAndReturnsWithoutWrites" methodname="ExplicitIntroReplayUnderReducedMotionPresentsStaticGuidanceAndReturnsWithoutWrites" classname="Tide.Tests.T0IntroReplayReducedMotionTests" runstate="Runnable" seed="1313632964" result="Passed" start-time="2026-09-19 16:49:24Z" end-time="2026-09-19 16:49:24Z" duration="0.376345" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1124" name="T0PlayModeTests" fullname="Tide.Tests.T0PlayModeTests" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-09-19 16:49:24Z" end-time="2026-09-19 16:49:52Z" duration="28.517332" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1137" name="AccessibilityOptionsPreserveHoldRangeAndLargeTextNavigation" fullname="Tide.Tests.T0PlayModeTests.AccessibilityOptionsPreserveHoldRangeAndLargeTextNavigation" methodname="AccessibilityOptionsPreserveHoldRangeAndLargeTextNavigation" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="2122864863" result="Passed" start-time="2026-09-19 16:49:24Z" end-time="2026-09-19 16:49:24Z" duration="0.584820" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1145" name="AlignmentPracticeIsolatesRealShortcutsAndAllWorkingState" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeIsolatesRealShortcutsAndAllWorkingState" methodname="AlignmentPracticeIsolatesRealShortcutsAndAllWorkingState" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="379580624" result="Passed" start-time="2026-09-19 16:49:24Z" end-time="2026-09-19 16:49:26Z" duration="1.387820" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1148" name="AlignmentPracticeRejectsConfirmModePersistence" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsConfirmModePersistence" methodname="AlignmentPracticeRejectsConfirmModePersistence" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="301026418" result="Passed" start-time="2026-09-19 16:49:26Z" end-time="2026-09-19 16:49:27Z" duration="0.865808" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1150" name="AlignmentPracticeRejectsLegalPatrolEntry" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalPatrolEntry" methodname="AlignmentPracticeRejectsLegalPatrolEntry" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1266602618" result="Passed" start-time="2026-09-19 16:49:27Z" end-time="2026-09-19 16:49:27Z" duration="0.287264" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1151" name="AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" methodname="AlignmentPracticeRejectsLegalSignatureAndInterviewPrepEntry" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1243413340" result="Passed" start-time="2026-09-19 16:49:27Z" end-time="2026-09-19 16:49:27Z" duration="0.384549" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1149" name="AlignmentPracticeRejectsReviewNotePersistence" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotePersistence" methodname="AlignmentPracticeRejectsReviewNotePersistence" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="184595723" result="Passed" start-time="2026-09-19 16:49:27Z" end-time="2026-09-19 16:49:28Z" duration="0.782518" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1147" name="AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" methodname="AlignmentPracticeRejectsReviewNotesWithoutReplacingReader" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1346564575" result="Passed" start-time="2026-09-19 16:49:28Z" end-time="2026-09-19 16:49:29Z" duration="0.829298" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1146" name="AlignmentPracticeRejectsStartGameWithoutReplacingReader" fullname="Tide.Tests.T0PlayModeTests.AlignmentPracticeRejectsStartGameWithoutReplacingReader" methodname="AlignmentPracticeRejectsStartGameWithoutReplacingReader" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1724300603" result="Passed" start-time="2026-09-19 16:49:29Z" end-time="2026-09-19 16:49:30Z" duration="0.758130" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1143" name="CancelledCommitRequeuesWorkingStateWhenRedoHasNoEffect" fullname="Tide.Tests.T0PlayModeTests.CancelledCommitRequeuesWorkingStateWhenRedoHasNoEffect" methodname="CancelledCommitRequeuesWorkingStateWhenRedoHasNoEffect" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="68942662" result="Passed" start-time="2026-09-19 16:49:30Z" end-time="2026-09-19 16:49:31Z" duration="0.850211" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 autosave: m23 interrupted working-save failure
+T0 autosave: m23 interrupted working-save failure
+]]></output>
+            </test-case>
+            <test-case id="1130" name="CanonicalToolRoutingAndRebindingRetainIntent" fullname="Tide.Tests.T0PlayModeTests.CanonicalToolRoutingAndRebindingRetainIntent" methodname="CanonicalToolRoutingAndRebindingRetainIntent" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="81800911" result="Passed" start-time="2026-09-19 16:49:31Z" end-time="2026-09-19 16:49:32Z" duration="1.019054" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1138" name="ConfirmationInkUsesPresentationClockAndClearsOnContextExit" fullname="Tide.Tests.T0PlayModeTests.ConfirmationInkUsesPresentationClockAndClearsOnContextExit" methodname="ConfirmationInkUsesPresentationClockAndClearsOnContextExit" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="881494081" result="Passed" start-time="2026-09-19 16:49:32Z" end-time="2026-09-19 16:49:32Z" duration="0.251505" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1157" name="DocumentsOverlaysAndPendingCommitDoNotBankIdleTime" fullname="Tide.Tests.T0PlayModeTests.DocumentsOverlaysAndPendingCommitDoNotBankIdleTime" methodname="DocumentsOverlaysAndPendingCommitDoNotBankIdleTime" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1592232913" result="Passed" start-time="2026-09-19 16:49:32Z" end-time="2026-09-19 16:49:32Z" duration="0.189505" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1136" name="DrawerCameraRendersInsideUnobscuredSceneWindow" fullname="Tide.Tests.T0PlayModeTests.DrawerCameraRendersInsideUnobscuredSceneWindow" methodname="DrawerCameraRendersInsideUnobscuredSceneWindow" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="254182558" result="Passed" start-time="2026-09-19 16:49:32Z" end-time="2026-09-19 16:49:32Z" duration="0.117943" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1144" name="FeedbackSeparatesFailedAutosaveFromDurableConfirmation" fullname="Tide.Tests.T0PlayModeTests.FeedbackSeparatesFailedAutosaveFromDurableConfirmation" methodname="FeedbackSeparatesFailedAutosaveFromDurableConfirmation" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1344349271" result="Passed" start-time="2026-09-19 16:49:32Z" end-time="2026-09-19 16:49:33Z" duration="1.024127" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 autosave: m23 autosave failure
+]]></output>
+            </test-case>
+            <test-case id="1132" name="GamepadOnlyCompletesAllThreeBeats" fullname="Tide.Tests.T0PlayModeTests.GamepadOnlyCompletesAllThreeBeats" methodname="GamepadOnlyCompletesAllThreeBeats" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1080625526" result="Passed" start-time="2026-09-19 16:49:33Z" end-time="2026-09-19 16:49:36Z" duration="2.633119" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1126" name="GamepadStartsAndShellQueryHasNoAction" fullname="Tide.Tests.T0PlayModeTests.GamepadStartsAndShellQueryHasNoAction" methodname="GamepadStartsAndShellQueryHasNoAction" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="255228067" result="Passed" start-time="2026-09-19 16:49:36Z" end-time="2026-09-19 16:49:36Z" duration="0.153334" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1152" name="HintIdleThresholdAndDismissCooldownAreIndependentAndNeverReveal" fullname="Tide.Tests.T0PlayModeTests.HintIdleThresholdAndDismissCooldownAreIndependentAndNeverReveal" methodname="HintIdleThresholdAndDismissCooldownAreIndependentAndNeverReveal" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="973321586" result="Passed" start-time="2026-09-19 16:49:36Z" end-time="2026-09-19 16:49:36Z" duration="0.218424" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1154" name="KeyboardControllerAndPointerActivityResetIdleWithoutRebuildingScreen" fullname="Tide.Tests.T0PlayModeTests.KeyboardControllerAndPointerActivityResetIdleWithoutRebuildingScreen" methodname="KeyboardControllerAndPointerActivityResetIdleWithoutRebuildingScreen" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="763244073" result="Passed" start-time="2026-09-19 16:49:36Z" end-time="2026-09-19 16:49:36Z" duration="0.141630" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1131" name="KeyboardOnlyCompletesAllThreeBeats" fullname="Tide.Tests.T0PlayModeTests.KeyboardOnlyCompletesAllThreeBeats" methodname="KeyboardOnlyCompletesAllThreeBeats" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="810588504" result="Passed" start-time="2026-09-19 16:49:36Z" end-time="2026-09-19 16:49:39Z" duration="2.923218" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1125" name="KeyboardStartsAndHeldConfirmCannotCrossScreen" fullname="Tide.Tests.T0PlayModeTests.KeyboardStartsAndHeldConfirmCannotCrossScreen" methodname="KeyboardStartsAndHeldConfirmCannotCrossScreen" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1287470851" result="Passed" start-time="2026-09-19 16:49:39Z" end-time="2026-09-19 16:49:39Z" duration="0.059423" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1156" name="LargeTextHintOfferStaysOutsideHeadingsAndCancelDoesNotLeaveTheTool" fullname="Tide.Tests.T0PlayModeTests.LargeTextHintOfferStaysOutsideHeadingsAndCancelDoesNotLeaveTheTool" methodname="LargeTextHintOfferStaysOutsideHeadingsAndCancelDoesNotLeaveTheTool" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="149930184" result="Passed" start-time="2026-09-19 16:49:39Z" end-time="2026-09-19 16:49:39Z" duration="0.085895" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1142" name="LatestQueuedHintSaveFailureRemainsVisible" fullname="Tide.Tests.T0PlayModeTests.LatestQueuedHintSaveFailureRemainsVisible" methodname="LatestQueuedHintSaveFailureRemainsVisible" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1309343990" result="Passed" start-time="2026-09-19 16:49:39Z" end-time="2026-09-19 16:49:40Z" duration="0.819254" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 autosave: m23 newer hint autosave failure
+]]></output>
+            </test-case>
+            <test-case id="1155" name="OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation" fullname="Tide.Tests.T0PlayModeTests.OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation" methodname="OfferedHintIsFocusableWithoutStealingFocusAndOpensOnlyOnActivation" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="499635326" result="Passed" start-time="2026-09-19 16:49:40Z" end-time="2026-09-19 16:49:40Z" duration="0.092186" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1129" name="PendingAllowsOverlayUndoAndSuppressesStaleReceipt" fullname="Tide.Tests.T0PlayModeTests.PendingAllowsOverlayUndoAndSuppressesStaleReceipt" methodname="PendingAllowsOverlayUndoAndSuppressesStaleReceipt" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1062471422" result="Passed" start-time="2026-09-19 16:49:40Z" end-time="2026-09-19 16:49:41Z" duration="0.817294" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1135" name="ReaderWaveformUsesViewportClipAndCullsOutsideScrollArea" fullname="Tide.Tests.T0PlayModeTests.ReaderWaveformUsesViewportClipAndCullsOutsideScrollArea" methodname="ReaderWaveformUsesViewportClipAndCullsOutsideScrollArea" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1676126491" result="Passed" start-time="2026-09-19 16:49:41Z" end-time="2026-09-19 16:49:42Z" duration="0.684262" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1133" name="RecoveryNewSlotIsSelectableAfterSessionRestart" fullname="Tide.Tests.T0PlayModeTests.RecoveryNewSlotIsSelectableAfterSessionRestart" methodname="RecoveryNewSlotIsSelectableAfterSessionRestart" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="411720457" result="Passed" start-time="2026-09-19 16:49:42Z" end-time="2026-09-19 16:49:42Z" duration="0.281079" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1141" name="SavedFeedbackRemainsVisibleAtDeepEvidenceFocus" fullname="Tide.Tests.T0PlayModeTests.SavedFeedbackRemainsVisibleAtDeepEvidenceFocus" methodname="SavedFeedbackRemainsVisibleAtDeepEvidenceFocus" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1833865159" result="Passed" start-time="2026-09-19 16:49:42Z" end-time="2026-09-19 16:49:43Z" duration="0.985964" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1139" name="SaveFailureNeverEmitsSuccessAndRetryEmitsOnce" fullname="Tide.Tests.T0PlayModeTests.SaveFailureNeverEmitsSuccessAndRetryEmitsOnce" methodname="SaveFailureNeverEmitsSuccessAndRetryEmitsOnce" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1696581698" result="Passed" start-time="2026-09-19 16:49:43Z" end-time="2026-09-19 16:49:45Z" duration="1.651972" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[T0 commit: injected
+]]></output>
+            </test-case>
+            <test-case id="1153" name="ShortCooldownCannotBypassIdleThreshold" fullname="Tide.Tests.T0PlayModeTests.ShortCooldownCannotBypassIdleThreshold" methodname="ShortCooldownCannotBypassIdleThreshold" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="400399264" result="Passed" start-time="2026-09-19 16:49:45Z" end-time="2026-09-19 16:49:45Z" duration="0.262410" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1128" name="ThreeConfirmationModesRequireTheirOwnGesture" fullname="Tide.Tests.T0PlayModeTests.ThreeConfirmationModesRequireTheirOwnGesture" methodname="ThreeConfirmationModesRequireTheirOwnGesture" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="630464705" result="Passed" start-time="2026-09-19 16:49:45Z" end-time="2026-09-19 16:49:49Z" duration="4.323049" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1127" name="UiActionAdapterCompletesCanonicalT0AndReopensSavedState" fullname="Tide.Tests.T0PlayModeTests.UiActionAdapterCompletesCanonicalT0AndReopensSavedState" methodname="UiActionAdapterCompletesCanonicalT0AndReopensSavedState" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1666689071" result="Passed" start-time="2026-09-19 16:49:49Z" end-time="2026-09-19 16:49:51Z" duration="2.007068" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1134" name="ValidatedRetryClearsRefusalAndPreservesSaveIdentity" fullname="Tide.Tests.T0PlayModeTests.ValidatedRetryClearsRefusalAndPreservesSaveIdentity" methodname="ValidatedRetryClearsRefusalAndPreservesSaveIdentity" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="1712220703" result="Passed" start-time="2026-09-19 16:49:51Z" end-time="2026-09-19 16:49:52Z" duration="0.191509" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1140" name="WorkingSaveCannotOverwriteAConfirmationPreview" fullname="Tide.Tests.T0PlayModeTests.WorkingSaveCannotOverwriteAConfirmationPreview" methodname="WorkingSaveCannotOverwriteAConfirmationPreview" classname="Tide.Tests.T0PlayModeTests" runstate="Runnable" seed="893110486" result="Passed" start-time="2026-09-19 16:49:52Z" end-time="2026-09-19 16:49:52Z" duration="0.842373" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1158" name="T0ReadingBackingPlayModeTests" fullname="Tide.Tests.T0ReadingBackingPlayModeTests" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-19 16:49:52Z" end-time="2026-09-19 16:49:54Z" duration="1.156880" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1160" name="M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" fullname="Tide.Tests.T0ReadingBackingPlayModeTests.M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" methodname="M21GateOnGivesWorkSurfaceBodyTextAContentSafeReadingBandWithoutTouchingCopyColoursOrPlates" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" seed="1479562646" result="Passed" start-time="2026-09-19 16:49:52Z" end-time="2026-09-19 16:49:53Z" duration="0.211592" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1159" name="PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" fullname="Tide.Tests.T0ReadingBackingPlayModeTests.PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" methodname="PracticeCorrespondenceAt150PercentKeepsItsReadingGroundUnderTheDiagnosticSurface" classname="Tide.Tests.T0ReadingBackingPlayModeTests" runstate="Runnable" seed="1695932921" result="Passed" start-time="2026-09-19 16:49:53Z" end-time="2026-09-19 16:49:54Z" duration="0.943105" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1161" name="T0ResourceInteractionTests" fullname="Tide.Tests.T0ResourceInteractionTests" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:55Z" duration="1.051185" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1165" name="CloserRendererWithoutColliderBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserRendererWithoutColliderBlocksDrawerSelection" methodname="CloserRendererWithoutColliderBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1482385629" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:54Z" duration="0.224680" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1167" name="CloserSceneGeometryBlocksDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.CloserSceneGeometryBlocksDrawerSelection" methodname="CloserSceneGeometryBlocksDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1497363941" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:54Z" duration="0.124739" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1162" name="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" fullname="Tide.Tests.T0ResourceInteractionTests.LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" methodname="LeftClickApprovedDrawerFrontSelectsExistingInvestigationWithoutChangingResource" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="830859935" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:54Z" duration="0.111671" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1164" name="NonReadableDrawerPickingRejectsHiddenOrMissedBounds" fullname="Tide.Tests.T0ResourceInteractionTests.NonReadableDrawerPickingRejectsHiddenOrMissedBounds" methodname="NonReadableDrawerPickingRejectsHiddenOrMissedBounds" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="78838275" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:54Z" duration="0.109887" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1166" name="NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" fullname="Tide.Tests.T0ResourceInteractionTests.NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" methodname="NonVisibleOrFartherRenderersDoNotBlockDrawerSelection" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1513611083" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:54Z" duration="0.265728" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1163" name="SceneClickDoesNotCrossOverlayToolDocumentOrUi" fullname="Tide.Tests.T0ResourceInteractionTests.SceneClickDoesNotCrossOverlayToolDocumentOrUi" methodname="SceneClickDoesNotCrossOverlayToolDocumentOrUi" classname="Tide.Tests.T0ResourceInteractionTests" runstate="Runnable" seed="1455494881" result="Passed" start-time="2026-09-19 16:49:54Z" end-time="2026-09-19 16:49:55Z" duration="0.212646" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1168" name="T0SettingsSlotPersistenceTests" fullname="Tide.Tests.T0SettingsSlotPersistenceTests" classname="Tide.Tests.T0SettingsSlotPersistenceTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-19 16:49:55Z" end-time="2026-09-19 16:49:55Z" duration="0.503705" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1169" name="TextScaleChosenInARecoverySlotSurvivesRestart" fullname="Tide.Tests.T0SettingsSlotPersistenceTests.TextScaleChosenInARecoverySlotSurvivesRestart" methodname="TextScaleChosenInARecoverySlotSurvivesRestart" classname="Tide.Tests.T0SettingsSlotPersistenceTests" runstate="Runnable" seed="477950337" result="Passed" start-time="2026-09-19 16:49:55Z" end-time="2026-09-19 16:49:55Z" duration="0.502761" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1170" name="T0WorkSurfacePlayModeTests" fullname="Tide.Tests.T0WorkSurfacePlayModeTests" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-19 16:49:55Z" end-time="2026-09-19 16:49:55Z" duration="0.214486" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1171" name="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" fullname="Tide.Tests.T0WorkSurfacePlayModeTests.M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" methodname="M20GateOffKeepsTheM19WorkSurfaceAndGateOnAppliesR02OnceAsANonTiledFullBleedBacking" classname="Tide.Tests.T0WorkSurfacePlayModeTests" runstate="Runnable" seed="1459457500" result="Passed" start-time="2026-09-19 16:49:55Z" end-time="2026-09-19 16:49:55Z" duration="0.213158" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/jangyoung/Library/Application Support/TideRegistry/Unknown T0/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

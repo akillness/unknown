@@ -193,7 +193,12 @@ namespace Tide.Tests {
    Assert.IsTrue(card.enabled&&card.gameObject.activeInHierarchy);
    if(!game.Simulation.IsComplete(game.Journal.State,"t0-b1"))
     foreach(var forbidden in new[]{"당직실","구 서고","판 #0","인수 각서","이관 목록","작업대","서랍"})StringAssert.DoesNotContain(forbidden,card.text);
-   StringAssert.Contains("필요한 인용 "+count+"/2",card.text);
+   // M27: the citation counter belongs to the beat that requires citations; earlier beats show only their own condition count.
+   if(game.Simulation.IsComplete(game.Journal.State,"t0-b2")&&!completed)StringAssert.Contains("필요한 인용 "+count+"/2",card.text);
+   else StringAssert.DoesNotContain("필요한 인용",card.text,"no citation counter before the citation beat");
+   if(!completed)StringAssert.Contains("조건 ",card.text,"the card names the current beat's condition progress");
+   StringAssert.Contains("단계 ",card.text,"the card names the stage");
+   StringAssert.DoesNotContain("t0-b",card.text,"raw beat ids never reach the player");
    StringAssert.Contains("다음:",card.text);
    StringAssert.DoesNotContain("H-1",card.text);
    StringAssert.DoesNotContain("H+3",card.text);

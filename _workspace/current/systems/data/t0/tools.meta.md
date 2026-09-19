@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-13
+updated: 2026-09-19
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -18,7 +18,7 @@ generated: true
 node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/current/systems/data/t0
 ```
 
-## 2. 이번 출력 [OBSERVED 2026-09-13]
+## 2. 이번 출력 [OBSERVED 2026-09-19]
 
 | 항목 | 값 |
 |---|---|
@@ -34,13 +34,13 @@ node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/curren
 
 | 파일 | sha256(앞 12) |
 |---|---|
-| `planning/campaign.json` | `baa3ef6d3729…` |
+| `planning/campaign.json` | `a86400a7a87a…` |
 | `synopsis/t0-records.md` | `3b0f508faab2…` |
 | `systems/data-schemas/tools.md` | `bee25c972a69…` |
 | `systems/data-schemas/zones.md` | `0c166c80b9b5…` |
 | `concept/style-guide.md` | `a70e3dc79292…` |
 | `modeling/specs/hub-watchroom.md` | `d2e08e4e119f…` |
-| `modeling/asset-manifest.md` | `5410b0bbcda8…` |
+| `modeling/asset-manifest.md` | `efbcbc62684c…` |
 | `worldview/worldview-bible.md` | `87a9617ec9fe…` |
 | `systems/system-specs/wiring-trace.md` | `60d6f2b15844…` |
 | `systems/system-specs/plate-readout.md` | `55f502a63cbf…` |

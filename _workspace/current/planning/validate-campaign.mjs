@@ -661,6 +661,36 @@ if (WANT_T0) {
     t05.length === 0 ? { circuit: { hasCommit: circuit?.hasCommit, commitCondition: circuit?.commitCondition }, reader: { hasCommit: reader?.hasCommit, commandId: reader?.commitCondition?.commandId, rule: readerRule }, literalMatch } : t05,
     "일치 판정은 슬롯 단위다(매체·계통·관측소 + '출처'). tools.json 은 '매체'를 스키마 필드명 'sourceType' 으로 적으므로 문자 단위 동일은 아니다 — literalMatch 필드로 보고한다 [OBSERVED]");
 
+  // ── T0-06 · 요구조건 라벨 (RFC-CX-M27 실마리 명료화) ─────────────────
+  // 모든 completionPredicate.requires[] 행은 플레이어용 label·caption(≤8자)·step(1..n 유일)을 갖고,
+  // 기록 표시명(records.json displayNameKo)·recordId·시각 값(H-… / H+…)을 담지 않는다. 런타임은 이 필드만으로 체크리스트를 그린다.
+  // 카드 금지어 = Tests/PlayMode/T0CaseThreadTests.cs AssertNoDisclosure 와 동일 목록(단일 정본은 여기; 테스트가 거울).
+  const CARD_BANNED = ['rec-', '당직실 표준판', '조위장부', '시간창', '단일 사고', '유지 실패', '서명 순서', '책임 사슬'];
+  const t06 = [];
+  const displayNames = (loaded.records.rows ?? []).map((r) => r.displayNameKo).filter(Boolean);
+  const recordIds = (loaded.records.rows ?? []).map((r) => r.recordId).filter(Boolean);
+  for (const r of bRows) {
+    const reqs = r.completionPredicate?.requires ?? [];
+    const steps = reqs.map((q) => q.step);
+    if (steps.some((x) => !Number.isInteger(x) || x < 1 || x > reqs.length)) t06.push(`${r.id}: step 은 1..${reqs.length} 정수여야 한다 (${JSON.stringify(steps)})`);
+    if (uniq(steps).length !== steps.length) t06.push(`${r.id}: step 중복 ${JSON.stringify(steps)}`);
+    reqs.forEach((q, i) => {
+      for (const f of ['label', 'caption']) {
+        if (typeof q[f] !== 'string' || !q[f].trim()) { t06.push(`${r.id}.requires[${i}] (${q.type}): ${f} 없음`); continue; }
+        if (f === 'caption' && q[f].length > 8) t06.push(`${r.id}.requires[${i}]: caption ${q[f].length}자 > 8`);
+        for (const n of displayNames) if (q[f].includes(n)) t06.push(`${r.id}.requires[${i}].${f} 가 기록 표시명 '${n}' 을 담는다`);
+        for (const n of recordIds) if (q[f].includes(n)) t06.push(`${r.id}.requires[${i}].${f} 가 recordId '${n}' 을 담는다`);
+        if (/H[-+]\d/.test(q[f])) t06.push(`${r.id}.requires[${i}].${f} 가 시각 값을 담는다`);
+        for (const n of CARD_BANNED) if (q[f].includes(n)) t06.push(`${r.id}.requires[${i}].${f} 가 카드 금지어 '${n}' 을 담는다`);
+      }
+    });
+  }
+  tcheck('T0-06', 'requires[] 마다 label·caption(≤8자)·step(1..n 유일) · 표시명/recordId/시각 값 부재',
+    t06.length === 0,
+    { perRequirement: ['label', 'caption', 'step'], forbidden: ['displayNameKo', 'recordId', /H[-+]\d/.source, ...CARD_BANNED] },
+    t06.length === 0 ? Object.fromEntries(bRows.map((r) => [r.id, (r.completionPredicate?.requires ?? []).map((q) => `${q.step}:${q.caption}`)])) : t06,
+    '런타임 체크리스트(사건 흐름 카드 밴드 · 안내 오버레이)는 이 필드만 읽는다. 새 비트의 술어에 라벨이 없으면 여기서 FAIL — 확장 시 단일 진입점 [OBSERVED]');
+
   const tFailed = tchecks.filter((c) => c.status === 'FAIL');
   process.stdout.write(JSON.stringify({
     validator: 'planning/validate-campaign.mjs --t0',

@@ -1,14 +1,14 @@
 {
   "emitter": "systems/pipeline/emit-tables.mjs",
   "emitterOwner": "game-systems-designer",
-  "emittedUtc": "2026-09-13T13:52:26.560Z",
+  "emittedUtc": "2026-09-19T16:19:27.935Z",
   "scope": "t0",
-  "scopeSource": "--scope",
+  "scopeSource": "out-dir-basename",
   "dryRun": false,
   "source": {
     "path": "planning/campaign.json",
-    "sha256": "baa3ef6d3729e5dbc8d2d80c4e231e269b3701981c03029cda3859decaf24afe",
-    "bytes": 123944
+    "sha256": "a86400a7a87abe04ad30fbeed9edf1e91a300c6712eeb64eec64c1b9918f62cb",
+    "bytes": 124075
   },
   "validator": {
     "path": "planning/validate-campaign.mjs",
@@ -50,15 +50,15 @@
     {
       "file": "beats.json",
       "derivation": "subset+predicate",
-      "sha256": "356eeceee93f3ae997ff55a7ebd94e3f553d0f0aa0cfd36b91b96ff62e025fe9",
-      "bytes": 16213,
+      "sha256": "bfff29219124bbd4022beb0234e1b4db535916205a8c7ce4675a457d3cc68da2",
+      "bytes": 17929,
       "rows": 3
     },
     {
       "file": "hints.json",
       "derivation": "projection",
-      "sha256": "168146a8cbd1f5e636dbc6e4b693098a90b1ac3a9ced1cd95d10a4bf7ce9a7c7",
-      "bytes": 4054,
+      "sha256": "d88210f95749a981823af48b97fefaffff14b549deedb0de0129c31eea238c1b",
+      "bytes": 4137,
       "rows": 9
     },
     {
@@ -78,7 +78,7 @@
     {
       "file": "records.json",
       "derivation": "markdown-parse+rule",
-      "sha256": "f5263d036f14bdb2b687aa68ccfa837a9dd6750ea21a9ac7388bb3632f83e9b6",
+      "sha256": "371572e7f4ad154435ad273997890e7baa75a8bd83cb8635925ade9cab64cf11",
       "bytes": 70694,
       "rows": 5
     }
@@ -131,7 +131,7 @@
     },
     "manifest": {
       "path": "modeling/asset-manifest.md",
-      "sha256": "5410b0bbcda86d96c3de5f09c113da5639b92194e6e5d29292e7e12eaa614d88"
+      "sha256": "efbcbc62684c2b6211f51633246b6af1dccba803350d95d9e19c8654919ed729"
     },
     "bible": {
       "path": "worldview/worldview-bible.md",

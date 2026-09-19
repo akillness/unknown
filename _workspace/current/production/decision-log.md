@@ -776,3 +776,16 @@ The approved-profile requirement is fulfilled. Final native/video receipts retai
 - [DECISION · U1] 영수증 키보드 경로 `R`(`WatchBindings.json` Overlay 바인딩, `WatchInput` 역할 `receipt`, `OpenOverlay` 게이트: t0-b3 저장 완료 전에는 `receiptNotYet` 상태문만, 이름 없음). `controls`·`guideControlsDetail` 문구 갱신. 테스트 `RKeyOpensReceiptOnlyAfterT0Completion`(판독기에서 R로 열림·Esc로 닫힘·저장 바이트 불변). 근거: 네이티브 캡처에서 영수증 플레이트 도달에 Tab 탐색 7회.
 - [DECISION · 개선 큐] `handoff/m26-results-and-improvement-plan.md`가 정본. U0·U1 적용, U2~U4 사람 관찰 전 보류, U5 빌드 비결정성은 원장 누적 관찰 후, U6 Windows 모듈은 사용자 결정. 홀드 테스트의 실시간 의존은 U7 후보(가상 시계)로 등록.
 - [VERIFY] 아래 「QA 루프 정상 행」과 최종 릴리스 빌드 영수증은 `systems/tech-verification/m26/verification.json`·`qa/loop/ledger.md`.
+
+## RFC-CX-M27-20260918 · 실마리 명료화 — 클루 명확 · 확장 가능한 시나리오 · 중간 지점 · 진행 보장/가이드 · 밸런스 · 리소스 UI
+
+- [REQUEST] 사용자 2026-09-18: "개선 방향은 게임의 클루가 명확하고 확장 가능한 시나리오 유지와 각 스테이지별 또는 실마리의 중간 지점이 명료해야 하고, 게임 진행이 가능하고 가이드나 튜토리얼이 포함되도록 플레이 관점에서 밸런스와 리소스 UI 개선."
+- [SURVEY] 읽기 전용 3건(캠페인 데이터 · 런타임 안내 · 밸런스/리소스 UI). 발견: 카드 진행 카운터가 t0-b3 인용 2건에 고정(`T0GameSession.cs:245-250`), 요구조건 라벨·순서 데이터 부재, 결손 구간 끝점 모호(H+2:56 vs H+3:00), t0-b1 목표문 비행동, t0-b2 "법1", C1 안내 자리표시·카드 미번역 리터럴, 힌트 토스트 끌 수 없음(C6-F35).
+- [DECISION · 데이터] `campaign.json` t0-b1/t0-b2 objective 교체, t0-b3 L2 힌트에 끝점 규칙 추가(값 없음). `emit-tables.mjs` 술어 맵에 `requires[].label/caption/step`(C-07 핀은 매체어만). 검증기 `--t0` **T0-06** 추가: label·caption(≤8자)·step(1..n 유일), 기록 표시명·recordId·시각 값·카드 금지어 부재. 결과 50/50 · 6/6. `T0ProjectBuilder.Prepare`로 카탈로그 영수증 재결합.
+- [DECISION · 런타임] `M27ChecklistSession`(체크리스트·단계 표기·조건 수·데이터 기반 다음 행동·복원 상태문)·`M27ChecklistInterface`(칩 밴드 — 고정·인라인 두 레이아웃). 카드 첫 줄 `단계 i/n · 제목`, 둘째 줄 `조건 d/t`(인용 요구 비트만 `필요한 인용 n/m`), `다음:` = 첫 미충족 조건 라벨. 안내 오버레이: 단계 제목 · 「이 단계의 조건」 전체 라벨 · C1은 순찰/서명 패킷에서 도출. 교습 헤더·부제가 비트 id 대신 단계 표기. C1 카드 리터럴 → `T0Strings`. 힌트 제안 on/off(`hint-offer`). 힌트 토스트 테두리 칩. 질문 카드 uv 중앙 크롭. 죽은 `M25ZoneBackdrop` 삭제. **App/에 비트 리터럴 분기 추가 0건.** 카드 높이 .185→.15, 밴드 .045 — 작업면 높이 불변.
+- [PROVIDER] Higgsfield `gpt_image_2` 글리프 3장(done/current/open), 순차 실행, 견적 10.5 = 관측 10.5(2249.0→2238.5). M26 종료 2351.0 → 시작 2249.0 = −102.0 세션 밖 소모 관측. `M27ResourceProjectBuilder.Import`(SHA) → `Approve()` 로컬 개발 프로필(`m27Approved`). 원본 `runtimeEligible:false`, 상업 사용권 UNVERIFIED.
+- [QA LOOP · 회귀 포착] 사이클 `20260919T163626Z` RED 3건: 새 밴드가 작업면을 줄여 서명지 클릭 좌표가 어긋남(×2), 칩 텍스트 α.55가 판독면 대비 계약(M21) 위반. 수정 후 `20260919T164126Z`·`20260919T164740Z` GREEN.
+- [VERIFY] EditMode 65/65 · PlayMode 148(147/0/1 조건부 skip) · 격리 boot 1/1 · 신규 M27 테스트 6/6(요구조건 미러·틀린 시간창의 열린 조건·안내 조건 목록·C1 순찰 체크리스트·힌트 토스트 설정·글리프 게이트). 적응: `T0CaseThreadTests.AssertCard`, `M25GuidePlayModeTests` 3건(단계 제목). 빌드 316파일/445,068,423B. 네이티브 캡처 5장.
+- [BOUNDARY] 수치 밴드 무변경(n=0) · 사람 플레이 n=0 · 성능/Windows 미측정 · L1 힌트 문면 규칙(C6-F3)·`revealsValues` 기계 판정 보류.
+- [NOTE · Prepare] `T0ProjectBuilder.Prepare`가 카탈로그 영수증을 재결합하며 `Scenes/{boot,hub,ui-root}.unity`·`Rendering/*.mat`·`Data/Authoring/*`를 재직렬화했다(fileID 갱신, 삽입=삭제 441행, 의미 변경 없음). 검증·빌드·릴리스가 그 트리에서 나왔으므로 그대로 커밋한다(검증 트리 = 출고 트리 = 커밋 트리).
+

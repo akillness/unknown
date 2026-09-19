@@ -36,13 +36,16 @@ namespace Tide.App
             verdict.DataDiagnostic!=null&&verdict.DataDiagnostic.StartsWith("c1.signature.")?SignatureText(verdict.DataDiagnostic,"작업의 앞 단계를 확인하세요."):verdict.DataDiagnostic!=null&&verdict.DataDiagnostic.StartsWith("c1.patrol.")?PatrolText(verdict.DataDiagnostic):L("unavailable");
         string PatrolConditionText()=>PatrolText((string)patrolPacket["journalCondition"]["labelKey"])+" · "+
             (string)patrolPacket["journalCondition"]["actorDisplayName"]+"\n“"+PatrolText((string)patrolPacket["journalCondition"]["textKey"])+"”";
+        string PatrolNextText(){
+            int count=Definition.Patrol.Observations.Count(id=>Journal.State.Has("c1:observed:"+id));
+            return count<Definition.Patrol.Observations.Count?L("c1NextObserve"):Journal.State.Get("c1:conditionCandidate")==null?L("c1NextCondition"):L("c1NextConfirm");
+        }
         string PatrolCaseThread()
         {
             var count=Definition.Patrol.Observations.Count(id=>Journal.State.Has("c1:observed:"+id));
-            return "C1 · "+PatrolText("c1.patrol.title")+"\n관찰 "+count+" / "+Definition.Patrol.Observations.Count+
-                "\n"+(PatrolComplete?PatrolText("c1.patrol.complete"):
-                "다음 행동: "+(count<Definition.Patrol.Observations.Count?"두 기록 확인":
-                Journal.State.Get("c1:conditionCandidate")==null?"분기와 출처 조건 확인":"열람과 출처 조건 확정"));
+            // M27: stage marker + observed count + a "next" line from the same ladder the guide uses; all copy through L().
+            return L("caseTitle")+" · "+StageLabel()+"\n"+string.Format(L("c1Observed"),count,Definition.Patrol.Observations.Count)+" · "+ConditionsLine()+
+                "\n"+(PatrolComplete?PatrolText("c1.patrol.complete"):L("caseNext")+PatrolNextText());
         }
         void PatrolScreen(GameScreen screen)
         {

@@ -26,11 +26,16 @@ namespace Tide.Presentation {
         public Texture2D[] mediaIcons=new Texture2D[0];
         public string[] stateIds=new string[0];
         public Texture2D[] stateGlyphs=new Texture2D[0];
+        // M27 (RFC-CX-M27-20260918): requirement checklist glyphs (done / current / open). Same gate pattern.
+        public bool m27Approved;
+        public string[] checklistIds=new string[0];
+        public Texture2D[] checklistGlyphs=new Texture2D[0];
         public Texture2D ToolIcon(string toolId)=>Lookup(toolIds,toolIcons,toolId);
         public Texture2D Portrait(string id)=>Lookup(portraitIds,portraits,id);
         public Texture2D ZoneBackdrop(string zoneId)=>Lookup(zoneIds,zoneBackdrops,zoneId);
         public Texture2D MediaIcon(string sourceType)=>Lookup(mediaIds,mediaIcons,sourceType);
         public Texture2D StateGlyph(string stateId)=>Lookup(stateIds,stateGlyphs,stateId);
+        public Texture2D ChecklistGlyph(string state)=>Lookup(checklistIds,checklistGlyphs,state);
         static Texture2D Lookup(string[] keys,Texture2D[] values,string key){
             if(keys==null||values==null||key==null)return null;
             for(int i=0;i<keys.Length&&i<values.Length;i++)if(keys[i]==key)return values[i];

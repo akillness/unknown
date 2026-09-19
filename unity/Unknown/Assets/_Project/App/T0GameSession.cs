@@ -75,13 +75,14 @@ namespace Tide.App {
   int SnapshotInterval=>(int?)policy?["snapshotInterval"]??200;
   void RestoreHintLevels(JObject doc){hintLevels.Clear();if(doc?["progress"]?["hintLevelUsed"] is JObject used)foreach(var p in used.Properties())hintLevels[p.Name]=(int)p.Value;}
   int HintLevel{get=>hintLevels.TryGetValue(CurrentBeat,out var level)?level:0;set=>hintLevels[CurrentBeat]=value;}
+  public bool HintOfferEnabled=>(bool?)settings?["hintOffer"]??true;
   // Hint-level changes during a pending commit are flushed once that commit settles (QA D-M9-10); no save.json race with CommitAsync.
   void SaveHintLevels(){if(SavePending)hintLevelsDirty=true;else QueueSave();}
   void FlushHintLevelsIfDirty(){if(!hintLevelsDirty)return;hintLevelsDirty=false;QueueSave();}
   string L(string key){var lang=(string)settings?["language"]??"ko";return (string)strings?[key]?[lang]??(string)strings?[key]?["ko"]??key;}
   JObject Record(string id)=>records["rows"].OfType<JObject>().First(r=>(string)r["recordId"]==id);
   string Name(string id)=>Definition.Records.ContainsKey(id)?(string)Record(id)["displayNameKo"]:id;
-  string CurrentBeat=>BeatFor(Journal.State);
+  public string CurrentBeat=>BeatFor(Journal.State);
   ViewAction A(string id,string label,Action action,bool enabled=true,string detail=null,float hold=0)=>new ViewAction{Id=id,Label=label,Activate=()=>{NoteActivity();action();},Enabled=enabled,Detail=detail,HoldSeconds=hold};
   void NoteInputActivity(){lastActivity=Time.unscaledTime;}
   void NoteActivity(){NoteInputActivity();DismissHintOffer(lastActivity);}
@@ -107,12 +108,11 @@ namespace Tide.App {
    hintContextSuppressed=suppressed;hintBeat=beat;return !suppressed;
   }
   void UpdateHintCadence(float now){
-   if(!SyncHintContext(now)||HintOfferVisible||now-lastActivity<idleHintOfferSeconds||now<hintOfferCooldownUntil)return;
+   if(!HintOfferEnabled||!SyncHintContext(now)||HintOfferVisible||now-lastActivity<idleHintOfferSeconds||now<hintOfferCooldownUntil)return;
    HintOfferVisible=true;RenderHintOffer();
   }
   void Update(){UpdateOpening();if(!bootFailed&&started)UpdateReviewNotesAvailability();if(!bootFailed&&Journal!=null)UpdateHintCadence(Time.unscaledTime);}
   // Resume status follows the actual state (D-M9-16): the t0-b1 welcome only fits a fresh or intake-stage save.
-  string ResumeStatus()=>SignatureActive?(SignatureComplete?"저장된 대조 기록을 복원했습니다.":"저장된 서명지 작업을 복원했습니다."):PatrolActive?"저장된 순찰 기록을 복원했습니다.":Simulation.IsComplete(Journal.State,"t0-b3")?L("caseReview"):Simulation.IsComplete(Journal.State,"t0-b1")?L("resumeInProgress"):L("welcome");
   public void StartGame(){if(AlignmentPracticeActive)return;CancelOpening();if(saveReadOnly){overlay="recovery";Render();return;}started=true;overlay=null;document=null;status=ResumeStatus();Render();}
   public void GoNode(string id){if(AlignmentPracticeActive)return;CloseTool();node=id;document=null;overlay=null;var camera=Camera.main;var target=zones["rows"][0]["viewNodes"].First(v=>(string)v["nodeId"]==id);if(camera!=null){var pos=target["cameraPose"]["pos"];var look=target["cameraPose"]["lookAt"];camera.transform.position=Point(pos);camera.transform.LookAt(Point(look));cameraHorizontalFov=(float)target["cameraPose"]["fovDeg"];}Render();}
   Transform approvedDrawer;
@@ -219,7 +219,7 @@ namespace Tide.App {
    if(bootFailed||strings==null)return;Interface.TextScale=(float?)settings["textScale"]??1f;
    ClearUnavailableReaderPin();
    SyncHintContext(Time.unscaledTime,true);
-   var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?CurrentBeat:L("startTitle")),Status=status,Footer=ControlFooter(),ActionFeedback=AlignmentPracticeActive?null:ActionFeedbackText};
+   var s=new GameScreen{Title=L("title"),Subtitle="21:00 · "+(started?StageShort():L("startTitle")),Status=status,Footer=ControlFooter(),ActionFeedback=AlignmentPracticeActive?null:ActionFeedbackText};
    Watch.ToolPanel=tool!=null&&!OpeningActive&&!AlignmentPracticeActive;Watch.OverlayActive=overlay!=null;
    if(OpeningActive)OpeningScreen(s);
    else if(!started){s.Body=L("intro");s.NavigationBackdrop=M25StartBackdrop;s.Actions.Add(A("start",L("start"),BeginOpeningOrStart));s.Actions.Add(A("guide",L("guide"),()=>OpenOverlay(GuideOverlay)));s.Actions.Add(A("settings",L("settings"),()=>OpenOverlay("settings")));}
@@ -234,28 +234,9 @@ namespace Tide.App {
    // M18: the interview preparation panel suppresses the case card like reviewNotes does, so the
    // patrol summary's source condition and actor display name cannot leak onto an anonymous surface.
    s.CaseThread=OpeningActive||AlignmentPracticeActive||overlay=="reviewNotes"||overlay==InterviewPrepOverlay?null:CaseThreadText();
-   if(s.CaseThread!=null&&started)FillInquiry(s);
+   if(s.CaseThread!=null&&started){FillInquiry(s);FillChecklist(s);}
    if(DirectionEnabled&&SignatureActive&&!OpeningActive&&!AlignmentPracticeActive){s.ShowDirection=true;s.SectionSurface=directionProfile.sectionSurface;foreach(var action in s.Actions.Concat(s.Toolbar))action.DirectionCategory=SignatureDirectionCategory(action.Id);}
    ApplyM7UiSkin(s);ApplyM20WorkSurface(s);Interface.Render(s);RenderHintOffer();ApplyStagePresentation();RefreshM22Embodiment();ApplySceneViewport();
-  }
-  // Projection only: required pins are progress, but the existing full predicate owns completion.
-  string CaseThreadText(){
-   if(SignatureActive)return SignatureCaseThread();
-            if(PatrolActive)return PatrolCaseThread();
-   var requirements=Definition.Beats.Single(b=>b.Id=="t0-b3").Requirements;
-   var pins=requirements.Where(r=>r.Type=="citationPinned").ToArray();
-   int count=pins.Count(r=>Journal.State.Has("citation:"+r.RecordId));
-   bool complete=Simulation.IsComplete(Journal.State,"t0-b3");
-   string detail=complete?L("caseComplete"):L(count==pins.Length?"caseCheckPins":"caseMedia");
-   return L("caseTitle")+" · "+string.Format(L("caseProgress"),count,pins.Length)+"\n"+CaseObjective(beats,CurrentBeat,Definition.Records.Keys.Select(Name),L("caseObjective"))+"\n"+detail+"\n"+L("caseNext")+CaseThreadNext();
-  }
-  string CaseThreadNext(){
-   var state=Journal.State;
-   if(SavePending)return L("caseWait");
-   if(Simulation.IsComplete(state,"t0-b3"))return L("caseReview");
-   if(!Simulation.IsComplete(state,"t0-b1"))return L("caseRead");
-   if(!Simulation.IsComplete(state,"t0-b2"))return L("caseAlign");
-   return L("casePin");
   }
   // S-D guided teaching (RFC-CX-011). Objective text is data-owned; a record display name inside it
   // would violate the CaseThread disclosure contract, so such rows fall back to the fixed objective.
@@ -384,6 +365,8 @@ namespace Tide.App {
     s.Actions.Add(A("language",L("language")+": "+(string)settings["language"],()=>{settings["language"]=(string)settings["language"]=="ko"?"en":"ko";SaveSettings();}));
     s.Actions.Add(A("text-scale",L("textScale")+": "+settings["textScale"],()=>{double scale=(double)settings["textScale"];settings["textScale"]=scale>=1.5?1:Math.Round(scale+.1,1);SaveSettings();}));
     s.Actions.Add(A("reduced-motion",L("reducedMotion")+": "+settings["reducedMotion"],()=>{settings["reducedMotion"]=!(bool)settings["reducedMotion"];SaveSettings();}));
+    // M27 (C6-F35): the idle hint offer can be switched off; cadence knobs stay data-owned (tools.json).
+    s.Actions.Add(A("hint-offer",L("hintOfferSetting")+": "+L(HintOfferEnabled?"settingOn":"settingOff"),()=>{settings["hintOffer"]=!HintOfferEnabled;if(!HintOfferEnabled)DismissHintOffer(lastActivity);SaveSettings();},detail:L("hintOfferSettingDetail")));
     s.Actions.Add(A("hold-duration",L("holdDuration")+": "+HoldSeconds.ToString("0.0",CultureInfo.InvariantCulture)+" s",CycleHoldDuration));
     foreach(var mode in new[]{"confirm-dialog","hold","two-step"}){var m=mode;s.Actions.Add(A("confirm-mode-"+m,L(m)+(ConfirmMode==m?" ✓":""),()=>SetConfirmMode(m)));}
     foreach(var action in Watch.Actions.FindActionMap("Watch").actions)for(int i=0;i<action.bindings.Count;i++){if(action.bindings[i].isComposite)continue;var name=action.name;var binding=i;s.Actions.Add(A("rebind-"+name+"-"+i,L("action."+name)+" · "+action.GetBindingDisplayString(i),()=>{status=L("pressKey");Render();Watch.Rebind(name,json=>{settings["bindings"]=json;if(Watch.RebindError!=null)status=L(Watch.RebindError);SaveSettings();},binding);}));}

@@ -12,6 +12,31 @@
 
 3주 전에 폐국을 고지한 조수기록국의 이관 전 마지막 야간 당직. 기록 복원사 **한서린**은 끊긴 염선 배선과 배수 경로를 **손으로 직접 바꾸고**, 그 결과로 달라진 항구를 다시 조사해 12년 전 **대조의 밤**에 사라진 **결손 4시간**의 진실을 청문 문서 한 건으로 확정합니다. 밤은 21:00에 시작해 05:00에 끝나고, 세 갈래 결말은 전부 본편 안에서 닫힙니다.
 
+## 지금 플레이 가능한 것 · M27 (2026-09-18)
+
+| 작업대 — 사건 흐름 카드 + 요구조건 칩 | 안내(F2) — 이 단계의 조건 | T0 완료 — 칩 전부 ✓ + 영수증(R) |
+|---|---|---|
+| ![M27 macOS 개발 빌드 — 단계 1/3 카드, 조건 0/4, 다음 행동, 요구조건 칩 4개](docs/media/m27/shell-t0b1-checklist.png) | ![M27 안내 오버레이 — 지금 할 일 · 단계 1/3, 이 단계의 조건 · 조건 0/4, 전체 라벨](docs/media/m27/guide-tasks.png) | ![M27 T0 완료 — 단계 3/3, 근거 쌍이 고정됨, 칩 5개 완료, 당직 영수증](docs/media/m27/receipt-r.png) |
+
+위 세 장은 **실제 macOS 개발 빌드(`Unknown.app`, 316파일 / 445,068,423 B)의 창 캡처**입니다(OS 창틀만 잘라냄, 합성 없음, 세 번째는 T0 완료 fixture 저장 + `R` 키). 전체 목록과 해시: [`docs/media/m27/provenance.meta.md`](docs/media/m27/provenance.meta.md).
+
+**M27에서 바뀐 것 — 실마리 명료화** (사용자 지시: 클루 명확 · 확장 가능한 시나리오 · 스테이지/실마리의 중간 지점 · 진행 보장 + 가이드 · 플레이 관점 밸런스 · 리소스 UI)
+
+- **클루가 명확하다.** 사건 흐름 카드 아래에 현재 비트의 **요구조건 칩**이 늘어섭니다 — `✓` 완료 · `▶` 지금 할 것 · `○` 남은 것, 글리프와 짧은 캡션(문서 1 · 문서 2 · 슬롯 · 네 번째 줄 / 구획 표시 · 근거 붙이기 / 첫 판독 · 판 인용 · 대장 인용 · 매체 2종 · 결손 구간). `다음:` 줄은 첫 미충족 조건의 전체 라벨입니다. 이전에는 카드 카운터가 어느 단계에서나 t0-b3의 「필요한 인용 0/2」를 보여 줬고, 인용 2/2인데 결손 끝점이 틀린 경우 무엇이 열려 있는지 어디에도 나오지 않았습니다 — 이제 「결손 구간」 칩이 열린 채 남습니다.
+- **시나리오가 확장 가능하다.** 라벨·캡션·단계 순서는 코드가 아니라 데이터입니다: `emit-tables.mjs` 술어 맵 → `beats.json completionPredicate.requires[].label/caption/step`. 검증기 `--t0` 모드의 새 검사 **T0-06**이 라벨 존재·캡션 8자 이하·단계 유일·기록 표시명/시각 값/카드 금지어 부재를 강제합니다(6/6 PASS). 새 비트의 술어에 라벨이 없으면 테이블이 나오지 않습니다. 런타임에 비트 id 리터럴 분기를 더하지 않았습니다.
+- **중간 지점이 명료하다.** 카드 첫 줄 `단계 i/n · <비트 제목>`, 둘째 줄 `조건 d/t`(인용을 요구하는 비트에서만 `필요한 인용 n/m`). 부제·회로/판독 교습 헤더·안내 제목이 비트 id(`t0-b2`) 대신 단계 표기를 씁니다. 저장을 복원하면 상태문이 단계와 조건 수를 말합니다.
+- **진행이 보장되고 가이드가 따라온다.** 안내(F2)에 「이 단계의 조건」 절이 전체 라벨을 같은 ✓▶○ 형태 단서로 나열합니다. C1 절은 자리표시 문구 대신 순찰/서명 패킷의 목표·관찰·조건·확정에서 그려집니다. 결손 구간의 끝점 규칙 — **시작은 첫 결손 눈금, 끝은 기록이 돌아온 첫 눈금** — 을 절차 힌트(2단)와 라벨에 적었습니다(값은 적지 않습니다). 막다른 길 감사: 원본 판독 한도(3/판)는 사본이 남아 진행을 막지 않고, 모든 비활성 행동은 이유를 표시합니다.
+- **플레이 관점 밸런스.** t0-b1 목표문을 행동문으로 교체(「이 방이 넘겨받은 것을 확인하고, 오늘 밤 목록에 올릴지 비워 둘지 결정한다」), t0-b2에서 내부 규칙 번호 「법1」 제거. 힌트 제안 토스트를 설정에서 끌 수 있습니다(기본 켬). **수치 밴드(무진전 180 s·쿨다운 180 s·원본 판독 3·T0 25분)는 바꾸지 않았습니다** — 사람 표본 0. 기록: [`balance/m27-play-balance.md`](_workspace/current/balance/m27-play-balance.md).
+- **리소스 UI.** Higgsfield `gpt_image_2` 체크리스트 글리프 3종(done/current/open, 10.5 크레딧, 순차 생성) → SHA 임포트 → 로컬 개발 프로필(`m27Approved`). 게이트가 꺼져도 텍스트 접두가 상태를 말합니다(색·투명도만으로 구분하지 않음). 힌트 토스트에 테두리 칩, 질문 카드 배경의 비균등 늘림을 uv 중앙 크롭으로 교정, 죽은 접근자 삭제.
+- **검증 [OBSERVED].** 3시간 QA 루프가 이번 회차 중간에 회귀 3건을 잡았습니다(새 밴드가 작업면을 줄여 서명지 클릭 좌표가 어긋남 ×2, 칩 투명도가 판독면 대비 계약 위반) → 같은 세션에 수정. 최종 GREEN `20260919T164740Z`: EditMode 65/65 · PlayMode 148(147 통과 / 0 실패 / 1 조건부 skip) · 격리 boot 1/1 · 신규 M27 테스트 6/6. 영수증: [`_workspace/current/systems/tech-verification/m27/verification.json`](_workspace/current/systems/tech-verification/m27/verification.json).
+- **배포.** GitHub Release **`v0.27.0-dev`**(prerelease)에 최종 macOS 개발 빌드 zip을 첨부했습니다. 서명·공증이 없는 개발 빌드이며 상점 공개가 아닙니다.
+
+### M27 리소스 미리보기 (컨셉 · 게임플레이 아님)
+
+__omp_shell("[체크리스트 글리프 — done(링 안 체크) · current(링 안 점) · open(빈 링)](docs/media/m27/checklist-glyphs.jpg)")
+
+실제 실행 화면 추가 캡처: [`guide-tasks-paged.png`](docs/media/m27/guide-tasks-paged.png)(PageDown) · [`shell-complete.png`](docs/media/m27/shell-complete.png)(단계 3/3 · 칩 5개 완료).
+
 ## 지금 플레이 가능한 것 · M26 (2026-09-18)
 
 | 사건 흐름 카드 + 현재 조사 질문 | 가설판 — 구조 상태와 반례 표시 | T0 당직 영수증 |
@@ -71,7 +96,7 @@
 
 ## 실행 · 빌드 · 테스트
 
-**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.26.0-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
+**받아서 실행 (macOS)** — [Releases](https://github.com/akillness/unknown/releases)에서 `v0.27.0-dev` zip을 받아 압축을 풀고 `Unknown.app`을 엽니다. 미서명 개발 빌드이므로 처음 실행 시 우클릭 → 열기가 필요할 수 있습니다. 저장 폴더는 `~/Library/Application Support/TideRegistry/Unknown T0/saves/`이며 `--t0-save-dir <폴더>` 인자로 바꿀 수 있습니다.
 
 **소스에서 실행** — Unity Hub에 `unity/Unknown/`을 추가하고 **Unity 6000.5.6f1**로 엽니다. `Assets/_Project/Scenes/boot.unity`가 자동으로 열리며 Play로 허브·회로·판독·설정·저장 흐름을 실행합니다.
 
@@ -94,6 +119,13 @@ P="$PWD/unity/Unknown"
 # M25/M26 리소스 재임포트(원본 SHA 대조) · 승인은 감사 후 별도
 "$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M25ResourceProjectBuilder.Import -logFile /tmp/m25-import.log
 "$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M26ResourceProjectBuilder.Import -logFile /tmp/m26-import.log
+"$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.M27ResourceProjectBuilder.Import -logFile /tmp/m27-import.log
+
+# 정본 → 테이블 재생성 → Unity 복사 → 카탈로그 영수증 재결합 (요구조건 라벨은 여기서만 나온다; 검증기 T0-06)
+node _workspace/current/systems/pipeline/emit-tables.mjs --out _workspace/current/systems/data/t0
+node _workspace/current/planning/validate-campaign.mjs --t0 _workspace/current/systems/data/t0   # 6/6
+cp _workspace/current/systems/data/t0/*.json _workspace/current/systems/data/t0/*.meta.md unity/Unknown/Assets/_Project/Data/Tables/
+"$UNITY_EDITOR" -batchmode -nographics -quit -projectPath "$P" -executeMethod Tide.EditorTools.T0ProjectBuilder.Prepare -logFile /tmp/unknown-t0-prepare.log
 
 # 3시간 QA 루프 (launchd, 사용자 도메인) — 설치 / 즉시 1회 / 상태 / 해제
 scripts/qa-loop-install.sh --now      # 한 사이클 ≈ 3분: 결과는 _workspace/current/qa/loop/ledger.md · latest-triage.md
@@ -102,7 +134,7 @@ scripts/qa-loop-install.sh --uninstall
 scripts/qa-loop.sh                    # 스케줄 없이 한 사이클만 (같은 원장에 기록)
 ```
 
-**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · **PageUp/PageDown 본문** · 1~6 도구 · I 증거함 · H 가설판 · **R 당직 영수증(인수 완료 뒤)** · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
+**조작** — Tab 초점 · Enter 선택 · 방향키 조절 · **PageUp/PageDown 본문** · 1~6 도구 · I 증거함 · H 가설판 · **R 당직 영수증(인수 완료 뒤)** · **F1 힌트 · F2 안내** · Ctrl+Z 되돌림 · Esc 뒤로. 설정에서 힌트 제안 토스트(무진전 3분)를 끌 수 있습니다. 게임패드 지원, 설정에서 키 재지정·글자 배율(1.0~1.5)·모션 축소·확정 방식(프리뷰 후 확정 / 누르고 놓기 / 대화상자)을 바꿀 수 있습니다.
 
 ## 세 기둥
 
@@ -155,12 +187,13 @@ CLAUDE.md                        저장소 운영 규칙 (14역할 + 디렉터 �
 _workspace/current/              살아 있는 산출물 (레인별 폴더, frontmatter 필수)
 _workspace/archive/              대체된 이전 판본 (읽기 전용, supersedes 로 연결)
 _workspace/current/handoff/      구현 핸드오프 브리프 · 검증 계획 · 리소스 런북
-_workspace/current/systems/tech-verification/m2{5,6}/   M25·M26 영수증 (verification.json, import-audit, build-inventory, NUnit XML)
+_workspace/current/systems/tech-verification/m2{5,6,7}/   M25·M26·M27 영수증 (verification.json, import-audit, build-inventory, NUnit XML)
+_workspace/current/balance/m27-play-balance.md   플레이 관점 밸런스 기록 (수치 밴드 무변경 · 문면/표기 결정 B-M27-1~6)
 _workspace/current/qa/loop/      3시간 QA 루프 원장 (ledger.md · ledger.jsonl · latest.json · latest-triage.md)
 _workspace/current/planning/aside-similar-games-research-20260918.md   유사 게임 딥리서치 보고서 (61 출처)
 unity/Unknown/                   Unity 6000.5.6f1 프로젝트 (in-repo) — Assets/_Project/{App,UI,Presentation,Sim,Data,Save,Input,Editor,Tests}
-assets/generated/{2d,3d,video,previz,audio}/   생성 리소스 + provenance.json (승격 전 runtimeEligible:false); M25 = 2d/m25, video/m25; M26 = 2d/m26
-docs/media/                      README 미디어 (파생본) + provenance; docs/media/m25, m26 = 캡처·프리비즈
+assets/generated/{2d,3d,video,previz,audio}/   생성 리소스 + provenance.json (승격 전 runtimeEligible:false); M25 = 2d/m25, video/m25; M26 = 2d/m26; M27 = 2d/m27
+docs/media/                      README 미디어 (파생본) + provenance; docs/media/m25, m26, m27 = 캡처·프리비즈
 scripts/                         qa-loop.sh · qa-loop-report.py · qa-loop-install.sh · launchd/ (QA 루프)
                                  gen-higgsfield.py (M25/M26) · gen-2d.sh (GTI) · gen-video-higgsfield.sh · make-previz-gif.sh
                                  refresh-2d-provenance.py · regen-cycle-ledger.py · qa_m7_texture_tiling.py · blender/

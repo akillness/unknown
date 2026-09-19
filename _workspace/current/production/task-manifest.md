@@ -1,5 +1,5 @@
 ---
-updated: 2026-09-14
+updated: 2026-09-18
 cycle: 20260909-preproduction-c7
 status: current
 supersedes: null
@@ -207,3 +207,13 @@ Baseline `6514f549ac7b2e71846005c75a4ff9227882c47c`; scope and chronology in `pr
 | Unity 임포트·실제 외형/동작 검증 | systems, QA | P3/P4 | M22Embodiment, systems/tech-verification/m24/ | complete; 진단 검수 후 기본 프로필 재승인·최종315파일/411,041,089B·실제 접촉/복귀 |
 | 현행 빌드 플레이 영상·README 갱신 | presentation, QA | P4 | docs/media/gameplay-m24/, README.md | complete; 같은 기본 빌드18초·T0-b3 격리 재개·무음·Blender 전후 비교는 별도 |
 | 검증 증거·메모리 동기 및 일반 push | director | P5 | Git main, production/decision-log.md | 검증 자료와 메모리 동기; 이번 명시적 commit/일반 push의 실제 결과는 Git 기록을 따름. 기존 로그/다른 작업 보존 |
+
+## M25 · M26 · M27 (2026-09-18, 동일 날짜 3사이클)
+
+| task | owner | phase | artifact | gate | status | beat |
+|---|---|---|---|---|---|---|
+| M25 Higgsfield 전 리소스·안내 오버레이·가독성·빌드·배포 | concept, presentation, systems, QA | P3/P4/P5 | systems/tech-verification/m25/, docs/media/m25/, v0.25.1-dev | D-G5 | done (runtimeEligible:false, 로컬 프로필) | M25 |
+| M26 유사게임 딥리서치 → D2/D3/D4/D10 → Higgsfield 9장 → 빌드·배포 | planner, systems, presentation, QA | P1~P5 | planning/aside-similar-games-research-20260918.md, systems/tech-verification/m26/, v0.26.0-dev | D-G5 | done | M26 |
+| 3시간 QA 루프 + 개선 계획 + 영수증 R 키 | QA, systems, director | P4/P5 | scripts/qa-loop*.sh, qa/loop/, handoff/m26-results-and-improvement-plan.md | - | done (launchd 10800 s, 측정·분류만) | M26 |
+| M27 실마리 명료화: 요구조건 체크리스트·단계 표기·데이터 기반 안내·힌트 설정·글리프 | planner, balance, systems, presentation, QA | P1~P5 | handoff/m27-clue-clarity-plan.md, balance/m27-play-balance.md, systems/tech-verification/m27/, docs/media/m27/, v0.27.0-dev | D-G5 | done (QA 루프 GREEN 20260919T164740Z; 수치 밴드 무변경 n=0) | M27 |
+

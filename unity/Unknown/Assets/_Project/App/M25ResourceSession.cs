@@ -19,7 +19,6 @@ namespace Tide.App {
         Texture2D M25StartBackdrop=>M25Enabled?m25.startBackdrop:null;
         Texture2D M25ToolIcon(string id)=>M25Enabled?m25.ToolIcon(id):null;
         Texture2D M25Portrait(string id)=>M25Enabled?m25.Portrait(id):null;
-        Texture2D M25ZoneBackdrop(string id)=>M25Enabled?m25.ZoneBackdrop(id):null;
         // Tool wheel: one icon per canonical tool above the six wheel actions (colour + form + position, not colour alone).
         void AddToolWheelFigures(GameScreen s){
             var section=new ScreenSection{FigureHeight=96};
@@ -27,21 +26,30 @@ namespace Tide.App {
             if(section.Figures.Any(f=>f.Texture!=null))s.Sections.Add(section);
         }
         // Guided teaching header (S-D, RFC-CX-011): the level-1 hint stays data-owned; M25 only structures the frame around it.
-        string TeachingHeader(string beat,int remaining)=>string.Format(L("teachingHeader"),beat,remaining);
+        // M27: the header names the stage ("단계 2/3 · 제목"), never the raw beat id.
+        string TeachingHeader(string beat,int remaining)=>string.Format(L("teachingHeader"),StageLabel(),remaining);
         // The guide gathers what a new player needs on one surface without revealing anything past the current beat:
         // objective (data-owned, record-name guarded), next action, tool procedures, controls, rules, T0-public cast.
         void GuideScreen(GameScreen s){
             s.Title=L("guide");s.ResetWorkScroll=true;
             var state=Journal.State;
-            string stage=SignatureActive?L("guideStageC1"):PatrolActive?L("guideStageC1"):Simulation.IsComplete(state,"t0-b3")?L("caseComplete"):CurrentBeat;
-            var objective=SignatureActive||PatrolActive?L("guideC1Objective"):CaseObjective(beats,CurrentBeat,Definition.Records.Keys.Select(Name),L("caseObjective"));
+            // M27: stage, objective, checklist and next are the same projections the case card uses (data-driven; C1 from the packets).
+            bool t0Done=T0Beats.All(b=>Simulation.IsComplete(state,b.Id));
+            string stage=SignatureActive||PatrolActive?StageLabel():t0Done?L("caseComplete"):StageLabel();
+            var objective=SignatureActive?SignatureText("c1.signature.objective",SignatureCaseThread().Split('\n').Skip(2).FirstOrDefault()??""):
+                PatrolActive?(string)patrolPacket["narrative"]["objective"]:CaseObjective(beats,CurrentBeat,Definition.Records.Keys.Select(Name),L("caseObjective"));
+            string next=SignatureActive?(SignatureCaseThread().Split('\n').Skip(2).FirstOrDefault()??""):PatrolActive?(PatrolComplete?PatrolText("c1.patrol.complete"):PatrolNextText()):CaseThreadNext();
             s.Body=L("guideIntro");
-            var now=new ScreenSection{Heading=L("guideNow")+" · "+stage,Body=objective+"\n"+L("caseNext")+(SignatureActive||PatrolActive?L("guideC1Next"):CaseThreadNext())};
+            var now=new ScreenSection{Heading=L("guideNow")+" · "+stage,Body=objective+"\n"+L("caseNext")+next};
             s.Sections.Add(now);
-            var steps=new ScreenSection{Heading=L("guideSteps"),Body=string.Join("\n",new[]{
-                Step(1,Simulation.IsComplete(state,"t0-b1"),L("guideStep1")),
-                Step(2,Simulation.IsComplete(state,"t0-b2"),L("guideStep2")),
-                Step(3,Simulation.IsComplete(state,"t0-b3"),L("guideStep3"))})};
+            var tasks=CaseChecklist();
+            if(tasks.Count>0){
+                var taskSection=new ScreenSection{Heading=L("guideTasks")+" · "+ConditionsLine(),
+                    Body=string.Join("\n",tasks.Select(t=>(t.Done?"✓ ":t.Current?"▶ ":"○ ")+t.Label))+"\n"+L("guideTasksDetail")};
+                s.Sections.Add(taskSection);
+            }
+            var t0Ids=T0Beats.Select(b=>b.Id).ToList();
+            var steps=new ScreenSection{Heading=L("guideSteps"),Body=string.Join("\n",t0Ids.Select((id,i)=>Step(i+1,Simulation.IsComplete(state,id),L("guideStep"+(i+1)))))};
             s.Sections.Add(steps);
             var tools=new ScreenSection{Heading=L("guideTools"),Body=L("guideToolCircuit")+"\n"+L("guideToolReader")+"\n"+L("guideToolLater"),FigureHeight=96};
             foreach(var id in GuideToolIds)tools.Figures.Add(new ScreenFigure{Texture=M25ToolIcon(id),Caption=L("action."+id),Aspect=1});

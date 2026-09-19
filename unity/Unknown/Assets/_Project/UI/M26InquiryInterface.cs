@@ -12,7 +12,15 @@ namespace Tide.UI {
         }
         // Fills any rect (fixed band under the card, or a flowed row in the reader layout) with the same strip.
         void RenderInquiryStrip(RectTransform strip,GameScreen model){
-            if(model.InquiryBacking!=null)FullBleedBacking("M26 question card",strip,model.InquiryBacking,Color.white);
+            if(model.InquiryBacking!=null){
+                FullBleedBacking("M26 question card",strip,model.InquiryBacking,Color.white);
+                // M27: the 21:9 card is centre-cropped to the strip's aspect instead of being stretched non-uniformly.
+                Canvas.ForceUpdateCanvases();var image=strip.Find("M26 question card")?.GetComponent<RawImage>();
+                if(image!=null&&strip.rect.height>0){
+                    float stripAspect=strip.rect.width/strip.rect.height,textureAspect=model.InquiryBacking.width/(float)model.InquiryBacking.height;
+                    image.uvRect=stripAspect>textureAspect?new UnityEngine.Rect(0,(1-textureAspect/stripAspect)/2,1,textureAspect/stripAspect):new UnityEngine.Rect((1-stripAspect/textureAspect)/2,0,stripAspect/textureAspect,1);
+                }
+            }
             int figures=model.InquiryPinned.Count+model.InquiryNeeded.Count;
             float textRight=figures==0?.985f:Mathf.Max(.5f,.985f-.075f*figures);
             Text(InquiryName,strip,model.Inquiry,TypeScale.Helper,ink,new Vector2(.02f,.08f),new Vector2(textRight-.01f,.92f));

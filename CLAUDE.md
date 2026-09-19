@@ -195,3 +195,12 @@ PASS / FIX(≤2) / REDO. 열린 S1 결함, 측정 누락, 숫자 자리의 `[TAR
 - 사이클이 실행 중일 때(`scripts/qa-loop-install.sh --status`가 `running`) Unity batchmode를 함께 띄우지 않는다(프로젝트 잠금 충돌). 루프 스크립트는 자기 복사본으로 실행되므로 편집은 다음 사이클부터 반영된다. 실행 중 트리를 편집하면 그 행은 `MIXED`로 표기되며 근거로 쓰지 않는다.
 - 개선 방향의 정본은 `_workspace/current/handoff/m26-results-and-improvement-plan.md`다. 사람 관찰이 없는 동안 개선 큐는 자체 QA 관찰과 조사 보고서로만 채운다.
 
+## M27 실마리 명료화 (2026-09-18 사용자 지시 · RFC-CX-M27-20260918)
+
+- 사용자 지시: 클루 명확 · 확장 가능한 시나리오 · 스테이지/실마리 중간 지점 명료 · 진행 보장 + 가이드/튜토리얼 · 플레이 관점 밸런스 · 리소스 UI. 정본: `handoff/m27-clue-clarity-plan.md`(인수 기준 A1~A7), `balance/m27-play-balance.md`.
+- **요구조건 라벨은 데이터다.** `beats.json completionPredicate.requires[].label/caption/step`은 `systems/pipeline/emit-tables.mjs` 술어 맵에서만 나오고 검증기 `--t0` T0-06이 지킨다(기록 표시명·recordId·시각 값·카드 금지어 금지, caption ≤ 8자, step 1..n 유일). 새 비트를 더할 때 라벨을 빠뜨리면 FAIL이다. 런타임은 이 필드만 읽으며 App/에 비트 id 리터럴 분기를 더하지 않는다. 테이블 재생성 뒤에는 `T0ProjectBuilder.Prepare`로 카탈로그 영수증을 재결합한다.
+- 카드·안내·부제·교습 헤더·복원 상태문은 `M27ChecklistSession`의 같은 투영(`CaseChecklist`/`StageLabel`/`ConditionsLine`/`CaseThreadNext`)을 읽는다. 상태는 글리프 형태 + 텍스트 접두(✓ ▶ ○) + 굵기로 표시하고 색이나 투명도만으로 표시하지 않는다(M21 판독면 잉크 계약: 칩 텍스트는 잉크 색 고정).
+- 결손 구간 끝점 규칙은 「시작 = 첫 결손 눈금, 끝 = 기록이 돌아온 첫 눈금」(반개구간)이며 술어 값(H-1:00/H+3:00)은 화면에 내지 않는다.
+- 수치 밴드(힌트 180/180 s, readBudget 3, T0 25분)는 사람 표본이 생기기 전까지 바꾸지 않는다. 힌트 제안 토스트는 설정(`hintOffer`)으로 끌 수 있고 기본은 켬이다.
+- 글리프 리소스는 `M27ResourceProjectBuilder.Import`(SHA) → `Approve()`(로컬 개발 프로필 `m27Approved`)로만 런타임에 닿는다. 원본 provenance `runtimeEligible:false`, 상업 사용권 UNVERIFIED.
+
